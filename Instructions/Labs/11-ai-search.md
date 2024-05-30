@@ -193,10 +193,11 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     - **Container name (8)**: *this setting is auto-populated after you choose an existing connection*.
     - **Blob folder (9)**: *Leave this blank*.
     - **Description (10)**: Reviews for Fourth Coffee shops.
+  
+   ![Picture1](media/lab11-23.png)
 
 4. Select **Next: Add Cognitive Skills (Optional) (11)**.
 
-   ![Picture1](media/lab11-23.png)
 
 5. In the **Attach AI Services (1)** section, select your **aiservice<inject key="DeploymentID" enableCopy="false" /> (2)** Azure AI services resource.  
 
