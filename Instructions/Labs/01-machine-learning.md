@@ -138,7 +138,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Validation and test**:
         - **Validation type**: Train-validation split
         - **Percentage validation of data**: 10
-        - **Test dataset**: None and then select **Next**
+        - **Test data**: None and then select **Next**
 
     **Compute**:
     - **Select compute type**: Serverless
