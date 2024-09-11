@@ -16,6 +16,7 @@ In this exercise, you will perform:
 
 ## Architecture Diagram
 
+![](media/new-ai900-lab13-archdiagram.JPG)
 
 ## Exercise 1: Explore the components and tools of the Azure AI Studio
 
@@ -32,15 +33,15 @@ In this task, you will sign in to Azure AI Studio and explore its interface, lea
 
 2. Review the information on the home page and view each of the tabs, noting the options to explore models and capabilities, create projects, and manage resources.
 
-    ![](media/lab13-a2.png)
+    ![](media/new-lab13-1.jpg)
 
 ### Task 2: Create an Azure AI hub
 
 In this task, you will create an Azure AI hub, gaining hands-on experience in setting up a collaborative workspace for AI projects and configuring essential resources and connections.
 
-1. In the **Management** section, navigate to **All hubs (1)** and click on **+ New hub (2)**. Set the following configuration settings for the new hub, and then click **Next** to proceed.
+1. In the **Management** section, navigate to **All resources (1)** and click on **+ New hub (2)**. Set the following configuration settings for the new hub, and then click **Next** to proceed.
 
-    ![](media/lab13-a3.png)
+    ![](media/new-lab13-2.jpg)
 
     | Setting | Action |
     | -- | -- |
