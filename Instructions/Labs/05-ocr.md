@@ -72,7 +72,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
    ![An image of the text in the image outlined](media/text(2).png)
 
-1. Open a new tab, copy and paste this link in the browser [**https://aka.ms/mslearn-ocr-images**](https://aka.ms/mslearn-ocr-images) to download **ocr-images.zip**. Then open the folder.
+1. Open a new tab, copy and paste this link in the browser [**https://aka.ms/mslearn-ocr-images**](https://aka.ms/mslearn-ocr-images) to download **ocr-images.zip**. Then extract zip folder.
 
 1. Navigate back to the **Vision Studio** portal, select **Browse for a file**, and navigate to the folder on your computer where you downloaded **ocr-images.zip**. Select **advert.jpg** and select **Open**.
 
