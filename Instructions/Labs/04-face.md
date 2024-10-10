@@ -26,7 +26,7 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 
 1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-   ![The image and its captions are displayed.](./media/dev2.png)
+    ![The image and its captions are displayed.](./media/dev2.png)
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false" />**
@@ -62,11 +62,11 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 1. In a web browser, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 1. On the **Getting started with Vision** landing page, select the **Face** tab and then select the **Detect Faces in an image** tile.
 
-   ![The image and its captions are displayed.](./media/lab4-1.png)
+    ![The image and its captions are displayed.](./media/lab4-1.png)
 
 1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.
 
-   ![The image and its captions are displayed.](./media/lab4-4.png)
+    ![The image and its captions are displayed.](./media/lab4-4.png)
 
 1. Select each of the sample images and observe the face detection data that is returned.
 
@@ -78,7 +78,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. Upload **store-camera-1.jpg** and review the face detection details that are returned.
 
-   ![The image and its captions are displayed.](./media/lab4-2.png)
+    ![The image and its captions are displayed.](./media/lab4-2.png)
 
 1. Locate the file named **store-camera-2.jpg**; which contains the following image:
 
