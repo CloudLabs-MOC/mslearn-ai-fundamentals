@@ -131,8 +131,6 @@ These capabilities you tested can be programmed into all sorts of applications. 
 
 ## Validation
 
-<validation step="5371378e-8511-44ed-9037-3a000338132f" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
