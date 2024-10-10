@@ -25,11 +25,10 @@ In this lab, you will perform:
 
 You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal, click the **&#65291;Create a resource** button
+1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-    ![An image of the text in the image outlined](media/lab-5(1).png)
+    ![The image and its captions are displayed.](./media/dev2.png)
 
-1. Search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure      AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**
     - **Region**: Select **<inject key="location" enableCopy="false"/>**
@@ -93,10 +92,11 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="6533434a-a8ba-4666-85d3-c3bc79b972d7" />
   
 ## Learn more
 
