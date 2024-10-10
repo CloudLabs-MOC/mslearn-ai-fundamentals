@@ -45,7 +45,7 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on **X** icon to close the popup.
+1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up of welcome screen please click on **X** icon to close the popup.
 
    ![The image and its captions are displayed.](./media/lab3-2.png)
 
