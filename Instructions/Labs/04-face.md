@@ -24,7 +24,9 @@ In this lab, you will perform:
 
 You can use Azure AI Face service with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal, click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+
+   ![The image and its captions are displayed.](./media/dev2.png)
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false" />**
@@ -41,7 +43,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource.
+1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on **X** icon to close the popup.
 
 1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
 

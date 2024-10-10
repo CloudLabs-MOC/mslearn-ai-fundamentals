@@ -26,9 +26,9 @@ In this lab, you will perform:
 
 You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal, click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-   ![The image and its captions are displayed.](./media/dev1.png)
+   ![The image and its captions are displayed.](./media/dev2.png)
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-03-<inject key="DeploymentID" enableCopy="false" />**
@@ -45,7 +45,7 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
+1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on **X** icon to close the popup.
 
    ![The image and its captions are displayed.](./media/lab3-2.png)
 
@@ -75,11 +75,11 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
 1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
 
-1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer,extract the zip file and locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
-1. Unzip the file and upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
+1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
