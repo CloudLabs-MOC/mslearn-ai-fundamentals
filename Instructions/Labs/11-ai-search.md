@@ -71,33 +71,18 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 You'll need to provision an **Azure AI services** resource that's in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
-1. Return to the home page of the Azure portal. Select **+ Create a resource**.
+1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-     ![Picture1](media/lab11-01.png)
-
-1. In the Marketplace page search for **Azure AI services** and select **Azure AI services**.
- 
-    ![Picture1](media/lab11-07.png)
-
-1. On the **Azure AI services** Page, click on **Create**.
-
-    ![Picture1](media/lab11-08.png)
-    
-1. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
-
-    - **Subscription (1)**: Select your **existing azure subscription**.
-    - **Resource group (2)**: Select **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
-    - **Region (3)**: Select **<inject key="location" enableCopy="false"/>** 
-    - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false" />**
-    - **Pricing tier (5)**: Standard S0
-    - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: Selected
-   - Select **Review + create (7)**.
-
-     ![Picture1](media/lab11-09.png) 
+    ![The image and its captions are displayed.](./media/dev2.png)
    
-1. After you see the response **Validation Passed**, select **Create**.
+    - **Subscription (1)**: Use the existing Azure subscription.
+    - **Resource group (2)**: **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
+    - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
+    - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false"/>**
+    - **Pricing tier (5)**:Select **Standard S0**.
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-    ![Picture1](media/lab11-10.png) 
+1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 1. Wait for deployment to complete, then view the deployment details.
 
