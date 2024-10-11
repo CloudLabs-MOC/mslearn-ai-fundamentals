@@ -86,11 +86,12 @@ In this exercise, you will create an AI Speech resource, unless you already have
 <validation step="fba5c663-5b29-43aa-8069-0349acf56ee1" />
 
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-  
+
+   <validation step="fba5c663-5b29-43aa-8069-0349acf56ee1" />
+
 ## Learn more
 
 This exercise demonstrated only some of the capabilities of the speech service. To learn more about what you can do with this service, see the [Speech page](https://azure.microsoft.com/services/cognitive-services/speech-services).
