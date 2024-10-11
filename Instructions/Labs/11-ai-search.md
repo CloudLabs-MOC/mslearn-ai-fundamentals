@@ -84,8 +84,6 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
-1. Wait for deployment to complete, then view the deployment details.
-
 ### Task 3: Create a storage account
 
 1. Return to the home page of the Azure portal. Select **+ Create a resource**.
