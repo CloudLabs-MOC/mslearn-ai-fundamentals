@@ -130,14 +130,14 @@ In this exercise you used Language Studio to either create a new Language resour
 
 ## Validation
 
-<validation step="9e1e91dc-4c1e-4c77-ad10-20f30d84e0a5" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-  
+
+   <validation step="9e1e91dc-4c1e-4c77-ad10-20f30d84e0a5" />
+
 ## Learn more
 
 To learn more about what you can do with this service, see the [Language service page](https://learn.microsoft.com/azure/ai-services/language-service/overview).
