@@ -80,7 +80,7 @@ To use question answering, you need a **Language** resource.
            
     - On the **Settings** page, view the **Resources** tab.
        
-    - Select the language resource you just created, and select **Switch resource**.
+    - Select the language resource you just created, and make sure nanaged identity tab is **enabled.**
        
     - At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
@@ -132,7 +132,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(10).png)
    
-1. At the bottom of the **Question answer pairs** pane, select **Save** to save your knowledge base.
+1. On the left side of the **screen**, select **Save** to save your knowledge base.
 
    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(9).png)
 
