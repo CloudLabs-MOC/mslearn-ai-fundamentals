@@ -55,7 +55,7 @@ To implement natural language understanding with Conversational Language Underst
    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, select **Settings (&#9881;)**.
     2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and select **Switch resource**.
+    3. Select the language resource you just created, and make sure nanaged identity tab is **enabled.**.
     4. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, select **Create new** menu, and select **Conversational language understanding**.
