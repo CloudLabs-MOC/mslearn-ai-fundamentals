@@ -108,9 +108,11 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
 1. In Azure OpenAI Studio, view the **Content filters (1)** page.
 
-1. Select **+ Create customized content filter (2)** and review the default settings for a content filter.
+1. Select **+ Create content filter (2)** and review the default settings for a content filter.
 
-      ![](./media/contentfilter.png)
+1. Create the Content Filter with default name and default settings. also do explore the input filter and output filter tabs such as **Categories**, **Media** and **Action.** 
+
+      ![](./media/new6.png)
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 
