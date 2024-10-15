@@ -25,6 +25,8 @@ In this lab, you will perform:
 
 1. In azure portal, search for **Azure OpenAI** and click on **+ Create** resource with the following settings:
 
+   ![](./media/new1.png)
+
     - **Subscription**: Select your **existing azure subscription**.
     - **Resource group**: Select **AI-900-Module-14-<inject key="DeploymentID" enableCopy="false" />**
     - **Region**: Select **<inject key="location" enableCopy="false"/>**
