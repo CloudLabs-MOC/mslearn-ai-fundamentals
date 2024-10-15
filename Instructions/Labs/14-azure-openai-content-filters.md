@@ -43,9 +43,7 @@ In this lab, you will perform:
 
 Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
 
-1. On the **Overview** page for your Azure OpenAI resource, under the **Explore and deploy** button, select **Go to Azure OpenAI Studio** to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/) directly.
-
-   ![](./media/new1.png)
+1. On the **Overview** page for your Azure OpenAI resource, select **Go to Azure OpenAI Studio** to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/) directly.
 
  >**Note:** If any pop up appears related to new experience, please close the pop-up window.
 
