@@ -54,16 +54,16 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 4. In Azure OpenAI Studio, create a new deployment with the following settings:
     - **Model**: gpt-35-turbo (1) and click on **Confirm**
    ![](./media/new3.png)
-    - **Model version**: Auto-update to default (2)
     - **Deployment name**: 35turbo (3)
-    - **Advanced options**
+    - **Deployment type**: Standard (5)
+    - **Click on Customize**
+        - **Model version**: default (2)
         - **Content filter**: Default (4)
-        - **Deployment type**: Standard (5)
         - **Tokens per minute rate limit**: 5K (6)
         - **Enable dynamic quota**: Enabled (7)
-        - Click on **Create** (8)
+        - Click on **deploy** (8)
           
-            ![](./media/1112.png)
+            ![](./media/new4.png)
   
           >**Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **GPT 3.5 Turbo** model in this exercise, which is highly capable of natural language generation and chat scenarios.
           > A rate limit of 5,000 tokens per minute is more than adequate to complete. this exercise while leaving capacity for other people using the same subscription.
