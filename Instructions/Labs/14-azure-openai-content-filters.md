@@ -110,7 +110,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
 1. Select **+ Create content filter (2)** and review the default settings for a content filter.
 
-1. Create the Content Filter with default name and default settings. also do explore the input filter and output filter tabs such as **Categories**, **Media** and **Action.** 
+1. Create the Content Filter with default name and default settings. also do explore the input filter and output filter tabs such as **Categories**, **Media**, **Action** and **Threshold.** 
 
       ![](./media/new6.png)
 
@@ -123,7 +123,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
     Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
 
-   ![](./media/LABB14.png)
+   ![](./media/new7.png)
 
 1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
 
