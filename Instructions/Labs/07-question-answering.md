@@ -64,7 +64,6 @@ To use question answering, you need a **Language** resource.
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
     
     * Password: <inject key="AzureAdUserPassword"></inject>
-    
 
    ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01.png)
    
@@ -102,7 +101,6 @@ To use question answering, you need a **Language** resource.
       
       ![](media/ai900mod4dimg9.png)
 
-
 1. On the **Review and finish** page, click **Create project**.
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg10.png)
@@ -118,7 +116,6 @@ To use question answering, you need a **Language** resource.
 
      ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg12-1.png)
       
-
 ### Task 3: Edit the knowledge base
 
 Your knowledge base is based on the details in the FAQ document and some pre-defined responses. You can add custom question-and-answer pairs to supplement these.

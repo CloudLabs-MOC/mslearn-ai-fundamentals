@@ -17,7 +17,6 @@ In this lab, you will perform:
 
   ![](media/module09.png)
 
-
 ## Exercise 1: Explore Speech Studio
 
 ### Task 1: Create an **Azure AI Speech** resource

@@ -76,7 +76,6 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
    <validation step="026548d7-4a64-4ebe-b70d-f68db2713d43" />
 
-
 ### Review
 
 In this lab, you have completed:

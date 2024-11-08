@@ -71,7 +71,6 @@ To implement natural language understanding with Conversational Language Underst
       
          ![Select add under Intents on the Build Schema pane.](media/LAB8.png)
    
-    
     > **Tip**: Make a note of your *project name*, you will use it later.
 
     >**Note:** Please note that it may take approximately 15-20 minutes for the list of **Utterances Primary Language** to become visible.
