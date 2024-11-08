@@ -7,12 +7,16 @@ To test the capabilities of the Azure AI Translator service, we'll take a look a
 ## Lab objectives
 
 In this lab, you will perform:
-- Creating a *Translator* resource
+- Creating a Translator resource
 - Exploring Translator service 
 
 ## Estimated timing: 30 minutes
 
-## Task 1: Create a *Translator* resource
+## Architecture Diagram
+
+ ![](media/.png)
+
+## Task 1: Create a Translator resource
 
 You can use the Translator service by creating either a **Translator** resource or an **Azure AI services** resource.
 
