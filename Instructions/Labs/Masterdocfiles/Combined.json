@@ -60,8 +60,12 @@
             "Order": 14
           },
           {
-            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/prod/Instructions/Labs/14-azure-openai-content-filters.md",
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/14-azure-openai-content-filters.md",
             "Order": 15
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/15-translation.md",
+            "Order": 16
           }
 
       ]
