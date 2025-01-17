@@ -26,14 +26,16 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 
 1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-    ![The image and its captions are displayed.](./media/dev2.png)
+    ![The image and its captions are displayed.](./media/dev2n.png)
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false" />**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **detectvision<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)**:Select **Standard S0**.
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: *Selected*.
+
+    ![The image and its captions are displayed.](./media/dev2n4.png)
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
   
@@ -44,6 +46,8 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on **X** icon to close the popup.
+
+   ![The image and its captions are displayed.](./media/lab3-2n.png)
 
 1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
 
@@ -72,7 +76,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. Now let's try with some of our own images. Select [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) to download **detect-faces.zip**. Then open the folder on your computer.
 
-1. Unzip the file and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Open the folder on your computer,extract the zip file and locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of people in a store.](./media/create-face-solutions/store-camera-1.jpg)
 
@@ -93,6 +97,8 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 1. Upload **store-camera-2.jpg** and review the face detection details that are returned. Notice how Azure AI Face can detect faces that are partially obscured. 
 
 In this exercise you have explored how Azure AI services can detect faces in images. If you have time, feel free to try the sample images or some of your own images.
+
+## Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

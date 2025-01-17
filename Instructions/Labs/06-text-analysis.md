@@ -26,6 +26,7 @@ In this lab, you will perform:
 ## Exercise 1: Analyze text with Language Studio
 
 ### Task 1: Create a *Language* resource
+
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
 1. In the azure portal, click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
@@ -39,6 +40,8 @@ You can use many Azure AI Language features with either a **Language** or **Azur
     - **Name**: Enter **studio<inject key="DeploymentID" enableCopy="false" />**
     - **Pricing tier**: *Free F0 or S if Free F0 is not available*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+
+   ![An image of the text in the image outlined](media/lab-6(1)n.png)
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 

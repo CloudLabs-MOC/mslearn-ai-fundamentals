@@ -7,7 +7,9 @@
 In this exercise, you will use Vision Studio to analyze images using the built-in try-it-out experiences. Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict
 
 ## Lab objectives
+
 In this lab, you will perform:
+
 - Task 1: Create an Azure AI services resource
 - Task 2: Connect your Azure AI service resource to Vision Studio
 - Task 3: Generate captions for an image
@@ -28,14 +30,16 @@ You can use Azure AI Vision's image analysis capabilities with an **Azure AI ser
 
 1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-   ![The image and its captions are displayed.](./media/dev2.png)
+   ![The image and its captions are displayed.](./media/dev2n.png)
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-03-<inject key="DeploymentID" enableCopy="false" />**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **visionimageai<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)** :Select **Standard S0**.
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: *Selected*.
+
+    ![](./media/dev2na.png)    
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
@@ -47,7 +51,7 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
 1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up of welcome screen please click on **X** icon to close the popup.
 
-   ![The image and its captions are displayed.](./media/lab3-2.png)
+   ![The image and its captions are displayed.](./media/lab3-2n.png)
 
 1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
 
@@ -73,7 +77,9 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     ![The image and its captions are displayed.](./media/update1.png)
 
-1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
+1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.
+
+    ![The image and its captions are displayed.](./media/update1n.png)
 
 1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer,extract the zip file and locate the file named **store-camera-1.jpg**; which contains the following image:
 
@@ -143,7 +149,6 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 ## Validation
 
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -157,6 +162,7 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
 
 ### Review
+
 In this lab, you have created an Azure AI Service resource, connected it to the vision studio, performed image analysis, tagging images and detected objects in the studio
 
 ## You have successfully completed this lab.

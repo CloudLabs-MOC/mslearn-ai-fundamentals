@@ -33,7 +33,9 @@ To use question answering, you need a **Language** resource.
         - **Default features**: *Keep the default features*.
         - **Custom features**: *Select custom question answering*.
      - Select **Continue to create your resource**
-       
+
+       ![An image of the text in the image outlined](media/lab-6(1).png)
+
        ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(1).png)
 
 1. On the **Create Language** page, specify the following settings:
@@ -49,6 +51,9 @@ To use question answering, you need a **Language** resource.
         - **Azure search pricing tier**: Free F (3 Indexes) - (*If this tier is not available, select Basic*)
     - **Responsible AI Notice**
         - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
+
+       ![An image of the text in the image outlined](media/lab-6(1)na.png)
+       ![An image of the text in the image outlined](media/lab-6(1)nb.png)
 
 1. Select **Review and Create** and then select **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
 
@@ -72,6 +77,8 @@ To use question answering, you need a **Language** resource.
     - **Azure subscription**: *Your Azure subscription*.
     - **Resource type**: *Language*.
     - **Resource name**: *select the Language service resource you just created*
+
+   ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01a.png)
 
 1. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
    
@@ -125,6 +132,9 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
     ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(7).png)
    
 1. In the **Add a new question answer pair** dialog box, in the **Question** type `Hello`, and in the **Answer** type `Hi`, then select **Done**.
+
+    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(7)a.png)
+
 1. Expand **Alternate questions** and select **+ Add alternate question**. Then enter `Hiya` as an alternative phrasing for "Hello".
 
    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(10).png)
@@ -166,8 +176,6 @@ You can deploy the knowledge base as a client application to answer questions
      ![Creating a Language Service resource with custom question answering enabled.](media/M7T5S2.png)
    
 ## Validation
-
-   <validation step="11faa70c-17f5-4a89-8275-059ac6273139" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
