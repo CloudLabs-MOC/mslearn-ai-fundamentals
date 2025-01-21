@@ -17,7 +17,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
- ![](media/lab12arcdia.png)
+ ![](media/arch1diag.png)
 
 ## Task 1: Use Copilot to explore a document and research an idea
 
