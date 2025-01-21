@@ -41,26 +41,28 @@ In this lab, you will perform:
    
 ### Task 2: Deploy a model
 
-Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
+Now you're ready to deploy a model to use through the **Azure AI Foundry portal**. Once deployed, you will use the model to generate natural language content.
 
-1. On the **Overview** page for your Azure OpenAI resource, select **Go to Azure OpenAI Studio** to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/) directly.
+1. On the **Overview** page for your Azure OpenAI resource, select **Go to Azure AI Foundry portal** to open Azure AI Foundry portal in a new browser tab. Alternatively, navigate to [Azure AI Foundry portal](https://oai.azure.com/) directly.
 
  >**Note:** If any pop up appears related to new experience, please close the pop-up window.
 
-2. Choose **Deployment** from the left pane, click on **+ Create new deployment** and select **Deploy base model.**
+2. Choose **Deployment (1)** from the left pane, click on **+ Deploy model (2)** and select **Deploy base model. (3)**
 
-   ![](./media/new2.png)
+   ![](./media/new2upd.png)
 
-4. In Azure OpenAI Studio, create a new deployment with the following settings:
+4. In Azure AI Foundry portal, create a new deployment with the following settings:
     - **Model**: gpt-35-turbo (1) and click on **Confirm**
-   ![](./media/new3.png)
+
+   ![](./media/new3upd.png)
+   
     - **Deployment name**: 35turbo (3)
     - **Deployment type**: Standard (5)
     - **Click on Customize**
         - **Model version**: default (2)
         - **Content filter**: Default (4)
         - **Tokens per minute rate limit**: 5K (6)
-        - **Enable dynamic quota**: Enabled (7)
+        - **Enable dynamic quota**: Disabed (7)
         - Click on **deploy** (8)
           
             ![](./media/new4.png)
@@ -72,7 +74,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
 Let's see how the model behaves in a conversational interaction.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
 
 1. In the **Chat session** section, enter the following prompt.
 
@@ -106,13 +108,18 @@ Let's see how the model behaves in a conversational interaction.
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
-1. In Azure OpenAI Studio, view the **Content filters (1)** page.
+1. In Azure AI Foundry portal, navigate to **Safety + security (1)** page.
 
 1. Select **+ Create content filter (2)** and review the default settings for a content filter.
 
 1. Create the Content Filter with default name and default settings. also do explore the input filter and output filter tabs such as **Categories**, **Media**, **Action** and **Threshold.** 
 
-      ![](./media/new6.png)
+      ![](./media/new6upd.png)
+
+
+1. In the **Basic information** tab, leave the name as default and click on **next**:
+
+1. In the **Input filter** tab, review the default settings for a content filte
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 
@@ -126,6 +133,10 @@ Content filters are applied to prompts and completions to prevent potentially ha
    ![](./media/new7.png)
 
 1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
+
+1. In the **Output filter** tab, change the threshold for each category to **Low**. Select Next.
+
+1. In the **Deployment** tab, select the deployment previously created, then select Next.
 
     > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
 
