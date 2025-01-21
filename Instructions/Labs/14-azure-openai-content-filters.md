@@ -92,7 +92,7 @@ Let's see how the model behaves in a conversational interaction.
 
 1. Select **Save** to the system message.
 
-   ![](./media/new5.png)
+   ![](./media/new5upd.png)
 
    >**Note:** On the **Update system message?** pop-up, select **Continue**.
 
