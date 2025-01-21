@@ -14,7 +14,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
- ![](media/arch15.PNG)
+ ![](media/arch15.png)
 
 ## Task 1: Create a Translator resource
 
