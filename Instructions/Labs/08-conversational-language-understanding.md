@@ -38,6 +38,8 @@ You can use many Azure AI Language features with either a **Language** or **Azur
     - **Pricing tier**: *Free F0* (if Free F0 is not available, select *S*)
     - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected*.
 
+    ![An image of the text in the image outlined](media/lab-5(1)n.png)   
+
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Create a Conversational Language Understanding App
@@ -207,6 +209,8 @@ To use your trained model in a client application, you must deploy it as an endp
 You have now successfully configured a conversational language project, and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine.
 
 > **NOTE**: Conversational language understanding provides the intelligence to interpret the intention of the input; it doesn't perform any actions such as turning on the light or the fan. A developer would need to build an application that uses the Conversational Language Understanding model to determine the user's intent, and then automate the appropriate action.
+
+## Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

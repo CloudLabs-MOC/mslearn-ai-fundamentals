@@ -208,6 +208,17 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
         ![Picture1](media/lab11-26.png)
 
+10. Under **Save enrichments to a knowledge store**, Select:
+    - Image projections
+    - Documents
+    - Pages
+    - Key phrases
+    - Entities
+    - Image details
+    - Image references
+
+    ![Picture1](media/lab11-30.png)
+
     > **Note**
     > A warning asking for a **Storage Account Connection String** appears.
     
@@ -220,17 +231,6 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 9. Select the **knowledge-store (1)** container, and then click **Select (2)** at the bottom of the screen.
 
     ![Picture1](media/lab11-29.png)
-
-10. Under **Save enrichments to a knowledge store**, Select:
-    - Image projections
-    - Documents
-    - Pages
-    - Key phrases
-    - Entities
-    - Image details
-    - Image references
-
-    ![Picture1](media/lab11-30.png)
 
 11. Select **Azure blob projections: Document**. A setting for *Container name* with the *knowledge-store* container auto-populated displays. Don't change the container name.
 

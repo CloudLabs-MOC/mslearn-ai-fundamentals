@@ -2,15 +2,14 @@
 
 ## Lab overview
 
-In this Exercise, you will explore Azure AI Studio and learn how to create, manage, and deploy generative AI models within the Azure ecosystem. You will gain hands-on experience working with Azure AI hubs, projects, and deploying AI models like GPT-35-Turbo.
+In this Exercise, you will explore Azure AI Foundry portal and learn how to create, manage, and deploy generative AI models within the Azure ecosystem. You will gain hands-on experience working with Azure AI hubs, projects, and deploying AI models like GPT-35-Turbo.
 
 ## Lab objectives
 
 In this exercise, you will perform:
-- Task 1: Open Azure AI Studio
-- Task 2: Create an Azure AI hub
-- Task 3: Create a project
-- Task 4: Deploy and test a model
+- Task 1: Open Azure AI Foundry portal
+- Task 2: Create an Azure AI hub and project
+- Task 3: Deploy and test a model
 
 ## Estimated timing: 30 minutes
 
@@ -20,24 +19,26 @@ In this exercise, you will perform:
 
 ## Exercise 1: Explore the components and tools of the Azure AI Studio
 
-### Task 1: Open Azure AI Studio
+### Task 1: Open Azure AI Foundry portal
 
-In this task, you will sign in to Azure AI Studio and explore its interface, learning how to navigate the platform and access its various features for managing AI resources.
+In this task, you will sign in to Azure AI Foundry portal and explore its interface, learning how to navigate the platform and access its various features for managing AI resources.
 
 1. In a edge browser, open https://ai.azure.com and **Sign in** using your Azure credentials. The home page of Azure AI Studio looks similar to the following image:
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-    ![](media/lab13-a1.png)
+    ![](media/lab13-a1n.png)
 
 2. Review the information on the home page and view each of the tabs, noting the options to explore models and capabilities, create projects, and manage resources.
 
-    ![](media/new-lab13-1.jpg)
+    ![](media/new-lab13-1n.png)
 
-### Task 2: Create an Azure AI hub
+### Task 2: Create an Azure AI hub and project
 
 In this task, you will create an Azure AI hub, gaining hands-on experience in setting up a collaborative workspace for AI projects and configuring essential resources and connections.
+
+1. In the home page, select **+ Create project**. In the **Create a project** with **ai-project-<inject key="DeploymentID" enableCopy="false"/>** name wizard you can see all the Azure resources that will be automatically created with your project, or you can customize the following settings by selecting **Customize** before selecting Create:
 
 1. In the **Management** section, navigate to **All resources (1)** and click on **+ New hub (2)**. Set the following configuration settings for the new hub, and then click **Next** to proceed.
 
@@ -52,27 +53,29 @@ In this task, you will create an Azure AI hub, gaining hands-on experience in se
     | **Connect Azure AI Services or Azure OpenAI** | *create a new AI Services **ai-azureai-<inject key="DeploymentID" enableCopy="false" />*** |
     | **Connect Azure AI Search** | *Skip connecting* |
 
-    ![](media/lab13-a4.png)
+    ![](media/lab13-a5n.png)
 
 2. Review your details and click on **Create**.
 
-    ![](media/lab13-a5.png)
+    ![](media/lab13-a6n.png)
 
-3. After the Azure AI hub has been created, it should look similar to the following image:
+3. After the Azure AI hub has been created, Navigate to **All hubs + projects** in the portal, Select your hub named **azureai-<inject key="DeploymentID" enableCopy="false"/>**
+it should look similar to the following image:
 
-    ![](media/lab13-a6.png)
+    ![](media/lab13-a6a.png)
+    ![](media/lab13-a6b.png)
 
 4. While keeping the Azure AI Studio tab open in the Edge browser, open another tab within the same Edge browser and navigate to the Azure portal.
 
 5. Browse to the resource group **AI-900-Module-13-<inject key="DeploymentID" enableCopy="false" />** , and view the Azure resources that have been created.
 
-    ![](media/lab13-a7.png)
+    ![](media/lab13-a7n.png)
 
 6. Return to the Azure AI Studio browser tab.
 
-7. View each of the pages in the pane on the left side of the page for your Azure AI hub, and note the artifacts you can create and manage. On the **Connections** page, observe that connections to Azure OpenAI and AI services have already been created.
+7. View each of the pages in the pane on the left side of the page for your Azure AI hub, and note the artifacts you can create and manage. On the **Management center** page, you can select **Connected resources**, either under your hub or your project, and observe that connections to Azure OpenAI and AI services have already been created.
 
-    ![](media/lab13-a8.png)
+    ![](media/lab13-a8n.png)
 
 ### Validation
 
@@ -83,47 +86,15 @@ In this task, you will create an Azure AI hub, gaining hands-on experience in se
  
    <validation step="7a610c9e-f8af-43f8-92f1-357e933d8a8d" />
 
-### Task 3: Create a project
-
-In this task, you will create a new project within your Azure AI hub, learning how to organize and manage your AI solutions effectively.
-
-1. In Azure AI Studio, navigate to the **azureai-<inject key="DeploymentID" enableCopy="false" />** hub you have created.
-
-2. Navigate to **All projects (1)** using the menu on the left, Select **+ New project (2)**.
-
-    ![](media/lab13-a9.png)
-
-3. In the **Create a project** wizard, create a project with the following settings, and then click **Create a project** to proceed
-
-    - **Current hub**: **azureai-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Project name**: **ai-project-<inject key="DeploymentID" enableCopy="false"/>**
-
-    ![](media/lab13-a10.png)
-
-4. Wait for your project to be created. When it's ready, it should look similar to the following image:
-
-    ![](media/lab13-a11.png)
-
-5. View the pages in the pane on the left side, expanding each section, and note the tasks you can perform and the resources you can manage in a project.
-
-### Validation
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
-   <validation step="b935fca8-d01f-47e4-9489-54d5c3b64e50" />
-
-### Task 4: Deploy and test a model
+### Task 3: Deploy and test a model
 
 In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?tabs=python-new) model, understanding how to configure deployment settings and validate the model's functionality through interactive testing.
 
-1. In the pane on the left for your project, in the **Shared resources** section, select the **Deployments** page.
+1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page.
 
-2. On the **Deployments (1)** page, under the **Model deployments** tab, click **+ Deploy model (2)**, and then select **Deploy base model (3)**.
+1. In the **Models + endpoints** page, in the Model deployments tab, select **+ Deploy model**, and then select **Deploy base model**.
 
-    ![](media/lab13-a12.png)
+    ![](media/lab13-a12n.png)
 
 3. Search for the **gpt-35-turbo** model from the list, select and confirm.
 
@@ -137,26 +108,27 @@ In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsof
 
     | Setting | Action |
     | -- | -- |
-    | **Connected Azure OpenAI resource** | *Select the default connection that was created when you created your hub* |
-    | **Model version** | *Select the default version* |
+    | **Deployment name** | *gpt-35-turbo* |
     | **Deployment type** | **Standard** |
+    | **Model version** | *0125* |
+    | **AI resource** | *Select the resource created previously* |
     | **Tokens per Minute Rate Limit (thousands)** | **5K** |
-    | **Content filter** | **Default** |
+    | **Content filter** | **DefaultV2** |
     | **Enable dynamic quota** | **Disable** |
 
-    ![](media/lab13-a15.png)
+    ![](media/lab13-a15n.png)
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 5,000 TPM is sufficient for the data used in this exercise.
 
 6. After the model has been deployed, in the deployment overview page, select **Open in playground**.
 
-    ![](media/lab13-a16.png)
+    ![](media/lab13-a16n.png)
 
 7. In the **Chat playground** page, ensure that your model deployment is selected in the **Deployment** section.
 
 8. In the chat window, enter a query such as *What is AI?* and view the response:
 
-    ![](media/lab13-a17.png)
+    ![](media/lab13-a17n.png)
 
 ### Validation
 
@@ -174,9 +146,9 @@ After performing this lab, you learned how to navigate Azure AI Studio, create a
 ### Review
 
 In this exercise, you have completed:
+
 - Open Azure AI Studio
 - Create an Azure AI hub
-- Create a project
 - Deploy and test a model
 
 ##   You have successfully completed this lab.

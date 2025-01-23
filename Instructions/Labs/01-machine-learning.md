@@ -5,6 +5,7 @@
 In this exercise, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
 >**Important**
+
 >At this time, it is possible to author and deploy a model as a web service in the Azure Machine Learning Studio, but not to test it in the Studio. Therefore, all but the last section of steps till deploy the model can be completed. We will update as this changes.
 
 ## Lab objectives
@@ -181,7 +182,9 @@ When the automated machine learning job has completed, you can review the best m
 
 1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as *Running*.
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
-   
+
+## Validation
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

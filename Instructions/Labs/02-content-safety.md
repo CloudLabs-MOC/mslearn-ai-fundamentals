@@ -5,7 +5,9 @@
 In this exercise, you will set up a single-service resource in Azure AI Content Safety Studio to evaluate and moderate text and image content, providing severity scores for various categories, ranging from safe to high.
 
 ## Lab objectives
+
 In this lab, you will perform:
+
 - Task 1: Explore the Content Safety Studio
 - Task 2: Associate a resource with the studio 
 - Task 3: Try out text moderation in the Content Safety Studio
