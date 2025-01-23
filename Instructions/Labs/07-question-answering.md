@@ -167,8 +167,6 @@ You can deploy the knowledge base as a client application to answer questions
    
 ## Validation
 
-   <validation step="11faa70c-17f5-4a89-8275-059ac6273139" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
