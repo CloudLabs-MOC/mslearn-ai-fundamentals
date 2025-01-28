@@ -9,11 +9,11 @@ In this exercise, you will use Language Studio to create and test a project that
 
 In this lab, you will perform:
 
-- Create a *Language* resource
-- Create a Conversational Language Understanding App
-- Create intents, utterances, and entities
-- Train the model
-- Deploy and test the model
+- Task 1: Create a *Language* resource
+- Task 2: Create a Conversational Language Understanding App
+- Task 3: Create intents, utterances, and entities
+- Task 4: Train the model
+- Task 5: Deploy and test the model
 
 ## Estimated timing: 45 minutes
 
@@ -214,7 +214,7 @@ You have now successfully configured a conversational language project, and defi
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -225,6 +225,13 @@ You have now successfully configured a conversational language project, and defi
 This app shows only some of the capabilities of the Conversational Language Understanding feature of the Language service. To learn more about what you can do with this service, see the [Conversational Language Understanding page](https://docs.microsoft.com/azure/cognitive-services/language-service/conversational-language-understanding/overview).
 
 ### Review
-In this lab, you have created a language resource, a conversational Language Understanding App, intents, utterances, and entities, trained the model, deployed and tested it.
+
+In this lab, you have completed:
+
+- Create a *Language* resource
+- Create a Conversational Language Understanding App
+- Create intents, utterances, and entities
+- Train the model
+- Deploy and test the model
   
 ## You have successfully completed this lab.

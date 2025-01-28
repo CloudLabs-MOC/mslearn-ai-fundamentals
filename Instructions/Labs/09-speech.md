@@ -47,8 +47,9 @@ In this exercise, you will create an AI Speech resource, unless you already have
 
     ![](media/06.png)
 
-
 ### Task 2: Explore speech to text in Speech Studio
+
+In this task, you will explore the speech-to-text feature in Speech Studio by uploading an audio file, which the service will transcribe in real time. You will download the Speech.zip file, extract it, and use the Real-time speech to text feature to transcribe audio into text, reviewing the output for accuracy.
 
 1. Copy the following link in the browser window of the VM  [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) to download **Speech.zip**. 
 
@@ -82,10 +83,8 @@ In this exercise, you will create an AI Speech resource, unless you already have
 
 ## Validation
 
-<validation step="fba5c663-5b29-43aa-8069-0349acf56ee1" />
-
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - Hit the Validate button for the corresponding task. you will receive a success message. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -96,6 +95,10 @@ In this exercise, you will create an AI Speech resource, unless you already have
 This exercise demonstrated only some of the capabilities of the speech service. To learn more about what you can do with this service, see the [Speech page](https://azure.microsoft.com/services/cognitive-services/speech-services).
 
 ### Review
-In this exercise you created an AI Speech resource in Speech Studio. You then use the Real-time speech to text service to transcribe an audio recording. You were able to see the text transcription being generated as the audio file was played.
+
+In this lab, you have completed:
+
+- Create an **Azure AI Speech** resource
+- Explore speech to text in Speech Studio
   
 ## You have successfully completed this lab.

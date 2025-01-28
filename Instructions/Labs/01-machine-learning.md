@@ -6,26 +6,28 @@ In this exercise, you'll use the automated machine learning feature in **Azure M
 
 >**Important**
 
->At this time, it is possible to author and deploy a model as a web service in the Azure Machine Learning Studio, but not to test it in the Studio. Therefore, all but the last section of steps till deploy the model can be completed. We will update as this changes.
+>At this time, you can author and deploy a model as a web service in Azure Machine Learning Studio, but testing it within the Studio is not yet supported. As a result, all steps up to deploying the model can be completed. We will provide updates as this functionality becomes available.
 
 ## Lab objectives
 
 In this lab, you will perform:
 
-- Creating an *Azure Machine Learning workspace* resource
-- Use automated machine learning to train a model
+- Task 1: Creating an *Azure Machine Learning workspace* resource
+- Task 2: Use automated machine learning to train a model
 
 ## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
- ![](media/lab01-arch.JPG)
+ ![](media/lab01-arch.jpg)
 
 ## Exercise 1: Explore Automated Machine Learning in Azure Machine Learning
 
 ### Task 1: Create an Azure Machine Learning workspace
 
-1. Select **+ Create a resource**, search for Machine Learning.
+In this task, you will create an Azure Machine Learning workspace. You will search for Machine Learning, configure the necessary settings like subscription, resource group, and workspace name, and deploy the resource. Once deployed, you will access the workspace through Azure Machine Learning Studio.
+
+1. In the Azure Portal, select **+ Create a resource** and search for **Machine Learning**.
 
     ![Picture1](media/ai900mod1img1.png)
 
@@ -33,14 +35,14 @@ In this lab, you will perform:
  
    ![Picture1](media/ai900mod1cimg1.png)
 
-3. On **Azure Machine Learning** Page Click on **Create**.
+3. On the **Azure Machine Learning** page, click **Create** to proceed.
 
    ![Picture1](media/ai900mod1cimg2.png)
   
 4. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: Use existing Azure subscription. **(1)**
-    - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false" />**
+    - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false" />** **(2)**
     - **Workspace name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
     - **Region**: Select <inject key="location" enableCopy="false" /> **(4)**
     - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
@@ -52,16 +54,17 @@ In this lab, you will perform:
 
       ![](media/LABB1.png)
 
-6. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.
+6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
    
 7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
 8. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
 
 9. In Azure Machine Learning studio, you should see your newly created workspace. If not, select **All workspaces** in the left-hand menu and then select the workspace you just created.
+
     ![Picture1](media/lab1-6.png)
 
-## Enable preview features
+### Enable preview features
 
 Some features of Azure Machine Learning are in preview, and need to be explicitly enabled in your workspace.
 
@@ -152,7 +155,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
-  ## Review the best model
+### Review the best model
 
 When the automated machine learning job has completed, you can review the best model it trained.
 
@@ -167,7 +170,7 @@ When the automated machine learning job has completed, you can review the best m
 
 1. Select the **Metrics** tab and select the **residuals** and **predicted_true** charts if they are not already selected. 
 
-    Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
+    >**Note:** Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
 
 ### Task 3: Deploy the model
 
@@ -187,13 +190,14 @@ When the automated machine learning job has completed, you can review the best m
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
 
 ### Review
+
 In this lab, you have created an Azure Machine Learning workspace resource, and use automated machine learning to train a model and deploy it
   
 ## You have successfully completed this lab.

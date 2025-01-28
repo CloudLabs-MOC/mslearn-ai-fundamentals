@@ -14,8 +14,8 @@ How does Document Intelligence build upon optical character recognition (OCR)? W
 
 In this lab, you will perform:
 
-- Creating Document Intelligence resource
-- Analyzing a receipt in Document Intelligence Studio
+- Task 1: Creating Document Intelligence resource
+- Task 2: Analyzing a receipt in Document Intelligence Studio
 
 ## Estimated timing: 30 minutes
 
@@ -55,7 +55,7 @@ You can use Azure AI Document Intelligence by creating either a *Document Intell
 
     >**Note:** If your resource is not yet displayed, you may need to **Refresh** the page.
 
-Keep Document Intelligence Studio open.
+    >**Note:** Keep Document Intelligence Studio open.
 
 ### Task 2: Analyze a receipt in Document Intelligence Studio
 
@@ -84,7 +84,7 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -96,6 +96,9 @@ This exercise demonstrated only some of the capabilities of the AI Document Inte
 
 ## Review
 
-In this exercise you have used the Document Intelligence Studio to create a Document Intelligence resource. You then used the service to analyze a receipt. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close Document Intelligence Studio, why not try some of the sample receipts, including those in different languages?
+In this lab, you have completed:
+
+- Creating Document Intelligence resource
+- Analyzing a receipt in Document Intelligence Studio
 
 ## You have successfully completed this lab.

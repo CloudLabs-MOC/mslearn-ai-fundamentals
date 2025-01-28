@@ -7,6 +7,7 @@ In this Exercise, you will explore Azure AI Foundry portal and learn how to crea
 ## Lab objectives
 
 In this exercise, you will perform:
+
 - Task 1: Open Azure AI Foundry portal
 - Task 2: Create an Azure AI hub and project
 - Task 3: Deploy and test a model
@@ -59,7 +60,7 @@ In this task, you will create an Azure AI hub, gaining hands-on experience in se
 
     ![](media/lab13-a6n.png)
 
-3. After the Azure AI hub has been created, Navigate to **All hubs + projects** in the portal, Select your hub named **azureai-<inject key="DeploymentID" enableCopy="false"/>**
+3. After the Azure AI hub has been created, Navigate to **All hubs + projects (1)** in the portal, Select your hub named **azureai-<inject key="DeploymentID" enableCopy="false"/>** **(2)**
 it should look similar to the following image:
 
     ![](media/lab13-a6a.png)
@@ -108,13 +109,13 @@ In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsof
 
     | Setting | Action |
     | -- | -- |
-    | **Deployment name** | *gpt-35-turbo* |
-    | **Deployment type** | **Standard** |
-    | **Model version** | *0125* |
-    | **AI resource** | *Select the resource created previously* |
-    | **Tokens per Minute Rate Limit (thousands)** | **5K** |
-    | **Content filter** | **DefaultV2** |
-    | **Enable dynamic quota** | **Disable** |
+    | **Deployment name** | *gpt-35-turbo* **(1)** |
+    | **Deployment type** | **Standard** **(2)** |
+    | **Model version** | *0125* **(3)** |
+    | **AI resource** | *Select the resource created previously* **(4)** |
+    | **Tokens per Minute Rate Limit (thousands)** | **5K** **(5)** |
+    | **Content filter** | **DefaultV2** **(6)** |
+    | **Enable dynamic quota** | **Disable** **(7)** |
 
     ![](media/lab13-a15n.png)
 
@@ -133,7 +134,7 @@ In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsof
 ### Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - Hit the Validate button for the corresponding task. you will receive a success message.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
