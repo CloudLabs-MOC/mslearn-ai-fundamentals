@@ -23,9 +23,11 @@ In this lab, you will perform:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-1. In azure portal, search for **Azure OpenAI** and click on **+ Create** resource with the following settings:
+1. In azure portal, search for **OpenAI** and select it. 
 
-   ![](./media/new1.png)
+   ![](./media/new01upd.png)
+
+2. Click on **+ Create** resource with the following settings:  
 
     - **Subscription**: Select your **existing azure subscription**.
     - **Resource group**: Select **AI-900-Module-14-<inject key="DeploymentID" enableCopy="false" />**
@@ -67,8 +69,8 @@ Now you're ready to deploy a model to use through the **Azure AI Foundry portal*
           
         ![](./media/new4upd1.png)
   
-          >**Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **GPT 3.5 Turbo** model in this exercise, which is highly capable of natural language generation and chat scenarios.
-          > A rate limit of 5,000 tokens per minute is more than adequate to complete. this exercise while leaving capacity for other people using the same subscription.
+     >**Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **GPT 3.5 Turbo** model in this exercise, which is highly capable of natural language generation and chat scenarios.
+    > A rate limit of 5,000 tokens per minute is more than adequate to complete. this exercise while leaving capacity for other people using the same subscription.
   
 ### Task 3: Generate natural language output
 
