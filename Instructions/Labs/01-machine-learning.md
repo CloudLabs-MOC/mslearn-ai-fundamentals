@@ -53,10 +53,16 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
       ![](media/LABB1.png)
 
 6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+
+   ![](media/lab1-9.png)
    
 7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
+   ![](media/lab1-10.png)
+
 8. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
+
+   ![](media/lab1-1.png)
 
 9. In Azure Machine Learning studio, you should see your newly created workspace. If not, select **All workspaces** in the left-hand menu and then select the workspace you just created.
 
@@ -82,76 +88,119 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
 > **Citation**: *The data used in this exercise is derived from [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) and is used in accordance with the published data [license agreement](https://www.capitalbikeshare.com/data-license-agreement)*.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), view the **Automated ML** page (under **Authoring**).
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), view the **Automated ML** page (under **Authoring**), select  **+ New Automated ML job**.
 
    ![](media/lab1-1.png)  
 
-1. Create a new Automated ML job by selecting **+ New Automated ML job** with the following settings, using **Next** as required to progress through the user interface:
+1. Create a new Automated ML job with the following settings, using **Next (5)** as required to progress through the user interface:
 
     **Basic settings**:
 
-    - **Job name**: mslearn-bike-automl
-    - **New experiment name**: mslearn-bike-rental
-    - **Description**: Automated machine learning for bike rental prediction
-    - **Tags**: *none*
+    - **Job name**: mslearn-bike-automl **(1)**
+    - **New experiment name**: mslearn-bike-rental **(2)**
+    - **Description**: Automated machine learning for bike rental prediction **(3)**
+    - **Tags**: *none* **(4)**
+
+       ![](media/1.png)
 
    **Task type & data**:
 
-    - **Select task type**: Regression
-    - **Select data**: Select **+ Create** to create a new data with the following settings:
+    - **Select task type**: Regression **(1)**
+    - **Select data**: Select **+ Create (2)** 
+
+        ![](media/lab1-25.png)
+
+    - To create a new data with the following settings:
+
         - **Data type**:
-            - **Name**: bike-rentals
-            - **Description**: Historic bike rental data
-            - **Type**: Tabular and then select **Next**
+            - **Name**:  Enter **bike-rentals (1)**
+            - **Description**: Enter **Historic bike rental data (2)**
+            - **Type**: Tabular **(3)** and then select **Next (4)**
+
+               ![](media/lab1-24.png)
+
         - **Data source**:
-            - Select **From web files** and then select **Next**
+            - Select **From web files (1)** and then select **Next (2)**
+
+              ![](media/lab1-23.png)
+
         - **Web URL**:
-            - **Web URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/ml/bike-data/daily-bike-share.csv`
-            - **Skip data validation**: *do not select* and then select **Next**
+            - **Web URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/ml/bike-data/daily-bike-share.csv` **(1)**
+            - **Skip data validation**: *do not select* **(2)** and then select **Next (1)**
+
+              ![](media/lab1-22.png)
+
         - **Settings**:
-            - **File format**: Delimited
-            - **Delimiter**: Comma
-            - **Encoding**: UTF-8
-            - **Column headers**: Only first file has headers
-            - **Skip rows**: None
-            - **Dataset contains multi-line data**: *do not select* and then select **Next**
+            - **File format**: Delimited **(1)**
+            - **Delimiter**: Comma **(2)**
+            - **Encoding**: UTF-8 **(3)**
+            - **Column headers**: Only first file has headers **(4)**
+            - **Skip rows**: None **(5)**
+            - **Dataset contains multi-line data**: *do not select* **(6)** and then select **Next (7)**
+
+              ![](media/lab1-21.png)
+
         - **Schema**:
             - Include all columns other than **Path** and then select **Next**
-            - Review the automatically detected types
 
-        Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job. Select **Next**
+               ![](media/lab1-20.png)
 
+            - Review the automatically detected types.
+
+        - Select **Create**. 
+
+          ![](media/lab1-18.png)
+        
+        - After the dataset is created, select the **bike-rentals (1)** dataset to continue to submit the Automated ML job. Select **Next (2)**
+
+          ![](media/lab1-19.png)
+        
     **Task settings**:
 
     - **Task type**: Regression
     - **Data**: bike-rentals
     - **Target column**: rentals (integer)
+
+       ![](media/lab1-17.png)
+
     - **View additional configuration settings**:
-        - **Primary metric**: Normalized root mean squared error
-        - **Explain best model**: *Unselected*
-        - **Use all supported models**: <u>Un</u>selected. *You'll restrict the job to try only a few specific algorithms.*
-        - **Allowed models**: *Select only **RandomForest** and **LightGBM** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
+        - **Primary metric**: Normalized root mean squared error **(1)**
+        - **Explain best model**: *Unselected* **(2)**
+        - **Use all supported models**: <u>Un</u>selected. **(3)** *You'll restrict the job to try only a few specific algorithms.*
+        - **Allowed models (4)**: *Select only **RandomForest (5)** and **LightGBM (6)** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
+
+          ![](media/lab1-16.png)
+
     - **Limits**: *Expand this section*
-        - **Max trials**: 3
-        - **Max concurrent trials**: 3
-        - **Max nodes**: 3
-        - **Metric score threshold**: 0.085 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
-        - **Experiment Timeout**: 15
-        - **Iteration timeout**: 15
-        - **Enable early termination**: *Selected*
+        - **Max trials**: 3 **(1)**
+        - **Max concurrent trials**: 3 **(2)**
+        - **Max nodes**: 3 **(3)**
+        - **Metric score threshold**: 0.085 **(4)** (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
+        - **Experiment Timeout**: 15 **(5)**
+        - **Iteration timeout**: 15 **(6)**
+        - **Enable early termination**: *Selected* **(7)**
+
+          ![](media/lab1-15.png)
+
     - **Validation and test**:
-        - **Validation type**: Train-validation split
-        - **Percentage validation of data**: 10
-        - **Test dataset**: None and then select **Next**
+        - **Validation type**: Train-validation split **(1)**
+        - **Percentage validation of data**: 10 **(2)**
+        - **Test dataset**: None **(3)** and then select **Next (4)**
+
+          ![](media/lab1-14.png)
 
     **Compute**:
-    - **Select compute type**: Serverless
-    - **Virtual machine type**: CPU
-    - **Virtual machine tier**: Dedicated
-    - **Virtual machine size**: Standard_DS3_V2
-    - **Number of instances**: 1 and then select **Next**
+    - **Select compute type**: Serverless **(1)**
+    - **Virtual machine type**: CPU **(2)**
+    - **Virtual machine tier**: Dedicated **(3)**
+    - **Virtual machine size**: Standard_DS3_V2 **(4)**
+    - **Number of instances**: 1 **(5)** and then select **Next **(6)**
+
+      ![](media/lab1-13.png)
 
 1. Select **Submit training job**. It starts automatically.
+
+   ![](media/lab1-12.png)
 
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
