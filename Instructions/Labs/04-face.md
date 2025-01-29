@@ -26,7 +26,7 @@ In this task, you will learn how to create an **Azure AI Services** resource to 
 
 You can use Azure AI Face service with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
+1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
 
     ![The image and its captions are displayed.](./media/aiservice.png)
 
@@ -51,7 +51,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on **X** icon to close the popup.
+1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on the **X** icon to close the popup.
 
    ![The image and its captions are displayed.](./media/lab3-2n.png)
 
@@ -84,7 +84,7 @@ In this task, you will learn how to detect faces in Vision Studio to analyze fac
 
 1. Now let's try with some of our own images. Select [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) to download **detect-faces.zip**. Then open the folder on your computer.
 
-1. Open the folder on your computer,extract the zip file and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Open the folder on your computer, extract the zip file, and locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of people in a store.](./media/create-face-solutions/store-camera-1.jpg)
 
