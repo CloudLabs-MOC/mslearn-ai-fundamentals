@@ -123,11 +123,11 @@ In this task, you will learn how to try out text moderation in the Content Safet
 
    ![](media/runtest(2).png)
 
-You can run tests on all the samples provided, then inspect the results.
+You can run tests on all the samples provided, and then inspect the results.
 
 ### Task 4: Check out the keys and endpoint
 
-In this task, you will learn how to check out the keys and endpoint required to authenticate and integrate with the Content Safety Studio.
+In this task, you will learn how to check out the keys and endpoints required to authenticate and integrate with the Content Safety Studio.
 
 These capabilities you tested can be programmed into all sorts of applications. The keys and endpoint used for application development can be found both in the Content Safety Studio and the Azure Portal. 
 
@@ -135,7 +135,7 @@ These capabilities you tested can be programmed into all sorts of applications. 
 
    ![](media/32.png)
 
-1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). Search for Content Safety on the top search bar. Find your resource and click on it. On the left-hand menu, look under *Resource Management* for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoint and keys for your resource. 
+1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). Search for Content Safety on the top search bar. Find your resource and click on it. On the left-hand menu, look under *Resource Management* for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
 
      ![](media/31.png)
 
