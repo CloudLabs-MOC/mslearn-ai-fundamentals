@@ -2,7 +2,7 @@
 
 ## Lab overview
 
-In this Exercise, you will explore Azure AI Foundry portal and learn how to create, manage, and deploy generative AI models within the Azure ecosystem. You will gain hands-on experience working with Azure AI hubs, projects, and deploying AI models like GPT-35-Turbo.
+In this exercise, you will explore the Azure AI Foundry portal and learn how to create, manage, and deploy generative AI models within the Azure ecosystem. You will gain hands-on experience working with Azure AI hubs, and projects, and deploying AI models like GPT-35-Turbo.
 
 ## Lab objectives
 
@@ -99,7 +99,7 @@ In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsof
 
     ![](media/lab13-a12n.png)
 
-3. Search for the **gpt-35-turbo** model from the list, select and confirm.
+3. Search for the **gpt-35-turbo** model from the list, select, and confirm.
 
     ![](media/lab13-a13.png)
 
@@ -144,7 +144,7 @@ In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsof
 
 ### Summary
 
-After performing this lab, you learned how to navigate Azure AI Studio, create and manage Azure AI hubs and projects, and deploy and test generative AI models. You gained practical experience in setting up and configuring AI resources, as well as using Azure AI Stuido tools to develop and validate AI solutions effectively.
+After performing this lab, you learned how to navigate Azure AI Studio, create and manage Azure AI hubs and projects, and deploy and test generative AI models. You gained practical experience in setting up and configuring AI resources, as well as using Azure AI Studio tools to develop and validate AI solutions effectively.
 
 ### Review
 
