@@ -70,10 +70,10 @@ Now you're ready to deploy a model to use through the **Azure AI Foundry portal*
   - **Deployment name**: 35turbo
   - **Deployment type**: Standard
   - **Click on Customize**
-    - **Model version**: default
+    - **Model version**: Default
     - **Content filter**: Default
     - **Tokens per minute rate limit**: 5K  **(1)**
-    - **Enable dynamic quota**: Disabed  **(2)**
+    - **Enable dynamic quota**: Disabled  **(2)**
     - Click on **deploy  (3)**
           
       ![](./media/new4upd1.png)
