@@ -25,6 +25,8 @@ In this lab, you will perform:
 
 ### Task 1: Explore the Content Safety Studio 
 
+In this task, you will learn how to explore the Content Safety Studio to analyze and manage content moderation policies effectively.
+
 1. Open the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). If you are not logged in, you will need to sign in. Select **Sign In** on the top right of the screen.  
 
     ![](media/28.png)
@@ -50,6 +52,8 @@ In this lab, you will perform:
      ![](media/29.png)  
 
 ### Task 2: Associate a resource with the studio 
+
+In this task, you will learn how to associate a resource with the Content Safety Studio to enable seamless content moderation.
 
 Before using the studio, you need to associate an Azure AI services resource with the studio. Depending on the studio, you may find you need a specific single-service resource, or can use a general multi-service resource. In the case of the Content Safety Studio, you can use the service by creating a single-service *Content Safety* resource or *Azure AI services* general multi-service resource. In the steps below, we will create a single-service Content Safety resource. 
 
@@ -89,6 +93,8 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 ### Task 3: Try out text moderation in the Content Safety Studio
 
+In this task, you will learn how to try out text moderation in the Content Safety Studio to detect and manage harmful or inappropriate content.
+
 1. Navigate back to the Content Safety Studio home page.
 
 1. On the Content Safety Studio home page, under *Run moderation tests*
@@ -120,6 +126,8 @@ Before using the studio, you need to associate an Azure AI services resource wit
 You can run tests on all the samples provided, then inspect the results.
 
 ### Task 4: Check out the keys and endpoint
+
+In this task, you will learn how to check out the keys and endpoint required to authenticate and integrate with the Content Safety Studio.
 
 These capabilities you tested can be programmed into all sorts of applications. The keys and endpoint used for application development can be found both in the Content Safety Studio and the Azure Portal. 
 

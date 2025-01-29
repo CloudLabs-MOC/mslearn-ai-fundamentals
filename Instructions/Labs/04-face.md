@@ -22,6 +22,8 @@ In this lab, you will perform:
 
 ### Task 1:  Create an *Azure AI services* resource
 
+In this task, you will learn how to create an **Azure AI Services** resource to access various AI capabilities for your applications.
+
 You can use Azure AI Face service with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
 1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
@@ -40,6 +42,8 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 1. Select **Review + create** then **Create** and wait for deployment to complete.
   
 ### Task 2: Connect your Azure AI service resource to Vision Studio
+
+In this task, you will learn how to connect your **Azure AI Services** resource to Vision Studio to enable AI-powered image analysis.
 
 Next, connect the Azure AI services resource you provisioned above to Vision Studio.
 
@@ -61,7 +65,9 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
    
 1. Close the settings page by selecting the "x" at the top right of the screen.
 
-### Task 3:   Detect faces in the Vision Studio 
+### Task 3: Detect faces in the Vision Studio 
+
+In this task, you will learn how to detect faces in Vision Studio to analyze facial attributes and recognize individuals.
 
 1. In a web browser, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 1. On the **Getting started with Vision** landing page, select the **Face** tab and then select the **Detect Faces in an image** tile.

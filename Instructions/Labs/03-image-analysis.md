@@ -24,6 +24,8 @@ In this lab, you will perform:
 
 ## Exercise 1: Analyze images in Vision Studio
 
+In this task, you will learn how to analyze images in Vision Studio to extract insights and understand visual content effectively.
+
 ### Task 1: Create an *Azure AI services* resource
 
 You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
@@ -44,6 +46,8 @@ You can use Azure AI Vision's image analysis capabilities with an **Azure AI ser
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Connect your Azure AI service resource to Vision Studio
+
+In this task, you will learn how to connect your Azure AI service resource to Vision Studio to enable advanced image analysis capabilities.
 
 Next, connect the Azure AI service resource you provisioned above to Vision Studio.
 
@@ -66,6 +70,8 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 1. Close the settings page by selecting the "x" at the top right of the screen.
 
 ### Task 3: Generate captions for an image
+
+In this task, you will learn how to generate descriptive captions for an image using Vision Studio.
 
 Now you are ready to use Vision Studio to analyze images taken by a camera in the *Northwind Traders* store.
 
@@ -108,6 +114,8 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 > **Note**: If you encounter any intermittent issues with Vision Studio during Task 3, proceed with the next task. You can revisit and reattempt Task 3 if necessary.
 
 ## Task 4: Tagging images
+
+In this task, you will learn how to tag images with relevant labels using Vision Studio to enhance organization and searchability.
 
 The next feature you will try is the **Extract Tags** functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
 

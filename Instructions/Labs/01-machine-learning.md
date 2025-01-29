@@ -78,6 +78,8 @@ Some features of Azure Machine Learning are in preview, and need to be explicitl
 
 ### Task 2: Use automated machine learning to train a model
 
+In this task, you will learn how to use automated machine learning to train a model efficiently without writing extensive code.
+
 Automated machine learning enables you to try multiple algorithms and parameters to train multiple models, and identify the best one for your data. In this exercise, you'll use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
 
 > **Citation**: *The data used in this exercise is derived from [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) and is used in accordance with the published data [license agreement](https://www.capitalbikeshare.com/data-license-agreement)*.
@@ -173,6 +175,8 @@ When the automated machine learning job has completed, you can review the best m
     >**Note:** Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
 
 ### Task 3: Deploy the model
+
+In this task, you will learn how to deploy the trained model as a web service for real-time predictions.
 
 1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Web service** option to deploy the model with the following settings:
     - **Name**: predict-rentals  **(1)**
