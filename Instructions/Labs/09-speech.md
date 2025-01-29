@@ -21,6 +21,8 @@ In this lab, you will perform:
 
 ### Task 1: Create an **Azure AI Speech** resource
 
+In this task, you will learn how to create an **Azure AI Speech** resource to enable speech recognition, synthesis, and translation capabilities in your applications.
+
 You can use the Speech service by creating either a **Speech** resource or an **Azure AI services** resource.
 
 In this exercise, you will create an AI Speech resource, unless you already have a resource that you can use.

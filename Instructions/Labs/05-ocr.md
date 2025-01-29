@@ -21,13 +21,16 @@ In this lab, you will perform:
 ![An image](media/arch5.PNG)
 
 ## Exercise 1: Read text in Vision Studio
+
 ### Task 1: Create an *Azure AI services* resource
+
+In this task, you will learn how to create an **Azure AI Services** resource to leverage AI capabilities for vision, language, and decision-making.
 
 You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service  account (2)** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
-    ![The image and its captions are displayed.](./media/dev2.png)
+    ![The image and its captions are displayed.](./media/aiservice.png)
 
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**
@@ -39,6 +42,8 @@ You can use Azure AI Vision's OCR capabilities with an **Azure AI services** mul
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Connect your Azure AI service resource to Vision Studio
+
+In this task, you will learn how to connect your **Azure AI Services** resource to Vision Studio to enable AI-driven image and video analysis.
 
 Next, connect the Azure AI services resource you provisioned above to Vision Studio.
 
@@ -61,6 +66,8 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 1. Close the settings page by selecting the "x" at the top right of the screen.
 
 ### Task 3: Extract text from images in the Vision Studio
+
+In this task, you will learn how to extract text from images in Vision Studio using Optical Character Recognition (OCR) technology.
     
 1. In a web browser, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 

@@ -35,6 +35,8 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 ### Task 1: Create an Azure AI Search resource
 
+In this task, you will learn how to create an **Azure AI Search** resource to enable powerful search capabilities and AI-driven content exploration for your applications.
+
 1. On the **Azure Portal** homepage, select **+ Create a resource**.
 
      ![Picture1](media/lab11-01.png)
@@ -69,6 +71,8 @@ The solution you'll create for Fourth Coffee requires the following resources in
 1. On the Azure AI Search overview page, you can add indexes, import data, and search created indexes.
 
 ### Task 2: Create an AI Services resource
+
+In this task, you will learn how to create an **AI Services** resource in Azure to access a wide range of AI capabilities, such as vision, speech, language, and decision-making, for your applications.
 
 You'll need to provision an **Azure AI services** resource that's in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
@@ -153,6 +157,8 @@ In this task, you will upload documents to an Azure Storage container. First, yo
 1. After the upload is complete, you can close the **Upload blob** pane. Your documents are now in your *coffee-reviews* storage container.
 
 ## Task 5: Index the documents
+
+In this task, you will learn how to index the documents in your **AI Search** resource to make them searchable and enable efficient querying and retrieval of relevant content.
 
 After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an *Import data wizard*. With this wizard, you can automatically create an index and indexer for supported data sources. You'll use the wizard to create an index and import your search documents from storage into the Azure AI Search index.
 
@@ -276,6 +282,8 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 ## Task 6: Query the index
 
+In this task, you will learn how to query the index in your **AI Search** resource to retrieve relevant documents and insights based on specific search criteria.
+
 Use the Search Explorer to write and test queries. Search Explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search Explorer to write queries and review results in JSON.
 
 1. In your Search service's *Overview* page, select **Search explorer** at the top of the screen.
@@ -323,6 +331,8 @@ Use the Search Explorer to write and test queries. Search Explorer is a tool bui
 
 ## Task 7: Review the knowledge store
 
+In this task, you will learn how to review the knowledge store in your **AI Search** resource to analyze and manage the extracted insights, metadata, and search results for improved data understanding.
+
 Let's see the power of the knowledge store in action. When you ran the *Import data wizard*, you also created a knowledge store. Inside the knowledge store, you'll find the enriched data extracted by AI skills persists in the form of projections and tables.
 
 1. In the Azure portal, navigate back to your Azure storage account.
@@ -368,7 +378,6 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
     Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
 
 ## Validation
-
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

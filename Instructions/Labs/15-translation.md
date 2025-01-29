@@ -7,8 +7,8 @@ To test the capabilities of the Azure AI Translator service, we'll take a look a
 ## Lab objectives
 
 In this lab, you will perform:
-- Creating a Translator resource
-- Exploring Translator service 
+- Task 1: Creating a Translator resource
+- Task 2: Exploring Translator service 
 
 ## Estimated timing: 30 minutes
 
@@ -18,9 +18,10 @@ In this lab, you will perform:
 
 ## Task 1: Create a Translator resource
 
+In this task, you will learn how to create a **Translator** resource in Azure to enable real-time language translation capabilities for your applications.
+
 You can use the Translator service by creating either a **Translator** resource or an **Azure AI services** resource.
 
-For this exercise, create a **Translator** resource in your Azure subscription.
 
 1. In azure portal, select **+ Create a resource**.
 
@@ -51,6 +52,8 @@ For this exercise, create a **Translator** resource in your Azure subscription.
 1. Wait for deployment to complete. Then go to the deployed resource.
 
 ## Task 2: Explore Translator service 
+
+In this task, you will learn how to explore the **Translator** service in Azure to understand its features, such as text translation, language detection, and language support for building multilingual applications.
 
 We can explore the capabilities of the Translator service in the Azure Portal. 
 

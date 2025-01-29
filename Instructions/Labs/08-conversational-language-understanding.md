@@ -24,6 +24,8 @@ In this lab, you will perform:
 
 ### Task 1: Create a *Language* resource
 
+In this task, you will learn how to create a **Language** resource in Azure to unlock advanced natural language processing capabilities for text analysis and AI-driven insights.
+
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
 1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to *Select additional features*. Keep the default selection and click **Continue to create your resource**. 
@@ -43,6 +45,8 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Create a Conversational Language Understanding App
+
+In this task, you will learn how to create a **Conversational Language Understanding (CLU)** app to build intelligent conversational agents that can understand and process natural language input.
 
 To implement natural language understanding with Conversational Language Understanding, you create an app; and then add entities, intents, and utterances to define the commands you want the app to execute.
 
@@ -80,6 +84,8 @@ To implement natural language understanding with Conversational Language Underst
 1. On the **Review and finish** page, select **Create**.
   
 ### Task 3: Create intents, utterances, and entities
+
+In this task, you will learn how to create intents, utterances, and entities in your **Conversational Language Understanding (CLU)** app to train it to recognize user inputs and respond appropriately.
 
 An *intent* is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
@@ -157,6 +163,8 @@ An *intent* is an action you want to perform - for example, you might want to sw
    
 ### Task 4: Train the model
 
+In this task, you will learn how to train the model in your **Conversational Language Understanding (CLU)** app to improve its ability to recognize and understand user intents, utterances, and entities.
+
 Now you're ready to use the intents and entities you have defined to train the conversational language model for your app.
 
 1. On the left hand side of Language Studio, select **Training jobs**, then select **+ Start a training job**.
@@ -174,6 +182,8 @@ Now you're ready to use the intents and entities you have defined to train the c
 1. Wait for training to complete.
 
 ### Task 5: Deploy and test the model
+
+In this task, you will learn how to deploy and test the model in your **Conversational Language Understanding (CLU)** app to ensure it functions correctly and responds accurately to user inputs.
 
 To use your trained model in a client application, you must deploy it as an endpoint to which the client applications can send new utterances; from which intents and entities will be predicted.
 

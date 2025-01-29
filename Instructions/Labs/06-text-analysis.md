@@ -27,6 +27,8 @@ In this lab, you will perform:
 
 ### Task 1: Create a *Language* resource
 
+In this task, you will learn how to create a **Language** resource to enable natural language processing capabilities in your applications.
+
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
 1. In the azure portal, click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
@@ -46,6 +48,8 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Configure your resource in Azure AI Language Studio
+
+In this task, you will learn how to configure your **Language** resource in Azure AI Language Studio to enable text analysis and language understanding features.
 
 1. In a separate browser tab within the LabVM, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and click on **Sign in** from the top right corner. after sign in you will be prompted with getting started language page go to the last page by click on **>** symbol.
 
@@ -76,6 +80,8 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 ### Task 3: Analyze reviews in Language Studio
+
+In this task, you will learn how to analyze reviews in Language Studio to extract sentiment, key phrases, and insights using AI.
 
 1. In a web browser, navigate to [Language Studio](https://language.cognitive.azure.com?azure-portal=true).
 
@@ -114,7 +120,6 @@ Select **Sentence 1** again to close.
     3/2/2018
     Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
     ```
-    
     
 1. Select **Run**. Review the output and review the sentiment and confidence level.
 

@@ -27,6 +27,8 @@ In this lab, you will perform:
 
 ### Task 1: Create Document Intelligence resource
 
+In this task, you will learn how to create a **Document Intelligence** resource in Azure to extract, analyze, and process data from documents using AI-powered tools.
+
 You can use Azure AI Document Intelligence by creating either a *Document Intelligence* resource or an *Azure AI services* resource. In this exercise, you will create *Document Intelligence* resource, if you don’t already have one.
 
 1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your following credentials:
@@ -58,6 +60,8 @@ You can use Azure AI Document Intelligence by creating either a *Document Intell
     >**Note:** Keep Document Intelligence Studio open.
 
 ### Task 2: Analyze a receipt in Document Intelligence Studio
+
+In this task, you will learn how to analyze a receipt in **Document Intelligence Studio** to extract key information such as items, prices, and totals using AI-based document processing.
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 

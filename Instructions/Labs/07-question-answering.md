@@ -26,6 +26,8 @@ In this lab, you will perform:
 
 ### Task 1: Create a *Language* resource
 
+In this task, you will learn how to create a **Language** resource to enable AI-powered text analysis and language processing capabilities.
+
 To use question answering, you need a **Language** resource.
 
 1. In azure portal, click the **&#65291;Create a resource** button, then search and select *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Use the following settings:
@@ -61,6 +63,8 @@ To use question answering, you need a **Language** resource.
     > If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
 
 ### Task 2: Create a new project
+
+In this task, you will learn how to create a new project in the **Language** resource to start leveraging AI models for text analysis and natural language processing.
 
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true)
 
@@ -125,6 +129,8 @@ To use question answering, you need a **Language** resource.
       
 ### Task 3: Edit the knowledge base
 
+In this task, you will learn how to edit the knowledge base in your **Language** resource to refine and update the information for improved AI-driven insights.
+
 Your knowledge base is based on the details in the FAQ document and some pre-defined responses. You can add custom question-and-answer pairs to supplement these.
 
 1. Expand the left panel and select **Edit knowledge base**. Then select **+** to add a new question pair.
@@ -145,6 +151,8 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
 ### Task 4: Train and test the knowledge base
 
+In this task, you will learn how to train and test the knowledge base in your **Language** resource to enhance its ability to understand and respond accurately.
+
 Now that you have a knowledge base, you can test it.
 
 1. At the bottom of the **Question answer pairs** pane, select **Test** to test your knowledge base.
@@ -164,6 +172,8 @@ Now that you have a knowledge base, you can test it.
 1. When you're done testing the knowledge base, select **Test** to close the test pane.
 
 ### Task 5: Deploy your project
+
+In this task, you will learn how to deploy your project in the **Language** resource to make it available for use in real-world applications and services.
 
 You can deploy the knowledge base as a client application to answer questions
 
