@@ -76,7 +76,7 @@ In this task, you will learn how to create an **AI Services** resource in Azure 
 
 You'll need to provision an **Azure AI services** resource that's in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
-1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
+1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
 
     ![The image and its captions are displayed.](./media/aiservice.png)
 
@@ -135,7 +135,7 @@ In this task, you will create a Storage account in Azure, configure its settings
 
 ## Task 4: Upload Documents to Azure Storage
 
-In this task, you will upload documents to an Azure Storage container. First, you will create a container called coffee-reviews, configure its access settings, and then upload a set of coffee review documents into it. This process helps familiarize you with Azure Storage containers and blob uploads, which are crucial for storing and managing data in the cloud.
+In this task, you will upload documents to an Azure Storage container. First, you will create a container called coffee-reviews, configure its access settings, and then upload a set of coffee-review documents into it. This process helps familiarize you with Azure Storage containers and blob uploads, which are crucial for storing and managing data in the cloud.
 
 1. In the left-hand menu pane, select **Containers (1)**.
 
@@ -150,7 +150,7 @@ In this task, you will upload documents to an Azure Storage container. First, yo
 
       ![Picture1](media/storage.png)
 
-   > **Note** : If you're unable to adjust the Anonymous access level, please refresh the page and attempt the change again.
+   > **Note**: If you're unable to adjust the Anonymous access level, please refresh the page and attempt the change again.
 
 1. In the lab-VM,  open a  new browser tab, download the [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews) from `https://aka.ms/mslearn-coffee-reviews`, and extract the files to the *reviews* folder. 
 
