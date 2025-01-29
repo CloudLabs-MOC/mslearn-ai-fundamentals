@@ -28,7 +28,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 1. In Microsoft Edge, browse to [OneDrive](https://onedrive.live.com) at `https://onedrive.live.com` and sign in using your Microsoft account - closing any welcome messages or offers that are displayed.
 1. In another browser tab, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select the option to **Save a copy to OneDrive** and save the document in your **Documents** folder in OneDrive. The document should then open in Microsoft Word online automatically.
 
-    > **Note**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive and you can access the file from My Files in the OneDrive menu .
+    > **Note**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive and you can access the file from My Files in the OneDrive menu.
 
 1. View the text in **Business Idea.docx**, which describes some high-level ideas for a cleaning business in New York City.
 1. Use the **Copilot** icon on the Edge toolbar to open the Copilot pane, as shown here:
@@ -38,7 +38,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 1. In the chat box at the bottom of the Copilot pane, enter following the prompt:
 
     ```
-    Summarize this document into 5 key points, and suggest next steps.
+    Summarize this document into 5 key points, and suggest the next steps.
     ```
 
     If prompted, confirm that you want to allow Copilot to access the page and acknowledge that the conversation will not be saved (note that Copilot protects the privacy of the conversation because it includes information from a personal document in your OneDrive).
@@ -55,7 +55,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
     How do I go about setting up a business in New York?
     ```
 
-1. Review the response, which should contain some advice and links to resource to help you get started setting up a business in New York, and may include some suggested follow-up prompts to get more information.
+1. Review the response, which should contain some advice and links to resources to help you get started setting up a business in New York, and may include some suggested follow-up prompts to get more information.
 
     > **Important**: The AI-generated response is based on information publicly on the Web. While it may be useful to help you understand the steps required to set up a business, it is not guaranteed to be 100% accurate and does not replace the need for professional advice!
 
@@ -89,8 +89,8 @@ Now that you've done some initial research, let's have Copilot help you develop 
     ```
     Create a corporate logo for the cleaning company. The logo should be round and include an iconic New York landmark.
     ```
-     Note: If it gives response to **Please sign in to create images**, click on **Image Creator** link and then     
-     sign with your account by clicking on **Join & Create** on Copilot | Designer page. 
+     Note: If it gives a response to **Please sign in to create images**, click on **Image Creator** link and then     
+     sign up with your account by clicking on **Join & Create** on the Copilot | Designer page. 
 
      ![](media/up3.png)
    
@@ -116,7 +116,7 @@ In this task, you will learn how to use **Copilot** to generate and visualize fi
     ```
 
 1. Review the response, which should include a table of projected profits for the next five years.
-1. Copy the table to the clipboard (being careful to select just the table). Then select cell A1 in the Excel workbook, and on the **Home** tab, in the **Clipboard** menu, under **Paste special**, select **Values only** to that the values from the table are pasted into the spreadsheet like this:
+1. Copy the table to the clipboard (being careful to select just the table). Then select cell A1 in the Excel workbook, and on the **Home** tab, in the **Clipboard** menu, under **Paste special**, select **Values only** so that the values from the table are pasted into the spreadsheet like this:
 
     ![Screenshot of an Excel workbook with Copilot-generated data.](./media/generated-financialsupd.png)
 
@@ -150,7 +150,7 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
 1. In OneDrive, add a new **PowerPoint presentation**. If the **Designer** pane opens automatically, close it. Then change the name of the presentation from *Presentation* to `Business Presentation`.
 
-1. On the title slide for the presentation, enter the the name of your cleaning company as the title, and `Investor Opportunity` as the subtitle.
+1. On the title slide for the presentation, enter the name of your cleaning company as the title, and `Investor Opportunity` as the subtitle.
 1. Insert a new slide, using the **Two Content** slide layout (which includes a title and two placeholders for content).
 1. Change the slide title to `Benefits of Hiring a Commercial Cleaner`.
 1. In the Copilot pane, enter the following prompt:
@@ -224,13 +224,13 @@ You've created some collateral to help you get your business started. Now it's t
 
     ![Screenshot of an Outlook calendar with Copilot identifying events.](./media/calendar-eventsupd.png)
 
-1. Try using this prompt to check your availability for a meeting with a a bank manager to seek funding for the business:
+1. Try using this prompt to check your availability for a meeting with a bank manager to seek funding for the business:
 
     ```prompt
     What's my availability for a meeting this week?
     ```
 
-    Copilot should provide a summary of your availability based on the calendar information in the Outlook web page.
+    Copilot should provide a summary of your availability based on the calendar information on the Outlook web page.
 
     > **Note**: Microsoft Copilot can read the calendar page that is open in the browser (and may "remember" details during the current session), but it cannot access your calendar data directly. In a corporate environment, your organization can use Microsoft 365 Copilot, which *does* have access to your calendar and email in Outlook, as well as information in other enterprise apps like Microsoft Teams.
 
@@ -260,9 +260,9 @@ Be as inventive as you like, and explore how Copilot can help you by finding inf
 
 ## Conclusion
 
-In this exercise, you've used Copilot in Microsoft Edge to find information and generate content. Hopefully you've seen how using generative AI in a copilot can help with productivity and creativity.
+In this exercise, you've used Copilot in Microsoft Edge to find information and generate content. Hopefully, you've seen how using generative AI in a copilot can help with productivity and creativity.
 
-While the free services used in this exercises are undoubtedly very powerful, you can achieve even more with services like [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes, while integrating into your existing IT infrastructure to ensure a manageable, secure solution.
+While the free services used in this exercises are undoubtedly very powerful, you can achieve even more with services like [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes while integrating it into your existing IT infrastructure to ensure a manageable, secure solution.
 
 ### Review
 In this lab, you have completed the following tasks:
