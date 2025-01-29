@@ -2,13 +2,13 @@
 
 ## Lab overview
 
-In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
+In this exercise, you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
 
 Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
 For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
-Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment.
+Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text and the classification of text based on sentiment.
 
 ## Lab objectives
 
@@ -31,7 +31,7 @@ In this task, you will learn how to create a **Language** resource to enable nat
 
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
-1. In the Azure Portal, select **+ Create a resource** .
+1. In the Azure Portal, select **+ Create a resource**.
 
     ![Picture1](media/ai900mod1img1.png)
 
@@ -57,7 +57,7 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 
 In this task, you will learn how to configure your **Language** resource in Azure AI Language Studio to enable text analysis and language understanding features.
 
-1. In a separate browser tab within the LabVM, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and click on **Sign in** from the top right corner. after sign in you will be prompted with getting started language page go to the last page by click on **>** symbol.
+1. In a separate browser tab within the LabVM, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and click on **Sign in** from the top right corner. after signing in you will be prompted with the Getting Started language page go to the last page by clicking on the **>** symbol.
 
 1. When prompted with **choose resource**, make the following configurations:
     - **Azure directory**: *Default Directory, the directory you are using*
@@ -67,11 +67,11 @@ In this task, you will learn how to configure your **Language** resource in Azur
 
 1. Then select **Done**.
 
-    >**Important**:As of July 2023, Azure AI services now include what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their references from `Cognitive Services` to `Azure AI services`, but both terms refer to the same type of resource.
+    >**Important**:As of July 2023, Azure AI services now include what was previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their references from `Cognitive Services` to `Azure AI services`, but both terms refer to the same type of resource.
 
     >**Note**: If you are ***not*** prompted to choose a language resource, it could be because you have multiple Language resources in your subscription. In that case:
 
-    1. On the bar at the top if the page, select **Settings (&#9881;)**.
+    1. On the bar at the top of the page, select **Settings (&#9881;)**.
       
     1. On the **Settings** page, view the **Resources** tab.
       
@@ -129,7 +129,7 @@ In this task, you will learn how to analyze reviews in Language Studio to extrac
     
 1. Select **Run**. Review the output and review the sentiment and confidence level.
 
-1. Select **Clear text** box again, and copy and paste the following review:
+1. Select the **Clear text** box again, and copy and paste the following review:
 
    ```
     Very noisy and rooms are tiny
