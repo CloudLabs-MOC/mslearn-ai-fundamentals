@@ -3,7 +3,7 @@
 
 ## Lab overview
  
-In this exercise, you'll take a look at a prebuilt model in Document Intelligence that is trained to recognize data for receipts. Azure AI Document Intelligence is able to analyze and extract information from forms and documents, then identify field names and data. 
+In this exercise, you'll take a look at a prebuilt model in Document Intelligence that is trained to recognize data for receipts. Azure AI Document Intelligence is able to analyze and extract information from forms and documents, and then identify field names and data. 
 
 How does Document Intelligence build upon optical character recognition (OCR)? While OCR can read printed or handwritten documents, OCR extracts text in an unstructured format which is difficult to store in a database or analyze. Document intelligence makes sense of the unstructured data by capturing the structure of the text, such as key/value pairs and information in tables. 
 
@@ -31,7 +31,7 @@ In this task, you will learn how to create a **Document Intelligence** resource 
 
 You can use Azure AI Document Intelligence by creating either a *Document Intelligence* resource or an *Azure AI services* resource. In this exercise, you will create *Document Intelligence* resource, if you don’t already have one.
 
-1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your following credentials:
+1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with the following credentials:
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
@@ -65,7 +65,7 @@ In this task, you will learn how to analyze a receipt in **Document Intelligence
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
-1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download and and save the sample document to your computer. Open the folder
+1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download and save the sample document to your computer. Open the folder
 
    ![](media/lab10-05.png).
 
@@ -82,7 +82,7 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
     ![](media/lab10-02.png)
 
-1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, the address, phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
+1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, address, phone number, and transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
    ![](media/lab10-01.png)
 
