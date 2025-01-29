@@ -69,7 +69,7 @@ To implement natural language understanding with Conversational Language Underst
    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, select **Settings (&#9881;)**.
     2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and make sure nanaged identity tab is **enabled.**.
+    3. Select the language resource you just created, and make sure managed identity tab is **enabled.**.
     4. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, select **Create new** menu, and select **Conversational language understanding**.
@@ -175,7 +175,7 @@ In this task, you will learn how to train the model in your **Conversational Lan
 
 Now you're ready to use the intents and entities you have defined to train the conversational language model for your app.
 
-1. On the left hand side of Language Studio, select **Training jobs**, then select **+ Start a training job**.
+1. On the left-hand side of Language Studio, select **Training jobs**, then select **+ Start a training job**.
    
    ![Select add under Intents on the Build Schema pane.](media/lab8(12).png)
    
@@ -214,17 +214,17 @@ To use your trained model in a client application, you must deploy it as an endp
 
     `switch the light on`
 
-    Review the result that is returned, noting that it includes the predicted intent (which should be **switch_on**) and the predicted entity (**device**) with confidence scores that indicates the probability the model calculated for the predicted intent and entity. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
+    Review the result that is returned, noting that it includes the predicted intent (which should be **switch_on**) and the predicted entity (**device**) with confidence scores that indicate the probability the model calculated for the predicted intent and entity. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
 
     ![](media/results(1).png)
 
-1. Clear text box and test the model with the following utterances under *Enter your own text, or upload a text document*:
+1. Clear the text box and test the model with the following utterances under *Enter your own text, or upload a text document*:
     
     - `turn off the fan`
     - `put the light on`
     - `put the fan off`
 
-You have now successfully configured a conversational language project, and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine.
+You have now successfully configured a conversational language project and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine.
 
 > **NOTE**: Conversational language understanding provides the intelligence to interpret the intention of the input; it doesn't perform any actions such as turning on the light or the fan. A developer would need to build an application that uses the Conversational Language Understanding model to determine the user's intent, and then automate the appropriate action.
 
@@ -249,6 +249,6 @@ In this lab, you have completed the following tasks:
 - Created a Conversational Language Understanding App
 - Created intents, utterances, and entities
 - Trained the model
-- Deployed and test the model
+- Deployed and tested the model
   
 ## You have successfully completed this lab.
