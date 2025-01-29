@@ -30,7 +30,7 @@ In this task, you will learn how to analyze images in Vision Studio to extract i
 
 You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account (2)** .
+1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account (2)**.
 
    ![The image and its captions are displayed.](./media/aiservice.png)
 
@@ -55,7 +55,7 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up of welcome screen please click on **X** icon to close the popup.
+1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up of the welcome screen please click on the **X** icon to close the popup.
 
    ![The image and its captions are displayed.](./media/lab3-2n.png)
 
@@ -67,7 +67,7 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
    ![The image and its captions are displayed.](./media/lab3-11.png)
 
-    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
+    > **Note**: If your resource is not listed, you may need to **Refresh** the page.
 
 1. Close the settings page by selecting the "x" at the top right of the screen.
 
@@ -89,7 +89,7 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     ![The image and its captions are displayed.](./media/update1n.png)
 
-1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer,extract the zip file and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer, extract the zip file, and locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
@@ -107,7 +107,7 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
-1. upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system . Hover over one of the captions in the **Detected** attributes list and observe what happens within the image.
+1. upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing it on your file system. Hover over one of the captions in the **Detected** attributes list and observe what happens within the image.
 
     ![The image and its captions are displayed.](./media/lab3-3.png)
 
