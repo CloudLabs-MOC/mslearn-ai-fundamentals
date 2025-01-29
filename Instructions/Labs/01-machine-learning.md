@@ -70,7 +70,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 #### Enable preview features
 
-Some features of Azure Machine Learning are in preview, and need to be explicitly enabled in your workspace.
+Some features of Azure Machine Learning are in preview and need to be explicitly enabled in your workspace.
 
 1. In Azure Machine Learning Studio, click on **manage preview features** (the loud speaker icon - &#128363;).
 
@@ -110,7 +110,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
         ![](media/lab1-25.png)
 
-    - To create a new data with the following settings:
+    - To create new data with the following settings:
 
         - **Data type**:
             - **Name**:  Enter **bike-rentals (1)**
