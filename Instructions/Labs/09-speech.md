@@ -27,7 +27,7 @@ You can use the Speech service by creating either a **Speech** resource or an **
 
 In this exercise, you will create an AI Speech resource, unless you already have a resource that you can use.
 
-1. In another browser tab, open [Azure AI Speech Studio](https://speech.microsoft.com/), signing in with your following credentials:
+1. In another browser tab, open [Azure AI Speech Studio](https://speech.microsoft.com/), signing in with the following credentials:
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
@@ -39,7 +39,7 @@ In this exercise, you will create an AI Speech resource, unless you already have
     - **Region (3)**:  Select **<inject key="location" enableCopy="false"/>**
     - **Pricing tier (4)**: Select **Free FO** (if available, otherwise select **Standard S0**).
     - **Resource group (5)**: Select **AI-900-Module-09-<inject key="DeploymentID" enableCopy="false" />**
-    - Select **Create resource. (6)**
+    - Select **Create a resource (6)**
 
       ![](media/ai9.png)
 
@@ -72,7 +72,7 @@ In this task, you will explore the speech-to-text feature in Speech Studio by up
 
     ![Browse files](media/01.png)
 
-1. The Speech service transcribes and displays the text in real-time. 
+1. The Speech service transcribes and displays the text in real time. 
 
     ![](media/09.png)
 
