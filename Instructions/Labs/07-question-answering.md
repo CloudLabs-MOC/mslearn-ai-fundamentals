@@ -1,9 +1,9 @@
 # Module 07: Use Question Answering with the Language Studio
 
 ## Lab overview
-In this exercise you will use Language Studio to create and train a knowledge base of question and answers. Content for the knowledge base will come from an existing FAQ page from the web site of Margie’s Travel, a fictitious travel agency. You will then use Language Studio to see how it would work when used by customers.
+In this exercise, you will use Language Studio to create and train a knowledge base of questions and answers. Content for the knowledge base will come from an existing FAQ page on the website of Margie’s Travel, a fictitious travel agency. You will then use Language Studio to see how it would work when used by customers.
 
-Azure AI Language includes *question answering* capabilities, which you will use to create a knowledge base. Knowledge bases can be created either by entering question and answer pairs manually, or from an existing document or web page. Margie’s Travel wants to use their existing FAQ document.
+Azure AI Language includes *question answering* capabilities, which you will use to create a knowledge base. Knowledge bases can be created either by entering question and answer pairs manually or from an existing document or web page. Margie’s Travel wants to use their existing FAQ document.
 
 The Language service's question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
@@ -38,7 +38,6 @@ To use question answering, you need a **Language** resource.
 
    ![An image of the text in the image outlined](media/lab-6(1).png)
 
-    
 1. You will be taken to a page to **Select additional features**. Use the following settings:
 
     - **Select Additional Features**:
@@ -102,7 +101,7 @@ In this task, you will learn how to create a new project in the **Language** res
            
     - On the **Settings** page, view the **Resources** tab.
        
-    - Select the language resource you just created, and make sure nanaged identity tab is **enabled.**
+    - Select the language resource you just created, and make sure the managed identity tab is **enabled.**
        
     - At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
@@ -177,7 +176,7 @@ Now that you have a knowledge base, you can test it.
    
 1. In the test pane, at the bottom enter the message `I want to book a flight` and press enter. An appropriate response from the FAQ should be returned.
 
-    > **Note**:The response contains both a short answer and a detailed answer passage. The passage provides the full text from the FAQ document for the closest matched question, while the short answer is intelligently extracted from it. You can control the inclusion of the short answer by using the **Include short answer** checkbox at the top of the test pane.
+    > **Note**: The response contains both a short answer and a detailed answer passage. The passage provides the full text from the FAQ document for the closest matched question, while the short answer is intelligently extracted from it. You can control the inclusion of the short answer by using the **Include short answer** checkbox at the top of the test pane.
 
 1. Try another question, such as `How can I cancel a reservation?` and press enter.
 
@@ -214,7 +213,7 @@ In this lab, you have completed the following tasks:
 - Created a *Language* resource
 - Created a new project
 - Edited the knowledge base
-- Trained and test the knowledge base
+- Trained and tested the knowledge base
 - Created a bot for the knowledge base
   
 ## You have successfully completed this lab.
