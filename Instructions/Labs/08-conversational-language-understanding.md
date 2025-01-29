@@ -28,21 +28,27 @@ In this task, you will learn how to create a **Language** resource in Azure to u
 
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to *Select additional features*. Keep the default selection and click **Continue to create your resource**. 
+1. In the azure portal, Click the **&#65291;Create a resource** button.
 
-    ![An image of the text in the image outlined](media/lab-5(1).png)
+   ![An image of the text in the image outlined](media/lab-5(1).png)
+
+1. In the Marketplace page search for **Language service (1)** and Select **Language service (2)**.
+
+   ![An image of the text in the image outlined](media/lab-6(1).png)
+
+1. You will be taken to a page to *Select additional features*. Keep the default selection and click **Continue to create your resource**. 
 
 1. On the page **Create Language**, configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: **AI-900-Module-08-<inject key="DeploymentID" enableCopy="false" />**
-    - **Region**: Select **East US**
-    - **Name**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" />**
-    - **Pricing tier**: *Free F0* (if Free F0 is not available, select *S*)
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected*.
+    - **Subscription (1)**: *Your Azure subscription*.
+    - **Resource group (2)**: **AI-900-Module-08-<inject key="DeploymentID" enableCopy="false" />**
+    - **Region (3)**: Select **East US**
+    - **Name (4)**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" />**
+    - **Pricing tier (5)**: *Free F0* (if Free F0 is not available, select *S*)
+    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice. (6)**: *Selected*.
 
-    ![An image of the text in the image outlined](media/lab-5(1)n.png)   
+      ![An image of the text in the image outlined](media/lab-5(1)n.png)   
 
-1. Select **Review + create** then **Create** and wait for deployment to complete.
+1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
 ### Task 2: Create a Conversational Language Understanding App
 
@@ -53,10 +59,12 @@ To implement natural language understanding with Conversational Language Underst
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
 
 1. If prompted to choose a Language resource, select the following settings, and select **Done**:
-    - **Azure directory**: *The Azure directory containing your subscription*.
-    - **Azure subscription**: *Your Azure subscription*.
-    - **Resource type**: *Language*.
-    - **Resource name**: *select the Language service resource you just created*
+    - **Azure directory (1)**: *The Azure directory containing your subscription*.
+    - **Azure subscription (2)**: *Your Azure subscription*.
+    - **Resource type (3)**: *Language*.
+    - **Resource name (4)**: *select the Language service resource you just created*
+
+    ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01a.png)
 
    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, select **Settings (&#9881;)**.
@@ -69,17 +77,17 @@ To implement natural language understanding with Conversational Language Underst
     ![Select add under Intents on the Build Schema pane.](media/lab8(1).png)
    
 1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and select **Next**:
-    - **Name**: **Project<inject key="DeploymentID" enableCopy="false" />** (1)
-    - **Utterances primary language**: *English (US)* (2)
-    - **Enable multiple languages in project**: **Do not select** (3)
-    - **Description**: `Simple home automation` (4)
-        Click **Next** (5)
+    - **Name**: **Project<inject key="DeploymentID" enableCopy="false" />** **(1)**
+    - **Utterances primary language**: *English (US)* **(2)**
+    - **Enable multiple languages in project**: **Do not select** **(3)**
+    - **Description**: `Simple home automation` **(4)**
+        Click **Next** **(5)**
       
          ![Select add under Intents on the Build Schema pane.](media/LAB8.png)
    
-    > **Tip**: Make a note of your *project name*, you will use it later.
+    > **Tip**: Make a note of your *project name*, as you will need it later.
 
-    >**Note:** Please note that it may take approximately 15-20 minutes for the list of **Utterances Primary Language** to become visible.
+    >**Note:** Please note that it may take approximately 15-20 minutes for the **Utterances Primary Language** list to appear.
 
 1. On the **Review and finish** page, select **Create**.
   
@@ -236,12 +244,11 @@ This app shows only some of the capabilities of the Conversational Language Unde
 
 ### Review
 
-In this lab, you have completed:
-
-- Create a *Language* resource
-- Create a Conversational Language Understanding App
-- Create intents, utterances, and entities
-- Train the model
-- Deploy and test the model
+In this lab, you have completed the following tasks:
+- Created a *Language* resource
+- Created a Conversational Language Understanding App
+- Created intents, utterances, and entities
+- Trained the model
+- Deployed and test the model
   
 ## You have successfully completed this lab.

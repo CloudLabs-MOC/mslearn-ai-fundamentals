@@ -99,9 +99,8 @@ This exercise demonstrated only some of the capabilities of the speech service. 
 
 ### Review
 
-In this lab, you have completed:
-
-- Create an **Azure AI Speech** resource
-- Explore speech to text in Speech Studio
+In this lab, you have completed the following tasks:
+- Created an **Azure AI Speech** resource
+- Explored speech to text in Speech Studio
   
 ## You have successfully completed this lab.

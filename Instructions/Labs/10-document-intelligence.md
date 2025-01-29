@@ -33,9 +33,9 @@ You can use Azure AI Document Intelligence by creating either a *Document Intell
 
 1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your following credentials:
 
-  - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-  - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. Select **Settings (1)** and select the **Resource (2)** tab. Select **Create a new resource (3)**.
 
@@ -100,9 +100,8 @@ This exercise demonstrated only some of the capabilities of the AI Document Inte
 
 ## Review
 
-In this lab, you have completed:
-
-- Creating Document Intelligence resource
-- Analyzing a receipt in Document Intelligence Studio
+In this lab, you have completed the following tasks:
+- Created Document Intelligence resource
+- Analyzed a receipt in Document Intelligence Studio
 
 ## You have successfully completed this lab.

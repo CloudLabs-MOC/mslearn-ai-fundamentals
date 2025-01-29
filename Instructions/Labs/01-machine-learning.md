@@ -4,9 +4,7 @@
 
 In this exercise, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
->**Important**
-
->At this time, you can author and deploy a model as a web service in Azure Machine Learning Studio, but testing it within the Studio is not yet supported. As a result, all steps up to deploying the model can be completed. We will provide updates as this functionality becomes available.
+>**Important**: Currently, you can author and deploy a model as a web service in Azure Machine Learning Studio, but testing it within the Studio is not supported yet. You can complete all steps leading up to the deployment of the model. Updates will be provided once this functionality becomes available.
 
 ## Lab objectives
 
@@ -64,7 +62,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
     ![Picture1](media/lab1-6.png)
 
-### Enable preview features
+#### Enable preview features
 
 Some features of Azure Machine Learning are in preview, and need to be explicitly enabled in your workspace.
 
@@ -157,7 +155,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
-### Review the best model
+#### Review the best model
 
 When the automated machine learning job has completed, you can review the best model it trained.
 
@@ -201,7 +199,10 @@ In this task, you will learn how to deploy the trained model as a web service fo
   <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
 
 ### Review
+In this lab, you have completed the following tasks:
+- Created an *Azure Machine Learning workspace* resource
+- Utilized automated machine learning to train a model
 
-In this lab, you have created an Azure Machine Learning workspace resource, and use automated machine learning to train a model and deploy it
+Let me know if you'd like any changes!
   
 ## You have successfully completed this lab.

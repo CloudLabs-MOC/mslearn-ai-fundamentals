@@ -8,9 +8,9 @@ To test the face detection capabilities of the Azure AI Face service, you will u
 
 ## Lab objectives
 In this lab, you will perform:
-- Create an Azure AI services resource
-- Connect Azure AI Service Resource to Vision Studio
-- Detect faces in the Vision Studio
+-  Task 1: Create an Azure AI services resource
+-  Task 2: Connect Azure AI Service Resource to Vision Studio
+-  Task 3: Detect faces in the Vision Studio
 
 ## Estimated timing: 30 minutes
 
@@ -26,9 +26,11 @@ In this task, you will learn how to create an **Azure AI Services** resource to 
 
 You can use Azure AI Face service with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
 
-    ![The image and its captions are displayed.](./media/dev2n.png)
+    ![The image and its captions are displayed.](./media/aiservice.png)
+
+1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false" />**
@@ -37,7 +39,7 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
     - **Pricing tier (5)**:Select **Standard S0**.
     - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: *Selected*.
 
-    ![The image and its captions are displayed.](./media/dev2n4.png)
+      ![The image and its captions are displayed.](./media/dev2n4.png)
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
   
@@ -59,7 +61,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. On the **Select a resource to work with** page, make sure the resource you created above in the list.
 
-    > **Note**: If your resource is not listed, you may need to **Refresh** the page.
+    > **Note**: If your resource isn't listed, try **Refreshing** the page.
 
     ![The image and its captions are displayed.](./media/ai-900-02.png)
    
@@ -102,7 +104,6 @@ In this task, you will learn how to detect faces in Vision Studio to analyze fac
 
 1. Upload **store-camera-2.jpg** and review the face detection details that are returned. Notice how Azure AI Face can detect faces that are partially obscured. 
 
-In this exercise you have explored how Azure AI services can detect faces in images. If you have time, feel free to try the sample images or some of your own images.
 
 ## Validation
 
@@ -119,6 +120,12 @@ In this exercise you have explored how Azure AI services can detect faces in ima
 To learn more about what you can do with this service, see the [Azure AI Face service page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-identity).
 
 ### Review
-In this lab, you have created an Azure AI Service resource, connected it to the vision studio and detect faces in the Studio 
+In this lab, you have completed the following tasks:
+
+- Created an Azure AI services resource
+- Connected Azure AI Service Resource to Vision Studio
+- Detected faces in the Vision Studio
+
+
   
 ## You have successfully completed this lab.

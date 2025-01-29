@@ -76,9 +76,11 @@ In this task, you will learn how to create an **AI Services** resource in Azure 
 
 You'll need to provision an **Azure AI services** resource that's in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
-1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
 
-    ![The image and its captions are displayed.](./media/dev2.png)
+    ![The image and its captions are displayed.](./media/aiservice.png)
+
+1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
@@ -87,7 +89,9 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
     - **Pricing tier (5)**:Select **Standard S0**.
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-1. Select **Review + create** then **Create** and wait for deployment to complete.
+      ![The image and its captions are displayed.](./media/lab11-09.png)
+
+1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
 ### Task 3: Create a storage account
 
@@ -230,8 +234,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
     ![Picture1](media/lab11-30.png)
 
-    > **Note**
-    > A warning asking for a **Storage Account Connection String** appears.
+    > **Note**: A warning appears requesting a **Storage Account Connection String**.
     
 7. Under **Save enrichments to a knowledge store (1)**, If a warning asking for a **Storage Account Connection String (2)** appears.
     
@@ -324,8 +327,7 @@ Use the Search Explorer to write and test queries. Search Explorer is a tool bui
     ```
 1. Select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see `1` in the `@odata.count` field.
 
-   > **Note**
-   > See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+   > **Note**:Notice how the results are sorted by `@search.score`. This score is assigned by the search engine to indicate how closely the results match the given query.
 
 1. One of the problems we might want to solve is why there might be certain reviews. Let's take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
@@ -371,7 +373,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
 
-1. Select **Storage browser** on the left-hand panel, and select **Tables**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases*.
+1. Select **Storage browser (1)** on the left-hand panel, and select **Tables (2)**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases (3)*.
 
      ![Screenshot of the saved image.](media/lab11-49.png)
 
@@ -393,14 +395,13 @@ This simple search index only some of the capabilities of the Azure AI Search se
 
 ## Review
 
-In this exercise you have completed:
-
-- Create an Azure AI Search resource
-- Create an AI Services resource
-- Create a storage account
-- Upload Documents to Azure Storage
-- Index the documents
-- Query the index
-- Review the knowledge store
+In this exercise, you have completed the following tasks: 
+- Created an *Azure AI Search* resource  
+- Created an *AI Services* resource  
+- Created a *storage account*  
+- Uploaded documents to *Azure Storage*  
+- Indexed the documents  
+- Queried the index  
+- Reviewed the *knowledge store*
 
 ## You have successfully completed this lab.

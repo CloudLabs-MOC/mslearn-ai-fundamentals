@@ -22,7 +22,6 @@ In this task, you will learn how to create a **Translator** resource in Azure to
 
 You can use the Translator service by creating either a **Translator** resource or an **Azure AI services** resource.
 
-
 1. In azure portal, select **+ Create a resource**.
 
     ![Picture1](media/ai900mod1img1.png)
@@ -85,7 +84,7 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
 ### Review
 
-In this lab, you have completed:
+In this exercise, you have completed the following tasks:
 - Created a Translator resource
 - Explored Translator service 
 

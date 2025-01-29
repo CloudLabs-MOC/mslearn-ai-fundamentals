@@ -19,7 +19,7 @@ In this lab, you will perform:
 
 ![](media/Module1.1.png)
 
-> **Note:** The goal of this exercise is to get a general sense of how Azure AI services are provisioned and used. Content Safety is used as an example, but you are not expected to gain a comprehensive knowledge of content safety in this exercise!
+> **Note:** The goal of this exercise is to provide a general understanding of how Azure AI services are provisioned and used. While Content Safety is used as an example, you are not expected to gain in-depth knowledge of content safety during this exercise!
 
 ## Exercise 1:  Explore the Content Safety Studio 
 
@@ -65,7 +65,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
     ![](media/27.png)
 
-   > **Note**: The **Directory** tab allows users to select different directories from which to create resources. You do not need to change its settings unless you wish to use a different directory. 
+   > **Note**: The **Directory** tab lets users choose from different directories to create resources. You only need to modify its settings if you want to use a different directory. 
 
 1. On the Create Content Safety page in the [Azure Portal](https://portal.azure.com?auzre-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
     - **Subscription (1)**: Use the existing Azure subscription.
@@ -89,7 +89,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
    ![](media/30.png)
 
-   >**Note:** The provision of content safety resources will take approximately 30-40 minutes. During this time, please proceed with Module 3. After completing Module 3, return to Module 2 and continue the lab from Task 3.
+   >**Note:** Provisioning the content safety resources will take around 30-40 minutes. During this time, please proceed with Module 3. Once you’ve finished Module 3, return to Module 2 and continue the lab from Task 3.
 
 ### Task 3: Try out text moderation in the Content Safety Studio
 
@@ -154,7 +154,7 @@ These capabilities you tested can be programmed into all sorts of applications. 
 This simple search index only some of the capabilities of the Content Safety Studio. To learn more about what you can do with this service, see the [ Explore the Content Safety Studio ](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview).
 
 ### Review
-In this lab, you have completed:
+In this lab, you have completed the following tasks:
 - Explored Content Safety Studio
 - Associated a resource with safety studio
 - Tried out text moderation in the Content Safety Studio

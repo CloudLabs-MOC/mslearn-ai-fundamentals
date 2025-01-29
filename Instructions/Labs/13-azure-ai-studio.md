@@ -41,18 +41,18 @@ In this task, you will create an Azure AI hub, gaining hands-on experience in se
 
 1. In the home page, select **+ Create project**. In the **Create a project** with **ai-project-<inject key="DeploymentID" enableCopy="false"/>** name wizard you can see all the Azure resources that will be automatically created with your project, or you can customize the following settings by selecting **Customize** before selecting Create:
 
-1. In the **Management** section, navigate to **All resources (1)** and click on **+ New hub (2)**. Set the following configuration settings for the new hub, and then click **Next** to proceed.
+1. In the **Management** section, navigate to **All resources (1)** and click on **+ New hub (2)**. Set the following configuration settings for the new hub, and then click **Next (7)** to proceed.
 
     ![](media/new-lab13-2.jpg)
 
     | Setting | Action |
     | -- | -- |
-    | **Hub name** | **azureai-<inject key="DeploymentID" enableCopy="false"/>** |
-    | **Subscription** | *Default Azure subscription* |
-    | **Resource Group** | **AI-900-Module-13-<inject key="DeploymentID" enableCopy="false" />** |
-    | **Location** | **East US** |
-    | **Connect Azure AI Services or Azure OpenAI** | *create a new AI Services **ai-azureai-<inject key="DeploymentID" enableCopy="false" />*** |
-    | **Connect Azure AI Search** | *Skip connecting* |
+    | **Hub name** | **azureai-<inject key="DeploymentID" enableCopy="false"/> (1)** |
+    | **Subscription** | *Default Azure subscription* **(2)** |
+    | **Resource Group** | **AI-900-Module-13-<inject key="DeploymentID" enableCopy="false" /> (3)** |
+    | **Location** | **East US (4)** |
+    | **Connect Azure AI Services or Azure OpenAI** | *create a new AI Services **ai-azureai-<inject key="DeploymentID" enableCopy="false" /> (5)*** |
+    | **Connect Azure AI Search** | *Skip connecting* **(6)** |
 
     ![](media/lab13-a5n.png)
 
@@ -60,10 +60,12 @@ In this task, you will create an Azure AI hub, gaining hands-on experience in se
 
     ![](media/lab13-a6n.png)
 
-3. After the Azure AI hub has been created, Navigate to **All hubs + projects (1)** in the portal, Select your hub named **azureai-<inject key="DeploymentID" enableCopy="false"/>** **(2)**
-it should look similar to the following image:
+3. After the Azure AI hub has been created, Navigate to **All hubs + projects (1)** in the portal, Select your hub named **azureai-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
     ![](media/lab13-a6a.png)
+
+1. It should look similar to the following image:
+
     ![](media/lab13-a6b.png)
 
 4. While keeping the Azure AI Studio tab open in the Edge browser, open another tab within the same Edge browser and navigate to the Azure portal.
@@ -119,7 +121,7 @@ In this task, you will deploy and test the [GPT-35-Turbo](https://learn.microsof
 
     ![](media/lab13-a15n.png)
 
-    > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 5,000 TPM is sufficient for the data used in this exercise.
+    > **Note**: Limiting the TPM helps prevent exceeding the quota available in your subscription. A TPM of 5,000 is adequate for the data used in this exercise.
 
 6. After the model has been deployed, in the deployment overview page, select **Open in playground**.
 
@@ -146,10 +148,9 @@ After performing this lab, you learned how to navigate Azure AI Studio, create a
 
 ### Review
 
-In this exercise, you have completed:
-
-- Open Azure AI Studio
-- Create an Azure AI hub
-- Deploy and test a model
+In this exercise, you have completed the following tasks:
+- Opened *Azure AI Studio*  
+- Created an *Azure AI Hub*  
+- Deployed and tested a model
 
 ##   You have successfully completed this lab.

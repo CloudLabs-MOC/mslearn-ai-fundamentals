@@ -19,7 +19,7 @@ In this lab, you will perform:
 
  ![](media/arch1diag.PNG)
 
-## Task 1: Use Copilot to explore a document and research an idea
+### Task 1: Use Copilot to explore a document and research an idea
 
 In this task, you will learn how to use **Copilot** to explore a document and research an idea, leveraging AI to gain insights and find relevant information more efficiently.
 
@@ -47,7 +47,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     ![Screenshot of the Copilot pane with a response.](media/copilot-responseupd.png)
 
-    > **Note**: The specific response may vary.
+    > **Note**: The response may differ depending on the situation.
 
 1. Enter the following prompt:
 
@@ -59,7 +59,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     > **Important**: The AI-generated response is based on information publicly on the Web. While it may be useful to help you understand the steps required to set up a business, it is not guaranteed to be 100% accurate and does not replace the need for professional advice!
 
-## Task 2: Use Copilot to create content for a business plan
+### Task 2: Use Copilot to create content for a business plan
 
 In this task, you will learn how to use **Copilot** to create content for a business plan, leveraging AI to generate key sections, such as executive summaries, market analysis, and financial projections.
 
@@ -104,7 +104,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. Close the Microsoft Word tab and return to the **Documents** folder in your OneDrive.
 
-## Task 3: Use Copilot to generate and visualize financial projections
+### Task 3: Use Copilot to generate and visualize financial projections
 
 In this task, you will learn how to use **Copilot** to generate and visualize financial projections, enabling you to create charts, tables, and forecasts for business planning and decision-making.
 
@@ -142,7 +142,7 @@ In this task, you will learn how to use **Copilot** to generate and visualize fi
 
 1. Close the Microsoft Excel browser tab and return to your OneDrive.
 
-## Task 4: Use Copilot to create content for a presentation
+### Task 4: Use Copilot to create content for a presentation
 
 In this task, you will learn how to use **Copilot** to create content for a presentation, helping you generate slides, summaries, and key talking points efficiently.
 
@@ -209,7 +209,7 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
 1. Close the PowerPoint browser tab and return to your OneDrive.
 
-## Task 5: Use Copilot to arrange a funding meeting
+### Task 5: Use Copilot to arrange a funding meeting
 You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
 
 1. Use the **App Launcher** (&#8759;) at the left end of the OneDrive title bar to open **Outlook**.
@@ -265,7 +265,7 @@ In this exercise, you've used Copilot in Microsoft Edge to find information and 
 While the free services used in this exercises are undoubtedly very powerful, you can achieve even more with services like [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes, while integrating into your existing IT infrastructure to ensure a manageable, secure solution.
 
 ### Review
-In this lab, you have completed:
+In this lab, you have completed the following tasks:
 - Used Copilot to explore a document and research an idea
 - Used Copilot to create content for a business plan
 - Used Copilot to generate and visualize financial projections

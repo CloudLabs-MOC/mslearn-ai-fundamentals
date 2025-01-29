@@ -30,9 +30,11 @@ In this task, you will learn how to analyze images in Vision Studio to extract i
 
 You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services*. Select an **Azure AI services multi-service account.** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account (2)** .
 
-   ![The image and its captions are displayed.](./media/dev2n.png)
+   ![The image and its captions are displayed.](./media/aiservice.png)
+
+1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-03-<inject key="DeploymentID" enableCopy="false" />**
@@ -41,7 +43,7 @@ You can use Azure AI Vision's image analysis capabilities with an **Azure AI ser
     - **Pricing tier (5)** :Select **Standard S0**.
     - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: *Selected*.
 
-    ![](./media/dev2na.png)    
+      ![](./media/dev2na.png)    
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
@@ -111,9 +113,9 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     Move your mouse cursor over the other captions in the list, and notice how the bounding box shifts in the image to highlight the portion of the image used to generate the caption.
 
-> **Note**: If you encounter any intermittent issues with Vision Studio during Task 3, proceed with the next task. You can revisit and reattempt Task 3 if necessary.
+> **Note**: If you experience any intermittent issues with Vision Studio during Task 3, move on to the next task. You can always return to Task 3 and try again if needed.
 
-## Task 4: Tagging images
+### Task 4: Tagging images
 
 In this task, you will learn how to tag images with relevant labels using Vision Studio to enhance organization and searchability.
 
@@ -171,6 +173,11 @@ To learn more about what you can do with this service, see the [Azure AI Vision 
 
 ### Review
 
-In this lab, you have created an Azure AI Service resource, connected it to the vision studio, performed image analysis, tagging images and detected objects in the studio
+In this lab, you have completed the following tasks:
+- Created an Azure AI services resource
+- Connected your Azure AI service resource to Vision Studio
+- Generated captions for an image
+- Tagged images
+- Objected detection
 
 ## You have successfully completed this lab.

@@ -31,9 +31,15 @@ In this task, you will learn how to create a **Language** resource to enable nat
 
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
-1. In the azure portal, click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
+1. In the Azure Portal, select **+ Create a resource** .
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Language service (1)** and Select **Language service (2)**.
 
    ![An image of the text in the image outlined](media/lab-6(1).png)
+
+1. Select **Create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
 
 1. On the page **Create Language**, configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
@@ -43,7 +49,7 @@ You can use many Azure AI Language features with either a **Language** or **Azur
     - **Pricing tier**: *Free F0 or S if Free F0 is not available*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-   ![An image of the text in the image outlined](media/lab-6(1)n.png)
+      ![An image of the text in the image outlined](media/lab-6(1)n.png)
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
@@ -61,21 +67,21 @@ In this task, you will learn how to configure your **Language** resource in Azur
 
 1. Then select **Done**.
 
-    >**Important**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
+    >**Important**:As of July 2023, Azure AI services now include what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their references from `Cognitive Services` to `Azure AI services`, but both terms refer to the same type of resource.
 
-    >**Note**: If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+    >**Note**: If you are ***not*** prompted to choose a language resource, it could be because you have multiple Language resources in your subscription. In that case:
 
-1. On the bar at the top if the page, select **Settings (&#9881;)**.
+    1. On the bar at the top if the page, select **Settings (&#9881;)**.
       
-1. On the **Settings** page, view the **Resources** tab.
+    1. On the **Settings** page, view the **Resources** tab.
       
-   ![An image of the text in the image outlined](media/lab-6(4).png)
+       ![An image of the text in the image outlined](media/lab-6(4).png)
       
-1. Ensure Managed identity is **Enabled**.
+    1. Ensure Managed identity is **Enabled**.
       
-   ![An image of the text in the image outlined](media/clr1.png)
+       ![An image of the text in the image outlined](media/clr1.png)
       
-   >**Note**: Ensure that **Current Language resource** is having the **studio<inject key="DeploymentID" enableCopy="false" />** and proceed further.
+   >**Note**: Ensure that the Current Language resource includes the studio<inject key="DeploymentID" enableCopy="false" />, and proceed with the next steps.
  
 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
@@ -108,9 +114,9 @@ In this task, you will learn how to analyze reviews in Language Studio to extrac
    
 1. Review the output. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
 
-Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
+1. Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
 
-Select **Sentence 1** again to close.
+1. Select **Sentence 1** again to close.
 
 1. Scroll up to select **Clear text box**, and copy and paste the following review:
 
@@ -134,8 +140,6 @@ Select **Sentence 1** again to close.
 
 1. Select **Run** and review the sentiment together with the confidence level. Have a look at the text and compare the text to the sentiment analysis that the service returned.
 
-In this exercise you used Language Studio to either create a new Language resource or use an existing Language resource. You enabled the resource in Settings before trying out the Sentiment and opinion mining service. You then tested the service with three pieces of text.
-
 ## Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -150,6 +154,10 @@ In this exercise you used Language Studio to either create a new Language resour
 To learn more about what you can do with this service, see the [Language service page](https://learn.microsoft.com/azure/ai-services/language-service/overview).
 
 ### Review
-In this exercise, you created a language resource, configured it in Azure AI Language Studio and analyzed the reviews in Language Studio.
+In this lab, you have completed the following tasks:
+- Created a *Language* resource
+- Configured your resource in Azure AI Language Studio
+- Analyzed reviews in Language Studio
+
 
 ## You have successfully completed this lab.

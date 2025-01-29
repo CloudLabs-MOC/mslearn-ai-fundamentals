@@ -10,9 +10,9 @@ A common computer vision challenge is to detect and interpret text embedded with
 
 In this lab, you will perform:
 
-- Creating an *Azure AI Speech* resource
-- Connect your Azure AI service resource to Vision Studio
-- Extract text from images in the Vision Studio
+- Task 1: Creating an *Azure AI Speech* resource
+- Task 2: Connect your Azure AI service resource to Vision Studio
+- Task 3: Extract text from images in the Vision Studio
 
 ## Estimated timing: 30 minutes
 
@@ -28,9 +28,11 @@ In this task, you will learn how to create an **Azure AI Services** resource to 
 
 You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service  account (2)** You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service  account (2)**.
 
     ![The image and its captions are displayed.](./media/aiservice.png)
+
+1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**
@@ -59,9 +61,9 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
 
-    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
+    > **Note** : If your resource isn't listed, try **Refreshing** the page.
 
-    ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/text.png)
+    ![](./media/text.png)
 
 1. Close the settings page by selecting the "x" at the top right of the screen.
 
@@ -110,6 +112,10 @@ In this task, you will learn how to extract text from images in Vision Studio us
 To learn more about what you can do with this service, see Azure AI Vision's documentation on [optical character recognition](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr).
 
 ### Review
-In this lab, you have created an azure AI speech resource, connected it to the vision studio and extracted text from images in the studio.
-  
+In this lab, you have completed the following tasks:
+
+- Created an *Azure AI Speech* resource
+- Connected your Azure AI service resource to Vision Studio
+- Extracted text from images in the Vision Studio
+
 ## You have successfully completed this lab.
