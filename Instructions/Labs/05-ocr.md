@@ -2,7 +2,7 @@
 
 ## Lab overview
 
-In this exercise you'll use Azure AI service to explore the optical character recognition capabilities of Azure AI Vision. You'll use Vision Studio to experiment with extracting text from images, without having to write any code.
+In this exercise, you'll use Azure AI service to explore the optical character recognition capabilities of Azure AI Vision. You'll use Vision Studio to experiment with extracting text from images, without having to write any code.
 
 A common computer vision challenge is to detect and interpret text embedded within an image. This is known as optical character recognition (OCR). In this exercise you’ll use an Azure AI services resource, which includes Azure AI Vision services. You'll then use Vision Studio to try out OCR with different types of images.
 
@@ -20,7 +20,7 @@ In this lab, you will perform:
 
 ![An image](media/arch5.PNG)
 
-## Exercise 1: Read text in Vision Studio
+## Exercise 1: Read the text in Vision Studio
 
 ### Task 1: Create an *Azure AI services* resource
 
@@ -28,7 +28,7 @@ In this task, you will learn how to create an **Azure AI Services** resource to 
 
 You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service  account (2)**.
+1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service  account (2)**.
 
     ![The image and its captions are displayed.](./media/aiservice.png)
 
@@ -51,7 +51,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on **X** icon to close the popup.
+1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on the **X** icon to close the popup.
 
    ![An image of the text in the image outlined](media/lab-5(2).png)
 
@@ -89,7 +89,7 @@ In this task, you will learn how to extract text from images in Vision Studio us
 
 1. Now review what is returned:
     - In **Detected attributes**, any text found in the image is organized into a hierarchical structure of regions, lines, and words.
-    - On the image, the location of the text is indicated by a bounding box, as shown here:
+    - In the image, the location of the text is indicated by a bounding box, as shown here:
 
        ![An image of the text in the image outlined](media/advert-bounding-boxes.jpg)
 
