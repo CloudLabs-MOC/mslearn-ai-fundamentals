@@ -2,7 +2,7 @@
 
 Artificial Intelligence (AI) can help simplify translation between languages, helping to remove barriers to communication across countries and cultures.
 
-To test the capabilities of the Azure AI Translator service, we'll take a look at it in action in the Azure Portal. The same principles and functionality apply in real-world solutions, such as websites or phone apps.
+To test the capabilities of the Azure AI Translator service, we'll take a look at it in action in the Azure Portal. The same principles and functionality apply to real-world solutions, such as websites or phone apps.
 
 ## Lab objectives
 
@@ -68,11 +68,11 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
    ![Picture1](media/lab15-6.png)
 
-1. Identify the lines in the code samples where you need to include your Translator service's **Key** and **Endpoint**. With your key and endpoint, you would be able to send a request to the Translator service, and receive a response like you saw in the demo.
+1. Identify the lines in the code samples where you need to include your Translator service's **Key** and **Endpoint**. With your key and endpoint, you would be able to send a request to the Translator service and receive a response as you saw in the demo.
 
    ![Picture1](media/lab15-7.png)
 
-1. Navigate to the left hand menu. Under *Resource Management*, select *Keys and Endpoint*. If you were to build an application, you would find your key and endpoint here. 
+1. Navigate to the left-hand menu. Under *Resource Management*, select *Keys and Endpoint*. If you were to build an application, you would find your key and endpoint here. 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
