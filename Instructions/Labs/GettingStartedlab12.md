@@ -160,9 +160,5 @@ Learner Support Contacts:
 - Email Support: labs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Click on Next from the lower right corner to move on to the next page.
-
-   ![Start Your Azure Journey](./media/sc900-image(3).png)
-
 ## Happy Learning !!
 
