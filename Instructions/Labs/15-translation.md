@@ -22,15 +22,15 @@ In this task, you will learn how to create a **Translator** resource in Azure to
 
 You can use the Translator service by creating either a **Translator** resource or an **Azure AI services** resource.
 
-1. In azure portal, select **+ Create a resource**.
+1. In the Azure portal, select **+ Create a resource**.
 
     ![Picture1](media/ai900mod1img1.png)
 
-1. In the Marketplace page search for **Translator** and Select **Translator**.
+1. In the Marketplace page search for **Translator (1)** and Select **Translator (2)**.
  
    ![Picture1](media/lab15-1.png)
 
-1. On **Translator** Page Click on **Create**.
+1. On **Translator** Page, Click on **Create**.
 
    ![Picture1](media/lab15-2.png)
   
@@ -56,11 +56,11 @@ In this task, you will learn how to explore the **Translator** service in Azure 
 
 We can explore the capabilities of the Translator service in the Azure Portal. 
 
-1. In the Azure portal, in the deployed resource, review the *Overview* page.
+1. In the Azure portal, in the deployed resource, review the **Overview** page.
 
-1. In the *Try it* section of the Overview page, under the *From: Auto detect* section, type the text `Welcome to Azure AI Fundamentals`. Notice the JSON that appears in correspondence in the *View request* section. 
+1. In the **Try it** section of the Overview page, under the **From: Auto detect** section, type the text `Welcome to Azure AI Fundamentals`. Notice the JSON that appears in correspondence in the **View request** section. 
 
-1. In the *View response* section, view the JSON. Behind the scenes, a *request* has been sent to the Translator service. The *response* includes the detected source language with a confidence score, a translation using the alphabet of the output language, and an output language code. 
+1. In the **View response** section, view the JSON. Behind the scenes, a *request* has been sent to the Translator service. The **response** includes the detected source language with a confidence score, a translation using the alphabet of the output language, and an output language code. 
 
    ![Picture1](media/lab15-5.png)
 
