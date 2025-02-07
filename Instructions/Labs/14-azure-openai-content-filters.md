@@ -32,7 +32,7 @@ In this task, you will learn how to provision an **Azure OpenAI** resource to ac
 1. Click on **+ Create** resource with the following settings:
 
     - **Subscription**: Select your **existing azure subscription (1)**.
-    - **Resource group**: Select **AI-900-Module-14-<inject key="DeploymentID" enableCopy="false" /> (2)**
+    - **Resource group**: Select **AI-900-Module-14(2)**
     - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
     - **Name**:  Enter **openai<inject key="DeploymentID" enableCopy="false" /> (4)**
     - **Pricing tier**: Standard S0 **(5)**
