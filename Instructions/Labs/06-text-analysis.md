@@ -2,13 +2,13 @@
 
 ## Lab overview
 
-In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
+In this exercise, you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
 
 Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
 For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
-Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment.
+Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text and the classification of text based on sentiment.
 
 ## Lab objectives
 
@@ -26,11 +26,20 @@ In this lab, you will perform:
 ## Exercise 1: Analyze text with Language Studio
 
 ### Task 1: Create a *Language* resource
+
+In this task, you will learn how to create a **Language** resource to enable natural language processing capabilities in your applications.
+
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
-1. In the azure portal, click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
+1. In the Azure Portal, select **+ Create a resource**.
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Language service (1)** and Select **Language service (2)**.
 
    ![An image of the text in the image outlined](media/lab-6(1).png)
+
+1. Select **Create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
 
 1. On the page **Create Language**, configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
@@ -40,11 +49,15 @@ You can use many Azure AI Language features with either a **Language** or **Azur
     - **Pricing tier**: *Free F0 or S if Free F0 is not available*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
+      ![An image of the text in the image outlined](media/lab-6(1)n.png)
+
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Configure your resource in Azure AI Language Studio
 
-1. In a separate browser tab within the LabVM, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and click on **Sign in** from the top right corner. after sign in you will be prompted with getting started language page go to the last page by click on **>** symbol.
+In this task, you will learn how to configure your **Language** resource in Azure AI Language Studio to enable text analysis and language understanding features.
+
+1. In a separate browser tab within the LabVM, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and click on **Sign in** from the top right corner. after signing in you will be prompted with the Getting Started language page go to the last page by clicking on the **>** symbol.
 
 1. When prompted with **choose resource**, make the following configurations:
     - **Azure directory**: *Default Directory, the directory you are using*
@@ -54,25 +67,27 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 
 1. Then select **Done**.
 
-    >**Important**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
+    >**Important**:As of July 2023, Azure AI services now include what was previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their references from `Cognitive Services` to `Azure AI services`, but both terms refer to the same type of resource.
 
-    >**Note**: If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+    >**Note**: If you are ***not*** prompted to choose a language resource, it could be because you have multiple Language resources in your subscription. In that case:
 
-1. On the bar at the top if the page, select **Settings (&#9881;)**.
+    1. On the bar at the top of the page, select **Settings (&#9881;)**.
       
-1. On the **Settings** page, view the **Resources** tab.
+    1. On the **Settings** page, view the **Resources** tab.
       
-   ![An image of the text in the image outlined](media/lab-6(4).png)
+       ![An image of the text in the image outlined](media/lab-6(4).png)
       
-1. Ensure Managed identity is **Enabled**.
+    1. Ensure Managed identity is **Enabled**.
       
-   ![An image of the text in the image outlined](media/clr1.png)
+       ![An image of the text in the image outlined](media/clr1.png)
       
-   >**Note**: Ensure that **Current Language resource** is having the **studio<inject key="DeploymentID" enableCopy="false" />** and proceed further.
+   >**Note**: Ensure that the Current Language resource includes the studio<inject key="DeploymentID" enableCopy="false" />, and proceed with the next steps.
  
 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 ### Task 3: Analyze reviews in Language Studio
+
+In this task, you will learn how to analyze reviews in Language Studio to extract sentiment, key phrases, and insights using AI.
 
 1. In a web browser, navigate to [Language Studio](https://language.cognitive.azure.com?azure-portal=true).
 
@@ -99,9 +114,9 @@ You can use many Azure AI Language features with either a **Language** or **Azur
    
 1. Review the output. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
 
-Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
+1. Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
 
-Select **Sentence 1** again to close.
+1. Select **Sentence 1** again to close.
 
 1. Scroll up to select **Clear text box**, and copy and paste the following review:
 
@@ -112,10 +127,9 @@ Select **Sentence 1** again to close.
     Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
     ```
     
-    
 1. Select **Run**. Review the output and review the sentiment and confidence level.
 
-1. Select **Clear text** box again, and copy and paste the following review:
+1. Select the **Clear text** box again, and copy and paste the following review:
 
    ```
     Very noisy and rooms are tiny
@@ -126,12 +140,10 @@ Select **Sentence 1** again to close.
 
 1. Select **Run** and review the sentiment together with the confidence level. Have a look at the text and compare the text to the sentiment analysis that the service returned.
 
-In this exercise you used Language Studio to either create a new Language resource or use an existing Language resource. You enabled the resource in Settings before trying out the Sentiment and opinion mining service. You then tested the service with three pieces of text.
-
 ## Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - Hit the Validate button for the corresponding task. you will receive a success message. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -142,6 +154,10 @@ In this exercise you used Language Studio to either create a new Language resour
 To learn more about what you can do with this service, see the [Language service page](https://learn.microsoft.com/azure/ai-services/language-service/overview).
 
 ### Review
-In this exercise, you created a language resource, configured it in Azure AI Language Studio and analyzed the reviews in Language Studio.
+In this lab, you have completed the following tasks:
+- Created a *Language* resource
+- Configured your resource in Azure AI Language Studio
+- Analyzed reviews in Language Studio
+
 
 ## You have successfully completed this lab.

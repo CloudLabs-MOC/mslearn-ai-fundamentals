@@ -9,11 +9,11 @@ In this exercise, you will use Language Studio to create and test a project that
 
 In this lab, you will perform:
 
-- Create a *Language* resource
-- Create a Conversational Language Understanding App
-- Create intents, utterances, and entities
-- Train the model
-- Deploy and test the model
+- Task 1: Create a *Language* resource
+- Task 2: Create a Conversational Language Understanding App
+- Task 3: Create intents, utterances, and entities
+- Task 4: Train the model
+- Task 5: Deploy and test the model
 
 ## Estimated timing: 45 minutes
 
@@ -24,38 +24,52 @@ In this lab, you will perform:
 
 ### Task 1: Create a *Language* resource
 
+In this task, you will learn how to create a **Language** resource in Azure to unlock advanced natural language processing capabilities for text analysis and AI-driven insights.
+
 You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to *Select additional features*. Keep the default selection and click **Continue to create your resource**. 
+1. In the azure portal, Click the **&#65291;Create a resource** button.
 
-    ![An image of the text in the image outlined](media/lab-5(1).png)
+   ![An image of the text in the image outlined](media/lab-5(1).png)
+
+1. In the Marketplace page search for **Language service (1)** and Select **Language service (2)**.
+
+   ![An image of the text in the image outlined](media/lab-6(1).png)
+
+1. You will be taken to a page to *Select additional features*. Keep the default selection and click **Continue to create your resource**. 
 
 1. On the page **Create Language**, configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: **AI-900-Module-08-<inject key="DeploymentID" enableCopy="false" />**
-    - **Region**: Select **East US**
-    - **Name**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" />**
-    - **Pricing tier**: *Free F0* (if Free F0 is not available, select *S*)
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected*.
+    - **Subscription (1)**: *Your Azure subscription*.
+    - **Resource group (2)**: **AI-900-Module-08-<inject key="DeploymentID" enableCopy="false" />**
+    - **Region (3)**: Select **East US**
+    - **Name (4)**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" />**
+    - **Pricing tier (5)**: *Free F0* (if Free F0 is not available, select *S*)
+    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice. (6)**: *Selected*.
 
-1. Select **Review + create** then **Create** and wait for deployment to complete.
+      ![An image of the text in the image outlined](media/lab-5(1)n.png)   
+
+1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
 ### Task 2: Create a Conversational Language Understanding App
+
+In this task, you will learn how to create a **Conversational Language Understanding (CLU)** app to build intelligent conversational agents that can understand and process natural language input.
 
 To implement natural language understanding with Conversational Language Understanding, you create an app; and then add entities, intents, and utterances to define the commands you want the app to execute.
 
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
 
 1. If prompted to choose a Language resource, select the following settings, and select **Done**:
-    - **Azure directory**: *The Azure directory containing your subscription*.
-    - **Azure subscription**: *Your Azure subscription*.
-    - **Resource type**: *Language*.
-    - **Resource name**: *select the Language service resource you just created*
+    - **Azure directory (1)**: *The Azure directory containing your subscription*.
+    - **Azure subscription (2)**: *Your Azure subscription*.
+    - **Resource type (3)**: *Language*.
+    - **Resource name (4)**: *select the Language service resource you just created*
+
+    ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01a.png)
 
    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, select **Settings (&#9881;)**.
     2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and make sure nanaged identity tab is **enabled.**.
+    3. Select the language resource you just created, and make sure managed identity tab is **enabled.**.
     4. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, select **Create new** menu, and select **Conversational language understanding**.
@@ -63,21 +77,23 @@ To implement natural language understanding with Conversational Language Underst
     ![Select add under Intents on the Build Schema pane.](media/lab8(1).png)
    
 1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and select **Next**:
-    - **Name**: **Project<inject key="DeploymentID" enableCopy="false" />** (1)
-    - **Utterances primary language**: *English (US)* (2)
-    - **Enable multiple languages in project**: **Do not select** (3)
-    - **Description**: `Simple home automation` (4)
-        Click **Next** (5)
+    - **Name**: **Project<inject key="DeploymentID" enableCopy="false" />** **(1)**
+    - **Utterances primary language**: *English (US)* **(2)**
+    - **Enable multiple languages in project**: **Do not select** **(3)**
+    - **Description**: `Simple home automation` **(4)**
+        Click **Next** **(5)**
       
          ![Select add under Intents on the Build Schema pane.](media/LAB8.png)
    
-    > **Tip**: Make a note of your *project name*, you will use it later.
+    > **Tip**: Make a note of your *project name*, as you will need it later.
 
-    >**Note:** Please note that it may take approximately 15-20 minutes for the list of **Utterances Primary Language** to become visible.
+    >**Note:** Please note that it may take approximately 15-20 minutes for the **Utterances Primary Language** list to appear.
 
 1. On the **Review and finish** page, select **Create**.
   
 ### Task 3: Create intents, utterances, and entities
+
+In this task, you will learn how to create intents, utterances, and entities in your **Conversational Language Understanding (CLU)** app to train it to recognize user inputs and respond appropriately.
 
 An *intent* is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
@@ -155,9 +171,11 @@ An *intent* is an action you want to perform - for example, you might want to sw
    
 ### Task 4: Train the model
 
+In this task, you will learn how to train the model in your **Conversational Language Understanding (CLU)** app to improve its ability to recognize and understand user intents, utterances, and entities.
+
 Now you're ready to use the intents and entities you have defined to train the conversational language model for your app.
 
-1. On the left hand side of Language Studio, select **Training jobs**, then select **+ Start a training job**.
+1. On the left-hand side of Language Studio, select **Training jobs**, then select **+ Start a training job**.
    
    ![Select add under Intents on the Build Schema pane.](media/lab8(12).png)
    
@@ -172,6 +190,8 @@ Now you're ready to use the intents and entities you have defined to train the c
 1. Wait for training to complete.
 
 ### Task 5: Deploy and test the model
+
+In this task, you will learn how to deploy and test the model in your **Conversational Language Understanding (CLU)** app to ensure it functions correctly and responds accurately to user inputs.
 
 To use your trained model in a client application, you must deploy it as an endpoint to which the client applications can send new utterances; from which intents and entities will be predicted.
 
@@ -194,23 +214,25 @@ To use your trained model in a client application, you must deploy it as an endp
 
     `switch the light on`
 
-    Review the result that is returned, noting that it includes the predicted intent (which should be **switch_on**) and the predicted entity (**device**) with confidence scores that indicates the probability the model calculated for the predicted intent and entity. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
+    Review the result that is returned, noting that it includes the predicted intent (which should be **switch_on**) and the predicted entity (**device**) with confidence scores that indicate the probability the model calculated for the predicted intent and entity. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
 
     ![](media/results(1).png)
 
-1. Clear text box and test the model with the following utterances under *Enter your own text, or upload a text document*:
+1. Clear the text box and test the model with the following utterances under *Enter your own text, or upload a text document*:
     
     - `turn off the fan`
     - `put the light on`
     - `put the fan off`
 
-You have now successfully configured a conversational language project, and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine.
+You have now successfully configured a conversational language project and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine.
 
 > **NOTE**: Conversational language understanding provides the intelligence to interpret the intention of the input; it doesn't perform any actions such as turning on the light or the fan. A developer would need to build an application that uses the Conversational Language Understanding model to determine the user's intent, and then automate the appropriate action.
 
+## Validation
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -221,6 +243,12 @@ You have now successfully configured a conversational language project, and defi
 This app shows only some of the capabilities of the Conversational Language Understanding feature of the Language service. To learn more about what you can do with this service, see the [Conversational Language Understanding page](https://docs.microsoft.com/azure/cognitive-services/language-service/conversational-language-understanding/overview).
 
 ### Review
-In this lab, you have created a language resource, a conversational Language Understanding App, intents, utterances, and entities, trained the model, deployed and tested it.
+
+In this lab, you have completed the following tasks:
+- Created a *Language* resource
+- Created a Conversational Language Understanding App
+- Created intents, utterances, and entities
+- Trained the model
+- Deployed and tested the model
   
 ## You have successfully completed this lab.
