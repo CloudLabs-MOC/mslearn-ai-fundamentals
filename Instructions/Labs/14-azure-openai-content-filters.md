@@ -32,7 +32,7 @@ In this task, you will learn how to provision an **Azure OpenAI** resource to ac
 1. Click on **+ Create** resource with the following settings:
 
     - **Subscription**: Select your **existing azure subscription (1)**.
-    - **Resource group**: Select **AI-900-Module-14-<inject key="DeploymentID" enableCopy="false" /> (2)**
+    - **Resource group**: Select **AI-900-Module-14(2)**
     - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
     - **Name**:  Enter **openai<inject key="DeploymentID" enableCopy="false" /> (4)**
     - **Pricing tier**: Standard S0 **(5)**
@@ -80,7 +80,7 @@ Now you're ready to deploy a model to use through the **Azure AI Foundry portal*
   
     >**Note**: Each Azure OpenAI model is tailored to offer a unique balance of capabilities and performance. For this exercise, we’ll be using the **GPT 3.5 Turbo** model, which excels in natural language generation and chat-based scenarios.
     > A rate limit of 5,000 tokens per minute is more than sufficient to complete this exercise, while still leaving enough capacity for others using the same subscription.
-  
+ 
 ### Task 3: Generate natural language output
 
 In this task, you will learn how to generate natural language output using your deployed model in **Azure OpenAI**, enabling your applications to produce human-like text for a variety of use cases.
