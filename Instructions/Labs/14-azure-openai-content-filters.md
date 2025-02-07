@@ -30,7 +30,7 @@ In this lab, you will perform:
 2. Click on **+ Create** resource with the following settings:  
 
     - **Subscription**: Select your **existing azure subscription**.
-    - **Resource group**: Select **AI-900-Module-14-<inject key="DeploymentID" enableCopy="false" />**
+    - **Resource group**: Select **AI-900-Module-14**
     - **Region**: Select **<inject key="location" enableCopy="false"/>**
     - **Name**:  Enter **openai<inject key="DeploymentID" enableCopy="false" />**
     - **Pricing tier**: Standard S0
