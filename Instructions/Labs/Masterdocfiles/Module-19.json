@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "AI 900 AI Fundamentals-Module-14-azure-openai-content-filters",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/stage/Instructions/Labs/GettingStarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/19-document-intelligence-in-ai-foundry.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
