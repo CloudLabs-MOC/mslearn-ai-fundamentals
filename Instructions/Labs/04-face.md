@@ -82,7 +82,7 @@ In this task, you will learn how to detect faces in Vision Studio to analyze fac
 
 1. Select each of the sample images and observe the face detection data that is returned.
 
-1. Now let's try with some of our own images. Select [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) to download **detect-faces.zip**. Then open the folder on your computer.
+1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer.
 
 1. Open the folder on your computer, extract the zip file, and locate the file named **store-camera-1.jpg**; which contains the following image:
 
