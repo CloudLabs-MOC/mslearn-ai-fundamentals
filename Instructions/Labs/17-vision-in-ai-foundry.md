@@ -1,4 +1,4 @@
-#  Module 17: Analyze images in the Azure AI Foundry portal
+# Module 17: Analyze images in the Azure AI Foundry portal
 
 **Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure AI Vision in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
 
@@ -16,7 +16,23 @@ In this lab, you will perform:
 
 1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. Sign in with your account. 
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+
+   ![](./media/17-18.png)
+
+1.  Enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+       ![Enter Your Username](./media/sc900-image-1.png)
+ 
+1. Next, provide your password:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/sc900-image-2.png)
+ 
+1. If prompted to stay signed in, you can click **No**. 
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
@@ -151,6 +167,15 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
    ![](./media/17-17.png)
 
+### Review
+In this exercise, you have completed the following tasks:
+- Created a project in Azure AI Foundry portal
+- Generated captions for an image
+- Tagged images 
+- Detected Object 
+
 ## Learn more
 
 To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
+
+## You have successfully completed this lab.

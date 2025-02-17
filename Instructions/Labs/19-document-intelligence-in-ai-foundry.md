@@ -1,7 +1,3 @@
----
-lab:
-    title: 'Extract data from documents in Azure AI Foundry portal​'
----
 
 # Extract data from documents in Azure AI Foundry portal
 
@@ -11,7 +7,7 @@ How does Document Intelligence build upon optical character recognition (OCR)? W
 
 In this exercise, you will use Azure AI Document Intelligence's prebuilt models in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to recognize data from a receipt. 
 
-## Create a project in Azure AI Foundry portal
+## Task 1: Create a project in the Azure AI Foundry portal
 
 1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
@@ -19,31 +15,50 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
 
-1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+
+    ![](./media/17-3.png)
+
+1. On the **Create a project** pane, Configure it with the following settings:
+
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
+    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Resource group**: Select **AI-900-Module-17 (3)**
+    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
+    - **Connect Azure AI Services or Azure OpenAI Service**:
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**.
+    - **Connect Azure AI Search**: Leave as default **(7)**
+    - Click on **Next (8)**.
+
+        ![](./media/17-1.png)
+
+    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+
+1. On the **Review and Finish** page, click on **Create**.
+
+    ![](./media/17-2.png)
+
+1. Keep track of the following created resources: 
+    
+    - **Azure AI Project**
+    - **Azure AI Hub**  
+    - **Azure AI Services**    
+    - **Storage Account**  
+    - **Key Vault**
+
+      ![](./media/17-4.png)
  
-    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
-
-> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
-
-1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
-
-1. Take note of the resources that are created: 
-- Azure AI services
-- Azure AI hub
-- Azure AI project
-- Storage account
-- Key vault
-- Resource group  
+1. After the resources are created, you will be brought to your project's **Overview (1)** page. On the left-hand menu on the screen, select **AI Services (2)**.
  
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
- 
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/17-5.png)  
 
-1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Document Intelligence capabilities.
+    >**Note**: If a pop-up appears, please click **Close**.
 
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
+1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
+
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
 
 ## Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
@@ -67,12 +82,6 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 In this exercise you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
 
-## Clean up
-
-If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
-
-1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created.
-1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
 
