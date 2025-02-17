@@ -27,13 +27,13 @@ In this lab, you will perform:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](./media/sc900-image-1.png)
+       ![Enter Your Username](./media/19-4.png)
  
 1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](./media/sc900-image-2.png)
+     ![Enter Your Password](./media/19-5.png)
  
 1. If prompted to stay signed in, you can click **No**.
 

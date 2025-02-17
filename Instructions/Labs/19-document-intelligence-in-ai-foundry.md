@@ -19,13 +19,13 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](./media/sc900-image-1.png)
+       ![](./media/19-4.png)
  
 1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](./media/sc900-image-2.png)
+     ![Enter Your Password](./media/19-5.png)
  
 1. If prompted to stay signed in, you can click **No**. 
 
@@ -48,13 +48,13 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
     - **Connect Azure AI Search**: Leave as default **(7)**
     - Click on **Next (8)**.
 
-        ![](./media/17-1.png)
+        ![](./media/19-3.png)
 
     > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
-    ![](./media/17-2.png)
+    ![](./media/19-2.png)
 
 1. Keep track of the following created resources: 
     
