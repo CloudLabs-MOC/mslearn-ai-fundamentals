@@ -80,7 +80,9 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
-1. On the *Vision + Document* page, scroll down and select **Document**. Under *Prebuilt models for specific documents*, select the **Receipts** tile.
+1. On the *Vision + Document* page, scroll down and select **Document (1)**. Under *Prebuilt models for specific documents*, select the **Receipts (2)** tile.
+
+    ![](media/19-1.png)
 
 1. In the drop-down list under *Try it out*, note that your Azure AI services resource is selected. Leave it as-is.
 
@@ -88,17 +90,21 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
  
 1. In Azure AI Foundry, on the *Receipts* page, select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
 
-    ![Screenshot of a northwind receipt.](media/document-intelligence/receipt.jpg)
-
 1. On the right, select **Run analysis**.
 
 1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, the address, phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
-    ![Screenshot of receipt analysis result in Azure AI Foundry portal, showing bounding boxes around data fields and he text in those extracted fields.](media/receipt-lab-result.png)
+    ![](media/receipt-lab-result.png)
 
 In this exercise you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
 
+### Review
+In this exercise, you have completed the following tasks:
+- Created a project in the Azure AI Foundry portal
+- Analyzed a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
 ## Learn more
 
-This exercise demonstrated only some of the capabilities of the AI Document Intelligence service. To learn more about what you can do with this service, see the [Document Intelligence](https://learn.microsoft.com/azure/ai-services/document-intelligence/overview?view=doc-intel-3.1.0) page.
+This lab demonstrated only some of the capabilities of the AI Document Intelligence service. To learn more about what you can do with this service, see the [Document Intelligence](https://learn.microsoft.com/azure/ai-services/document-intelligence/overview?view=doc-intel-3.1.0) page.
+
+## You have successfully completed this lab.
