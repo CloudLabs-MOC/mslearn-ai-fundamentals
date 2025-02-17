@@ -1,5 +1,5 @@
 
-# Extract data from documents in Azure AI Foundry portal
+# Module 19: Extract data from documents in Azure AI Foundry portal
 
 **Azure AI Document Intelligence** service enables you to analyze and extract information from forms and documents, then identify field names and data. 
 
@@ -76,7 +76,7 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
 
     ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
 
-## Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
+## Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 

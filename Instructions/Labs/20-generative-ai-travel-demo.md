@@ -1,8 +1,4 @@
----
-lab:
-    title: 'Explore generative AI with Microsoft Copilot'
----
-# Explore generative AI with Microsoft Copilot
+# Module 20: Explore generative AI with Microsoft Copilot
 
 Generative AI describes a category of capabilities within AI that create content. People typically interact with generative AI that has been built into chat applications. One popular example of such an application is Microsoft Copilot, an AI-powered productivity tool designed to enhance your work experience by providing real-time intelligence and assistance. 
 
