@@ -41,7 +41,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false" />** **(2)**
-    - **Workspace name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - **Name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
     - **Region**: Select <inject key="location" enableCopy="false" /> **(4)**
     - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
     - **Key vault**: Note the default new key vault that will be created for your workspace. **(6)**
@@ -194,7 +194,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Virtual machine type**: CPU **(2)**
     - **Virtual machine tier**: Dedicated **(3)**
     - **Virtual machine size**: Standard_DS3_V2 **(4)**
-    - **Number of instances**: 1 **(5)** and then select **Next **(6)**
+    - **Number of instances**: 1 **(5)** and then select **Next (6)**
 
       ![](media/lab1-13.png)
 
