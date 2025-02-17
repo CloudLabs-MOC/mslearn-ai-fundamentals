@@ -9,9 +9,25 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. Sign in with your account. 
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+
+   ![](./media/17-18.png)
+
+1.  Enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+       ![Enter Your Username](./media/sc900-image-1.png)
+ 
+1. Next, provide your password:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/sc900-image-2.png)
+ 
+1. If prompted to stay signed in, you can click **No**. 
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
@@ -25,7 +41,7 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
     - **Subcription**: **Use existing Azure subscription (2)**.
-    - **Resource group**: Select **AI-900-Module-17 (3)**
+    - **Resource group**: Select **AI-900-Module-19 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
     Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**.
