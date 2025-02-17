@@ -1,4 +1,4 @@
-#  Module 17: Analyze images in Azure AI Foundry portal
+#  Module 17: Analyze images in the Azure AI Foundry portal
 
 **Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure AI Vision in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
 
@@ -12,7 +12,7 @@ In this lab, you will perform:
 - Task 3: Tagging images 
 - Task 4: Object detection
 
-## Task 1: Create a project in Azure AI Foundry portal
+## Task 1: Create a project in the Azure AI Foundry portal
 
 1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
@@ -39,7 +39,7 @@ In this lab, you will perform:
 
         ![](./media/17-1.png)
 
-    > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
+    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
@@ -81,7 +81,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
-1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
+1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing it on your file system.
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
@@ -93,7 +93,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
    ![](./media/17-9.png)
 
-1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
+1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing it on your file system.
 
 1.  The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
@@ -105,7 +105,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 ## Task 3: Tagging images 
 
-The next feature you will try is the *Extract Tags* functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
+The next feature you will try is the *Extract Tags* functionality. Extract tags are based on thousands of recognizable objects, including living beings, scenery, and actions.
 
 1. Return to the **Vision + Document** page of Azure AI Foundry, then select the **Image** tab, and select the **Common tag extraction** tile.
 
@@ -113,7 +113,7 @@ The next feature you will try is the *Extract Tags* functionality. Extract tags 
 
    ![](./media/17-12.png)
 
-3. Open the folder containing the images you downloaded and locate the file named **store-image-2.jpg**, which looks like this:
+3. Open the folder containing the images you downloaded and locate the file named **store-camera-2.jpg**, which looks like this:
 
     ![](./media/analyze-images-vision/store-camera-2.jpg)
 
