@@ -90,6 +90,8 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
 1. Review the output, which should have successfully recognized and transcribed the audio into text.
 
+   ![Browse files](media/up3.png)
+
 ### Review
 
 In this exercise, you have completed the following tasks:
