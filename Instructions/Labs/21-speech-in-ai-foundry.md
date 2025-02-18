@@ -41,9 +41,9 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
     - **Resource group**: Select **AI-900-Module-21 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**.
+    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
     - **Connect Azure AI Search**: Leave as default **(6)**
-    - Click on **Next (7)**.
+    - Click on **Next (7)**
 
         ![](./media/18-8.png)
 
