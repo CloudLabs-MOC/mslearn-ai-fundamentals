@@ -6,7 +6,7 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -36,8 +36,8 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
-    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
     - **Resource group**: Select **AI-900-Module-21 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
