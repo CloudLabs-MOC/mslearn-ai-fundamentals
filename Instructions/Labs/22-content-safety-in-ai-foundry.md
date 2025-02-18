@@ -1,6 +1,6 @@
 # Module 22: Explore Content Safety in Azure AI Foundry
 
-Azure AI services help users create AI applications with out-of-the-box and pre-built and customizable APIs and models. In this exercise you will take a look at one of the services, Azure AI Content Safety, which enables you to moderate text and image content. In Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, you will use Azure AI Content Safety to categorize text and assign it severity score. 
+Azure AI services help users create AI applications with out-of-the-box and pre-built and customizable APIs and models. In this exercise you will take a look at one of the services, Azure AI Content Safety, which enables you to moderate text and image content. In the Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, you will use Azure AI Content Safety to categorize text and assign it a severity score. 
 
 > **Note**
 > The goal of this exercise is to get a general sense of how Azure AI services are provisioned and used. Content Safety is used as an example, but you are not expected to gain a comprehensive knowledge of content safety in this exercise!
@@ -13,7 +13,7 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -43,14 +43,14 @@ In this lab, you will perform:
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
-    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
     - **Resource group**: Select **AI-900-Module-22 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**.
+    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
     - **Connect Azure AI Search**: Leave as default **(6)**
-    - Click on **Next (7)**.
+    - Click on **Next (7)**
 
         ![](./media/22-12.png)
 
@@ -72,11 +72,11 @@ In this lab, you will perform:
 
 1. After the resources are created, you will be brought to your project's *Overview* page.  
 
-1. Naivaget back to Azure portal, search for **Resourse Group (1)** and select **Resourse Group (2)** from the result.
+1. Naivaget back to the Azure portal, search for **Resourse Group (1)**, and select **Resourse Group (2)** from the result.
 
    ![](./media/22-2.png)
 
-1. On the Resourse Group page, select **AI-900-Module-22** from the result.
+1. On the Resource Group page, select **AI-900-Module-22** from the result.
 
    ![](./media/22-3.png)
 
@@ -113,13 +113,13 @@ In this lab, you will perform:
 
    ![](./media/22-8.png)
 
-1. On the **Moderate text content** page, under the **Try it out** heading, select the Azure AI services resource you just created from the drop down menu.  
+1. On the **Moderate text content** page, under the **Try it out** heading, select the Azure AI services resource you just created from the drop-down menu.  
 
-1. Under Run a simple test, select the **Safe Content** tile. Notice that text is displayed in the box below. 
+1. Under Run a Simple Test, select the **Safe Content** tile. Notice that text is displayed in the box below. 
 
    ![](./media/22-9.png)
 
-1. Click **Run test**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize un-safe content.
+1. Click **Run test**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize unsafe content.
 
    ![](./media/22-10.png)
 
@@ -127,12 +127,11 @@ In this lab, you will perform:
 
    ![](./media/22-11.png)
 
-1. Now try another sample. Select the text under Violent content with misspelling. Check that the content is displayed in the box below.
+1. Now try another sample. Select the text under Violent content with misspellings. Check that the content is displayed in the box below.
 
 1. Click **Run test** and inspect the results in the Results panel again. 
 
-You can run tests on all the samples provided, then inspect the results.
-
+You can run tests on all the samples provided, and then inspect the results.
 
 ### Review
 In this exercise, you have completed the following tasks:
