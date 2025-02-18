@@ -6,11 +6,11 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
 > **Note**: This exercise assumes that you have a [personal Microsoft Account](https://signup.live.com) (such as an Outlook.com account).
 
-## Use Microsoft Copilot to generate travel plans
+## Task 1: Use Microsoft Copilot to generate travel plans
 
-1. In your web browser, open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com`. Click on the **Sign in** button on the right hand side of the screen. Sign in using your personal Microsoft account - closing any welcome messages or offers that are displayed.
+1. In your web browser, open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com`.
 
-    >**Note**: You may be prompted to continue with your **Work** or  **Personal** account. Select **Personal** and sign in. 
+1. Click on the **Sign in** button on the right hand side of the screen. Sign in using your personal Microsoft account - closing any welcome messages or offers that are displayed.
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
@@ -27,6 +27,8 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
 1. Review the response from Copilot. 
 
+   ![](./media/20-7.png)
+
     >**Note**: Keep in mind that the specific response you receive may vary due to the nature of generative AI.
  
 1. Let's try another prompt. Enter the following:
@@ -37,6 +39,8 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
 1. Review the response, which should provide some places to stay in Paris.
 
+   ![](./media/20-6.png)
+
 1. Let's iterate based on previous prompts and responses to refine the result. Enter the following prompt:
     
     ```prompt
@@ -44,6 +48,8 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
     ``` 
 
 1. Review the response, which should provide dining options near a location from the previous response. 
+
+    ![](./media/20-5.png)
 
 1. Now, let's provide a source to ground the response in a specific scope of information. Enter the following: 
     
@@ -53,6 +59,8 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
 1. Review the response, which should provide information based on the provided website. 
 
+    ![](./media/20-4.png)
+
 1. Let's try to add context to maximize the relevance of the response. Enter the following prompt: 
 
     ```prompt
@@ -60,6 +68,8 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
     ```
 
 1. Review the response and reasoning for the response.  
+
+   ![](./media/20-3.png)
 
 1. Now try setting clear expectations for the response. Enter the following prompt:
     
@@ -69,6 +79,10 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
 1. Review the response, which should provide a numbered list of sights to see in Paris.
 
+   ![](./media/20-2.png)
+
 1. Before you go, notice that you can scroll back up to see your chat history. You can also use the plus sign **+** next to the chat window to start a *new* chat, or upload images to add gounding sources to your prompts.    
+
+   ![](./media/20-1.png)
 
 1. When you are done, close the browser window. 
