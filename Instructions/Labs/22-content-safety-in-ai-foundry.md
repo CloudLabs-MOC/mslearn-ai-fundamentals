@@ -52,7 +52,7 @@ In this lab, you will perform:
     - **Connect Azure AI Search**: Leave as default **(6)**
     - Click on **Next (7)**.
 
-        ![](./media/18-8.png)
+        ![](./media/22-12.png)
 
     > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
