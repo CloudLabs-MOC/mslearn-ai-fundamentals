@@ -13,7 +13,7 @@ In this lab, you will perform:
 
 1. In a new tab, open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com`.
 
-1. Click on the **Sign in** button on the right hand side of the screen and sign-in with the microsoft account.
+1. Click on the **Sign in** button on the right hand side of the screen and sign-in with the Microsoft account.
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
@@ -22,7 +22,7 @@ In this lab, you will perform:
     - Add context to maximize response appropriateness and relevance
     - Set clear expectations for the response
 
-1. Let's try generating a resonse from Microsoft Copilot using a prompt with a specific goal. In the chat box at the bottom of the Copilot pane, enter the following prompt:
+1. Let's try generating a response from Microsoft Copilot using a prompt with a specific goal. In the chat box at the bottom of the Copilot pane, enter the following prompt:
 
     ```prompt
     I'm planning a trip to Paris in September. Can you help me?
@@ -84,7 +84,7 @@ In this lab, you will perform:
 
    ![](./media/20-2.png)
 
-1. Before you go, notice that you can scroll back up to see your chat history. You can also use the plus sign **+** next to the chat window to start a *new* chat, or upload images to add gounding sources to your prompts.    
+1. Before you go, notice that you can scroll back up to see your chat history. You can also use the plus sign **+** next to the chat window to start a *new* chat or upload images to add grounding sources to your prompts.    
 
    ![](./media/20-1.png)
 
