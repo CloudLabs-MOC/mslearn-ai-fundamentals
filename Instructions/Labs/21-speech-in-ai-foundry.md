@@ -1,8 +1,15 @@
-# Explore Speech in Azure AI Foundry portal
+# Module 21 : Explore Speech in Azure AI Foundry portal
 
 The **Azure AI Speech** service transcribes speech into text, and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
 
 In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to transcribe audio using the built-in try-it-out experiences. 
+
+## Lab objectives
+
+In this lab, you will perform:
+
+- Task 1: Create a project in the Azure AI Foundry portal
+- Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
@@ -82,6 +89,8 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 1. The Speech service transcribes and displays the text in real time. If you have audio on your computer, you can listen to the recording as the text is being transcribed.
 
 1. Review the output, which should have successfully recognized and transcribed the audio into text.
+
+   ![Browse files](media/up3.png)
 
 ### Review
 
