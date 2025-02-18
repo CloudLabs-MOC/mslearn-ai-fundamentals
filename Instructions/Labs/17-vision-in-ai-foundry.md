@@ -44,14 +44,14 @@ In this lab, you will perform:
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
-    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
     - **Resource group**: Select **AI-900-Module-17 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**.
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
     - **Connect Azure AI Search**: Leave as default **(7)**
-    - Click on **Next (8)**.
+    - Click on **Next (8)**
 
         ![](./media/17-1.png)
 
