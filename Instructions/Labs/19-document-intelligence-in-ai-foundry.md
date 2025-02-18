@@ -1,7 +1,7 @@
 
 # Module 19: Extract data from documents in Azure AI Foundry portal
 
-**Azure AI Document Intelligence** service enables you to analyze and extract information from forms and documents, then identify field names and data. 
+**Azure AI Document Intelligence** service enables you to analyze and extract information from forms and documents, and then identify field names and data. 
 
 How does Document Intelligence build upon optical character recognition (OCR)? While OCR can read printed or handwritten documents, OCR extracts text in an unstructured format which is difficult to store in a database or analyze. Document intelligence makes sense of the unstructured data by capturing the structure of the text, such as data fields and information in tables. 
 
@@ -15,7 +15,7 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -45,14 +45,14 @@ In this lab, you will perform:
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
-    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
     - **Resource group**: Select **AI-900-Module-19 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**.
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
     - **Connect Azure AI Search**: Leave as default **(7)**
-    - Click on **Next (8)**.
+    - Click on **Next (8)**
 
         ![](./media/19-3.png)
 
@@ -98,11 +98,11 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 1. On the right, select **Run analysis**.
 
-1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, the address, phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
+1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, address, phone number, and transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
     ![](media/receipt-lab-result.png)
 
-In this exercise you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
+In this exercise, you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
 
 ### Review
 In this exercise, you have completed the following tasks:
