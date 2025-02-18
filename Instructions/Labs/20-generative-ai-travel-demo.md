@@ -4,13 +4,16 @@ Generative AI describes a category of capabilities within AI that create content
 
 In this exercise, you will use Microsoft Copilot to generate travel plans.
 
-> **Note**: This exercise assumes that you have a [personal Microsoft Account](https://signup.live.com) (such as an Outlook.com account).
+## Lab objectives
+
+In this lab, you will perform:
+- Task 1: Use Microsoft Copilot to generate travel plans
 
 ## Task 1: Use Microsoft Copilot to generate travel plans
 
-1. In your web browser, open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com`.
+1. In a new tab, open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com`.
 
-1. Click on the **Sign in** button on the right hand side of the screen. Sign in using your personal Microsoft account - closing any welcome messages or offers that are displayed.
+1. Click on the **Sign in** button on the right hand side of the screen and sign-in with the microsoft account.
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
@@ -86,3 +89,9 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
    ![](./media/20-1.png)
 
 1. When you are done, close the browser window. 
+
+### Review
+In this exercise, you have completed the following tasks:
+- Used Microsoft Copilot to generate travel plans
+
+## You have successfully completed this lab.

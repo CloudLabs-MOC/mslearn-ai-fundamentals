@@ -1,9 +1,4 @@
----
-lab:
-    title: 'Explore Speech in Azure AI Foundry portal'
----
-
-# Explore Speech in Azure AI Foundry portal
+# Module 21: Explore Speech in Azure AI Foundry portal
 
 The **Azure AI Speech** service transcribes speech into text, and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
 
@@ -43,7 +38,7 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
     - **Subcription**: **Use existing Azure subscription (2)**.
-    - **Resource group**: Select **AI-900-Module-18 (3)**
+    - **Resource group**: Select **AI-900-Module-21 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
     Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**.
