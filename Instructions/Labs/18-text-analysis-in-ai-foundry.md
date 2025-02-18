@@ -17,7 +17,7 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -103,7 +103,7 @@ In this lab, you will perform:
 
 ## Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
 
-*Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
+*Key phrases* are the most important pieces of information in the text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
 
 1. In the Language playground, select **Extract information (1)**. Then select the **Extract key phrases (2)** tile. 
 
@@ -145,7 +145,7 @@ In this lab, you will perform:
 
 ### Review
 In this exercise, you have completed the following tasks:
-- Created a project in Azure AI Foundry portal
+- Created a project in the Azure AI Foundry portal
 - Extracted named entities with Azure AI Language in Azure AI Foundry portal
 - Extracted key phrases with Azure AI Language in Azure AI Foundry portal
 - Summarized text with Azure AI Language in Azure AI Foundry portal 
