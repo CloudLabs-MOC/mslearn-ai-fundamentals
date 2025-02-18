@@ -7,6 +7,12 @@ How does Document Intelligence build upon optical character recognition (OCR)? W
 
 In this exercise, you will use Azure AI Document Intelligence's prebuilt models in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to recognize data from a receipt. 
 
+## Lab objectives
+
+In this lab, you will perform:
+- Task 1: Create a project in Azure AI Foundry portal
+- Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry
+
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).

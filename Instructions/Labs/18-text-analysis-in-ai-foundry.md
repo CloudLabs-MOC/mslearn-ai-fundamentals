@@ -143,7 +143,6 @@ In this lab, you will perform:
 
    ![](./media/18-6.png)
 
-
 ### Review
 In this exercise, you have completed the following tasks:
 - Created a project in Azure AI Foundry portal

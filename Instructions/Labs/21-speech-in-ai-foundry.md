@@ -9,41 +9,68 @@ The **Azure AI Speech** service transcribes speech into text, and text into audi
 
 In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to transcribe audio using the built-in try-it-out experiences. 
 
-## Create a project in Azure AI Foundry portal
+## Task 1: Create a project in the Azure AI Foundry portal
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. Sign in with your account. 
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+
+   ![](./media/17-18.png)
+
+1.  Enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+       ![Enter Your Username](./media/19-4.png)
+ 
+1. Next, provide your password:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/19-5.png)
+ 
+1. If prompted to stay signed in, you can click **No**.
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
 
-1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
- 
-    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
+1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
 
-> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
+    ![](./media/17-3.png)
 
-1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
+1. On the **Create a project** pane, Configure it with the following settings:
 
-1. Take note of the resources that are created: 
-- Azure AI services
-- Azure AI hub
-- Azure AI project
-- Storage account
-- Key vault
-- Resource group  
- 
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
- 
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
+    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Resource group**: Select **AI-900-Module-18 (3)**
+    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
+    - **Connect Azure AI Services or Azure OpenAI Service**:
+    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**.
+    - **Connect Azure AI Search**: Leave as default **(6)**
+    - Click on **Next (7)**.
+
+        ![](./media/18-8.png)
+
+    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+
+1. On the **Review and Finish** page, click on **Create**.
+
+    ![](./media/17-2.png)
+
+1. Keep track of the following created resources: 
+    
+    - **Azure AI Project**
+    - **Azure AI Hub**  
+    - **Azure AI Services**    
+    - **Storage Account**  
+    - **Key Vault**
+
+      ![](./media/17-4.png)
 
 1. On the *AI Services* page, select the *Speech* tile to try out Azure AI Speech capabilities.
 
-    ![Screenshot of the Speech tile selected on the AI Services page.](./media/speech-tile.png)
-
-## Explore speech to text in Azure AI Foundry's Speech Playground
+## Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
 Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground. 
 
@@ -60,13 +87,6 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 1. Review the output, which should have successfully recognized and transcribed the audio into text.
 
 In this exercise you tried out Azure AI Speech services in Azure AI Foundry's Speech Playground. You then used the Real-time speech to text service to transcribe an audio recording. You were able to see the text transcription being generated as the audio file was played.
-
-## Clean up
-
-If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
-
-1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created.
-1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
 
