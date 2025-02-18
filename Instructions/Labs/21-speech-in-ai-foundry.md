@@ -83,10 +83,15 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
 1. Review the output, which should have successfully recognized and transcribed the audio into text.
 
-## Summary
+### Review
 
-In this exercise you tried out Azure AI Speech services in Azure AI Foundry's Speech Playground. You then used the Real-time speech to text service to transcribe an audio recording. You were able to see the text transcription being generated as the audio file was played.
+In this exercise, you have completed the following tasks:
+
+- Explored Azure AI Speech services in the Speech Playground
+- Transcribed audio to text using the Real-time speech-to-text service
 
 ## Learn more
 
 This exercise demonstrated only some of the capabilities of the Speech service. To learn more about what you can do with this service, see the [Speech page](https://azure.microsoft.com/services/cognitive-services/speech-services).
+
+## You have successfully completed this lab.
