@@ -15,6 +15,12 @@ In this lab, you will perform:
 - Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
 - Task 4: Summarize text with Azure AI Language in Azure AI Foundry portal
 
+## Estimated timing: 30 minutes
+
+## Architecture Diagram
+
+ ![](media/ex18.PNG)
+
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
@@ -77,6 +83,14 @@ In this lab, you will perform:
 1. On the **Playgrounds (1)** page, select the **Language playground (2)** tile to try out some Azure AI Language capabilities.
 
     ![](./media/18-1.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="07c3e734-e32f-44b6-b8e8-7b5b85f4a45b" />
 
 ## Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
 

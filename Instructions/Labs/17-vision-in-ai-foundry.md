@@ -12,6 +12,12 @@ In this lab, you will perform:
 - Task 3: Tagging images 
 - Task 4: Object detection
 
+## Estimated timing: 30 minutes
+
+## Architecture Diagram
+
+ ![](media/ex17.png)
+
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
@@ -80,6 +86,14 @@ In this lab, you will perform:
 1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
 
     ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
 
 ## Task 2: Generate captions for an image
 

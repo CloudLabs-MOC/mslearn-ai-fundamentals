@@ -11,6 +11,12 @@ In this lab, you will perform:
 - Task 1: Create a project in Azure AI Foundry portal
 - Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
 
+## Estimated timing: 30 minutes
+
+## Architecture Diagram
+
+ ![](media/ex22.png)
+
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
@@ -106,6 +112,14 @@ In this lab, you will perform:
 1. On the left-hand menu on the screen, select **AI Services (1)** and select the **Content Filter (2)** tile to try out Azure AI Vision and Document capabilities.
     
     ![](./media/22-7.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="7ff02ba9-c76e-41b8-9319-a1f4b195ca8a" />
 
 ## Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
 
