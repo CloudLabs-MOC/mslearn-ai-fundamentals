@@ -21,6 +21,7 @@ In this lab, you will perform:
  ![](media/ex22.png)
 
 ## Task 1: Create a project in the Azure AI Foundry portal
+In this task, you will create a new Azure AI Foundry project to organize AI resources and services. This includes configuring an AI Hub, AI Services, Storage Account, and Key Vault, and assigning the necessary Cognitive Services User role permissions. 
 
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
@@ -128,6 +129,9 @@ In this lab, you will perform:
 <validation step="7ff02ba9-c76e-41b8-9319-a1f4b195ca8a" />
 
 ## Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
+
+In this task, you will use Azure AI Foundry's Content Safety feature to test and analyze text moderation capabilities. You will run sample tests using Azure AI Services, evaluate how the model detects harmful content, and review the results based on severity levels and confidence intervals.
+
 
 1. On the **Content Safety** page, under Filter text content, select **Moderate text content**.
 
