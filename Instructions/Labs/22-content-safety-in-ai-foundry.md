@@ -44,9 +44,9 @@ In this lab, you will perform:
  
 1. If prompted to stay signed in, you can click **No**.
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. On the Azure AI Foundry portal home page, select **Create project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i2.png)
 
 1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
 
@@ -82,6 +82,8 @@ In this lab, you will perform:
       ![](./media/17-4.png)
 
 1. After the resources are created, you will be brought to your project's *Overview* page.  
+
+      ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i6.png)
 
 1. Naivaget back to the Azure portal, search for **Resourse Group (1)**, and select **Resourse Group (2)** from the result.
 
@@ -129,9 +131,11 @@ In this lab, you will perform:
 
 1. On the **Content Safety** page, under Filter text content, select **Moderate text content**.
 
-   ![](./media/22-8.png)
+   ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i3.png)
 
-1. On the **Moderate text content** page, under the **Try it out** heading, select the Azure AI services resource you just created from the drop-down menu.  
+1. On the **Moderate text content** page, under the **Try it out** heading, select the **Azure AI services** resource you just created from the drop-down menu.  
+
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i4.png)
 
 1. Under Run a Simple Test, select the **Safe Content** tile. Notice that text is displayed in the box below. 
 
@@ -139,7 +143,7 @@ In this lab, you will perform:
 
 1. Click **Run test**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize unsafe content.
 
-   ![](./media/22-10.png)
+   ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i5.png)
 
 1. In the Results panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Does the Content Safety AI service consider this sample to be acceptable or not? What's important to note is that the results are within a confidence interval. A well-trained model, like one of Azure AI's out-of-the-box models, can return results that have a high probability of matching what a human would label the result. Each time you run a test, you call the model again. 
 
