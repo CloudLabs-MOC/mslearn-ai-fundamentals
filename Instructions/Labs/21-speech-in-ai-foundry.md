@@ -19,6 +19,8 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
+In this task, you will learn how to create a project in the Azure AI Foundry portal to manage and develop AI-powered solutions using Azure AI services.
+
 1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
@@ -89,6 +91,8 @@ In this lab, you will perform:
    <validation step="a78cde3c-b21b-4ea4-9230-2d5a5d655239" />
 
 ## Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
+
+In this task, you will learn how to explore speech-to-text capabilities using Azure AI Foundry's Speech Playground.
 
 Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground. 
 
