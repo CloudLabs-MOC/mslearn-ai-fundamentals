@@ -69,15 +69,16 @@ Now you're ready to deploy a model to use through the **Azure AI Foundry portal*
    
   - **Deployment name**: 35turbo
   - **Deployment type**: Standard
-  - **Click on Customize**
-    - **Model version**: Default
-    - **Content filter**: Default
-    - **Tokens per minute rate limit**: 5K  **(1)**
-    - **Enable dynamic quota**: Disabled  **(2)**
-    - Click on **deploy  (3)**
-          
-      ![](./media/new4upd1.png)
-  
+  - **Click on Customize**  
+    - **Model version**: Default  
+    - **Content filter**: Default  
+    - **Tokens per minute rate limit**: 5K **(1)**  
+    - **Enable dynamic quota**: Disabled **(2)**  
+    - Click on **Deploy** **(3)**  
+
+    ![Deployment Screenshot](./media/new4upd1.png)  
+
+ 
     >**Note**: Each Azure OpenAI model is tailored to offer a unique balance of capabilities and performance. For this exercise, we’ll be using the **GPT 3.5 Turbo** model, which excels in natural language generation and chat-based scenarios.
     > A rate limit of 5,000 tokens per minute is more than sufficient to complete this exercise, while still leaving enough capacity for others using the same subscription.
  
