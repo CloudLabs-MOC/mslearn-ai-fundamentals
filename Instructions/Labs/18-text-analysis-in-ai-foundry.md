@@ -79,11 +79,8 @@ In this lab, you will perform:
     - **Key Vault**
 
       ![](./media/17-4.png)
- 
-1. On the **Playgrounds (1)** page, select the **Language playground (2)** tile to try out some Azure AI Language capabilities.
-
-    ![](./media/18-1.png)
-
+      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+      
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -95,6 +92,10 @@ In this lab, you will perform:
 ## Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
 
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
+
+1. Navigate to **Playgrounds (1)** from the left pane, select the **Language playground (2)** tile to try out some Azure AI Language capabilities.
+
+    ![](./media/18-1.png)
 
 1. In the Language playground, select **Extract information (1)**. Then select the **Extract named entities (2)** tile. 
 

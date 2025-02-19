@@ -77,16 +77,7 @@ In this lab, you will perform:
     - **Key Vault**
 
       ![](./media/17-4.png)
- 
-1. After the resources are created, you will be brought to your project's **Overview (1)** page. On the left-hand menu on the screen, select **AI Services (2)**.
- 
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/17-5.png)  
-
-    >**Note**: If a pop-up appears, please click **Close**.
-
-1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
-
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
+      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -99,6 +90,16 @@ In this lab, you will perform:
 ## Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
+
+1. In the **Overview (1)** page of your project, on the left-hand menu on the screen, select **AI Services (2)**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/17-5.png)  
+
+    >**Note**: If a pop-up appears, please click **Close**.
+
+1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
+
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
 
 1. On the *Vision + Document* page, scroll down and select **Document (1)**. Under *Prebuilt models for specific documents*, select the **Receipts (2)** tile.
 

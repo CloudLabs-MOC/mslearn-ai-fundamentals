@@ -31,7 +31,7 @@ In this lab, you will perform:
  
        ![Enter Your Username](./media/19-4.png)
  
-1. Next, provide your password:
+4. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
@@ -109,10 +109,6 @@ In this lab, you will perform:
 
 1. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
 
-1. On the left-hand menu on the screen, select **AI Services (1)** and select the **Content Filter (2)** tile to try out Azure AI Vision and Document capabilities.
-    
-    ![](./media/22-7.png)
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -122,6 +118,10 @@ In this lab, you will perform:
    <validation step="7ff02ba9-c76e-41b8-9319-a1f4b195ca8a" />
 
 ## Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
+
+1. On the left-hand menu on the screen, select **AI Services (1)** and select the **Content Filter (2)** tile to try out Azure AI Vision and Document capabilities.
+    
+    ![](./media/22-7.png)
 
 1. On the **Content Safety** page, under Filter text content, select **Moderate text content**.
 
