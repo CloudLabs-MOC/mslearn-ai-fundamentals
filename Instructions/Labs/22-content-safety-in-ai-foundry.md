@@ -28,7 +28,9 @@ In this lab, you will perform:
 
    ![](./media/17-18.png)
 
-1.  Enter your credentials:
+   >**Note**: Click on **Got it** when **Streamlined from the start** prompted. 
+
+1. If prompted enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
