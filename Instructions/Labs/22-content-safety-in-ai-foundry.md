@@ -119,12 +119,11 @@ In this lab, you will perform:
     ![](./media/22-7.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
 
-   <validation step="7ff02ba9-c76e-41b8-9319-a1f4b195ca8a" />
+<validation step="7ff02ba9-c76e-41b8-9319-a1f4b195ca8a" />
 
 ## Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
 
