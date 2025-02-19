@@ -59,6 +59,7 @@ To implement natural language understanding with Conversational Language Underst
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
 
 1. If prompted to choose a Language resource, select the following settings, and select **Done**:
+   
     - **Azure directory (1)**: *The Azure directory containing your subscription*.
     - **Azure subscription (2)**: *Your Azure subscription*.
     - **Resource type (3)**: *Language*.
@@ -67,29 +68,31 @@ To implement natural language understanding with Conversational Language Underst
     ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01a.png)
 
    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    1. On the bar at the top if the page, select **Settings (&#9881;)**.
+    1. On the bar at the top of the page, select **Settings (&#9881;)**.
     2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and make sure managed identity tab is **enabled.**.
+    3. Select the language resource you just created, and make sure the managed identity tab is **enabled.**.
     4. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, select **Create new** menu, and select **Conversational language understanding**.
 
     ![Select add under Intents on the Build Schema pane.](media/lab8(1).png)
    
-1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and select **Next**:
-    - **Name**: **Project<inject key="DeploymentID" enableCopy="false" />** **(1)**
-    - **Utterances primary language**: *English (US)* **(2)**
-    - **Enable multiple languages in project**: **Do not select** **(3)**
-    - **Description**: `Simple home automation` **(4)**
-        Click **Next** **(5)**
-      
-         ![Select add under Intents on the Build Schema pane.](media/LAB8.png)
+1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and select **Next**:  
+
+   - **Name**: **Project<inject key="DeploymentID" enableCopy="false" />** **(1)**  
+   - **Utterances primary language**: *English (US)* **(2)**  
+   - **Enable multiple languages in project**: **Do not select** **(3)**  
+   - **Description**: `Simple home automation` **(4)**  
    
-    > **Tip**: Make a note of your *project name*, as you will need it later.
+      Click **Next** **(5)**  
+   
+      ![Select add under Intents on the Build Schema pane.](media/LAB8.png)  
 
-    >**Note:** Please note that it may take approximately 15-20 minutes for the **Utterances Primary Language** list to appear.
+   > **Tip**: Make a note of your *project name*, as you will need it later.  
 
-1. On the **Review and finish** page, select **Create**.
+   > **Note:** It may take approximately **15-20 minutes** for the **Utterances Primary Language** list to appear.  
+
+1. On the **Review and finish** page, select **Create**. 
   
 ### Task 3: Create intents, utterances, and entities
 
