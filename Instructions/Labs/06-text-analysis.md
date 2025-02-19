@@ -72,7 +72,7 @@ In this task, you will learn how to configure your **Language** resource in Azur
 1. If you are ***not*** prompted to choose a language resource, it could be because you have multiple Language resources in your subscription. In that case:
 
    - On the bar at the top of the page, select **Settings (&#9881;)**.
-      
+   
    - On the **Settings** page, view the **Resources** tab.
       
      ![An image of the text in the image outlined](media/lab-6(4).png)
@@ -81,7 +81,7 @@ In this task, you will learn how to configure your **Language** resource in Azur
       
      ![An image of the text in the image outlined](media/clr1.png)
       
-   >**Note**: Ensure that the Current Language resource includes the studio<inject key="DeploymentID" enableCopy="false" />, and proceed with the next steps.
+     >**Note**: Ensure that the Current Language resource includes the studio<inject key="DeploymentID" enableCopy="false" />, and proceed with the next steps.
  
 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
