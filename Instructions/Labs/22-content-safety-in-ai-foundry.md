@@ -78,13 +78,12 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
 
       ![](./media/17-4.png)
 
-1. After the resources are created, you will be brought to your project's *Overview* page.  
+1. After the resources are created, you will be brought to your project's *Overview* page.
 
-      ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i6.png)
+   ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i6.png)
 
-1. Naivaget back to Azure portal, search for **Resourse Group (1)** and select **Resourse Group (2)** from the result.
-
-
+1. Navigate back to Azure portal, search for **Resourse Group (1)** and select **Resourse Group (2)** from the result.
+   
    ![](./media/22-2.png)
 
 1. On the Resourse Group page, select **AI-900-Module-22** from the result.
