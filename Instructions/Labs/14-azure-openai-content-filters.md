@@ -69,7 +69,7 @@ Now you're ready to deploy a model to use through the **Azure AI Foundry portal*
    
   - **Deployment name**: 35turbo
   - **Deployment type**: Standard
-  - **Click on Customize**  
+  - **Click on Customize**:
     - **Model version**: Default  
     - **Content filter**: Default  
     - **Tokens per minute rate limit**: 5K **(1)**  
