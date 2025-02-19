@@ -67,17 +67,19 @@ In this task, you will learn how to configure your **Language** resource in Azur
 
 1. Then select **Done**.
 
-    >**Important**:As of July 2023, Azure AI services now include what was previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their references from `Cognitive Services` to `Azure AI services`, but both terms refer to the same type of resource.
+   >**Important**:As of July 2023, Azure AI services now include what was previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their references from `Cognitive Services` to `Azure AI services`, but both terms refer to the same type of resource.
 
 1. If you are ***not*** prompted to choose a language resource, it could be because you have multiple Language resources in your subscription. In that case:
 
    - On the bar at the top of the page, select **Settings (&#9881;)**.
    
    - On the **Settings** page, view the **Resources** tab.
+
       
      ![An image of the text in the image outlined](media/lab-6(4).png)
       
    - Ensure Managed identity is **Enabled**.
+  
       
      ![An image of the text in the image outlined](media/clr1.png)
       
