@@ -22,6 +22,7 @@ In this lab, you will perform:
 1. Click on the **Sign in** button on the right hand side of the screen and sign-in with the Microsoft account.
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
+
     - Start with a specific goal for what you want the assistant to do
     - Iterate based on previous prompts and responses to refine the result
     - Provide a source to ground the response in a specific scope of information
