@@ -24,7 +24,7 @@ In this lab, you will perform:
 
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
