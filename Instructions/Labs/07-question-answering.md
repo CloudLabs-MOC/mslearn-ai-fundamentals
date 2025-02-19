@@ -98,7 +98,7 @@ In this task, you will learn how to create a new project in the **Language** res
 1. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
    
     - On the bar at the top of the page, select **Settings (&#9881;)**.
-           
+      
     - On the **Settings** page, view the **Resources** tab.
        
     - Select the language resource you just created, and make sure the managed identity tab is **enabled.**
@@ -114,14 +114,15 @@ In this task, you will learn how to create a new project in the **Language** res
     ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(4).png)
 
 1. On the **Enter basic information** page, enter the following details and click **Next (5)**:
-    - **Language resource**: *choose your language resource* (**if not already chosen**).  
-    - **Azure search resource**: *choose your Azure search resource* (**if not already chosen**).
-    - **Name (1)**: `MargiesTravel`
-    - **Description (2)**: `A simple knowledge base`
-    - **Source language (3)**: English
-    - **Default answer when no answer is returned (4)**: `No answer found`
+   
+   - **Language resource**: *choose your language resource* (**if not already chosen**).  
+   - **Azure search resource**: *choose your Azure search resource* (**if not already chosen**).
+   - **Name (1)**: `MargiesTravel`
+   - **Description (2)**: `A simple knowledge base`
+   - **Source language (3)**: English
+   - **Default answer when no answer is returned (4)**: `No answer found`
       
-      ![](media/ai900mod4dimg9.png)
+     ![](media/ai900mod4dimg9.png)
 
 1. On the **Review and finish** page, click **Create project**.
 
