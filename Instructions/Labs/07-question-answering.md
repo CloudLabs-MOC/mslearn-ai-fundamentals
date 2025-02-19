@@ -113,18 +113,18 @@ In this task, you will learn how to create a new project in the **Language** res
 
     ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(4).png)
 
-1. On the **Enter basic information** page, enter the following details and click **Next (5)**:
-   
-   - **Language resource**: *choose your language resource* (**if not already chosen**).  
-   - **Azure search resource**: *choose your Azure search resource* (**if not already chosen**).
-   - **Name (1)**: `MargiesTravel`
-   - **Description (2)**: `A simple knowledge base`
-   - **Source language (3)**: English
-   - **Default answer when no answer is returned (4)**: `No answer found`
-      
-     ![](media/ai900mod4dimg9.png)
+1. On the **Enter basic information** page, enter the following details and click **Next (5)**:  
 
-1. On the **Review and finish** page, click **Create project**.
+   - **Language resource**: *Choose your language resource* (**if not already chosen**).  
+   - **Azure search resource**: *Choose your Azure search resource* (**if not already chosen**).  
+   - **Name (1)**: `MargiesTravel`  
+   - **Description (2)**: `A simple knowledge base`  
+   - **Source language (3)**: **English**  
+   - **Default answer when no answer is returned (4)**: `No answer found`  
+   
+      ![](media/ai900mod4dimg9.png)  
+
+1. On the **Review and finish** page, click **Create project**. 
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg10.png)
    
