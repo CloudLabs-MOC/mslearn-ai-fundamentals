@@ -11,6 +11,12 @@ In this lab, you will perform:
 - Task 1: Create a project in the Azure AI Foundry portal
 - Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
+## Estimated timing: 30 minutes
+
+## Architecture Diagram
+
+ ![](media/ex21.png)
+
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
@@ -73,6 +79,14 @@ In this lab, you will perform:
 1. On the **AI Services (1)** page, select the **Speech (2)** tile to try out Azure AI Speech capabilities.
 
    ![](./media/up1.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="a78cde3c-b21b-4ea4-9230-2d5a5d655239" />
 
 ## Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
