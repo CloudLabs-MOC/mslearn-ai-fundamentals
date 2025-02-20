@@ -17,7 +17,7 @@ In this lab, you will perform:
 
  ![](media/ex21.png)
 
-## Task 1: Create a project in the Azure AI Foundry portal
+### Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are creating and configuring a project in Azure AI Foundry to explore AI services and speech capabilities.
 
@@ -90,7 +90,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
    <validation step="a78cde3c-b21b-4ea4-9230-2d5a5d655239" />
 
-## Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
+### Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
 In this task, we are using Azure AI Speech to transcribe audio into text in real time using the Speech Playground.
 

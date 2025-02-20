@@ -1,6 +1,5 @@
 # Module 22: Explore Content Safety in Azure AI Foundry
 
-
 ## Lab overview
 
 In this exercise, you will use Azure AI services to help users create AI applications with out-of-the-box, pre-built, and customizable APIs and models. You will explore one of these services, Azure AI Content Safety, which enables you to moderate text and image content. In the Azure AI Foundry portal—Microsoft's platform for creating intelligent applications—you will use Azure AI Content Safety to categorize text and assign it a severity score.
@@ -15,7 +14,14 @@ In this lab, you will perform:
 - Task 1: Create a project in Azure AI Foundry portal
 - Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
 
+## Estimated timing: 30 minutes
+
+## Architecture Diagram
+
+ ![](media/ex22.png)
+
 ## Task 1: Create a project in the Azure AI Foundry portal
+
 In this task, you will create a new Azure AI Foundry project to organize AI resources and services. This includes configuring an AI Hub, AI Services, Storage Account, and Key Vault, and assigning the necessary Cognitive Services User role permissions. 
 
 1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
@@ -81,6 +87,9 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
 
    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i6.png)
 
+
+1. The **Cognitive Services User** role is already assigned to the user at the **Resource Group** level. The following steps are provided for your understanding of how to assign the role, which is required to perform the next task.  
+
 1. Navigate back to Azure portal, search for **Resourse Group (1)** and select **Resourse Group (2)** from the result.
    
    ![](./media/22-2.png)
@@ -98,6 +107,7 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
    ![](./media/22-5.png)
 
 1. Use the following settings to assign yourself to the role: 
+
     - **Assign access to (1)**: select user, group, or service principal
     - **Members**: click on **+ Select members (2)**
         - On the open *Select members* pane, search for **<inject key="AzureAdUserEmail"></inject> (3)** . Click on **<inject key="AzureAdUserEmail"></inject> (4)**. Then click **Select (5)**.
@@ -119,7 +129,7 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
 
 <validation step="7ff02ba9-c76e-41b8-9319-a1f4b195ca8a" />
 
-## Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
+## Task 3: Try out text moderation with Content Safety in Azure AI Foundry portal 
 
 In this task, you will use Azure AI Foundry's Content Safety feature to test and analyze text moderation capabilities. You will run sample tests using Azure AI Services, evaluate how the model detects harmful content, and review the results based on severity levels and confidence intervals.
 
@@ -129,7 +139,7 @@ In this task, you will use Azure AI Foundry's Content Safety feature to test and
 
 1. On the **Moderate text content** page, under the **Try it out** heading, select the **Azure AI services** resource you just created from the drop-down menu.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i4.png)
+   ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai-900-lab20i4.png)
 
 1. Under Run a simple test, select the **Safe Content** tile. Notice that text is displayed in the box below. 
 
@@ -148,7 +158,6 @@ In this task, you will use Azure AI Foundry's Content Safety feature to test and
 1. Click **Run test** and inspect the results in the Results panel again. 
 
 You can run tests on all the samples provided, then inspect the results.
-
 
 ### Review
 In this exercise, you have completed the following tasks:
