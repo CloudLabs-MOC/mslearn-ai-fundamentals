@@ -30,9 +30,22 @@ In this task, you will learn how to analyze images in Vision Studio to extract i
 
 You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account (2)**.
 
-   ![The image and its captions are displayed.](./media/aiservice.png)
+1. In the Azure Portal, select **+ Create a resource**.
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure AI services (1)** and Select **Azure AI services (2)**.
+
+   ![Picture1](media/3-1.png)
+
+1. Select the instance of **Azure AI services** that has the description Connect powerful AI to your apps.
+
+   ![Picture1](media/3-2.png)
+
+1. Select **Create** an Azure AI services plan.
+
+   ![Picture1](media/3-3.png)
 
 1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
    

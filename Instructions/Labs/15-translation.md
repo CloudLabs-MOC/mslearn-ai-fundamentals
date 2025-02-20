@@ -38,7 +38,7 @@ You can use the Translator service by creating either a **Translator** resource 
 
     - **Subscription**: **Use existing Azure subscription (1)**.
     - **Resource group**: Select **AI-900-Module-15-<inject key="DeploymentID" enableCopy="false" /> (2)**
-   
+
       ![Picture1](media/lab15-3.png)
 
     - **Region**: **<inject key="location" enableCopy="false"/>(1)**
