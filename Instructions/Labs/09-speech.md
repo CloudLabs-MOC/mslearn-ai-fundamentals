@@ -53,7 +53,6 @@ In this exercise, you will create an AI Speech resource, unless you already have
 
 In this task, you will explore the speech-to-text feature in Speech Studio by uploading an audio file, which the service will transcribe in real time. You will download the Speech.zip file, extract it, and use the Real-time speech to text feature to transcribe audio into text, reviewing the output for accuracy.
 
-
 1. Copy the following link in the browser window of the VM  [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) to download **Speech.zip**. 
 
 1. Open the zip file in labvm and **Extract** the zip file.
