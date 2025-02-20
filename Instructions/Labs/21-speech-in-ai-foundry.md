@@ -92,7 +92,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 ## Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
-In this task, you will learn how to explore speech-to-text capabilities using Azure AI Foundry's Speech Playground.
+In this task, we are using Azure AI Speech to transcribe audio into text in real time using the Speech Playground.
 
 Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground. 
 
