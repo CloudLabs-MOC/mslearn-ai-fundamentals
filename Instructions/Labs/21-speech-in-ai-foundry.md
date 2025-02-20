@@ -51,8 +51,8 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**.
-    - **Subcription**: **Use existing Azure subscription (2)**.
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subcription**: **Use existing Azure subscription (2)**
     - **Resource group**: Select **AI-900-Module-21 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
