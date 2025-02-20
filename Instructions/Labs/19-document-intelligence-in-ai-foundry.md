@@ -31,14 +31,14 @@ In this lab, you will perform:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![](./media/19-4.png)
+       ![Enter Your Username](./media/19-4.png)
  
 1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](./media/19-5.png)
- 
+     
 1. If prompted to stay signed in, you can click **No**. 
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
