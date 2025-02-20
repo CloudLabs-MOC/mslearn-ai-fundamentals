@@ -29,11 +29,11 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/17-18.png)
 
-1.  Enter your credentials:
+1. Enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/19-4.png)
  
 1. Next, provide your password:
  
