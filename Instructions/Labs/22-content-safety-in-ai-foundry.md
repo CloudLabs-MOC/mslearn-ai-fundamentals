@@ -30,7 +30,7 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/19-4.png)
  
 4. Next, provide your password:
  
