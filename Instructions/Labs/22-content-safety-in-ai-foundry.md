@@ -32,7 +32,7 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
  
        ![Enter Your Username](./media/19-4.png)
  
-1. Next, provide your password:
+4. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
@@ -112,10 +112,6 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
 
 1. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
 
-1. On the left-hand menu on the screen, select **AI Services (1)** and select the **Content Filter (2)** tile to try out Azure AI Vision and Document capabilities.
-    
-    ![](./media/22-7.png)
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -126,7 +122,6 @@ In this task, you will create a new Azure AI Foundry project to organize AI reso
 ## Task 2: Try out text moderation with Content Safety in Azure AI Foundry portal 
 
 In this task, you will use Azure AI Foundry's Content Safety feature to test and analyze text moderation capabilities. You will run sample tests using Azure AI Services, evaluate how the model detects harmful content, and review the results based on severity levels and confidence intervals.
-
 
 1. On the **Content Safety** page, under Filter text content, select **Moderate text content**.
 

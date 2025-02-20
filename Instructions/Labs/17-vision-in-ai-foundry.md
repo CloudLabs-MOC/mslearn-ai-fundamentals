@@ -78,20 +78,10 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
     - **Key Vault**
 
       ![](./media/17-4.png)
- 
-1. After the resources are created, you will be brought to your project's **Overview (1)** page. On the left-hand menu on the screen, select **AI Services (2)**.
- 
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/17-5.png)  
-
-    >**Note**: If a pop-up appears, please click **Close**.
-
-1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
-
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
+      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.      
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+ - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -102,6 +92,16 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 In this task, we are exploring Azure AI Vision's image captioning and dense captioning capabilities by uploading an image and observing how AI generates descriptive text for the entire image and specific objects within it.
 
 Let's use the image captioning functionality of Azure AI Vision to analyze images taken by a camera in the *Northwind Traders* store. Image captions are available through the **Caption** and **Dense Captions** features.
+
+1. In the **Overview (1)** page of your project, on the left-hand menu on the screen, select **AI Services (2)**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/17-5.png)  
+
+    >**Note**: If a pop-up appears, please click **Close**.
+
+1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
+
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
 
 1. On the **Vision + Document** page, scroll down and select **Image (1)** under View all other vision capabilities. Then select the **Image captioning (2)** tile.
 
