@@ -21,6 +21,8 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
+In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore Vision and Document capabilities.
+
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
@@ -98,6 +100,8 @@ In this lab, you will perform:
 
 ## Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
+In this task, we are using Azure AI Foundry to analyze a receipt image with prebuilt AI models, extracting key details like merchant information, transaction date, and total amount.
+
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
 1. On the *Vision + Document* page, scroll down and select **Document (1)**. Under *Prebuilt models for specific documents*, select the **Receipts (2)** tile.
@@ -116,10 +120,11 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
     ![](media/receipt-lab-result.png)
 
-In this exercise, you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
-
 ### Review
-In this exercise, you have completed the following tasks:
+
+In this Module, you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
+
+In this Module, you have completed the following tasks:
 - Created a project in the Azure AI Foundry portal
 - Analyzed a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
