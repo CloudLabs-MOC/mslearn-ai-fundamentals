@@ -147,10 +147,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![](./media/11.png)
 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
- 
-   ![Start Your Azure Journey](./media/sc900-image(3).png)
-
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
 1. At the **"More information required"** prompt, select **Next**.
@@ -183,6 +179,10 @@ Learner Support Contacts:
  
 - Email Support: labs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
+
+Click on Next from the lower right corner to move on to the next page.
+
+   ![Start Your Azure Journey](./media/sc900-image(3).png)
 
 ## Happy Learning !!
 
