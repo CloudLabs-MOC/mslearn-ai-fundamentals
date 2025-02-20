@@ -17,6 +17,8 @@ In this lab, you will perform:
 
 ## Task 1: Use Microsoft Copilot to generate travel plans
 
+In this task, we are using Microsoft Copilot to generate and refine travel plans for a trip to Paris by iterating on prompts and improving AI-generated responses.
+
 1. In a new tab, open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com`.
 
 1. Click on the **Sign in** button on the right hand side of the screen and sign-in with the Microsoft account.
@@ -34,7 +36,6 @@ In this lab, you will perform:
     ```prompt
     I'm planning a trip to Paris in September. Can you help me?
     ```
-
 1. Review the response from Copilot. 
 
    ![](./media/20-7.png)
@@ -46,7 +47,6 @@ In this lab, you will perform:
     ```prompt
     Where's a good location in Paris to stay? 
     ```
-
 1. Review the response, which should provide some places to stay in Paris.
 
    ![](./media/20-6.png)
@@ -56,7 +56,6 @@ In this lab, you will perform:
     ```prompt
     Can you give me more information about dining options near the first location?
     ``` 
-
 1. Review the response, which should provide dining options near a location from the previous response. 
 
     ![](./media/20-5.png)
@@ -76,7 +75,6 @@ In this lab, you will perform:
     ```prompt
     What three places do you recommend I stay in Paris to be within walking distance to historical attractions? Explain your reasoning.
     ```
-
 1. Review the response and reasoning for the response.  
 
    ![](./media/20-3.png)
@@ -86,7 +84,6 @@ In this lab, you will perform:
     ```prompt
     What are the top 10 sights to see in Paris? Answer with a numbered list in order of popularity.
     ```
-
 1. Review the response, which should provide a numbered list of sights to see in Paris.
 
    ![](./media/20-2.png)
