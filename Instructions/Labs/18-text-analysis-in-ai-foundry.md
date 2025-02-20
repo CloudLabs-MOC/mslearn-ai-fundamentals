@@ -23,6 +23,8 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
+In this task, we are creating an Azure AI Foundry project and configuring necessary resources to explore AI language capabilities in the Language Playground.
+
 1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
@@ -94,6 +96,8 @@ In this lab, you will perform:
 
 ## Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
 
+This task demonstrates how to use Azure AI Language Playground for Named Entity Recognition (NER). By analyzing a hotel review, Azure AI extracts key entities like locations, dates, and organizations, along with confidence scores. 
+
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
 1. In the Language playground, select **Extract information (1)**. Then select the **Extract named entities (2)** tile. 
@@ -117,6 +121,8 @@ In this lab, you will perform:
 
 ## Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
 
+This task demonstrates how to use Azure AI Language Playground for key phrase extraction. By analyzing a hotel review, Azure AI identifies important phrases that summarize the text's main points. 
+
 *Key phrases* are the most important pieces of information in the text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
 
 1. In the Language playground, select **Extract information (1)**. Then select the **Extract key phrases (2)** tile. 
@@ -138,6 +144,8 @@ In this lab, you will perform:
    ![](./media/18-5.png)
 
 ## Task 4: Summarize text with Azure AI Language in Azure AI Foundry portal
+
+In this task, we are using Azure AI Language to generate an extractive summary by identifying key sentences from a hotel review.
  
 1. Let's look at Azure AI Language's summarization capabilities. In the Language playground, select **Summarize information (1)**, then select the **Summarize text (2)** tile.
 
