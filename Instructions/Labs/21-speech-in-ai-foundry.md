@@ -19,7 +19,7 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-In this task, you will learn how to create a project in the Azure AI Foundry portal to manage and develop AI-powered solutions using Azure AI services.
+In this task, we are creating and configuring a project in Azure AI Foundry to explore AI services and speech capabilities.
 
 1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
