@@ -31,7 +31,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/19-4.png)
  
 1. Next, provide your password:
  
