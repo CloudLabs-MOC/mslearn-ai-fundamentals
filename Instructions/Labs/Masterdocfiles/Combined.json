@@ -66,7 +66,32 @@
           {
             "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/15-translation.md",
             "Order": 16
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/17-vision-in-ai-foundry.md",
+            "Order": 17
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/18-text-analysis-in-ai-foundry.md",
+            "Order": 18
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/19-document-intelligence-in-ai-foundry.md",
+            "Order": 19
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/20-generative-ai-travel-demo.md",
+            "Order": 20
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/21-speech-in-ai-foundry.md",
+            "Order": 21
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/22-content-safety-in-ai-foundry.md",
+            "Order": 22
           }
+
 
       ]
     }
