@@ -56,20 +56,20 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-17 (3)**
+    - **Resource group**: Select **AI-900-Module-03 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
     Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
     - **Connect Azure AI Search**: Leave as default **(7)**
     - Click on **Next (8)**
 
-        ![](./media/17-1.png)
+        ![](./media/3-4.png)
 
     > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
-    ![](./media/17-2.png)
+    ![](./media/3-5.png)
 
 1. Keep track of the following created resources: 
     
@@ -113,11 +113,31 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
    >**Note**: If you didn't select a valid resource location during resource creation, you may be prompted to create a new Azure AI services resource in a valid region. To continue with the lab, you must create the new resource in one of the supported regions: **East US, France Central, Korea Central, West Europe, or West US**.
 
-1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer, extract the zip file, and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Copy highlighted link by right-clicking the URL and selecting "Copy" from the context menu and paste it into the new tab [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. 
 
-    ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
+1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
 
-1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing it on your file system.
+   ![](./media/3-6.png)
+
+1. **Right-click** the **ZIP file (1)**  and select **Extract All (2)** to **unzip** its contents. 
+
+   ![](./media/3-7.png)
+
+1. Select the destination folder, ensure Show extracted files when complete is checked, and click **Extract** to unzip the files. 
+
+   ![](./media/3-9.png)
+
+1. The image-analysis folder contains **JPG files** named **store-camera-1**, **store-camera-2**, **store-camera-3**, and **store-camera-4**. 
+
+   ![](./media/3-8.png)
+
+1. Locate the file named **store-camera-1.jpg**; which contains the following image:
+
+    ![](./media/analyze-images-vision/store-camera-1.jpg)
+
+1. Go back to the Azure AI Foundry portal and upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, navigate to the **C:\Users\azureuser\Downloads\image-analysis (2)** folder, select **store-camera-1 (3)**, and click **Open (4)**.
+
+   ![](./media/3-10.png)
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
@@ -125,19 +145,27 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     >**Note:** The **Caption** feature generates a **single** human-readable English sentence that describes the image's content.
 
-1. Next, use the same image to perform **Dense captioning**. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page. On the **Vision + Document** page, select the **Image** tab, then select the **Dense captioning** tile.
+1. Next, use the same image to perform **Dense captioning**. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page.
+
+   ![](./media/3-11.png)
+
+1. On the **Vision + Document** page, select the **Image** tab, then select the **Dense captioning** tile.
 
    ![](./media/17-9.png)
 
-1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing it on your file system.
+1. Upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-1 (2)**, and click **Open (3)**.
 
-1.  The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
+   ![](./media/3-12.png)
+
+1. The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
 1. Hover over one of the captions in the **Detected** attributes list and observe what happens within the image.
 
-    ![](./media/17-10.png)
+    ![](./media/3-13.png)
 
 1. Move your mouse cursor over the other captions in the list, and notice how the bounding box shifts in the image to highlight the portion of the image used to generate the caption.
+
+   ![](./media/3-14.png)
 
 ## Task 3: Tagging images 
 
@@ -145,19 +173,27 @@ In this task, we are using Azure AI Vision's common tag extraction feature to an
 
 The next feature you will try is the *Extract Tags* functionality. Extract tags are based on thousands of recognizable objects, including living beings, scenery, and actions.
 
-1. Return to the **Vision + Document** page of Azure AI Foundry, then select the **Image** tab, and select the **Common tag extraction** tile.
+1. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page. 
+
+   ![](./media/3-16.png)
+
+1. Select the **Image (1)** tab, and select the **Common tag extraction (2)** tile.
+
+   ![](./media/3-15.png)
 
 2. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected. 
 
-   ![](./media/17-12.png)
+   ![](./media/3-22.png)
 
 3. Open the folder containing the images you downloaded and locate the file named **store-camera-2.jpg**, which looks like this:
 
     ![](./media/analyze-images-vision/store-camera-2.jpg)
 
-4. Upload the **store-camera-2.jpg** file.
+4. Upload the **store-camera-2.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-2 (2)**, and click **Open (3)**.
 
-5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+    ![](./media/3-17.png)
+
+5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as **shopping**, **selling**, and **standing**.
 
     ![](./media/17-11.png)
 
@@ -165,21 +201,29 @@ The next feature you will try is the *Extract Tags* functionality. Extract tags 
 
 In this task, you use the **Object detection** feature of Image Analysis. Object detection detects and extracts bounding boxes based on thousands of recognizable objects and living beings.
 
-1. Return to the *Vision + Document* page of Azure AI Foundry, then select the **Image** tab, and select the **Common object detection** tile.
+1. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page. 
+
+   ![](./media/3-18.png)
+
+1. Select the **Image (1)** tab, and select the **Common object detection (2)** tile.
 
    ![](./media/17-13.png)
 
 1. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected.
 
+   ![](./media/3-19.png)
+
 1. Open the folder containing the images you downloaded and locate the file named **store-camera-3.jpg**, which looks like this:
 
     ![](./media/analyze-images-vision/store-camera-3.jpg)
 
-1. Upload the **store-camera-3.jpg** file.
+1. Upload the **store-camera-3.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-3 (2)**, and click **Open (3)**.
+
+   ![](./media/3-20.png)
 
 1. In the **Detected attributes** box, observe the list of detected objects and their confidence scores.
 
-   ![](./media/17-15.png)
+   ![](./media/3-21.png)
 
 1. Hover your mouse cursor over the objects in the **Detected attributes** list to highlight the object's bounding box in the image.
 
