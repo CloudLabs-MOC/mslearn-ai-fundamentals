@@ -12,7 +12,7 @@ In this exercise, you will perform:
 - Task 2: Create an Azure AI hub and project
 - Task 3: Deploy and test a model
 
-## Estimated timing: 30 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
