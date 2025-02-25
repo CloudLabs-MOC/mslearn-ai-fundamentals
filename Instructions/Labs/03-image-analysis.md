@@ -24,7 +24,7 @@ In this lab, you will perform:
 
 In this task, we are setting up a project in Azure AI Foundry by creating and configuring an AI services environment for further experimentation.
 
-1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Copy highlighted link by right-clicking the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) and selecting "Copy" from the context menu and paste it into the new tab to navigate to Azure AI Foundry portal.
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -118,9 +118,12 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes. 
 
+
+   ![](./media/3-26.png)
+
    >**Note**: If you didn't select a valid resource location during resource creation, you may be prompted to create a new Azure AI services resource in a valid region. To continue with the lab, you must create the new resource in one of the supported regions: **East US, France Central, Korea Central, West Europe, or West US**.
 
-1. Copy highlighted link by right-clicking the URL and selecting "Copy" from the context menu and paste it into the new tab [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. 
+1. Copy highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu and paste it into the new tab to download **image-analysis.zip**. 
 
 1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
 
