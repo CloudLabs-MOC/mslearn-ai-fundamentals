@@ -7,7 +7,9 @@
 In this exercise, you will use Vision Studio to analyze images using the built-in try-it-out experiences. Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict
 
 ## Lab objectives
+
 In this lab, you will perform:
+
 - Task 1: Create an Azure AI services resource
 - Task 2: Connect your Azure AI service resource to Vision Studio
 - Task 3: Generate captions for an image
@@ -22,32 +24,53 @@ In this lab, you will perform:
 
 ## Exercise 1: Analyze images in Vision Studio
 
+In this task, you will learn how to analyze images in Vision Studio to extract insights and understand visual content effectively.
+
 ### Task 1: Create an *Azure AI services* resource
 
 You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the azure portal, click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
 
-   ![The image and its captions are displayed.](./media/lab3-1.png)
+1. In the Azure Portal, select **+ Create a resource**.
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure AI services (1)** and Select **Azure AI services (2)**.
+
+   ![Picture1](media/3-1.png)
+
+1. Select the instance of **Azure AI services** that has the description Connect powerful AI to your apps.
+
+   ![Picture1](media/3-2.png)
+
+1. Select **Create** an Azure AI services plan.
+
+   ![Picture1](media/3-3.png)
+
+1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-03-<inject key="DeploymentID" enableCopy="false" />**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **visionimageai<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)** :Select **Standard S0**.
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: *Selected*.
+
+      ![](./media/dev2na.png)    
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ### Task 2: Connect your Azure AI service resource to Vision Studio
 
+In this task, you will learn how to connect your Azure AI service resource to Vision Studio to enable advanced image analysis capabilities.
+
 Next, connect the Azure AI service resource you provisioned above to Vision Studio.
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
+1. Sign in with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up of the welcome screen please click on the **X** icon to close the popup.
 
-   ![The image and its captions are displayed.](./media/lab3-2.png)
+   ![The image and its captions are displayed.](./media/lab3-2n.png)
 
 1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
 
@@ -57,11 +80,13 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
    ![The image and its captions are displayed.](./media/lab3-11.png)
 
-    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
+    > **Note**: If your resource is not listed, you may need to **Refresh** the page.
 
 1. Close the settings page by selecting the "x" at the top right of the screen.
 
 ### Task 3: Generate captions for an image
+
+In this task, you will learn how to generate descriptive captions for an image using Vision Studio.
 
 Now you are ready to use Vision Studio to analyze images taken by a camera in the *Northwind Traders* store.
 
@@ -73,13 +98,15 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     ![The image and its captions are displayed.](./media/update1.png)
 
-1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
+1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.
 
-1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
+    ![The image and its captions are displayed.](./media/update1n.png)
+
+1. Copy this link and paste it into the browser [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer, extract the zip file, and locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
-1. Unzip the file and upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
+1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
@@ -93,15 +120,17 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
-1. upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system . Hover over one of the captions in the **Detected** attributes list and observe what happens within the image.
+1. upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing it on your file system. Hover over one of the captions in the **Detected** attributes list and observe what happens within the image.
 
     ![The image and its captions are displayed.](./media/lab3-3.png)
 
     Move your mouse cursor over the other captions in the list, and notice how the bounding box shifts in the image to highlight the portion of the image used to generate the caption.
 
-> **Note**: If you encounter any intermittent issues with Vision Studio during Task 3, proceed with the next task. You can revisit and reattempt Task 3 if necessary.
+> **Note**: If you experience any intermittent issues with Vision Studio during Task 3, move on to the next task. You can always return to Task 3 and try again if needed.
 
-## Task 4: Tagging images
+### Task 4: Tagging images
+
+In this task, you will learn how to tag images with relevant labels using Vision Studio to enhance organization and searchability.
 
 The next feature you will try is the **Extract Tags** functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
 
@@ -143,21 +172,25 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 ## Validation
 
-<validation step="940107bb-0097-41e1-9e10-e3095bed6061" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-  
+
+  <validation step="940107bb-0097-41e1-9e10-e3095bed6061" />
 
 ## Learn more
 
 To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
 
 ### Review
-In this lab, you have created an Azure AI Service resource, connected it to the vision studio, performed image analysis, tagging images and detected objects in the studio
+
+In this lab, you have completed the following tasks:
+- Created an Azure AI services resource
+- Connected your Azure AI service resource to Vision Studio
+- Generated captions for an image
+- Tagged images
+- Objected detection
 
 ## You have successfully completed this lab.

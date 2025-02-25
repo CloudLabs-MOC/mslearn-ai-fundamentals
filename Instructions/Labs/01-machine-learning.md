@@ -4,27 +4,28 @@
 
 In this exercise, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
->**Important**
->At this time, it is possible to author and deploy a model as a web service in the Azure Machine Learning Studio, but not to test it in the Studio. Therefore, all but the last section of steps till deploy the model can be completed. We will update as this changes.
+>**Important**: Currently, you can author and deploy a model as a web service in Azure Machine Learning Studio, but testing it within the Studio is not supported yet. You can complete all steps leading up to the deployment of the model. Updates will be provided once this functionality becomes available.
 
 ## Lab objectives
 
 In this lab, you will perform:
 
-- Creating an *Azure Machine Learning workspace* resource
-- Use automated machine learning to train a model
+- Task 1: Creating an *Azure Machine Learning workspace* resource
+- Task 2: Use automated machine learning to train a model
 
 ## Estimated timing: 60 minutes
 
 ## Architecture Diagram
 
- ![](media/lab01-arch.JPG)
+ ![](media/lab01-arch.jpg)
 
 ## Exercise 1: Explore Automated Machine Learning in Azure Machine Learning
 
 ### Task 1: Create an Azure Machine Learning workspace
 
-1. Select **+ Create a resource**, search for Machine Learning.
+In this task, you will create an Azure Machine Learning workspace. You will search for Machine Learning, configure the necessary settings like subscription, resource group, and workspace name, and deploy the resource. Once deployed, you will access the workspace through Azure Machine Learning Studio.
+
+1. In the Azure Portal, select **+ Create a resource** and search for **Machine Learning**.
 
     ![Picture1](media/ai900mod1img1.png)
 
@@ -32,15 +33,15 @@ In this lab, you will perform:
  
    ![Picture1](media/ai900mod1cimg1.png)
 
-3. On **Azure Machine Learning** Page Click on **Create**.
+3. On the **Azure Machine Learning** page, click **Create** to proceed.
 
    ![Picture1](media/ai900mod1cimg2.png)
   
 4. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: Use existing Azure subscription. **(1)**
-    - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false" />**
-    - **Workspace name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false" />** **(2)**
+    - **Name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
     - **Region**: Select <inject key="location" enableCopy="false" /> **(4)**
     - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
     - **Key vault**: Note the default new key vault that will be created for your workspace. **(6)**
@@ -51,18 +52,25 @@ In this lab, you will perform:
 
       ![](media/LABB1.png)
 
-6. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.
+6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+
+   ![](media/lab1-9.png)
    
 7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
+   ![](media/lab1-10.png)
+
 8. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
 
+   ![](media/lab1-1.png)
+
 9. In Azure Machine Learning studio, you should see your newly created workspace. If not, select **All workspaces** in the left-hand menu and then select the workspace you just created.
+
     ![Picture1](media/lab1-6.png)
 
-## Enable preview features
+#### Enable preview features
 
-Some features of Azure Machine Learning are in preview, and need to be explicitly enabled in your workspace.
+Some features of Azure Machine Learning are in preview and need to be explicitly enabled in your workspace.
 
 1. In Azure Machine Learning Studio, click on **manage preview features** (the loud speaker icon - &#128363;).
 
@@ -74,84 +82,129 @@ Some features of Azure Machine Learning are in preview, and need to be explicitl
 
 ### Task 2: Use automated machine learning to train a model
 
+In this task, you will learn how to use automated machine learning to train a model efficiently without writing extensive code.
+
 Automated machine learning enables you to try multiple algorithms and parameters to train multiple models, and identify the best one for your data. In this exercise, you'll use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
 
 > **Citation**: *The data used in this exercise is derived from [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) and is used in accordance with the published data [license agreement](https://www.capitalbikeshare.com/data-license-agreement)*.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), view the **Automated ML** page (under **Authoring**).
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), view the **Automated ML** page (under **Authoring**), select  **+ New Automated ML job**.
 
    ![](media/lab1-1.png)  
 
-1. Create a new Automated ML job by selecting **+ New Automated ML job** with the following settings, using **Next** as required to progress through the user interface:
+1. Create a new Automated ML job with the following settings, using **Next (5)** as required to progress through the user interface:
 
     **Basic settings**:
 
-    - **Job name**: mslearn-bike-automl
-    - **New experiment name**: mslearn-bike-rental
-    - **Description**: Automated machine learning for bike rental prediction
-    - **Tags**: *none*
+    - **Job name**: mslearn-bike-automl **(1)**
+    - **New experiment name**: mslearn-bike-rental **(2)**
+    - **Description**: Automated machine learning for bike rental prediction **(3)**
+    - **Tags**: *none* **(4)**
+
+       ![](media/1.png)
 
    **Task type & data**:
 
-    - **Select task type**: Regression
-    - **Select data**: Select **+ Create** to create a new data with the following settings:
+    - **Select task type**: Regression **(1)**
+    - **Select data**: Select **+ Create (2)** 
+
+        ![](media/lab1-25.png)
+
+    - To create new data with the following settings:
+
         - **Data type**:
-            - **Name**: bike-rentals
-            - **Description**: Historic bike rental data
-            - **Type**: Tabular and then select **Next**
+            - **Name**:  Enter **bike-rentals (1)**
+            - **Description**: Enter **Historic bike rental data (2)**
+            - **Type**: Tabular **(3)** and then select **Next (4)**
+
+               ![](media/lab1-24.png)
+
         - **Data source**:
-            - Select **From web files** and then select **Next**
+            - Select **From web files (1)** and then select **Next (2)**
+
+              ![](media/lab1-23.png)
+
         - **Web URL**:
-            - **Web URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/ml/bike-data/daily-bike-share.csv`
-            - **Skip data validation**: *do not select* and then select **Next**
+            - **Web URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/ml/bike-data/daily-bike-share.csv` **(1)**
+            - **Skip data validation**: *do not select* **(2)** and then select **Next (1)**
+
+              ![](media/lab1-22.png)
+
         - **Settings**:
-            - **File format**: Delimited
-            - **Delimiter**: Comma
-            - **Encoding**: UTF-8
-            - **Column headers**: Only first file has headers
-            - **Skip rows**: None
-            - **Dataset contains multi-line data**: *do not select* and then select **Next**
+            - **File format**: Delimited **(1)**
+            - **Delimiter**: Comma **(2)**
+            - **Encoding**: UTF-8 **(3)**
+            - **Column headers**: Only first file has headers **(4)**
+            - **Skip rows**: None **(5)**
+            - **Dataset contains multi-line data**: *do not select* **(6)** and then select **Next (7)**
+
+              ![](media/lab1-21.png)
+
         - **Schema**:
             - Include all columns other than **Path** and then select **Next**
-            - Review the automatically detected types
 
-        Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job. Select **Next**
+               ![](media/lab1-20.png)
 
+            - Review the automatically detected types.
+
+        - Select **Create**. 
+
+          ![](media/lab1-18.png)
+        
+        - After the dataset is created, select the **bike-rentals (1)** dataset to continue to submit the Automated ML job. Select **Next (2)**
+
+          ![](media/lab1-19.png)
+        
     **Task settings**:
 
     - **Task type**: Regression
     - **Data**: bike-rentals
     - **Target column**: rentals (integer)
+
+       ![](media/lab1-17.png)
+
     - **View additional configuration settings**:
-        - **Primary metric**: Normalized root mean squared error
-        - **Explain best model**: *Unselected*
-        - **Use all supported models**: <u>Un</u>selected. *You'll restrict the job to try only a few specific algorithms.*
-        - **Allowed models**: *Select only **RandomForest** and **LightGBM** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
+        - **Primary metric**: Normalized root mean squared error **(1)**
+        - **Explain best model**: *Unselected* **(2)**
+        - **Use all supported models**: <u>Un</u>selected. **(3)** *You'll restrict the job to try only a few specific algorithms.*
+        - **Allowed models (4)**: *Select only **RandomForest (5)** and **LightGBM (6)** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
+
+          ![](media/lab1-16.png)
+
     - **Limits**: *Expand this section*
-        - **Max trials**: 3
-        - **Max concurrent trials**: 3
-        - **Max nodes**: 3
-        - **Metric score threshold**: 0.085 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
-        - **Experiment Timeout**: 15
-        - **Iteration timeout**: 15
-        - **Enable early termination**: *Selected*
+        - **Max trials**: 3 **(1)**
+        - **Max concurrent trials**: 3 **(2)**
+        - **Max nodes**: 3 **(3)**
+        - **Metric score threshold**: 0.085 **(4)** (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
+        - **Experiment Timeout**: 15 **(5)**
+        - **Iteration timeout**: 15 **(6)**
+        - **Enable early termination**: *Selected* **(7)**
+
+          ![](media/lab1-15.png)
+
     - **Validation and test**:
-        - **Validation type**: Train-validation split
-        - **Percentage validation of data**: 10
-        - **Test dataset**: None and then select **Next**
+        - **Validation type**: Train-validation split **(1)**
+        - **Percentage validation of data**: 10 **(2)**
+        - **Test dataset**: None **(3)** and then select **Next (4)**
+
+          ![](media/lab1-14.png)
 
     **Compute**:
-    - **Select compute type**: Serverless
-    - **Virtual machine type**: CPU
-    - **Virtual machine tier**: Dedicated
-    - **Virtual machine size**: Standard_DS3_V2
-    - **Number of instances**: 1 and then select **Next**
+    - **Select compute type**: Serverless **(1)**
+    - **Virtual machine type**: CPU **(2)**
+    - **Virtual machine tier**: Dedicated **(3)**
+    - **Virtual machine size**: Standard_DS3_V2 **(4)**
+    - **Number of instances**: 1 **(5)** and then select **Next (6)**
+
+      ![](media/lab1-13.png)
 
 1. Select **Submit training job**. It starts automatically.
 
+   ![](media/lab1-12.png)
+
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
-  ## Review the best model
+#### Review the best model
 
 When the automated machine learning job has completed, you can review the best model it trained.
 
@@ -166,9 +219,11 @@ When the automated machine learning job has completed, you can review the best m
 
 1. Select the **Metrics** tab and select the **residuals** and **predicted_true** charts if they are not already selected. 
 
-    Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
+    >**Note:** Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
 
 ### Task 3: Deploy the model
+
+In this task, you will learn how to deploy the trained model as a web service for real-time predictions.
 
 1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Web service** option to deploy the model with the following settings:
     - **Name**: predict-rentals  **(1)**
@@ -181,15 +236,22 @@ When the automated machine learning job has completed, you can review the best m
 
 1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as *Running*.
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
-   
+
+## Validation
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+  <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
+
 ### Review
-In this lab, you have created an Azure Machine Learning workspace resource, and use automated machine learning to train a model and deploy it
+In this lab, you have completed the following tasks:
+- Created an *Azure Machine Learning workspace* resource
+- Utilized automated machine learning to train a model
+
+Let me know if you'd like any changes!
   
 ## You have successfully completed this lab.

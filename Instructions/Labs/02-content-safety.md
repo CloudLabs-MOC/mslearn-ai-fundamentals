@@ -5,7 +5,9 @@
 In this exercise, you will set up a single-service resource in Azure AI Content Safety Studio to evaluate and moderate text and image content, providing severity scores for various categories, ranging from safe to high.
 
 ## Lab objectives
+
 In this lab, you will perform:
+
 - Task 1: Explore the Content Safety Studio
 - Task 2: Associate a resource with the studio 
 - Task 3: Try out text moderation in the Content Safety Studio
@@ -17,11 +19,13 @@ In this lab, you will perform:
 
 ![](media/Module1.1.png)
 
-> **Note:** The goal of this exercise is to get a general sense of how Azure AI services are provisioned and used. Content Safety is used as an example, but you are not expected to gain a comprehensive knowledge of content safety in this exercise!
+> **Note:** The goal of this exercise is to provide a general understanding of how Azure AI services are provisioned and used. While Content Safety is used as an example, you are not expected to gain in-depth knowledge of content safety during this exercise!
 
 ## Exercise 1:  Explore the Content Safety Studio 
 
 ### Task 1: Explore the Content Safety Studio 
+
+In this task, you will learn how to explore the Content Safety Studio to analyze and manage content moderation policies effectively.
 
 1. Open the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). If you are not logged in, you will need to sign in. Select **Sign In** on the top right of the screen.  
 
@@ -49,6 +53,8 @@ In this lab, you will perform:
 
 ### Task 2: Associate a resource with the studio 
 
+In this task, you will learn how to associate a resource with the Content Safety Studio to enable seamless content moderation.
+
 Before using the studio, you need to associate an Azure AI services resource with the studio. Depending on the studio, you may find you need a specific single-service resource, or can use a general multi-service resource. In the case of the Content Safety Studio, you can use the service by creating a single-service *Content Safety* resource or *Azure AI services* general multi-service resource. In the steps below, we will create a single-service Content Safety resource. 
 
 1. On the top right of the screen, click on the **Settings** icon. 
@@ -59,7 +65,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
     ![](media/27.png)
 
-   > **Note**: The **Directory** tab allows users to select different directories from which to create resources. You do not need to change its settings unless you wish to use a different directory. 
+   > **Note**: The **Directory** tab lets users choose from different directories to create resources. You only need to modify its settings if you want to use a different directory. 
 
 1. On the Create Content Safety page in the [Azure Portal](https://portal.azure.com?auzre-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
     - **Subscription (1)**: Use the existing Azure subscription.
@@ -83,9 +89,11 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
    ![](media/30.png)
 
-   >**Note:** The provision of content safety resources will take approximately 30-40 minutes. During this time, please proceed with Module 3. After completing Module 3, return to Module 2 and continue the lab from Task 3.
+   >**Note:** Provisioning the content safety resources will take around 30-40 minutes. During this time, please proceed with Module 3. Once you’ve finished Module 3, return to Module 2 and continue the lab from Task 3.
 
 ### Task 3: Try out text moderation in the Content Safety Studio
+
+In this task, you will learn how to try out text moderation in the Content Safety Studio to detect and manage harmful or inappropriate content.
 
 1. Navigate back to the Content Safety Studio home page.
 
@@ -115,9 +123,11 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
    ![](media/runtest(2).png)
 
-You can run tests on all the samples provided, then inspect the results.
+You can run tests on all the samples provided, and then inspect the results.
 
 ### Task 4: Check out the keys and endpoint
+
+In this task, you will learn how to check out the keys and endpoints required to authenticate and integrate with the Content Safety Studio.
 
 These capabilities you tested can be programmed into all sorts of applications. The keys and endpoint used for application development can be found both in the Content Safety Studio and the Azure Portal. 
 
@@ -125,27 +135,26 @@ These capabilities you tested can be programmed into all sorts of applications. 
 
    ![](media/32.png)
 
-1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). Search for Content Safety on the top search bar. Find your resource and click on it. On the left-hand menu, look under *Resource Management* for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoint and keys for your resource. 
+1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). Search for Content Safety on the top search bar. Find your resource and click on it. On the left-hand menu, look under *Resource Management* for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
 
      ![](media/31.png)
 
 ## Validation
 
-<validation step="5371378e-8511-44ed-9037-3a000338132f" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="5371378e-8511-44ed-9037-3a000338132f" />
 
 ## Learn more
 
 This simple search index only some of the capabilities of the Content Safety Studio. To learn more about what you can do with this service, see the [ Explore the Content Safety Studio ](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview).
 
 ### Review
-In this lab, you have completed:
+In this lab, you have completed the following tasks:
 - Explored Content Safety Studio
 - Associated a resource with safety studio
 - Tried out text moderation in the Content Safety Studio

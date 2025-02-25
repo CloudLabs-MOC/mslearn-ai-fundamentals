@@ -3,7 +3,7 @@
 
 ## Lab overview
  
-In this exercise, you'll take a look at a prebuilt model in Document Intelligence that is trained to recognize data for receipts. Azure AI Document Intelligence is able to analyze and extract information from forms and documents, then identify field names and data. 
+In this exercise, you'll take a look at a prebuilt model in Document Intelligence that is trained to recognize data for receipts. Azure AI Document Intelligence is able to analyze and extract information from forms and documents, and then identify field names and data. 
 
 How does Document Intelligence build upon optical character recognition (OCR)? While OCR can read printed or handwritten documents, OCR extracts text in an unstructured format which is difficult to store in a database or analyze. Document intelligence makes sense of the unstructured data by capturing the structure of the text, such as key/value pairs and information in tables. 
 
@@ -14,8 +14,8 @@ How does Document Intelligence build upon optical character recognition (OCR)? W
 
 In this lab, you will perform:
 
-- Creating Document Intelligence resource
-- Analyzing a receipt in Document Intelligence Studio
+- Task 1: Creating Document Intelligence resource
+- Task 2: Analyzing a receipt in Document Intelligence Studio
 
 ## Estimated timing: 30 minutes
 
@@ -27,13 +27,15 @@ In this lab, you will perform:
 
 ### Task 1: Create Document Intelligence resource
 
+In this task, you will learn how to create a **Document Intelligence** resource in Azure to extract, analyze, and process data from documents using AI-powered tools.
+
 You can use Azure AI Document Intelligence by creating either a *Document Intelligence* resource or an *Azure AI services* resource. In this exercise, you will create *Document Intelligence* resource, if you don’t already have one.
 
-1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your following credentials:
+1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with the following credentials:
 
-  - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-  - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. Select **Settings (1)** and select the **Resource (2)** tab. Select **Create a new resource (3)**.
 
@@ -55,13 +57,15 @@ You can use Azure AI Document Intelligence by creating either a *Document Intell
 
     >**Note:** If your resource is not yet displayed, you may need to **Refresh** the page.
 
-Keep Document Intelligence Studio open.
+    >**Note:** Keep Document Intelligence Studio open.
 
 ### Task 2: Analyze a receipt in Document Intelligence Studio
 
+In this task, you will learn how to analyze a receipt in **Document Intelligence Studio** to extract key information such as items, prices, and totals using AI-based document processing.
+
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
-1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download and and save the sample document to your computer. Open the folder
+1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download and save the sample document to your computer. Open the folder
 
    ![](media/lab10-05.png).
 
@@ -78,16 +82,17 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
     ![](media/lab10-02.png)
 
-1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, the address, phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
+1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, address, phone number, and transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
    ![](media/lab10-01.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="412ea6d3-9f2b-462b-819a-d20e601a5b89" />
 
 ## Learn more
 
@@ -95,6 +100,8 @@ This exercise demonstrated only some of the capabilities of the AI Document Inte
 
 ## Review
 
-In this exercise you have used the Document Intelligence Studio to create a Document Intelligence resource. You then used the service to analyze a receipt. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close Document Intelligence Studio, why not try some of the sample receipts, including those in different languages?
+In this lab, you have completed the following tasks:
+- Created Document Intelligence resource
+- Analyzed a receipt in Document Intelligence Studio
 
 ## You have successfully completed this lab.

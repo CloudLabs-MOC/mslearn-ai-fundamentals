@@ -6,12 +6,13 @@ Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked 
 
 In this lab, you will:
 
-- Create Azure resources
-- Extract data from a data source
-- Enrich data with AI skills
-- Use Azure's indexer in the Azure portal
-- Query your search index
-- Review results saved to a Knowledge Store
+- Task 1: Create an Azure AI Search resource
+- Task 2: Create an AI Services resource
+- Task 3: Create a storage account
+- Task 4: Upload Documents to Azure Storage
+- Task 5: Index the documents
+- Task 6: Query the index
+- Task 7: Review the knowledge store
 
 ## Estimated timing: 2 hours
 
@@ -33,6 +34,8 @@ The solution you'll create for Fourth Coffee requires the following resources in
 - A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
 
 ### Task 1: Create an Azure AI Search resource
+
+In this task, you will learn how to create an **Azure AI Search** resource to enable powerful search capabilities and AI-driven content exploration for your applications.
 
 1. On the **Azure Portal** homepage, select **+ Create a resource**.
 
@@ -69,39 +72,30 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 ### Task 2: Create an AI Services resource
 
+In this task, you will learn how to create an **AI Services** resource in Azure to access a wide range of AI capabilities, such as vision, speech, language, and decision-making, for your applications.
+
 You'll need to provision an **Azure AI services** resource that's in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
-1. Return to the home page of the Azure portal. Select **+ Create a resource**.
+1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
 
-     ![Picture1](media/lab11-01.png)
+    ![The image and its captions are displayed.](./media/aiservice.png)
 
-1. In the Marketplace page search for **Azure AI services** and select **Azure AI services**.
- 
-    ![Picture1](media/lab11-07.png)
-
-1. On the **Azure AI services** Page, click on **Create**.
-
-    ![Picture1](media/lab11-08.png)
-    
-1. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
-
-    - **Subscription (1)**: Select your **existing azure subscription**.
-    - **Resource group (2)**: Select **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
-    - **Region (3)**: Select **<inject key="location" enableCopy="false"/>** 
-    - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false" />**
-    - **Pricing tier (5)**: Standard S0
-    - **By checking this box I acknowledge that I have read and understood all the terms below (6)**: Selected
-   - Select **Review + create (7)**.
-
-     ![Picture1](media/lab11-09.png) 
+1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
    
-1. After you see the response **Validation Passed**, select **Create**.
+    - **Subscription (1)**: Use the existing Azure subscription.
+    - **Resource group (2)**: **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
+    - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
+    - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false"/>**
+    - **Pricing tier (5)**:Select **Standard S0**.
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-    ![Picture1](media/lab11-10.png) 
+      ![The image and its captions are displayed.](./media/lab11-09.png)
 
-1. Wait for deployment to complete, then view the deployment details.
+1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
 ### Task 3: Create a storage account
+
+In this task, you will create a Storage account in Azure, configure its settings, and enable Blob anonymous access. This will allow you to store and manage data securely within your Azure environment.
 
 1. Return to the home page of the Azure portal. Select **+ Create a resource**.
 
@@ -139,7 +133,9 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
     ![Picture1](media/storageaccount(1).png)
 
-## Exercise 1: Upload Documents to Azure Storage
+## Task 4: Upload Documents to Azure Storage
+
+In this task, you will upload documents to an Azure Storage container. First, you will create a container called coffee-reviews, configure its access settings, and then upload a set of coffee-review documents into it. This process helps familiarize you with Azure Storage containers and blob uploads, which are crucial for storing and managing data in the cloud.
 
 1. In the left-hand menu pane, select **Containers (1)**.
 
@@ -154,7 +150,7 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
       ![Picture1](media/storage.png)
 
-   > **Note** : If you're unable to adjust the Anonymous access level, please refresh the page and attempt the change again.
+   > **Note**: If you're unable to adjust the Anonymous access level, please refresh the page and attempt the change again.
 
 1. In the lab-VM,  open a  new browser tab, download the [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews) from `https://aka.ms/mslearn-coffee-reviews`, and extract the files to the *reviews* folder. 
 
@@ -164,7 +160,9 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
 1. After the upload is complete, you can close the **Upload blob** pane. Your documents are now in your *coffee-reviews* storage container.
 
-## Exercise 2: Index the documents
+## Task 5: Index the documents
+
+In this task, you will learn how to index the documents in your **AI Search** resource to make them searchable and enable efficient querying and retrieval of relevant content.
 
 After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an *Import data wizard*. With this wizard, you can automatically create an index and indexer for supported data sources. You'll use the wizard to create an index and import your search documents from storage into the Azure AI Search index.
 
@@ -225,19 +223,6 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
         ![Picture1](media/lab11-26.png)
 
-    > **Note**
-    > A warning asking for a **Storage Account Connection String** appears.
-    
-7. Under **Save enrichments to a knowledge store (1)**, If a warning asking for a **Storage Account Connection String (2)** appears.
-    
-   ![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](media/lab11-27.png)
-    
-8. Select **Choose an existing connection**. Choose the storage account **aistorage<inject key="DeploymentID" enableCopy="false" /> (1)** you created earlier. Click on **+ Container (2)** to create a new container called **knowledge-store (3)** with the Anonymous access level set to **Private (4)**, and select **Create (5)**.
-
-9. Select the **knowledge-store (1)** container, and then click **Select (2)** at the bottom of the screen.
-
-    ![Picture1](media/lab11-29.png)
-
 10. Under **Save enrichments to a knowledge store**, Select:
     - Image projections
     - Documents
@@ -248,6 +233,18 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     - Image references
 
     ![Picture1](media/lab11-30.png)
+
+    > **Note**: A warning appears requesting a **Storage Account Connection String**.
+    
+7. Under **Save enrichments to a knowledge store (1)**, If a warning asking for a **Storage Account Connection String (2)** appears.
+    
+   ![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](media/lab11-27.png)
+    
+8. Select **Choose an existing connection**. Choose the storage account **aistorage<inject key="DeploymentID" enableCopy="false" /> (1)** you created earlier. Click on **+ Container (2)** to create a new container called **knowledge-store (3)** with the Anonymous access level set to **Private (4)**, and select **Create (5)**.
+
+9. Select the **knowledge-store (1)** container, and then click **Select (2)** at the bottom of the screen.
+
+    ![Picture1](media/lab11-29.png)
 
 11. Select **Azure blob projections: Document**. A setting for *Container name* with the *knowledge-store* container auto-populated displays. Don't change the container name.
 
@@ -286,7 +283,9 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
     ![Screenshot that shows the coffee-indexer Indexer successfully created.](media/lab11-35.png)
 
-## Exercise 3: Query the index
+## Task 6: Query the index
+
+In this task, you will learn how to query the index in your **AI Search** resource to retrieve relevant documents and insights based on specific search criteria.
 
 Use the Search Explorer to write and test queries. Search Explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search Explorer to write queries and review results in JSON.
 
@@ -328,12 +327,13 @@ Use the Search Explorer to write and test queries. Search Explorer is a tool bui
     ```
 1. Select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see `1` in the `@odata.count` field.
 
-   > **Note**
-   > See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+   > **Note**:Notice how the results are sorted by `@search.score`. This score is assigned by the search engine to indicate how closely the results match the given query.
 
 1. One of the problems we might want to solve is why there might be certain reviews. Let's take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
-## Exercise 4: Review the knowledge store
+## Task 7: Review the knowledge store
+
+In this task, you will learn how to review the knowledge store in your **AI Search** resource to analyze and manage the extracted insights, metadata, and search results for improved data understanding.
 
 Let's see the power of the knowledge store in action. When you ran the *Import data wizard*, you also created a knowledge store. Inside the knowledge store, you'll find the enriched data extracted by AI skills persists in the form of projections and tables.
 
@@ -373,7 +373,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
 
-1. Select **Storage browser** on the left-hand panel, and select **Tables**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases*.
+1. Select **Storage browser (1)** on the left-hand panel, and select **Tables (2)**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases (3)*.
 
      ![Screenshot of the saved image.](media/lab11-49.png)
 
@@ -381,14 +381,13 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 ## Validation
 
-   <validation step="d3283833-c8a5-49e9-8c3b-7db670de2137" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- Hit the Validate button for the corresponding task. you will receive a success message.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="d3283833-c8a5-49e9-8c3b-7db670de2137" />
 
 ## Learn more
 
@@ -396,13 +395,13 @@ This simple search index only some of the capabilities of the Azure AI Search se
 
 ## Review
 
-In this exercise you:
-
-- Created Azure resources
-- Extracted data from a data source
-- Enriched data with AI skills
-- Used Azure's indexer in the Azure portal
-- Queried your search index
-- Reviewed results saved to a Knowledge Store
+In this exercise, you have completed the following tasks: 
+- Created an *Azure AI Search* resource  
+- Created an *AI Services* resource  
+- Created a *storage account*  
+- Uploaded documents to *Azure Storage*  
+- Indexed the documents  
+- Queried the index  
+- Reviewed the *knowledge store*
 
 ## You have successfully completed this lab.
