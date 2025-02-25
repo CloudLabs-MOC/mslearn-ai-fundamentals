@@ -99,13 +99,15 @@ This task demonstrates how to use Azure AI Language Playground for Named Entity 
 
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
-1. Navigate to **Playgrounds (1)** from the left pane, select the **Language playground (2)** tile to try out some Azure AI Language capabilities.
+1. Navigate to **Playgrounds (1)** from the left pane, Under **Language playground** tile select **Try the Language playground (2)**.
 
     ![](./media/18-1.png)
 
 1. In the Language playground, select **Extract information (1)**. Then select the **Extract named entities (2)** tile. 
 
-1. Under **Sample (3)**, copy and paste the following review:
+   ![](./media/3-25.png)
+
+1. Under **Sample**, copy and paste the following review:
 
     ```
     Tired hotel with poor service
@@ -114,11 +116,13 @@ This task demonstrates how to use Azure AI Language Playground for Named Entity 
     This is an old hotel (has been around since 1950's) and the room furnishings are average - becoming a bit old now and require changing. The internet didn't work and had to come to one of their office rooms to check in for my flight home. The website says it's close to the British Museum, but it's too far to walk.
     ```
 
-1. Select **Run (4)**. Review the output.
+   ![](./media/6-1.png)
+   
+1. Click **Run** to process the text.
 
-   ![](./media/18-2.png)
+   ![](./media/6-2.png)
 
-2. Notice in the **Details** section how the extracted entities come with additional information such as type and confidence scores. The confidence score represents the likelihood that the type identified actually belongs to that category.
+2. Review the output and observe the **Details** section, where the extracted entities are accompanied by additional information such as type and confidence scores. The confidence score indicates the probability that the identified type correctly belongs to the specified category.
 
    ![](./media/18-3.png)
 
@@ -130,7 +134,9 @@ This task demonstrates how to use Azure AI Language Playground for key phrase ex
 
 1. In the Language playground, select **Extract information (1)**. Then select the **Extract key phrases (2)** tile. 
 
-1. Under **Sample (3)**, copy and paste the following review:
+   ![](./media/6-3.png)
+
+1. Under **Sample**, copy and paste the following review:
 
     ```
     Good Hotel and staff
@@ -138,13 +144,16 @@ This task demonstrates how to use Azure AI Language Playground for key phrase ex
     3/2/2018
     Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
     ```
-1. Select **Run (4)**. Review the output.
 
-    ![](./media/18-4.png)
+   ![](./media/6-4.png)
 
-1. Notice the different phrases extracted in the **Details** section. These phrases should contribute most to the text's meaning.
+1. Click **Run** to process the text.
 
-   ![](./media/18-5.png)
+   ![](./media/6-5.png)
+
+1. Review the output and observe the different phrases extracted in the **Details** section. These phrases should represent key elements that contribute the most to the overall meaning of the text.
+
+   ![](./media/6-6.png)
 
 ## Task 4: Summarize text with Azure AI Language in Azure AI Foundry portal
 
@@ -152,7 +161,9 @@ In this task, we are using Azure AI Language to generate an extractive summary b
  
 1. Let's look at Azure AI Language's summarization capabilities. In the Language playground, select **Summarize information (1)**, then select the **Summarize text (2)** tile.
 
-1. Under **Sample (3)**, copy and paste the following review:
+   ![](./media/6-7.png)
+
+1. Under **Sample**, copy and paste the following review:
     
     ```
     Very noisy and rooms are tiny
@@ -160,13 +171,16 @@ In this task, we are using Azure AI Language to generate an extractive summary b
     9/5/2018
     Hotel is located on Lombard street which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city the next day. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late adults on a budget
     ```
-1. Select **Run (4)**. Review the output.
 
-   ![](./media/18-7.png)
+   ![](./media/6-8.png)
 
-1. Notice the *Extractive summary* in **Details** provides rank scores for the most salient sentences.  
+1. Click **Run** to process the text.
 
-   ![](./media/18-6.png)
+   ![](./media/6-9.png)
+
+1. Review the output and observe that the *Extractive summary* in the **Details** section provides rank scores for the most significant sentences, highlighting their relevance to the overall text.  
+
+   ![](./media/6-10.png)
 
 ### Review
 In this exercise, you have completed the following tasks:

@@ -30,7 +30,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
    ![](./media/17-18.png)
 
-1. Enter your credentials:
+1. If prompt, Enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
@@ -41,8 +41,10 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](./media/19-5.png)
- 
-1. If prompted to stay signed in, you can click **No**. 
+
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+
+   ![](./media/3-23.png)
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
@@ -80,7 +82,12 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
     - **Key Vault**
 
       ![](./media/17-4.png)
+
       >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.      
+
+1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
+
+    ![](./media/3-24.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
