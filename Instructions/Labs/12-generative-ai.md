@@ -40,6 +40,10 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/9-8.png)
 
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+
+   ![](./media/3-23.png)
+
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
     ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
@@ -76,7 +80,6 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - **Key Vault**
 
       ![](./media/17-4.png)
-
 
       >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
 
