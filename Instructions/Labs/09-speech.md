@@ -61,20 +61,20 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subcription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-21 (3)**
+    - **Resource group**: Select **AI-900-Module-09 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
-    - **Connect Azure AI Search**: Leave as default **(6)**
-    - Click on **Next (7)**
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
+    - **Connect Azure AI Search**: Leave as default **(7)**
+    - Click on **Next (8)**
 
-        ![](./media/pro1.png)
+        ![](./media/9-19.png)
 
     > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
-    ![](./media/pro2.png)
+    ![](./media/9-9.png)
 
 1. Keep track of the following created resources: 
     
