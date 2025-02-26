@@ -43,7 +43,9 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
  
      ![Enter Your Password](./media/19-5.png)
      
-1. If prompted to stay signed in, you can click **No**. 
+1. If prompted to stay signed in, you can click **No**.
+
+   ![](./media/9-8.png)
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
@@ -81,7 +83,13 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - **Key Vault**
 
       ![](./media/17-4.png)
+
       >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+
+1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
+
+    ![](./media/3-24.png)
+
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -113,11 +121,21 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 1. In the drop-down list under *Try it out*, note that your Azure AI services resource is selected. Leave it as-is.
 
-1. On your computer, use [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to open a sample image of a receipt. Save it in your Downloads folder or to your Desktop. 
- 
-1. In Azure AI Foundry, on the *Receipts* page, select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
+   ![](media/10-4.png)
 
-1. On the right, select **Run analysis**.
+1. Open a new tab and go to [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to view a sample image of a receipt.
+
+1. Right-click on the image and choose **"Save image as"** to save it in your Downloads folder or to your Desktop.
+
+   ![](media/10-2.png)
+ 
+1. Go back to the Azure AI Foundry portal and upload the **receipt.jpg** image by clicking **Browse files (1)**. Then, navigate to the **C:\Users\azureuser\Downloads (2)** folder, select **receipt (3)**, and click **Open (4)**.
+
+   ![](media/10-3.png)
+
+1. Click **Run analysis** to process the document.
+
+   ![](media/10-1.png)
 
 1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, address, phone number, and transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
