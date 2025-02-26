@@ -47,6 +47,8 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
  
 1. If prompted to stay signed in, you can click **No**.
 
+   ![](./media/9-8.png)
+
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
     ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)

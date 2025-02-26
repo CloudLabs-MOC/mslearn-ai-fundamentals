@@ -23,7 +23,7 @@ In this lab, you will perform:
 
 In this task, we are creating and configuring a project in Azure AI Foundry to explore AI services and speech capabilities.
 
-1. Open a new tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Copy highlighted link by right-clicking the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) and selecting "Copy" from the context menu and paste it into the new tab to navigate to Azure AI Foundry portal.
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -42,6 +42,12 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
      ![Enter Your Password](./media/19-5.png)
  
 1. If prompted to stay signed in, you can click **No**.
+
+   ![](./media/9-8.png)
+
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+
+   ![](./media/3-23.png)
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
@@ -80,6 +86,10 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
       ![](./media/17-4.png)
 
+1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
+
+    ![](./media/3-24.png)
+
 1. On the **AI Services (1)** page, select the **Speech (2)** tile to try out Azure AI Speech capabilities.
 
    ![](./media/up1.png)
@@ -100,17 +110,35 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
 1. On the *Speech* page, scroll down and select **Real-time speech to text** under *Try out Speech capabilities*. You will be taken to the *Speech Playground*. 
 
-1. Select [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) to download **speech.zip**. Open the folder. 
+   ![](./media/9-6.png)
 
-1. Under *Upload files*, select **Browse files** and navigate to the folder where you saved the file. Select **WhatAICanDo.m4a** and then **Open**.
+1. Copy highlighted link by right-clicking the [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) and selecting "Copy" from the context menu and paste it into the new tab to download **Speech.zip**. 
 
-    ![Browse files](media/up2.png)
+1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
+
+   ![](./media/9-2.png)
+
+1. **Right-click** the **ZIP file (1)**  and select **Extract All (2)** to **unzip** its contents. 
+
+   ![](./media/9-3.png)
+
+1. Select the destination folder, ensure Show extracted files when complete is checked, and click **Extract** to unzip the files. 
+
+   ![](./media/9-4.png)
+
+1. The Speech folder contains **m4a** file named **WhatAICanDo**. 
+
+   ![](./media/9-5.png)
+
+1. Go back to the Azure AI Foundry portal and upload the **WhatAICanDo.m4a** image by clicking **Browse files (1)**. Then, navigate to the **C:\Users\azureuser\Downloads\Speech (2)** folder, select **WhatAICanDo (3)**, and click **Open (4)**.
+
+   ![](./media/9-7.png)
 
 1. The Speech service transcribes and displays the text in real time. If you have audio on your computer, you can listen to the recording as the text is being transcribed.
 
 1. Review the output, which should have successfully recognized and transcribed the audio into text.
 
-   ![Browse files](media/up3.png)
+   ![Browse files](media/9-1.png)
 
 ### Review
 

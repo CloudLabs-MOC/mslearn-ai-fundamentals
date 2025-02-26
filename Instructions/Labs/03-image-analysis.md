@@ -42,6 +42,10 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
  
      ![Enter Your Password](./media/19-5.png)
 
+1. If prompted to stay signed in, you can click **No**.
+
+   ![](./media/9-8.png)
+   
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
    ![](./media/3-23.png)
@@ -52,7 +56,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
 
-    ![](./media/17-3.png)
+   ![](./media/17-3.png)
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
