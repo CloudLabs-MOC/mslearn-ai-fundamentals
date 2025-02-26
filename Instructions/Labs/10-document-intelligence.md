@@ -33,13 +33,11 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/17-18.png)
 
-1. Enter your credentials:
+1. If prompted to sign in, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![Enter Your Username](./media/19-4.png)
- 
-1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
@@ -61,7 +59,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-19 (3)**
+    - **Resource group**: Select **AI-900-Module-10 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
     Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**

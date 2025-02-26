@@ -32,13 +32,11 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
    ![](./media/17-18.png)
 
-1. If prompt, Enter your credentials:
+1. If prompted to sign in, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![Enter Your Username](./media/19-4.png)
- 
-1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  

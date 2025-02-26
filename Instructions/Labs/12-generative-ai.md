@@ -26,19 +26,19 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/17-18.png)
 
-1. Enter your credentials:
+1. If prompted to sign in, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![Enter Your Username](./media/19-4.png)
  
-1. Next, provide your password:
- 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](./media/19-5.png)
      
-1. If prompted to stay signed in, you can click **No**. 
+1. If prompted to stay signed in, you can click **No**.
+
+   ![](./media/9-8.png)
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
@@ -76,7 +76,13 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - **Key Vault**
 
       ![](./media/17-4.png)
+
+
       >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+
+1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
+
+    ![](./media/3-24.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -151,3 +157,16 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 1. Review the response, which should provide a numbered list of sights to see in Paris.
 
 1. When you are done, you can close the browser window.
+
+
+### Review
+
+In this Module, you have completed the following tasks:
+- Created a project in the Azure AI Foundry portal
+- Explored generative AI in Azure AI Foundry's chat playground
+
+## Learn more
+
+This lab demonstrated only some of the capabilities of the AI Generative AI service. To learn more about what you can do with this service, see the [Generative AI](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/evaluate-generative-ai-app) page.
+
+## You have successfully completed this lab.
