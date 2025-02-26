@@ -18,7 +18,9 @@ In this lab, you will perform:
 
 In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore Vision and Document capabilities.
 
-1. Open a new tab, and navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
+
+   ![](./media/3-27.png)
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 

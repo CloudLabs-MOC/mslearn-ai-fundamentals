@@ -24,7 +24,9 @@ In this lab, you will perform:
 
 In this task, we are setting up a project in Azure AI Foundry by creating and configuring an AI services environment for further experimentation.
 
-1. Copy highlighted link by right-clicking the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) and selecting "Copy" from the context menu and paste it into the new tab to navigate to Azure AI Foundry portal.
+1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
+
+   ![](./media/3-27.png)
 
 1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
@@ -45,7 +47,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 1. If prompted to stay signed in, you can click **No**.
 
    ![](./media/9-8.png)
-   
+
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
    ![](./media/3-23.png)
