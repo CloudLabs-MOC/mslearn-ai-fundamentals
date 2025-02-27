@@ -93,7 +93,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="" />
+   <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
 
 ## Task 2: Explore generative AI in Azure AI Foundry's chat playground
 
