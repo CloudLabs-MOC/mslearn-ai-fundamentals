@@ -138,7 +138,9 @@ In this task, you will learn how to interact with the Chat playground in Azure A
 
    ![](./media/12-8.png)
 
-   >**Note:** After clicking **Apply changes**, you may see a confirmation message or a loading indicator while the changes are applied. Once completed, the deployment settings will be updated, allowing you to proceed with generating prompts.
+1. Click **Continue** to update the system message and start a new chat session.
+
+   ![](./media/12-21.png)
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
@@ -219,7 +221,6 @@ In this task, you will learn how to interact with the Chat playground in Azure A
    ![](./media/12-19.png)
 
 1. When you are done, you can close the browser window.
-
 
 ### Review
 

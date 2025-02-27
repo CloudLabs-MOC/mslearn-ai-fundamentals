@@ -20,7 +20,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-![Creating a Language Service resource with custom question answering enabled.](media/arch7.PNG)
+![](media/arch7.PNG)
 
 ## Exercise 1: Use Question Answering model with Language Studio
 
