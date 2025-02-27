@@ -12,6 +12,7 @@ In this lab, you will perform:
 
 - Task 1: Creating an *Azure Machine Learning workspace* resource
 - Task 2: Use automated machine learning to train a model
+- Task 3: Deploy the model
 
 ## Estimated timing: 60 minutes
 
