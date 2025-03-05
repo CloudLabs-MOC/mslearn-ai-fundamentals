@@ -19,6 +19,73 @@ In this lab, you will perform:
 
  ![](media/arch1diag.PNG)
 
+### Prerequisites: Setting up an Outlook account
+
+1. On your virtual machine, open the Edge browser and navigate to the [Outlook sign-up page](https://outlook.live.com/).
+
+1. Click **"Create free account"**: On the Outlook sign-up page, locate and click the **"Create free account"** or **"Sign up"** button to start the registration process.
+
+    ![](./media/24.png)
+
+1. On the create account page enter details as shown in the below picture:
+
+    - **New email:** odl_user_<inject key="DeploymentID" enableCopy="false" />
+
+      ![](./media/23.png)
+
+1. On the create a password page enter details as shown in the below picture:
+
+    - **Password**: <inject key="AzureAdUserPassword"></inject>
+
+      ![](./media/22.png)
+
+1. Enter your **first (1)** and **last (2)** name in the provided fields and click on **Next (3)**.
+
+   - **First Name** : ODL
+   - **Last Name** : USER
+
+       ![](./media/21.png)
+
+1. Select your **country** and **date of birth** then click on **Next**.
+
+      ![](./media/20.png)
+
+1. On **Please solve the puzzle so we know you're not a robot** page click on **Next**.
+
+      ![](./media/19.png)
+
+1. Use the arrows and rotate the animal and click on Submit.
+
+     ![](./media/17.png)
+
+1. If prompted to stay signed in, you can click **No**.
+
+    ![](./media/staysigned2.png)
+      
+1. If prompted **Your Microsoft account brings everything together**, then click on **Ok**.
+ 
+    ![](./media/upg.png)
+
+1. Select the **profile (1)** icon in the Edge toolbar and then select **Sign in to sync data (2)**.
+
+   ![](./media/14.png)
+
+1. On the Create Account page enter details as shown in the picture below:
+
+    - **Username:** odl_user_<inject key="DeploymentID" enableCopy="false" />@outlook.com
+
+        ![](./media/13.png)
+
+1. On the create a password page enter details as shown in the picture below:
+
+    - **Password**: <inject key="AzureAdUserPassword"></inject>
+
+       ![](./media/12.png)
+
+1. On **Use this account everywhere on your device** click on **Next**.
+
+   ![](./media/11.png)
+
 ### Task 1: Use Copilot to explore a document and research an idea
 
 In this task, you will learn how to use **Copilot** to explore a document and research an idea, leveraging AI to gain insights and find relevant information more efficiently.
