@@ -21,7 +21,7 @@ In this lab, you will perform:
 
 ### Prerequisites: Setting up an Outlook account
 
-1. On your virtual machine, open the Edge browser and navigate to the [Outlook sign-up page](https://outlook.live.com/).
+1. On your virtual machine, open a new tab in an Edge browser and navigate to the [Outlook sign-up page](https://outlook.live.com/).
 
 1. Click **"Create free account"**: On the Outlook sign-up page, locate and click the **"Create free account"** or **"Sign up"** button to start the registration process.
 
