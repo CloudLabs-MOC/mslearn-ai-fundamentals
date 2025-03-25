@@ -12,6 +12,7 @@ In this lab, you will perform:
 
 - Task 1: Creating an *Azure Machine Learning workspace* resource
 - Task 2: Use automated machine learning to train a model
+- Task 3: Deploy the model
 
 ## Estimated timing: 60 minutes
 
@@ -50,7 +51,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 5. Select **Review + create (9)**.
 
-      ![](media/LABB1.png)
+    ![](media/LABB1.png)
 
 6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 

@@ -1,342 +1,235 @@
-# Module 12: Explore Microsoft Copilot in Microsoft Edge
+# Module 12: Explore generative AI in Azure AI Foundry portal
 
-## Lab overview
-
-In this exercise, you will explore some of the ways in which Microsoft Copilot can use generative AI to help you be more productive when creating new content. In the scenario for this exercise, you will start with some high-level notes for a business idea, and use Copilot in Microsoft Edge to help you develop a business plan and a presentation for potential investors.
+Generative AI describes a category of capabilities within AI that create content. People typically interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications.
 
 ## Lab objectives
-In this lab, you will perform:
 
-+ Task 1: Use Copilot to explore a document and research an idea
-+ Task 2: Use Copilot to create content for a business plan
-+ Task 3: Use Copilot to generate and visualize financial projections
-+ Task 4: Use Copilot to create content for a presentation
-+ Task 5: Use Copilot to arrange a funding meeting
-  
-## Estimated timing: 40 minutes
+In this lab, you will perform:
+- Task 1: Create a project in Azure AI Foundry portal
+- Task 2: Explore generative AI in Azure AI Foundry's chat playground
+
+## Estimated timing: 30 minutes
 
 ## Architecture Diagram
 
- ![](media/arch1diag.PNG)
+ ![](media/12png.png)
 
-### Prerequisites: Setting up an Outlook account
+## Task 1: Create a project in the Azure AI Foundry portal
 
-1. On your virtual machine, open a new tab in an Edge browser and navigate to the [Outlook sign-up page](https://outlook.live.com/).
+In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore Vision and Document capabilities.
 
-1. Click **"Create free account"**: On the Outlook sign-up page, locate and click the **"Create free account"** or **"Sign up"** button to start the registration process.
+1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
 
-    ![](./media/24.png)
+   ![](./media/3-27.png)
 
-1. On the create account page enter details as shown in the below picture:
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
-    - **New email:** odl_user_<inject key="DeploymentID" enableCopy="false" />
+   ![](./media/17-18.png)
 
-      ![](./media/23.png)
-
-1. On the create a password page enter details as shown in the below picture:
-
-    - **Password**: <inject key="AzureAdUserPassword"></inject>
-
-      ![](./media/22.png)
-
-1. Enter your **first (1)** and **last (2)** name in the provided fields and click on **Next (3)**.
-
-   - **First Name** : ODL
-   - **Last Name** : USER
-
-       ![](./media/21.png)
-
-1. Select your **country** and **date of birth** then click on **Next**.
-
-      ![](./media/20.png)
-
-1. On **Please solve the puzzle so we know you're not a robot** page click on **Next**.
-
-      ![](./media/19.png)
-
-1. Use the arrows and rotate the animal and click on Submit.
-
-     ![](./media/17.png)
-
+1. If prompted to sign in, enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+      ![Enter Your Username](./media/19-4.png)
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/19-5.png)
+     
 1. If prompted to stay signed in, you can click **No**.
 
-    ![](./media/staysigned2.png)
-      
-1. If prompted **Your Microsoft account brings everything together**, then click on **Ok**.
+   ![](./media/9-8.png)
+
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+
+   ![](./media/3-23.png)
+
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+
+1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+
+    ![](./media/17-3.png)
+
+1. On the **Create a project** pane, Configure it with the following settings:
+
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
+    - **Resource group**: Select **AI-900-Module-12 (3)**
+    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
+    - **Connect Azure AI Services or Azure OpenAI Service**:
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
+    - **Connect Azure AI Search**: Leave as default **(7)**
+    - Click on **Next (8)**
+
+        ![](./media/12-1.png)
+
+    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+
+1. On the **Review and Finish** page, click on **Create**.
+
+    ![](./media/12-2.png)
+
+1. Keep track of the following created resources: 
+    
+    - **Azure AI Project**
+    - **Azure AI Hub**  
+    - **Azure AI Services**    
+    - **Storage Account**  
+    - **Key Vault**
+
+      ![](./media/17-4.png)
+
+      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+
+1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
+
+    ![](./media/3-24.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-    ![](./media/upg.png)
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-1. Select the **profile (1)** icon in the Edge toolbar and then select **Sign in to sync data (2)**.
+   <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
 
-   ![](./media/14.png)
+## Task 2: Explore generative AI in Azure AI Foundry's chat playground
 
-1. On the Create Account page enter details as shown in the picture below:
+In this task, you will learn how to interact with the Chat playground in Azure AI Foundry, deploy a generative AI model, and optimize responses using effective prompting techniques.
 
-    - **Username:** odl_user_<inject key="DeploymentID" enableCopy="false" />@outlook.com
+1. In Azure AI Foundry's Portal page, Click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)** to start.
 
-        ![](./media/13.png)
+   ![](./media/12-3.png)
 
-1. On the create a password page enter details as shown in the picture below:
+1. In Azure AI Foundry's Playgrounds page, select **Try the Chat playground**. The Chat playground is a user interface that enables you to try out building a chat application with different generative AI mdoels. 
 
-    - **Password**: <inject key="AzureAdUserPassword"></inject>
+   ![](./media/12-3.png)
 
-       ![](./media/12.png)
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, select **Create a deployment**.
 
-1. On **Use this account everywhere on your device** click on **Next**.
+   ![](./media/12-4.png)
 
-   ![](./media/11.png)
+1. Select **gpt-4 (1)** and then click **Confirm (2)**.
 
-### Task 1: Use Copilot to explore a document and research an idea
+    ![](./media/1205.png)
 
-In this task, you will learn how to use **Copilot** to explore a document and research an idea, leveraging AI to gain insights and find relevant information more efficiently.
+1. In the *Deploy model* window, keep the default naming and selection and select **Deploy**. It may take a moment for the model to deploy. 
 
-To start your exploration of generative AI, let's use Microsoft Copilot in Edge to examine an existing document and extract some insights from it.
+   ![](./media/12-5.png)
 
-1. In Microsoft Edge, browse to [OneDrive](https://onedrive.live.com) at `https://onedrive.live.com` and sign in using your Microsoft account - closing any welcome messages or offers that are displayed.
-1. In another browser tab, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select the option to **Save a copy to OneDrive** and save the document in your **Documents** folder in OneDrive. The document should then open in Microsoft Word online automatically.
+   >**Note**: To check the status of your deployment, go to the left-hand menu and select *Models and endpoints* under *My assets*.
 
-    > **Note**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive and you can access the file from My Files in the OneDrive menu.
+1. From the left-hand menu, select **Playgrounds**.
 
-1. View the text in **Business Idea.docx**, which describes some high-level ideas for a cleaning business in New York City.
-1. Use the **Copilot** icon on the Edge toolbar to open the Copilot pane, as shown here:
+   ![](./media/12-6.png)
 
-    ![Screenshot of the Copilot pane in Microsoft Edge.](media/edge-copilotupd.png)
+1. Click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)**.
 
-1. In the chat box at the bottom of the Copilot pane, enter following the prompt:
+   ![](./media/12-3.png)
 
-    ```
-    Summarize this document into 5 key points, and suggest the next steps.
-    ```
 
-    If prompted, confirm that you want to allow Copilot to access the page and acknowledge that the conversation will not be saved (note that Copilot protects the privacy of the conversation because it includes information from a personal document in your OneDrive).
+1. Under **Set-up**, select the **gpt-4** deployment from the drop-down menu.
 
-1. Review the response from Copilot, which should summarize the main points in the document, as shown here:
+    ![](./media/12-7.png)
 
-    ![Screenshot of the Copilot pane with a response.](media/copilot-responseupd.png)
+1. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. 
 
-    > **Note**: The response may differ depending on the situation.
+   ![](./media/12-8.png)
 
-1. Enter the following prompt:
+1. Click **Continue** to update the system message and start a new chat session.
 
-    ```
-    How do I go about setting up a business in New York?
-    ```
+   ![](./media/12-21.png)
 
-1. Review the response, which should contain some advice and links to resources to help you get started setting up a business in New York, and may include some suggested follow-up prompts to get more information.
+1. Consider the following ways you can improve responses from a generative AI assistant:
+    - Start with a specific goal for what you want the assistant to do
+    - Iterate based on previous prompts and responses to refine the result
+    - Provide a source to ground the response in a specific scope of information
+    - Add context to maximize response appropriateness and relevance
+    - Set clear expectations for the response
 
-    > **Important**: The AI-generated response is based on information publicly on the Web. While it may be useful to help you understand the steps required to set up a business, it is not guaranteed to be 100% accurate and does not replace the need for professional advice!
-
-### Task 2: Use Copilot to create content for a business plan
-
-In this task, you will learn how to use **Copilot** to create content for a business plan, leveraging AI to generate key sections, such as executive summaries, market analysis, and financial projections.
-
-Now that you've done some initial research, let's have Copilot help you develop a business plan for your cleaning company.
-
-1. With the **Business Idea.docx** document still open in Microsoft Edge, in the Copilot pane, enter the following prompt:
-
-    ```
-    Suggest a name for my cleaning business
-    ```
-
-1. Review the suggestions and select a name for your cleaning company (or continue prompting to find a name you like).
-1. Enter the following prompt, replacing *Contoso Cleaning* with the company name of your choice:
-
-    ```
-    Based on the contents of this document, create a business plan for my cleaning business.
-    ```
-
-1. Review the response. Then in the Microsoft Word pane, in the **File** menu, create a new blank document. Close the **Designer** pane if it opens and change the name of the new document from *Document* to `Business Plan`.
-
-1. Copy the business plan that was generated in the Copilot pane and paste it into the business plan document:
-
-    ![Screenshot of a Word document with a Copilot-generated business plan.](media/generated-contentupd.png)
-
-1. In the Copilot pane, enter the following prompt:
-
-    ```
-    Create a corporate logo for the cleaning company. The logo should be round and include an iconic New York landmark.
-    ```
-     Note: If it gives a response to **Please sign in to create images**, click on **Image Creator** link and then     
-     sign up with your account by clicking on **Join & Create** on the Copilot | Designer page. 
-
-     ![](media/up3.png)
-   
-     ![](media/up2.png)
-     
-1. Review the response, which should present four options for a logo created by Microsoft Designer.
-1. Use more prompts to iterate on the design (for example, `Make it green and blue`) until you have a logo with which you are happy.
-1. Right-click the logo design you prefer and copy it to the clipboard. Then paste it into the top of the business plan document, like this:
-
-    ![Screenshot of a Word document with a Copilot-generated image.](media/generated-image.png)
-
-1. Close the Microsoft Word tab and return to the **Documents** folder in your OneDrive.
-
-### Task 3: Use Copilot to generate and visualize financial projections
-
-In this task, you will learn how to use **Copilot** to generate and visualize financial projections, enabling you to create charts, tables, and forecasts for business planning and decision-making.
-
-1. In OneDrive, use the **(+)** button to add a new **Excel workbook**. Then change the name of the workbook to `Financial Projections`.
-1. In the Copilot pane, enter the following prompt:
+1. Let's try generating a resonse using a prompt with a specific goal. In the chat box, enter the following prompt:
 
     ```prompt
-    Create a table of projected profits for the next 5 years, starting with this year. The profit this year should be $10,000 and it should increase by 12% each year.
+    I'm planning a trip to Paris in September. Can you help me?
     ```
 
-1. Review the response, which should include a table of projected profits for the next five years.
-1. Copy the table to the clipboard (being careful to select just the table). Then select cell A1 in the Excel workbook, and on the **Home** tab, in the **Clipboard** menu, under **Paste special**, select **Values only** so that the values from the table are pasted into the spreadsheet like this:
+    ![](./media/12-9.png)
 
-    ![Screenshot of an Excel workbook with Copilot-generated data.](./media/generated-financialsupd.png)
+1. Review the response. **Note**: Keep in mind that the specific response you receive may vary due to the nature of generative AI.
 
-1. In the Copilot pane, enter the following prompt:
+   ![](./media/12-10.png)
+ 
+1. Let's try another prompt. Enter the following:
 
     ```prompt
-    What's a good way to visualize these projections in a chart?
+    Where's a good location in Paris to stay? 
     ```
 
-1. Review the response, which should recommend a few ways to visualize the projections data. Then enter the following prompt:
+   ![](./media/12-12.png)
 
-    ```prompt
-    How do I create a line chart in Excel?
-    ```
+1. Review the response, which should provide some places to stay in Paris.
 
-1. Follow the guidance provided by Copilot to create a line chart.
+    ![](./media/12-11.png)
 
-    > **Tip**: You may need to adjust the default data axis selected by Excel. Select the chart in the spreadsheet, and on the **Chart** tab, select **Select Data**. Then in the **Chart** pane, on the **Data** tab, modify the setup so that the **Year** field is the horizontal label and only the **Projected Profit** field is used as a line value:
-
-    ![Screenshot of an Excel workbook with a line chart.](./media/line-chartupd.png)
-
-1. Close the **Chart** tab to see the chart in the spreadsheet.
-
-1. Close the Microsoft Excel browser tab and return to your OneDrive.
-
-### Task 4: Use Copilot to create content for a presentation
-
-In this task, you will learn how to use **Copilot** to create content for a presentation, helping you generate slides, summaries, and key talking points efficiently.
-
-Thanks to Copilot, you've created a business plan for the cleaning business and generated some financial projections. Now you'll need an effective presentation to convince an investor to lend you the funding to start the business.
-
-1. In OneDrive, add a new **PowerPoint presentation**. If the **Designer** pane opens automatically, close it. Then change the name of the presentation from *Presentation* to `Business Presentation`.
-
-1. On the title slide for the presentation, enter the name of your cleaning company as the title, and `Investor Opportunity` as the subtitle.
-1. Insert a new slide, using the **Two Content** slide layout (which includes a title and two placeholders for content).
-1. Change the slide title to `Benefits of Hiring a Commercial Cleaner`.
-1. In the Copilot pane, enter the following prompt:
-
-    ```prompt
-    Write a summary of the benefits of using a corporate cleaning company for your business. The summary should consist of five short bullet points.
-    ```
-
-1. Copy Copilot's response to the clipboard, and paste it into the left content placeholder. Then edit and reformat the text in the placeholder until you are satisfied.
-1. In the Copilot pane, enter the following prompt:
-
-    ```prompt
-    Create a photorealistic image of a clean office.
-    ```
-
-1. When Copilot has generated an image you like, copy it to the clipboard and paste it into the content placeholder on the right of the slide.
-
-    If the **Designer** pane opens automatically, select a slide design you like. Then close the **Designer** pane.
-
-1. Apply any additional reformatting you think is required until you have a slide that you're happy with:
-
-    ![Screenshot of a PowerPoint presentation with Copilot-generated content.](./media/powerpoint-slideupd.png)
-
-1. Open a new browser tab and use it to download the [mopping.png](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png) image from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png` to your local computer, saving it in any folder.
-1. Return to the browser tab containing your PowerPoint presentation, and in the Copilot pane, use the **+** button next to the chat box to upload the **mopping.png** image to Copilot, and add the prompt `What does this image show?`.
-1. Review the response, which should be similar to this:
-
-    ![Screenshot of a Copilot description of an image.](./media/copilot-image-analysisupd.png)
-
-1. Follow up with the following prompt, and review the response:
-
-    ```prompt
-    Would this image be helpful to promote a commercial cleaning business?
-    ```
-
-    Copilot has analyzed the image and assessed its usefulness for your specific business scenario in the same way you might ask a colleague's opinion.
-
-1. In PowerPoint, add a new slide with the same **Two Content** layout as before. Then in one of the content placeholders, upload the **mopping.png** image to add it to the slide.
-
-1. In the Copilot pane, enter the following prompt:
-
-    ```prompt
-    Write a short paragraph to accompany this image, emphasizing the professionalism of the cleaning staff we employ.
-    ```
-
-1. Review the resulting text, and then copy it to the empty content placeholder on the slide, editing and formatting it as you think necessary.
-1. In the Copilot pane, enter the following prompt:
-
-    ```prompt
-    Suggest a good title for a slide that contains the image and text.
-    ```
-
-1. Use the suggested title for the slide, and then use the Designer in PowerPoint to format the slide. You should end up with a slide similar to this:
-
-    ![Screenshot of a slide created using suggestions from Copilot.](./media/powerpoint-new-slideupd.png)
-
-1. Close the PowerPoint browser tab and return to your OneDrive.
-
-### Task 5: Use Copilot to arrange a funding meeting
-You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
-
-1. Use the **App Launcher** (&#8759;) at the left end of the OneDrive title bar to open **Outlook**.
-1. Switch to the **Calendar** page and change the view to **Work week**. If you don't already have any scheduled events in your calendar, you can add a couple so that Copilot has some information to work with.
-1. In the Copilot pane, enter the following prompt:
-
-    ```prompt
-    What events do I have scheduled in this calendar?
-    ```
+1. Let's iterate based on previous prompts and responses to refine the result. Enter the following prompt:
     
-    Copilot should be able to read the calendar in the web page and identify events in your calendar:
-
-    ![Screenshot of an Outlook calendar with Copilot identifying events.](./media/calendar-eventsupd.png)
-
-1. Try using this prompt to check your availability for a meeting with a bank manager to seek funding for the business:
-
     ```prompt
-    What's my availability for a meeting this week?
-    ```
+    Can you give me more information about dining options near the first location?
+    ``` 
 
-    Copilot should provide a summary of your availability based on the calendar information on the Outlook web page.
+     ![](./media/12-13.png)
 
-    > **Note**: Microsoft Copilot can read the calendar page that is open in the browser (and may "remember" details during the current session), but it cannot access your calendar data directly. In a corporate environment, your organization can use Microsoft 365 Copilot, which *does* have access to your calendar and email in Outlook, as well as information in other enterprise apps like Microsoft Teams.
+1. Review the response, which should provide dining options near a location from the previous response. 
 
-1. Switch to the **Mail** page, and create a new email. Fill in the **To** box with your own email address and set the **Subject** to `Business funding meeting request`.
-1. In the Copilot pane, enter the following prompt:
+   ![](./media/12-14.png)
 
-    ```prompt
-    Write an email to a bank manager requesting a meeting to discuss funding for a commercial cleaning business. The email should be concise and the tone should be professional.
-    ```
+1. Now, let's provide a source to ground the response in a specific scope of information. Enter the following: 
     
-1. Use the generated content to complete your email, as shown here:
+    ```prompt
+    Based on the information at https://en.wikipedia.org/wiki/History_of_Paris, what were the key events in the city's history?
+    ```
+    ![](./media/12-18.png)
 
-    ![Screenshot of an email message generated by Copilot.](./media/generated-emailupd.png)
+1. Review the response, which should provide information based on the provided website. 
 
-    You can send the email to yourself if you wish!
+   ![](./media/12-17.png)   
 
-## Challenge
+1. Let's try to add context to maximize the relevance of the response. Enter the following prompt: 
 
-Now you've seen how to use Copilot to research ideas and generate content, why not try exploring further? To start a new Copilot session, in the **+** menu next to the chat box, select **Start new chat**. Then, based on what you've learned in this exercise, try using Copilot to plan a meeting in which you'll propose the adoption of generative AI in your organization. Here are a few ideas to get you started:
+    ```prompt
+    What three places do you recommend I stay in Paris to be within walking distance to historical attractions? Explain your reasoning.
+    ```
 
-- Research the benefits of generative AI and Microsoft Copilot for businesses, finding information about productivity benefits, cost-savings, and examples of organizations that have already successfully adopted AI.
-- Create a discussion document that you can circulate as pre-reading before the meeting.
-- Create a presentation that you can use to present your case, including data and visualizations to emphasize key elements of your pitch.
-- Compose an email to tell your coworkers about the meeting and provide some context for it.
+   ![](./media/12-15.png)
 
-Be as inventive as you like, and explore how Copilot can help you by finding information, generating and refining text, creating images, and answering questions.
+1. Review the response and reasoning for the response.
 
-## Conclusion
+   ![](./media/12-16.png)
 
-In this exercise, you've used Copilot in Microsoft Edge to find information and generate content. Hopefully, you've seen how using generative AI in a copilot can help with productivity and creativity.
+1. Now try setting clear expectations for the response. Enter the following prompt:
+    
+    ```prompt
+    What are the top 10 sights to see in Paris? Answer with a numbered list in order of popularity.
+    ```
 
-While the free services used in this exercises are undoubtedly very powerful, you can achieve even more with services like [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes while integrating it into your existing IT infrastructure to ensure a manageable, secure solution.
+    ![](./media/12-20.png)
+
+1. Review the response, which should provide a numbered list of sights to see in Paris.
+
+   ![](./media/12-19.png)
+
+1. When you are done, you can close the browser window.
 
 ### Review
-In this lab, you have completed the following tasks:
-- Used Copilot to explore a document and research an idea
-- Used Copilot to create content for a business plan
-- Used Copilot to generate and visualize financial projections
-- Used Copilot to create content for a presentation
-- Used Copilot to arrange a funding meeting
+
+In this Module, you have completed the following tasks:
+- Created a project in the Azure AI Foundry portal
+- Explored generative AI in Azure AI Foundry's chat playground
+
+## Learn more
+
+This lab demonstrated only some of the capabilities of the AI Generative AI service. To learn more about what you can do with this service, see the [Generative AI](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/evaluate-generative-ai-app) page.
 
 ## You have successfully completed this lab.
