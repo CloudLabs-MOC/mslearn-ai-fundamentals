@@ -95,27 +95,33 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 In this task, you will learn how to try out text moderation in the Content Safety Studio to detect and manage harmful or inappropriate content.
 
-1. Navigate back to the Content Safety Studio home page.
+1. Navigate back to the **Content Safety Studio** home page.
 
-1. On the Content Safety Studio home page, under *Run moderation tests*
+1. On the Content Safety Studio home page, under *Run moderation tests*, select the **Moderate text content** box.
 
-1. Select the **Moderate text content** box.
+   ![](media/ai900m2-1.png)
+
+1. Check the checkbox under **Try it out**.
 
    ![](media/37.png)
  
-1. Under run a simple test, click **Safe Content (1)**. Notice that text is displayed in the box below and click on **Run test (2)**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize un-safe content.
+1. Under run a simple test, click **Safe Content (1)**. 
 
    ![](media/azureai.png)
 
+1. Notice that text is displayed in the box below and click on **Run test (2)**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize un-safe content.   
+
    ![](media/chopping.png)
 
-1. In the Results panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Does the Content Safety AI service consider this sample to be acceptable or not? What's important to note is that the results are within a confidence interval. A well-trained model, like one of Azure AI's out-of-the-box models, can return results that have a high probability of matching what a human would label the result. Each time you run a test, you call the model again.
+1. In the Results panel, inspect the results. There are **four severity levels** from **safe to high**, and four types of harmful content. Does the Content Safety AI service consider this sample to be acceptable or not? What's important to note is that the results are within a confidence interval. A well-trained model, like one of Azure AI's out-of-the-box models, can return results that have a high probability of matching what a human would label the result. Each time you run a test, you call the model again.
 
    ![](media/results.png)
 
-1. Now try another sample. Select the text under **Violent content with misspelling (1)**. Check that the content is displayed in the box below and click on**Run test (2)**.
+1. Now try another sample. Select the text under **Violent content with misspelling (1)**.
 
     ![](media/voilent.png)
+
+1. Check that the content is displayed in the box below and click on**Run test (2)**.    
 
     ![](media/run-test.png)
 
@@ -131,13 +137,23 @@ In this task, you will learn how to check out the keys and endpoints required to
 
 These capabilities you tested can be programmed into all sorts of applications. The keys and endpoint used for application development can be found both in the Content Safety Studio and the Azure Portal. 
 
-1. In the Content Safety Studio, navigate back to the **Settings** page, with the Resources tab selected. Look for the resource you used. Scroll across to see the endpoint and key for your resource. 
+1. In the Content Safety Studio, navigate back to the **Settings (1)** page, with the **Resources (2)** tab selected. Look for the resource you used. Scroll across to see the **endpoint and key** for your resource **(3)**. 
 
-   ![](media/32.png)
+   ![](media/ai900m2-2.png)
 
-1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). Search for Content Safety on the top search bar. Find your resource and click on it. On the left-hand menu, look under *Resource Management* for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
+1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). 
 
-     ![](media/31.png)
+1. Search for **Content Safety (1)** on the top search bar and select **Content Safety (2)**.
+
+   ![](media/ai900m2-3.png)
+
+1. Find your resource and click on it.
+
+   ![](media/ai900m2-4.png)
+
+1. On the left-hand menu, look under **Resource Management** for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
+
+   ![](media/ai900m2-5.png)
 
 ## Validation
 
