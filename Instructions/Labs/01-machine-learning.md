@@ -239,11 +239,11 @@ In this task, you will learn how to deploy the trained model as a web service fo
     - Description: **Predict cycle rentals** **(2)**
     - Compute type: **Azure Container Instance** **(3)**
     - Enable authentication: **Selected** **(4)**
-    - Select **Deploy (6)**
+    - Select **Deploy (5)**
 
       ![](media/ai900-7.png)
 
-1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as *Running*. Yo can see the deployement status in notification.
+1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as **Running**. Yo can see the deployement status in notification.
 
     ![](media/ai900-9.png)
 
