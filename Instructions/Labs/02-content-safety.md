@@ -151,7 +151,7 @@ These capabilities you tested can be programmed into all sorts of applications. 
 
    ![](media/ai900m2-4.png)
 
-1. On the left-hand menu, look under **Resource Management** for **Keys and Endpoints (1)**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
+1. On the left-hand menu, look under **Resource Management** for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
 
    ![](media/ai900m2-5.png)
 
