@@ -30,9 +30,9 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
     ![Picture1](media/ai900mod1img1.png)
 
-2. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+2. In the Marketplace page search for **Azure Machine Learning (1)** and Select **Azure Machine Learning (2)**.
  
-   ![Picture1](media/ai900mod1cimg1.png)
+   ![Picture1](media/ai900-12.png)
 
 3. On the **Azure Machine Learning** page, click **Create** to proceed.
 
@@ -203,7 +203,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
    ![](media/lab1-12.png)
 
-1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
+1. Wait for the job to finish. It might take around `10-15 minutes`, while — now might be a good time for a coffee break!
 
 #### Review the best model
 
@@ -235,11 +235,11 @@ In this task, you will learn how to deploy the trained model as a web service fo
     ![](media/ai900-10.png)
 
 1. Enter the following details:
-    - **Name**: predict-rentals  **(1)**
-    - **Description**: Predict cycle rentals **(2)**
-    - **Compute type**: Azure Container Instance **(3)**
-    - **Enable authentication**: *Selected* **(4)**
-    - Select **Deploy**
+    - Name: **predict-rentals**  **(1)**
+    - Description: **Predict cycle rentals** **(2)**
+    - Compute type: **Azure Container Instance** **(3)**
+    - Enable authentication: **Selected** **(4)**
+    - Select **Deploy (6)**
 
       ![](media/ai900-7.png)
 
