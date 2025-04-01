@@ -269,6 +269,7 @@ In this task, you will learn how to deploy the trained model as a web service fo
 In this lab, you have completed the following tasks:
 - Created an *Azure Machine Learning workspace* resource
 - Utilized automated machine learning to train a model
+- Deployed the model
 
 Let me know if you'd like any changes!
   
