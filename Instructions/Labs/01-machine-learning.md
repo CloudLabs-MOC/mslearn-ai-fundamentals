@@ -4,8 +4,6 @@
 
 In this exercise, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
->**Important**: Currently, you can author and deploy a model as a web service in Azure Machine Learning Studio, but testing it within the Studio is not supported yet. You can complete all steps leading up to the deployment of the model. Updates will be provided once this functionality becomes available.
-
 ## Lab Objectives
 
 In this lab, you will perform:
