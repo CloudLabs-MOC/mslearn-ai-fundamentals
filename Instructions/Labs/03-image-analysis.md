@@ -6,7 +6,7 @@
 
 Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will perform:
 - Task 1: Create a project in Azure AI Foundry portal
