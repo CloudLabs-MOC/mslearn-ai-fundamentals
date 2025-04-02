@@ -205,7 +205,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
 1. Wait for the job to finish. It might take around `10-15 minutes`, while — now might be a good time for a coffee break!
 
-#### Review the best model
+**Review the best model**
 
 When the automated machine learning job has completed, you can review the best model it trained.
 
@@ -261,7 +261,7 @@ In this task, you will learn how to deploy the trained model as a web service fo
  
 - Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
 
