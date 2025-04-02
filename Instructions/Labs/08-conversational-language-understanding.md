@@ -237,7 +237,7 @@ You have now successfully configured a conversational language project and defin
  
 - Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="1c8ee6fe-9783-45b7-9293-38c9766a4fb2" />
 
