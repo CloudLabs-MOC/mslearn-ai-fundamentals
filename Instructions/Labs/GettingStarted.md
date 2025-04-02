@@ -4,9 +4,9 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](./media/up1n.png)
+![Access Your VM and Lab Guide](./media/aig1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,7 +16,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./media/up2n.png)
+![Explore Lab Resources](./media/aig2.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -28,13 +28,13 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](./media/up3n.png)
+![Use the Split Window Feature](./media/aig3.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](./media/up4.png)
+![Manage Your Virtual Machine](./media/aig4.png)
 
 ## Lab Duration Extension
 
@@ -133,7 +133,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Click on Next from the lower right corner to move on to the next page.
+Click on **Next** from the lower right corner to move on to the next page.
 
    ![Start Your Azure Journey](./media/sc900-image(3).png)
 
