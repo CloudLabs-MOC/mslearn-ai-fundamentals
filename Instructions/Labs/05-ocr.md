@@ -106,6 +106,8 @@ In this task, you will learn how to extract text from images in Vision Studio us
 
 1. Navigate back to the **Vision Studio** portal, select **Browse for a file**.
 
+   ![An image of the text in the image outlined](media/ai900m5-16.png)
+
 1. Navigate to the `C:\Users\azureuser\Downloads\ocr-images` folder **(1)** on your computer where you downloaded **ocr-images.zip**. Select **advert.jpg (2)** and select **Open (3)**.
 
    ![An image of the text in the image outlined](media/ai900m5-10.png)
@@ -120,6 +122,8 @@ In this task, you will learn how to extract text from images in Vision Studio us
        ![An image of the text in the image outlined](media/advert-bounding-boxes.jpg)
 
 1. You can now try another image. Select **Browse for a file**.
+
+   ![An image of the text in the image outlined](media/ai900m5-16.png)
 
 1. Navigate to the folder where you saved the files from GitHub. Select **letter.jpg (1)** and then **Open (2)**.
 
