@@ -6,7 +6,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/azg1.png)
+![Access Your VM and Lab Guide](./media/azg1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -20,7 +20,7 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 ## Lab Guide Zoom In/Zoom Out
  
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
 ![](./media/zoomin.png)
 
@@ -80,7 +80,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 7. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
 
-## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
+## Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
 
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
@@ -95,9 +95,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Install](./media/mfa2.png)
 
-   > Note:For Ios, Open app store and repeat the steps.
+   > Note: For Ios, Open the app store and repeat the steps.
 
-   > Note: Skip If already installed.
+   > Note: Skip if already installed.
 
 1. Open the app and tap on **Scan a QR code**.
 
@@ -117,7 +117,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. Tap on **Finish** in the Mobile Device.
 
-   > NOTE: While logging in again , enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
+   > NOTE: While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
 
@@ -126,11 +126,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Support Contact
  
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels explicitly tailored for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
  
 Learner Support Contacts:
  
-- Email Support: labs-support@spektrasystems.com
+- Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Click on Next from the lower right corner to move on to the next page.
