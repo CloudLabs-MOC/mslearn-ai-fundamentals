@@ -65,7 +65,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-18 (3)**
+    - **Resource group**: Select **AI-900-Module-06 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
     Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
