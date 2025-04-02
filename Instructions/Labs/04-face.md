@@ -50,8 +50,6 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 
 In this task, you will learn how to connect your **Azure AI Services** resource to Vision Studio to enable AI-powered image analysis.
 
-Next, connect the Azure AI services resource you provisioned above to Vision Studio.
-
 1. Open a new browser tab and go to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. Click on **Sign in** in the top right corner, then log in with your account. Make sure you're using the same directory where you created your Azure AI services resource. If a pop-up appears asking you to select a resource, click the **X** icon to close it.
@@ -103,7 +101,6 @@ In this task, you will learn how to detect faces in Vision Studio to analyze fac
 1. Go back to the Vision Studio  and upload the **WhatAICanDo.m4a** image by clicking **Browse files (1)**. Then, navigate to the **C:\Users\azureuser\Downloads\detect-faces (2)** folder, select **store-camera-1 (3)**, and click **Open (4)**.
 
    ![](./media/4-4.png)
-
 
 1. Review the face detection details that are returned.
 
