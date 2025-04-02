@@ -52,7 +52,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m3-2.png)
 
 1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
 
@@ -163,9 +163,9 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
    ![](./media/3-11.png)
 
-1. On the **Vision + Document** page, select the **Image** tab, then select the **Dense captioning** tile.
+1. On the **Vision + Document** page, select the **Image (1)** tab, then select the **Dense captioning (2)** tile.
 
-   ![](./media/17-9.png)
+   ![](./media/ai900m3-1.png)
 
 1. Upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-1 (2)**, and click **Open (3)**.
 
@@ -173,7 +173,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
-1. Hover over one of the captions in the **Detected** attributes list and observe what happens within the image.
+1. Hover over one of the captions in the **Detected** **attributes** list and observe what happens within the image.
 
     ![](./media/3-13.png)
 
@@ -195,19 +195,15 @@ The next feature you will try is the *Extract Tags* functionality. Extract tags 
 
    ![](./media/3-15.png)
 
-2. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected. 
-
-   ![](./media/3-22.png)
-
-3. Open the folder containing the images you downloaded and locate the file named **store-camera-2.jpg**, which looks like this:
+1. Open the folder containing the images you downloaded and locate the file named **store-camera-2.jpg**, which looks like this:
 
     ![](./media/analyze-images-vision/store-camera-2.jpg)
 
-4. Upload the **store-camera-2.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-2 (2)**, and click **Open (3)**.
+1. Upload the **store-camera-2.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-2 (2)**, and click **Open (3)**.
 
     ![](./media/3-17.png)
 
-5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as **shopping**, **selling**, and **standing**.
+1. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as **shopping**, **selling**, and **standing**.
 
     ![](./media/17-11.png)
 
@@ -222,10 +218,6 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 1. Select the **Image (1)** tab, and select the **Common object detection (2)** tile.
 
    ![](./media/17-13.png)
-
-1. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected.
-
-   ![](./media/3-19.png)
 
 1. Open the folder containing the images you downloaded and locate the file named **store-camera-3.jpg**, which looks like this:
 
