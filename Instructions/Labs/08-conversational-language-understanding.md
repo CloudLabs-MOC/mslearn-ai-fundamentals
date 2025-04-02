@@ -234,6 +234,7 @@ You have now successfully configured a conversational language project and defin
 
 > **NOTE**: Conversational language understanding provides the intelligence to interpret the intention of the input; it doesn't perform any actions such as turning on the light or the fan. A developer would need to build an application that uses the Conversational Language Understanding model to determine the user's intent, and then automate the appropriate action.
 
+
 ## Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
