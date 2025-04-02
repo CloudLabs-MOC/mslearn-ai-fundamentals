@@ -4,7 +4,7 @@
 
 In this exercise, you will set up a single-service resource in Azure AI Content Safety Studio to evaluate and moderate text and image content, providing severity scores for various categories, ranging from safe to high.
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will perform:
 
@@ -161,7 +161,7 @@ These capabilities you tested can be programmed into all sorts of applications. 
  
 - Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="5371378e-8511-44ed-9037-3a000338132f" />
 
