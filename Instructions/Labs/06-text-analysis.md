@@ -27,11 +27,11 @@ In this lab, you will perform:
 
 In this task, we are creating an Azure AI Foundry project and configuring necessary resources to explore AI language capabilities in the Language Playground.
 
-1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
+1. Right-click the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, choose **Copy link (2)** from the context menu, then paste it into a new tab to open the Azure AI Foundry portal.
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the **Welcome to Azure AI Foundry** page, look at the top right corner and click the **Sign in** button to log in.
 
    ![](./media/17-18.png)
 
@@ -95,7 +95,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com, We are available 24/7 to help you out.
 
    <validation step="07c3e734-e32f-44b6-b8e8-7b5b85f4a45b" />
 
