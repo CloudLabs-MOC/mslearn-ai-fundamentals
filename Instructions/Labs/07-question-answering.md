@@ -7,7 +7,7 @@ Azure AI Language includes *question answering* capabilities, which you will use
 
 The Language service's question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will perform:
 
 - Task 1: Create a *Language* resource
@@ -32,42 +32,47 @@ To use question answering, you need a **Language** resource.
 
 1. In azure portal, click the **&#65291;Create a resource** button.
 
-   ![An image of the text in the image outlined](media/lab-5(1).png)
+   ![An image of the text in the image outlined](media/ai900m7-1.png)
 
-1. In the Marketplace page search for **Language service (1)** and Select **Language service (2)**.
+1. In the Marketplace page search for **Language service (1)** press **Enter** and Select **Language service (2)**.
 
-   ![An image of the text in the image outlined](media/lab-6(1).png)
+   ![An image of the text in the image outlined](media/ai900m7-2.png)
+
+1. Click on **Create**.
+
+   ![An image of the text in the image outlined](media/ai900m7-3.png)
 
 1. You will be taken to a page to **Select additional features**. Use the following settings:
 
     - **Select Additional Features**:
         - **Default features**: *Keep the default features*.
-        - **Custom features**: *Select custom question answering*.
-     - Select **Continue to create your resource**
+        - **Custom features**: **Select custom question answering (1)** by clickin on **Select**
+     - Select **Continue to create your resource (2)**
 
-       ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(1).png)
+       ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-4.png)
 
 1. On the **Create Language** page, specify the following settings:
     - **Project Details**
-        - **Subscription (1)**: *Your Azure subscription*.
-        - **Resource group (2)**: Select **AI-900-Module-07-<inject key="DeploymentID" enableCopy="false" />**
+        - **Subscription**: *Your Azure subscription* **(1)**
+        - **Resource group**: Select **AI-900-Module-07-<inject key="DeploymentID" enableCopy="false" />** **(2)**
     - **Instance Details**
-        - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**      
-        - **Name (4)**: Enter **language<inject key="DeploymentID" enableCopy="false" />**
-        - **Pricing tier (5)**: S (1K Calls per minute)
+        - **Region**: Select **<inject key="location" enableCopy="false"/>** **(3)**     
+        - **Name**: Enter **language<inject key="DeploymentID" enableCopy="false" />** **(4)**
+        - **Pricing tier**: **S** (1K Calls per minute) **(5)**
     - **Custom question answering**
-        - **Azure search region (6)**: Select **<inject key="location" enableCopy="false"/>**
-        - **Azure search pricing tier (7)**: Free F (3 Indexes) - (*If this tier is not available, select Basic*)
+        - **Azure search region**: Select **<inject key="location" enableCopy="false"/> (6)**
+        - **Azure search pricing tier**: **Free F (7)** (3 Indexes) - (*If this tier is not available, select Basic*)
 
-        ![An image of the text in the image outlined](media/lab-6(1)na.png)
+          ![An image of the text in the image outlined](media/ai900m7-5.png)
 
     - **Responsible AI Notice**
-        - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice (8)**: *Selected*.
+        - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected* **(8)**
 
-       
-       ![An image of the text in the image outlined](media/lab-6(1)nb.png)
+        - Click on ***Review and Create (9)**
 
-1. Select **Review and Create (9)** and then select **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
+          ![An image of the text in the image outlined](media/lab-6(1)nb.png)
+
+1. Then select **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
 
     > **Note**: If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may prevent you from creating another one. In that case, select a tier other than **Free F**.
 
@@ -75,13 +80,13 @@ To use question answering, you need a **Language** resource.
 
 In this task, you will learn how to create a new project in the **Language** resource to start leveraging AI models for text analysis and natural language processing.
 
-1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true)
+1. Right click on [https://language.azure.com](https://language.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Language studio portal.
 
 1. From the top right corner click on **Sign in**.
 
     ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01.png)
 
-2. Sign in using the following username and password.
+2. If prompted, sign in using the following username and password.
     
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
     
@@ -95,7 +100,7 @@ In this task, you will learn how to create a new project in the **Language** res
 
     ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01a.png)
 
-1. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
    
     - On the bar at the top of the page, select **Settings (&#9881;)**.
       
@@ -105,22 +110,22 @@ In this task, you will learn how to create a new project in the **Language** res
        
     - At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
-1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
+1. At the top of the Language Studio portal, in the **Create new (1)** menu, select **Custom question answering (2)**.
 
-    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(3).png)
+    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-6.png)
 
-1. On the **Choose language setting for the resource language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** (1) and click **Next** (2).
+1. On the **Choose language setting for the resource language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** **(1)** and click **Next (2)**.
 
-    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(4).png)
+    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-7.png)
 
 1. On the **Enter basic information** page, enter the following details and click **Next (5)**:  
 
-   - **Language resource**: *Choose your language resource* (**if not already chosen**).  
-   - **Azure search resource**: *Choose your Azure search resource* (**if not already chosen**).  
-   - **Name (1)**: `MargiesTravel`  
-   - **Description (2)**: `A simple knowledge base`  
-   - **Source language (3)**: **English**  
-   - **Default answer when no answer is returned (4)**: `No answer found`  
+   - **Language resource**: *Choose your language resource* (**if not already chosen**) 
+   - **Azure search resource**: *Choose your Azure search resource* (**if not already chosen**)
+   - **Name**: `MargiesTravel`  **(1)**
+   - **Description**: `A simple knowledge base`  **(2)** 
+   - **Source language**: **English (3)**  
+   - **Default answer when no answer is returned**: `No answer found`  **(4)**
    
       ![](media/ai900mod4dimg9.png)  
 
@@ -128,16 +133,18 @@ In this task, you will learn how to create a new project in the **Language** res
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg10.png)
    
-1. You will be taken to the **Manage sources** page. Select **&#65291;Add source** and select **URLs**.
+1. You will be taken to the **Manage sources (1)** page. Select **&#65291;Add source (2)** and select **URLs (3)**.
 
-   ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(6).png)
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-8.png)
    
-1. In the **Add URLs** box, select **+ Add url**. Provide the following details and select **Add all**:
-    - **URL name**: `MargiesKB`
-    - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/natural-language/margies_faq.docx`
-    - **Classify file structure**: *Auto-detect*
+1. In the **Add URLs** box, select **+ Add url (1)**. Provide the following details:
 
-     ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg12-1.png)
+    - **URL name**: `MargiesKB` **(2)**
+    - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/natural-language/margies_faq.docx` **(3)**
+    - **Classify file structure**: *Auto-detect* **(4)**
+    - Select **Add all (5)**:
+
+      ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-9.png)
       
 ### Task 3: Edit the knowledge base
 
@@ -145,17 +152,17 @@ In this task, you will learn how to edit the knowledge base in your **Language**
 
 Your knowledge base is based on the details in the FAQ document and some pre-defined responses. You can add custom question-and-answer pairs to supplement these.
 
-1. Expand the left panel and select **Edit knowledge base**. Then select **+** to add a new question pair.
+1. Expand the left panel and select **Edit knowledge base (1)**. Then select **+ (2)** to add a new question pair.
    
-    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(7).png)
+    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-10.png)
    
-1. In the **Add a new question answer pair** dialog box, in the **Question** type `Hello`, and in the **Answer** type `Hi`, then select **Done**.
+1. In the **Add a new question answer pair** dialog box, in the **Question** type `Hello` **(1)**, and in the **Answer** type `Hi` **(2)**, then select **Done (3)**.
 
-    ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(7)a.png)
+    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-11.png)
 
-1. Expand **Alternate questions** and select **+ Add alternate question**. Then enter `Hiya` as an alternative phrasing for "Hello".
+1. Expand **Alternate questions (1)** and select **+ Add alternate question (2)**. Then enter `Hiya` **(3)** as an alternative phrasing for "Hello".
 
-   ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(10).png)
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-12.png)
    
 1. On the left side of the **screen**, select **Save** to save your knowledge base.
 
@@ -169,17 +176,25 @@ Now that you have a knowledge base, you can test it.
 
 1. At the bottom of the **Question answer pairs** pane, select **Test** to test your knowledge base.
 
-   ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(12).png)
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-13.png)
    
-1. In the test pane, at the bottom enter the message `Hi` and press enter. The response *Hi* should be returned.
+1. In the test pane, at the bottom enter the message `Hi` and press enter. 
 
-   ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(11).png)
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-14.png)
+
+1. The response `Hi` should be returned.   
+
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-15.png)
    
 1. In the test pane, at the bottom enter the message `I want to book a flight` and press enter. An appropriate response from the FAQ should be returned.
+
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-16.png)
 
     > **Note**: The response contains both a short answer and a detailed answer passage. The passage provides the full text from the FAQ document for the closest matched question, while the short answer is intelligently extracted from it. You can control the inclusion of the short answer by using the **Include short answer** checkbox at the top of the test pane.
 
 1. Try another question, such as `How can I cancel a reservation?` and press enter.
+
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-17.png)
 
 1. When you're done testing the knowledge base, select **Test** to close the test pane.
 
@@ -189,11 +204,13 @@ In this task, you will learn how to deploy your project in the **Language** reso
 
 You can deploy the knowledge base as a client application to answer questions
 
-1. In the left panel, select **Deploy knowledge base**. At the top of the page, select **Deploy**.
+1. In the left panel, select **Deploy knowledge base (1)**. At the top of the page, select **Deploy (2)**.
 
-   ![Creating a Language Service resource with custom question answering enabled.](media/lab-7(13).png)
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-18.png)
 
 1. A dialogue box will ask if you want to deploy the project. Select **Deploy**.
+
+   ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-19.png)
    
 ## Validation
 

@@ -30,25 +30,28 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 
 1. In the azure portal, Click the **&#65291;Create a resource** button.
 
-   ![An image of the text in the image outlined](media/lab-5(1).png)
+   ![An image of the text in the image outlined](media/ai900m7-1.png)
 
-1. In the Marketplace page search for **Language service (1)** and Select **Language service (2)**.
+1. In the Marketplace page search for **Language service (1)** press **Enter** and Select **Language service (2)**.
 
-   ![An image of the text in the image outlined](media/lab-6(1).png)
+   ![An image of the text in the image outlined](media/ai900m7-2.png)
 
-1. You will be taken to a page to *Select additional features*. Keep the default selection and click **Continue to create your resource**. 
+1. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**.
+
+   ![An image of the text in the image outlined](media/ai900m8-1.png)
 
 1. On the page **Create Language**, configure it with the following settings:
-    - **Subscription (1)**: *Your Azure subscription*.
-    - **Resource group (2)**: **AI-900-Module-08-<inject key="DeploymentID" enableCopy="false" />**
-    - **Region (3)**: Select **East US**
-    - **Name (4)**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" />**
-    - **Pricing tier (5)**: *Free F0* (if Free F0 is not available, select *S*)
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice. (6)**: *Selected*.
+    - **Subscription**: *Your Azure subscription* **(1)**
+    - **Resource group**: **AI-900-Module-08-<inject key="DeploymentID" enableCopy="false" /> (2)**
+    - **Region**: Select **<inject key="location" enableCopy="false"/>** **(3)**
+    - **Name**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" /> (4)**
+    - **Pricing tier**: **Free F0 (5)** (if Free F0 is not available, select *S*)
+    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected* **(6)**
+    - Select **Review + create (7)**
 
-      ![An image of the text in the image outlined](media/lab-5(1)n.png)   
+      ![An image of the text in the image outlined](media/ai900m8-2.png)   
 
-1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
+1. Then **Create** and wait for deployment to complete.
 
 ### Task 2: Create a Conversational Language Understanding App
 
@@ -56,7 +59,7 @@ In this task, you will learn how to create a **Conversational Language Understan
 
 To implement natural language understanding with Conversational Language Understanding, you create an app; and then add entities, intents, and utterances to define the commands you want the app to execute.
 
-1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
+1. Right click on [https://language.azure.com](https://language.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Language studio portal.
 
 1. If prompted to choose a Language resource, select the following settings, and select **Done**:
    
