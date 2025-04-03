@@ -86,9 +86,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
       ![](./media/17-4.png)
 
-1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
-
-    ![](./media/3-24.png)
+1. If prompted with Explore and experiment, click on **Close** to dismiss it.
 
 1. On the **AI Services (1)** page, select the **Speech (2)** tile to try out Azure AI Speech capabilities.
 
@@ -108,7 +106,7 @@ In this task, we are using Azure AI Speech to transcribe audio into text in real
 
 Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground. 
 
-1. On the *Speech* page, scroll down and select **Real-time speech to text** under *Try out Speech capabilities*. You will be taken to the *Speech Playground*. 
+1. On the *Speech* page, scroll down and select **Real-time transcription** under *Try out Speech capabilities*. You will be taken to the *Speech Playground*. 
 
    ![](./media/9-6.png)
 
@@ -136,7 +134,7 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
 1. The Speech service transcribes and displays the text in real time. If you have audio on your computer, you can listen to the recording as the text is being transcribed.
 
-1. Review the output, which should have successfully recognized and transcribed the audio into text.
+1. The output successfully transcribes the audio, capturing how AI enhances various aspects of life, including healthcare, accessibility, infrastructure, entertainment, and environmental sustainability.
 
    ![Browse files](media/9-1.png)
 

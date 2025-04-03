@@ -89,6 +89,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
     - **Key Vault**
 
       ![](./media/17-4.png)
+
       >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
       
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -105,7 +106,7 @@ This task demonstrates how to use Azure AI Language Playground for Named Entity 
 
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
-1. Navigate to **Playgrounds (1)** from the left pane, Under **Language playground** tile select **Try the Language playground (2)**.
+1. Navigate to **Playgrounds** from the left pane, Under **Language playground** tile select **Try the Language playground (2)**.
 
     ![](./media/18-1.png)
 
