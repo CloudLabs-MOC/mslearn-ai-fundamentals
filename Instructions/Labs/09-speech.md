@@ -13,12 +13,6 @@ In this lab, you will perform:
 - Task 1: Create a project in the Azure AI Foundry portal
 - Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/ex21.png)
-
 ### Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are creating and configuring a project in Azure AI Foundry to explore AI services and speech capabilities.

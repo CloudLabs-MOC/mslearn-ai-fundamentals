@@ -33,13 +33,13 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Architecture Diagram
 
-![](../media/ex19.png)
+![An image](../media/lab-04.PNG)
 
 ## Explanation of Components
 
 1. **Azure AI Foundry**: A centralized platform for managing AI projects, models, and experiments. It provides tools for building, testing, and deploying AI solutions.  
 
-2. **Speech to Text**: A feature that converts spoken language into written text using AI-driven speech recognition technology, enabling applications like voice transcription and automated text processing.
+2. **Azure AI Speech**: A cloud-based service that enables speech-to-text, text-to-speech, and speech translation capabilities. It provides tools for real-time transcription, voice synthesis, and speaker recognition, allowing developers to integrate natural voice interactions into applications.
 
 # Getting Started with lab
  

@@ -13,7 +13,7 @@ In this hands-on lab, you'll gain practical experience in leveraging Azure AI Sp
 
 ## Objective
 
-By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
+By the end of this lab, you will be able to create a project in Azure AI Foundry and use Azure AI Speech to Text to convert spoken language into written text, extract key insights from audio data, and interpret the results for further processing efficiently.
 
 1. **Create a project in Azure AI Foundry portal**: You will learn about configuring an Azure AI Foundry project, provisioning necessary AI resources, and exploring Vision and Document Intelligence capabilities for automated data extraction.
 
@@ -21,7 +21,7 @@ By the end of this lab, you will be able to create a project in Azure AI Foundry
 
 ## Pre-requisites
 
-Basic knowledge of Azure AI services and Speech service.
+Basic knowledge of Azure AI services and Azure Speech Service.
 
 ## Architecture
 
@@ -39,7 +39,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 1. **Azure AI Foundry**: A centralized platform for managing AI projects, models, and experiments. It provides tools for building, testing, and deploying AI solutions.  
 
-2. **Speech to Text**: A feature that converts spoken language into written text using AI-driven speech recognition technology, enabling applications like voice transcription and automated text processing.
+2. **Azure Speech Service**: A cloud-based service that provides advanced speech capabilities, including speech-to-text, text-to-speech, speech translation, and speaker recognition. It enables developers to integrate real-time transcription, natural-sounding voice synthesis, and multilingual speech processing into applications.
 
 # Getting Started with lab
  

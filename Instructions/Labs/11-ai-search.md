@@ -14,25 +14,6 @@ In this lab, you will:
 - Task 6: Query the index
 - Task 7: Review the knowledge store
 
-## Estimated timing: 2 hours
-
-## Architecture Diagram
-
-  ![](media/Module0005.png)
-
-## Pre-requisites Required
-
-The solution you'll create for Fourth Coffee requires the following resources in your Azure subscription:
-
-- An **Azure AI Search** resource, which will manage indexing and querying.
-
-- An **Azure AI services** resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
-
-    > **Note**
-    > Your Azure AI Search and Azure AI services resources must be in the same location!
-
-- A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
-
 ### Task 1: Create an Azure AI Search resource
 
 In this task, you will learn how to create an **Azure AI Search** resource to enable powerful search capabilities and AI-driven content exploration for your applications.
