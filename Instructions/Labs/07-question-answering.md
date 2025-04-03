@@ -46,7 +46,7 @@ To use question answering, you need a **Language** resource.
 
     - **Select Additional Features**:
         - **Default features**: *Keep the default features*.
-        - **Custom features**: **Select custom question answering (1)** by clickin on **Select**
+        - **Custom features**: **Select custom question answering (1)** by clicking on **Select**
      - Select **Continue to create your resource (2)**
 
        ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-4.png)
