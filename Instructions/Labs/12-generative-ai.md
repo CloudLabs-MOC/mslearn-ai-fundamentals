@@ -91,7 +91,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
 
