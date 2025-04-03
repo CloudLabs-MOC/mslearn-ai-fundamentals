@@ -3,13 +3,13 @@
 
 Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Module 09 : Explore Speech in Azure AI Foundry portal
+# Module 04: Detect faces in Vision Studio
 
 ### Overall Estimated timing: 30 minutes
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience in leveraging Azure AI Speech services within the Azure AI Foundry portal. You will learn how to create and configure an Azure AI Speech project, explore real-time speech-to-text transcription, and work with Azure AI Speech Playground. Through interactive exercises, you will transcribe audio files into text and understand how speech services can be integrated into intelligent applications. By the end of this lab, you will be proficient in using Azure AI Speech for audio transcription, equipping you with the skills to build AI-powered voice applications in your organization’s Azure environment.
+In this hands-on lab, you'll gain practical experience in using Azure AI services to detect human faces in images with Vision Studio. You will learn how to create and configure an Azure AI Services resource, connect it to Vision Studio, and utilize Azure AI Face to analyze images. By following step-by-step tasks, you’ll explore how to detect facial features, identify bounding box coordinates, and analyze partially obscured faces. By the end of this lab, you'll be proficient in setting up and using Vision Studio for face detection, equipping you with the skills to leverage Azure AI for computer vision applications in real-world scenarios.
 
 ## Objective
 
