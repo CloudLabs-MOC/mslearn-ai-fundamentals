@@ -1,6 +1,8 @@
 
 # Module 10: Extract data from documents in Azure AI Foundry portal
 
+## Estimated timing: 30 minutes
+
 ## Lab overview
 
 **Azure AI Document Intelligence** service enables you to analyze and extract information from forms and documents, and then identify field names and data. 
@@ -9,17 +11,11 @@ How does Document Intelligence build upon optical character recognition (OCR)? W
 
 In this exercise, you will use Azure AI Document Intelligence's prebuilt models in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to recognize data from a receipt. 
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will perform:
 - Task 1: Create a project in Azure AI Foundry portal
 - Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry
-
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/ex19.png)
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
