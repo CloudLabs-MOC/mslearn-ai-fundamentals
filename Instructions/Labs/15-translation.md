@@ -48,7 +48,9 @@ You can use the Translator service by creating either a **Translator** resource 
 
       ![Picture1](media/lab15-4.png)
 
-1. Wait for deployment to complete. Then go to the deployed resource.
+1. Wait for the **deployment** to complete, then navigate to the **deployed resource**.
+
+   ![Picture1](media/lab15-8.png)
 
 ## Task 2: Explore Translator service 
 
@@ -64,15 +66,15 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
    ![Picture1](media/lab15-5.png)
 
-1. The demo in the *Try it* section shows what it would look like if you created a simple translation application with a user interface. In the case of the demo, as soon as you type in text, a request is made to the Translator service. How could you make this request? Check out the *Sample Code* tab. Here you see examples of code in different programming languages that could be used to make the request.
+1. The demo in the **Try it** section illustrates how a simple translation application with a **user interface** would function. In this demo, as soon as you enter text, a **request** is sent to the **Translator service**. How can you make this request? Explore the **Sample Code** tab, where you'll find **code examples** in various **programming languages** that demonstrate how to send the request.
 
    ![Picture1](media/lab15-6.png)
 
-1. Identify the lines in the code samples where you need to include your Translator service's **Key** and **Endpoint**. With your key and endpoint, you would be able to send a request to the Translator service and receive a response as you saw in the demo.
+1. Identify the lines in the code samples where you need to include your Translator service's **Key** and **Endpoint**. Once you have your key and endpoint, you can use them to send a request to the Translator service and receive a response, as demonstrated in the demo.
+
+1. Navigate to the left-hand menu. Under **Resource Management**, select **Keys and Endpoint**. If you were to build an application, you would find your key and endpoint here. 
 
    ![Picture1](media/lab15-7.png)
-
-1. Navigate to the left-hand menu. Under *Resource Management*, select *Keys and Endpoint*. If you were to build an application, you would find your key and endpoint here. 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
