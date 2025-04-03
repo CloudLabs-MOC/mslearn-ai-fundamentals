@@ -124,7 +124,7 @@ In this task, you will learn how to detect faces in Vision Studio to analyze fac
  
 - Hit the Validate button for the corresponding task. you will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="b774c119-03ee-46b1-b09e-611e0652ec06" />
 
