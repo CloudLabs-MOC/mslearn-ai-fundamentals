@@ -53,11 +53,11 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
    
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
 
 1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
 
-    ![](./media/17-3.png)
+    ![](./media/ai900m10-2.png)
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
@@ -66,17 +66,17 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - **Resource group**: Select **AI-900-Module-10 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
-    - **Connect Azure AI Search**: Leave as default **(7)**
-    - Click on **Next (8)**
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next (7)**
+    - **Connect Azure AI Search**: Leave as default **(8)**
+    - Click on **Next (9)**
 
-        ![](./media/19-3.png)
+        ![](./media/ai900m10-3.png)
 
     > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
-    ![](./media/19-2.png)
+    ![](./media/ai900m10-4.png)
 
 1. Keep track of the following created resources: 
     
@@ -130,7 +130,11 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 1. Right-click on the image and choose **"Save image as"** to save it in your Downloads folder or to your Desktop.
 
-   ![](media/10-2.png)
+   ![](media/ai900m10-5.png)
+
+1. Click on **Save**.
+
+   ![](media/ai900m10-6.png)
  
 1. Go back to the Azure AI Foundry portal and upload the **receipt.jpg** image by clicking **Browse files (1)**. Then, navigate to the **C:\Users\azureuser\Downloads (2)** folder, select **receipt (3)**, and click **Open (4)**.
 
