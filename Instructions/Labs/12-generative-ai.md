@@ -46,11 +46,11 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
 
 1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
 
-    ![](./media/17-3.png)
+    ![](./media/ai900m10-2.png)
 
 1. On the **Create a project** pane, Configure it with the following settings:
 
@@ -59,13 +59,13 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - **Resource group**: Select **AI-900-Module-12 (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
-    - **Connect Azure AI Search**: Leave as default **(7)**
-    - Click on **Next (8)**
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next (7)**
+    - **Connect Azure AI Search**: Leave as default **(8)**
+    - Click on **Next (9)**
 
-        ![](./media/12-1.png)
+        ![](./media/ai900m10--3.png)
 
-    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+        > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
@@ -103,21 +103,17 @@ In this task, you will learn how to interact with the Chat playground in Azure A
 
    ![](./media/12-3.png)
 
-1. In Azure AI Foundry's Playgrounds page, select **Try the Chat playground**. The Chat playground is a user interface that enables you to try out building a chat application with different generative AI mdoels. 
-
-   ![](./media/12-3.png)
-
 1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, select **Create a deployment**.
 
    ![](./media/12-4.png)
 
-1. Select **gpt-4 (1)** and then click **Confirm (2)**.
+1. Search for **gpt-4o (1)** and select **gpt-4o (2)** and then click **Confirm (3)**.
 
-    ![](./media/1205.png)
+    ![](./media/ai900m12-1.png)
 
 1. In the *Deploy model* window, keep the default naming and selection and select **Deploy**. It may take a moment for the model to deploy. 
 
-   ![](./media/12-5.png)
+   ![](./media/ai900m12-2.png)
 
    >**Note**: To check the status of your deployment, go to the left-hand menu and select *Models and endpoints* under *My assets*.
 
@@ -130,13 +126,13 @@ In this task, you will learn how to interact with the Chat playground in Azure A
    ![](./media/12-3.png)
 
 
-1. Under **Set-up**, select the **gpt-4** deployment from the drop-down menu.
+1. Under **Set-up**, select the **gpt-4o** deployment from the drop-down menu.
 
-    ![](./media/12-7.png)
+    ![](./media/ai900m12-3.png)
 
-1. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. 
+1. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. **Delete** the existing content inside **Give the model instruction and context (1)** and click on **Apply changes (2)**. 
 
-   ![](./media/12-8.png)
+   ![](./media/ai900m12-4.png)
 
 1. Click **Continue** to update the system message and start a new chat session.
 
@@ -149,17 +145,17 @@ In this task, you will learn how to interact with the Chat playground in Azure A
     - Add context to maximize response appropriateness and relevance
     - Set clear expectations for the response
 
-1. Let's try generating a resonse using a prompt with a specific goal. In the chat box, enter the following prompt:
+1. Let's try generating a resonse using a prompt with a specific goal. In the chat box, enter the following prompt **(1)** and click on the **Send (2)** button.
 
     ```prompt
     I'm planning a trip to Paris in September. Can you help me?
     ```
 
-    ![](./media/12-9.png)
+    ![](./media/ai900m12-6.png)
 
 1. Review the response. **Note**: Keep in mind that the specific response you receive may vary due to the nature of generative AI.
 
-   ![](./media/12-10.png)
+   ![](./media/ai900m12-7.png)
  
 1. Let's try another prompt. Enter the following:
 
@@ -195,30 +191,6 @@ In this task, you will learn how to interact with the Chat playground in Azure A
 1. Review the response, which should provide information based on the provided website. 
 
    ![](./media/12-17.png)   
-
-1. Let's try to add context to maximize the relevance of the response. Enter the following prompt: 
-
-    ```prompt
-    What three places do you recommend I stay in Paris to be within walking distance to historical attractions? Explain your reasoning.
-    ```
-
-   ![](./media/12-15.png)
-
-1. Review the response and reasoning for the response.
-
-   ![](./media/12-16.png)
-
-1. Now try setting clear expectations for the response. Enter the following prompt:
-    
-    ```prompt
-    What are the top 10 sights to see in Paris? Answer with a numbered list in order of popularity.
-    ```
-
-    ![](./media/12-20.png)
-
-1. Review the response, which should provide a numbered list of sights to see in Paris.
-
-   ![](./media/12-19.png)
 
 1. When you are done, you can close the browser window.
 
