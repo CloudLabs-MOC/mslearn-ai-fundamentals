@@ -68,7 +68,7 @@ To use question answering, you need a **Language** resource.
     - **Responsible AI Notice**
         - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected* **(8)**
 
-        - Click on ***Review and Create (9)**
+        - Click on **Review and Create (9)**
 
           ![An image of the text in the image outlined](media/lab-6(1)nb.png)
 
@@ -93,10 +93,10 @@ In this task, you will learn how to create a new project in the **Language** res
     * Password: <inject key="AzureAdUserPassword"></inject>
    
 1. If prompted to select an Azure resource, ensure the following settings and click on **Done (5)**:
-    - **Azure directory (1)**: *The Azure directory containing your subscription*.
-    - **Azure subscription (2)**: *Your Azure subscription*.
-    - **Resource type (3)**: *Language*.
-    - **Resource name (4)**: *select the Language service resource you just created*
+    - **Azure directory**: *The Azure directory containing your subscription* **(1)**
+    - **Azure subscription**: *Your Azure subscription* **(2)**
+    - **Resource type**: *Language* **(3)**
+    - **Resource name**: *select the Language service resource you just created* **(4)**
 
     ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01a.png)
 
