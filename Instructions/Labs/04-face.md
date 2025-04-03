@@ -18,8 +18,6 @@ In this lab, you will perform:
 
 ![An image](media/lab-04.PNG)
 
-## Exercise 1: Detect faces in Vision Studio 
-
 ### Task 1: Create an Azure AI services resource
 
 In this task, you will learn how to create an **Azure AI Services** resource to access various AI capabilities for your applications.

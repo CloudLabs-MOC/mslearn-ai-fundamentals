@@ -68,7 +68,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
         ![](./media/ai900m10-3.png)
 
-    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+        > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
 
 1. On the **Review and Finish** page, click on **Create**.
 
