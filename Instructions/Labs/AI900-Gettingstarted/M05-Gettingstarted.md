@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this exercise, you will explore the optical character recognition (OCR) capabilities of Azure AI Vision through Vision Studio. OCR enables the detection and interpretation of text embedded within images. This exercise allows you to use Azure AI services to extract text from various types of images without writing any code.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to:
 
