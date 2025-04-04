@@ -2,16 +2,16 @@
 
 ## Lab overview
 
-In this exercise, you'll explore the effect of the default content filters in Azure OpenAI.
-Azure OpenAI includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principles for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
+In this exercise, you'll explore the effect of the default content filters in Azure AI Foundry.
+Azure AI Foundry includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principles for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will perform:
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Create an AI hub and project in the Azure AI Foundry portal
 - Task 2: Deploy a model
-- Task 3: Generate natural language output
-- Task 4: Explore content filters
+- Task 3: Explore content filters
+- Task 4: Generate natural language output
 
 ## Estimated timing: 30 minutes
 
