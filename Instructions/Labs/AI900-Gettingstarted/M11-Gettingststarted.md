@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this hands-on lab, you'll gain practical experience in building and managing an AI-powered search solution using Azure AI Search and related Azure services. You will learn how to create and configure an Azure AI Search resource, set up an AI Services resource, and create a storage account to store documents. Additionally, you’ll gain expertise in uploading documents to Azure Storage, indexing them for efficient search, and querying the index to retrieve relevant information. By the end of this lab, you’ll be proficient in leveraging Azure AI Search to organize and retrieve data effectively, including reviewing the knowledge store to enhance insights from indexed content. This lab equips you with the skills to build intelligent search solutions within your Azure environment.  
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
 
