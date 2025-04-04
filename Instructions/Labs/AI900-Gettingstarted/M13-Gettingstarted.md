@@ -1,31 +1,38 @@
 
-
 # AI-900: Microsoft Azure AI Fundamentals Workshop
 
 Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Module 06: Analyze text in Azure AI Foundry portal
+# Module 13: Azure AI Studio
 
-### Overall Estimated timing: 30 minutes
+### Overall Estimated timing: 60 minutes
 
-## Overview:
-In this hands-on lab, you'll gain practical experience in analyzing text using the Azure AI Foundry portal, a platform for building intelligent applications with Azure AI Language services. You will learn how to create and configure a project in the Azure AI Foundry portal and explore key Natural Language Processing (NLP) capabilities. Specifically, you will extract named entities from text, identify key phrases, and generate text summaries using Azure AI Language. By the end of this lab, you’ll be proficient in leveraging Azure AI Foundry for text analysis, equipping you with the skills to extract meaningful insights from unstructured text data in various real-world scenarios.
+## Overview
+
+In this hands-on lab, you'll gain practical experience in leveraging Azure AI Foundry to build and manage AI solutions. You will learn how to navigate the Azure AI Foundry portal, create an Azure AI hub and project, and integrate connected resources to enhance your AI capabilities. Additionally, you'll explore various AI services available in Azure AI Foundry and deploy a generative AI model, testing its functionality in real-world scenarios. By the end of this lab, you'll be proficient in setting up AI projects, integrating resources, and deploying generative AI models, equipping you with essential skills to develop and manage AI-powered solutions in Azure.
 
 ## Objective
 
-By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze text using Azure AI language.
+By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
 
-1. **Create a project in Azure AI Foundry portal**: You will learn about configuring an Azure AI Foundry project, provisioning necessary AI resources, and exploring Vision and Document Intelligence capabilities for automated data extraction.
+- **Open Azure AI Foundry portal:**
+- **Create an Azure AI hub and project:**
+- **Add a connected resource:**
+- **Explore AI Services:**
+- **Deploy and test a generative AI model:**
 
-1. **Extract named entities with Azure AI Language in Azure AI Foundry portal:** You will learn how to configure an Azure AI Foundry project, provision necessary AI Language resources, and utilize Named Entity Recognition (NER) capabilities to automatically extract key information such as names, locations, and organizations from text data.
+## Pre-requisites Required
 
-1. **Extract key phrases with Azure AI Language in Azure AI Foundry portal:** You will learn how to configure an Azure AI Foundry project for Azure AI Language, provision necessary AI resources, and leverage key phrase extraction capabilities to identify and analyze important information from textual data automatically.
+The solution you'll create for Fourth Coffee requires the following resources in your Azure subscription:
 
-1. **Summarize text with Azure AI Language in Azure AI Foundry portal:** You will learn how to configure an Azure AI Foundry project for text summarization, provision the necessary AI Language resources, and explore AI-powered summarization capabilities for extracting key insights from large volumes of text.
+- An **Azure AI Search** resource, which will manage indexing and querying.
 
-## Pre-requisites
+- An **Azure AI services** resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
 
-Basic knowledge of Azure AI services, Azure AI Foundry and Azure AI Language.
+    > **Note**
+    > Your Azure AI Search and Azure AI services resources must be in the same location!
+
+- A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
 
 ## Architecture
 
@@ -33,22 +40,19 @@ In this hands-on lab, the architecture flow includes several essential component
 
 1. **Create a project in Azure AI Foundry portal**: Understanding how to set up a new project in Azure AI Foundry, including configuring AI resources to support Vision and Document Intelligence capabilities. This involves selecting the appropriate AI models, setting up access permissions, and ensuring the project is properly structured for document processing workflows.
 
-1. **Extract named entities with Azure AI Language in Azure AI Foundry portal:**
-Extracting named entities using Azure AI Language in Azure AI Foundry helps businesses automate data categorization, improve text analytics, and enhance information retrieval. It identifies critical data points such as names, locations, organizations, and dates from unstructured text, making it invaluable for industries like finance, legal, and customer service.
-
-1. **Extract key phrases with Azure AI Language in Azure AI Foundry portal:** Key phrase extraction in Azure AI Language helps automatically identify important topics and keywords from large text datasets, enabling faster insights and improved searchability. It enhances workflows like sentiment analysis, content categorization, and business intelligence by streamlining text processing. Integrating this with Azure AI Foundry allows businesses to automate data-driven decision-making efficiently.
-
-1. **Summarize text with Azure AI Language in Azure AI Foundry portal:** Text summarization in Azure AI Language enables automatic condensation of lengthy documents into concise summaries, preserving key information while improving readability. This helps businesses quickly extract insights from reports, articles, and customer feedback. Integrated with Azure AI Foundry, it enhances efficiency in knowledge management, decision-making, and content automation.
+1. **Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry**:  Learning how to upload and analyze a receipt using Azure AI Document Intelligence. This includes extracting key details such as the merchant name, transaction date, and total amount, and understanding how to interpret the extracted data for further processing or integration into business applications.
 
 ## Architecture Diagram
 
-![](../media/ex18.png)
+![](../media/new-ai900-lab13-archdiagram.jpg)
 
-## Explanation of Components:
+## Explanation of Components
 
-1. **Azure AI Foundry**: A centralized platform for managing AI projects, models, and experiments. It provides tools for building, testing, and deploying AI solutions.    
+1. **Azure AI Search**: A cloud-based search service that enables intelligent search and data exploration capabilities. It provides tools for indexing, querying, and analyzing structured and unstructured data, incorporating AI-powered features like semantic search, natural language processing, and document understanding.  
 
-1. **Azure AI Language**: A cloud-based service that enables natural language processing (NLP) capabilities, including text analysis, entity recognition, sentiment analysis, and language understanding. It provides tools for extracting insights from text, building conversational AI, and enhancing search experiences.
+1. **Azure AI Services**: A comprehensive suite of pre-built and customizable AI capabilities, including vision, speech, language, and decision-making models. It provides tools for building intelligent applications with features like image recognition, natural language understanding, real-time transcription, and anomaly detection. 
+
+1. **Azure Storage Account**: A cloud-based storage solution that provides scalable, secure, and highly available storage for various data types, including blobs, files, queues, tables, and disks. It offers redundancy options, encryption, and seamless integration with Azure services for data management and analytics.
 
 # Getting Started with lab
  
@@ -174,6 +178,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
 
 ## Support Contact
  

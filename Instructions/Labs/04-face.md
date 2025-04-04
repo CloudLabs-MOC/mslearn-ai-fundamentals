@@ -64,7 +64,7 @@ In this task, you will learn how to connect your **Azure AI Services** resource 
 
     ![The image and its captions are displayed.](./media/ai-900-02.png)
    
-1. Close the settings page by selecting the "x" at the top right of the screen.
+1. Close the settings page by selecting the **x** at the top right of the screen.
 
 ### Task 3: Detect faces in the Vision Studio 
 
