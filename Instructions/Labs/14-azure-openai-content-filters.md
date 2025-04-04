@@ -17,7 +17,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
- ![](media/fourteen.png)
+ ![](media/ai900m14arc.png)
  
 ### Task 1: Create an AI hub and project in the Azure AI Foundry portal
 
