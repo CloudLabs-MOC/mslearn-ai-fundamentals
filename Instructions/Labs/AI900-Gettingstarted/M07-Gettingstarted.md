@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this lab, you will use Azure Language Studio to create and train a knowledge base for question answering. You will build the knowledge base using FAQ content from the website of a fictitious travel agency called Margie’s Travel. The lab demonstrates how to use Azure’s Question Answering capabilities to create a knowledge base, train it, and deploy it for answering customer queries using the natural language processing features of Azure AI.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to:
 
