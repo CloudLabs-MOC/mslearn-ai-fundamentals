@@ -9,9 +9,9 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this lab, you'll explore Azure AI Vision within the Azure AI Foundry portal to analyze images and extract meaningful information. By using built-in experiences, such as caption generation, image tagging, and object detection, you'll understand how to leverage AI to monitor and interpret images, like those from cameras in a "smart store." You'll be able to apply these tools to provide descriptions, tags, and insights into the content of images, supporting applications like customer assistance in retail environm
+In this lab, you'll explore Azure AI Vision within the Azure AI Foundry portal to analyze images and extract meaningful information. By using built-in experiences, such as caption generation, image tagging, and object detection, you'll understand how to leverage AI to monitor and interpret images, like those from cameras in a "smart store." You'll be able to apply these tools to provide descriptions, tags, and insights into the content of images, supporting applications like customer assistance in retail environment
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to use Azure AI Vision to analyze images and extract information for real-world scenarios. Specifically, you will learn to:
 
