@@ -8,12 +8,6 @@ In this lab, you will perform:
 - Task 1: Create a project in Azure AI Foundry portal
 - Task 2: Explore generative AI in Azure AI Foundry's chat playground
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/12png.png)
-
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore Vision and Document capabilities.
