@@ -13,12 +13,6 @@ In this lab, you will perform:
 - Task 3: Explore content filters
 - Task 4: Generate natural language output
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/ai900m14arc.png)
- 
 ### Task 1: Create an AI hub and project in the Azure AI Foundry portal
 
 In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore content filters in Azure AI Foundry.
