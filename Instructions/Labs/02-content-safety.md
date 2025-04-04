@@ -12,13 +12,7 @@ In this lab, you will perform:
 - Task 2: Associate a resource with the studio 
 - Task 3: Try out text moderation in the Content Safety Studio
 - Task 4: Check out the keys and endpoint
-
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
-![](media/Module1.1.png)
-
+  
 > **Note:** The goal of this exercise is to provide a general understanding of how Azure AI services are provisioned and used. While Content Safety is used as an example, you are not expected to gain in-depth knowledge of content safety during this exercise!
 
 ## Exercise 1:  Explore the Content Safety Studio 
