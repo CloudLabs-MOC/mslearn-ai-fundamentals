@@ -10,12 +10,6 @@ In this lab, you will perform:
 - Task 1: Creating a Translator resource
 - Task 2: Exploring Translator service 
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/arch15.png)
-
 ## Task 1: Create a Translator resource
 
 In this task, you will learn how to create a **Translator** resource in Azure to enable real-time language translation capabilities for your applications.
