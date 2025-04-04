@@ -11,15 +11,15 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this hands-on lab, you'll explore the Azure AI Content Safety Studio to evaluate and moderate text and image content. By creating a Content Safety service, associating it with the studio, and running moderation tests, you’ll gain insights into the severity levels of different types of content. The lab will guide you through exploring text moderation, analyzing results, and checking the necessary keys and endpoints for integrating the service with your applications.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to use the Azure AI Content Safety Studio to moderate and evaluate text content based on severity levels. You will learn to:
 
-1.**Set up a Content Safety resource**: Create and associate an Azure Content Safety resource with the Content Safety Studio to evaluate and moderate content.
+1. **Set up a Content Safety resource**: Create and associate an Azure Content Safety resource with the Content Safety Studio to evaluate and moderate content.
 
-2.**Perform text moderation**: Analyze text content for harmful categories and review moderation results.
+2. **Perform text moderation**: Analyze text content for harmful categories and review moderation results.
 
-3.**Check keys and endpoint**: Retrieve and use keys and endpoints for integrating the Content Safety service into your applications.
+3. **Check keys and endpoint**: Retrieve and use keys and endpoints for integrating the Content Safety service into your applications.
 
 ## Pre-requisites
 
@@ -29,9 +29,9 @@ Basic knowledge of Azure and Azure Portal and familiarity with AI concepts relat
 
 In this lab, the architecture flow involves the following components:
 
-1.**Azure AI Content Safety Studio**: This is the main platform where you will associate a Content Safety resource and run moderation tests. It provides an interface to evaluate and categorize text and image content based on severity scores.
+1. **Azure AI Content Safety Studio**: This is the main platform where you will associate a Content Safety resource and run moderation tests. It provides an interface to evaluate and categorize text and image content based on severity scores.
 
-2.**Azure Content Safety Resource**: The resource is provisioned and associated with the Content Safety Studio. It provides the necessary capabilities to analyze and moderate text and image content in real-time.
+2. **Azure Content Safety Resource**: The resource is provisioned and associated with the Content Safety Studio. It provides the necessary capabilities to analyze and moderate text and image content in real-time.
 
 ## Architecture Diagram
 
