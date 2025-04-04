@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this lab, you’ll explore the content filters in Azure AI Foundry to ensure responsible AI behavior. You’ll deploy a model, set up content filters to manage harmful outputs, and generate natural language content using Azure's generative AI capabilities. This exercise is vital for understanding how to ensure ethical AI development and deployment.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
 
