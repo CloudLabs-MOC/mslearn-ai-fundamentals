@@ -1,101 +1,190 @@
-# Module 14: Explore content filters in Azure OpenAI
+# Module 14: Explore content filters in Azure AI Foundry
 
 ## Lab overview
 
-In this exercise, you'll explore the effect of the default content filters in Azure OpenAI.
-Azure OpenAI includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principles for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
+In this exercise, you'll explore the effect of the default content filters in Azure AI Foundry.
+Azure AI Foundry includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principles for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will perform:
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Create an AI hub and project in the Azure AI Foundry portal
 - Task 2: Deploy a model
-- Task 3: Generate natural language output
-- Task 4: Explore content filters
+- Task 3: Explore content filters
+- Task 4: Generate natural language output
 
 ## Estimated timing: 30 minutes
 
 ## Architecture Diagram
 
- ![](media/fourteen.png)
+ ![](media/ai900m14arc.png)
  
-## Exercise 1: Explore content filters in Azure OpenAI
+### Task 1: Create an AI hub and project in the Azure AI Foundry portal
 
-### Task 1: Provision an Azure OpenAI resource
+In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore content filters in Azure AI Foundry.
 
-In this task, you will learn how to provision an **Azure OpenAI** resource to access advanced AI models for tasks like natural language processing, code generation, and more.
+1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
 
-1. In azure portal, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
+   ![](./media/3-27.png)
 
-   ![](./media/openai.png)
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
-1. Click on **+ Create** resource with the following settings:
+   ![](./media/17-18.png)
 
-    - **Subscription**: Select your **existing azure subscription (1)**.
-    - **Resource group**: Select **AI-900-Module-14(2)**
-    - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
-    - **Name**:  Enter **openai<inject key="DeploymentID" enableCopy="false" /> (4)**
-    - **Pricing tier**: Standard S0 **(5)**
+1. If prompted to sign in, enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+      ![Enter Your Username](./media/19-4.png)
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/19-5.png)
+     
+1. If prompted to stay signed in, you can click **No**.
 
-      ![](./media/openai1.png)
+   ![](./media/9-8.png)
 
-2. Click **Next (6)** twice and on the **Review + submit**, click on **Create**.
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
-   >**Note**: Azure OpenAI resources are subject to regional quotas. The listed regions include default quotas for the model type(s) used in this exercise. Selecting a region randomly helps reduce the risk of a single region exceeding its quota, especially when sharing a subscription with others. If a quota limit is reached later in the exercise, you may need to create another resource in a different region.
+   ![](./media/3-23.png)
 
-3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
+
+1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+
+    ![](./media/ai900m10-2.png)
+
+1. On the **Create a project** pane, Configure it with the following settings:
+
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
+    - **Resource group**: Select **AI-900-Module-12 (3)**
+    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
+    - **Connect Azure AI Services or Azure OpenAI Service**:
+    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next (7)**
+    - **Connect Azure AI Search**: Leave as default **(8)**
+    - Click on **Next (9)**
+
+        ![](./media/ai900m10--3.png)
+
+        > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+
+1. On the **Review and Finish** page, click on **Create**.
+
+    ![](./media/12-2.png)
+
+1. Keep track of the following created resources: 
+    
+    - **Azure AI Project**
+    - **Azure AI Hub**  
+    - **Azure AI Services**    
+    - **Storage Account**  
+    - **Key Vault**
+
+      ![](./media/17-4.png)
+
+      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+
+1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
+
+    ![](./media/3-24.png)
    
 ### Task 2: Deploy a model
 
-In this task, you will learn how to deploy a model in your **Azure OpenAI** resource to integrate its capabilities into your applications and start generating insights or predictions.
+In this task, you will learn how to deploy a model to use through the Azure AI Foundry portal. Once deployed, you will use the model to generate natural language content.
 
-Now you're ready to deploy a model to use through the **Azure AI Foundry portal**. Once deployed, you will use the model to generate natural language content.
+1. In the navigation pane on the left, under **My assets**, select the **Models + endpoints (1)** page. Select **Deploy mode (2)** drop down and then select **Deploy a base model (3)**.
 
-1. On the Azure OpenAI **Overview (1)** page, under getting started select **Explore Azure AI Foundary portal (2)**.
+    ![](./media/ai900m13-1.png)
 
-    ![](./media/foundry.png)
+1. Search for **gpt-4o (1)**, select **gpt-4o (2)** and then click on **Confirm (3)**.
 
-   >**Note:** If a pop-up regarding the new experience appears, simply close the window.
+    ![](./media/ai900m13-2.png)
 
-2. Choose **Deployment (1)** from the left pane, click on **+ Deploy model (2)** and select **Deploy base model. (3)**
+1. Click on **Deploy (3)**.
 
-   ![](./media/new2upd.png)
+    ![](./media/ai900m13-3.png)
 
-4. In Azure AI Foundry portal, create a new deployment with the following settings:
+### Task 3: Explore content filters
 
-  - **Model**: gpt-35-turbo (1) and click on **Confirm (2)**
+In this task, you will learn how to explore content filters in **Azure AI Foundry** to control and refine the output generated by the model, ensuring it aligns with desired standards and guidelines.
 
-    ![](./media/new3.png)
-   
-  - **Deployment name**: 35turbo
-  - **Deployment type**: Standard
-  - **Click on Customize**:
-    - **Model version**: Default  
-    - **Content filter**: Default  
-    - **Tokens per minute rate limit**: 5K **(1)**  
-    - **Enable dynamic quota**: Disabled **(2)**  
-    - Click on **Deploy** **(3)**  
+Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
-     ![Deployment Screenshot](./media/new4upd1.png)  
+1. In Azure AI Foundry portal, navigate to **Safety + security (1)** page, navigate to **Content filters (2)** tab and then select **+ Create content filter (3)** and review the default settings for a content filter.
 
-    >**Note**: Each Azure OpenAI model is tailored to offer a unique balance of capabilities and performance. For this exercise, we’ll be using the **GPT 3.5 Turbo** model, which excels in natural language generation and chat-based scenarios.
-    > A rate limit of 5,000 tokens per minute is more than sufficient to complete this exercise, while still leaving enough capacity for others using the same subscription.
+   ![](./media/ai900m13-4.png)
+
+1. In the Basic information tab, provide the following information and then click on **Next (3)**:
+   - **Name**: A unique name for your content filter **(1)**
+   - **Connection**: Select you Azure OpenAI connection **(2)**
+
+     ![](./media/ai900m13-5.png)
+
+1. In the **Input filter** tab, review the default settings for a content filter. Also do explore the input filter and output filter tabs such as **Categories**, **Media**, **Action** and **Threshold.** 
+
+   Content filters are based on restrictions for four categories of potentially harmful content:
+
+   - **Hate**: Language that expresses discrimination or pejorative statements.
+   - **Sexual**: Sexually explicit or abusive language.
+   - **Violence**: Language that describes, advocates, or glorifies violence.
+   - **Self-harm**: Language that describes or encourages self-harm.
+
+   Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.   
+
+     ![](./media/ai900m13-6.png)   
+
+1. Change the **threshold** for each category to **Low (1)**. Select **Next (2)**.
+
+   ![](./media/ai900m13-7.png)
+
+1. In the **Output filter** tab, change the threshold for each category to **Low (1)**. Select **Next (2)**.
+
+   ![](./media/ai900m13-8.png)
+
+1. In the **Deployment** tab, select the d**eployment previously created (1)**, then select **Next (2)**.
+
+   ![](./media/ai900m13-9.png)
+
+    > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
+
+1. If you receive a notification that the selected **deployment already has content filters applied**, select **Replace**.  
+
+   ![](./media/ai900m13-10.png)
+
+1. Select **Create filter**.
+
+   ![](./media/ai900m13-11.png)
+
+1. Return to the **Models + endpoints (1)** page and notice that your deployment now references the **custom content filter (2)** you’ve created.   
+
+   ![](./media/ai900m13-12.png)
+
  
-### Task 3: Generate natural language output
+### Task 4: Generate natural language output
 
-In this task, you will learn how to generate natural language output using your deployed model in **Azure OpenAI**, enabling your applications to produce human-like text for a variety of use cases.
+In this task, you will learn how to generate natural language output using your deployed model in **Azure AI Foundry**, enabling your applications to produce human-like text for a variety of use cases.
 
 Let's see how the model behaves in a conversational interaction.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
+1. Navigate to the **Playgrounds (1)** in the left pane and then select **Try the Chat Playground (2)**.
 
-1. In the **Chat session** section, enter the following prompt.
+   ![](./media/ai900m13-14.png)
+
+1. In the **Chat session** section, Make sure that **gpt-4o (1)** model selected, enter the following prompt **(2)**. and then click on **Send (3)** button.
 
     ```
    Describe characteristics of Scottish people.
     ```
 
+    ![](./media/ai900m13-15.png)    
+
 1. The model will likely respond with some text describing some cultural attributes of Scottish people. While the description may not be applicable to every person from Scotland, it should be fairly general and inoffensive.
+
+   ![](./media/ai900m13-16.png)
 
 1. Click on the **Setup** button.
 
@@ -107,9 +196,15 @@ Let's see how the model behaves in a conversational interaction.
 
 1. Select **Apply changes (2)** to the system message.
 
-   ![](./media/new5upd1.png)
+   ![](./media/ai900m13-17.png)
 
-   >**Note:** In the **Update system message?** pop-up, click **Continue**.
+    >**Note:** In the **Update system message?** pop-up, click **Continue**.
+
+     ![](./media/ai900m13-18.png)    
+
+1. In the **Chat history**, click on the given icon to delete the previous chat history.
+
+   ![](./media/ai900m13-19.png)
 
 1. In the **Chat session** section, re-enter the following prompt.
 
@@ -117,58 +212,17 @@ Let's see how the model behaves in a conversational interaction.
    Describe characteristics of Scottish people.
     ```
 
-1. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
+    ![](./media/ai900m13-20.png)    
 
-### Task 4: Explore content filters
-
-In this task, you will learn how to explore content filters in **Azure OpenAI** to control and refine the output generated by the model, ensuring it aligns with desired standards and guidelines.
-
-Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
-
-1. In Azure AI Foundry portal, navigate to **Safety + security (1)** page, select **+ Create content filter (2)** and review the default settings for a content filter.
-
-   ![](./media/new6upd.png)
-
-1. Create the Content Filter with default name and default settings. also do explore the input filter and output filter tabs such as **Categories**, **Media**, **Action** and **Threshold.** 
-
-
-1. In the **Basic information** tab, leave the name as default and click on **next**:
-
-1. In the **Input filter** tab, review the default settings for a content filte
-
-    Content filters are based on restrictions for four categories of potentially harmful content:
-
-    - **Hate**: Language that expresses discrimination or pejorative statements.
-    - **Sexual**: Sexually explicit or abusive language.
-    - **Violence**: Language that describes, advocates, or glorifies violence.
-    - **Self-harm**: Language that describes or encourages self-harm.
-
-    Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
-
-   ![](./media/new7.png)
-
-1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
-
-1. In the **Output filter** tab, change the threshold for each category to **Low**. Select Next.
-
-1. In the **Deployment** tab, select the deployment previously created, then select Next.
-
-    > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="f9679e3c-fa2a-4e81-befb-6535e3bd635b" />
+1. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure AI Foundry.
 
 ### Review
 
 In this exercise, you have completed the following tasks:
-- Provisioned an Azure OpenAI resource
+- Created an AI hub and project in the Azure AI Foundry portal
 - Deployed a model
-- Generated natural language output
 - Explored content filters
+- Generated natural language output
+
 
 ## You have successfully completed this lab.
