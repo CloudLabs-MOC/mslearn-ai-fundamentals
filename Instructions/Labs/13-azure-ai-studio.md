@@ -14,12 +14,6 @@ In this exercise, you will perform:
 - Task 4: Explore AI Services
 - Task 5: Deploy and test a generative AI model
 
-## Estimated timing: 60 minutes
-
-## Architecture Diagram
-
-![](media/new-ai900-lab13-archdiagram.JPG)
-
 ## Exercise 1: Explore the components and tools of the Azure AI Studio
 
 ### Task 1: Open Azure AI Foundry portal
