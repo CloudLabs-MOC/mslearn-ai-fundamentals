@@ -3,43 +3,70 @@
 
 Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Module 04: Detect faces in Vision Studio
+# Module 08: Use Conversational Language Understanding with Language Studio
 
-### Overall Estimated timing: 30 minutes
+### Overall Estimated timing: 45 minutes
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience in using Azure AI services to detect human faces in images with Vision Studio. You will learn how to create and configure an Azure AI Services resource, connect it to Vision Studio, and utilize Azure AI Face to analyze images. By following step-by-step tasks, you’ll explore how to detect facial features, identify bounding box coordinates, and analyze partially obscured faces. By the end of this lab, you'll be proficient in setting up and using Vision Studio for face detection, equipping you with the skills to leverage Azure AI for computer vision applications in real-world scenarios.
+In this hands-on lab, you will learn how to use the Conversational Language Understanding (CLU) feature in Azure Language Studio to create intelligent systems that can understand natural language input and execute actions based on user commands. Specifically, you will create an application that interprets commands related to controlling home automation devices, such as turning lights and fans on or off, using conversational language. By leveraging Azure's CLU capabilities, you will build and train a model that can process various intents, utterances, and entities from users.
 
 ## Objective
 
 By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
 
-1. **Create a project in Azure AI Foundry portal**: You will learn about configuring an Azure AI Foundry project, provisioning necessary AI resources, and exploring Vision and Document Intelligence capabilities for automated data extraction.
+1. Create a Language Resource in Azure to use Conversational Language Understanding (CLU).
 
-2. **Explore speech to text in Azure AI Foundry's Speech Playground**: You will learn about using Azure AI Speech to Text to convert spoken language into written text, extract key insights from audio data, and interpret the results for further processing.
+2. Create a Conversational Language Understanding (CLU) App to build conversational agents.
+
+3. Define Intents, Utterances, and Entities for natural language processing tasks.
+
+4. Train the Conversational Language Understanding Model to recognize user inputs.
+
+5. Deploy and Test the Model to ensure its performance and accuracy.
 
 ## Pre-requisites
 
-Basic knowledge of Azure AI services and Speech service.
+Basic Understanding of Natural Language Processing (NLP) and familiarity with Language Studio
 
 ## Architecture
 
 In this hands-on lab, the architecture flow includes several essential components.
 
-1. **Create a project in Azure AI Foundry portal**: Understanding how to set up a new project in Azure AI Foundry, including configuring AI resources to support Vision and Document Intelligence capabilities. This involves selecting the appropriate AI models, setting up access permissions, and ensuring the project is properly structured for document processing workflows.
+1. **Language Resource**: The foundation resource required to enable natural language processing capabilities, which includes the CLU feature.
 
-1. **Explore Speech to Text in Azure AI Foundry's Speech Playground**: Learning how to convert spoken language into text using Azure AI Foundry's Speech Playground. This includes uploading or recording audio, analyzing transcriptions, and extracting key insights such as speaker identification, timestamps, and sentiment analysis. Additionally, understanding how to integrate the transcribed data into business applications for automation and enhanced accessibility.
+2. **Conversational Language Understanding (CLU) App**: The primary application where you define your intents, utterances, and entities. This app processes incoming natural language input and matches it to the correct intent.
+
+3. **Intents**: These represent the action the user wants to perform (e.g., "switch_on", "switch_off").
+
+4. **Utterances**: These are the user-provided phrases that the CLU model will use to infer the intent (e.g., "turn on the light", "put the fan off").
+
+6. **Entities**: These represent the objects that are involved in the intent (e.g., "light", "fan").
+
+7. **Training Model**: Once the intents, utterances, and entities are defined, the CLU model is trained to recognize and process these inputs.
+
+8. **Deployment**: The trained model is deployed to create an endpoint that can be queried by client applications.
+
 
 ## Architecture Diagram
 
-![An image](../media/lab-04.PNG)
+![Select add under Intents on the Build Schema pane.](../media/arch8.PNG)
 
 ## Explanation of Components
 
-1. **Azure AI Foundry**: A centralized platform for managing AI projects, models, and experiments. It provides tools for building, testing, and deploying AI solutions.  
+1. **Language Resource**: This is the base resource created in Azure, which enables the use of all Language Studio features, including Conversational Language Understanding. This resource is responsible for providing access to language processing capabilities, including understanding, interpreting, and responding to natural language commands.
 
-2. **Azure AI Speech**: A cloud-based service that enables speech-to-text, text-to-speech, and speech translation capabilities. It provides tools for real-time transcription, voice synthesis, and speaker recognition, allowing developers to integrate natural voice interactions into applications.
+2. **Conversational Language Understanding (CLU) App**: This app is the core of the conversational agent. It provides a platform for you to define various intents (actions), utterances (user inputs), and entities (objects or concepts). The CLU app leverages machine learning to learn how to interpret user inputs and predict the most likely intent and entities.
+
+3. **Intents**: An intent represents a user’s goal or the action they want to perform. In this lab, the intents were defined as actions related to controlling devices, such as "switch_on" and "switch_off". The app will recognize when a user is asking to perform one of these actions.
+
+4. **Utterances**: These are example phrases that represent how a user might express their desire to trigger an intent. For instance, for the "switch_on" intent, utterances like “turn on the light” and “switch on the fan” are used. These utterances help train the model to recognize the different ways users may ask for the same action.
+
+5. **Entities**: An entity is a specific object or concept that the intent refers to. In this lab, the entities are devices such as "light" and "fan". Entities help to further specify the action, so that the system knows which device is being referred to in a command.
+
+6. **Training Model**: Once the intents, utterances, and entities are defined, the CLU model is trained to understand how these elements work together to produce accurate responses to user commands. Training involves teaching the model to recognize patterns in user input and map them to the correct intent and entities.
+
+7. **Deployment**: After the model is trained, it is deployed as an endpoint that can be used by client applications to send natural language inputs and receive predictions. The deployment allows the trained model to be accessed via an API endpoint, enabling integration with real-world applications.
 
 # Getting Started with lab
  
