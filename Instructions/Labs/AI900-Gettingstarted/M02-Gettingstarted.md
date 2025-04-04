@@ -9,37 +9,39 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience in using Azure AI services to detect human faces in images with Vision Studio. You will learn how to create and configure an Azure AI Services resource, connect it to Vision Studio, and utilize Azure AI Face to analyze images. By following step-by-step tasks, you’ll explore how to detect facial features, identify bounding box coordinates, and analyze partially obscured faces. By the end of this lab, you'll be proficient in setting up and using Vision Studio for face detection, equipping you with the skills to leverage Azure AI for computer vision applications in real-world scenarios.
+In this hands-on lab, you'll explore the Azure AI Content Safety Studio to evaluate and moderate text and image content. By creating a Content Safety service, associating it with the studio, and running moderation tests, you’ll gain insights into the severity levels of different types of content. The lab will guide you through exploring text moderation, analyzing results, and checking the necessary keys and endpoints for integrating the service with your applications.
 
 ## Objective
 
-By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
+By the end of this lab, you will be able to use the Azure AI Content Safety Studio to moderate and evaluate text content based on severity levels. You will learn to:
 
-1. **Create a project in Azure AI Foundry portal**: You will learn about configuring an Azure AI Foundry project, provisioning necessary AI resources, and exploring Vision and Document Intelligence capabilities for automated data extraction.
+1.**Set up a Content Safety resource**: Create and associate an Azure Content Safety resource with the Content Safety Studio to evaluate and moderate content.
 
-2. **Explore speech to text in Azure AI Foundry's Speech Playground**: You will learn about using Azure AI Speech to Text to convert spoken language into written text, extract key insights from audio data, and interpret the results for further processing.
+2.**Perform text moderation**: Analyze text content for harmful categories and review moderation results.
+
+3.**Check keys and endpoint**: Retrieve and use keys and endpoints for integrating the Content Safety service into your applications.
 
 ## Pre-requisites
 
-Basic knowledge of Azure AI services and Speech service.
+Basic knowledge of Azure and Azure Portal and familiarity with AI concepts related to content moderation.
 
 ## Architecture
 
-In this hands-on lab, the architecture flow includes several essential components.
+In this lab, the architecture flow involves the following components:
 
-1. **Create a project in Azure AI Foundry portal**: Understanding how to set up a new project in Azure AI Foundry, including configuring AI resources to support Vision and Document Intelligence capabilities. This involves selecting the appropriate AI models, setting up access permissions, and ensuring the project is properly structured for document processing workflows.
+1.**Azure AI Content Safety Studio**: This is the main platform where you will associate a Content Safety resource and run moderation tests. It provides an interface to evaluate and categorize text and image content based on severity scores.
 
-1. **Explore Speech to Text in Azure AI Foundry's Speech Playground**: Learning how to convert spoken language into text using Azure AI Foundry's Speech Playground. This includes uploading or recording audio, analyzing transcriptions, and extracting key insights such as speaker identification, timestamps, and sentiment analysis. Additionally, understanding how to integrate the transcribed data into business applications for automation and enhanced accessibility.
+2.**Azure Content Safety Resource**: The resource is provisioned and associated with the Content Safety Studio. It provides the necessary capabilities to analyze and moderate text and image content in real-time.
 
 ## Architecture Diagram
 
-![An image](../media/lab-04.PNG)
+![](../media/Module1.1.png)
 
 ## Explanation of Components
 
-1. **Azure AI Foundry**: A centralized platform for managing AI projects, models, and experiments. It provides tools for building, testing, and deploying AI solutions.  
+1. **Azure AI Content Safety Studio**: A platform within Azure AI designed to manage and moderate text and image content by evaluating it for harmful or inappropriate categories. It provides easy-to-use tools to test and analyze content using AI-based moderation models.
 
-2. **Azure AI Speech**: A cloud-based service that enables speech-to-text, text-to-speech, and speech translation capabilities. It provides tools for real-time transcription, voice synthesis, and speaker recognition, allowing developers to integrate natural voice interactions into applications.
+2. **Azure Content Safety Resource**: A service that analyzes content (text and images) and assigns severity scores based on categories like violence, hate speech, or explicit content. This resource is configured within the Azure portal and linked to the Content Safety Studio for testing and integration.
 
 # Getting Started with lab
  
