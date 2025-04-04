@@ -14,12 +14,6 @@ In this lab, you will perform:
 - Task 3: Tagging images 
 - Task 4: Object detection
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/ex17.png)
-
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are setting up a project in Azure AI Foundry by creating and configuring an AI services environment for further experimentation.
