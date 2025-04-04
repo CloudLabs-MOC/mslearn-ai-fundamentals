@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this hands-on lab, you will learn how to use the Conversational Language Understanding (CLU) feature in Azure Language Studio to create intelligent systems that can understand natural language input and execute actions based on user commands. Specifically, you will create an application that interprets commands related to controlling home automation devices, such as turning lights and fans on or off, using conversational language. By leveraging Azure's CLU capabilities, you will build and train a model that can process various intents, utterances, and entities from users.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
 
