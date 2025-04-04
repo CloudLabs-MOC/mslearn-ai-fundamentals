@@ -7,16 +7,11 @@ Vision solutions often require AI to be able to detect human faces. Suppose the 
 To test the face detection capabilities of the Azure AI Face service, you will use [Azure Vision Studio](https://portal.vision.cognitive.azure.com/). This is a UI-based platform that lets you explore Azure AI Vision features without needing to write any code.
 
 ## Lab objectives
+
 In this lab, you will perform:
 -  Task 1: Create an Azure AI services resource
 -  Task 2: Connect Azure AI Service Resource to Vision Studio
 -  Task 3: Detect faces in the Vision Studio
-
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
-![An image](media/lab-04.PNG)
 
 ### Task 1: Create an Azure AI services resource
 
