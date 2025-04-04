@@ -12,12 +12,6 @@ In this lab, you will perform:
 - Task 2: Use automated machine learning to train a model
 - Task 3: Deploy the model
 
-## Estimated timing: 60 minutes
-
-## Architecture Diagram
-
- ![](media/lab01-arch.jpg)
-
 ## Exercise 1: Explore Automated Machine Learning in Azure Machine Learning
 
 ### Task 1: Create an Azure Machine Learning workspace
