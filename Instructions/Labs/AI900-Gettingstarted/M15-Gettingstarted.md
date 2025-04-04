@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 This lab will help you explore the capabilities of Azure AI Translator, a service that simplifies language translation across applications. The Azure AI Translator service can detect and translate languages, making it easier to build multilingual solutions for websites, mobile apps, and other services. You will set up a Translator resource and explore how the service works within the Azure Portal.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will:
 
