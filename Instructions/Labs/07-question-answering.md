@@ -8,6 +8,7 @@ Azure AI Language includes *question answering* capabilities, which you will use
 The Language service's question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
 ## Lab Objectives
+
 In this lab, you will perform:
 
 - Task 1: Create a *Language* resource
@@ -15,12 +16,6 @@ In this lab, you will perform:
 - Task 3: Edit the knowledge base
 - Task 4: Train and test the knowledge base
 - Task 5: Create a bot for the knowledge base
-
-## Estimated timing: 45 minutes
-
-## Architecture Diagram
-
-![](media/arch7.PNG)
 
 ## Exercise 1: Use Question Answering model with Language Studio
 
