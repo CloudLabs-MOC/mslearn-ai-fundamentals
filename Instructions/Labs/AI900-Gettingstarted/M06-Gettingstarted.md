@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 ## Overview:
 In this hands-on lab, you'll gain practical experience in analyzing text using the Azure AI Foundry portal, a platform for building intelligent applications with Azure AI Language services. You will learn how to create and configure a project in the Azure AI Foundry portal and explore key Natural Language Processing (NLP) capabilities. Specifically, you will extract named entities from text, identify key phrases, and generate text summaries using Azure AI Language. By the end of this lab, you’ll be proficient in leveraging Azure AI Foundry for text analysis, equipping you with the skills to extract meaningful insights from unstructured text data in various real-world scenarios.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze text using Azure AI language.
 
@@ -42,7 +42,7 @@ Extracting named entities using Azure AI Language in Azure AI Foundry helps busi
 
 ## Architecture Diagram
 
-![](../media/ex18.png)
+![](../media/ex18.PNG)
 
 ## Explanation of Components:
 
