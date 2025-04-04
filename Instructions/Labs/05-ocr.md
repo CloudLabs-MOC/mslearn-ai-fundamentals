@@ -14,12 +14,6 @@ In this lab, you will perform:
 - Task 2: Connect your Azure AI service resource to Vision Studio
 - Task 3: Extract text from images in the Vision Studio
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
-![An image](media/arch5.PNG)
-
 ## Exercise 1: Read the text in Vision Studio
 
 ### Task 1: Create an *Azure AI services* resource
