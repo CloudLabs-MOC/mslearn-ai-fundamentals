@@ -11,7 +11,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this hands-on lab, you'll gain practical experience in using Azure Machine Learning to automate the process of training, evaluating, and deploying machine learning models. You will learn how to create an Azure Machine Learning workspace, utilize automated machine learning to train a model, and deploy the trained model as a web service. By following step-by-step tasks, you'll explore how to configure your workspace, train a predictive model using historical data, and deploy it for real-time predictions. By the end of this lab, you'll be proficient in using Azure Machine Learning's automated capabilities, empowering you with the skills to apply machine learning in real-world scenarios without extensive coding.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a workspace in Azure Machine Learning, use automated machine learning to train a predictive model, and deploy the model as a web service.
 
