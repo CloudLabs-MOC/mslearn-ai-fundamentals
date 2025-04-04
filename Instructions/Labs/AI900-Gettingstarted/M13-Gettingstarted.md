@@ -5,7 +5,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 # Module 13: Azure AI Studio
 
-### Overall Estimated timing: 60 minutes
+### Overall Estimated timing: 45 minutes
 
 ## Overview
 
