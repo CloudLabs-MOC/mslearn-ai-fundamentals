@@ -1,8 +1,6 @@
 
 # Module 10: Extract data from documents in Azure AI Foundry portal
 
-## Estimated timing: 30 minutes
-
 ## Lab overview
 
 **Azure AI Document Intelligence** service enables you to analyze and extract information from forms and documents, and then identify field names and data. 
