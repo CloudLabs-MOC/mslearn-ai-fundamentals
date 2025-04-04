@@ -5,7 +5,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 # Module 01: Explore Automated Machine Learning in Azure Machine Learning
 
-### Overall Estimated timing: 30 minutes
+### Overall Estimated timing: 60 minutes
 
 ## Overview
 
