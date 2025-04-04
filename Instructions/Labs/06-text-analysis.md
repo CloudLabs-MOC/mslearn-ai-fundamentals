@@ -17,12 +17,6 @@ In this lab, you will perform:
 - Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
 - Task 4: Summarize text with Azure AI Language in Azure AI Foundry portal
 
-## Estimated timing: 30 minutes
-
-## Architecture Diagram
-
- ![](media/ex18.PNG)
-
 ## Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are creating an Azure AI Foundry project and configuring necessary resources to explore AI language capabilities in the Language Playground.
