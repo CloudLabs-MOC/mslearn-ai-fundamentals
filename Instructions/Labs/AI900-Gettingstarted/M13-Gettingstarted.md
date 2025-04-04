@@ -11,15 +11,15 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 In this hands-on lab, you'll gain practical experience in leveraging Azure AI Foundry to build and manage AI solutions. You will learn how to navigate the Azure AI Foundry portal, create an Azure AI hub and project, and integrate connected resources to enhance your AI capabilities. Additionally, you'll explore various AI services available in Azure AI Foundry and deploy a generative AI model, testing its functionality in real-world scenarios. By the end of this lab, you'll be proficient in setting up AI projects, integrating resources, and deploying generative AI models, equipping you with essential skills to develop and manage AI-powered solutions in Azure.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a project in Azure AI Foundry and analyze a receipt using Azure AI Document Intelligence to extract key information efficiently
 
-- **Open Azure AI Foundry portal:**
-- **Create an Azure AI hub and project:**
-- **Add a connected resource:**
-- **Explore AI Services:**
-- **Deploy and test a generative AI model:**
+- **Open Azure AI Foundry portal**
+- **Create an Azure AI hub and project**
+- **Add a connected resource**
+- **Explore AI Services**
+- **Deploy and test a generative AI model**
 
 ## Pre-requisites Required
 
