@@ -114,12 +114,13 @@ In this task, you will create a Storage account in Azure, configure its settings
     - **Subscription (1)**: Select your **existing azure subscription**.
     - **Resource group (2)**: Select **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
     - **Storage account name (3)**: Enter **aistorage<inject key="DeploymentID" enableCopy="false" />**
-    - **Location (4)**: Select **<inject key="location" enableCopy="false"/>** 
-    - **Performance (5)**: Standard
-    - **Redundancy (6)**: Locally redundant storage (LRS)
-   - Click **Review + create (7)**.
+    - **Region (4)**: Select **<inject key="location" enableCopy="false"/>** 
+    - **Primary Service (5)**: Select **Azure Blob storage or Azure Data lake storage Gen2** from the lsit.
+    - **Performance (6)**: Standard
+    - **Redundancy (7)**: Locally redundant storage (LRS)
+   - Click **Review + create (8)**.
 
-      ![Picture1](media/lab11-2.png)
+      ![Picture1](media/ai900ghy.png)
    
 1. On the **Review + create** page, Click **Create**. 
 
@@ -242,6 +243,8 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     
 8. Select **Choose an existing connection**. Choose the storage account **aistorage<inject key="DeploymentID" enableCopy="false" /> (1)** you created earlier. Click on **+ Container (2)** to create a new container called **knowledge-store (3)** with the Anonymous access level set to **Private (4)**, and select **Create (5)**.
 
+    ![Picture1](media/ai900ghz.png)
+
 9. Select the **knowledge-store (1)** container, and then click **Select (2)** at the bottom of the screen.
 
     ![Picture1](media/lab11-29.png)
@@ -267,13 +270,12 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 - Change the **Indexer name** to **coffee-indexer (1)**.
 - Leave the **Schedule** set to **Once (2)**.
-- Expand the **Advanced options**. Ensure that the **Base-64 Encode Keys (3)** option is selected, as encoding keys can make the index more efficient.
-- Select **Submit (4)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+- Select **Submit (3)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
     - Extracts the document metadata fields and content from the data source.
     - Runs the skillset of AI skills to generate more enriched fields.
     - Maps the extracted fields to the index.
 
-      ![Picture1](media/lab11-33.png)
+      ![Picture1](media/ai900gha.png)
 
 16.  Return to your Azure AI Search resource page. On the left pane, under **Search Management**, select  **Indexers**. Select the newly created **coffee-indexer**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
 
