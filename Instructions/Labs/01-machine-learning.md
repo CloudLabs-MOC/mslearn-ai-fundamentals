@@ -24,7 +24,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 2. In the Marketplace page search for **Azure Machine Learning (1)** and Select **Azure Machine Learning (2)**.
  
-   ![Picture1](media/ai900-12.png)
+   ![Picture1](media/ai900mod1cimg1.png)
 
 3. On the **Azure Machine Learning** page, click **Create** to proceed.
 
@@ -55,11 +55,9 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 8. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and if prompted, sign into **Azure Machine Learning studio** using your Microsoft account). Close any messages that are displayed.
 
-   ![](media/ai900-1.png)
-
 9. In Azure Machine Learning studio, navigate to **Workspaces (1)**, you should see your newly created workspace **(2)**. If not, select **All workspaces** in the left-hand menu and then select the workspace you just created.
 
-    ![Picture1](media/ai900-2.png)
+    ![Picture1](media/lab1-6.png)
 
 #### Enable preview features
 
@@ -83,7 +81,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), naviage to the **Automated ML (1)** page (under **Authoring**), select  **+ New Automated ML job (2)**.
 
-   ![](media/ai900-3.png)  
+   ![](media/lab1-1.png)  
 
 1. Create a new Automated ML job with the following settings, using **Next (5)** as required to progress through the user interface:
 
@@ -198,11 +196,7 @@ When the automated machine learning job has completed, you can review the best m
   
 1. Select the text under **Algorithm name** for the best model to view its details.
 
-    ![](media/ai900-4.png)
-
 1. Select the **Metrics** tab and select the **residuals** and **predicted_true** charts if they are not already selected. 
-
-    ![](media/ai900--5.png)
 
     >**Note:** Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
 
