@@ -151,7 +151,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
         - Primary metric: **Normalized root mean squared error** **(3)**
         - Explain best model: **Unselected** **(4)**
         - **Use all supported models**: <u>Un</u>selected.  *You'll restrict the job to try only a few specific algorithms.*
-        - **Allowed models (4)**: *Select only **RandomForest** and **LightGBM** (5) — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
+        - **Allowed models**: *Select only **RandomForest** and **LightGBM** (5) — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
 
     - **Limits**: *Expand this section*
         - Max trials: **3** **(1)**
