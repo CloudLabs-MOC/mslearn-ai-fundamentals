@@ -108,61 +108,50 @@ Automated machine learning enables you to try multiple algorithms and parameters
         - **Data type**:
             - **Name**:  Enter **bike-rentals (1)**
             - **Description**: Enter **Historic bike rental data (2)**
-            - **Type**: Select **Tabular** **(3)** and then select **Next (4)**
+         - **Data type**:
+            - **Name**: `bike-rentals`
+            - **Description**: `Historic bike rental data`
+            - **Type**: Table (mltable)
 
-               ![](media/lab1-24.png)
-
+              ![](media/ai900j1.png)
         - **Data source**:
-            - Select **From web files (1)** and then select **Next (2)**
+            - Select **From local files**
 
-              ![](media/lab1-23.png)
+              ![](media/ai900j2.png)
+        - **Destination storage type**:
+            - **Datastore type**: Azure Blob Storage
+            - **Name**: workspaceblobstore
 
-        - **Web URL**:
-            - **Web URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/ml/bike-data/daily-bike-share.csv` **(1)**
-            - **Skip data validation**: *do not select* **(2)** and then select **Next (3)**
+              ![](media/ai900j3.png)
+        - **MLtable selection**:
+            - **Upload folder**: Download and extract the contents of the folder from* [`https://aka.ms/bike-rentals`](https://aka.ms/bike-rentals), *which contains the two files you will need to upload. Once uploaded, click on **Next**.
 
-              ![](media/lab1-22.png)
+              ![](media/ai900j4.png)
 
-        - **Settings**:
-            - **File format**: Delimited **(1)**
-            - **Delimiter**: Comma **(2)**
-            - **Encoding**: UTF-8 **(3)**
-            - **Column headers**: Only first file has headers **(4)**
-            - **Skip rows**: None **(5)**
-            - **Dataset contains multi-line data**: *do not select* **(6)** and then select **Next (7)**
+              ![](media/ai900j5.png)
 
-              ![](media/lab1-21.png)
-
-        - **Schema**:
-            - Include all columns other than **Path (1)** and then select **Next (2)**
-
-               ![](media/lab1-20.png)
-
-            - Review the automatically detected types.
-
+              ![](media/ai900j6.png)
         - Select **Create**. 
-
-          ![](media/lab1-18.png)
-        
+  
+           ![](media/ai900j7.png)
+      
         - After the dataset is created, select the **bike-rentals (1)** dataset to continue to submit the Automated ML job. Select **Next (2)**
 
-          ![](media/lab1-19.png)
+           ![](media/ai900j8.png)
         
     **Task settings**:
 
     - **Task type**: Regression
     - **Data**: bike-rentals
-    - **Target column**: rentals (integer)
+    - **Target column**: rentals (integer) (1)
 
-       ![](media/lab1-17.png)
+       ![](media/ai900j9.png)
 
-    - Select **View additional configuration settings** under Target Column:
-        - Primary metric: **Normalized root mean squared error** **(1)**
-        - Explain best model: **Unselected** **(2)**
-        - **Use all supported models**: <u>Un</u>selected. **(3)** *You'll restrict the job to try only a few specific algorithms.*
-        - **Allowed models (4)**: *Select only **RandomForest (5)** and **LightGBM (6)** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
-
-          ![](media/lab1-16.png)
+    - Select **View additional configuration settings (2)** under Target Column:
+        - Primary metric: **Normalized root mean squared error** **(3)**
+        - Explain best model: **Unselected** **(4)**
+        - **Use all supported models**: <u>Un</u>selected.  *You'll restrict the job to try only a few specific algorithms.*
+        - **Allowed models (4)**: *Select only **RandomForest** and **LightGBM** (5) — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
 
     - **Limits**: *Expand this section*
         - Max trials: **3** **(1)**
@@ -173,14 +162,14 @@ Automated machine learning enables you to try multiple algorithms and parameters
         - Iteration timeout: **15** **(6)**
         - Enable early termination: *Selected* **(7)**
 
-          ![](media/lab1-15.png)
+          ![](media/ai900j10.png)
 
     - **Validation and test**:
         - **Validation type**: Train-validation split **(1)**
         - **Percentage validation of data**: 10 **(2)**
         - **Test dataset**: None **(3)** and then select **Next (4)**
 
-          ![](media/lab1-14.png)
+          ![](media/ai900j11.png)
 
     **Compute**:
     - **Select compute type**: Serverless **(1)**
@@ -189,11 +178,11 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Virtual machine size**: Standard_DS3_V2 **(4)**
     - **Number of instances**: 1 **(5)** and then select **Next (6)**
 
-      ![](media/lab1-13.png)
+      ![](media/ai900j12.png)
 
 1. Select **Submit training job**. It starts automatically.
 
-   ![](media/lab1-12.png)
+   ![](media/ai900j13.png)
 
 1. Wait for the job to finish. It might take around `10-15 minutes`, while — now might be a good time for a coffee break!
 
@@ -205,8 +194,7 @@ When the automated machine learning job has completed, you can review the best m
 
     ![](media/lab1-2.png)
 
-    > **Note**
-    > You may see a message under the status "Warning: User specified exit score reached...". This is an expected message. Please continue to the next step.
+    > **Note**: You may see a message under the status "Warning: User specified exit score reached...". This is an expected message. Please continue to the next step.
   
 1. Select the text under **Algorithm name** for the best model to view its details.
 
@@ -218,44 +206,79 @@ When the automated machine learning job has completed, you can review the best m
 
     >**Note:** Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
 
-### Task 3: Deploy the model
+### Task 3: Deploy and test the model
 
-In this task, you will learn how to deploy the trained model as a web service for real-time predictions.
+1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Real-time endpoint** option to deploy the model with the following settings:
 
-1. On the **Model (1)** tab for the best model trained by your automated machine learning job, select **Deploy (2)** and use the **Web service (3)** option to deploy the model
+   - **Instance count**: 3 (1) 
+    - **Virtual machine**: Standard_DS3_v2 (2)
+    - **Endpoint**: New (3)
+    - **Endpoint name**: *Leave the default name* (4)
+    - **Deployment name**: *Leave default* (5)
+    - **Inferencing data collection**: *Disabled* (6)
+    - **Package Model**: *Disabled* (7)
 
-    ![](media/ai900-10.png)
+    ![](media/ai900j15.png)
 
-1. Enter the following details:
-    - Name: **predict-rentals**  **(1)**
-    - Description: **Predict cycle rentals** **(2)**
-    - Compute type: **Azure Container Instance** **(3)**
-    - Enable authentication: **Selected** **(4)**
-    - Select **Deploy (5)**
+    ![](media/ai900j16.png)
 
-      ![](media/ai900-7.png)
+1. Select **Deploy (8)**
 
-1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as **Running**. You can see the deployement status in notification.
+1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
 
-    ![](media/ai900-9.png)
+   >**Note**: Verify Notification settings bar to check the status.
 
-1. Wait for the **Deploy status** to change to *Completed*. This may take 5-10 minutes.
+### Task 4: Test the deployed service
 
-    ![](media/ai900-8.png)
+Now you can test your deployed service.
 
-1. Naviagat to **Endpoint (1)**, here you can see the newly created **predict-rentals** endpoint. **(2)**
+1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints** and open the **Real-timeendpoint**. in the page.
 
-    ![](media/ai900-11.png)
+1. On the *real-time endpoint* page view the **Test** tab.
 
-## Validation
+    ![](media/ai900j17.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. you will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+1. In the **Input data to test endpoint** pane, replace the template JSON with the following input data:
 
-  <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
+    ```json
+      {
+     "input_data": {
+       "columns": [
+         "day",
+         "mnth",
+         "year",
+         "season",
+         "holiday",
+         "weekday",
+         "workingday",
+         "weathersit",
+         "temp",
+         "atemp",
+         "hum",
+         "windspeed"
+       ],
+       "index": [0],
+       "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+     }
+    }
+
+    ```
+
+1. Click the **Test** button.
+
+    ![](media/ai900j18.png)
+
+1. Review the test results, which include a predicted number of rentals based on the input features - similar to this:
+
+    ```JSON
+    [
+      352.3564674945718
+    ]
+    ```
+
+    The test pane took the input data and used the model you trained to return the predicted number of rentals.
+
+Let's review what you have done. You used a dataset of historical bicycle rental data to train a model. The model predicts the number of bicycle rentals expected on a given day, based on seasonal and meteorological *features*.
 
 ### Review
 In this lab, you have completed the following tasks:
