@@ -208,7 +208,7 @@ When the automated machine learning job has completed, you can review the best m
 
 ### Task 3: Deploy and test the model
 
-1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Real-time endpoint** option to deploy the model with the following settings:
+1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and use the **Real-time endpoint (2)** option to deploy the model with the following settings:
 
    - **Instance count**: 3 (1) 
     - **Virtual machine**: Standard_DS3_v2 (2)
@@ -226,7 +226,7 @@ When the automated machine learning job has completed, you can review the best m
 
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
 
-   >**Note**: Verify Notification settings bar to check the status.
+   >**Note**: Check the **Notifications** bar to verify the status of the operation.
 
 ### Task 4: Test the deployed service
 
