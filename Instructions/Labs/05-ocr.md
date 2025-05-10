@@ -26,7 +26,7 @@ You can use Azure AI Vision's OCR capabilities with an **Azure AI services** mul
 
    ![The image and its captions are displayed.](./media/aix1.png)
 
-1. Select an **Azure AI services multi-service  account (2)**.
+1. Select an **Azure AI services multi-service  account**.
 
    ![The image and its captions are displayed.](./media/aix2.png)
 
