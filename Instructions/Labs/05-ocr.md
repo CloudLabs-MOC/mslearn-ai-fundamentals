@@ -22,9 +22,13 @@ In this task, you will learn how to create an **Azure AI Services** resource to 
 
 You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the Azure portal, search for **Azure AI services (1)**. Select an **Azure AI services multi-service  account (2)**.
+1. In the Azure portal, search for **Azure AI services**. 
 
-    ![The image and its captions are displayed.](./media/ai900m5-1.png)
+   ![The image and its captions are displayed.](./media/aix1.png)
+
+1. Select an **Azure AI services multi-service  account (2)**.
+
+   ![The image and its captions are displayed.](./media/aix2.png)
 
 1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
 
