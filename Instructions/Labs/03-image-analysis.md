@@ -118,7 +118,17 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![](./media/3-26.png)
 
-     >**Note**: If you didn't select a valid resource location during resource creation, you may be prompted to create a new Azure AI services resource in a valid region. To continue with the lab, you must create the new resource in one of the supported regions: **East US, France Central, Korea Central, West Europe, or West US**.
+   > **Note**: If a valid resource location wasn't selected during resource creation, you may be prompted to create a new Azure AI Services resource in a supported region.  
+   > To proceed with the lab, ensure the new resource is created in one of the following supported regions:  
+   > **East US, France Central, Korea Central, West Europe, or West US**.
+   
+   - If the AI service resource does not appear in the drop-down menu, select **Create now** to provision a new AI Services resource in one of the supported regions listed above.
+   
+     ![](./media/ai900y6.png)
+   
+   - On the **Create a new AI Services resource** page, enter **AII<inject key="DeploymentID" enableCopy="false" />** in the **AI Services name** field, then click **Create and connect (2)**.
+   
+     ![](./media/ai900y7.png)
 
 1. Copy highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu and paste it into the new tab to download **image-analysis.zip**. 
 
