@@ -23,7 +23,7 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 
     ![The image and its captions are displayed.](./media/aiservice.png)
 
-1. You will be taken to a page to create an Azure AI services resource. please click on **+ Create** Configure it with the following settings:
+1. You will be taken to a page to create an Azure AI services resource. Please click on **+ Create** Configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false" />**
@@ -53,7 +53,7 @@ In this task, you will learn how to connect your **Azure AI Services** resource 
 
     ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
 
-1. On the **Select a resource to work with** page, make sure the resource you created above in the list.
+1. On the **Select a resource to work with** page, make sure the resource you created above appears in the list. 
 
     > **Note**: If your resource isn't listed, try **Refreshing** the page.
 
