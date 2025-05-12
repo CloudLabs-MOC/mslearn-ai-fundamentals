@@ -74,7 +74,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    
     ![](./media/asklater.png)
  
-6. If prompted to stay signed in, you can click "No."
+6. If prompted to stay signed in, you can click **No**.
 
     ![](./media/staysigned2.png)
  
