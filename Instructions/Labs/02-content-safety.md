@@ -1,25 +1,21 @@
-# Module 02:  Explore the Content Safety Studio 
+# Module 02: Explore Azure AI Services
 
 ## Lab overview
 
-In this exercise, you will set up a single-service resource in Azure AI Content Safety Studio to evaluate and moderate text and image content, providing severity scores for various categories, ranging from safe to high.
+In this exercise, you will set up
 
 ## Lab Objectives
 
 In this lab, you will perform:
 
-- Task 1: Explore the Content Safety Studio
-- Task 2: Associate a resource with the studio 
-- Task 3: Try out text moderation in the Content Safety Studio
-- Task 4: Check out the keys and endpoint
-  
-> **Note:** The goal of this exercise is to provide a general understanding of how Azure AI services are provisioned and used. While Content Safety is used as an example, you are not expected to gain in-depth knowledge of content safety during this exercise!
+- Task 1: Create an *Azure AI services* resource in the Azure portal
+- Task 2: Check out the keys and endpoint
+- Task 3: See Azure AI services in action
 
-## Exercise 1:  Explore the Content Safety Studio 
+## Exercise 1: Create an *Azure AI services* resource in the Azure portal
+### Task 1: Create an *Azure AI services* resource in the Azure portal
 
-### Task 1: Explore the Content Safety Studio 
-
-In this task, you will learn how to explore the Content Safety Studio to analyze and manage content moderation policies effectively.
+In this task, you will learn how to explore
 
 1. Open the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). If you are not logged in, you will need to sign in. Select **Sign In** on the top right of the screen.  
 
@@ -41,119 +37,65 @@ In this task, you will learn how to explore the Content Safety Studio to analyze
 
     ![](media/15.png)
 
-1. The Content Safety Studio is set up like many other studios for Azure AI services. On the menu at the top of the screen, click on the icon on the left of **Azure AI**. You will see a drop-down list of other studios designed for development with Azure AI services. You can click on the icon again to hide the list.
-
-     ![](media/29.png)  
-
-### Task 2: Associate a resource with the studio 
-
-In this task, you will learn how to associate a resource with the Content Safety Studio to enable seamless content moderation.
-
-Before using the studio, you need to associate an Azure AI services resource with the studio. Depending on the studio, you may find you need a specific single-service resource, or can use a general multi-service resource. In the case of the Content Safety Studio, you can use the service by creating a single-service *Content Safety* resource or *Azure AI services* general multi-service resource. In the steps below, we will create a single-service Content Safety resource. 
-
-1. On the top right of the screen, click on the **Settings** icon. 
-
-   ![](media/26.png)
-
-2. On the **Settings** page, you will see a *Directory* tab and *Resource* tab. On the *Resource* tab, select **+ Create a new resource**. This takes you to page to create a resource in the Azure Portal.
-
-    ![](media/27.png)
-
-   > **Note**: The **Directory** tab lets users choose from different directories to create resources. You only need to modify its settings if you want to use a different directory. 
-
-1. On the Create Content Safety page in the [Azure Portal](https://portal.azure.com?auzre-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
+1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: Select **AI-900-Module-02**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **contentsafety<inject key="DeploymentID" enableCopy="false"/>**
-    - **Pricing tier (5)**: Select **Free F0** from the drop-down.
+    - **Pricing tier (5)**: Select **Standard S0** from the drop-down.
+    - - **By checking this box, I acknowledge that I have read and understood all the terms below**: *Selected*.
     - Select **Review + Create (6)**
 
       ![](media/25.png)
 
-1. Review the configuration. Then select **Create**. The screen will indicate when the deployment is complete. 
-
-   >**Congrats! You've just created, or provisioned, an Azure AI services resource. The one you provisioned, in particular, is a single-service Content Safety service resource.**
-
-1. Return to the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
-
-1. Select the **Settings** icon on the top right of the screen again. This time you should see that your newly created resource has been added to the list.  
-
-1. On the Content Safety Studio's Settings page, select the checkbox of the **Azure AI service (1)** resource you just created and click **Use resource (2)** on the bottom of the screen. You will be taken back to the studio home page. Now you can begin using the studio with your newly created resource.
-
-   ![](media/30.png)
-
-   >**Note:** Provisioning the content safety resources will take around 30-40 minutes. During this time, please proceed with Module 3. Once you’ve finished Module 3, return to Module 2 and continue the lab from Task 3.
-
-### Task 3: Try out text moderation in the Content Safety Studio
-
-In this task, you will learn how to try out text moderation in the Content Safety Studio to detect and manage harmful or inappropriate content.
-
-1. Navigate back to the **Content Safety Studio** home page.
-
-1. On the Content Safety Studio home page, under *Run moderation tests*, select the **Moderate text content** box.
-
-   ![](media/ai900m2-1.png)
-
-1. Check the checkbox under **Try it out**.
-
-   ![](media/37.png)
+1. Select **Review + create** then **Create** and wait for deployment to complete.
  
-1. Under run a simple test, click **Safe Content (1)**. 
+   >***Congrats! You've just created or provisioned an Azure AI services resource. The one you provisioned in particular is a multi-service resource.***
 
-   ![](media/azureai.png)
+1. Once the deployment is complete, select *Go to resource*. 
 
-1. Notice that text is displayed in the box below and click on **Run test (2)**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize un-safe content.   
+### Task 2: Check out the keys and endpoint
 
-   ![](media/chopping.png)
+In order to incorporate Azure AI services into applications, developers need a service key and endpoint. The keys and endpoint used for application development can be found in the Azure Portal. 
 
-1. In the Results panel, inspect the results. There are **four severity levels** from **safe to high**, and four types of harmful content. Does the Content Safety AI service consider this sample to be acceptable or not? What's important to note is that the results are within a confidence interval. A well-trained model, like one of Azure AI's out-of-the-box models, can return results that have a high probability of matching what a human would label the result. Each time you run a test, you call the model again.
+1. In the Azure Portal, select your resource. On the left-hand menu, look under *Resource Management* for *Keys and Endpoints*. Select **Keys and Endpoints** to view the endpoint and keys for your resource. 
 
-   ![](media/results.png)
+### Task 3: See Azure AI services in action
 
-1. Now try another sample. Select the text under **Violent content with misspelling (1)**.
+1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-    ![](media/voilent.png)
+1. Sign in with your account. 
 
-1. Check that the content is displayed in the box below and click on**Run test (2)**.    
+1. Under *Work outside a project*, select the **View AI Services** tile.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/view-ai-foundry-outside-project.png)  
 
-    ![](media/run-test.png)
+1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
-1. Inspect the results in the Results panel again. 
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
 
-   ![](media/runtest(2).png)
+1. Under *View all Vision capabilities* select the **Face** tab. 
 
-You can run tests on all the samples provided, and then inspect the results.
+1. Select the *Detect faces in an image* demo tile. 
 
-### Task 4: Check out the keys and endpoint
+1. Try out the Face service, which is one of many Azure AI services. Click on an image and check out the detected attributes. 
 
-In this task, you will learn how to check out the keys and endpoints required to authenticate and integrate with the Content Safety Studio.
+    ![Screenshot of the detect faces demo in Azure AI Foundry portal.](./media/detect-faces-demo.png)
 
-These capabilities you tested can be programmed into all sorts of applications. The keys and endpoint used for application development can be found both in the Content Safety Studio and the Azure Portal. 
+1. Scroll down to the **Run the code** section. Select **View Code**. Sroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
 
-1. In the Content Safety Studio, navigate back to the **Settings (1)** page, with the **Resources (2)** tab selected. Look for the resource you used. Scroll across to see the **endpoint and key** for your resource **(3)**. 
+    ![Screenshot of the view code screen with a view of the code placeholders for key and endpoint.](./media/view-code-example.png) 
 
-   ![](media/ai900m2-2.png)
+1. If you were to build an application that used Azure AI services, you could start with the provided code. By replacing the placeholders with your own service's key and endpoint, your application would be able to send requests and receive responses that utilize Azure AI services. In the case of the Face service, the *request* is for the Face service to analyze the image. The *response* is the detected attributes. 
 
-1. In the Azure Portal, you will see that these are the **same** endpoint and **different** keys for your resource. To check it out, head to the [Azure Portal](https://portal.azure.com?auzre-portal=true). 
-
-1. Search for **Content Safety (1)** on the top search bar and select **Content Safety (2)**.
-
-   ![](media/ai900m2-3.png)
-
-1. Find your resource and click on it.
-
-   ![](media/ai900m2-4.png)
-
-1. On the left-hand menu, look under **Resource Management** for **Keys and Endpoints**. Select **Keys and Endpoints** to view the endpoints and keys for your resource. 
-
-   ![](media/ai900m2-5.png)
+    >**Note**
+    >You do not need to know programming to complete any of the exercises in this course. We will continue to take a look at Azure AI services in action through the Azure AI Foundry portal.  
 
 ## Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Hit the Validate button for the corresponding task. you will receive a success message. 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
