@@ -13,13 +13,13 @@ In this hands-on lab, you'll explore the Azure AI Content Safety Studio to evalu
 
 ## Objectives
 
-By the end of this lab, you will be able to use the Azure AI Content Safety Studio to moderate and evaluate text content based on severity levels. You will learn to:
+By the end of this lab, you will be able to use Azure AI services effectively. You will learn to:
 
-1. **Set up a Content Safety resource**: Create and associate an Azure Content Safety resource with the Content Safety Studio to evaluate and moderate content.
+1. **Create an *Azure AI services* resource in the Azure portal**: Learn how to provision a multi-service AI resource using the Azure portal.
 
-2. **Perform text moderation**: Analyze text content for harmful categories and review moderation results.
+2. **Check out the keys and endpoint**: Locate the authentication credentials required to access Azure AI services via APIs.
 
-3. **Check keys and endpoint**: Retrieve and use keys and endpoints for integrating the Content Safety service into your applications.
+3. **See Azure AI services in action**: Explore AI capabilities like face detection using interactive demos in the Azure AI Foundry portal.
 
 ## Pre-requisites
 
@@ -27,15 +27,15 @@ Basic knowledge of Azure and Azure Portal and familiarity with AI concepts relat
 
 ## Architecture
 
-In this lab, the architecture flow involves the following components:
+In this hands-on lab, the architecture flow includes several key components that showcase how Azure AI services are provisioned and utilized.
 
-1. **Azure AI Content Safety Studio**: This is the main platform where you will associate a Content Safety resource and run moderation tests. It provides an interface to evaluate and categorize text and image content based on severity scores.
+1. **Provision an Azure AI multi-service resource**: Learn how to create a centralized Azure AI service resource that provides access to multiple AI capabilities, such as Vision, Language, and Decision services. This involves configuring resource settings like region, pricing tier, and deployment details within the Azure portal.
 
-2. **Azure Content Safety Resource**: The resource is provisioned and associated with the Content Safety Studio. It provides the necessary capabilities to analyze and moderate text and image content in real-time.
+2. **Explore and test AI capabilities using Azure AI Foundry**: Use the Azure AI Foundry portal to interact with AI services such as Face Detection. This includes accessing demos, analyzing images with AI models, and viewing sample code that integrates the service's keys and endpoints—demonstrating how developers can connect their applications to Azure AI services..
 
 ## Architecture Diagram
 
-![](../media/Module1.1.png)
+   ![](../media/Module1.1.png)
 
 ## Explanation of Components
 
