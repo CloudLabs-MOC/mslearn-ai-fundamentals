@@ -98,16 +98,24 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 Now you're ready to deploy a generative AI language model to support your agent.
 
 1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page.
-1. In the **Models + endpoints** page, in the **Model deployments** tab, in the **+ Deploy model** menu, select **Deploy base model**.
-1. Search for the **gpt-4o** model in the list, and then select and confirm it.
+
+1. In the **Models + endpoints (1)** page, in the **Model deployments** tab, in the **+ Deploy model (2)** menu, select **Deploy base model (3)**.
+
+   ![](./Media/Models+endpoints.png)
+
+1. Search for the **gpt-4o (1)** model in the list, and then select **gpt-4o (2)** and **confirm (3)** it.
+
+    ![](./Media/gpt-40.png)
+
 1. Deploy the model with the following settings by selecting **Customize** in the deployment details:
-    - **Deployment name**: *A valid name for your model deployment*
-    - **Deployment type**: Global Standard
-    - **Automatic version update**: Enabled
-    - **Model version**: *Select the most recent available version*
-    - **Connected AI resource**: *Select your Azure OpenAI resource connection*
-    - **Tokens per Minute Rate Limit (thousands)**: 50K *(or the maximum available in your subscription if less than 50K)*
-    - **Content filter**: DefaultV2
+    - **Deployment name**: **gpt-4o (1)**
+    - **Deployment type**: Global Standard **(2)**
+    - **Connected AI resource**: *Select your Azure OpenAI resource connection* **(3)**
+    - **Tokens per Minute Rate Limit (thousands)**: 50K **(4)**
+    - **Content filter**: DefaultV2 **(5)**
+    - Click on **Deploy (6)**
+
+      ![](./Media/deployment1.png)
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may need to wait and resubmit prompts if the rate limit is exceeded.
 
@@ -118,19 +126,38 @@ Now you're ready to deploy a generative AI language model to support your agent.
 Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document, and use it as *grounding* data for the agent.
 
 1. Open another browser tab, and download [Expenses_policy.docx](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx` and save it locally. This document contains details of the expenses policy for the fictional Contoso corporation.
+
+   ![](./Media/downloadfile.png)
+
 1. Return to the browser tab containing the Azure AI Foundry portal, and in the navigation pane on the left, in the **Build and customize** section, select the **Agents** page.
-1. If prompted, select your Azure OpenAI service resource and go.
 
-    A new agent with a name like *Agent123* should be created automatically (if not, use the **+ New agent** button to create one).
+   ![](./Media/agent.png)
 
-1. Select your new agent. Then, in the **Setup** pane for your new agent, set the **Agent name** to `ExpensesAgent`, ensure that the gpt-4o model deployment you created previously is selected, and set the **Instructions** to `Answer questions related to expense claims`.
+1. If prompted, select your Azure **OpenAI service (1)** resource and click on **let's go (2)**.
 
-    ![Screenshot of the AI agent setup page in Azure AI Foundry portal.](./Media/ai-agent-setup.png)
+   ![](./Media/lestgo.png)
 
-1. Further down in the **Setup** pane, next to the **Knowledge** header, select **+ Add**. Then in the **Add knowledge** dialog box, select **Files**.
-1. In the **Adding files** dialog box, create a new vector store named `Expenses_Vector_Store`, uploading and saving the **Expenses_policy.docx** local file that you downloaded previously.
+    >**Note:** A new agent with a name like *Agent123* should be created automatically (if not, use the **+ New agent** button to create one).
 
-    ![Screenshot of the Adding files dialog box in Azure AI Foundry portal.](./Media/ai-agent-add-files.png)
+1. Select your new agent. Then, in the **Setup** pane for your new agent, set the **Agent name** to `ExpensesAgent` **(1)**, ensure that the **gpt-4o (2)** model deployment you created previously is selected, and set the **Instructions** to `Answer questions related to expense claims` **(3)**.
+
+    ![](./Media/ai-agent-setup.png)
+
+1. Further down in the **Setup** pane, next to the **Knowledge** header, select **+ Add**.
+
+    ![](./Media/ai-agent-add-files.png)
+
+1. In the **Add knowledge** dialog box, select **Files**.
+
+    ![](./Media/files.png)
+
+1. In the **Adding files** dialog box, create a new vector store named `Expenses_Vector_Store` **(1)**,  select **Upload local (2)**, click **Select local files**, navigate to the **Downloads (3)** folder, choose **Expenses_Policy(4)**, and click **Open (5)**.
+  
+   ![](./Media/files1.png)
+
+1. On the Manage page, click **Upload and Save** to complete the file upload process.
+
+   ![](./Media/upload-save.png)
 
 1. In the **Setup** pane, in the **Knowledge** section, verify that **Expenses_Vector_Store** is listed and shown as containing 1 file.
 
@@ -141,13 +168,18 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
 Now that you've created an agent, you can test it in the Azure AI Foundry portal playground.
 
 1. At the top of the **Setup** pane for your agent, select **Try in playground**.
+
+   ![](./Media/try1.png)
+
 1. In the playground, enter the prompt `What's the maximum I can claim for meals?` and review the agent's response - which should be based on information in the expenses policy document you added as knowledge to the agent setup.
 
-    ![Screenshot of the Agent Playground in Azure AI Foundry portal.](./Media/ai-agent-playground.png)
+    ![](./Media/ai-agent-playground.png)
 
     > **Note**: If the agent fails to respond because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
 
 1. Try a follow-up question, like `What about accommodation?` and review the response.
+
+    ![](./Media/ai-agent-playground1.png)
 
 ### Review
 
