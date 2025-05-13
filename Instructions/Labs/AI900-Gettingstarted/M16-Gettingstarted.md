@@ -28,11 +28,13 @@ Familiarity with language generative AI model.
 
 In this hands-on lab, you will work with a streamlined architecture that integrates Azure services to build and test an AI agent. The key components include:
 
-1. **Azure Portal** – The central platform for provisioning and managing resources, including the Azure AI Foundry.
+1. **Azure AI Foundry Portal**: Centralized platform for managing AI projects, models, and services.
 
-2. **Generative AI**:  A model deployed via Azure AI Foundry to handle natural language understanding and generation tasks
+2. **AI Hub**: A container for organizing AI projects.
 
-3. **AI agent**: A custom-built agent that uses API calls to interact with the Generative AI and Translator services for tasks like text translation and language detection.
+3. **Chat Playground**: Interface for interacting with the model and testing content filtering.
+
+4. **AI agent**: An autonomous system that perceives its environment, makes decisions, and performs tasks to achieve specific goals.
 
 ## Architecture Diagram
 
