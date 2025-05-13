@@ -122,7 +122,7 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
    ![](./media/9-5.png)
 
-1. Go back to the Azure AI Foundry portal and upload the **WhatAICanDo.m4a** image by clicking **Browse files (1)**. Then, navigate to the **C:\Users\azureuser\Downloads\Speech (2)** folder, select **WhatAICanDo (3)**, and click **Open (4)**.
+1. Go back to the Azure AI Foundry portal, select your resource **(1)**, click **Browse files (2)** to upload the **WhatAICanDo.m4a** file, navigate to **C:\Users\azureuser\Downloads\Speech (3)**, select **WhatAICanDo (4)**, and click **Open (5)** to begin transcription.
 
    ![](./media/9-7.png)
 
