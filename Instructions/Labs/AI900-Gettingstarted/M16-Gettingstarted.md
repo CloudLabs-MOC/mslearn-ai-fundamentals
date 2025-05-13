@@ -9,16 +9,16 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this module, you'll learn how to create and deploy a generative AI model using Azure AI Foundry. You'll then build and test an AI agent capable of performing language tasks like translation and detection.
+In this lab, you'll learn how to create and deploy a generative AI model using Azure AI Foundry. You'll then build and test an AI agent capable of performing language tasks like translation and detection.
 
 ## Objectives
 
 By the end of this lab, you will:
 
-1: Create an Azure AI Foundry project
-2: Deploy a generative AI model
-3: Create an AI agent
-4: Test your agent
+1. Create an Azure AI Foundry project
+2. Deploy a generative AI model
+3. Create an AI agent
+4. Test your agent
 
 ## Pre-requisites
 
