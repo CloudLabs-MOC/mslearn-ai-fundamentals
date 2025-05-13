@@ -40,9 +40,13 @@ In this hands-on lab, you will work with a streamlined architecture that integra
 
 ## Explanation of Components
 
-1. **Translator Resource**: This is the cloud resource in Azure that provides language translation services. You can configure it to use various pricing tiers, depending on your usage needs.
+1. **Azure AI Foundry Portal**: The portal provides a user-friendly interface for managing AI models and resources. It allows users to deploy, configure, and monitor generative AI models.
 
-2. **API Requests**: The Translator service is accessed via API requests. These requests can be triggered programmatically (e.g., in applications) and will return JSON responses containing translated text and language information
+2. **AI Hub**: An organizational structure within Azure AI Foundry. It enables you to manage and track multiple projects and related resources, keeping your AI work organized.
+
+3. **GPT-4o Model**: A generative language model deployed in Azure AI Foundry to produce text. You can customize it and apply content filters to ensure outputs are ethical and adhere to guidelines.
+
+4. **AI agent**: A custom-built agent that uses API calls to interact with the Generative AI and Translator services for tasks like text translation and language detection.
 
 # Getting Started with lab
  
