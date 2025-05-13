@@ -13,31 +13,12 @@ In this lab, you will perform:
 - Task 3: See Azure AI services in action
 
 ## Exercise 1: Create an *Azure AI services* resource in the Azure portal
+
 ### Task 1: Create an *Azure AI services* resource in the Azure portal
 
 In this task, you will learn how to explore
 
-1. Open the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). If you are not logged in, you will need to sign in. Select **Sign In** on the top right of the screen.  
-
-    ![](media/28.png)
-
-1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
-
-    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-      ![Enter Your Username](media/sc900-image-1.png)
- 
-1. Next, provide your password:
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-      ![Enter Your Password](media/sc900-image-2.png)
- 
-1. If prompted to stay signed in, you can click "No."
-
-    ![](media/15.png)
-
-1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
+1. In the Azure portal, click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: Select **AI-900-Module-02**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
@@ -82,7 +63,7 @@ In order to incorporate Azure AI services into applications, developers need a s
 
     ![Screenshot of the detect faces demo in Azure AI Foundry portal.](./media/detect-faces-demo.png)
 
-1. Scroll down to the **Run the code** section. Select **View Code**. Sroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
+1. Scroll down to the **Run the code** section. Select **View Code**. Scroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
 
     ![Screenshot of the view code screen with a view of the code placeholders for key and endpoint.](./media/view-code-example.png) 
 
