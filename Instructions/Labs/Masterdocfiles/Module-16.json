@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "AI 900 AI Fundamentals-Module-15-explore-azure-ai-translator",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/AI900-Gettingstarted/M16-Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/16-agent-fundamentals.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
