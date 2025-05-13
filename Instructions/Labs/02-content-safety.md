@@ -47,7 +47,7 @@ In order to incorporate Azure AI services into applications, developers need a s
 
 1. Sign in with your account. 
 
-1. Under *Work outside a project*, select the **View AI Services** tile.
+1. Under *AI Services*, select the **View AI Services** tile.
  
     ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/view-ai-foundry-outside-project.png)  
 
@@ -59,13 +59,19 @@ In order to incorporate Azure AI services into applications, developers need a s
 
 1. Select the *Detect faces in an image* demo tile. 
 
+   ![](./media/face.png)
+
 1. Try out the Face service, which is one of many Azure AI services. Click on an image and check out the detected attributes. 
 
     ![Screenshot of the detect faces demo in Azure AI Foundry portal.](./media/detect-faces-demo.png)
 
-1. Scroll down to the **Run the code** section. Select **View Code**. Scroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
+1. Scroll down to the **Run the code** section. Select **View Code**. 
 
     ![Screenshot of the view code screen with a view of the code placeholders for key and endpoint.](./media/view-code-example.png) 
+
+1. Scroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
+
+   ![Screenshot of the view code screen with a view of the code placeholders for key and endpoint.](./media/view-code-example1.png)
 
 1. If you were to build an application that used Azure AI services, you could start with the provided code. By replacing the placeholders with your own service's key and endpoint, your application would be able to send requests and receive responses that utilize Azure AI services. In the case of the Face service, the *request* is for the Face service to analyze the image. The *response* is the detected attributes. 
 
