@@ -183,7 +183,7 @@ Let's see how the model behaves in a conversational interaction.
 
    ![](./media/ai900m13-14.png)
 
-1. In the **Chat session** section, Make sure that **gpt-4o (1)** model selected, enter the following prompt **(2)**. and then click on **Send (3)** button.
+1. In the **Chat session** section, Make sure that **gpt-4o (1)** model is selected, enter the following prompt **(2)**. and then click on **Send (3)** button.
 
     ```
    Describe characteristics of Scottish people.
