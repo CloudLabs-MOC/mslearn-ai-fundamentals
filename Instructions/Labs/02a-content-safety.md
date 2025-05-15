@@ -1,91 +1,182 @@
-# Explore Content Safety in Azure AI Foundry
+# Lab 2a: Explore Content Safety in Azure AI Foundry
 
-Azure AI services help users create AI applications with out-of-the-box and pre-built and customizable APIs and models. In this exercise you will take a look at one of the services, Azure AI Content Safety, which enables you to moderate text and image content. In Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, you will use Azure AI Content Safety to categorize text and assign it severity score. 
+Azure AI services empower users to build intelligent applications using pre-built and customizable APIs and models. In this exercise, you'll explore Azure AI Content Safety, a service that enables moderation of text and image content. Using the Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, you'll utilize Azure AI Content Safety to categorize text and assign severity scores.
 
 > **Note**
-> The goal of this exercise is to get a general sense of how Azure AI services are provisioned and used. Content Safety is used as an example, but you are not expected to gain a comprehensive knowledge of content safety in this exercise!
+> This exercise aims to provide a general understanding of how Azure AI services are provisioned and utilized. Content Safety is used as an example; comprehensive knowledge of content safety is not required for this exercise.
 
-## Create a project in Azure AI Foundry portal
+## Lab Overview
 
-1. In a browser tab, navigate to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true).
+In this lab, you will create an Azure AI Foundry project, configure resources, and explore how to moderate text content using Azure AI Content Safety.
 
-2. Sign in with your account. 
 
-3. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+## Lab Objectives
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
+By the end of this lab, you will be able to:
 
-4. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+- Create and configure a project in Azure AI Foundry.
+- Use Azure AI Content Safety to moderate text content.
+
+## Exercise 1: Explore Content Safety in Azure AI Foundry
+
+### Task 1: Create a project in the Azure AI Foundry portal
+
+In this task, we are creating an Azure AI Foundry project and configuring necessary resources to explore AI language capabilities in the Language Playground.
+
+1. Right-click the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, choose **Copy link (2)** from the context menu, then paste it into a new tab to open the Azure AI Foundry portal.
+
+   ![](./media/3-27.png)
+
+1. On the **Welcome to Azure AI Foundry** page, look at the top right corner and click the **Sign in** button to log in.
+
+   ![](./media/17-18.png)
+
+1. If prompted to sign in, enter your credentials.
  
-    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
-
-> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
-
-5. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
-
-1. Take note of the resources that are created: 
-- Azure AI services
-- Azure AI hub
-- Azure AI project
-- Storage account
-- Key vault
-- Resource group  
-
-6. After the resources are created, you will be brought to your project's *Overview* page. 
-
-7. In order to use Content Safety, you need to make a permissions update to your *Azure AI hub* resource. To do this, open the [Azure portal](https://portal.azure.com?portal-azure=true) and log in with the same subscription you used to create your AI Foundry resources.  
-
-8. In the Azure portal, use the search bar at the top of the page to look for and select **Azure AI Foundry**. In the  resource page, select the resource you just created that is *type* **Azure AI hub**.  
-
-9. In the Azure portal, on the left-hand pane, select **Access Control (IAM)**. Then on the open pane, select **Add** next to the plus sign, and select **Add role assignment**. 
-
-![Screenshot of where to select add role assignment in the Access Control pane.](./media/content-safety/access-control-step-one.png)
-
-10. Search for **Azure AI Safety Evaluator** in the list of roles, and select it. Then select **Next**. 
-
-11. Use the following settings to assign yourself to the role: 
-    - **Assign access to**: select *user, group, or service principal*
-    - **Members**: click on *select members*
-        - On the open *Select members* pane, find your name. Click on the plus icon next to your name. Then click **Select**.
-    - **Description**: *leave blank*
-
-12. Select **Review and Assign**, then select **Review and Assign** again to add the role assignment.    
-
-13. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
-
-14. On the left-hand menu on the screen, select **AI Services**.
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+      ![Enter Your Username](./media/19-4.png)
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/19-5.png)
+ 
+1. If prompted to stay signed in, you can click **No**.
 
-15. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+   ![](./media/9-8.png)
+
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+
+   ![](./media/3-23.png)
+
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+
+1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+
+    ![](./media/17-3.png)
+
+1. On the **Create a project** pane, Configure it with the following settings:
+
+    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: **Use existing Azure subscription (2)**
+    - **Resource group**: Select **AI-900-Module-06 (3)**
+    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
+    - **Connect Azure AI Services or Azure OpenAI Service**:
+    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
+    - **Connect Azure AI Search**: Leave as default **(6)**
+    - Click on **Next (7)**
+
+        ![](./media/18-8.png)
+
+    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+
+1. On the **Review and Finish** page, click on **Create**.
+
+    ![](./media/17-2.png)
+
+1. Keep track of the following created resources: 
     
-    ![Screenshot of the Content Safety tile.](./media/content-safety-tile.png)
+    - **Azure AI Project**
+    - **Azure AI Hub**  
+    - **Azure AI Services**    
+    - **Storage Account**  
+    - **Key Vault**
 
-## Try out text moderation with Content Safety in Azure AI Foundry portal 
+      ![](./media/17-4.png)
+
+      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+
+11. After the resources are created, you will be brought to your project's *Overview* page.
+
+12. To use Content Safety, you need to update permissions for your *Azure AI hub* resource:
+
+    a. Open the [Azure portal](https://portal.azure.com?portal-azure=true) and log in with the same subscription used to create your AI Foundry resources.
+
+    b. In the Azure portal, use the search bar at the top to search for **Azure AI Foundry**.
+
+    c. Select the resource you just created with the type **Azure AI hub**.
+
+    d. In the left-hand pane, select **Access Control (IAM)**.
+
+    e. Click **Add** and then select **Add role assignment**.
+
+    f. Search for **Azure AI Safety Evaluator** in the list of roles and select it.
+
+    g. Click **Next**.
+
+    h. Under **Assign access to**, select *User, group, or service principal*.
+
+    i. Click on **Select members**, find your name, click the plus icon next to your name, and then click **Select**.
+
+    j. Click **Review and Assign**, then click **Review and Assign** again to add the role assignment.
+
+    ![Add role assignment](./media/add-role-assignment.png)
+
+13. Return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true).
+
+14. Select your project.([Microsoft Learn][1])
+
+15. In the left-hand menu, select **AI Services**.
+
+    ![AI Services](./media/ai-services-menu.png)
+
+16. On the *AI Services* page, select the **Content Safety** tile.
+
+    ![Content Safety tile](./media/content-safety-tile.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+* Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+* If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+* If you need any assistance, please contact us at [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com). We are available 24/7 to help you out.
+
+<validation step="">
+
+### Task 2: Try Out Text Moderation with Content Safety in Azure AI Foundry Portal
+
+In this task, you will test text moderation using Azure AI Content Safety to categorize and assess the severity of different text samples.
 
 1. On the *Content Safety* page, under *Filter text content*, select **Moderate text content**.
 
-2. On the *Moderate text content* page, under the *Try it out* heading, select the Azure AI services resource you just created from the drop down menu.   
+   ![Moderate text content](./media/moderate-text-content.png)
 
-3. Under *Run a simple test*, select the **Safe Content** tile. Notice that text is displayed in the box below. 
+2. On the *Moderate text content* page, under the *Try it out* heading, select the Azure AI services resource you just created from the drop-down menu.
 
-4. Click **Run test**. Running a test calls the Content Safety Service's deep learning model. The deep learning model has already been trained to recognize un-safe content.
+   ![Select AI service](./media/select-ai-service.png)
 
-5. In the *Results* panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Does the Content Safety AI service consider this sample to be acceptable or not? What's important to note is that the results are within a confidence interval. A well-trained model, like one of Azure AI's out-of-the-box models, can return results that have a high probability of matching what a human would label the result. Each time you run a test, you call the model again. 
+3. Under *Run a simple test*, select the **Safe Content** tile. Notice that text is displayed in the box below.
 
-6. Now try another sample. Select the text under Violent content with misspelling. Check that the content is displayed in the box below.
+   ![Safe content sample](./media/safe-content-sample.png)
 
-7. Click **Run test** and inspect the results in the Results panel again. 
+4. Click **Run test**. Running a test calls the Content Safety Service's deep learning model, which has been trained to recognize unsafe content.
 
-You can run tests on all the samples provided, then inspect the results.
+   ![Run test](./media/run-test.png)
 
-## Clean-up
+5. In the *Results* panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Determine whether the Content Safety AI service considers this sample acceptable. Note that the results are within a confidence interval, indicating the probability that the content matches what a human would label. Each time you run a test, you call the model again.
 
-If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
+   ![Results panel](./media/results-panel.png)
 
-1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created.
-1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
+6. Now try another sample. Select the text under **Violent content with misspelling**. Ensure that the content is displayed in the box below.
 
-## Learn more
+   ![Violent content sample](./media/violent-content-sample.png)
 
-This exercise demonstrated only some of the capabilities of the Content Safety service. To learn more about what you can do with this service, see the [Content Safety page](https://learn.microsoft.com/azure/ai-services/content-safety/overview).
+7. Click **Run test** and inspect the results in the *Results* panel again.
+
+   ![Run test again](./media/run-test-again.png)
+
+You can run tests on all the samples provided and inspect the results to understand how the Content Safety service evaluates different types of content.
+
+### Review
+
+In this lab, you have completed the following tasks:
+
+- Created a project in the Azure AI Foundry portal and configured necessary resources.
+- Assigned the **Azure AI Safety Evaluator** role to your Azure AI hub resource.
+- Explored the Content Safety service within the Azure AI Foundry portal.
+- Performed text moderation tests on sample content using Azure AI Content Safety.
+
+## Learn More
+
+This exercise demonstrated only some of the capabilities of the Content Safety service. To learn more about what you can do with this service, see the [Azure AI Content Safety documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview).

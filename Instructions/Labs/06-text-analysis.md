@@ -17,7 +17,7 @@ In this lab, you will perform:
 - Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
 - Task 4: Summarize text with Azure AI Language in Azure AI Foundry portal
 
-## Task 1: Create a project in the Azure AI Foundry portal
+### Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are creating an Azure AI Foundry project and configuring necessary resources to explore AI language capabilities in the Language Playground.
 
@@ -94,7 +94,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
    <validation step="07c3e734-e32f-44b6-b8e8-7b5b85f4a45b" />
 
-## Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
+### Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
 
 This task demonstrates how to use Azure AI Language Playground for Named Entity Recognition (NER). By analyzing a hotel review, Azure AI extracts key entities like locations, dates, and organizations, along with confidence scores. 
 
