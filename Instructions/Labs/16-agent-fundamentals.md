@@ -89,7 +89,9 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="fc8a5cf2-a28b-4610-9a8a-ca6d781f4022" />
 
 ### Task 2: Deploy a generative AI model
 
@@ -118,6 +120,14 @@ Now you're ready to deploy a generative AI language model to support your agent.
     > **Note**: Reducing the TPM helps avoid overusing the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may need to wait and resubmit prompts if the rate limit is exceeded.
 
 1. Wait for the deployment to complete.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="9227b6a9-3f7a-4b43-bad0-5fc9eba34a7b" />
 
 ### Task 3: Create an AI agent
 
