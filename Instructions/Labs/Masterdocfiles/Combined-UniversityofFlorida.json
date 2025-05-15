@@ -1,0 +1,76 @@
+[
+    {
+      "Name": "AI 900 AI Fundamentals",
+      "Language": "English",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/GettingStarted.md",
+          "Order": 1
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/01-machine-learning.md",
+            "Order": 2
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/02-content-safety.md",
+            "Order": 3
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/03-image-analysis.md",
+            "Order": 4
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/04-face.md",
+            "Order": 5
+         },
+         {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/05-ocr.md",
+          "Order": 6
+        },
+         {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/06-text-analysis.md",
+            "Order": 7
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/07-question-answering.md",
+            "Order": 8
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/stage/Instructions/Labs/08-conversational-language-understanding.md",
+            "Order": 9
+          },
+           {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/09-speech.md",
+            "Order": 10
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/10-document-intelligence.md",
+            "Order": 11
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/11-ai-search.md",
+            "Order": 12
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/12-generative-ai.md",
+            "Order": 13
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/13-azure-ai-studio.md",
+            "Order": 14
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/14-azure-openai-content-filters.md",
+            "Order": 15
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/stage/Instructions/Labs/15-translation.md",
+            "Order": 16
+          },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/16-agent-fundamentals.md",
+            "Order": 17
+          }
+      ]
+    }
+  ]
