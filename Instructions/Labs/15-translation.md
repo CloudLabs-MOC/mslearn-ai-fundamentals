@@ -82,7 +82,7 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
 In this exercise, you have completed the following tasks:
 - Created a Translator resource
-- Explored Translator service 
+- Explored the Translator service 
 
 ## Learn more
 
