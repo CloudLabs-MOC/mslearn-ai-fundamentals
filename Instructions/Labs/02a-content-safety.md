@@ -61,12 +61,12 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-06 (3)**
+    - **Resource group**: Select **AI-900-Module-2a (3)**
     - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
     - **Connect Azure AI Services or Azure OpenAI Service**:
     Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
     - **Connect Azure AI Search**: Leave as default **(6)**
-    - Click on **Next (7)**
+    - Click on **Next (7)**.
 
         ![](./media/18-8.png)
 
@@ -92,31 +92,41 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
 7. In order to use Content Safety, you need to make a permissions update to your *Azure AI hub* resource. To do this, open the [Azure portal](https://portal.azure.com?portal-azure=true) and log in with the same subscription you used to create your AI Foundry resources.  
 
-8. In the Azure portal, use the search bar at the top of the page to look for and select **Azure AI Foundry**. In the  resource page, select the resource you just created that is *type* **Azure AI hub**.  
+8. In the Azure portal, search for **Azure AI Foundry (1)**. From the results, select the **Azure AI Foundry (2)** resource.
 
-9. In the Azure portal, on the left-hand pane, select **Access Control (IAM)**. Then on the open pane, select **Add** next to the plus sign, and select **Add role assignment**. 
+   ![](./media/lab2a-8.png)  
+   
+1. In the  resource page, select the resource you just created that is *type* **Azure AI hub**.  
 
-![Screenshot of where to select add role assignment in the Access Control pane.](./media/content-safety/access-control-step-one.png)
+   ![](./media/lab2a-9.png)  
+   
+1. In the Azure portal, on the left-hand pane, select **Access Control (IAM) (1)**. Then on the open pane, select **+ Add (2)** next to the plus sign, and select **Add role assignment (3)**. 
 
-10. Search for **Azure AI Safety Evaluator** in the list of roles, and select it. Then select **Next**. 
+   ![](./media/lab2a-10.png)
 
-11. Use the following settings to assign yourself to the role: 
-    - **Assign access to**: select *user, group, or service principal*
-    - **Members**: click on *select members*
-        - On the open *Select members* pane, find your name. Click on the plus icon next to your name. Then click **Select**.
-    - **Description**: *leave blank*
+1. Search for **Azure AI Safety Evaluator (1)** in the list of roles, and select it **(2)**. Then select **Next (3)**. 
 
-12. Select **Review and Assign**, then select **Review and Assign** again to add the role assignment.    
+   ![](./media/lab2a-11.png)  
 
-13. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
+1. Use the following settings to assign yourself to the role: 
+    - **Assign access to**: Select **user, group, or service principal (1)**
+    - **Members**: click on **+ select members (2)**
+        - On the open *Select members* pane, find **<inject key="AzureAdUserEmail"></inject> (3)**. Click on the plus icon next to **<inject key="AzureAdUserEmail"></inject> (4)**. Then click **Select (5)**.
+    - Select **Next (6)**. 
 
-14. On the left-hand menu on the screen, select **AI Services**.
+     ![](./media/lab2a-12.png)
+
+1. Select **Review and Assign**, then select **Review and Assign** again to add the role assignment.    
+
+1. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
+
+1. On the left-hand menu on the screen, select **AI Services**.
  
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+    ![](./media/lab2a-7.png)  
 
-15. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+1. On the *AI Services* page, select the **Content Safety** tile to try out Azure AI Vision and Document capabilities.
     
-    ![Screenshot of the Content Safety tile.](./media/content-safety-tile.png)
+    ![Screenshot of the Content Safety tile.](./media/lab2a-5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -132,31 +142,28 @@ In this task, you will test text moderation using Azure AI Content Safety to cat
 
 1. On the *Content Safety* page, under *Filter text content*, select **Moderate text content**.
 
-   ![Moderate text content](./media/moderate-text-content.png)
+   ![Moderate text content](./media/lab2a-6.png)
 
-2. On the *Moderate text content* page, under the *Try it out* heading, select the Azure AI services resource you just created from the drop-down menu.
+1. On the Moderate text content page, under the Try it out section, select the **Azure AI Services (1)** resource you just created from the drop-down menu. Then, under *Run a simple test*, click the **Safe Content (2)** tile. You’ll see the text appear in the box below.
 
-   ![Select AI service](./media/select-ai-service.png)
 
-3. Under *Run a simple test*, select the **Safe Content** tile. Notice that text is displayed in the box below.
+   ![Safe content sample](./media/lab2a-4.png)
 
-   ![Safe content sample](./media/safe-content-sample.png)
-
-4. Click **Run test**. Running a test calls the Content Safety Service's deep learning model, which has been trained to recognize unsafe content.
+1. Click **Run test**. Running a test calls the Content Safety Service's deep learning model, which has been trained to recognize unsafe content.
 
    ![Run test](./media/run-test.png)
 
-5. In the *Results* panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Determine whether the Content Safety AI service considers this sample acceptable. Note that the results are within a confidence interval, indicating the probability that the content matches what a human would label. Each time you run a test, you call the model again.
+.1 In the *Results* panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Determine whether the Content Safety AI service considers this sample acceptable. Note that the results are within a confidence interval, indicating the probability that the content matches what a human would label. Each time you run a test, you call the model again.
 
-   ![Results panel](./media/results-panel.png)
+   ![Results panel](./media/lab2a-3.png)
 
-6. Now try another sample. Select the text under **Violent content with misspelling**. Ensure that the content is displayed in the box below.
+1. Now, select the text under **Violent content with misspelling**. Make sure the selected content appears in the box below, then click **Run test**.
 
-   ![Violent content sample](./media/violent-content-sample.png)
+   ![Violent content sample](./media/lab2a-2.png)
 
-7. Click **Run test** and inspect the results in the *Results* panel again.
+1. Inspect the results in the *Results* panel again.
 
-   ![Run test again](./media/run-test-again.png)
+   ![Run test again](./media/lab2a-1.png)
 
 You can run tests on all the samples provided and inspect the results to understand how the Content Safety service evaluates different types of content.
 
