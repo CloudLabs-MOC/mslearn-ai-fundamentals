@@ -153,7 +153,7 @@ In this task, you will test text moderation using Azure AI Content Safety to cat
 
    ![Run test](./media/run-test.png)
 
-.1 In the *Results* panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Determine whether the Content Safety AI service considers this sample acceptable. Note that the results are within a confidence interval, indicating the probability that the content matches what a human would label. Each time you run a test, you call the model again.
+1. In the *Results* panel, inspect the results. There are four severity levels from safe to high, and four types of harmful content. Determine whether the Content Safety AI service considers this sample acceptable. Note that the results are within a confidence interval, indicating the probability that the content matches what a human would label. Each time you run a test, you call the model again.
 
    ![Results panel](./media/lab2a-3.png)
 
