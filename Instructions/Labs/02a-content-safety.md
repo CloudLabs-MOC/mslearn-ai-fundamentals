@@ -111,7 +111,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 1. Use the following settings to assign yourself to the role: 
     - **Assign access to**: Select **user, group, or service principal (1)**
     - **Members**: click on **+ select members (2)**
-        - On the open *Select members* pane, find **<inject key="AzureAdUserEmail"></inject> (3)**. Click on the plus icon next to **<inject key="AzureAdUserEmail"></inject> (4)**. Then click **Select (5)**.
+        - On the open *Select members* pane, search **<inject key="AzureAdUserEmail"></inject> (3)** and select **<inject key="AzureAdUserEmail"></inject> (4)**. Then click **Select (5)**.
     - Select **Next (6)**. 
 
      ![](./media/lab2a-12.png)
