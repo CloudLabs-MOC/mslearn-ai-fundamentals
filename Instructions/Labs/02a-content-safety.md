@@ -14,8 +14,8 @@ In this lab, you will create an Azure AI Foundry project, configure resources, a
 
 By the end of this lab, you will be able to:
 
-- Create and configure a project in Azure AI Foundry.
-- Use Azure AI Content Safety to moderate text content.
+- Task 1: Create and configure a project in Azure AI Foundry.
+- Task 2: Use Azure AI Content Safety to moderate text content.
 
 ## Exercise 1: Explore Content Safety in Azure AI Foundry
 
