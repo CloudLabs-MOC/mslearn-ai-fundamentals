@@ -88,43 +88,35 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
       >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
 
-11. After the resources are created, you will be brought to your project's *Overview* page.
+6. After the resources are created, you will be brought to your project's *Overview* page. 
 
-12. To use Content Safety, you need to update permissions for your *Azure AI hub* resource:
+7. In order to use Content Safety, you need to make a permissions update to your *Azure AI hub* resource. To do this, open the [Azure portal](https://portal.azure.com?portal-azure=true) and log in with the same subscription you used to create your AI Foundry resources.  
 
-    a. Open the [Azure portal](https://portal.azure.com?portal-azure=true) and log in with the same subscription used to create your AI Foundry resources.
+8. In the Azure portal, use the search bar at the top of the page to look for and select **Azure AI Foundry**. In the  resource page, select the resource you just created that is *type* **Azure AI hub**.  
 
-    b. In the Azure portal, use the search bar at the top to search for **Azure AI Foundry**.
+9. In the Azure portal, on the left-hand pane, select **Access Control (IAM)**. Then on the open pane, select **Add** next to the plus sign, and select **Add role assignment**. 
 
-    c. Select the resource you just created with the type **Azure AI hub**.
+![Screenshot of where to select add role assignment in the Access Control pane.](./media/content-safety/access-control-step-one.png)
 
-    d. In the left-hand pane, select **Access Control (IAM)**.
+10. Search for **Azure AI Safety Evaluator** in the list of roles, and select it. Then select **Next**. 
 
-    e. Click **Add** and then select **Add role assignment**.
+11. Use the following settings to assign yourself to the role: 
+    - **Assign access to**: select *user, group, or service principal*
+    - **Members**: click on *select members*
+        - On the open *Select members* pane, find your name. Click on the plus icon next to your name. Then click **Select**.
+    - **Description**: *leave blank*
 
-    f. Search for **Azure AI Safety Evaluator** in the list of roles and select it.
+12. Select **Review and Assign**, then select **Review and Assign** again to add the role assignment.    
 
-    g. Click **Next**.
+13. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
 
-    h. Under **Assign access to**, select *User, group, or service principal*.
+14. On the left-hand menu on the screen, select **AI Services**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
-    i. Click on **Select members**, find your name, click the plus icon next to your name, and then click **Select**.
-
-    j. Click **Review and Assign**, then click **Review and Assign** again to add the role assignment.
-
-    ![Add role assignment](./media/add-role-assignment.png)
-
-13. Return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true).
-
-14. Select your project.([Microsoft Learn][1])
-
-15. In the left-hand menu, select **AI Services**.
-
-    ![AI Services](./media/ai-services-menu.png)
-
-16. On the *AI Services* page, select the **Content Safety** tile.
-
-    ![Content Safety tile](./media/content-safety-tile.png)
+15. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+    
+    ![Screenshot of the Content Safety tile.](./media/content-safety-tile.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
