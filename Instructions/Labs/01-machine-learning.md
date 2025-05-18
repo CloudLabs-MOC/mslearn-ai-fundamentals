@@ -105,9 +105,6 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
     - To create new data with the following settings:
 
-        - **Data type**:
-            - **Name**:  Enter **bike-rentals (1)**
-            - **Description**: Enter **Historic bike rental data (2)**
          - **Data type**:
             - **Name**: `bike-rentals`
             - **Description**: `Historic bike rental data`
