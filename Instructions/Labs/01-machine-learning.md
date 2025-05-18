@@ -61,6 +61,16 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
     ![Picture1](media/ai900-2.png)
 
+## Validation
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
+
 #### Enable preview features
 
 Some features of Azure Machine Learning are in preview and need to be explicitly enabled in your workspace.
@@ -276,6 +286,16 @@ Now you can test your deployed service.
     The test pane took the input data and used the model you trained to return the predicted number of rentals.
 
 Let's review what you have done. You used a dataset of historical bicycle rental data to train a model. The model predicts the number of bicycle rentals expected on a given day, based on seasonal and meteorological *features*.
+
+## Validation
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="aa2662f4-59fd-4d38-9d2f-201214b4f21b" />
 
 ### Review
 In this lab, you have completed the following tasks:
