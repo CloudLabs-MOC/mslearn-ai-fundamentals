@@ -128,7 +128,7 @@ Suppose your project needs access to a second **Azure AI Services** resource in 
 
 1. When the new resource is **connected**, close the Connect an Azure AI services resources dialog box.
  
-  ![](media/13-8.png)
+   ![](media/13-8.png)
 
 ### Task 4: Explore AI Services
 
