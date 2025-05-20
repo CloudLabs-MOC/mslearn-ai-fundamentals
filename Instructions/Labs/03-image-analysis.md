@@ -9,7 +9,7 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
 ## Lab Objectives
 
 In this lab, you will perform:
-- Task 1: Create a project in Azure AI Foundry portal
+- Task 1: Create a project in the Azure AI Foundry portal
 - Task 2: Generate captions for an image
 - Task 3: Tagging images 
 - Task 4: Object detection
