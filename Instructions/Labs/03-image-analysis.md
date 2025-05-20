@@ -46,20 +46,19 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-    ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
-
 1. In the home page, select **+ Create an agent**.
 
 1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
 1. Select **Advanced options** and specify the following settings:
-   - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-03 (3)**
-    - **Azure AI Foundry resource**: **Keep the default name (4)**
-    - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
-    - Select **Create (6)**
 
-      ![](./media/lab3-13.png)
+   - **Subscription**: **Use existing Azure subscription (2)**
+   - **Resource group**: Select **AI-900-Module-03 (3)**
+   - **Azure AI Foundry resource**: **Keep the default name (4)**
+   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
+   - Select **Create (6)**
+
+     ![](./media/lab3-13.png)
 
 1. Review your configuration. Wait for the set up process to complete.
 
@@ -177,7 +176,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
-   
+
 ## Task 3: Tagging images 
 
 In this task, we are using Azure AI Vision's common tag extraction feature to analyze an image and generate a list of descriptive tags, including objects and actions, along with confidence scores.
