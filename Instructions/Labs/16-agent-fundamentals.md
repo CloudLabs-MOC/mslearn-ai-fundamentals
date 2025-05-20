@@ -93,12 +93,6 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     ![](./media/edit-model2-2005.png)
 
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-    - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 ### Task 2: Create an AI agent
 
 Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document, and use it as *grounding* data for the agent.
