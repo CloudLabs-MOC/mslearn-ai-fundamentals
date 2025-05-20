@@ -88,7 +88,7 @@ In this task, you will gain hands-on experience in setting up a collaborative wo
 
 1. In the Setup pane, in the Give the model instructions and context box, enter the instruction as **You are a history teacher who can answer questions about past events all around the world** (1) and click on **Apply Changes** (2)
 
-   ![](media/xxai12.png)
+   ![](media/xxai121.png)
 
 1. In the prompt that appears, click on **Continue**
 
