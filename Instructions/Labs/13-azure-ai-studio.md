@@ -64,7 +64,7 @@ In this task, you will gain hands-on experience in setting up a collaborative wo
 
 1. Click on **Customize**
 
-   ![](media/xxai7.png)
+   ![](media/xxai71.png)
 
 1. In the window that appears, reduce the token to **50 K** (1) and click on **Deploy** (2).
    
