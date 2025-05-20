@@ -47,44 +47,27 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
    ![](./media/3-23.png)
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+1. In the home page, select **+ Create an agent**.
 
-1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
-    ![](./media/17-3.png)
+1. Select **Advanced options** and specify the following settings:
 
-1. On the **Create a project** pane, Configure it with the following settings:
+   - **Subscription**: **Use existing Azure subscription (2)**
+   - **Resource group**: Select **AI-900-Module-03 (3)**
+   - **Azure AI Foundry resource**: **Keep the default name (4)**
+   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
+   - Select **Create (6)**
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
-    - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-06 (3)**
-    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
-    - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
-    - **Connect Azure AI Search**: Leave as default **(6)**
-    - Click on **Next (7)**
+     ![](./media/lab3-13.png)
 
-        ![](./media/18-8.png)
+1. Review your configuration. Wait for the set up process to complete.
 
-    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
 
-1. On the **Review and Finish** page, click on **Create**.
-
-    ![](./media/17-2.png)
-
-1. Keep track of the following created resources: 
-    
-    - **Azure AI Project**
-    - **Azure AI Hub**  
-    - **Azure AI Services**    
-    - **Storage Account**  
-    - **Key Vault**
-
-      ![](./media/17-4.png)
-
-      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+   ![](./media/lab3-12.png)
       
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
