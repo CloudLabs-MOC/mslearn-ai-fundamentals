@@ -34,60 +34,27 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/9-8.png)
 
-1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+1. In the home page, select **Create an agent**.
 
-   ![](./media/3-23.png)
+   ![](./media/ai900l12f.png)
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. In the **Create a new project** wizard, enter **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** for your project. 
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
+   ![](./media/ai900l12e.png)
 
-1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+1. Select **Advanced options (2)** and specify the following settings:
+    - **Azure AI Foundry resource**: **Myproject<inject key="DeploymentID" enableCopy="false" />**
+    - **Subscription**: *Use existing Azure subscription*
+    - **Resource group**: **AI-900-Module-12 (3)**
+    - **Region**: Select **<inject key="location" enableCopy="false"/> (4)**
 
-    ![](./media/ai900m10-2.png)
+1. Select **Create (5)** and review your configuration. Wait for the set up process to complete.
 
-1. On the **Create a project** pane, Configure it with the following settings:
+    >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
-    - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-12 (3)**
-    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
-    - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next (7)**
-    - **Connect Azure AI Search**: Leave as default **(8)**
-    - Click on **Next (9)**
+1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
 
-        ![](./media/ai900m10--3.png)
-
-        > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
-
-1. On the **Review and Finish** page, click on **Create**.
-
-    ![](./media/12-2.png)
-
-1. Keep track of the following created resources: 
-    
-    - **Azure AI Project**
-    - **Azure AI Hub**  
-    - **Azure AI Services**    
-    - **Storage Account**  
-    - **Key Vault**
-
-      ![](./media/17-4.png)
-
-      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
-
-1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
-
-    ![](./media/3-24.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
+    ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai900l12h.png)
 
 ## Task 2: Explore generative AI in Azure AI Foundry's chat playground
 
@@ -95,42 +62,7 @@ In this task, you will learn how to interact with the Chat playground in Azure A
 
 1. In Azure AI Foundry's Portal page, Click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)** to start.
 
-   ![](./media/12-3.png)
-
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, select **Create a deployment**.
-
-   ![](./media/12-4.png)
-
-1. Search for **gpt-4o (1)** and select **gpt-4o (2)** and then click **Confirm (3)**.
-
-    ![](./media/ai900m12-1.png)
-
-1. In the *Deploy model* window, keep the default naming and selection and select **Deploy**. It may take a moment for the model to deploy. 
-
-   ![](./media/ai900m12-2.png)
-
-   >**Note**: To check the status of your deployment, go to the left-hand menu and select *Models and endpoints* under *My assets*.
-
-1. From the left-hand menu, select **Playgrounds**.
-
-   ![](./media/12-6.png)
-
-1. Click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)**.
-
-   ![](./media/12-3.png)
-
-
-1. Under **Set-up**, select the **gpt-4o** deployment from the drop-down menu.
-
-    ![](./media/ai900m12-3.png)
-
-1. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. **Delete** the existing content inside **Give the model instruction and context (1)** and click on **Apply changes (2)**. 
-
-   ![](./media/ai900m12-4.png)
-
-1. Click **Continue** to update the system message and start a new chat session.
-
-   ![](./media/12-21.png)
+   ![](./media/ai900l12g.png)
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
