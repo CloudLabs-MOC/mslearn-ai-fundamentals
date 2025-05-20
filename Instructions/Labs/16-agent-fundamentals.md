@@ -43,10 +43,6 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. We will start by choosing a model that we want to work with and creating a project to use it in. 
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
-
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
-
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` (1) model which we’ll use in our project and click (2) on it to select.
 
     ![](./media/L1T1S7-2005.png)
@@ -91,13 +87,6 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 1. Set the Tokens per Limit Rate limit to **50K**.
 
     ![](./media/edit-model2-2005.png)
-
-
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-    - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Create an AI agent
 
