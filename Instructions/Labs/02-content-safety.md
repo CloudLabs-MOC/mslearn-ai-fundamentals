@@ -8,34 +8,33 @@ In this lab, you will create an Azure AI multi-service resource, retrieve its ke
 
 In this lab, you will perform:
 
-- Task 1: Create an *Azure AI services* resource in the Azure portal
+- Task 1: Create an Azure AI services resource in the Azure portal
 - Task 2: Check out the keys and endpoint
 - Task 3: See Azure AI services in action
 
-## Exercise 1: Create an *Azure AI services* resource in the Azure portal
+## Exercise 1: Create an Azure AI services resource in the Azure portal
 
-### Task 1: Create an *Azure AI services* resource in the Azure portal
+### Task 1: Create an Azure AI services resource in the Azure portal
 
-In this task, you will learn how to create an *Azure AI services* resource in the Azure portal
+In this task, you will learn how to create an Azure AI services resource in the Azure portal
 
-1. In the Azure portal,  search for *Azure AI services (1)*. Select an **Azure AI services multi-service account(2)**.
+1. In the Azure portal, search for **Azure AI services (1)**. Select an **Azure AI services multi-service account(2)**.
 
     ![The image and its captions are displayed.](./media/aiservice.png)
 
-1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. You will be taken to a page to create an Azure AI services resource. Please click on **Create**, configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)**:Select **Standard S0**.
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    - **By checking this box, I acknowledge that I have read and understood all the terms below**: *Selected*.
 
       ![The image and its captions are displayed.](./media/lab2-1.png)
 
 1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
- 
    >***Congrats! You've just created or provisioned an Azure AI services resource. The one you provisioned in particular is a multi-service resource.***
 
 1. Once the deployment is complete, select *Go to resource*. 
@@ -54,7 +53,11 @@ In this task, you will explore and interact with Azure AI services through demos
 
 1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. Sign in with your account. 
+1. Sign in with your account.
+
+1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary, use the Azure AI Foundry logo at the top left to navigate to the home page, which looks similar to the following image (close the Help pane if it's open).
+
+1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
 1. Under *AI Services*, select the **View AI Services** tile.
  
@@ -104,7 +107,7 @@ This simple search index only some of the capabilities of the Content Safety Stu
 ### Review
 In this lab, you have completed the following tasks:
 - Explored Content Safety Studio
-- Associated a resource with safety studio
+- Associated a resource with the safety studio
 - Tried out text moderation in the Content Safety Studio
 - Checked out the keys and endpoint
 
