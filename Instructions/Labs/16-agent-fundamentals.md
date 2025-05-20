@@ -5,13 +5,13 @@ In this Module, you use the Azure AI Agent service tools in the Azure AI Foundry
 ## Lab objectives
 
 In this lab, you will perform:
-- Task 1: Create an Azure AI Foundry project using gpt-4o model.
+- Task 1: Create an Azure AI Foundry project using the gpt-4o model.
 - Task 2: Create an AI agent
 - Task 3: Test your agent
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
 
-### Task 1: Create an Azure AI Foundry project
+### Task 1: Create an Azure AI Foundry project using the gpt-4o model
 
 In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore content filters in Azure AI Foundry.
 
