@@ -45,62 +45,35 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-23.png)
    
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
+1. In the home page, select **Create an agent**.
 
-1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
-    ![](./media/ai900m10-2.png)
+1. Select **Advanced options** and specify the following settings:
 
-1. On the **Create a project** pane, Configure it with the following settings:
+   - **Subscription**: **Use existing Azure subscription (2)**
+   - **Resource group**: Select **AI-900-Module-10 (3)**
+   - **Azure AI Foundry resource**: **Keep the default name (4)**
+   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
+   - Select **Create (6)**
 
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
-    - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-10 (3)**
-    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
-    - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next (7)**
-    - **Connect Azure AI Search**: Leave as default **(8)**
-    - Click on **Next (9)**
+     ![](./media/lab3-13.png)
 
-        ![](./media/ai900m10-3.png)
+1. Review your configuration. Wait for the set up process to complete.
 
-        > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
 
-1. On the **Review and Finish** page, click on **Create**.
-
-    ![](./media/ai900m10-4.png)
-
-1. Keep track of the following created resources: 
-    
-    - **Azure AI Project**
-    - **Azure AI Hub**  
-    - **Azure AI Services**    
-    - **Storage Account**  
-    - **Key Vault**
-
-      ![](./media/17-4.png)
-
-      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
-
-1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
-
-    ![](./media/3-24.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="348e3976-3f47-4302-b53a-c2bd7195d99b" />
+   ![](./media/lab3-12.png)
 
 ## Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
 In this task, we are using Azure AI Foundry to analyze a receipt image with prebuilt AI models, extracting key details like merchant information, transaction date, and total amount.
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
+
+1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
 1. In the **Overview (1)** page of your project, on the left-hand menu on the screen, select **AI Services (2)**.
  
@@ -116,9 +89,31 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
     ![](media/19-1.png)
 
-1. In the drop-down list under *Try it out*, note that your Azure AI services resource is selected. Leave it as-is.
+1. On the **Add captions to images** page, click on **Select a hub** under **Try It Out** subheading.
 
-   ![](media/10-4.png)
+    ![](./media/lab3-14.png)
+
+1. On the Select a Hub page, choose **Create a New Hub**.
+
+1. On the Create a new hub page, enter the following details:
+
+   - **Hub name:** Select **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+   - **Subscription:** **Use existing Azure subscription (2)**
+   - **Resource group:** Select **AI-900-Module-10 (3)** 
+   - **Location:** Select **<inject key="location" enableCopy="false"/> (4)**
+   - **Connect Azure AI Services or Azure OpenAI Service**: Leave as default **(5)**
+   - **Connect Azure AI Search**: Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)**.
+   - Click on **Next (7)**
+
+      ![](./media/lab3-16.png)
+
+1. On the **Review and Finish** page, click on **Create**.
+
+   ![](./media/lab3-17.png)
+
+1. On the **You'll need a project to keep working** enter **myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and click on **Create project (2)**.
+
+    ![](./media/lab3-18.png)
 
 1. Open a new tab and go to [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to view a sample image of a receipt.
 
@@ -141,6 +136,14 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, address, phone number, and transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
     ![](media/receipt-lab-result.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="348e3976-3f47-4302-b53a-c2bd7195d99b" />
 
 ### Review
 

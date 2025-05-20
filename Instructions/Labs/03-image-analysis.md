@@ -46,7 +46,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-1. In the home page, select **+ Create an agent**.
+1. In the home page, select **Create an agent**.
 
 1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
