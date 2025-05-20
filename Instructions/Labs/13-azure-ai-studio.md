@@ -10,7 +10,7 @@ In this exercise, you will perform:
 
 - Task 1: Open Azure AI Foundry portal
 - Task 2: Create a Azure AI project
-- Task 5: Deploy and test a generative AI model
+- Task 3: Deploy and test a generative AI model
 
 ## Exercise 1: Explore the components and tools of the Azure AI Studio
 
@@ -27,7 +27,7 @@ In this task, you will sign in to Azure AI Foundry portal and explore its interf
 
 ### Task 2: Create an Azure AI Foundry Resources
 
-In this task, you will create an Azure AI hub, gaining hands-on experience in setting up a collaborative workspace for AI projects and configuring essential resources and connections.
+In this task, you will gain hands-on experience in setting up a collaborative workspace for AI projects and configuring essential resources.
 
 1. On the Azure AI Foundry portal home page, in the **Help** window, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
