@@ -67,13 +67,6 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
    ![](./media/lab3-12.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
-
 ## Task 2: Generate captions for an image
 
 In this task, we are exploring Azure AI Vision's image captioning and dense captioning capabilities by uploading an image and observing how AI generates descriptive text for the entire image and specific objects within it.
@@ -90,21 +83,39 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![](./media/17-7.png)
 
-1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes. 
+1. On the **Add captions to images** page, click on **Select a hub** under **Try It Out** subheading.
 
-    ![](./media/3-26.png)
+    ![](./media/lab3-14.png)
 
-   > **Note**: If a valid resource location wasn't selected during resource creation, you may be prompted to create a new Azure AI Services resource in a supported region.  
-   > To proceed with the lab, ensure the new resource is created in one of the following supported regions:  
-   > **East US, France Central, Korea Central, West Europe, or West US**.
-   
-   - If the AI service resource does not appear in the drop-down menu, select **Create now** to provision a new AI Services resource in one of the supported regions listed above.
-   
-     ![](./media/ai900y6.png)
-   
-   - On the **Create a new AI Services resource** page, enter **AII<inject key="DeploymentID" enableCopy="false" />** in the **AI Services name** field, then click **Create and connect (2)**.
-   
-     ![](./media/ai900y7.png)
+1. On the Select a Hub page, choose **Create a New Hub**.
+
+   ![](./media/lab3-15.png)
+
+1. On the Create a new hub page, enter the following details:
+
+   - **Hub name:** Select **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
+   - **Subscription:** **Use existing Azure subscription (2)**
+   - **Resource group:** Select **AI-900-Module-03 (3)** 
+   - **Location:** Select **<inject key="location" enableCopy="false"/> (4)**
+   - **Connect Azure AI Services or Azure OpenAI Service**: Leave as default **(5)**
+   - **Connect Azure AI Search**: Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)**.
+   - Click on **Next (7)**
+
+      ![](./media/lab3-16.png)
+
+1. On the **Review and Finish** page, click on **Create**.
+
+   ![](./media/lab3-17.png)
+
+1. On the **You'll need a project to keep working** enter **myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and click on **Create project (2)**.
+
+    ![](./media/lab3-18.png)
+
+1. Go back to the **Add Captions to Images** page, click on **Select a Hub (1)**, choose **myhub<inject key="DeploymentID" enableCopy="false" /> (2)** from the drop-down menu, and then click **Select (3)**.
+
+    ![](./media/lab3-19.png)
+
+   >**Note:** To return to the **Add Captions to Images** page, repeat **Task 2**, from **Step 1** through **Step 4**.
 
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu, and paste it into a new tab to download **image-analysis.zip**. 
 
@@ -160,6 +171,13 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
    ![](./media/3-14.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+   
 ## Task 3: Tagging images 
 
 In this task, we are using Azure AI Vision's common tag extraction feature to analyze an image and generate a list of descriptive tags, including objects and actions, along with confidence scores.
