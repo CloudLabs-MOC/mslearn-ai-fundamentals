@@ -43,10 +43,6 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. We will start by choosing a model that we want to work with and creating a project to use it in. 
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
-
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m10-1.png)
-
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` (1) model which we’ll use in our project and click (2) on it to select.
 
     ![](./media/L1T1S7-2005.png)
@@ -127,6 +123,7 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
 
     > **Note**: You can also add **Actions** to an agent to automate tasks. In this simple information retrieval agent example, no actions are required.
 
+
 ### Task 3: Test your agent
 
 Now that you've created an agent, you can test it in the Azure AI Foundry portal playground.
@@ -144,6 +141,7 @@ Now that you've created an agent, you can test it in the Azure AI Foundry portal
 1. Try a follow-up question, like `What about accommodation?` and review the response.
 
     ![](./media/test-agent3-2005.png)
+
 
 ### Review
 
