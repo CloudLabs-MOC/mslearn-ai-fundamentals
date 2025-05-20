@@ -56,7 +56,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 1. Select **Advanced options** and specify the following settings:
 
    - **Subscription**: **Use existing Azure subscription (2)**
-   - **Resource group**: Select **AI-900-Module-03 (3)**
+   - **Resource group**: Select **AI-900-Module-06 (3)**
    - **Azure AI Foundry resource**: **Keep the default name (4)**
    - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
    - Select **Create (6)**
