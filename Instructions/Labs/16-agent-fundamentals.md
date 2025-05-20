@@ -88,6 +88,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/edit-model2-2005.png)
 
+
 ### Task 2: Create an AI agent
 
 Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document, and use it as *grounding* data for the agent.
@@ -122,6 +123,7 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
 
     > **Note**: You can also add **Actions** to an agent to automate tasks. In this simple information retrieval agent example, no actions are required.
 
+
 ### Task 3: Test your agent
 
 Now that you've created an agent, you can test it in the Azure AI Foundry portal playground.
@@ -139,6 +141,7 @@ Now that you've created an agent, you can test it in the Azure AI Foundry portal
 1. Try a follow-up question, like `What about accommodation?` and review the response.
 
     ![](./media/test-agent3-2005.png)
+
 
 ### Review
 
