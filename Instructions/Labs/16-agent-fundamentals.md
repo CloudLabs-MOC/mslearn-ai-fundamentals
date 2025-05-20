@@ -50,7 +50,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/ai900m10-2.png)
 
-1. On the **Create a project** pane, configure it with the following settings:
+1. On the **Create a project** pane, Configure it with the following settings:
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
@@ -89,10 +89,9 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="fc8a5cf2-a28b-4610-9a8a-ca6d781f4022" />
-
+   
 ### Task 2: Deploy a generative AI model
 
 Now you're ready to deploy a generative AI language model to support your agent.
@@ -101,11 +100,11 @@ Now you're ready to deploy a generative AI language model to support your agent.
 
 1. In the **Models + endpoints (1)** page, in the **Model deployments** tab, in the **+ Deploy model (2)** menu, select **Deploy base model (3)**.
 
-   ![](./media/Models+endpoints.png)
+   ![](./Media/Models+endpoints.png)
 
 1. Search for the **gpt-4o (1)** model in the list, and then select **gpt-4o (2)** and **confirm (3)** it.
 
-    ![](./media/gpt-40.png)
+    ![](./Media/gpt-40.png)
 
 1. Deploy the model with the following settings by selecting **Customize** in the deployment details:
     - **Deployment name**: **gpt-4o (1)**
@@ -115,57 +114,49 @@ Now you're ready to deploy a generative AI language model to support your agent.
     - **Content filter**: DefaultV2 **(5)**
     - Click on **Deploy (6)**
 
-       ![](./media/Deployment1.png)
+      ![](./Media/deployment1.png)
 
-    > **Note**: Reducing the TPM helps avoid overusing the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may need to wait and resubmit prompts if the rate limit is exceeded.
+    > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may need to wait and resubmit prompts if the rate limit is exceeded.
 
 1. Wait for the deployment to complete.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="9227b6a9-3f7a-4b43-bad0-5fc9eba34a7b" />
-
 ### Task 3: Create an AI agent
 
-Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document and use it as *grounding* data for the agent.
+Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document, and use it as *grounding* data for the agent.
 
 1. Open another browser tab, and download [Expenses_policy.docx](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx` and save it locally. This document contains details of the expenses policy for the fictional Contoso corporation.
 
-   ![](./media/downloadfile.png)
+   ![](./Media/downloadfile.png)
 
 1. Return to the browser tab containing the Azure AI Foundry portal, and in the navigation pane on the left, in the **Build and customize** section, select the **Agents** page.
 
-   ![](./media/agent.png)
+   ![](./Media/agent.png)
 
 1. If prompted, select your Azure **OpenAI service (1)** resource and click on **let's go (2)**.
 
-   ![](./media/lestgo.png)
+   ![](./Media/lestgo.png)
 
     >**Note:** A new agent with a name like *Agent123* should be created automatically (if not, use the **+ New agent** button to create one).
 
 1. Select your new agent. Then, in the **Setup** pane for your new agent, set the **Agent name** to `ExpensesAgent` **(1)**, ensure that the **gpt-4o (2)** model deployment you created previously is selected, and set the **Instructions** to `Answer questions related to expense claims` **(3)**.
 
-    ![](./media/ai-agent-setup.png)
+    ![](./Media/ai-agent-setup.png)
 
 1. Further down in the **Setup** pane, next to the **Knowledge** header, select **+ Add**.
 
-    ![](./media/ai-agent-add-files.png)
+    ![](./Media/ai-agent-add-files.png)
 
 1. In the **Add knowledge** dialog box, select **Files**.
 
-    ![](./media/files.png)
+    ![](./Media/files.png)
 
 1. In the **Adding files** dialog box, create a new vector store named `Expenses_Vector_Store` **(1)**,  select **Upload local (2)**, click **Select local files**, navigate to the **Downloads (3)** folder, choose **Expenses_Policy(4)**, and click **Open (5)**.
   
-   ![](./media/files1.png)
+   ![](./Media/files1.png)
 
 1. On the Manage page, click **Upload and Save** to complete the file upload process.
 
-   ![](./media/upload-save.png)
+   ![](./Media/upload-save.png)
 
 1. In the **Setup** pane, in the **Knowledge** section, verify that **Expenses_Vector_Store** is listed and shown as containing 1 file.
 
@@ -177,17 +168,17 @@ Now that you've created an agent, you can test it in the Azure AI Foundry portal
 
 1. At the top of the **Setup** pane for your agent, select **Try in playground**.
 
-   ![](./media/try1.png)
+   ![](./Media/try1.png)
 
 1. In the playground, enter the prompt `What's the maximum I can claim for meals?` and review the agent's response - which should be based on information in the expenses policy document you added as knowledge to the agent setup.
 
-    ![](./media/ai-agent-playground.png)
+    ![](./Media/ai-agent-playground.png)
 
     > **Note**: If the agent fails to respond because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
 
 1. Try a follow-up question, like `What about accommodation?` and review the response.
 
-    ![](./media/ai-agent-playground1.png)
+    ![](./Media/ai-agent-playground1.png)
 
 ### Review
 
