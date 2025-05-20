@@ -40,7 +40,7 @@ In this task, you will create an Azure AI hub, gaining hands-on experience in se
    - Select **AI-900-Module-13-<inject key="DeploymentID" enableCopy="false" />** resource group (3)
    - Click **Create** (4)	
 
-     ![](./media/xxai2.png)
+     ![](media/xxai2.png)
 
 1. When your project is created, close any tips that are displayed and review the project page in Azure AI Foundry portal, which should look similar to the following image. Review the Endpoints and keys section.
 
