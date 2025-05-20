@@ -44,48 +44,28 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
    ![](./media/3-23.png)
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/ai900m3-2.png)
+    ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
 
-1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+1. In the home page, select **+ Create an agent**.
 
-   ![](./media/17-3.png)
+1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
-1. On the **Create a project** pane, configure it with the following settings:
-
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
-    - **Subscription**: **Use existing Azure subscription (2)**
+1. Select **Advanced options** and specify the following settings:
+   - **Subscription**: **Use existing Azure subscription (2)**
     - **Resource group**: Select **AI-900-Module-03 (3)**
-    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
-    - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services (5)** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)** and click on **Next**
-    - **Connect Azure AI Search**: Leave as default **(7)**
-    - Click on **Next (8)**
+    - **Azure AI Foundry resource**: **Keep the default name (4)**
+    - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
+    - Select **Create (6)**
 
-        ![](./media/3-4.png)
+      ![](./media/lab3-13.png)
 
-    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
+1. Review your configuration. Wait for the set up process to complete.
 
-1. On the **Review and Finish** page, click on **Create**.
+1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
 
-    ![](./media/3-5.png)
-
-1. Keep track of the following created resources: 
-    
-    - **Azure AI Project**
-    - **Azure AI Hub**  
-    - **Azure AI Services**    
-    - **Storage Account**  
-    - **Key Vault**
-
-      ![](./media/17-4.png)
-
-      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.      
-
-1. If prompted with *Explore and experiment*, click on **Close** to dismiss it.
-
-    ![](./media/3-24.png)
+   ![](./media/lab3-12.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -100,11 +80,7 @@ In this task, we are exploring Azure AI Vision's image captioning and dense capt
 
 Let's use the image captioning functionality of Azure AI Vision to analyze images taken by a camera in the *Northwind Traders* store. Image captions are available through the **Caption** and **Dense Captions** features.
 
-1. In the **Overview (1)** page of your project, on the left-hand menu on the screen, select **AI Services (2)**.
- 
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/17-5.png)  
-
-    >**Note**: If a pop-up appears, please click **Close**.
+1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
 1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
 
