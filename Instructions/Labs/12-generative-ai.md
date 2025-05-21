@@ -56,6 +56,14 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai900l12h.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
+   
 ## Task 2: Explore generative AI in Azure AI Foundry's chat playground
 
 In this task, you will learn how to interact with the Chat playground in Azure AI Foundry, deploy a generative AI model, and optimize responses using effective prompting techniques.
@@ -119,14 +127,6 @@ In this task, you will learn how to interact with the Chat playground in Azure A
    ![](./media/12-17.png)   
 
 1. When you are done, you can close the browser window.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
 
 ### Review
 
