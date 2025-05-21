@@ -61,7 +61,7 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
     ![The image and its captions are displayed.](./media/aiservice.png)
 
-1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. You will be taken to a page to create an Azure AI services resource. Please click on **Create** configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
@@ -110,7 +110,7 @@ In this task, you will create a Storage account in Azure, configure its settings
 
     ![Picture1](media/deployment.png)
 
-1. In the Azure Storage account you created, in the left-hand menu pane, select **Configuration (1)** (under **Settings**), Change the setting for **Allow Blob anonymous access** to **Enabled (2)** and then select **Save (3)**.
+1. In the Azure Storage account you created, in the left-hand menu pane, select **Configuration (1)** (under **Settings**), Change the setting for **Allow Blob anonymous access** to **Enabled (2)**, and then select **Save (3)**.
 
     ![Picture1](media/storageaccount(1).png)
 
@@ -308,7 +308,7 @@ Use the Search Explorer to write and test queries. Search Explorer is a tool bui
     ```
 1. Select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see `1` in the `@odata.count` field.
 
-   > **Note**:Notice how the results are sorted by `@search.score`. This score is assigned by the search engine to indicate how closely the results match the given query.
+   > **Note**: Notice how the results are sorted by `@search.score`. This score is assigned by the search engine to indicate how closely the results match the given query.
 
 1. One of the problems we might want to solve is why there might be certain reviews. Let's take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
