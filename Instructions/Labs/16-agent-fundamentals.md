@@ -19,7 +19,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
