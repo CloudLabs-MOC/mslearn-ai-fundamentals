@@ -65,6 +65,8 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
    ![](./media/lab3-12.png)
 
+   > **Note**: If an **Insufficient permissions** error appears, you can safely ignore it.
+   
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
