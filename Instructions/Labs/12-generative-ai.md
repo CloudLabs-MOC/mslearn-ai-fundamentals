@@ -16,7 +16,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -48,11 +48,11 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - **Resource group**: **AI-900-Module-12 (3)**
     - **Region**: Select **<inject key="location" enableCopy="false"/> (4)**
 
-1. Select **Create (5)** and review your configuration. Wait for the set up process to complete.
+1. Select **Create (5)** and review your configuration. Wait for the setup process to complete.
 
     >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
 
-1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
+1. When your project is created, you will be brought by default to the Agents playground in the Azure AI Foundry portal, which should look similar to the following image:
 
     ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai900l12h.png)
 
@@ -70,7 +70,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 In this task, you will learn how to interact with the Chat playground in Azure AI Foundry, deploy a generative AI model, and optimize responses using effective prompting techniques.
 
-1. In Azure AI Foundry's Portal page, Click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)** to start.
+1. In Azure AI Foundry's Portal page, click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)** to start.
 
    ![](./media/ai900l12g.png)
 
@@ -81,7 +81,7 @@ In this task, you will learn how to interact with the Chat playground in Azure A
     - Add context to maximize response appropriateness and relevance
     - Set clear expectations for the response
 
-1. Let's try generating a resonse using a prompt with a specific goal. In the chat box, enter the following prompt **(1)** and click on the **Send (2)** button.
+1. Let's try generating a response using a prompt with a specific goal. In the chat box, enter the following prompt **(1)** and click on the **Send (2)** button.
 
     ```prompt
     I'm planning a trip to Paris in September. Can you help me?
@@ -138,6 +138,6 @@ In this Module, you have completed the following tasks:
 
 ## Learn more
 
-This lab demonstrated only some of the capabilities of the AI Generative AI service. To learn more about what you can do with this service, see the [Generative AI](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/evaluate-generative-ai-app) page.
+This lab demonstrated only some of the capabilities of the Generative AI service. To learn more about what you can do with this service, see the [Generative AI](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/evaluate-generative-ai-app) page.
 
 ## You have successfully completed this lab.
