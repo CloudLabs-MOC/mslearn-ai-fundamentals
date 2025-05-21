@@ -30,18 +30,18 @@ You can use Azure AI Vision's OCR capabilities with an **Azure AI services** mul
 
    ![The image and its captions are displayed.](./media/aix2.png)
 
-1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. You will be taken to a page to create an Azure AI services resource. Please click on **Create** configure it with the following settings:
 
     ![The image and its captions are displayed.](./media/ai900m5-2.png)
 
-1. You will be taken to a page to create an Azure AI services resource. please click on **Create** Configure it with the following settings:
+1. You will be taken to a page to create an Azure AI services resource. Please click on **Create** configure it with the following settings:
 
     - **Subscription**: *Your Azure subscription* **(1)**
     - **Resource group**: **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" /> (2)**
     - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
     - **Name**: Enter **text<inject key="DeploymentID" enableCopy="false" /> (4)**
     - **Pricing tier**: *Standard S0* **(5)**
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected* **(6)**
+    - **By checking this box, I acknowledge that I have read and understood all the terms below**: *Selected* **(6)**
    - Select **Review + create (7)** 
 
      ![](./media/ai900m5-3.png)   
@@ -54,9 +54,9 @@ In this task, you will learn how to connect your **Azure AI Services** resource 
 
 Next, connect the Azure AI services resource you provisioned above to Vision Studio.
 
-1. Right click on  [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Vision Studio.
+1. Right-click on the [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Vision Studio.
 
-1. **Sign in** with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource please click on the **X** icon to close the popup.
+1. **Sign in** with your account and make sure you are using the same directory as the one where you have created your Azure AI services resource. if you receive a pop-up to select the resource, please click on the **X** icon to close the pop-up.
 
     ![](./media/ai900m5-4.png)
 
@@ -78,7 +78,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 In this task, you will learn how to extract text from images in Vision Studio using Optical Character Recognition (OCR) technology.
     
-1. Right click on [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Vision Studio.
+1. Right-click on the [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Vision Studio.
 
 1. On the **Getting started with Vision** landing page, select **Optical character recognition (1)**, and then select **Try it out (2)** the **Extract text from images** tile.
 
@@ -88,7 +88,7 @@ In this task, you will learn how to extract text from images in Vision Studio us
 
    ![An image of the text in the image outlined](media/ai900m5-6.png)
 
-1. Open a new tab, copy and paste this link in the browser [**https://aka.ms/mslearn-ocr-images**](https://aka.ms/mslearn-ocr-images) to download **ocr-images.zip**. Then extract zip folder.
+1. Open a new tab, copy and paste this link in the browser [**https://aka.ms/mslearn-ocr-images**](https://aka.ms/mslearn-ocr-images) to download **ocr-images.zip**. Then extract the zip folder.
 
 1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
 
