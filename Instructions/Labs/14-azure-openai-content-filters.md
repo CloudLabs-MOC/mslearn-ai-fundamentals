@@ -21,7 +21,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -51,7 +51,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/ai900m10-2.png)
 
-1. On the **Create a project** pane, Configure it with the following settings:
+1. On the **Create a project** pane, configure it with the following settings:
 
     - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
@@ -133,7 +133,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
      ![](./media/ai900m13-5.png)
 
-1. In the **Input filter** tab, review the default settings for a content filter. Also do explore the input filter and output filter tabs such as **Categories**, **Media**, **Action** and **Threshold.** 
+1. In the **Input filter** tab, review the default settings for a content filter. Also, do explore the input filter and output filter tabs such as **Categories**, **Media**, **Action**, and **Threshold.** 
 
    Content filters are based on restrictions for four categories of potentially harmful content:
 
@@ -171,7 +171,6 @@ Content filters are applied to prompts and completions to prevent potentially ha
 1. Return to the **Models + endpoints (1)** page and notice that your deployment now references the **custom content filter (2)** you’ve created.   
 
    ![](./media/ai900m13-12.png)
-
  
 ### Task 4: Generate natural language output
 
