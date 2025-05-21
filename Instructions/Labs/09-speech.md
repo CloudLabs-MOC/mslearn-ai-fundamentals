@@ -1,17 +1,17 @@
-# Module 09 : Explore Speech in Azure AI Foundry portal
+# Module 09: Explore Speech in the Azure AI Foundry portal
 
 ## Lab overview
 
-The **Azure AI Speech** service transcribes speech into text, and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
+The **Azure AI Speech** service transcribes speech into text and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
 
-In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to transcribe audio using the built-in try-it-out experiences. 
+In this exercise, you will use Azure AI Speech in the Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to transcribe audio using the built-in try-it-out experiences. 
 
 ## Lab objectives
 
 In this lab, you will perform:
 
 - Task 1: Create a project in the Azure AI Foundry portal
-- Task 2: Explore speech to text in Azure AI Foundry's Speech Playground
+- Task 2: Explore speech-to-text in Azure AI Foundry's Speech Playground
 
 ### Task 1: Create a project in the Azure AI Foundry portal
 
@@ -21,7 +21,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -45,7 +45,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-1. In the home page, select **Create an agent**.
+1. On the home page, select **Create an agent**.
 
 1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
@@ -59,9 +59,9 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
      ![](./media/lab3-13.png)
 
-1. Review your configuration. Wait for the set up process to complete.
+1. Review your configuration. Wait for the setup process to complete.
 
-1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
+1. When your project is created, you will be brought by default to the Agents playground in the Azure AI Foundry portal, which should look similar to the following image:
 
    ![](./media/lab3-12.png)
 
@@ -79,7 +79,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 In this task, we are using Azure AI Speech to transcribe audio into text in real time using the Speech Playground.
 
-Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground. 
+Let's try out *real-time speech-to-text* in Azure AI Foundry's Speech Playground. 
 
 1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
@@ -91,7 +91,7 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
    ![](./media/9-6.png)
 
-1. Copy highlighted link by right-clicking the [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) and selecting "Copy" from the context menu and paste it into the new tab to download **Speech.zip**. 
+1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) and selecting "Copy" from the context menu, and paste it into a new tab to download **Speech.zip**. 
 
 1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
 
