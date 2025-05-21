@@ -37,9 +37,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/9-8.png)
 
-1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it’s open):
-
-   ![](./media/Aifounudry-homepage-2005.png)
+1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it’s open).
 
 1. We will start by choosing a model that we want to work with and creating a project to use it in. 
 
@@ -69,8 +67,6 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 1. In the navigation pane on the left, select **Overview** to see the main page for your project; which looks like this:
 
     ![](./media/Aifoundry-overview-2005.png)
-
-    > **Note**: If an Insufficient permissions error is displayed, use the Fix me button to resolve it.
 
 1. At the bottom of the navigation pane on the left, select **Management center**. The management center is where you can configure settings at both the resource and project levels; which are both shown in the navigation pane.
 
@@ -131,10 +127,10 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
     > **Note**: You can also add **Actions** to an agent to automate tasks. In this simple information retrieval agent example, no actions are required.
 
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+ - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="9227b6a9-3f7a-4b43-bad0-5fc9eba34a7b" />
 
@@ -155,7 +151,6 @@ Now that you've created an agent, you can test it in the Azure AI Foundry portal
 1. Try a follow-up question, like `What about accommodation?` and review the response.
 
     ![](./media/test-agent3-2005.png)
-
 
 ### Review
 
