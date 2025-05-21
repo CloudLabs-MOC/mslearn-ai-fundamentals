@@ -12,7 +12,7 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
 ## Lab Objectives
 
 In this lab, you will perform:
-- Task 1: Create a project in Azure AI Foundry portal
+- Task 1: Create a project in the Azure AI Foundry portal
 - Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry
 
 ## Task 1: Create a project in the Azure AI Foundry portal
@@ -23,7 +23,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -47,7 +47,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
    
 1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-1. In the home page, select **Create an agent**.
+1. On the home page, select **Create an agent**.
 
 1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
 
@@ -61,9 +61,9 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
      ![](./media/lab3-13.png)
 
-1. Review your configuration. Wait for the set up process to complete.
+1. Review your configuration. Wait for the setup process to complete.
 
-1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
+1. When your project is created, you will be brought by default to the Agents playground in the Azure AI Foundry portal, which should look similar to the following image:
 
    ![](./media/lab3-12.png)
 
@@ -147,7 +147,7 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 ### Review
 
-In this Module, you have used Azure AI Document Intelligence's prebuilt receipts model in Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
+In this Module, you have used Azure AI Document Intelligence's prebuilt receipts model in the Azure AI Foundry portal. From the results that were returned, you saw how Document Intelligence was able to identify specific fields, enabling data from everyday documents to be more easily processed. Before you close the demo, why not try some of the sample receipts, including those in different languages?
 
 In this Module, you have completed the following tasks:
 - Created a project in the Azure AI Foundry portal
