@@ -1,11 +1,11 @@
-# Module 12: Explore generative AI in Azure AI Foundry portal
+# Module 12: Explore generative AI in the Azure AI Foundry portal
 
-Generative AI describes a category of capabilities within AI that create content. People typically interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications.
+Generative AI describes a category of capabilities within AI that create content. People typically interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in the Azure AI Foundry portal, Microsoft's platform for creating intelligent applications.
 
 ## Lab objectives
 
 In this lab, you will perform:
-- Task 1: Create a project in Azure AI Foundry portal
+- Task 1: Create a project in the Azure AI Foundry portal
 - Task 2: Explore generative AI in Azure AI Foundry's chat playground
 
 ## Task 1: Create a project in the Azure AI Foundry portal
@@ -34,7 +34,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/9-8.png)
 
-1. In the home page, select **Create an agent**.
+1. On the home page, select **Create an agent**.
 
    ![](./media/ai900l12f.png)
 
