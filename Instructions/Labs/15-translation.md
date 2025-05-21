@@ -8,7 +8,7 @@ To test the capabilities of the Azure AI Translator service, we'll take a look a
 
 In this lab, you will perform:
 - Task 1: Creating a Translator resource
-- Task 2: Exploring Translator service 
+- Task 2: Exploring the Translator service 
 
 ## Task 1: Create a Translator resource
 
