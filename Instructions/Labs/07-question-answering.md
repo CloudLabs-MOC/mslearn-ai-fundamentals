@@ -3,7 +3,7 @@
 ## Lab overview
 In this exercise, you will use Language Studio to create and train a knowledge base of questions and answers. Content for the knowledge base will come from an existing FAQ page on the website of Margie’s Travel, a fictitious travel agency. You will then use Language Studio to see how it would work when used by customers.
 
-Azure AI Language includes *question answering* capabilities, which you will use to create a knowledge base. Knowledge bases can be created either by entering question and answer pairs manually or from an existing document or web page. Margie’s Travel wants to use their existing FAQ document.
+Azure AI Language includes *question answering* capabilities, which you will use to create a knowledge base. Knowledge bases can be created either by entering question and answer pairs manually or from an existing document or web page. Margie’s Travel wants to use its existing FAQ document.
 
 The Language service's question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
@@ -61,7 +61,7 @@ To use question answering, you need a **Language** resource.
           ![An image of the text in the image outlined](media/ai900m7-5.png)
 
     - **Responsible AI Notice**
-        - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected* **(8)**
+        - **By checking this box, I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected* **(8)**
 
         - Click on **Review and Create (9)**
 
@@ -77,7 +77,7 @@ In this task, you will learn how to create a new project in the **Language** res
 
 1. Right click on [https://language.azure.com](https://language.azure.com?azure-portal=true) link, select **Copy link** from the context menu, then paste it into a new tab to access the Language studio portal.
 
-1. From the top right corner click on **Sign in**.
+1. From the top right corner, click on **Sign in**.
 
     ![Creating a Language Service resource with custom question answering enabled.](media/mod7-01.png)
 
@@ -173,7 +173,7 @@ Now that you have a knowledge base, you can test it.
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-13.png)
    
-1. In the test pane, at the bottom enter the message `Hi` and press enter. 
+1. In the test pane, at the bottom, enter the message `Hi` and press Enter. 
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-14.png)
 
@@ -181,13 +181,13 @@ Now that you have a knowledge base, you can test it.
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-15.png)
    
-1. In the test pane, at the bottom enter the message `I want to book a flight` and press enter. An appropriate response from the FAQ should be returned.
+1. In the test pane, at the bottom, enter the message `I want to book a flight` and press Enter. An appropriate response from the FAQ should be returned.
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-16.png)
 
     > **Note**: The response contains both a short answer and a detailed answer passage. The passage provides the full text from the FAQ document for the closest matched question, while the short answer is intelligently extracted from it. You can control the inclusion of the short answer by using the **Include short answer** checkbox at the top of the test pane.
 
-1. Try another question, such as `How can I cancel a reservation?` and press enter.
+1. Try another question, such as `How can I cancel a reservation?` and press Enter.
 
    ![Creating a Language Service resource with custom question answering enabled.](media/ai900m7-17.png)
 
@@ -211,7 +211,7 @@ You can deploy the knowledge base as a client application to answer questions
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
-- Hit the Validate button for the corresponding task. you will receive a success message. 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
