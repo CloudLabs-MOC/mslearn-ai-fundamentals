@@ -41,7 +41,7 @@ You can use many Azure AI Language features with either a **Language** or **Azur
     - **Region**: Select **<inject key="location" enableCopy="false"/>** **(3)**
     - **Name**: Enter **Conversational<inject key="DeploymentID" enableCopy="false" /> (4)**
     - **Pricing tier**: **Free F0 (5)** (if Free F0 is not available, select *S*)
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected* **(6)**
+    - **By checking this box, I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected* **(6)**
     - Select **Review + create (7)**
 
       ![An image of the text in the image outlined](media/ai900m8-2.png)   
@@ -102,13 +102,13 @@ To implement natural language understanding with Conversational Language Underst
 
 1. On the **Review and finish** page, select **Create**. 
 
-    ![Select add under Intents on the Build Schema pane.](media/ai900m8-7.png)
+    ![Select Add under Intents on the Build Schema pane.](media/ai900m8-7.png)
   
 ### Task 3: Create intents, utterances, and entities
 
 In this task, you will learn how to create intents, utterances, and entities in your **Conversational Language Understanding (CLU)** app to train it to recognize user inputs and respond appropriately.
 
-An *intent* is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
+An *intent* is an action you want to perform - for example, you might want to switch on a light or turn off a fan. In this case, you'll define two intents: one to switch on a device and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
 1. In the **Schema definition (1)** pane, ensure that **Intents (2)** is selected then select **+ Add (3)**
 
@@ -216,7 +216,7 @@ Now you're ready to use the intents and entities you have defined to train the c
 
         ![Select add under Intents on the Build Schema pane.](media/ai900m8-22.png)
    
-1. Wait for training to complete.
+1. Wait for the training to complete.
 
    ![Select add under Intents on the Build Schema pane.](media/ai900m8-23.png)
 
