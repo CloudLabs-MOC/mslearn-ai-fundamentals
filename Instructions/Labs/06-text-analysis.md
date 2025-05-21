@@ -68,6 +68,8 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
 
    ![](./media/lab3-12.png)
+
+   > **Note**: If an **Insufficient permissions** error appears, you can safely ignore it.
       
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
