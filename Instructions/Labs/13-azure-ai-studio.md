@@ -2,21 +2,21 @@
 
 ## Lab overview
 
-In this exercise, you will explore the Azure AI Foundry portal and learn how to create, manage, and deploy generative AI models within the Azure ecosystem. You will gain hands-on experience working with Azure AI hubs, and projects, and deploying AI models like GPT-4o.
+In this exercise, you will explore the Azure AI Foundry portal and learn how to create, manage, and deploy generative AI models within the Azure ecosystem. You will gain hands-on experience working with Azure AI hubs, projects, and deploying AI models like GPT-40.
 
 ## Lab objectives
 
 In this exercise, you will perform:
 
-- Task 1: Open Azure AI Foundry portal
-- Task 2: Create a Azure AI project
+- Task 1: Open the Azure AI Foundry portal
+- Task 2: Create an Azure AI project
 - Task 3: Deploy and test a generative AI model
 
 ## Exercise 1: Explore the components and tools of the Azure AI Studio
 
-### Task 1: Open Azure AI Foundry portal
+### Task 1: Open the Azure AI Foundry portal
 
-In this task, you will sign in to Azure AI Foundry portal and explore its interface, learning how to navigate the platform and access its various features for managing AI resources.
+In this task, you will sign in to the Azure AI Foundry portal and explore its interface, learning how to navigate the platform and access its various features for managing AI resources.
 
 1. In a edge browser, open https://ai.azure.com and **Sign in** using your Azure credentials. The home page of Azure AI Studio looks similar to the following image:
 
@@ -42,23 +42,23 @@ In this task, you will gain hands-on experience in setting up a collaborative wo
 
      ![](media/xxai2.png)
 
-1. When your project is created, close any tips that are displayed and review the project page in Azure AI Foundry portal, which should look similar to the following image. Review the Endpoints and keys section.
+1. When your project is created, close any tips that are displayed and review the project page in the Azure AI Foundry portal, which should look similar to the following image. Review the Endpoints and keys section.
 
    ![](media/xxai4.png)
 
-1. At the bottom of the navigation pane on the left, select **Management center**. The management center is where you can configure settings at both the resource and project levels; which are both shown in the navigation pane.
+1. At the bottom of the navigation pane on the left, select **Management center**. The management center is where you can configure settings at both the resource and project levels, which are both shown in the navigation pane.
 
     ![](media/13-1.png)
 
-1. The management center is where you can configure settings at both the hub and project levels; which are both shown in the navigation pane.
+1. The management center is where you can configure settings at both the hub and project levels, which are both shown in the navigation pane.
 
    ![](media/13-2.png)
 
-1. In the Management Center, from the left navigation pane, select **Models + endpoints** (1).In the window that appears,click on the dropdown (2) under **Deploy a model** and select **Deploy a base model**(3)  
+1. In the Management Center, from the left navigation pane, select **Models + endpoints** (1).In the window that appears, click on the dropdown (2) under **Deploy a model** and select **Deploy a base model**(3)  
 
    ![](media/xxai5.png)
 
-1. Search (1) for and select gpt-4o model (2) and click on **Confirm** (3).
+1. Search (1) for and select the gpt-4o model (2) and click on **Confirm** (3).
 
    ![](media/xxai6.png)
 
@@ -70,7 +70,7 @@ In this task, you will gain hands-on experience in setting up a collaborative wo
    
    ![](media/xxai8.png)
 
-1. While keeping the Azure foundry tab open in the Edge browser, open another tab within the same Edge browser and navigate to the Azure portal.
+1. While keeping the Azure Foundry tab open in the Edge browser, open another tab within the same Edge browser and navigate to the Azure portal.
 
 5. Browse to the resource group **AI-900-Module-13-<inject key="DeploymentID" enableCopy="false" />** , and view the Azure resources that have been created.
 
@@ -84,7 +84,7 @@ In this task, you will gain hands-on experience in setting up a collaborative wo
 
    ![](media/xxai11.png)
 
-1. In the window that appears, ensure that your gpt-4o model deployment is selected.
+1. In the window that appears, ensure that your GPT-40 model deployment is selected.
 
 1. In the Setup pane, in the Give the model instructions and context box, enter the instruction as **You are a history teacher who can answer questions about past events all around the world** (1) and click on **Apply Changes** (2)
 
@@ -106,7 +106,7 @@ In this task, you will gain hands-on experience in setting up a collaborative wo
 
 ### Summary
 
-In this exercise, you’ve explored Azure AI Foundry, and seen how to create  projects, and explore Azure AI Services and Azure OpenAI models in the Azure AI Foundry portal.
+In this exercise, you’ve explored Azure AI Foundry and seen how to create projects and explore Azure AI Services and Azure OpenAI models in the Azure AI Foundry portal.
 
 ### Review
 
