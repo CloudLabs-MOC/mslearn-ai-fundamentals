@@ -72,6 +72,10 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/management-center-2005.png)
 
+1. Navigate back to the previous page by clicking the **← (back arrow)** in the top-left corner.
+
+   ![](./media/back.png)
+    
 1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page. Verify the gpt-4o model is created as we have used the same to create the project and click on it to open. 
 
     ![](./media/deployments-2005.png)
@@ -84,6 +88,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/edit-model2-2005.png)
 
+    > **Note**: If an **Insufficient permissions** error appears, you can safely ignore it.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -98,13 +103,13 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
 
 1. Open another browser tab, and download [Expenses_policy.docx](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx` and save it locally. This document contains details of the expenses policy for the fictional Contoso corporation.
 
-1. Return to the browser tab containing the Azure AI Foundry portal, and in the navigation pane on the left, in the **Build and customize** section, select the **Agents (1)** page and go to **My Agents (2)** tab.
+1. Return to the browser tab with the Azure AI Foundry portal. In the left navigation pane, under the **Build and customize** section, select the **Agents (1)** page, then go to the **My Agents (2)** tab. A new agent with a name like **AgentXYZ (3)** should be created automatically.
 
    ![](./media/agents-2005.png)
 
-1. A new agent with a name like *Agent123* should be created automatically (if not, use the **+ New agent** button to create one). 
+   > **Note:** The `XYZ` in the agent name represents a randomly generated number and may vary.
 
-1. Select your new agent. Then, in the **Setup** pane for your new agent, set the **Agent name** to `ExpensesAgent` **(1)**, ensure that the **gpt-4o (2)** model deployment you created previously is selected, and set the **Instructions** to `Answer questions related to expense claims` **(3)**.
+1. Select the agent. Then, in the **Setup** pane for your new agent, set the **Agent name** to `ExpensesAgent` **(1)**, ensure that the **gpt-4o (2)** model deployment you created previously is selected, and set the **Instructions** to `Answer questions related to expense claims` **(3)**.
 
     ![](./media/agent-setup-2005.png)
 
@@ -125,13 +130,6 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
 1. In the **Setup** pane, in the **Knowledge** section, verify that **Expenses_Vector_Store** is listed and shown as containing 1 file.
 
     > **Note**: You can also add **Actions** to an agent to automate tasks. In this simple information retrieval agent example, no actions are required.
-
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
- - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
- - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="9227b6a9-3f7a-4b43-bad0-5fc9eba34a7b" />
 
 ### Task 3: Test your agent
 
