@@ -15,18 +15,17 @@ In this lab, you'll learn how to create and deploy a generative AI model using A
 
 By the end of this lab, you will:
 
-1. Create an Azure AI Foundry project
-2. Deploy a generative AI model
-3. Create an AI agent
-4. Test your agent
+1. Create an Azure AI Foundry project using the gpt-4o model
+2. Create an AI agent
+3. Test your agent
 
 ## Pre-requisites
 
-Familiarity with language generative AI model.
+Familiarity with a language generative AI model.
 
 ## Architecture
 
-In this hands-on lab, you will work with a streamlined architecture that integrates Azure services to build and test an AI agent. The key components include:
+In this hands-on lab, you will work with a streamlined architecture integrating Azure services to build and test an AI agent. The key components include:
 
 1. **Azure AI Foundry Portal**: Centralized platform for managing AI projects, models, and services.
 
@@ -56,7 +55,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and lab guide will be available right within your web browser.
  
 ![Access Your VM and Lab Guide](../media/4-7.png)
 
@@ -100,7 +99,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
    ![Manage Your Virtual Machine](../media/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+3. If you have not extended the duration before when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
 ## Let's Get Started with Azure Portal
  
