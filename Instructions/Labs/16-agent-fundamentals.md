@@ -41,7 +41,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. We will start by choosing a model that we want to work with and creating a project to use it in. 
 
-1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` (1) model which we’ll use in our project and click (2) on it to select.
+1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` (1) model, which we’ll use in our project, and click (2) on it to select.
 
     ![](./media/L1T1S7-2005.png)
 
@@ -49,7 +49,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/L1T1S8-2005.png)
 
-1. On the **Create a project to work with gpt-4o** pane, Configure it with the following settings:
+1. On the **Create a project to work with gpt-4o** pane, configure it with the following settings:
 
     - **Project**: **MyProject-<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Subscription**: **Use existing Azure subscription (2)**
@@ -76,11 +76,11 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/back.png)
     
-1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page. Verify the gpt-4o model is created as we have used the same to create the project and click on it to open. 
+1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page. Verify the gpt-4o model is created as we have used the same to create the project, and click on it to open. 
 
     ![](./media/deployments-2005.png)
 
-1.  Click on Edit option to change to Tokens per Minute Rate Limit of the model. 
+1.  Click on the Edit option to change to Tokens per Minute Rate Limit of the model. 
 
     ![](./media/edit-model-2005.png)
 
@@ -99,7 +99,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 ### Task 2: Create an AI agent
 
-Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document, and use it as *grounding* data for the agent.
+Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document and use it as *grounding* data for the agent.
 
 1. Open another browser tab, and download [Expenses_policy.docx](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx` and save it locally. This document contains details of the expenses policy for the fictional Contoso corporation.
 
@@ -139,7 +139,7 @@ Now that you've created an agent, you can test it in the Azure AI Foundry portal
 
    ![](./media/test-agent1-2005.png)
 
-1. In the playground, enter the prompt `What's the maximum I can claim for meals?` and review the agent's response - which should be based on information in the expenses policy document you added as knowledge to the agent setup.
+1. In the playground, enter the prompt `What's the maximum I can claim for meals?` and review the agent's response, which should be based on information in the expenses policy document you added as knowledge to the agent setup.
 
     ![](./media/test-agent2-2005.png)
 
@@ -152,7 +152,7 @@ Now that you've created an agent, you can test it in the Azure AI Foundry portal
 ### Review
 
 In this exercise, you have completed the following tasks:
-- Created an Azure AI Foundry project using a gpt-4o model.
+- Created an Azure AI Foundry project using a GPT-4o model.
 - Created an AI agent
 - Tested your agent
 
