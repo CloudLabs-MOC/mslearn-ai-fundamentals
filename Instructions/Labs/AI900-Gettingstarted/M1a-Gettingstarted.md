@@ -1,6 +1,6 @@
 
 
-# AI-900: Microsoft Azure AI Fundamentals Workshop
+# Automated Machine learning using AML
 
 Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
@@ -10,7 +10,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience in using Azure Machine Learning to automate the process of training, evaluating, and deploying machine learning models. You will learn how to create an Azure Machine Learning workspace, utilize automated machine learning to train a model, and deploy the trained model as a web service. By following step-by-step tasks, you'll explore how to configure your workspace, train a predictive model using historical data, and deploy it for real-time predictions. By the end of this lab, you'll be proficient in using Azure Machine Learning's automated capabilities, empowering you with the skills to apply machine learning in real-world scenarios without extensive coding.
+In this lab, you'll explore Azure Machine Learning's capabilities by creating a workspace, setting up compute resources, and creating a dataset. You'll run an automated machine learning job to train and identify the best model, then deploy it as a predictive service. Finally, you'll test the deployed service to ensure it delivers accurate results. This lab will demonstrate how Azure Machine Learning can streamline your workflow and enhance productivity.
 
 ## Objectives
 
@@ -18,9 +18,7 @@ By the end of this lab, you will be able to create a workspace in Azure Machine 
 
 1. **Create an Azure Machine Learning workspace**: You will learn how to set up and configure an Azure Machine Learning workspace, which is the foundation for managing your machine learning resources and experiments.
 
-2. **Train a model using automated machine learning**: You will explore how to use Azure’s automated machine learning feature to train a model that predicts bike rentals, using a dataset with historical rental data, and evaluating different models for optimal performance.
-
-3. **Deploy the model as a web service**: You will learn how to deploy the trained model as a web service for real-time predictions, enabling you to integrate the model into applications for practical use.
+2. **Run and Review Automated Machine Learning Jobs:** Understand how to train multiple models, identify the best one, and review its performance. Deploy and Test Predictive Services: Gain the ability to deploy models as predictive services and test them to ensure they deliver accurate results.
 
 ## Pre-requisites
 
@@ -46,13 +44,13 @@ In this hands-on lab, the architecture flow includes several essential component
 
 # Getting Started with lab
  
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
+Welcome to your Automated Machine learning using AML workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/4-7.png)
+![Access Your VM and Lab Guide](../media/env1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -66,9 +64,9 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 ## Lab Guide Zoom In/Zoom Out
  
-To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
-![](../media/zoomin.png)
+![](../media/zoom1.png)
 
 ## Utilizing the Split Window Feature
  
@@ -82,19 +80,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../media/aig4.png)
 
-## Lab Duration Extension
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-    ![Manage Your Virtual Machine](../media/gext.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../media/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
 ## Let's Get Started with Azure Portal
  
