@@ -3,11 +3,8 @@
 
 # Automated Machine learning using AML
 
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Module 01: Explore Automated Machine Learning in Azure Machine Learning
-
-### Overall Estimated timing: 60 minutes
+### Overall Estimated timing: 90-120 minutes
 
 ## Overview
 
@@ -23,15 +20,14 @@ By the end of this lab, you will be able to create a workspace in Azure Machine 
 
 ## Pre-requisites
 
-Basic knowledge of Azure Machine Learning and machine learning concepts. Familiarity with working in the Azure Portal and understanding of datasets and model training would be beneficial.
+Participants should have:
+
+- Basic understanding of machine learning concepts and workflows.
+- Basic knowledge of data preparation and processing techniques.
 
 ## Architecture
 
-In this hands-on lab, the architecture flow includes several essential components.
-
-1. **Azure Machine Learning Workspace and AutoML**: Set up a workspace and use AutoML to train a model on bike rental data, automatically evaluating multiple algorithms for the best performance.
-
-2. **Model Deployment as a Web Service**: Deploy the trained model as a web service using Azure Container Instances, providing a REST API endpoint for real-time predictions.
+This architecture flow demonstrates how various Azure components work together to handle, process, analyze, and visualize data, providing a comprehensive and intelligent system tailored to business needs. You’ll start by creating an Azure Machine Learning workspace to manage resources, followed by provisioning compute resources for experiments. Next, you’ll create and register datasets, run automated machine learning jobs to identify the best model, and review model performance. The best model is then deployed as a predictive service, which is tested to ensure accuracy. This integrated approach showcases Azure’s AI and data analysis capabilities, enhancing productivity and delivering personalized experiences.
 
 ## Architecture Diagram
 
@@ -39,9 +35,12 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Explanation of Components
 
-1. **Azure Machine Learning Workspace**: A centralized platform for managing machine learning resources, experiments, and models. It allows users to set up, train, and evaluate models efficiently while managing datasets and compute resources.
+The architecture for this lab involves the following key components:
 
-2. **Automated Machine Learning (AutoML)**: A feature in Azure Machine Learning that automates the process of model selection, training, and evaluation. It allows users to quickly build and optimize models without extensive coding by trying multiple algorithms and configurations.
+- **Azure OpenAI**: This component provides access to advanced AI models from OpenAI, enabling natural language processing and other AI capabilities in applications.
+- **Azure Machine Learning Workspace**: Central hub for managing machine learning resources like datasets, experiments, and models. It supports collaboration and tracks the entire ML lifecycle.
+- **Compute Cluster**: A group of interconnected computers that distribute and speed up machine learning tasks. It scales dynamically based on workload.
+- **Machine Learning Model**: The output of the ML process, representing learned patterns from data. It is used to make predictions or decisions based on new data.
 
 # Getting Started with lab
  
@@ -49,7 +48,7 @@ Welcome to your Automated Machine learning using AML workshop! We've prepared a 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
+After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the guide to switch to different exercises in the guide.
  
 ![Access Your VM and Lab Guide](../media/env1.png)
 
