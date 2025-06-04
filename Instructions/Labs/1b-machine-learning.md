@@ -1,8 +1,10 @@
-# Module 01: Explore Automated Machine Learning in Azure Machine Learning
+# Hands-on Lab: Explore Automated Machine Learning in Azure ML
 
-## Lab overview
+## Estimated time: 90-120 minutes
 
-In this exercise, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
+## Lab scenario
+
+The model will use a dataset of historical bicycle rental details to predict the number of rentals expected on a given day. It leverages seasonal and meteorological features to enhance the accuracy of its forecasts
 
 ## Lab Objectives
 
