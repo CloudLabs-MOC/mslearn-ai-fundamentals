@@ -21,6 +21,29 @@ In this lab, you will perform:
 
 In this task, we are creating an Azure AI Foundry project and configuring the necessary resources to explore AI language capabilities in the Language Playground.
 
+1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under **Services**.
+
+    ![](./media/lab6-1.png) 
+
+1. In the left navigation pane for the AI Foundry, select **AI Hubs (1)**. On the AI Hubs page, click on **Create (2)** and select **Hub (3)** from the drop-down.
+
+    ![](./media/lab6-2.png) 
+
+1. On the **Create an AI hub resource** pane, enter the following details:
+
+    - Subscription : **Leave default subscription** 
+    - Resource Group : Select **AI-900-Module-06 (1)** 
+    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
+    - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
+    - Connect AI Services incl. OpenAI : Click on **Create New (7)**
+    - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
+    - Click on **Save (9)**.
+    - Click on **Review + Create (10)**
+
+       ![](./media/lab6-3.png) 
+
+1. Click on the **Create** button to begin the deployment process.
+
 1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
 
    ![](./media/3-27.png)
@@ -61,14 +84,11 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
    - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
    - Select **Create (6)**
 
-
 1. Wait for your project and hub to be created.
 
-1. When the project is created, you will be taken to an *Overview* page of the project details.
+1. When the project is created, you will be taken to an **Overview** page of the project details.
 
 1. On the left-hand menu on the screen, select **Playgrounds**.
-
-1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
