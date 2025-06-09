@@ -1,5 +1,5 @@
 
-# Module 06: Analyze text in Azure AI Foundry portal
+# Module 06: Analyze text in the Azure AI Foundry portal
 
 ## Lab overview
 
@@ -7,15 +7,15 @@ Natural Language Processing (NLP) is a branch of AI that deals with written and 
 
 Azure AI Language service includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
-In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
+In this exercise, you will use Azure AI Language in the Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
 ## Lab objectives
 
 In this lab, you will perform:
-- Task 1: Create a project in Azure AI Foundry portal
-- Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
-- Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
-- Task 4: Summarize text with Azure AI Language in Azure AI Foundry portal
+- Task 1: Create a project in the Azure AI Foundry portal
+- Task 2: Extract named entities with Azure AI Language in the Azure AI Foundry portal
+- Task 3: Extract key phrases with Azure AI Language in the Azure AI Foundry portal
+- Task 4: Summarize text with Azure AI Language in the Azure AI Foundry portal
 
 ## Estimated timing: 30 minutes
 
@@ -25,13 +25,11 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
-In this task, we are creating an Azure AI Foundry project and configuring necessary resources to explore AI language capabilities in the Language Playground.
+In this task, we are creating an Azure AI Foundry project and configuring the necessary resources to explore AI language capabilities in the Language Playground.
 
-1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. Add commentMore actions
 
-   ![](./media/3-27.png)
-
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -49,47 +47,27 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
    ![](./media/9-8.png)
 
-1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
-   ![](./media/3-23.png)
+1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. Expand *Advanced options* to specify the following settings for your project: Add commentMore actions
+    - **Subscription**: Your Azure subscription
+    - **Resource group**: Create or select a resource group
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-create-project.png)
+    - **Region**: Select one of the following locations:
+        * East US
+        * France Central
+        * Korea Central
+        * West Europe
+        * West US
 
-1. On the **Create a project** pane, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then select **Customize (2)**.
+1. Wait for your project and hub to be created.
+1. When the project is created, you will be taken to an *Overview* page of the project details.
 
-    ![](./media/17-3.png)
+1. On the left-hand menu on the screen, select **Playgrounds**.
 
-1. On the **Create a project** pane, Configure it with the following settings:
-
-    - **Hub name**: Enter **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
-    - **Subscription**: **Use existing Azure subscription (2)**
-    - **Resource group**: Select **AI-900-Module-18 (3)**
-    - **Location**: Select **<inject key="location" enableCopy="false"/> (4)**
-    - **Connect Azure AI Services or Azure OpenAI Service**:
-    Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (5)** and click on **Next**
-    - **Connect Azure AI Search**: Leave as default **(6)**
-    - Click on **Next (7)**
-
-        ![](./media/18-8.png)
-
-    > **Important**: You will need an Azure AI services resource provisioned in a specific location to complete the rest of the lab.
-
-1. On the **Review and Finish** page, click on **Create**.
-
-    ![](./media/17-2.png)
-
-1. Keep track of the following created resources: 
-    
-    - **Azure AI Project**
-    - **Azure AI Hub**  
-    - **Azure AI Services**    
-    - **Storage Account**  
-    - **Key Vault**
-
-      ![](./media/17-4.png)
-      >**Note:** Once the deployment will succeed, close the *Project help* pane that will appear on right side.
+1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
       
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -99,7 +77,7 @@ In this task, we are creating an Azure AI Foundry project and configuring necess
 
    <validation step="07c3e734-e32f-44b6-b8e8-7b5b85f4a45b" />
 
-## Task 2: Extract named entities with Azure AI Language in Azure AI Foundry portal
+## Task 2: Extract named entities with Azure AI Language in the Azure AI Foundry portal 
 
 This task demonstrates how to use Azure AI Language Playground for Named Entity Recognition (NER). By analyzing a hotel review, Azure AI extracts key entities like locations, dates, and organizations, along with confidence scores. 
 
@@ -132,7 +110,7 @@ This task demonstrates how to use Azure AI Language Playground for Named Entity 
 
    ![](./media/18-3.png)
 
-## Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal
+## Task 3: Extract key phrases with Azure AI Language in Azure AI Foundry portal 
 
 This task demonstrates how to use Azure AI Language Playground for key phrase extraction. By analyzing a hotel review, Azure AI identifies important phrases that summarize the text's main points. 
 
