@@ -16,15 +16,15 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/AI-900-lab12-image1.png) 
 
-1. In the left navigation pane for the AI Foundry, select **AI Hubs (2)** under **Use with AI Foundry (1)**. On the AI Hubs page, click on **+ Create** and select **Hub (3)** from the drop-down.
+1. In the left navigation pane for the AI Foundry, select **AI Hubs (2)** under **Use with AI Foundry (1)**. On the AI Hubs page, click on **+ Create (3)** and select **Hub (4)** from the drop-down.
 
     ![](./media/AI-900-lab12-image2.png) 
 
 1. On the **Create an AI hub resource** pane, enter the following details:
 
     - Subscription : **Leave default subscription** 
-    - Resource Group : Select **AI-900-Module-03 (1)** 
-    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
+    - Resource Group : Select **AI-900-Module-12 (1)** 
+    - Region : **<inject key="Location" enableCopy="false"/>** Use the same location as the resource group **(2)**
     - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
     - Connect AI Services incl. OpenAI : Click on **Create New (7)**
     - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
