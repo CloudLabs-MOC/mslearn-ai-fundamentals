@@ -17,15 +17,13 @@ In this lab, you will perform:
 - Task 3: Extract key phrases with Azure AI Language in the Azure AI Foundry portal
 - Task 4: Summarize text with Azure AI Language in the Azure AI Foundry portal
 
-### Task 1: Create a project in the Azure AI Foundry portal
+## Task 1: Create a project in the Azure AI Foundry portal
 
 In this task, we are creating an Azure AI Foundry project and configuring the necessary resources to explore AI language capabilities in the Language Playground.
 
-1. Right-click the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, choose **Copy link (2)** from the context menu, then paste it into a new tab to open the Azure AI Foundry portal.
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. Add commentMore actions
 
-   ![](./media/3-27.png)
-
-1. On the **Welcome to Azure AI Foundry** page, look at the top right corner and click the **Sign in** button to log in.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -43,39 +41,33 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
    ![](./media/9-8.png)
 
-1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
-   ![](./media/3-23.png)
+1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
 
-1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
+1. Expand *Advanced options* to specify the following settings for your project: Add commentMore actions
+    - **Subscription**: Your Azure subscription
+    - **Resource group**: Create or select a resource group
 
-1. In the home page, select **+ Create an agent**.
+    - **Region**: Select one of the following locations:
+        * East US
+        * France Central
+        * Korea Central
+        * West Europe
+        * West US
 
-1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
+1. Wait for your project and hub to be created.
+1. When the project is created, you will be taken to an *Overview* page of the project details.
 
-1. Select **Advanced options** and specify the following settings:
+1. On the left-hand menu on the screen, select **Playgrounds**.
 
-   - **Subscription**: **Use existing Azure subscription (2)**
-   - **Resource group**: Select **AI-900-Module-06 (3)**
-   - **Azure AI Foundry resource**: **Keep the default name (4)**
-   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
-   - Select **Create (6)**
-
-     ![](./media/lab3-13.png)
-
-1. Review your configuration. Wait for the setup process to complete.
-
-1. When your project is created, you will be brought by default to the Agents playground in the Azure AI Foundry portal, which should look similar to the following image:
-
-   ![](./media/lab3-12.png)
-
-   > **Note**: If an **Insufficient permissions** error appears, you can safely ignore it.
+1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
       
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="07c3e734-e32f-44b6-b8e8-7b5b85f4a45b" />
 
