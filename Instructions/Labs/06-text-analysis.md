@@ -21,23 +21,48 @@ In this lab, you will perform:
 
 In this task, we are creating an Azure AI Foundry project and configuring the necessary resources to explore AI language capabilities in the Language Playground.
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
+1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
+
+   ![](./media/3-27.png)
+
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+
+   ![](./media/17-18.png)
+
+1. If prompted to sign in, enter your credentials:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+      ![Enter Your Username](./media/19-4.png)
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/19-5.png)
+
+1. If prompted to stay signed in, you can click **No**.
+
+   ![](./media/9-8.png)
+
+1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
+
+   ![](./media/3-23.png)
+
+1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
 1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
 
-1. Expand *Advanced options* to specify the following settings for your project:
-    - **Subscription**: Your Azure subscription
-    - **Resource group**: Create or select a resource group
-    - **Region**: Select one of the following locations:
-        * East US
-        * France Central
-        * Korea Central
-        * West Europe
-        * West US
+1. Select **Advanced options** and specify the following settings:
 
-    Wait for your project and hub to be created.
+   - **Subscription**: **Use existing Azure subscription (2)**
+   - **Resource group**: Select **AI-900-Module-06 (3)**
+   - **Azure AI Foundry resource**: **Keep the default name (4)**
+   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
+   - Select **Create (6)**
+
+
+1. Wait for your project and hub to be created.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
