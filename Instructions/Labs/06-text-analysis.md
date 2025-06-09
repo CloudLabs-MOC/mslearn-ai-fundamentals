@@ -21,34 +21,15 @@ In this lab, you will perform:
 
 In this task, we are creating an Azure AI Foundry project and configuring the necessary resources to explore AI language capabilities in the Language Playground.
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. Add commentMore actions
-
-1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
-
-   ![](./media/17-18.png)
-
-1. If prompted to sign in, enter your credentials.
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-      ![Enter Your Username](./media/19-4.png)
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-     ![Enter Your Password](./media/19-5.png)
- 
-1. If prompted to stay signed in, you can click **No**.
-
-   ![](./media/9-8.png)
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
 1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
 
-1. Expand *Advanced options* to specify the following settings for your project: Add commentMore actions
+1. Expand *Advanced options* to specify the following settings for your project:
     - **Subscription**: Your Azure subscription
     - **Resource group**: Create or select a resource group
-
     - **Region**: Select one of the following locations:
         * East US
         * France Central
@@ -56,13 +37,14 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
         * West Europe
         * West US
 
-1. Wait for your project and hub to be created.
+    Wait for your project and hub to be created.
+
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
 1. On the left-hand menu on the screen, select **Playgrounds**.
 
 1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
-      
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
