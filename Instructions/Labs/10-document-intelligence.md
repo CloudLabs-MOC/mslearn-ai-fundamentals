@@ -19,11 +19,34 @@ In this lab, you will perform:
 
 In this task, we are creating an Azure AI Foundry project and setting up AI resources to explore Vision and Document capabilities.
 
+1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under **Services**.
+
+    ![](./media/lab6-1.png) 
+
+1. In the left navigation pane for the AI Foundry, select **AI Hubs (1)**. On the AI Hubs page, click on **Create (2)** and select **Hub (3)** from the drop-down.
+
+    ![](./media/lab6-2.png) 
+
+1. On the **Create an AI hub resource** pane, enter the following details:
+
+    - Subscription : **Leave default subscription** 
+    - Resource Group : Select **AI-900-Module-03 (1)** 
+    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
+    - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
+    - Connect AI Services incl. OpenAI : Click on **Create New (7)**
+    - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
+    - Click on **Save (9)**.
+    - Click on **Review + Create (10)**
+
+       ![](./media/lab6-3.png) 
+
+1. Click on the **Create** button to begin the deployment process.
+
 1. Right-click on the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -36,7 +59,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](./media/19-5.png)
-     
+
 1. If prompted to stay signed in, you can click **No**.
 
    ![](./media/9-8.png)
@@ -44,28 +67,20 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
    ![](./media/3-23.png)
-   
+
 1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open)
 
-1. On the home page, select **Create an agent**.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
-1. In the **Create an agent** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and then expand **Advanced options**.
+1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-1. Select **Advanced options** and specify the following settings:
+    ![](./media/lab6-5.png)
 
-   - **Subscription**: **Use existing Azure subscription (2)**
-   - **Resource group**: Select **AI-900-Module-10 (3)**
-   - **Azure AI Foundry resource**: **Keep the default name (4)**
-   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
-   - Select **Create (6)**
+1. Wait for your project created.
 
-     ![](./media/lab3-13.png)
+1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu. 
 
-1. Review your configuration. Wait for the setup process to complete.
-
-1. When your project is created, you will be brought by default to the Agents playground in the Azure AI Foundry portal, which should look similar to the following image:
-
-   ![](./media/lab3-12.png)
+1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
 ## Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
