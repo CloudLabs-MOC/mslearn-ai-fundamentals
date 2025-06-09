@@ -74,21 +74,19 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
-1. In the *Create a project* wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and if an existing hub is suggested, select the option to create a *new* one.
+1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-1. Select **Advanced options** and specify the following settings:
+    ![](./media/lab6-5.png)
 
-   - **Subscription**: **Use existing Azure subscription (2)**
-   - **Resource group**: Select **AI-900-Module-06 (3)**
-   - **Azure AI Foundry resource**: **Keep the default name (4)**
-   - **Region**: Select **<inject key="location" enableCopy="false"/> (5)**
-   - Select **Create (6)**
-
-1. Wait for your project and hub to be created.
+1. Wait for your project created.
 
 1. When the project is created, you will be taken to an **Overview** page of the project details.
 
+   ![](./media/lab6-6.png)
+
 1. On the left-hand menu on the screen, select **Playgrounds**.
+
+   ![](./media/lab6-7.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
