@@ -51,7 +51,7 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
-1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
+1. In the *Create a project* wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and if an existing hub is suggested, select the option to create a *new* one.
 
 1. Select **Advanced options** and specify the following settings:
 
