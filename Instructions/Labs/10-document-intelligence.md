@@ -46,7 +46,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -88,7 +88,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 In this task, we are using Azure AI Foundry to analyze a receipt image with prebuilt AI models, extracting key details like merchant information, transaction date, and total amount.
 
-You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
+You are now ready to analyze a fictitious Northwind Traders retail company receipt.
 
 1. In the **Overview (1)** page of your project, on the left-hand menu on the screen, select **AI Services (2)**.
  
