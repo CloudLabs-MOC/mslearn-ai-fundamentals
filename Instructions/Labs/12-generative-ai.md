@@ -113,7 +113,7 @@ In this task, you will learn how to interact with the Chat playground in Azure A
 
      ![](./media/12-13.png)
 
-1. Review the response, which should provide dining options near a location from the previous response. 
+1. Review the response, which should provide dining options near the location mentioned in the previous response. 
 
    ![](./media/12-14.png)
 
