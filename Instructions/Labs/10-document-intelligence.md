@@ -1,5 +1,5 @@
 
-# Module 10: Extract data from documents in Azure AI Foundry portal
+# Module 10: Extract data from documents in the Azure AI Foundry portal
 
 ## Lab overview
 
@@ -29,16 +29,16 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. On the **Create an AI hub resource** pane, enter the following details:
 
-    - Subscription : **Leave default subscription** 
-    - Resource Group : Select **AI-900-Module-03 (1)** 
-    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
-    - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
-    - Connect AI Services incl. OpenAI : Click on **Create New (7)**
-    - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
-    - Click on **Save (9)**.
-    - Click on **Review + Create (10)**
+    - Subscription: **Leave default subscription (1)** 
+    - Resource Group : Select **AI-900-Module-10 (2)** 
+    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(3)**
+    - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (4)** 
+    - Connect AI Services incl. OpenAI : Click on **Create New (5)**
+    - Create new Azure AI Services: Provide a name to the AI Service, Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (6)**  
+    - Click on **Save (7)**.
+    - Click on **Review + Create (8)**
 
-       ![](./media/lab6-3.png) 
+       ![](./media/T1S3new-0906.png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -46,7 +46,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/3-27.png)
 
-1. On the Welcome to Azure AI Foundry page, Click on **Sign in** in the top right corner.
+1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
 
@@ -76,23 +76,19 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/lab3-20.png) 
 
-1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
+1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub-<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-    ![](./media/lab6-5.png)
+    ![](./media/T1S13new-0906.png)
 
-1. Wait for your project created.
+1. Wait for your project to be created.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu. 
-
-1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
 ## Task 2: Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
 In this task, we are using Azure AI Foundry to analyze a receipt image with prebuilt AI models, extracting key details like merchant information, transaction date, and total amount.
 
-You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
-
-1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
+You are now ready to analyze a fictitious Northwind Traders retail company receipt.
 
 1. In the **Overview (1)** page of your project, on the left-hand menu on the screen, select **AI Services (2)**.
  
@@ -108,31 +104,9 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
     ![](media/19-1.png)
 
-1. On the **Add captions to images** page, click on **Select a hub** under **Try It Out** subheading.
+1. On the **Receipts** page, select on **AI<inject key="DeploymentID" enableCopy="false" />** for **Connected Azure AI Services** subheading.
 
-    ![](./media/lab3-14.png)
-
-1. On the Select a Hub page, choose **Create a New Hub**.
-
-1. On the Create a new hub page, enter the following details:
-
-   - **Hub name:** Select **myhub<inject key="DeploymentID" enableCopy="false" /> (1)**
-   - **Subscription:** **Use existing Azure subscription (2)**
-   - **Resource group:** Select **AI-900-Module-10 (3)** 
-   - **Location:** Select **<inject key="location" enableCopy="false"/> (4)**
-   - **Connect Azure AI Services or Azure OpenAI Service**: Leave as default **(5)**
-   - **Connect Azure AI Search**: Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)**.
-   - Click on **Next (7)**
-
-      ![](./media/lab3-16.png)
-
-1. On the **Review and Finish** page, click on **Create**.
-
-   ![](./media/lab3-17.png)
-
-1. On the **You'll need a project to keep working** enter **myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and click on **Create project (2)**.
-
-    ![](./media/lab3-18.png)
+    ![](./media/T2S4-0906.png)
 
 1. Open a new tab and go to [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to view a sample image of a receipt.
 
