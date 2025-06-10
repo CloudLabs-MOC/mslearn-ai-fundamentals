@@ -14,24 +14,24 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under **Services**.
 
-    ![](./media/lab6-1.png) 
+    ![](./media/AI-900-lab12-image1.png) 
 
-1. In the left navigation pane for the AI Foundry, select **AI Hubs (2)** under **Use with AI Foundry (1)**. On the AI Hubs page, click on **+ Create** and select **Hub (3)** from the drop-down.
+1. In the left navigation pane for the AI Foundry, select **AI Hubs (2)** under **Use with AI Foundry (1)**. On the AI Hubs page, click on **+ Create (3)** and select **Hub (4)** from the drop-down.
 
-    ![](./media/lab6-2.png) 
+    ![](./media/AI-900-lab12-image2.png) 
 
 1. On the **Create an AI hub resource** pane, enter the following details:
 
     - Subscription : **Leave default subscription** 
-    - Resource Group : Select **AI-900-Module-03 (1)** 
-    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
+    - Resource Group : Select **AI-900-Module-12 (1)** 
+    - Region : **<inject key="Location" enableCopy="false"/>** Use the same location as the resource group **(2)**
     - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
     - Connect AI Services incl. OpenAI : Click on **Create New (7)**
     - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
     - Click on **Save (9)**.
     - Click on **Review + Create (10)**
 
-       ![](./media/lab6-3.png) 
+       ![](./media/AI-900-lab12-image6.png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -65,6 +65,8 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. 
 
+      ![](./media/AI-900-lab12-image7.png)
+   
 1. Choose the option to create a **AI hub resource (1)** then select **Next (2)**.
 
    ![](./media/lab3-20.png) 
@@ -75,6 +77,10 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. Wait for your project created.
 
+   >**Note**: If Explore and experiment prompted click on **Close**.
+
+   ![](./media/AI-900-lab12-image5.png)
+   
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
 1. On the left-hand menu on the screen, select **Playgrounds**.
@@ -93,7 +99,7 @@ In this task, you will learn how to interact with the Chat playground in Azure A
 
 1. In Azure AI Foundry's Portal page, click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)** to start.
 
-   ![](./media/ai900l12g.png)
+   ![](./media/AI-900-lab12-image8.png) 
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
