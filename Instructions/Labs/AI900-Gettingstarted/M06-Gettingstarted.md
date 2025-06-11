@@ -124,7 +124,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 5. If **Action required** pop-up window appears, click on **Ask later**.
    
-    ![](../media/asklater.png)
+    ![](../media/asklater(1).png)
  
 6. If prompted to stay signed in, you can click "No."
 
@@ -139,7 +139,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 1. If **Action required** pop-up window appears, click on **Next**.
 
    
-   ![](../media/mfa1.png)
+   ![](../media/mfa1(1).png)
 
 1. On **Start by getting the app** page, click on **Next**.
 1. Click on **Next** twice.

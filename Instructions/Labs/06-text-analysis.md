@@ -40,7 +40,7 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
     - Click on **Save (9)**.
     - Click on **Review + Create (10)**
 
-       ![](./media/lab6-3.png) 
+       ![](./media/lab6-3(1).png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -54,17 +54,17 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/19-4(1).png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Next (2)**.
  
-     ![Enter Your Password](./media/19-5.png)
+     ![Enter Your Password](./media/19-5(1).png)
 
 1. If prompted to stay signed in, you can click **No**.
 
-   ![](./media/9-8.png)
+   ![](./media/9-8(1).png)
 
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
@@ -80,13 +80,13 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
 1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-    ![](./media/lab6-5.png)
+    ![](./media/lab6-5(1).png)
 
 1. Wait for your project created.
 
 1. When the project is created, you will be taken to an **Overview** page of the project details.
 
-   ![](./media/lab6-6.png)
+   ![](./media/lab6-6(1).png)
 
 1. On the left-hand menu on the screen, select **Playgrounds**.
 
@@ -106,7 +106,7 @@ This task demonstrates how to use Azure AI Language Playground for Named Entity 
 
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
-1. Navigate to **Playgrounds** from the left pane, Under **Language playground** tile select **Try the Language playground (2)**.
+1. Navigate to **Playgrounds** from the left pane, Under **Language playground** tile select **Try the Language playground**.
 
     ![](./media/18-1.png)
 

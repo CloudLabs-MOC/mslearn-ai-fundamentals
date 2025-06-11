@@ -38,7 +38,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
     - Click on **Save (7)**.
     - Click on **Review + Create (8)**
 
-       ![](./media/T1S3new-0906.png) 
+       ![](./media/T1S3new-0906(1).png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -52,17 +52,17 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/19-4(1).png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Next (2)**.
  
-     ![Enter Your Password](./media/19-5.png)
+     ![Enter Your Password](./media/19-5(1).png)
 
 1. If prompted to stay signed in, you can click **No**.
 
-   ![](./media/9-8.png)
+   ![](./media/9-8(1).png)
 
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
@@ -78,7 +78,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub-<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-    ![](./media/T1S13new-0906.png)
+    ![](./media/T1S13new-0906(1).png)
 
 1. Wait for your project to be created.
 
@@ -98,11 +98,11 @@ You are now ready to analyze a fictitious Northwind Traders retail company recei
 
 1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
 
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6(2).png)
 
 1. On the *Vision + Document* page, scroll down and select **Document (1)**. Under *Prebuilt models for specific documents*, select the **Receipts (2)** tile.
 
-    ![](media/19-1.png)
+    ![](media/19-1(1).png)
 
 1. On the **Receipts** page, select on **AI<inject key="DeploymentID" enableCopy="false" />** for **Connected Azure AI Services** subheading.
 
