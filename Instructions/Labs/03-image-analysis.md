@@ -30,7 +30,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
     - Subscription : **Leave default subscription** 
     - Resource Group : Select **AI-900-Module-03 (1)** 
-    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
+    - Region : Select **<inject key="location" enableCopy="false"/>**
     - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
     - Connect AI Services incl. OpenAI : Click on **Create New (7)**
     - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
