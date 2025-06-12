@@ -57,7 +57,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
  
 Once you're ready to dive in, your virtual machine and lab guide will be available right within your web browser.
  
-![Access Your VM and Lab Guide](../media/4-7.png)
+![Access Your VM and Lab Guide](../media/ai900m16--9.png)
 
 ### Virtual Machine & Lab Guide
  
