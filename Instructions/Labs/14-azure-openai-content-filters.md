@@ -1,4 +1,4 @@
-# Module 14: Explore content filters in Azure AI Foundry
+# Module 2b: Explore content filters in Azure AI Foundry
 
 ## Lab overview
 
