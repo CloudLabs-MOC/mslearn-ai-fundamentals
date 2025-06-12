@@ -41,7 +41,7 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. We will start by choosing a model that we want to work with and creating a project to use it in. 
 
-1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` (1) model, which we’ll use in our project, and click (2) on it to select.
+1. In the home page, scroll down. In the **Explore models and capabilities** section, search for the `gpt-4o` (1) model, which we’ll use in our project, and click (2) on it to select.
 
     ![](./media/L1T1S7-2005.png)
 
@@ -66,9 +66,13 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. In the navigation pane on the left, select **Overview** to see the main page for your project; which looks like this:
 
-    ![](./media/Aifoundry-overview-2005.png)
+    ![](./media/ai900m16-1.png)
 
-1. At the bottom of the navigation pane on the left, select **Management center**. The management center is where you can configure settings at both the resource and project levels; which are both shown in the navigation pane.
+1. At the bottom of the navigation pane on the left, select **Management center**.
+
+    ![](./media/ai900m16-2.png)
+
+1. The management center is where you can configure settings at both the resource and project levels; which are both shown in the navigation pane.
 
     ![](./media/management-center-2005.png)
 
@@ -76,15 +80,15 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    ![](./media/back.png)
     
-1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page. Verify the gpt-4o model is created as we have used the same to create the project, and click on it to open. 
+1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints (1)** page. Verify the **gpt-4o (2)** model is created as we have used the same to create the project, and click on it to open. 
 
-    ![](./media/deployments-2005.png)
+    ![](./media/ai900m16-3.png)
 
-1.  Click on the Edit option to change to Tokens per Minute Rate Limit of the model. 
+1.  Click on the **Edit** option to change to Tokens per Minute Rate Limit of the model. 
 
     ![](./media/edit-model-2005.png)
 
-1. Set the Tokens per Limit Rate limit to **50K**.
+1. Set the Tokens per Limit Rate limit to **50K (1)** and then click on **Submit Changes (2)**.
 
     ![](./media/edit-model2-2005.png)
 
@@ -102,6 +106,10 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 Now that you have a model deployed, you're ready to build an AI agent. In this exercise, you'll build a simple agent that answers questions based on a corporate expenses policy. You'll download the expenses policy document and use it as *grounding* data for the agent.
 
 1. Open another browser tab, and download [Expenses_policy.docx](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-agent-fundamentals/Expenses_Policy.docx` and save it locally. This document contains details of the expenses policy for the fictional Contoso corporation.
+
+1. If the file is not downloaded, click on the elipses **(...)(1)** and select **download (2)**.
+
+    ![](./media/ai900m16-7.png)
 
 1. Return to the browser tab with the Azure AI Foundry portal. In the left navigation pane, under the **Build and customize** section, select the **Agents (1)** page, then go to the **My Agents (2)** tab. A new agent with a name like **AgentXYZ (3)** should be created automatically.
 
@@ -121,13 +129,21 @@ Now that you have a model deployed, you're ready to build an AI agent. In this e
 
     ![](./media/knowledge2-2005.png)
 
-1. In the **Adding files** dialog box, create a new vector store named `Expenses_Vector_Store` **(1)**,  select **Upload local (2)**, click **Select local files**, navigate to the **Downloads** folder, choose **Expenses_Policy**, and click **Open**.
+1. In the **Adding files** dialog box, create a new vector store named `Expenses_Vector_Store` **(1)**,  select **Upload local (2)**, click **Select local files (3)**,
+
+    ![](./media/ai900m16-4.png)
+
+1. Navigate to the **Downloads (1)** folder, choose **Expenses_Policy (2)**, and click **Open (3)**.
   
-   ![](./media/knowledge3-2005.png)
+    ![](./media/ai900m16-5.png)
 
 1. Click **Upload and Save** to complete the file upload process.
 
+    ![](./media/ai900m16-6.png)
+
 1. In the **Setup** pane, in the **Knowledge** section, verify that **Expenses_Vector_Store** is listed and shown as containing 1 file.
+
+    ![](./media/ai900m16-8.png)
 
     > **Note**: You can also add **Actions** to an agent to automate tasks. In this simple information retrieval agent example, no actions are required.
 
