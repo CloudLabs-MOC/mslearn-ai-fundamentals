@@ -1,0 +1,17 @@
+[
+    {
+      "Name": "AI 900 AI Fundamentals-Module-05-read-text-in-vision-studio",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/AI900-Gettingstarted/M05-Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Juan-06-25/Instructions/Labs/15-translation.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
+  

@@ -1,0 +1,17 @@
+[
+    {
+      "Name": "AI 900 AI Fundamentals-Module-07-question-answering",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/AI900-Gettingstarted/M07-Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Juan-06-25/Instructions/Labs/04-face.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
+  

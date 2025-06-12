@@ -1,0 +1,17 @@
+[
+    {
+      "Name": "AI 900 AI Fundamentals-Module-02-content-safety",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/prod/Instructions/Labs/AI900-Gettingstarted/M2a-Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Juan-06-25/Instructions/Labs/12-generative-ai.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
+  
