@@ -1,4 +1,4 @@
-# Module 16: Explore AI Agent development
+# Module 05: Explore AI Agent development
 
 In this Module, you use the Azure AI Agent service tools in the Azure AI Foundry portal to create a simple AI agent that answers questions about expense claims.
 
