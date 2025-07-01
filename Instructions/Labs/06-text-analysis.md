@@ -88,6 +88,28 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
    ![](./media/lab6-6(1).png)
 
+1. From the left-hand navigation menu, click on **AI Services**.
+
+   ![Navigation showing AI Services in Azure AI Foundry](./media/upd-1.1.png)
+
+1. Under the **"Infuse your solutions with AI capabilities"** section, click on the **Language + Translator** tile.
+
+    ![Language + Translator tile under AI capabilities](./media/upd-1.2.png)
+
+1. On the **Explore Language capabilities**, under the **Extract Information** tab, select **Extract named entities**.
+
+    ![Extract named entities option in Language capabilities](./media/upd-1.3.png)
+
+1. You will be prompted to create a new AI Services resource.
+
+   - Choose the **Region** matching your Foundry project.
+   - Provide a **Name** for the resource (e.g., `AI_Connection`).
+   - Click **Create and connect** to link this resource to your project.
+   
+      ![Create and connect AI Services resource dialog](./media/upd-1.4.png)
+
+1. Wait for the AI Services resource to be created.
+
 1. On the left-hand menu on the screen, select **Playgrounds**.
 
    ![](./media/lab6-7.png)
