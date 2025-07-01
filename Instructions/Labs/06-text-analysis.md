@@ -33,7 +33,7 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
     - Subscription : **Leave default subscription** 
     - Resource Group : Select **AI-900-Module-06 (1)** 
-    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
+    - Region :  Select **<inject key="location" enableCopy="false"/>** (2)
     - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
     - Connect AI Services incl. OpenAI : Click on **Create New (7)**
     - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
@@ -102,8 +102,8 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
 1. You will be prompted to create a new AI Services resource.
 
-   - Choose the **Region** matching your Foundry project.
-   - Provide a **Name** for the resource (e.g., `AI_Connection`).
+   - **Region** : Select **<inject key="location" enableCopy="false"/>**
+   - Provide a **Name** for the resource : AI_Connection_<inject key="DeploymentID" enableCopy="false"/>
    - Click **Create and connect** to link this resource to your project.
    
       ![Create and connect AI Services resource dialog](./media/upd-1.4.png)
