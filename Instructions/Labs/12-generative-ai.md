@@ -6,7 +6,8 @@ Generative AI describes a category of capabilities within AI that create content
 
 In this lab, you will perform:
 - Task 1: Create a project in the Azure AI Foundry portal
-- Task 2: Explore generative AI in Azure AI Foundry's chat playground
+- Task 2: Create a GPT-4o deployment model
+- Task 3: Explore generative AI in Azure AI Foundry's chat playground
 
 ## Task 1: Create a project in the Azure AI Foundry portal
 
@@ -65,15 +66,22 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. 
 
-      ![](./media/AI-900-lab12-image7.png)
+      ![](./media/T1S11-0207.png)
    
-1. Choose the option to create a **AI hub resource (1)** then select **Next (2)**.
+1. Choose the option to create a **Azure AI Foundry resource (1)** then select **Next (2)**.
 
-   ![](./media/lab3-20.png) 
+   ![](./media/T1S12-0207.png) 
 
-1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
+1. In the **Create a new project** wizard, enter details as mentioned below,
 
-    ![](./media/lab6-5.png)
+   | Setting | Value | 
+   | --- | --- |
+   | Project name | **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** |
+   | Subscription | **Select the default subscription(2)** |
+   | Resource group | **AI-900-Module-12 (3)** |
+   |Region | **East US (4)** select the region same as the resource group |
+
+    ![](./media/T1S13-0207.png)
 
 1. Wait for your project created.
 
@@ -93,13 +101,25 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
    <validation step="41170453-b806-4a87-8243-fd736e4bfab5" />
 
-## Task 2: Explore generative AI in Azure AI Foundry's chat playground
+## Task 2: Create a GPT-4o deployment model
+
+1. From the left pane, go to **Models + Endpoints (1)** under My assests, and click on **Deploy model (2)** and select **Deploy base model (3)**
+
+   ![](./media/create-model1-0207.png)
+
+1. Search **`gpt-4o`(1)** and select the **gpt-4o (chat completion) (2)** model and click on **Confirm (3)**
+
+   ![](./media/create-model2-0207.png)
+
+1. Select the default values and click on **Deploy**
+
+   ![](./media/create-model3.1-0207.png)
+
+## Task 3: Explore generative AI in Azure AI Foundry's chat playground
 
 In this task, you will learn how to interact with the Chat playground in Azure AI Foundry, deploy a generative AI model, and optimize responses using effective prompting techniques.
 
-1. In Azure AI Foundry's Portal page, click **Playgrounds (1)** in the left menu, then select **Try the Chat playground (2)** to start.
-
-   ![](./media/AI-900-lab12-image8.png) 
+1. In Azure AI Foundry's Portal page, click **Playgrounds**
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
