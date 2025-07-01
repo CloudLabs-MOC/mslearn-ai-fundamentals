@@ -18,16 +18,28 @@ In this lab, you will perform:
 
 In this task, you will learn how to create an Azure AI services resource in the Azure portal
 
-1. In the Azure portal, search for **Azure AI services (1)**. Select an **Azure AI services multi-service account(2)**.
+1. In the Azure portal, search for **Azure AI services (1)**. Select an **Azure AI Foundry(2)**.
 
-    ![The image and its captions are displayed.](./media/aiservice.png)
+    ![The image and its captions are displayed.](./media/upd-1.png)
 
+1. In the **Azure AI Foundry**, do the following:
+
+    - Expand the **Classic AI services** section from the left-hand menu.  
+    - Select **Azure AI services multi-service account (classic)** to view classic AI resources.
+
+        ![Expand Classic AI services and select Azure AI services multi-service account (classic)](./media/upd-2.png)
+ 
+1. Once you're in the **Azure AI services multi-service account (classic)** page, you'll see a list of existing resources (if any).
+
+    - Click the **+ Create** button in the top menu bar to start provisioning a new AI service.
+
+        ![The full page view showing the Create button in Azure AI services (classic)](./media/upd-3.1.png)
 1. You will be taken to a page to create an Azure AI services resource. Please click on **Create**, configure it with the following settings:
    
     - **Subscription (1)**: Use the existing Azure subscription.
     - **Resource group (2)**: **AI-900-Module-11-<inject key="DeploymentID" enableCopy="false" />**
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
-    - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false"/>**
+    - **Name (4)**: Enter **contentsafety<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)**:Select **Standard S0**.
     - **By checking this box, I acknowledge that I have read and understood all the terms below**: *Selected*.
 
@@ -65,7 +77,7 @@ In this task, you will explore and interact with Azure AI services through demos
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/upd-3.2.png)
 
 1. Under *View all Vision capabilities* select the **Face** tab. 
 
