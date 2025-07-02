@@ -22,9 +22,9 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
     ![](./media/lab6-1.png) 
 
-1. In the left navigation pane for the AI Foundry, select **AI Hubs (2)** under **Use with AI Foundry (1)**. On the AI Hubs page, click on **+ Create** and select **Hub (3)** from the drop-down.
+1. In the left navigation pane for the AI Foundry, select **AI Hubs (2)** under **Use with AI Foundry (1)**. On the AI Hubs page, click on **+ Create (03)** and select **Hub (4)** from the drop-down.
 
-    ![](./media/lab6-2.png) 
+    ![](./media/010725(01).png) 
 
 1. On the **Create an AI hub resource** pane, enter the following details:
 
@@ -37,7 +37,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
     - Click on **Save (9)**.
     - Click on **Review + Create (10)**
 
-       ![](./media/lab6-3.png) 
+       ![](./media/010725(0.1).png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -53,15 +53,15 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/010725(04).png)
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](./media/19-5.png)
+     ![Enter Your Password](./media/010725(05).png)
 
 1. If prompted to stay signed in, you can click **No**.
 
-   ![](./media/9-8.png)
+   ![](./media/010725(06).png)
 
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
@@ -71,13 +71,16 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources`, Select **Create new**.
 
+
+   ![](./media/010725(15).png)
+
 1. Choose the option to create a **AI hub resource (1)** then select **Next (2)**.
 
    ![](./media/lab3-20.png)
 
 1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-    ![](./media/lab6-5.png)
+    ![](./media/010725(07).png)
 
 1. Wait for your project created.
 
@@ -96,11 +99,11 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
 
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/17-6.png)
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/010725(14).png)
 
 1. On the **Vision + Document** page, scroll down and select **Image (1)** under View all other vision capabilities. Then select the **Image captioning (2)** tile.
 
-    ![](./media/17-7.png)
+    ![](./media/010725(0.9).png)
 
 1. On the **Add captions to images** page, click on **Select a hub** under **Try It Out** subheading.
 
@@ -120,19 +123,19 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
    - **Connect Azure AI Search**: Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)**.
    - Click on **Next (7)**
 
-      ![](./media/lab3-16.png)
+      ![](./media/010725(0.8).png)
 
 1. On the **Review and Finish** page, click on **Create**.
 
-   ![](./media/lab3-17.png)
+   ![](./media/010725(10).png)
 
 1. On the **You'll need a project to keep working** enter **myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and click on **Create project (2)**.
 
-    ![](./media/lab3-18.png)
+    ![](./media/010725(12).png)
 
 1. Go back to the **Add Captions to Images** page, click on **Select a Hub (1)**, choose **myhub<inject key="DeploymentID" enableCopy="false" /> (2)** from the drop-down menu, and then click **Select (3)**.
 
-    ![](./media/lab3-19.png)
+    ![](./media/010725(11).png)
 
    >**Note:** To return to the **Add Captions to Images** page, repeat **Task 2**, from **Step 1** through **Step 4**.
 
@@ -178,7 +181,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. Upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-1 (2)**, and click **Open (3)**.
 
-   ![](./media/3-12.png)
+   ![](./media/010725(13).png)
 
 1. The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 

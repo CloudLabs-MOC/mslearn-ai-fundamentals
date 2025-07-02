@@ -31,6 +31,7 @@ In this task, we are creating an Azure AI Foundry project and configuring the ne
 
 1. On the **Create an AI hub resource** pane, enter the following details:
 
+
     - Subscription : **Leave default subscription (1)** 
     - Resource Group : Select **AI-900-Module-06 (2)** 
     - Region :  Select **<inject key="location" enableCopy="false"/> (3)** 
