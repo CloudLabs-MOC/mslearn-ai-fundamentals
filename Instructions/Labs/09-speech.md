@@ -17,7 +17,7 @@ In this lab, you will perform:
 
 In this task, we are creating and configuring a project in Azure AI Foundry to explore AI services and speech capabilities.
 
-1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under **Services**.
+1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **AI Foundry (1)**, and then select **Azure AI Foundry (2)** under **Services**.
 
     ![](./media/lab6-1.png) 
 
@@ -27,16 +27,18 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 1. On the **Create an AI hub resource** pane, enter the following details:
 
-    - Subscription : **Leave default subscription** 
-    - Resource Group : Select **AI-900-Module-09 (1)** 
-    - Region : **<inject key="Region" enableCopy="false"></inject>** Use the same location as the resource group **(2)**
-    - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (3)** 
+    - Subscription : **Leave default subscription (1)** 
+    - Resource Group : Select **AI-900-Module-09 (2)** 
+    - Region : Select **<inject key="Region" enableCopy="false"></inject>**  **(3)**
+    - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (4)** 
+    - Friendly name : This will be automatically generated based on the name you enter for your **AI hub.** **(5)**
+    - Default project resource group : This will be pre-filled. Ensure it matches the resource group selected above **(6)**.
     - Connect AI Services incl. OpenAI : Click on **Create New (7)**
     - Create new Azure AI Services: Provide a name to the AI Service,Use the format **AI<inject key="Deployment ID" enableCopy="false"></inject> (8)**  
     - Click on **Save (9)**.
     - Click on **Review + Create (10)**
 
-       ![](./media/lab6-3.png) 
+       ![](./media/ch-12.png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -50,17 +52,17 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**
  
-      ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/ch-13.png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Next (2)**.
  
-     ![Enter Your Password](./media/19-5.png)
+     ![Enter Your Password](./media/ch-14.png)
 
 1. If prompted to stay signed in, you can click **No**.
 
-   ![](./media/9-8.png)
+   ![](./media/ch-15.png)
 
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
@@ -76,7 +78,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-    ![](./media/lab6-5.png)
+    ![](./media/ch-16.png)
 
 1. Wait for your project created.
 
@@ -128,7 +130,7 @@ Let's try out *real-time speech-to-text* in Azure AI Foundry's Speech Playground
 
    ![](./media/9-5.png)
 
-1. Go back to the Azure AI Foundry portal, select Connected resource **(1)**, click **Browse files (2)** to upload the **WhatAICanDo.m4a** file, navigate to **C:\Users\azureuser\Downloads\Speech (3)**, select **WhatAICanDo (4)**, and click **Open (5)** to begin transcription.
+1. Go back to the Azure AI Foundry portal, select Connected resource , click **Browse files (1)** to upload the **WhatAICanDo.m4a** file, navigate to **C:\Users\azureuser\Downloads\Speech (2)**, select **WhatAICanDo (3)**, and click **Open (4)** to begin transcription.
 
    ![](./media/9-7.png)
 
