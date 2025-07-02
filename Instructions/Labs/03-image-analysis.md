@@ -37,7 +37,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
     - Click on **Save (9)**.
     - Click on **Review + Create (10)**
 
-       ![](./media/010725(001).png) 
+       ![](./media/010725(0.1).png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
