@@ -1,4 +1,4 @@
-# Module 13: Azure AI Studio
+# Module 13: Azure AI Foundry
 
 ## Lab overview
 
@@ -12,7 +12,7 @@ In this exercise, you will perform:
 - Task 2: Create an Azure AI project
 - Task 3: Deploy and test a generative AI model
 
-## Exercise 1: Explore the components and tools of the Azure AI Studio
+## Exercise 1: Explore the components and tools of the Azure AI Foundry
 
 ### Task 1: Open the Azure AI Foundry portal
 
