@@ -22,7 +22,7 @@ In this task, you will learn how to create an **Azure AI Search** resource to en
 
      ![Picture1](media/lab11-01.png)
 
-1. In the Marketplace page search for **Azure AI Search** and select **Azure AI Search**.
+1. In the Marketplace page search for **Azure AI Search (1)** and select **Azure AI Search (2)**.
  
     ![Picture1](media/lab11-02.png)
 
@@ -43,11 +43,11 @@ In this task, you will learn how to create an **Azure AI Search** resource to en
     
 1. You see the response **Validation Success**, select **Create**.
 
-   ![Picture1](media/lab11-05.png)
+   ![Picture1](media/ch-20.png)
 
 1. After deployment completes, select **Go to resource**.
 
-   ![Picture1](media/lab11-06.png)
+   ![Picture1](media/ch-17.png)
 
 1. On the Azure AI Search overview page, you can add indexes, import data, and search created indexes.
 
@@ -76,9 +76,9 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **aiservice<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)**:Select **Standard S0**.
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected* **(6)**.
 
-      ![The image and its captions are displayed.](./media/lab11-09.png)
+      ![The image and its captions are displayed.](./media/ch-18.png)
 
 1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
@@ -90,7 +90,7 @@ In this task, you will create a Storage account in Azure, configure its settings
 
     ![Picture1](media/lab11-01.png)
 
-1. In the Marketplace page search for **Storage account** and select **Storage account**.
+1. In the Marketplace page search for **Storage account (1)** and select **Storage account (2)**.
  
     ![Picture1](media/lab11-11.png)
 
@@ -167,8 +167,8 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     - **Data Source (2)**: Azure Blob Storage
     - **Data source name (3)**: coffee-customer-data
     - **Data to extract (4)**: Content and metadata
-    - **Parsing mode (5)**: Default
-    - **Connection string (6)**: Select **Choose an existing connection**.
+    - **Parsing mode**: Default
+    - **Connection string (5)**: Select **Choose an existing connection**.
     
        ![Picture1](media/lab11-21.png)
     
@@ -256,14 +256,14 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 - Change the **Indexer name** to **coffee-indexer (1)**.
 - Leave the **Schedule** set to **Once (2)**.
-- Select **Submit (4)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+- Select **Submit (3)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
     - Extracts the document metadata fields and content from the data source.
     - Runs the skillset of AI skills to generate more enriched fields.
     - Maps the extracted fields to the index.
 
       ![Picture1](media/ch-1.png)
 
-16.  Return to your Azure AI Search resource page. On the left pane, under **Search Management**, select  **Indexers**. Select the newly created **coffee-indexer**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
+16.  Return to your Azure AI Search resource page. On the left pane, under **Search Management**, select  **Indexers (1)**. Select the newly created **coffee-indexer (2)**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
 
      ![Picture1](media/lab11-34.png)
 
@@ -361,7 +361,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
 
-1. Select **Storage browser (1)** on the left-hand panel, and select **Tables (2)**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases (3)*.
+1. Select **Storage browser (1)** on the left-hand panel, and select **Tables (2)**. There's a table for each entity in the index. Select the table **coffeeSkillsetKeyPhrases (3)**.
 
      ![Screenshot of the saved image.](media/lab11-49.png)
 

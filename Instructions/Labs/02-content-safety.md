@@ -24,8 +24,8 @@ In this task, you will learn how to create an Azure AI services resource in the 
 
 1. In the **Azure AI Foundry**, do the following:
 
-    - Expand the **Classic AI services** section from the left-hand menu.  
-    - Select **Azure AI services multi-service account (classic)** to view classic AI resources.
+    - Expand the **Classic AI services (1)** section from the left-hand menu.  
+    - Select **Azure AI services multi-service account (classic) (2)** to view classic AI resources.
 
         ![Expand Classic AI services and select Azure AI services multi-service account (classic)](./media/upd-2.png)
  
@@ -41,9 +41,9 @@ In this task, you will learn how to create an Azure AI services resource in the 
     - **Region (3)**: Select **<inject key="location" enableCopy="false"/>**
     - **Name (4)**: Enter **contentsafety<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier (5)**:Select **Standard S0**.
-    - **By checking this box, I acknowledge that I have read and understood all the terms below**: *Selected*.
+    - **By checking this box, I acknowledge that I have read and understood all the terms below (6)**: *Selected*.
 
-      ![The image and its captions are displayed.](./media/lab2-1.png)
+      ![The image and its captions are displayed.](./media/ch-10.png)
 
 1. Select **Review + create (7)** then **Create** and wait for deployment to complete.
 
@@ -55,9 +55,9 @@ In this task, you will learn how to create an Azure AI services resource in the 
 
 In order to incorporate Azure AI services into applications, developers need a service key and endpoint. The keys and endpoint used for application development can be found in the Azure Portal. 
 
-1. In the Azure Portal, select your resource. On the left-hand menu, look under *Resource Management* for *Keys and Endpoints*. Select **Keys and Endpoints** to view the endpoint and keys for your resource. 
+1. In the Azure Portal, select your resource. On the left-hand menu, look under **Resource Management (1)** for *Keys and Endpoints*. Select **Keys and Endpoints (2)** to view the endpoint and keys for your resource. 
 
-   ![The image and its captions are displayed.](./media/lab2-2.png)
+   ![The image and its captions are displayed.](./media/ch-9.png)
   
 ### Task 3: See Azure AI services in action
 
@@ -75,13 +75,13 @@ In this task, you will explore and interact with Azure AI services through demos
  
     ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/view-ai-foundry-outside-project.png)  
 
-1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+1. On the **AI Services** page, select the **Vision + Document** tile to try out Azure AI Vision and Document capabilities.
 
     ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/upd-3.2.png)
 
 1. Under *View all Vision capabilities* select the **Face** tab. 
 
-1. Select the *Detect faces in an image* demo tile. 
+1. Select the **Detect faces in an image** tile. 
 
    ![](./media/face.png)
 
