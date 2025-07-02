@@ -37,7 +37,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
     - Click on **Save (9)**.
     - Click on **Review + Create (10)**
 
-       ![](./media/lab6-3.png) 
+       ![](./media/010725(001).png) 
 
 1. Click on the **Create** button to begin the deployment process.
 
@@ -53,15 +53,15 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![Enter Your Username](./media/19-4.png)
+      ![Enter Your Username](./media/010725(04).png)
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](./media/19-5.png)
+     ![Enter Your Password](./media/010725(05).png)
 
 1. If prompted to stay signed in, you can click **No**.
 
-   ![](./media/9-8.png)
+   ![](./media/010725(06).png)
 
 1. If prompted with *Streamlined from the start*, click on **Got it** to proceed.
 
@@ -80,7 +80,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. In the **Create a new project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and select newly created **Myhub<inject key="DeploymentID" enableCopy="false" /> (2)** and select **Create (3)**.
 
-    ![](./media/lab6-5.png)
+    ![](./media/010725(07).png)
 
 1. Wait for your project created.
 
@@ -123,19 +123,19 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
    - **Connect Azure AI Search**: Click on **Create new AI Services** and provide name **AI<inject key="DeploymentID" enableCopy="false" /> (6)**.
    - Click on **Next (7)**
 
-      ![](./media/lab3-16.png)
+      ![](./media/010725(08).png)
 
 1. On the **Review and Finish** page, click on **Create**.
 
-   ![](./media/lab3-17.png)
+   ![](./media/010725(10).png)
 
 1. On the **You'll need a project to keep working** enter **myproject<inject key="DeploymentID" enableCopy="false" /> (1)** and click on **Create project (2)**.
 
-    ![](./media/lab3-18.png)
+    ![](./media/010725(09).png)
 
 1. Go back to the **Add Captions to Images** page, click on **Select a Hub (1)**, choose **myhub<inject key="DeploymentID" enableCopy="false" /> (2)** from the drop-down menu, and then click **Select (3)**.
 
-    ![](./media/lab3-19.png)
+    ![](./media/010725(11).png)
 
    >**Note:** To return to the **Add Captions to Images** page, repeat **Task 2**, from **Step 1** through **Step 4**.
 
