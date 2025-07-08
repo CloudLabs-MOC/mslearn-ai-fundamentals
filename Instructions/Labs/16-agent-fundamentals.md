@@ -68,6 +68,8 @@ In this task, we are creating an Azure AI Foundry project and setting up AI reso
 
     ![](./media/ai900m16-1.png)
 
+     **Note**: If you find any Permission error, click on **Fix me**.
+
 1. At the bottom of the navigation pane on the left, select **Management center**.
 
     ![](./media/ai900m16-2.png)
