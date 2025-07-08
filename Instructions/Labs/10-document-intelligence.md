@@ -104,9 +104,9 @@ You are now ready to analyze a fictitious Northwind Traders retail company recei
 
     ![](media/19-1(1).png)
 
-1. On the **Receipts** page, select on **AI<inject key="DeploymentID" enableCopy="false" />** for **Connected Azure AI Services** subheading.
+1. On the Receipts page, select **Connect to or create an Azure AI Services resource** (1). From the dropdown, choose **AI<inject key="DeploymentID" enableCopy="false" />** (2) under Azure AI Services, and then click **Connect** (3).
 
-    ![](./media/T2S4-0906.png)
+    ![](./media/ai9872.png)
 
 1. Open a new tab and go to [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to view a sample image of a receipt.
 
