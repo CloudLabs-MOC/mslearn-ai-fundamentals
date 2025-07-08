@@ -18,6 +18,8 @@ In this lab, you will perform:
 
 1. Right-click on the [Azure AI Foundry](https://ai.azure.com/) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
 
+   ![](./media/3-27.png)
+
 1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
    ![](./media/17-18.png)
