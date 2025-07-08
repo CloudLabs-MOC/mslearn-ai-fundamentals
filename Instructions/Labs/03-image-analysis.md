@@ -69,7 +69,6 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![](./media/17-7.png)
 
-
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu, and paste it into a new tab to download **image-analysis.zip**. 
 
 1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
