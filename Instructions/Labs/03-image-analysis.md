@@ -64,7 +64,8 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+   
 
   
 ## Task 2: Generate captions for an image
