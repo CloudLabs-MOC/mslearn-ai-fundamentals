@@ -82,9 +82,11 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
  
-1. On the left-hand menu on the screen, select **Playgrounds**.
+1. On the left-hand menu on the screen, select **Playgrounds (1)**.
 
-1. On the *Playgrounds* page, select the **Speech playground** tile to try out some Azure AI Speech capabilities.
+1. On the *Playgrounds* page, select the **Speech playground (2)** tile to try out some Azure AI Speech capabilities.
+
+    ![](./media/recognize-synthesize-speech/aii1.png)
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -102,13 +104,13 @@ Let's try out *real-time speech-to-text* in Azure AI Foundry's Speech Playground
 
 1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
-1. On the **AI Services (1)** page, select the **Speech (2)** tile to try out Azure AI Speech capabilities.
+1. On the **AI Service** page, select the **Speech** tile to try out Azure AI Speech capabilities.
 
-   ![](./media/up1.png)
+    ![](./media/recognize-synthesize-speech/aii2.png)
 
 1. On the *Speech* page, scroll down and select **Real-time transcription** under *Try out Speech capabilities*. You will be taken to the *Speech Playground*. 
 
-   ![](./media/9-6.png)
+    ![](./media/recognize-synthesize-speech/aii3.png)
 
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) and selecting "Copy" from the context menu, and paste it into a new tab to download **Speech.zip**. 
 
@@ -128,10 +130,9 @@ Let's try out *real-time speech-to-text* in Azure AI Foundry's Speech Playground
 
    ![](./media/9-5.png)
 
-1. Go back to the Azure AI Foundry portal, select Connected resource **(1)**, click **Browse files (2)** to upload the **WhatAICanDo.m4a** file, navigate to **C:\Users\azureuser\Downloads\Speech (3)**, select **WhatAICanDo (4)**, and click **Open (5)** to begin transcription.
+1. Go back to the Azure AI Foundry portal, click **Browse files (1)** to upload the **WhatAICanDo.m4a** file, navigate to **C:\Users\azureuser\Downloads\Speech (2)**, select **WhatAICanDo (3)**, and click **Open (4)** to begin transcription.
 
-   ![](./media/9-7.png)
-
+    ![](./media/recognize-synthesize-speech/aii4.png)
 
 1. The Speech service transcribes and displays the text in real time. If you have audio on your computer, you can listen to the recording as the text is being transcribed.
 
