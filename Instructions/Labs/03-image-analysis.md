@@ -69,6 +69,10 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![](./media/17-7.png)
 
+1. Make sure AI service in connected.
+
+    ![](./media/aii23.png)
+
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu, and paste it into a new tab to download **image-analysis.zip**. 
 
 1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
@@ -93,7 +97,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. Go back to the Azure AI Foundry portal and upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, navigate to the **C:\Users\azureuser\Downloads\image-analysis (2)** folder, select **store-camera-1 (3)**, and click **Open (4)**.
 
-   ![](./media/3-10.png)
+   ![](./media/aii22.png)
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
