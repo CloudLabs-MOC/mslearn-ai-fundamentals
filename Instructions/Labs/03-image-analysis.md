@@ -28,7 +28,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 
 1. In the Create a project wizard, 
 
-   - Project name: Enter project name **Myhub-<inject key="Deployment ID" enableCopy="false"></inject>**
+   - Project name: Enter project name **Myproject<inject key="Deployment ID" enableCopy="false"></inject>**
    - Hub: Choose **Rename hub (2)**
 
      ![](./media/aii17.png)   
