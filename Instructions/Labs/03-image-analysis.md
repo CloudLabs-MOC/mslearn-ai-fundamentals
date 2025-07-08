@@ -142,23 +142,23 @@ The next feature you will try is the *Extract Tags* functionality. Extract tags 
 
 1. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page. 
 
-    ![](./media/3-16.png)
+     ![](./media/3-16.png)
 
 1. Select the **Image (1)** tab, and select the **Common tag extraction (2)** tile.
 
-    ![](./media/3-15.png)
+     ![](./media/3-15.png)
 
 1. Open the folder containing the images you downloaded and locate the file named **store-camera-2.jpg**, which looks like this:
 
-    ![](./media/analyze-images-vision/store-camera-2.jpg)
+     ![](./media/analyze-images-vision/store-camera-2.jpg)
 
 1. Upload the **store-camera-2.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-2 (2)**, and click **Open (3)**.
 
-    ![](./media/3-17.png)
+     ![](./media/3-17.png)
 
 1. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as **shopping**, **selling**, and **standing**.
 
-    ![](./media/17-11.png)
+     ![](./media/17-11.png)
 
 ## Task 4: Object detection
 
@@ -166,31 +166,31 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 1. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page. 
 
-    ![](./media/3-18.png)
+     ![](./media/3-18.png)
 
 1. Select the **Image (1)** tab, and select the **Common object detection (2)** tile.
 
-    ![](./media/17-13.png)
+     ![](./media/17-13.png)
 
 1. Open the folder containing the images you downloaded and locate the file named **store-camera-3.jpg**, which looks like this:
 
-    ![](./media/analyze-images-vision/store-camera-3.jpg)
+     ![](./media/analyze-images-vision/store-camera-3.jpg)
 
 1. Upload the **store-camera-3.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-3 (2)**, and click **Open (3)**.
 
-    ![](./media/3-20.png)
+     ![](./media/3-20.png)
 
 1. In the **Detected attributes** box, observe the list of detected objects and their confidence scores.
 
-    ![](./media/3-21.png)
+     ![](./media/3-21.png)
 
 1. Hover your mouse cursor over the objects in the **Detected attributes** list to highlight the object's bounding box in the image.
 
-    ![](./media/17-16.png)
+     ![](./media/17-16.png)
 
 1. Move the **Threshold value** slider until a value of 70 is displayed to the right of the slider. Observe what happens to the objects in the list. The threshold slider specifies that only objects identified with a confidence score or probability greater than the threshold should be displayed.
 
-    ![](./media/17-17.png)
+     ![](./media/17-17.png)
 
 ### Review
 In this exercise, you have completed the following tasks:
