@@ -65,8 +65,6 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
-
-
   
 ## Task 2: Generate captions for an image
 
@@ -76,29 +74,29 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. On the **Vision + Document** page, scroll down and select **Image (1)** under View all other vision capabilities. Then select the **Image captioning (2)** tile.
 
-   ![](./media/17-7.png)
+    ![](./media/17-7.png)
 
 1. Make sure AI service in connected.
 
-   ![](./media/aii23.png)
+    ![](./media/aii23.png)
 
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu, and paste it into a new tab to download **image-analysis.zip**. 
 
 1. Click the **download icon (1)** to view your downloads, then click the **folder icon (2)** to open the file location.
 
-   ![](./media/3-6.png)
+    ![](./media/3-6.png)
 
 1. **Right-click** the **ZIP file (1)**  and select **Extract All (2)** to **unzip** its contents. 
 
-   ![](./media/3-7.png)
+    ![](./media/3-7.png)
 
 1. Select the destination folder, ensure Show extracted files when complete is checked, and click **Extract** to unzip the files. 
 
-   ![](./media/3-9.png)
+    ![](./media/3-9.png)
 
 1. The image-analysis folder contains **JPG files** named **store-camera-1**, **store-camera-2**, **store-camera-3**, and **store-camera-4**. 
 
-   ![](./media/3-8.png)
+    ![](./media/3-8.png)
 
 1. Locate the file named **store-camera-1.jpg**; which contains the following image:
 
@@ -106,25 +104,25 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. Go back to the Azure AI Foundry portal and upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, navigate to the **C:\Users\azureuser\Downloads\image-analysis (2)** folder, select **store-camera-1 (3)**, and click **Open (4)**.
 
-   ![](./media/aii22.png)
+    ![](./media/aii22.png)
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
     ![](./media/17-8.png)
 
-    >**Note:** The **Caption** feature generates a **single** human-readable English sentence that describes the image's content.
+     >**Note:** The **Caption** feature generates a **single** human-readable English sentence that describes the image's content.
 
 1. Next, use the same image to perform **Dense captioning**. Return to the **Vision + Document** page by selecting the **back** arrow at the top of the page.
 
-   ![](./media/3-11.png)
+    ![](./media/3-11.png)
 
 1. On the **Vision + Document** page, select the **Image (1)** tab, then select the **Dense captioning (2)** tile.
 
-   ![](./media/ai900m3-1.png)
+    ![](./media/ai900m3-1.png)
 
 1. Upload the **store-camera-1.jpg** image by clicking **Browse for a file (1)**. Then, select **store-camera-1 (2)**, and click **Open (3)**.
 
-   ![](./media/3-12.png)
+    ![](./media/3-12.png)
 
 1. The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
@@ -134,7 +132,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. Move your mouse cursor over the other captions in the list, and notice how the bounding box shifts in the image to highlight the portion of the image used to generate the caption.
 
-   ![](./media/3-14.png)
+    ![](./media/3-14.png)
 
 
 ## Task 3: Tagging images 
