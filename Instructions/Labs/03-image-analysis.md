@@ -57,7 +57,14 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 1. On the AI Services page, select the **Vision + Document (2)** tile to try out Azure AI Vision and Document capabilities.
 
     ![](./media/aii14.png)
-   
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+
   
 ## Task 2: Generate captions for an image
 
@@ -127,12 +134,6 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
    ![](./media/3-14.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
 
 ## Task 3: Tagging images 
 
