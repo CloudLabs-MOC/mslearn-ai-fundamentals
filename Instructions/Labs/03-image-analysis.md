@@ -65,7 +65,7 @@ In this task, we are setting up a project in Azure AI Foundry by creating and co
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
-   
+
 
   
 ## Task 2: Generate captions for an image
@@ -76,11 +76,11 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. On the **Vision + Document** page, scroll down and select **Image (1)** under View all other vision capabilities. Then select the **Image captioning (2)** tile.
 
-    ![](./media/17-7.png)
+   ![](./media/17-7.png)
 
 1. Make sure AI service in connected.
 
-    ![](./media/aii23.png)
+   ![](./media/aii23.png)
 
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) and selecting "Copy" from the context menu, and paste it into a new tab to download **image-analysis.zip**. 
 
