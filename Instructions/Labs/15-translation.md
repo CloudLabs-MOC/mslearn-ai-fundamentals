@@ -80,7 +80,7 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
 1. Navigate to the left-hand menu. Under **Resource Management**, select **Keys and Endpoint (1)**. If you were to build an application, you would find your **Key (2)** and **Endpoint (3)** here. 
 
-   ![Picture1](media/aii12.png)
+   ![Picture1](media/aii13.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
