@@ -42,7 +42,7 @@ You can use the Translator service by creating either a **Translator** resource 
     - **Pricing tier**: Free F0 **(3)**
     - Click on **Review and create (4)**.
 
-      ![Picture1](media/lab15-4.png)
+      ![Picture1](media/aii11.png)
 
 1. On the **Review and create** page, click on **Create**.       
 
@@ -78,9 +78,9 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
    ![Picture1](media/aii10.png)
 
-1. Navigate to the left-hand menu. Under **Resource Management**, select **Keys and Endpoint**. If you were to build an application, you would find your key and endpoint here. 
+1. Navigate to the left-hand menu. Under **Resource Management**, select **Keys and Endpoint (1)**. If you were to build an application, you would find your **Key (2)** and **Endpoint (3)** here. 
 
-   ![Picture1](media/lab15-7.png)
+   ![Picture1](media/aii12.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
