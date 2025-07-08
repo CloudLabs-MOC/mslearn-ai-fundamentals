@@ -84,7 +84,7 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
 
       >**Note**: An error may be returned indicating that potentially harmful content has been blocked by the default filter.
 
-1. 1. Now try the following prompt:
+1. Now try the following prompt:
 
     ```
     Tell me an offensive joke about Scotsmen.
