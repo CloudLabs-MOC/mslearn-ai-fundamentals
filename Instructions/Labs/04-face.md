@@ -59,7 +59,7 @@ In this task, you will learn how to connect your **Azure AI Services** resource 
 
     > **Note**: If your resource isn't listed, try **Refreshing** the page.
 
-    ![The image and its captions are displayed.](./media/ai-900-02.png)
+    ![The image and its captions are displayed.](./media/ai-900-0298.png)
    
 1. Close the settings page by selecting the **x** at the top right of the screen.
 
@@ -78,6 +78,8 @@ In this task, you will learn how to detect faces in Vision Studio to analyze fac
     ![The image and its captions are displayed.](./media/lab4-4.png)
 
 1. Select each of the sample images and observe the face detection data that is returned.
+
+   >**Note**: If no output is displayed, click on **Choose a different resource**, select the AI service resource you created from the dropdown, acknowledge the checkbox again, and then proceed with the task.
 
 1. Copy the highlighted link by right-clicking the [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) and selecting "Copy" from the context menu, and paste it into a new tab to download **detect-faces.zip**. 
 
