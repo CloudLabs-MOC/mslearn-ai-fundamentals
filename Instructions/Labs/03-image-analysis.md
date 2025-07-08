@@ -18,7 +18,7 @@ In this lab, you will perform:
 
 In this task, we are setting up a project in Azure AI Foundry by creating and configuring an AI services environment for further experimentation.
 
-1. In the browser, navigate to https://ai.azure.com/managementCenter/allResources and select Create. Then choose the option to **Create new** to create a new AI hub resource.
+1. In the browser, navigate to https://ai.azure.com/managementCenter/allResources. Then choose the option **Create new** to create a new AI hub resource.
 
     ![](./media/aii15.png) 
 
