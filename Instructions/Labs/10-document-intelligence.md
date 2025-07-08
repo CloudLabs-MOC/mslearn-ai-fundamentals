@@ -1,5 +1,5 @@
 
-# Module 3b: Extract data from documents in the Azure AI Foundry portal
+# Module 3a: Extract data from documents in the Azure AI Foundry portal
 
 ## Lab overview
 
