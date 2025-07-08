@@ -29,7 +29,7 @@ In this task, we are creating and configuring a project in Azure AI Foundry to e
 
     - Subscription : **Leave default subscription (1)** 
     - Resource Group : Select **AI-900-Module-09 (2)** 
-    - Region : Select **<inject key="Region" enableCopy="false"></inject>**  **(3)**
+    - Region : Select **<inject key="Location" enableCopy="false"/>**  **(3)**
     - Name : Use the format **Myhub-<inject key="Deployment ID" enableCopy="false"></inject> (4)** 
     - Friendly name : This will be automatically generated based on the name you enter for your **AI hub.** **(5)**
     - Default project resource group : This will be pre-filled. Ensure it matches the resource group selected above **(6)**.
