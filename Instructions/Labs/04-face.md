@@ -19,9 +19,11 @@ In this task, you will learn how to create an **Azure AI Services** resource to 
 
 You can use Azure AI Face service with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In the Azure portal,  search for **Azure AI services (1)**. Select an **Azure AI services multi-service account(2)**.
+1. In the Azure portal, Click the **＋Create a resource** button and search and select **Azure AI services**
 
-    ![The image and its captions are displayed.](./media/aiservice.png)
+    ![The image and its captions are displayed.](./media/ai9873.png)
+
+    ![The image and its captions are displayed.](./media/ai9874.png)
 
 1. You will be taken to a page to create an Azure AI services resource. Please click on **+ Create** Configure it with the following settings:
    
