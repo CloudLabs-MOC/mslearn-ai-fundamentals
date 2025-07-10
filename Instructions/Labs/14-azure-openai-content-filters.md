@@ -64,7 +64,7 @@ In this lab, you will perform:
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="43438c6dc3-1440-4f1c-a499-e2c2cbed2a88" />
+  <validation step="438c6dc3-1440-4f1c-a499-e2c2cbed2a88" />
   
 ### Task 2: Chat using the content filter
 
