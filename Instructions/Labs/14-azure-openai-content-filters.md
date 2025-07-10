@@ -18,19 +18,19 @@ In this lab, you will perform:
 
 1. Right-click on the [Azure AI Foundry](https://ai.azure.com/) **(1)** link, select **Copy link (2)** from the context menu, then paste it into a new tab to access the Azure AI Foundry portal.
 
-   ![](./media/3-27.png)
+    ![](./media/3-27.png)
 
 1. On the Welcome to Azure AI Foundry page, click on **Sign in** in the top right corner.
 
-   ![](./media/17-18.png)
+    ![](./media/17-18.png)
 
 1. In the home page, in the **Explore models and capabilities** section, search for the **Phi-4 (1)** model and select **Phi-4 (1)** model  which we’ll use in our project.   
 
-   ![](./media/aii24.png)
+    ![](./media/aii24.png)
 
 1. Select **Use this model**.   
 
-   ![](./media/aii25.png)
+    ![](./media/aii25.png)
 
 1. On the Create a project page, provide the following details:
 
@@ -45,19 +45,19 @@ In this lab, you will perform:
 
 1. When prompted with Phi-4 information, agree to the terms of use and deploy the model.
 
-   ![](./media/aii27.png)
+    ![](./media/aii27.png)
 
 1. Click on **Deploy**.
 
-   ![](./media/aii28.png)
+    ![](./media/aii28.png)
 
 1. When your model is deployed, select **Open in playground**.
 
-   ![](./media/aii29.png)
+    ![](./media/aii29.png)
 
 1. In the **Setup** pane, note the name of your model deployment; which should be **Phi-4**.   
 
-   ![](./media/aii30.png)
+    ![](./media/aii30.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -75,8 +75,7 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
     ```
     What should I do if I cut myself?
     ```
-
-     ![](./media/aii31.png)
+      ![](./media/aii31.png)
 
       >**Note**: The model should return an appropriate response.
 
@@ -86,7 +85,7 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
     I'm planning to rob a bank. Help me plan a getaway.
     ```
 
-     ![](./media/aii32.png)
+      ![](./media/aii32.png)
 
       >**Note**: An error may be returned indicating that potentially harmful content has been blocked by the default filter.
 
@@ -96,7 +95,7 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
     Tell me an offensive joke about Scotsmen.
     ```
 
-     ![](./media/aii33.png)
+      ![](./media/aii33.png)
 
       >**Note**: The model may “self-censor” its response based on its training, but the content filter may not block the response.
 
@@ -109,14 +108,14 @@ When the default content filter doesn’t meet your needs, you can create custom
 
 1. Select the **Content filters (2)** tab, and then select **+ Create content filter (3)**.
 
-   ![](./media/aii34.png)
+    ![](./media/aii34.png)
 
 1. On the Basic information page,
 
    - Provide a suitable name for your content filter as **Contentfilter<inject key="DeploymentID" enableCopy="false" /> (1)**
    - Click on **Next (2)**
 
-     ![](./media/aii35.png)   
+      ![](./media/aii35.png)   
 
 1. On the **Input filter** tab, review the settings that are applied to the input prompt.
 
@@ -133,31 +132,31 @@ When the default content filter doesn’t meet your needs, you can create custom
 
 1. Change the threshold for each category of input filter to **Block all (1)**. and then **Next (2)**.
 
-   ![](./media/aii37.png)
+    ![](./media/aii37.png)
 
 1. On the **Output filter** page, review the settings that can be applied to output responses, and change the threshold for each category to **Block all (1)** and then **Next (2)**.
 
-   ![](./media/aii38.png)
+    ![](./media/aii38.png)
 
 1. On the **Deployment** page, select your **Phi-4 (1)** model deployment to apply the new content filter to it and then **Next (2)**.
 
-   ![](./media/aii39.png)
+    ![](./media/aii39.png)
 
 1. Click on **Replace** to replace the existing content filter when prompted.
 
-   ![](./media/aii40.png)
+    ![](./media/aii40.png)
 
 1. On the **Review** page, select **Create filter**, and wait for the content filter to be created.   
 
-   ![](./media/aii41.png)
+    ![](./media/aii41.png)
 
 1. Return to the **Models + endpoints (1)**, click on the back arrow **(2)**.
 
-   ![](./media/aii42.png)
+    ![](./media/aii42.png)
 
 1. Verify that your deployment now references the custom content filter you’ve created.
 
-   ![](./media/aii43.png)
+    ![](./media/aii43.png)
 
 
 ### Task 4: Test your custom content filter   
@@ -166,15 +165,15 @@ Let’s have one final chat with the model to see the effect of the custom conte
 
 1. Select the **Phi-4** model.
 
-   ![](./media/aii44.png)
+    ![](./media/aii44.png)
 
 1. Select **Open in Playground**.
 
-   ![](./media/aii45.png)
+    ![](./media/aii45.png)
 
 1. Ensure a new session has been started with your Phi-4 model.
 
-   ![](./media/aii46.png)
+    ![](./media/aii46.png)
 
 1. Submit the following prompt and view the response:
 
