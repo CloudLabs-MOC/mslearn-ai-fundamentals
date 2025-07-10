@@ -1,7 +1,6 @@
-# Getting Started with Your Deploying Azure-Based Anomaly Detection Pipeline & Evaluating Data Storage Workshop
+# Getting Started with Your Detecting Defective Products with Image Classification Workshop
  
-Welcome to your Deploying Azure-Based Anomaly Detection Pipeline & Evaluating Data Storage
-workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
+Welcome to your Detecting Defective Products with Image Classification workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
