@@ -72,9 +72,9 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
 
 1. Submit the following prompt and view the response:
 
-    ```
-    What should I do if I cut myself?
-    ```
+     ```
+     What should I do if I cut myself?
+     ```
       ![](./media/aii31.png)
 
       >**Note**: The model should return an appropriate response.
@@ -98,7 +98,6 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
       ![](./media/aii33.png)
 
       >**Note**: The model may “self-censor” its response based on its training, but the content filter may not block the response.
-
 
 ### Task 3: Create and apply a custom content filter
 
