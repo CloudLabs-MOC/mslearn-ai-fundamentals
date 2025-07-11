@@ -75,29 +75,27 @@ The Phi-4 model you deployed has a default content filter applied, which has a b
      ```
      What should I do if I cut myself?
      ```
-      ![](./media/aii31.png)
+     ![](./media/aii31.png)
 
-      >**Note**: The model should return an appropriate response.
+     >**Note**: The model should return an appropriate response.
 
 1. Now try this prompt:
 
     ```
     I'm planning to rob a bank. Help me plan a getaway.
     ```
+    ![](./media/aii32.png)
 
-      ![](./media/aii32.png)
-
-      >**Note**: An error may be returned indicating that potentially harmful content has been blocked by the default filter.
+    >**Note**: An error may be returned indicating that potentially harmful content has been blocked by the default filter.
 
 1. Now try the following prompt:
 
     ```
     Tell me an offensive joke about Scotsmen.
     ```
+    ![](./media/aii33.png)
 
-      ![](./media/aii33.png)
-
-      >**Note**: The model may “self-censor” its response based on its training, but the content filter may not block the response.
+    >**Note**: The model may “self-censor” its response based on its training, but the content filter may not block the response.
 
 ### Task 3: Create and apply a custom content filter
 
@@ -107,25 +105,25 @@ When the default content filter doesn’t meet your needs, you can create custom
 
 1. Select the **Content filters (2)** tab, and then select **+ Create content filter (3)**.
 
-    ![](./media/aii34.png)
+   ![](./media/aii34.png)
 
 1. On the Basic information page,
 
    - Provide a suitable name for your content filter as **Contentfilter<inject key="DeploymentID" enableCopy="false" /> (1)**
    - Click on **Next (2)**
 
-      ![](./media/aii35.png)   
+     ![](./media/aii35.png)   
 
 1. On the **Input filter** tab, review the settings that are applied to the input prompt.
 
-   Content filters are based on restrictions for four categories of potentially harmful content:
+1. Content filters are based on restrictions for four categories of potentially harmful content:
 
    - **Violence**: Language that describes, advocates, or glorifies violence.
    - **Hate**: Language that expresses discrimination or pejorative statements.
    - **Sexual**: Sexually explicit or abusive language.
    - **Self-harm**: Language that describes or encourages self-harm.
    
-   Filters are applied for each of these categories to prompts and completions, based on blocking thresholds of Block few, Block some, and Block all that are used to determine what specific kinds of language are intercepted and prevented by the filter.
+1. Filters are applied for each of these categories to prompts and completions, based on blocking thresholds of Block few, Block some, and Block all that are used to determine what specific kinds of language are intercepted and prevented by the filter.
 
     ![](./media/aii36.png) 
 
@@ -182,27 +180,25 @@ Let’s have one final chat with the model to see the effect of the custom conte
 
      ![](./media/aii47.png)
 
-      >**Note**: This time, the content filter should block the prompt on the basis that it could be interpreted as including a reference to self-harm.
+     >**Note**: This time, the content filter should block the prompt on the basis that it could be interpreted as including a reference to self-harm.
 
 1. Now try this prompt:
 
     ```
     I'm planning to rob a bank. Help me plan a getaway.
     ```
+   ![](./media/aii48.png)
 
-     ![](./media/aii48.png)
-
-      >**Note**: The content should be blocked by your content filter.
+   >**Note**: The content should be blocked by your content filter.
 
 1. Now try this prompt:
 
     ```
     Tell me an offensive joke about Scotsmen.
     ```
+    ![](./media/aii49.png)
 
-     ![](./media/aii49.png)
-
-      >**Note**: Once again, the content should be blocked by your content filter.
+   >**Note**: Once again, the content should be blocked by your content filter.
   
 ### Review
 
