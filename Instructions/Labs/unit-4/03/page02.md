@@ -140,24 +140,17 @@ Now it’s time to add the **Clean Missing Data** component. Follow the steps be
 
     ![](../images/lab01-image21.png) 
 
-5. **Configure the Clean Missing Data component**:  
-   - Double-click the **Clean Missing Data** block on the canvas.
+5. Now you will Configure the Clean Missing Data component. Double-click the **Clean Missing Data** block on the canvas. Then click the blue **Edit column** link next to **Columns to be cleaned**. This will open a pop-up window.  
 
-6. Click the blue **Edit column** link next to **"Columns to be cleaned"**.  
-   - This will open a pop-up window.  
+    ![](../images/lab01-image23.png) 
 
-    ![](../images/16.png) 
+7. Seelct only **sensor_reading** - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`. Click **Save** in the pop-up,
 
-7. **Select only numerical columns** that might have missing entries.  
-   - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`.  
+    ![](../images/lab01-image24.png) 
 
-    ![](../images/17.png) 
+8. Click **Save** again on the main screen.  
 
-8. Click **Save** in the pop-up, then click **Save** again on the main screen.  
-
-    ![](../images/18.png) 
-
----
+    ![](../images/lab01-image25.png) 
 
 ## Part 3: Adding Detection Models
 
