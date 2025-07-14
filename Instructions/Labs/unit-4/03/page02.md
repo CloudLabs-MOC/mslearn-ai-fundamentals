@@ -88,41 +88,37 @@ Now it’s time to add the dataset to the Azure ML pipeline!
     ![](../images/lab01-image11.png) 
 
 5. **File or Folder Selection**  
-   - Click **Upload files or folder**  
    - In the file browser, select the file: `anomaly_data.csv`  
    - Wait for the file to appear under “Upload list”  
    - Click **Next**  
 
-    ![](../images/9.png) 
+    ![](../images/lab01-image12.png) 
 
-6. **Settings**  
-   - Review the fields and ensure they match the expected format  
-   - Click **Next**  
+6. On the **Settings** page, review the fields and ensure they match the expected format then click **Next**  
 
-    ![](../images/10.png) 
+    ![](../images/lab01-image13.png) 
 
-7. **Schema**  
-   - Ensure the schema fields are correctly recognized  
-   - Click **Next**  
+7. On the **Schema** page, ensure the schema fields are correctly recognized then click **Next**  
 
-    ![](../images/11.png) 
+    ![](../images/lab01-image14.png) 
 
-8. **Review**  
-   - Click **Create** to finalize the dataset upload
+8. On the **Review** page, click **Create** to finalize the dataset upload
 
----
+    ![](../images/lab01-image15.png) 
 
 ### Add Dataset to the Pipeline Canvas
 
-9. Under the **Data** tab, locate the uploaded dataset named `anomaly_dataset_manufacturing`.  
+1. Under the **Data** tab, locate the uploaded dataset named **`anomaly_dataset_manufacturing`**.  
 
-    ![](../images/12.png) 
+    ![](../images/lab01-image16.png) 
 
-10. Click on the dataset card.  
-    - Drag it from the left panel and **drop it onto the pipeline canvas** on the right  
-    - **Save your work** to avoid losing progress  
+10. Click on the dataset card then select **Use data** to **drop it onto the pipeline canvas** on the right.
 
-    ![](../images/13.png) 
+     ![](../images/lab01-image18.png) 
+
+12. Verify the data placed in the canvas, and click 'Save' to avoid losing progress.
+
+     ![](../images/lab01-image19.png) 
 
 ## Part 2: Preprocessing Our Data
 
