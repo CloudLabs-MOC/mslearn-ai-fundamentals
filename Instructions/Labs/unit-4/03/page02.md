@@ -51,7 +51,6 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
     ![](../images/lab01-image6.png) 
 
-
 ## Part 1: Upload Our Dataset
 
 Now it’s time to add the dataset to the Azure ML pipeline!
@@ -160,24 +159,19 @@ Now that you have cleaned the dataset, it's time to add the **PCA-Based Anomaly 
 
 ### Steps to Add PCA-Based Anomaly Detection
 
-1. On the **Component** tab, search for **PCA-Based Anomaly Detection** (or just "PCA") by Microsoft.  
-   - This is a built-in model that detects outliers in time-series data using **Principal Component Analysis**.  
+1. On the **Component** tab, search for **PCA-Based Anomaly Detection**. Then **Drag** the PCA-Based Anomaly Detection component into the canvas.
 
-    ![](../images/19.png) 
-
-2. **Drag** the PCA-Based Anomaly Detection component into the canvas.
-
----
+    ![](../images/lab01-image26.png)
+   
+   >**Note**: This is a built-in model that detects outliers in time-series data using **Principal Component Analysis**.
 
 ### Train the PCA Model
 
 Next, train the model using your cleaned dataset by adding the **Train Anomaly Detection Model** component.
 
-1. In the Component tab, search for **Train Anomaly Detection Model** by Microsoft.
+1. In the Component tab, search for **Train Anomaly Detection Model**. Drag the component into your canvas, placing it below the **PCA-Based Anomaly Detection** block.  
 
-2. Drag the component into your canvas, placing it below the **PCA-Based Anomaly Detection** block.  
-
-    ![](../images/20.png) 
+    ![](../images/lab01-image27.png)
 
 3. Connect:
    - The **Untrained model output** from the **PCA-Based Anomaly Detection** to the **Model input** of Train Anomaly Detection Model.
@@ -203,3 +197,87 @@ Next, you’ll use the **Score Model** to apply the trained model and generate p
    > This ensures that your newly trained model is scoring the same dataset it learned from.
 
 4. Click **Save** at the top of the screen to preserve your progress.
+
+
+Part 4: Convert and View Results
+
+1. We can’t visualize the output directly using the Score Model component, so we’ll need to convert the scored results into a visual-friendly format. To do so, we’ll use a component 
+called “Convert to Dataset”.
+
+1. In the left-side pane under the Component tab, search for the “Convert to Dataset” Component. Then **Drag** the Convert to Dataset component onto the canvas and place it under the 
+Score Model component.
+
+   >**Note**: This tool takes the output from the model and converts it to a format that can be visualized in the Designer.
+
+3. Connect the Scored dataset output from the Score Model to the Dataset input of 
+the Convert to Dataset component.
+
+5. Once connected, click Save at the top to preserve your updated pipeline.
+
+1. Now that the pipeline is fully built with all the components connected—from data intake to anomaly scoring—we're ready to run it to view our results!
+
+1. First, let’s make sure all components are connected as shown.
+a. -  Confirm that:
+      i. The dataset flows through Clean Missing Data.
+      ii. The cleaned data connects to both:
+          - Train Anomaly Detection Model
+          - Score Model
+      iii. PCA-Based Anomaly Detection is connected to the Train component.
+      iv. Score Model connects to Convert to Dataset.
+
+2. Save your pipeline, if not auto-saved already.
+
+3. Click the **Configure & Submit** button in the top-right corner.
+
+    ![](../images/lab01-image36.png)
+
+## Part 5: Configure Pipeline Job Basics 
+
+We now need to configure a bit more detail before running your pipeline in Azure ML 
+Designer.
+
+1. On the **Basics** page, perform the steps as mentioned below:
+
+   - In the Experiment name select **Create new**
+   - In **New experiment name** filed provide **`Test_Anomaly_Manufacturing`**
+   - Click the blue **Next** button at the bottom-right corner of the screen
+
+      ![](../images/lab01-image37.png)
+
+1. On the **Inputs & outputs** page, click on **Next** to skip.
+
+1. On the Runtime Settings page, from the dropdown of the **Select Compute Type** section, click on Compute Cluster. Since no cluster is currently available, we’ll need to create one. Click on **Create Azure ML Compute Cluster**.
+
+1. On the **Select virtual machine** page, specify the following then click on **Next** :
+  
+    - Location: Confirm that the selected region is the same as your workspace.
+    
+    - Virtual Machine Tier: Leave as default. 
+    
+    - Virtual Machine Type: Keep this as **CPU** (sufficient for our anomaly detection task).
+
+    - Virtual Machine Size: Choose **Standard_DS11_v2**.
+  
+        ![](../images/lab01-image38.png)
+
+1. On the **Configure Settings** page, provide **Compute name** then click on **Create**
+
+    ![](../images/lab01-image39.png)
+
+1. Back on the **Runtime Settings** page, select the newly created Azure ML compute cluster from the dropdown in the **Select Azure ML compute cluster** field, then click on **Review + Submit**.
+
+     ![](../images/lab01-image40.png)
+
+1. On **Review + Submit** page, click on **Submit**. 
+
+    ![](../images/lab01-image41.png)
+
+1. Once submitted, a success notification appears at the top of the page. Click on 'View details' to monitor the pipeline. It may take some time for the pipeline to complete.
+
+      ![](../images/lab01-image42.png)
+     
+1. Right-click on the **Convert to Dataset** component, hover over **Preview data** to click on **Results dataset**.
+
+   ![](../images/lab01-image43.png)
+
+   ![](../images/lab01-image44.png)
