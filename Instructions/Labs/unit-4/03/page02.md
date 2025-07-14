@@ -7,47 +7,50 @@ Using a technique called **Principal Component Analysis (PCA)**, we’ll use Azu
 
 ### Part 0: Create Azure ML Workspace
 
-1. **Log in** to [Azure Machine Learning Studio](https://ml.azure.com/) using your assigned credentials.
+1. **Log in** to [Azure Machine Learning Studio](https://ml.azure.com/) when prompted provide below credentials.
 
-    ![](../images/1.png)  
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-2. Once logged in, you may see a page like **Figure 1**. In that case, fill out the workspace details as follows:
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+   
+1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
    - **Name**: `PCA_Anomaly_Model`  
-     (This is the internal name for your workspace.)
    - **Friendly Name**: *(Optional)*  
-     Azure will auto-fill this based on the name.
+      Azure will auto-fill this based on the name.
    - **Hub (Optional)**: Leave this as “None” unless instructed otherwise.
    - **Advanced Settings**:
-     - **Subscription**: Select the appropriate Azure subscription from the dropdown. *(If only one is available, it will be selected automatically.)*
-     - **Resource Group**: Choose an existing one or click **"Create new"** and name it `anomaly-rg`.
+     - **Subscription**: Select the appropriate Azure subscription from the dropdown. 
+     - **Resource Group**: Choose an existing one 
      - **Region**: Select **East US 2** for better performance.
+     - After filling out all the required fields, click the **“Create”** button.
 
-   After filling out all the required fields, click the **“Create”** button.
+        ![](../images/lab01-image2.png) 
 
-3. If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
-    ![](../images/2.png) 
+    >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
-4. Now navigate to your newly created workspace:
+3. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces”**. Locate the workspace you just created `PCA Anomaly Model`.
 
-   - On the **left-hand menu**, click **“Workspaces”**.
-   - Locate the workspace you just created (e.g., `PCA Anomaly Model`) and click on its name to open it.
-   - This will take you inside the workspace where you can build and run machine learning experiments.
+     ![](../images/lab01-image3.png) 
+   
+4. Click on its name to open it. This will take you inside the workspace where you can build and run machine learning experiments.
 
-    ![](../images/3.png) 
+    ![](../images/lab01-image4.png) 
 
-5. Inside your workspace, go to the **“Designer”** tab under the **Authoring** section on the left-hand menu.
+5. Once you are inside your workspace PCA Anomaly Model, look at the left hand side menu to find the “Designer” tab under the Authoring section. Click on 
+this tab.
 
-   - This opens the **Azure Machine Learning Designer**, a drag-and-drop interface for building ML pipelines.
+    ![](../images/lab01-image5.png) 
 
-6. Once the Designer page loads:
+   >**Note**:  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
+components.
 
-   - Make sure you are on the **Classic prebuilt** tab under the **New pipeline** section.
-   - Click the box with a **plus sign** that says:  
-     **“Create a new pipeline using classic prebuilt components.”**
+6. Once the **Designer** page is loaded, make sure that you’re on the Classic prebuilt tab under the “New pipeline” section. From here, click on the box with a plus sign 
+that says, **Create a new pipeline using classic prebuilt components**.
 
-    ![](../images/4.png) 
+    ![](../images/lab01-image6.png) 
+
 
 ## Part 1: Upload Our Dataset
 
