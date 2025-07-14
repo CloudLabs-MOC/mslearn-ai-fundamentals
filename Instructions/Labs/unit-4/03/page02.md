@@ -281,3 +281,43 @@ Designer.
    ![](../images/lab01-image43.png)
 
    ![](../images/lab01-image44.png)
+
+## Saving our Data to Azure Blob
+
+1. Azure Blob Storage is like a big cloud-based folder. You can think of it as an online hard drive where you can store:
+
+    • Datasets (CSV files, Excel files)
+    • Images, logs, or sensor readings
+    • Output from your machine learning models
+
+1. We will now export your final scored dataset (which includes anomaly predictions) to an external storage location such as Azure Blob Storage. This ensures the results are saved 
+even after the pipeline finishes.
+
+1. First, go to the Component tab and search for the **Export Data** component. Then, drag and drop the component into your canvas below the rest of 
+your pipeline, as seen in below image.
+
+     ![](../images/lab01-image45.png)
+
+1. Draw a line from the output of **Convert to Dataset** and connect it to the Input path of the **Export Data** component.
+
+     ![](../images/lab01-image46.png)
+
+1. Now, we need to configure Export Data to save our model’s output.
+
+1. Once you've added and connected the Export Data module in your pipeline, click on it to open the configuration panel on the right side
+
+1. Set the fields in the panel as follows:
+     a. Datastore Type: Azure Blob Storage
+         - This tells Azure that you want to save the output file in a cloud-based blob container.
+     b. Datastore: workspaceblobstore
+         - This is the default blob storage associated with your workspace. It acts like a cloud folder that stores files outside of the pipeline’s memory.
+     c. Output Path: test
+         - This path acts like a folder name inside your blob storage. The system will save your file inside this path.
+     d. File Format: csv
+         - This will save the output as a CSV file.
+
+     e. Save the configuration.
+
+6. Click on **Configure & Submit** and the pipeline will run.
+
+   
