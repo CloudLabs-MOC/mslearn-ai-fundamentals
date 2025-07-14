@@ -7,47 +7,49 @@ Using a technique called **Principal Component Analysis (PCA)**, we’ll use Azu
 
 ### Part 0: Create Azure ML Workspace
 
-1. **Log in** to [Azure Machine Learning Studio](https://ml.azure.com/) using your assigned credentials.
+1. **Log in** to [Azure Machine Learning Studio](https://ml.azure.com/) when prompted provide below credentials.
 
-    ![](../images/1.png)  
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-2. Once logged in, you may see a page like **Figure 1**. In that case, fill out the workspace details as follows:
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+   
+1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
    - **Name**: `PCA_Anomaly_Model`  
-     (This is the internal name for your workspace.)
    - **Friendly Name**: *(Optional)*  
-     Azure will auto-fill this based on the name.
+      Azure will auto-fill this based on the name.
    - **Hub (Optional)**: Leave this as “None” unless instructed otherwise.
    - **Advanced Settings**:
-     - **Subscription**: Select the appropriate Azure subscription from the dropdown. *(If only one is available, it will be selected automatically.)*
-     - **Resource Group**: Choose an existing one or click **"Create new"** and name it `anomaly-rg`.
+     - **Subscription**: Select the appropriate Azure subscription from the dropdown. 
+     - **Resource Group**: Choose an existing one 
      - **Region**: Select **East US 2** for better performance.
+     - After filling out all the required fields, click the **“Create”** button.
 
-   After filling out all the required fields, click the **“Create”** button.
+        ![](../images/lab01-image2.png) 
 
-3. If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
-    ![](../images/2.png) 
+    >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
-4. Now navigate to your newly created workspace:
+3. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces”**. Locate the workspace you just created `PCA Anomaly Model`.
 
-   - On the **left-hand menu**, click **“Workspaces”**.
-   - Locate the workspace you just created (e.g., `PCA Anomaly Model`) and click on its name to open it.
-   - This will take you inside the workspace where you can build and run machine learning experiments.
+     ![](../images/lab01-image3.png) 
+   
+4. Click on its name to open it. This will take you inside the workspace where you can build and run machine learning experiments.
 
-    ![](../images/3.png) 
+    ![](../images/lab01-image4.png) 
 
-5. Inside your workspace, go to the **“Designer”** tab under the **Authoring** section on the left-hand menu.
+5. Once you are inside your workspace PCA Anomaly Model, look at the left hand side menu to find the “Designer” tab under the Authoring section. Click on 
+this tab.
 
-   - This opens the **Azure Machine Learning Designer**, a drag-and-drop interface for building ML pipelines.
+    ![](../images/lab01-image5.png) 
 
-6. Once the Designer page loads:
+   >**Note**:  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
+components.
 
-   - Make sure you are on the **Classic prebuilt** tab under the **New pipeline** section.
-   - Click the box with a **plus sign** that says:  
-     **“Create a new pipeline using classic prebuilt components.”**
+6. Once the **Designer** page is loaded, make sure that you’re on the Classic prebuilt tab under the “New pipeline” section. From here, click on the box with a plus sign 
+that says, **Create a new pipeline using classic prebuilt components**.
 
-    ![](../images/4.png) 
+    ![](../images/lab01-image6.png) 
 
 ## Part 1: Upload Our Dataset
 
@@ -57,65 +59,65 @@ Now it’s time to add the dataset to the Azure ML pipeline!
 
 ### Step-by-Step Instructions
 
-1. On the **left panel**, under the **Data** tab, click the **➕ (plus icon)** to upload a dataset.  
+1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-    ![](../images/5.png) 
+    ![](../images/lab01-image7.png) 
 
-2. **Data Type**  
-   - Name the dataset: `anomaly_dataset_manufacturing`  
+2. On **Create a new workspace to get started with Azure ML** page enter the following data.
+
+   - Name the dataset: **`anomaly_dataset_manufacturing`**  
    - Select type: **Tabular**  
    - Click **Next**  
 
-    ![](../images/6.png) 
+    ![](../images/lab01-image8.png) 
 
-3. **Data Source**  
-   - Choose **From local files**  
+3. On the **Choose a source for your data asset** page, choose **From local files** the click on **Next**. 
 
-    ![](../images/7.png) 
+    ![](../images/lab01-image9.png) 
 
-4. **Destination Storage Type**  
+4. On the **Select a datastore** page select the following option:  
    - Under **Datastore type**, select **Azure Blob Storage**  
-   - Choose the datastore named: `workspaceblobstore`  
+   - Choose the datastore named: **`workspaceblobstore`**  
    - Click **Next**  
 
-    ![](../images/8.png) 
+    ![](../images/lab01-image10.png) 
+
+5. On the **Choose a file or folder** page, select **Upload files or folder (1)** from the dropdown, then select **Upload files (2)**.
+
+    ![](../images/lab01-image11.png) 
 
 5. **File or Folder Selection**  
-   - Click **Upload files or folder**  
    - In the file browser, select the file: `anomaly_data.csv`  
    - Wait for the file to appear under “Upload list”  
    - Click **Next**  
 
-    ![](../images/9.png) 
+    ![](../images/lab01-image12.png) 
 
-6. **Settings**  
-   - Review the fields and ensure they match the expected format  
-   - Click **Next**  
+6. On the **Settings** page, review the fields and ensure they match the expected format then click **Next**  
 
-    ![](../images/10.png) 
+    ![](../images/lab01-image13.png) 
 
-7. **Schema**  
-   - Ensure the schema fields are correctly recognized  
-   - Click **Next**  
+7. On the **Schema** page, ensure the schema fields are correctly recognized then click **Next**  
 
-    ![](../images/11.png) 
+    ![](../images/lab01-image14.png) 
 
-8. **Review**  
-   - Click **Create** to finalize the dataset upload
+8. On the **Review** page, click **Create** to finalize the dataset upload
 
----
+    ![](../images/lab01-image15.png) 
 
 ### Add Dataset to the Pipeline Canvas
 
-9. Under the **Data** tab, locate the uploaded dataset named `anomaly_dataset_manufacturing`.  
+1. Under the **Data** tab, locate the uploaded dataset named **`anomaly_dataset_manufacturing`**.  
 
-    ![](../images/12.png) 
+    ![](../images/lab01-image16.png) 
 
-10. Click on the dataset card.  
-    - Drag it from the left panel and **drop it onto the pipeline canvas** on the right  
-    - **Save your work** to avoid losing progress  
+10. Click on the dataset card then select **Use data** to **drop it onto the pipeline canvas** on the right.
 
-    ![](../images/13.png) 
+     ![](../images/lab01-image18.png) 
+
+12. Verify the data placed in the canvas, and click 'Save' to avoid losing progress.
+
+     ![](../images/lab01-image19.png) 
 
 ## Part 2: Preprocessing Our Data
 
@@ -127,34 +129,27 @@ Now it’s time to add the **Clean Missing Data** component. Follow the steps be
 
 1. Switch to the **Component** tab and search for **"Clean Missing Data"** by Microsoft.  
     
-   ![](../images/14.png) 
+   ![](../images/lab01-image20.png) 
 
-2. **Connect the Dataset to the Cleaning Component**:  
-   - Hover over the small **circle at the bottom** of the dataset block labeled **Data output**.
-   - Click and **drag a line** to the **left circle** of the Clean Missing Data component labeled **Dataset**.  
+1. Click on the **Clean Missing Data** data component, then drag it from the left panel and drop it below the **Dataset card** in the pipeline canvas on the right.
 
-    ![](../images/15.png) 
+    ![](../images/lab01-image22.png)
+   
+3. Now connect the Dataset to the Cleaning Component, hover over the small **circle at the bottom** of the dataset block labeled **Data output**. Click and **drag a line** to the **left circle** of the Clean Missing Data component labeled **Dataset**. **Save** your progress by clicking **Save** at the top right of the canvas.
 
-3. **Save** your progress by clicking **Save** at the top right of the canvas.
+    ![](../images/lab01-image21.png) 
 
-4. **Configure the Clean Missing Data component**:  
-   - Double-click the **Clean Missing Data** block on the canvas.
+5. Now you will Configure the Clean Missing Data component. Double-click the **Clean Missing Data** block on the canvas. Then click the blue **Edit column** link next to **Columns to be cleaned**. This will open a pop-up window.  
 
-5. Click the blue **Edit column** link next to **"Columns to be cleaned"**.  
-   - This will open a pop-up window.  
+    ![](../images/lab01-image23.png) 
 
-    ![](../images/16.png) 
+7. Seelct only **sensor_reading** - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`. Click **Save** in the pop-up,
 
-6. **Select only numerical columns** that might have missing entries.  
-   - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`.  
+    ![](../images/lab01-image24.png) 
 
-    ![](../images/17.png) 
+8. Click **Save** again on the main screen.  
 
-7. Click **Save** in the pop-up, then click **Save** again on the main screen.  
-
-    ![](../images/18.png) 
-
----
+    ![](../images/lab01-image25.png) 
 
 ## Part 3: Adding Detection Models
 
@@ -164,24 +159,19 @@ Now that you have cleaned the dataset, it's time to add the **PCA-Based Anomaly 
 
 ### Steps to Add PCA-Based Anomaly Detection
 
-1. On the **Component** tab, search for **PCA-Based Anomaly Detection** (or just "PCA") by Microsoft.  
-   - This is a built-in model that detects outliers in time-series data using **Principal Component Analysis**.  
+1. On the **Component** tab, search for **PCA-Based Anomaly Detection**. Then **Drag** the PCA-Based Anomaly Detection component into the canvas.
 
-    ![](../images/19.png) 
-
-2. **Drag** the PCA-Based Anomaly Detection component into the canvas.
-
----
+    ![](../images/lab01-image26.png)
+   
+   >**Note**: This is a built-in model that detects outliers in time-series data using **Principal Component Analysis**.
 
 ### Train the PCA Model
 
 Next, train the model using your cleaned dataset by adding the **Train Anomaly Detection Model** component.
 
-1. In the Component tab, search for **Train Anomaly Detection Model** by Microsoft.
+1. In the Component tab, search for **Train Anomaly Detection Model**. Drag the component into your canvas, placing it below the **PCA-Based Anomaly Detection** block.  
 
-2. Drag the component into your canvas, placing it below the **PCA-Based Anomaly Detection** block.  
-
-    ![](../images/20.png) 
+    ![](../images/lab01-image27.png)
 
 3. Connect:
    - The **Untrained model output** from the **PCA-Based Anomaly Detection** to the **Model input** of Train Anomaly Detection Model.
@@ -207,3 +197,151 @@ Next, you’ll use the **Score Model** to apply the trained model and generate p
    > This ensures that your newly trained model is scoring the same dataset it learned from.
 
 4. Click **Save** at the top of the screen to preserve your progress.
+
+
+Part 4: Convert and View Results
+
+1. We can’t visualize the output directly using the Score Model component, so we’ll need to convert the scored results into a visual-friendly format. To do so, we’ll use a component 
+called “Convert to Dataset”.
+
+1. In the left-side pane under the Component tab, search for the “Convert to Dataset” Component. Then **Drag** the Convert to Dataset component onto the canvas and place it under the 
+Score Model component.
+
+   >**Note**: This tool takes the output from the model and converts it to a format that can be visualized in the Designer.
+
+3. Connect the Scored dataset output from the Score Model to the Dataset input of 
+the Convert to Dataset component.
+
+5. Once connected, click Save at the top to preserve your updated pipeline.
+
+1. Now that the pipeline is fully built with all the components connected—from data intake to anomaly scoring—we're ready to run it to view our results!
+
+1. First, let’s make sure all components are connected as shown.
+a. -  Confirm that:
+      i. The dataset flows through Clean Missing Data.
+      ii. The cleaned data connects to both:
+          - Train Anomaly Detection Model
+          - Score Model
+      iii. PCA-Based Anomaly Detection is connected to the Train component.
+      iv. Score Model connects to Convert to Dataset.
+
+2. Save your pipeline, if not auto-saved already.
+
+3. Click the **Configure & Submit** button in the top-right corner.
+
+    ![](../images/lab01-image36.png)
+
+## Part 5: Configure Pipeline Job Basics 
+
+We now need to configure a bit more detail before running your pipeline in Azure ML 
+Designer.
+
+1. On the **Basics** page, perform the steps as mentioned below:
+
+   - In the Experiment name select **Create new**
+   - In **New experiment name** filed provide **`Test_Anomaly_Manufacturing`**
+   - Click the blue **Next** button at the bottom-right corner of the screen
+
+      ![](../images/lab01-image37.png)
+
+1. On the **Inputs & outputs** page, click on **Next** to skip.
+
+1. On the Runtime Settings page, from the dropdown of the **Select Compute Type** section, click on Compute Cluster. Since no cluster is currently available, we’ll need to create one. Click on **Create Azure ML Compute Cluster**.
+
+1. On the **Select virtual machine** page, specify the following then click on **Next** :
+  
+    - Location: Confirm that the selected region is the same as your workspace.
+    
+    - Virtual Machine Tier: Leave as default. 
+    
+    - Virtual Machine Type: Keep this as **CPU** (sufficient for our anomaly detection task).
+
+    - Virtual Machine Size: Choose **Standard_DS11_v2**.
+  
+        ![](../images/lab01-image38.png)
+
+1. On the **Configure Settings** page, provide **Compute name** then click on **Create**
+
+    ![](../images/lab01-image39.png)
+
+1. Back on the **Runtime Settings** page, select the newly created Azure ML compute cluster from the dropdown in the **Select Azure ML compute cluster** field, then click on **Review + Submit**.
+
+     ![](../images/lab01-image40.png)
+
+1. On **Review + Submit** page, click on **Submit**. 
+
+    ![](../images/lab01-image41.png)
+
+1. Once submitted, a success notification appears at the top of the page. Click on 'View details' to monitor the pipeline. It may take some time for the pipeline to complete.
+
+      ![](../images/lab01-image42.png)
+     
+1. Right-click on the **Convert to Dataset** component, hover over **Preview data** to click on **Results dataset**.
+
+   ![](../images/lab01-image43.png)
+
+   ![](../images/lab01-image44.png)
+
+## Saving our Data to Azure Blob
+
+1. Azure Blob Storage is like a big cloud-based folder. You can think of it as an online hard drive where you can store:
+
+    • Datasets (CSV files, Excel files)
+    • Images, logs, or sensor readings
+    • Output from your machine learning models
+
+1. We will now export your final scored dataset (which includes anomaly predictions) to an external storage location such as Azure Blob Storage. This ensures the results are saved 
+even after the pipeline finishes.
+
+1. First, go to the Component tab and search for the **Export Data** component. Then, drag and drop the component into your canvas below the rest of 
+your pipeline, as seen in below image.
+
+     ![](../images/lab01-image45.png)
+
+1. Draw a line from the output of **Convert to Dataset** and connect it to the Input path of the **Export Data** component.
+
+     ![](../images/lab01-image46.png)
+
+1. Now, we need to configure Export Data to save our model’s output.
+
+1. Once you've added and connected the Export Data module in your pipeline, click on it to open the configuration panel on the right side
+
+1. Set the fields in the panel as follows:
+     a. Datastore Type: Azure Blob Storage
+         - This tells Azure that you want to save the output file in a cloud-based blob container.
+     b. Datastore: workspaceblobstore
+         - This is the default blob storage associated with your workspace. It acts like a cloud folder that stores files outside of the pipeline’s memory.
+     c. Output Path: predictions
+         - This path acts like a folder name inside your blob storage. The system will save your file inside this path.
+     d. File Format: csv
+         - This will save the output as a CSV file.
+     e. Save the configuration.
+
+    ![](../images/lab01-image50.png)
+        
+6. Click on **Configure & Submit** and the pipeline will run.
+
+    ![](../images/lab01-image51.png)
+
+1. On the Basics page, Under **Experiment name** choose **Select existing (1)** the click on **Review + Submit (2)**
+   
+     ![](../images/lab01-image52.png)
+
+1. Once submitted, a success notification appears at the top of the page. Click on View details to monitor the pipeline. It may take some time for the pipeline to complete.
+
+    ![](../images/lab01-image42.png)
+   
+1. Wait for a while, as it might take some time for the pipeline to complete. Then review the **Export Data** step to ensure it ran successfully.
+
+    ![](../images/lab01-image48.png)
+
+1. Log on to Azure Portal with your credentials. 
+ 
+1. From here, click on “Storage Accounts” under the “Azure Services” section.
+
+1. Now, we need to find the correct storage account from the list of accounts you currently see. It will be named “testanomalymod” followed by a sequence of random numbers. For example, “testanomalymod7380583022”. Once you find it, click on that account.
+
+1. Once you open the blob storage, click on the predictions file that was generated by the pipeline. Now you can see the pipeline output.
+
+    ![](../images/lab01-image49.png)
+   
