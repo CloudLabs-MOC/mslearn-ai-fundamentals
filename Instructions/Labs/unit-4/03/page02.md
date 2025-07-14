@@ -130,30 +130,30 @@ Now it’s time to add the **Clean Missing Data** component. Follow the steps be
 
 1. Switch to the **Component** tab and search for **"Clean Missing Data"** by Microsoft.  
     
-   ![](../images/14.png) 
+   ![](../images/lab01-image20.png) 
 
-2. **Connect the Dataset to the Cleaning Component**:  
-   - Hover over the small **circle at the bottom** of the dataset block labeled **Data output**.
-   - Click and **drag a line** to the **left circle** of the Clean Missing Data component labeled **Dataset**.  
+1. Click on the **Clean Missing Data** data component, then drag it from the left panel and drop it below the **Dataset card** in the pipeline canvas on the right.
 
-    ![](../images/15.png) 
+    ![](../images/lab01-image22.png)
+   
+3. Now connect the Dataset to the Cleaning Component, hover over the small **circle at the bottom** of the dataset block labeled **Data output**. Click and **drag a line** to the **left circle** of the Clean Missing Data component labeled **Dataset**. **Save** your progress by clicking **Save** at the top right of the canvas.
 
-3. **Save** your progress by clicking **Save** at the top right of the canvas.
+    ![](../images/lab01-image21.png) 
 
-4. **Configure the Clean Missing Data component**:  
+5. **Configure the Clean Missing Data component**:  
    - Double-click the **Clean Missing Data** block on the canvas.
 
-5. Click the blue **Edit column** link next to **"Columns to be cleaned"**.  
+6. Click the blue **Edit column** link next to **"Columns to be cleaned"**.  
    - This will open a pop-up window.  
 
     ![](../images/16.png) 
 
-6. **Select only numerical columns** that might have missing entries.  
+7. **Select only numerical columns** that might have missing entries.  
    - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`.  
 
     ![](../images/17.png) 
 
-7. Click **Save** in the pop-up, then click **Save** again on the main screen.  
+8. Click **Save** in the pop-up, then click **Save** again on the main screen.  
 
     ![](../images/18.png) 
 
