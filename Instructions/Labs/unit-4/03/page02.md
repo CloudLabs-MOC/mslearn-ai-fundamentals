@@ -60,28 +60,32 @@ Now it’s time to add the dataset to the Azure ML pipeline!
 
 ### Step-by-Step Instructions
 
-1. On the **left panel**, under the **Data** tab, click the **➕ (plus icon)** to upload a dataset.  
+1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-    ![](../images/5.png) 
+    ![](../images/lab01-image7.png) 
 
-2. **Data Type**  
-   - Name the dataset: `anomaly_dataset_manufacturing`  
+2. On **Create a new workspace to get started with Azure ML** page enter the following data.
+
+   - Name the dataset: **`anomaly_dataset_manufacturing`**  
    - Select type: **Tabular**  
    - Click **Next**  
 
-    ![](../images/6.png) 
+    ![](../images/lab01-image8.png) 
 
-3. **Data Source**  
-   - Choose **From local files**  
+3. On the **Choose a source for your data asset** page, choose **From local files** the click on **Next**. 
 
-    ![](../images/7.png) 
+    ![](../images/lab01-image9.png) 
 
-4. **Destination Storage Type**  
+4. On the **Select a datastore** page select the following option:  
    - Under **Datastore type**, select **Azure Blob Storage**  
-   - Choose the datastore named: `workspaceblobstore`  
+   - Choose the datastore named: **`workspaceblobstore`**  
    - Click **Next**  
 
-    ![](../images/8.png) 
+    ![](../images/lab01-image10.png) 
+
+5. On the **Choose a file or folder** page, select **Upload files or folder (1)** from the dropdown, then select **Upload files (2)**.
+
+    ![](../images/lab01-image11.png) 
 
 5. **File or Folder Selection**  
    - Click **Upload files or folder**  
