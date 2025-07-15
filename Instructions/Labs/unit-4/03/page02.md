@@ -264,13 +264,113 @@ Designer.
 
    ![](../images/lab01-image44.png)
 
+1. Understanding the Output Each row represents a **timestamped data record** from the pipeline. Here's what the columns mean:
+
+    | Column Name         | Description                                                                 |
+    |---------------------|-----------------------------------------------------------------------------|
+    | `timestamp`         | When the data was collected; essential for time-series analysis.            |
+    | `machine_id`        | Identifier for the machine (e.g., `CNC_Lathe`, `Injection_Molder`).         |
+    | `sensor_reading`    | Numeric value collected from the machine's sensor.                          |
+    | `anomaly_flag`      | Original label: 1 if anomaly, 0 if normal.                                  |
+    | `Scored Labels`     | Model's prediction: 1 for anomaly, 0 for normal.                            |
+    | `Scored Probabilities` | Shows the model's confidence level in its prediction. Closer to 1 means higher certainty of an anomaly. |
+
+
+
+1. What Is a Pipeline, Really?
+    
+    - A pipeline in Azure ML Designer is a step-by-step process that moves data through different stages—starting from input, moving through cleaning and analysis, and ending with a final output. Each stage performs a specific operation to transform or analyze the data.
+    
+    - At the beginning, you upload your raw dataset. Then, you may clean the data to handle missing or incorrect values. After cleaning, the data is sent to a machine learning model, 
+which processes it to find patterns or make predictions. The model then produces new output data—such as predicted labels or anomaly scores.
+    
+    - However, after the model finishes running, it’s important to think about where the results go. If they are not stored or saved properly, it becomes difficult to access or share them later.
+    
+    - Let’s walk through the actual pipeline we built for anomaly detection and understand what happens to the data at each step.
+
+#### Input Dataset
+
+1. This is the starting point of the pipeline. You uploaded a CSV file or dataset containing sensor readings from a machine. This could track things like temperature, pressure, and 
+vibration levels.
+
+    **Example of a Results Dataset:**
+   
+    | timestamp | machine_id |  temperature | pressure | vibration | anomaly_flag  |
+    |------------------------------------------------------------------------------|
+    | 12:00 PM  |  M001      |   75         |   30     |     0.04  |      0        |
+    | 12:01 PM  |  M001      |   76         |   30.1   |    0.06   |      0        |
+    | 12:02 PM  |  M001      |   120        |   80     |    1.5    |      1        |
+
+    - The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
+
+#### Clean Missing Data
+
+1. Data collected from machines may sometimes be incomplete—for example, a sensor might fail to report a value. The Clean Missing Data step helps prepare the data by:
+    
+    -  Replacing missing values with a default or average value
+    -  Removing rows or columns with too many gaps
+
+1. This ensures your model isn’t confused or misled by blank entries
+
+     **Before Cleaning Dataset Example**
+
+        |temperature|  pressure   |  vibration |
+        |---------------------------------------|
+        | 75        |  30         |  0.04       |  
+        |           |  30.1       |   0.06      |  
+        | 120       |   80        |   1.5       |  
+
+
+      **After Cleaning Dataset Example:**
+
+        |temperature|  pressure   |  vibration |
+        |--------------------------------------|
+        | 75        |  30         |   0.04     |  
+        | 75        |  30.1       |   0.06     |  
+        | 120       |   80        |   1.5      |  
+
+
+#### Model (PCA)
+
+- This is where the machine learning magic happens. Your cleaned data is sent into a model that learns to detect unusual behavior (anomalies).
+
+- Specifically, we used Principal Component Analysis (PCA for short). The model looks at patterns in normal machine behavior and flags anything that deviates from it.
+
+#### Output: Scored Dataset
+
+- Once the model runs, it adds two new columns to the dataset that contain its predictions. One column, “Scored Labels” is the model’s prediction for the anomaly flag. The second 
+column, “Scored Probabilities” is the confidence level of the prediction.
+
+   **Example Scored Dataset Output:**
+
+    | timestamp | machine_id |  temperature | pressure | vibration | anomaly_flag  | Scored Labels|  Scored Probabilities   |  
+    |-----------------------------------------------------------------------------------------------------------------------|
+    | 12:00 PM  |  M001      |   75         |   30     |     0.04  |      0        |    0         |        0.98             |
+    | 12:01 PM  |  M001      |   76         |   30.1   |    0.06   |      0        |    0         |        0.97             |
+    | 12:02 PM  |  M001      |   120        |   80     |    1.5    |      1        |    1         |        0.65             | 
+    
 ### Task 7: Saving our Data to Azure Blob
+
+- Where Is the Data Stored?
+   
+   - After your pipeline processes the data and makes predictions, those results are not automatically saved in a permanent location. If you don’t store them externally, they may 
+     only exist temporarily inside the Azure ML pipeline. That means you can’t reuse them in other projects, download them later, or share them with your team.
+
+   - To solve this, you can connect your pipeline to Azure Blob Storage, which acts as a permanent cloud storage location.
+
+- Azure Blob Storage is like a big cloud-based folder. You can think of it as an online hard drive where you can store:
+     - Datasets (CSV files, Excel files)
+     - Images, logs, or sensor readings
+     - Output from your machine learning models
+
+- We will now export your final scored dataset (which includes anomaly predictions) to an external storage location such as Azure Blob Storage. This ensures the results are saved 
+even after the pipeline finishes.
 
 1. Azure Blob Storage is like a big cloud-based folder. You can think of it as an online hard drive where you can store:
 
-    • Datasets (CSV files, Excel files)
-    • Images, logs, or sensor readings
-    • Output from your machine learning models
+     -  Datasets (CSV files, Excel files)
+     -  Images, logs, or sensor readings
+     -  Output from your machine learning models
 
 1. We will now export your final scored dataset (which includes anomaly predictions) to an external storage location such as Azure Blob Storage. This ensures the results are saved 
 even after the pipeline finishes.
@@ -319,7 +419,7 @@ your pipeline, as seen in below image.
 
 1. Log on to Azure Portal with your credentials. 
  
-1. From here, click on “Storage Accounts” under the “Azure Services” section.
+1. From here, click on **Storage Accounts** under the “Azure Services” section.
 
 1. Now, we need to find the correct storage account from the list of accounts you currently see. It will be named “testanomalymod” followed by a sequence of random numbers. For example, “testanomalymod7380583022”. Once you find it, click on that account.
 
