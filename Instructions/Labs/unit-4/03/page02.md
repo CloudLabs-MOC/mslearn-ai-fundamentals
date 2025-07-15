@@ -428,3 +428,36 @@ your pipeline, as seen in below image.
 
     ![](../images/lab01-image49.png)
    
+#### Exit Activity: Saving Your Model’s Output to External Storage
+
+**Scenario:**
+
+- You work for a smart manufacturing company. Every hour, your Azure ML pipeline runs and checks sensor data from 100+ machines to detect anomalies. You used Azure ML Designer and a PCA-Based Anomaly Detection model.
+
+- Now your team wants to save the predictions to Azure Blob Storage so they can:
+     
+     - View them later
+     - Share them with managers
+     - Generate monthly reports
+     - Keep an archive for compliance
+
+
+**Scenario Setup:**
+
+- You work in a smart factory where your Azure ML pipeline runs every hour to check sensor readings for anomalies.
+- The system has been flagging unusual behavior in Machine_12, but the logs are not saved consistently.
+- This week, a manager asked you for a report of anomalies from the past 30 days — but the data wasn’t stored.
+- Now your team wants you to:
+    
+    - Decide what output from the pipeline should be saved
+    - Decide where and how often to store it
+    - Justify your choices to your supervisor
+
+Prompts to think about since you have to answer these at the end:
+1. What type of data would you save from the anomaly detection pipeline?
+2. Why is it important to save the output externally, instead of keeping it inside 
+the pipeline?
+3. How would you use Azure Blob Storage in your solution?
+
+
+
