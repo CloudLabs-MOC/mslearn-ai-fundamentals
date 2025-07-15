@@ -1,11 +1,13 @@
 ## Deploying PCA-Based Pipelines
 
-Now that we know what data we’re working with, let’s dive into how we’re going to use it!  
-Using a technique called **Principal Component Analysis (PCA)**, we’ll use Azure Machine Learning tools to learn the pattern of normal behavior and then detect when something deviates from it.
+In this lab, you will build and deploy a machine learning pipeline in Azure Machine Learning Designer that detects anomalies in manufacturing sensor data using a technique called Principal Component Analysis (PCA).
 
----
+You will begin by setting up an Azure ML workspace and uploading a dataset of machine sensor readings. Then, you'll clean the data, apply PCA-based anomaly detection, and score the dataset to identify unusual behavior. Finally, you'll export the model’s predictions to Azure Blob Storage, ensuring the results are saved for reporting, auditing, and future analysis.
 
-### Part 0: Create Azure ML Workspace
+### Task 1: Create Azure ML Workspace
+
+In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
+
 
 1. **Log in** to [Azure Machine Learning Studio](https://ml.azure.com/) when prompted provide below credentials.
 
@@ -30,15 +32,15 @@ Using a technique called **Principal Component Analysis (PCA)**, we’ll use Azu
 
     >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
-3. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces”**. Locate the workspace you just created `PCA Anomaly Model`.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces”**. Locate the workspace you just created `PCA Anomaly Model`.
 
      ![](../images/lab01-image3.png) 
    
-4. Click on its name to open it. This will take you inside the workspace where you can build and run machine learning experiments.
+1. Click on its name to open it. This will take you inside the workspace where you can build and run machine learning experiments.
 
     ![](../images/lab01-image4.png) 
 
-5. Once you are inside your workspace PCA Anomaly Model, look at the left hand side menu to find the “Designer” tab under the Authoring section. Click on 
+1. Once you are inside your workspace PCA Anomaly Model, look at the left hand side menu to find the “Designer” tab under the Authoring section. Click on 
 this tab.
 
     ![](../images/lab01-image5.png) 
@@ -46,24 +48,20 @@ this tab.
    >**Note**:  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
 components.
 
-6. Once the **Designer** page is loaded, make sure that you’re on the Classic prebuilt tab under the “New pipeline” section. From here, click on the box with a plus sign 
+1. Once the **Designer** page is loaded, make sure that you’re on the Classic prebuilt tab under the “New pipeline” section. From here, click on the box with a plus sign 
 that says, **Create a new pipeline using classic prebuilt components**.
 
     ![](../images/lab01-image6.png) 
 
-## Part 1: Upload Our Dataset
+### Task 2: Upload Our Dataset
 
-Now it’s time to add the dataset to the Azure ML pipeline!
-
----
-
-### Step-by-Step Instructions
+In this task you will upload the manufacturing sensor data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
     ![](../images/lab01-image7.png) 
 
-2. On **Create a new workspace to get started with Azure ML** page enter the following data.
+1. On **Create a new workspace to get started with Azure ML** page enter the following data.
 
    - Name the dataset: **`anomaly_dataset_manufacturing`**  
    - Select type: **Tabular**  
@@ -71,61 +69,55 @@ Now it’s time to add the dataset to the Azure ML pipeline!
 
     ![](../images/lab01-image8.png) 
 
-3. On the **Choose a source for your data asset** page, choose **From local files** the click on **Next**. 
+1. On the **Choose a source for your data asset** page, choose **From local files** the click on **Next**. 
 
     ![](../images/lab01-image9.png) 
 
-4. On the **Select a datastore** page select the following option:  
+1. On the **Select a datastore** page select the following option:  
    - Under **Datastore type**, select **Azure Blob Storage**  
    - Choose the datastore named: **`workspaceblobstore`**  
    - Click **Next**  
 
     ![](../images/lab01-image10.png) 
 
-5. On the **Choose a file or folder** page, select **Upload files or folder (1)** from the dropdown, then select **Upload files (2)**.
+1. On the **Choose a file or folder** page, select **Upload files or folder (1)** from the dropdown, then select **Upload files (2)**.
 
     ![](../images/lab01-image11.png) 
 
-5. **File or Folder Selection**  
+1. **File or Folder Selection**  
    - In the file browser, select the file: `anomaly_data.csv`  
    - Wait for the file to appear under “Upload list”  
    - Click **Next**  
 
     ![](../images/lab01-image12.png) 
 
-6. On the **Settings** page, review the fields and ensure they match the expected format then click **Next**  
+1. On the **Settings** page, review the fields and ensure they match the expected format then click **Next**  
 
     ![](../images/lab01-image13.png) 
 
-7. On the **Schema** page, ensure the schema fields are correctly recognized then click **Next**  
+1. On the **Schema** page, ensure the schema fields are correctly recognized then click **Next**  
 
     ![](../images/lab01-image14.png) 
 
-8. On the **Review** page, click **Create** to finalize the dataset upload
+1. On the **Review** page, click **Create** to finalize the dataset upload
 
     ![](../images/lab01-image15.png) 
-
-### Add Dataset to the Pipeline Canvas
 
 1. Under the **Data** tab, locate the uploaded dataset named **`anomaly_dataset_manufacturing`**.  
 
     ![](../images/lab01-image16.png) 
 
-10. Click on the dataset card then select **Use data** to **drop it onto the pipeline canvas** on the right.
+1. Click on the dataset card then select **Use data** to **drop it onto the pipeline canvas** on the right.
 
      ![](../images/lab01-image18.png) 
 
-12. Verify the data placed in the canvas, and click 'Save' to avoid losing progress.
+1. Verify the data placed in the canvas, and click 'Save' to avoid losing progress.
 
      ![](../images/lab01-image19.png) 
 
-## Part 2: Preprocessing Our Data
+### Task 3: Preprocessing Our Data
 
-Now it’s time to add the **Clean Missing Data** component. Follow the steps below to complete this part!
-
----
-
-### Steps to Clean Missing Data
+In this task you will prepare your dataset for modeling by cleaning missing values. You will add and configure the Clean Missing Data component to handle incomplete or missing sensor readings, ensuring the dataset is reliable for training your anomaly detection model.
 
 1. Switch to the **Component** tab and search for **"Clean Missing Data"** by Microsoft.  
     
@@ -135,29 +127,25 @@ Now it’s time to add the **Clean Missing Data** component. Follow the steps be
 
     ![](../images/lab01-image22.png)
    
-3. Now connect the Dataset to the Cleaning Component, hover over the small **circle at the bottom** of the dataset block labeled **Data output**. Click and **drag a line** to the **left circle** of the Clean Missing Data component labeled **Dataset**. **Save** your progress by clicking **Save** at the top right of the canvas.
+1. Now connect the Dataset to the Cleaning Component, hover over the small **circle at the bottom** of the dataset block labeled **Data output**. Click and **drag a line** to the **left circle** of the Clean Missing Data component labeled **Dataset**. **Save** your progress by clicking **Save** at the top right of the canvas.
 
     ![](../images/lab01-image21.png) 
 
-5. Now you will Configure the Clean Missing Data component. Double-click the **Clean Missing Data** block on the canvas. Then click the blue **Edit column** link next to **Columns to be cleaned**. This will open a pop-up window.  
+1. Now you will Configure the Clean Missing Data component. Double-click the **Clean Missing Data** block on the canvas. Then click the blue **Edit column** link next to **Columns to be cleaned**. This will open a pop-up window.  
 
     ![](../images/lab01-image23.png) 
 
-7. Seelct only **sensor_reading** - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`. Click **Save** in the pop-up,
+1. Select only **sensor_reading** - Do **not** include columns like `timestamp`, `machine_id`, or `anomaly_flag`. Click **Save** in the pop-up,
 
     ![](../images/lab01-image24.png) 
 
-8. Click **Save** again on the main screen.  
+1. Click **Save** again on the main screen.  
 
     ![](../images/lab01-image25.png) 
 
-## Part 3: Adding Detection Models
+### Task 4: Adding Detection Models
 
-Now that you have cleaned the dataset, it's time to add the **PCA-Based Anomaly Detection model** into your pipeline.
-
----
-
-### Steps to Add PCA-Based Anomaly Detection
+In this task you will add and configure the PCA-Based anomaly detection model to your pipeline. You will train the model on the cleaned data, score the dataset to identify anomalies, and connect the necessary components for these steps in Azure ML Designer.
 
 1. On the **Component** tab, search for **PCA-Based Anomaly Detection**. Then **Drag** the PCA-Based Anomaly Detection component into the canvas.
 
@@ -165,41 +153,38 @@ Now that you have cleaned the dataset, it's time to add the **PCA-Based Anomaly 
    
    >**Note**: This is a built-in model that detects outliers in time-series data using **Principal Component Analysis**.
 
-### Train the PCA Model
-
-Next, train the model using your cleaned dataset by adding the **Train Anomaly Detection Model** component.
+1. Next, you will train the model using your cleaned dataset by adding the **Train Anomaly Detection Model** component.
 
 1. In the Component tab, search for **Train Anomaly Detection Model**. Drag the component into your canvas, placing it below the **PCA-Based Anomaly Detection** block.  
 
     ![](../images/lab01-image27.png)
 
-3. Connect:
+1. Connect:
    - The **Untrained model output** from the **PCA-Based Anomaly Detection** to the **Model input** of Train Anomaly Detection Model.
    - The **Cleaned data output** from the **Clean Missing Data** to the **Dataset input** of Train Anomaly Detection Model.  
 
     ![](../images/21.png) 
----
 
-### Score the Dataset
-
-Next, you’ll use the **Score Model** to apply the trained model and generate predictions.
+1. Next, you will use the **Score Model** to apply the trained model and generate predictions.
 
 1. In the Component tab, search for **"Score Model"** by Microsoft.
 
-2. Drag the **Score Model** component into the canvas, placing it **below** the **Train Anomaly Detection Model**.  
+1. Drag the **Score Model** component into the canvas, placing it **below** the **Train Anomaly Detection Model**.  
 
     ![](../images/22.png) 
 
-3. Connect:
+1. Connect:
    - The **Trained model output** from **Train Anomaly Detection Model** to the **Trained model input** of **Score Model**.
    - The **Cleaned data output** from **Clean Missing Data** to the **Dataset input** of **Score Model**.
 
    > This ensures that your newly trained model is scoring the same dataset it learned from.
 
-4. Click **Save** at the top of the screen to preserve your progress.
+1. Click **Save** at the top of the screen to preserve your progress.
 
 
-Part 4: Convert and View Results
+### Task 5: Convert and View Results
+
+In this task you will convert the scored output from the model into a dataset format that can be visualized within the Azure ML Designer. This allows you to review the model’s predictions, including anomaly labels and confidence scores.
 
 1. We can’t visualize the output directly using the Score Model component, so we’ll need to convert the scored results into a visual-friendly format. To do so, we’ll use a component 
 called “Convert to Dataset”.
@@ -209,15 +194,15 @@ Score Model component.
 
    >**Note**: This tool takes the output from the model and converts it to a format that can be visualized in the Designer.
 
-3. Connect the Scored dataset output from the Score Model to the Dataset input of 
+1. Connect the Scored dataset output from the Score Model to the Dataset input of 
 the Convert to Dataset component.
 
-5. Once connected, click Save at the top to preserve your updated pipeline.
+1. Once connected, click Save at the top to preserve your updated pipeline.
 
 1. Now that the pipeline is fully built with all the components connected—from data intake to anomaly scoring—we're ready to run it to view our results!
 
 1. First, let’s make sure all components are connected as shown.
-a. -  Confirm that:
+    - Confirm that:
       i. The dataset flows through Clean Missing Data.
       ii. The cleaned data connects to both:
           - Train Anomaly Detection Model
@@ -225,16 +210,15 @@ a. -  Confirm that:
       iii. PCA-Based Anomaly Detection is connected to the Train component.
       iv. Score Model connects to Convert to Dataset.
 
-2. Save your pipeline, if not auto-saved already.
+1. Save your pipeline, if not auto-saved already.
 
-3. Click the **Configure & Submit** button in the top-right corner.
+1. Click the **Configure & Submit** button in the top-right corner.
 
     ![](../images/lab01-image36.png)
 
-## Part 5: Configure Pipeline Job Basics 
+### Task 6: Configure Pipeline Job Basics 
 
-We now need to configure a bit more detail before running your pipeline in Azure ML 
-Designer.
+In this task you will configure the details needed to run your pipeline, including setting up a new experiment and creating a compute cluster. You will submit the pipeline job to Azure ML to execute your anomaly detection workflow.
 
 1. On the **Basics** page, perform the steps as mentioned below:
 
@@ -282,13 +266,116 @@ Designer.
 
    ![](../images/lab01-image44.png)
 
-## Saving our Data to Azure Blob
+1. Understanding the Output Each row represents a **timestamped data record** from the pipeline. Here's what the columns mean:
+
+    | Column Name         | Description                                                                 |
+    |---------------------|-----------------------------------------------------------------------------|
+    | `timestamp`         | When the data was collected; essential for time-series analysis.            |
+    | `machine_id`        | Identifier for the machine (e.g., `CNC_Lathe`, `Injection_Molder`).         |
+    | `sensor_reading`    | Numeric value collected from the machine's sensor.                          |
+    | `anomaly_flag`      | Original label: 1 if anomaly, 0 if normal.                                  |
+    | `Scored Labels`     | Model's prediction: 1 for anomaly, 0 for normal.                            |
+    | `Scored Probabilities` | Shows the model's confidence level in its prediction. Closer to 1 means higher certainty of an anomaly. |
+
+
+
+1. What Is a Pipeline, Really?
+    
+    - A pipeline in Azure ML Designer is a step-by-step process that moves data through different stages—starting from input, moving through cleaning and analysis, and ending with a final output. Each stage performs a specific operation to transform or analyze the data.
+    
+    - At the beginning, you upload your raw dataset. Then, you may clean the data to handle missing or incorrect values. After cleaning, the data is sent to a machine learning model, 
+which processes it to find patterns or make predictions. The model then produces new output data—such as predicted labels or anomaly scores.
+    
+    - However, after the model finishes running, it’s important to think about where the results go. If they are not stored or saved properly, it becomes difficult to access or share them later.
+    
+    - Let’s walk through the actual pipeline we built for anomaly detection and understand what happens to the data at each step.
+
+#### Input Dataset
+
+1. This is the starting point of the pipeline. You uploaded a CSV file or dataset containing sensor readings from a machine. This could track things like temperature, pressure, and 
+vibration levels.
+
+   **Example of a Results Dataset:**
+   
+    | **timestamp** | **machine_id** |  **temperature** | **pressure** | **vibration** | **anomaly_flag**  |
+    |---------------|----------------|----------------- |--------------|---------------|-------------------|
+    | 12:00 PM      |  M001          |   75             |      30      |     0.04      |      0            | 
+    | 12:01 PM      |  M001          |   76             |      30.1    |     0.06      |      0            |
+    | 12:02 PM      |  M001          |   120            |      80      |     1.5       |      1            |
+
+
+    >**Note**: The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
+
+#### Clean Missing Data
+
+1. Data collected from machines may sometimes be incomplete—for example, a sensor might fail to report a value. The Clean Missing Data step helps prepare the data by:
+    
+    -  Replacing missing values with a default or average value
+    -  Removing rows or columns with too many gaps
+
+1. This ensures your model isn’t confused or misled by blank entries
+
+   **Before Cleaning Dataset Example**
+
+    | **temperature** |  pressure   |  vibration |
+    |-----------|-------------|------------|
+    | 75        |  30         |   0.04     |  
+    |           |  30.1       |   0.06     |  
+    | 120       |   80        |   1.5      |  
+
+
+    **After Cleaning Dataset Example:**
+
+    |temperature|  pressure   |  vibration |
+    |-----------|-------------|------------|
+    | 75        |  30         |   0.04     |  
+    | 75        |  30.1       |   0.06     |  
+    | 120       |   80        |   1.5      |  
+
+
+#### Model (PCA)
+
+- This is where the machine learning magic happens. Your cleaned data is sent into a model that learns to detect unusual behavior (anomalies).
+
+- Specifically, we used Principal Component Analysis (PCA for short). The model looks at patterns in normal machine behavior and flags anything that deviates from it.
+
+#### Output: Scored Dataset
+
+- Once the model runs, it adds two new columns to the dataset that contain its predictions. One column, “Scored Labels” is the model’s prediction for the anomaly flag. The second 
+column, “Scored Probabilities” is the confidence level of the prediction.
+
+  **Example Scored Dataset Output:**
+
+    | **timestamp** | **machine_id** |  **temperature** | **pressure** | **vibration** | **anomaly_flag**  | **Scored Labels**|  **Scored Probabilities**|  
+    |---------------|--------------- |------------------|--------------|---------------|-------------------|------------------|-------------------------|
+    | 12:00 PM      |  M001          |   75             |   30         |     0.04      |      0            |    0             |        0.98             |
+    | 12:01 PM      |  M001          |   76             |   30.1       |     0.06      |      0            |    0             |        0.97             |
+    | 12:02 PM      |  M001          |   120            |   80         |     1.5       |      1            |    1             |        0.65             | 
+    
+### Task 7: Saving our Data to Azure Blob
+
+In this task you will export the results of your anomaly detection pipeline to Azure Blob Storage for permanent storage. This ensures that your predictions are saved outside of the temporary pipeline environment, making them accessible for future reporting, sharing, or auditing.
+
+- Where Is the Data Stored?
+   
+   - After your pipeline processes the data and makes predictions, those results are not automatically saved in a permanent location. If you don’t store them externally, they may 
+     only exist temporarily inside the Azure ML pipeline. That means you can’t reuse them in other projects, download them later, or share them with your team.
+
+   - To solve this, you can connect your pipeline to Azure Blob Storage, which acts as a permanent cloud storage location.
+
+- Azure Blob Storage is like a big cloud-based folder. You can think of it as an online hard drive where you can store:
+     - Datasets (CSV files, Excel files)
+     - Images, logs, or sensor readings
+     - Output from your machine learning models
+
+- We will now export your final scored dataset (which includes anomaly predictions) to an external storage location such as Azure Blob Storage. This ensures the results are saved 
+even after the pipeline finishes.
 
 1. Azure Blob Storage is like a big cloud-based folder. You can think of it as an online hard drive where you can store:
 
-    • Datasets (CSV files, Excel files)
-    • Images, logs, or sensor readings
-    • Output from your machine learning models
+     -  Datasets (CSV files, Excel files)
+     -  Images, logs, or sensor readings
+     -  Output from your machine learning models
 
 1. We will now export your final scored dataset (which includes anomaly predictions) to an external storage location such as Azure Blob Storage. This ensures the results are saved 
 even after the pipeline finishes.
@@ -337,7 +424,7 @@ your pipeline, as seen in below image.
 
 1. Log on to Azure Portal with your credentials. 
  
-1. From here, click on “Storage Accounts” under the “Azure Services” section.
+1. From here, click on **Storage Accounts** under the “Azure Services” section.
 
 1. Now, we need to find the correct storage account from the list of accounts you currently see. It will be named “testanomalymod” followed by a sequence of random numbers. For example, “testanomalymod7380583022”. Once you find it, click on that account.
 
@@ -345,3 +432,82 @@ your pipeline, as seen in below image.
 
     ![](../images/lab01-image49.png)
    
+#### Exit Activity: Saving Your Model’s Output to External Storage
+
+**Scenario:**
+
+- You work for a smart manufacturing company. Every hour, your Azure ML pipeline runs and checks sensor data from 100+ machines to detect anomalies. You used Azure ML Designer and a PCA-Based Anomaly Detection model.
+
+- Now your team wants to save the predictions to Azure Blob Storage so they can:
+     
+     - View them later
+     - Share them with managers
+     - Generate monthly reports
+     - Keep an archive for compliance
+
+
+**Scenario Setup:**
+
+- You work in a smart factory where your Azure ML pipeline runs every hour to check sensor readings for anomalies.
+- The system has been flagging unusual behavior in Machine_12, but the logs are not saved consistently.
+- This week, a manager asked you for a report of anomalies from the past 30 days — but the data wasn’t stored.
+- Now your team wants you to:
+    
+    - Decide what output from the pipeline should be saved
+    - Decide where and how often to store it
+    - Justify your choices to your supervisor
+
+- Prompts to think about since you have to answer these at the end: 
+    
+    1. What type of data would you save from the anomaly detection pipeline?
+    
+    2. Why is it important to save the output externally, instead of keeping it inside the pipeline?
+    
+    3. How would you use Azure Blob Storage in your solution?
+
+
+- Final Deliverable (Public Audience Simulation):
+
+   - Prepare a short status report or slide (3–4 bullet points) that explains your model’s findings to your factory’s operations manager. Include:
+
+       - What the model predicted
+       - How confident it was
+       - What should be done next (e.g., notify maintenance)
+
+
+### PBL Thinking Extension – Comparing PCA to Other Anomaly Detection Models
+
+- Reflect & Extend: Could Another Model Work Better?
+   
+   - In this lesson, you used PCA-Based Anomaly Detection to find unusual sensor readings across multiple machines. PCA works by learning the “normal behavior” of the entire dataset and flagging points that deviate from that pattern.
+
+   - But what if different machines behave differently?
+   
+   - Or what if a sensor value isn’t extreme, but its pattern over time is suspicious?
+
+   - One alternative approach is using a model like Isolation Forest — a tree-based method that works well when anomalies are rare and different in value, not just direction. It       isolates each data point and sees how “deep” the tree has to go to separate it from others. 
+Anomalies tend to get isolated quickly.
+   
+   - Even though Azure ML Designer doesn’t support Isolation Forest directly, here's how you 
+might compare the two in theory:
+
+      | **Model**                       | **How It Works**                                                                    |  **When It's Useful**                               | 
+      |---------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------|
+      | PCA-Based Anomaly Detection     |  Finds unusual patterns based on direction and variance from “normal” behavior      | Works well when normal behavior is consistent and                                                                                                                                          smooth; effective for correlated features          |
+      | Isolation Forest                | Separates each point using decision trees; anomalies are isolated in fewer splits   | Works well when anomalies are fewand clearly different in                                                                                                                                 value (not just pattern)                            |
+
+## Review
+
+By the end of this lab, you have:
+
+- Created and configured an Azure ML workspace and compute cluster.
+
+- Uploaded and prepared a dataset using Clean Missing Data.
+
+- Trained and scored a PCA-Based Anomaly Detection model.
+
+- Viewed and interpreted anomaly predictions.
+
+- Exported the output to Azure Blob Storage for permanent storage.       
+
+
