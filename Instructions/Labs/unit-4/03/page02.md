@@ -6,6 +6,9 @@ You will begin by setting up an Azure ML workspace and uploading a dataset of ma
 
 ### Task 1: Create Azure ML Workspace
 
+In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
+
+
 1. **Log in** to [Azure Machine Learning Studio](https://ml.azure.com/) when prompted provide below credentials.
 
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -52,8 +55,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 ### Task 2: Upload Our Dataset
 
-Now it’s time to add the dataset to the Azure ML pipeline!
-
+In this task you will upload the manufacturing sensor data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
@@ -115,7 +117,7 @@ Now it’s time to add the dataset to the Azure ML pipeline!
 
 ### Task 3: Preprocessing Our Data
 
-Now it’s time to add the **Clean Missing Data** component. Follow the steps below to complete this part!
+In this task you will prepare your dataset for modeling by cleaning missing values. You will add and configure the Clean Missing Data component to handle incomplete or missing sensor readings, ensuring the dataset is reliable for training your anomaly detection model.
 
 1. Switch to the **Component** tab and search for **"Clean Missing Data"** by Microsoft.  
     
@@ -143,7 +145,7 @@ Now it’s time to add the **Clean Missing Data** component. Follow the steps be
 
 ### Task 4: Adding Detection Models
 
-Now that you have cleaned the dataset, it's time to add the **PCA-Based Anomaly Detection model** into your pipeline.
+In this task you will add and configure the PCA-Based anomaly detection model to your pipeline. You will train the model on the cleaned data, score the dataset to identify anomalies, and connect the necessary components for these steps in Azure ML Designer.
 
 1. On the **Component** tab, search for **PCA-Based Anomaly Detection**. Then **Drag** the PCA-Based Anomaly Detection component into the canvas.
 
@@ -182,6 +184,8 @@ Now that you have cleaned the dataset, it's time to add the **PCA-Based Anomaly 
 
 ### Task 5: Convert and View Results
 
+In this task you will convert the scored output from the model into a dataset format that can be visualized within the Azure ML Designer. This allows you to review the model’s predictions, including anomaly labels and confidence scores.
+
 1. We can’t visualize the output directly using the Score Model component, so we’ll need to convert the scored results into a visual-friendly format. To do so, we’ll use a component 
 called “Convert to Dataset”.
 
@@ -214,8 +218,7 @@ the Convert to Dataset component.
 
 ### Task 6: Configure Pipeline Job Basics 
 
-We now need to configure a bit more detail before running your pipeline in Azure ML 
-Designer.
+In this task you will configure the details needed to run your pipeline, including setting up a new experiment and creating a compute cluster. You will submit the pipeline job to Azure ML to execute your anomaly detection workflow.
 
 1. On the **Basics** page, perform the steps as mentioned below:
 
@@ -350,6 +353,8 @@ column, “Scored Probabilities” is the confidence level of the prediction.
     | 12:02 PM      |  M001          |   120            |   80         |     1.5       |      1            |    1             |        0.65             | 
     
 ### Task 7: Saving our Data to Azure Blob
+
+In this task you will export the results of your anomaly detection pipeline to Azure Blob Storage for permanent storage. This ensures that your predictions are saved outside of the temporary pipeline environment, making them accessible for future reporting, sharing, or auditing.
 
 - Where Is the Data Stored?
    
