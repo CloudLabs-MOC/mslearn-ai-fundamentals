@@ -453,11 +453,46 @@ your pipeline, as seen in below image.
     - Decide where and how often to store it
     - Justify your choices to your supervisor
 
-Prompts to think about since you have to answer these at the end:
-1. What type of data would you save from the anomaly detection pipeline?
-2. Why is it important to save the output externally, instead of keeping it inside 
-the pipeline?
-3. How would you use Azure Blob Storage in your solution?
+- Prompts to think about since you have to answer these at the end: 
+    
+    1. What type of data would you save from the anomaly detection pipeline?
+    
+    2. Why is it important to save the output externally, instead of keeping it inside the pipeline?
+    
+    3. How would you use Azure Blob Storage in your solution?
 
+
+- Final Deliverable (Public Audience Simulation):
+
+   - Prepare a short status report or slide (3–4 bullet points) that explains your model’s findings to your factory’s operations manager. Include:
+
+       - What the model predicted
+       - How confident it was
+       - What should be done next (e.g., notify maintenance)
+
+
+### PBL Thinking Extension – Comparing PCA to Other Anomaly Detection Models
+
+- Reflect & Extend: Could Another Model Work Better?
+   
+   - In this lesson, you used PCA-Based Anomaly Detection to find unusual sensor readings across multiple machines. PCA works by learning the “normal behavior” of the entire dataset and flagging points that deviate from that pattern.
+
+   - But what if different machines behave differently?
+   
+   - Or what if a sensor value isn’t extreme, but its pattern over time is suspicious?
+
+   - One alternative approach is using a model like Isolation Forest — a tree-based method that works well when anomalies are rare and different in value, not just direction. It       isolates each data point and sees how “deep” the tree has to go to separate it from others. 
+Anomalies tend to get isolated quickly.
+   
+   - Even though Azure ML Designer doesn’t support Isolation Forest directly, here's how you 
+might compare the two in theory:
+
+      | **Model**                       | **How It Works**                                                                    |  **When It's Useful**                               | 
+      |---------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------|
+      | PCA-Based Anomaly Detection     |  Finds unusual patterns based on direction and variance from “normal” behavior      | Works well when normal behavior is consistent and                                                                                                                                          smooth; effective for correlated features          |
+      | Isolation Forest                | Separates each point using decision trees; anomalies are isolated in fewer splits   | Works well when anomalies are fewand clearly different in                                                                                                                                 value (not just pattern)                            |
+
+
+       
 
 
