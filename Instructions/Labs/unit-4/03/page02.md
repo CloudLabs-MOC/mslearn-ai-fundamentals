@@ -293,15 +293,16 @@ which processes it to find patterns or make predictions. The model then produces
 1. This is the starting point of the pipeline. You uploaded a CSV file or dataset containing sensor readings from a machine. This could track things like temperature, pressure, and 
 vibration levels.
 
-    **Example of a Results Dataset:**
+   **Example of a Results Dataset:**
    
-    | timestamp | machine_id |  temperature | pressure | vibration | anomaly_flag  |
-    |------------------------------------------------------------------------------|
-    | 12:00 PM  |  M001      |   75         |   30     |     0.04  |      0        |
-    | 12:01 PM  |  M001      |   76         |   30.1   |    0.06   |      0        |
-    | 12:02 PM  |  M001      |   120        |   80     |    1.5    |      1        |
+    | **timestamp** | **machine_id** |  **temperature** | **pressure** | **vibration** | **anomaly_flag**  |
+    |---------------|----------------|----------------- |--------------|---------------|-------------------|
+    | 12:00 PM      |  M001          |   75             |      30      |     0.04      |      0            | 
+    | 12:01 PM      |  M001          |   76             |      30.1    |     0.06      |      0            |
+    | 12:02 PM      |  M001          |   120            |      80      |     1.5       |      1            |
 
-    - The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
+
+    >**Note**: The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
 
 #### Clean Missing Data
 
@@ -312,22 +313,22 @@ vibration levels.
 
 1. This ensures your model isn’t confused or misled by blank entries
 
-     **Before Cleaning Dataset Example**
+   **Before Cleaning Dataset Example**
 
-        |temperature|  pressure   |  vibration |
-        |---------------------------------------|
-        | 75        |  30         |  0.04       |  
-        |           |  30.1       |   0.06      |  
-        | 120       |   80        |   1.5       |  
+    | **temperature** |  pressure   |  vibration |
+    |-----------|-------------|------------|
+    | 75        |  30         |   0.04     |  
+    |           |  30.1       |   0.06     |  
+    | 120       |   80        |   1.5      |  
 
 
-      **After Cleaning Dataset Example:**
+    **After Cleaning Dataset Example:**
 
-        |temperature|  pressure   |  vibration |
-        |--------------------------------------|
-        | 75        |  30         |   0.04     |  
-        | 75        |  30.1       |   0.06     |  
-        | 120       |   80        |   1.5      |  
+    |temperature|  pressure   |  vibration |
+    |-----------|-------------|------------|
+    | 75        |  30         |   0.04     |  
+    | 75        |  30.1       |   0.06     |  
+    | 120       |   80        |   1.5      |  
 
 
 #### Model (PCA)
@@ -341,13 +342,13 @@ vibration levels.
 - Once the model runs, it adds two new columns to the dataset that contain its predictions. One column, “Scored Labels” is the model’s prediction for the anomaly flag. The second 
 column, “Scored Probabilities” is the confidence level of the prediction.
 
-   **Example Scored Dataset Output:**
+  **Example Scored Dataset Output:**
 
-    | timestamp | machine_id |  temperature | pressure | vibration | anomaly_flag  | Scored Labels|  Scored Probabilities   |  
-    |-----------------------------------------------------------------------------------------------------------------------|
-    | 12:00 PM  |  M001      |   75         |   30     |     0.04  |      0        |    0         |        0.98             |
-    | 12:01 PM  |  M001      |   76         |   30.1   |    0.06   |      0        |    0         |        0.97             |
-    | 12:02 PM  |  M001      |   120        |   80     |    1.5    |      1        |    1         |        0.65             | 
+    | **timestamp** | **machine_id** |  **temperature** | **pressure** | **vibration** | **anomaly_flag**  | **Scored Labels**|  **Scored Probabilities**|  
+    |---------------|--------------- |------------------|--------------|---------------|-------------------|------------------|-------------------------|
+    | 12:00 PM      |  M001          |   75             |   30         |     0.04      |      0            |    0             |        0.98             |
+    | 12:01 PM      |  M001          |   76             |   30.1       |     0.06      |      0            |    0             |        0.97             |
+    | 12:02 PM      |  M001          |   120            |   80         |     1.5       |      1            |    1             |        0.65             | 
     
 ### Task 7: Saving our Data to Azure Blob
 
