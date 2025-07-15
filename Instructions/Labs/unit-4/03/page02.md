@@ -1,9 +1,8 @@
 ## Deploying PCA-Based Pipelines
 
-Now that we know what data we’re working with, let’s dive into how we’re going to use it!  
-Using a technique called **Principal Component Analysis (PCA)**, we’ll use Azure Machine Learning tools to learn the pattern of normal behavior and then detect when something deviates from it.
+In this lab, you will build and deploy a machine learning pipeline in Azure Machine Learning Designer that detects anomalies in manufacturing sensor data using a technique called Principal Component Analysis (PCA).
 
----
+You will begin by setting up an Azure ML workspace and uploading a dataset of machine sensor readings. Then, you'll clean the data, apply PCA-based anomaly detection, and score the dataset to identify unusual behavior. Finally, you'll export the model’s predictions to Azure Blob Storage, ensuring the results are saved for reporting, auditing, and future analysis.
 
 ### Task 1: Create Azure ML Workspace
 
@@ -492,7 +491,18 @@ might compare the two in theory:
       | PCA-Based Anomaly Detection     |  Finds unusual patterns based on direction and variance from “normal” behavior      | Works well when normal behavior is consistent and                                                                                                                                          smooth; effective for correlated features          |
       | Isolation Forest                | Separates each point using decision trees; anomalies are isolated in fewer splits   | Works well when anomalies are fewand clearly different in                                                                                                                                 value (not just pattern)                            |
 
+## Review
 
-       
+By the end of this lab, you have:
+
+- Created and configured an Azure ML workspace and compute cluster.
+
+- Uploaded and prepared a dataset using Clean Missing Data.
+
+- Trained and scored a PCA-Based Anomaly Detection model.
+
+- Viewed and interpreted anomaly predictions.
+
+- Exported the output to Azure Blob Storage for permanent storage.       
 
 
