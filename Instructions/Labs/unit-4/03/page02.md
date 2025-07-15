@@ -22,15 +22,15 @@ In this task you will set up an Azure Machine Learning workspace where all your 
       Azure will auto-fill this based on the name.
    - **Hub (Optional)**: Leave this as “None” unless instructed otherwise.
    - **Advanced Settings**:
-     - **Subscription**: Select the appropriate Azure subscription from the dropdown. 
-     - **Resource Group**: Choose an existing one 
-     - **Region**: Select **East US 2** for better performance.
-     - After filling out all the required fields, click the **“Create”** button.
+   - **Subscription**: Select the appropriate Azure subscription from the dropdown. 
+   - **Resource Group**: Choose an existing one 
+   - **Region**: Select **East US 2** for better performance.
+   - After filling out all the required fields, click the **“Create”** button.
 
         ![](../images/lab01-image2.png) 
 
 
-    >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+        >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces”**. Locate the workspace you just created `PCA Anomaly Model`.
 
@@ -203,12 +203,12 @@ the Convert to Dataset component.
 
 1. First, let’s make sure all components are connected as shown.
     - Confirm that:
-      i. The dataset flows through Clean Missing Data.
-      ii. The cleaned data connects to both:
-          - Train Anomaly Detection Model
-          - Score Model
-      iii. PCA-Based Anomaly Detection is connected to the Train component.
-      iv. Score Model connects to Convert to Dataset.
+          a. The dataset flows through Clean Missing Data.
+          b. The cleaned data connects to both:
+               **Train Anomaly Detection Model**
+               **Score Model**
+          c. PCA-Based Anomaly Detection is connected to the Train component.
+          d. Score Model connects to Convert to Dataset.
 
 1. Save your pipeline, if not auto-saved already.
 
@@ -277,8 +277,6 @@ In this task you will configure the details needed to run your pipeline, includi
     | `Scored Labels`     | Model's prediction: 1 for anomaly, 0 for normal.                            |
     | `Scored Probabilities` | Shows the model's confidence level in its prediction. Closer to 1 means higher certainty of an anomaly. |
 
-
-
 1. What Is a Pipeline, Really?
     
     - A pipeline in Azure ML Designer is a step-by-step process that moves data through different stages—starting from input, moving through cleaning and analysis, and ending with a final output. Each stage performs a specific operation to transform or analyze the data.
@@ -304,7 +302,7 @@ vibration levels.
     | 12:02 PM      |  M001          |   120            |      80      |     1.5       |      1            |
 
 
-    >**Note**: The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
+      >**Note**: The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
 
 #### Clean Missing Data
 
@@ -323,7 +321,6 @@ vibration levels.
     |           |  30.1       |   0.06     |  
     | 120       |   80        |   1.5      |  
 
-
     **After Cleaning Dataset Example:**
 
     |temperature|  pressure   |  vibration |
@@ -331,7 +328,6 @@ vibration levels.
     | 75        |  30         |   0.04     |  
     | 75        |  30.1       |   0.06     |  
     | 120       |   80        |   1.5      |  
-
 
 #### Model (PCA)
 
@@ -394,15 +390,12 @@ your pipeline, as seen in below image.
 1. Once you've added and connected the Export Data module in your pipeline, click on it to open the configuration panel on the right side
 
 1. Set the fields in the panel as follows:
-     a. Datastore Type: Azure Blob Storage
-         - This tells Azure that you want to save the output file in a cloud-based blob container.
-     b. Datastore: workspaceblobstore
-         - This is the default blob storage associated with your workspace. It acts like a cloud folder that stores files outside of the pipeline’s memory.
-     c. Output Path: predictions
-         - This path acts like a folder name inside your blob storage. The system will save your file inside this path.
-     d. File Format: csv
-         - This will save the output as a CSV file.
-     e. Save the configuration.
+
+    a. Datastore Type: Azure Blob Storage - This tells Azure that you want to save the output file in a cloud-based blob container.
+    b. Datastore: workspaceblobstore - This is the default blob storage associated with your workspace. It acts like a cloud folder that stores files outside of the pipeline’s memory.
+    c. Output Path: predictions - This path acts like a folder name inside your blob storage. The system will save your file inside this path.
+    d. File Format: csv - This will save the output as a CSV file.
+    e. Save the configuration.
 
     ![](../images/lab01-image50.png)
         
