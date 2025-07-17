@@ -300,8 +300,7 @@ vibration levels.
     | 12:01 PM      |  M001          |   76             |      30.1    |     0.06      |      0            |
     | 12:02 PM      |  M001          |   120            |      80      |     1.5       |      1            |
 
-
-      >**Note**: The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
+   >**Note**: The last column (anomaly_flag) tells us whether that row is normal (0) or an anomaly (1). This column is used for testing the model’s accuracy.
 
 #### Clean Missing Data
 
