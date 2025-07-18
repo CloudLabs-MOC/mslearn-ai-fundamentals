@@ -151,16 +151,16 @@ Now it’s time to add the Split Data component.
 
 1. Save your progress by clicking **Save** at the top right of the canvas.
 
-1. Double-click the **Split Data block** on your canvas. The settings panel will appear on the right-hand side.
+1. Double-click the **Split Data block (1)** on your canvas. The settings panel will appear on the right-hand side.
 
-    - Under **Splitting mode**, make sure **Split Rows (1)** is selected. (This means the data will be divided by rows, not by columns)
+    - Under **Splitting mode**, make sure **Split Rows (2)** is selected. (This means the data will be divided by rows, not by columns)
     - In the field labeled **Fraction of rows in the first output dataset**, type:
-`0.7` **(2)**. This means 70% of your data will be used for training, and the remaining 30% 
+`0.7` **(3)**. This means 70% of your data will be used for training, and the remaining 30% 
 for testing.
-    - Ensure **Randomized split** is set to: **True (3)** (This ensures a random and fair mix of rows in each set)
-    - In the **Random seed** field, type: `42` **(4)**. This ensures that every time you run the pipeline, the data is split the same way. This is useful for consistency across student runs
-    - Confirm **Stratified split** is set to: **False (5)**
-    - Click **Save (6)** at the top of the page to lock in your configuration
+    - Ensure **Randomized split** is set to: **True (4)** (This ensures a random and fair mix of rows in each set)
+    - In the **Random seed** field, type: `42` **(5)**. This ensures that every time you run the pipeline, the data is split the same way. This is useful for consistency across student runs
+    - Confirm **Stratified split** is set to: **False (6)**
+    - Click **Save (7)** at the top of the page to lock in your configuration
 
       ![](../images/nc4.png)    
 
