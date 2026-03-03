@@ -4,15 +4,16 @@
 
 ## Lab scenario
 
-The model will use a dataset of historical bicycle rental details to predict the number of rentals expected on a given day. It leverages seasonal and meteorological features to enhance the accuracy of its forecasts
+Contoso Ice Cream is a mid-sized retail company operating across major metropolitan areas, serving families, students, and tourists. The company experiences fluctuating daily sales driven by seasonal patterns, day-of-week trends, and changing weather conditions, making it difficult to accurately plan inventory and staffing using manual estimates and historical averages. This often results in stock shortages during peak demand and excess inventory during slower periods. To improve operational efficiency, reduce waste, and enhance customer satisfaction, Contoso plans to implement a predictive machine learning solution using historical ice cream sales, seasonal, and meteorological data to forecast the expected number of ice creams to be sold on a given day.
 
 ## Lab Objectives
 
 In this lab, you will perform:
 
 - Task 1: Creating an *Azure Machine Learning workspace* resource
-- Task 2: Use automated machine learning to train a model
-- Task 3: Deploy the model
+- Task 2: Enable the Preview features
+- Task 3: Use automated machine learning to train a model
+- Task 4: Deploy the model
 - Task 4: Test the model
 
 ## Exercise 1: Explore Automated Machine Learning in Azure Machine Learning
@@ -37,13 +38,13 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
   
 4. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
-    - **Subscription**: Use existing Azure subscription. **(1)**
+    - **Subscription**: Use an existing Azure subscription **(1)**
     - **Resource group**: Select **machinelearning (2)**
     - **Name**: Give name **amlworkspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
     - **Region**: Select **<inject key="location" enableCopy="false" /> (4)**
-    - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
-    - **Key vault**: Note the default new key vault that will be created for your workspace. **(6)**
-    - **Application insights**: Note the default new application insights resource that will be created for your workspace. **(7)**
+    - **Storage account**: Note the default new storage account that will be created for your workspace **(5)**
+    - **Key vault**: Note the default new key vault that will be created for your workspace **(6)**
+    - **Application insights**: Note the default new application insights resource that will be created for your workspace **(7)**
     - **Container registry**: None (one will be created automatically the first time you deploy a model to a container) **(8)**
 
 5. Select **Review + create (9)**.
@@ -80,7 +81,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
   <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
 
-#### Enable preview features
+### Task 2: Enable preview features
 
 Some features of Azure Machine Learning are in preview and need to be explicitly enabled in your workspace.
 
@@ -92,7 +93,7 @@ Some features of Azure Machine Learning are in preview and need to be explicitly
 
      ![](media/prev.png)
 
-### Task 2: Use automated machine learning to train a model
+### Task 3: Use automated machine learning to train a model
 
 In this task, you will learn how to use automated machine learning to train a model efficiently without writing extensive code.
 
@@ -221,7 +222,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 >
 > If your deployment completes within the expected timeframe (approximately **10–15 minutes**), continue with the remaining steps of this lab. After completion of this exercise, if time permits, you may optionally explore the browser-based Machine Learning Lab for additional practice.
 
-**Review the best model**
+#### 3.1 Review the best model
 
 When the automated machine learning job has completed, you can review the best model it trained.
 
@@ -329,12 +330,6 @@ Now you can test your deployed service.
 
 Let’s review what you have done. You used a dataset of historical ice cream sales data to train a model. The model predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features.
   
-### Review
-In this lab, you have completed the following tasks:
-- Created an *Azure Machine Learning workspace* resource
-- Utilized automated machine learning to train a model
-- Deployed the model
-
-Let me know if you'd like any changes!
-  
+## Conclusion
+In **"Automated Machine learning using AML"** hands-on lab, demonstrated how to use Azure Machine Learning to build an end-to-end predictive solution from creating a workspace and compute resources to training, deploying, and testing a machine learning model. By leveraging automated machine learning, you were able to efficiently identify the best-performing model and deploy it as a scalable predictive service. This hands-on experience highlights how **Azure Machine Learning** simplifies the model development lifecycle and helps accelerate the delivery of intelligent, production-ready solutions.
 ## You have successfully completed this lab.
