@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/NancyGettingstartedpages/GettingStartedU4L03.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit3-Lesson7/L07_U01.md",
+          "Order": 2
+        }
+      ]
+    }
+]
