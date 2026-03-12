@@ -110,6 +110,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **New experiment name**: `mslearn-icecream-automl` **(2)**
     - **Description**: `Automated machine learning for ice cream demand prediction` **(3)**
     - **Tags**: Leave default **(4)**
+    - Click **Next** **(5)**
 
        ![](media/lab1-e1t2p2.png)
 
