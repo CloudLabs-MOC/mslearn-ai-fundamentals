@@ -107,13 +107,13 @@ On the **Progress (1)** tab, you can view your overall points and validation sta
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-   ![Manage Your Virtual Machine](../media/gext.png)
+    ![Manage Your Virtual Machine](../media/gext.png)
 
-   >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
+    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
 2. Click **OK** to extend your lab duration.
  
-   ![Manage Your Virtual Machine](../media/gext2.png)
+    ![Manage Your Virtual Machine](../media/gext2.png)
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
@@ -125,19 +125,19 @@ On the **Progress (1)** tab, you can view your overall points and validation sta
 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your **credentials (1)** and click on **Next (2)**:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![Enter Your Username](../media/mod01-gs-t1p2.png)
  
 3. Next, provide your **password (1)** and click on **Next (2)**:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![Enter Your Password](../media/mod01-gs-t1p3.png)
  
 4. If you see the pop-up **Stay-Signed in?**, click **Yes**.
 
-   ![](../media/mod01-gs-t1p4.png)
+    ![](../media/mod01-gs-t1p4.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
 
