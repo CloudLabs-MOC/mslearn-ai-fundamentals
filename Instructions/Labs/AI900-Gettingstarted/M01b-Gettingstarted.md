@@ -127,17 +127,17 @@ On the **Progress (1)** tab, you can view your overall points and validation sta
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](../media/mod01-gs-t1p2.png)
+      ![Enter Your Username](../media/mod01-gs-t1p2.png)
  
 3. Next, provide your **password (1)** and click on **Next (2)**:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../media/mod01-gs-t1p3.png)
+      ![Enter Your Password](../media/mod01-gs-t1p3.png)
  
 4. If you see the pop-up **Stay-Signed in?**, click **Yes**.
 
-    ![](../media/mod01-gs-t1p4.png)
+   ![](../media/mod01-gs-t1p4.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
 
