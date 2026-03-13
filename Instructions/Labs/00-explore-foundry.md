@@ -4,15 +4,22 @@
 
 ## Lab Overview
 
-In this exercise, you'll create and explore a Microsoft Foundry project.
-
-This exercise should take approximately **30** minutes to complete.
+In this exercise, you'll create and explore a **Microsoft Foundry** project. You will learn how to navigate the Microsoft Foundry portal, view the underlying Azure resources associated with your project, and use built-in AI assistance to understand platform capabilities. You will also deploy a generative AI model from the model catalog and connect a client application to your Foundry resource using the project endpoint and API key.
 
 ## Lab Objectives
 
+In this lab, you will perform:
+
+* Task 1: Create a Microsoft Foundry project
+* Task 2: View Azure resources for Microsoft Foundry
+* Task 3: Explore the Microsoft Foundry portal
+* Task 4: Get AI assistance
+* Task 5: Deploy a model
+* Task 6: Use your Foundry resource endpoint
+
 ## Task 1: Create a Microsoft Foundry project
 
-Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution. Projects are associated with an Azure *Microsoft Foundry* resource, which provides the cloud services required to support AI app and agent development on Azure.
+In this task, you will create a Microsoft Foundry project. You will sign in to the Microsoft Foundry portal, configure the project settings such as the subscription, resource group, Foundry resource, and region, and create the project that will be used to manage models, agents, and other AI assets.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com`.
 
@@ -66,9 +73,16 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
     >**Note:** You're going to need the project key and endpoint later!
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+
 ## Task 2: View Azure resources for Microsoft Foundry
 
-Microsoft Foundry projects are based on resources in your Azure subscription. Let's take a look at those.
+In this task, you will explore the Azure resources associated with your Microsoft Foundry project. You will locate the parent Foundry resource in the Azure portal, view the relationship between the resource and its child project using the Resource Visualizer, and understand how Foundry projects are implemented as Azure resources.
 
 1. On the project home page, in the toolbar at the top left, select your project **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all projects (2)** to see all of the projects to which you have access.
 
@@ -110,7 +124,7 @@ Microsoft Foundry projects are based on resources in your Azure subscription. Le
 
 ## Task 3: Explore the Microsoft Foundry portal
 
-The Microsoft Foundry portal is where you create and manage agents and AI services for your applications.
+In this task, you will explore the Microsoft Foundry portal interface. You will navigate through the Home, Discover, Build, Operate, and Docs sections to understand how the portal is used to develop, manage, and operate AI solutions.
 
 > **Note:** The Microsoft Foundry portal is subject to continual improvement and expansion. The interface shown in this exercise may not match the interface of your portal exactly.
 
@@ -124,17 +138,11 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
         ![](./media/mod01-p2t1p16.png)
 
-1. From the top navigation menu, click **Discover**.
-
-    ![](./media/mod01-p2t1p17.png)
-
-1. This page surfaces the latest models and services and enables you to find starting points for AI application development.
+1. From the top navigation menu, click **Discover**. This page surfaces the latest models and services and enables you to find starting points for AI application development.
 
     ![](./media/mod01-p2t1p18.png)
 
-1. From the top navigation menu, click **Build**.
-
-    This page is where you develop AI solutions. Here you can:
+1. From the top navigation menu, click **Build**. This page is where you develop AI solutions. Here you can:
 
     - View and manage the **agents** in your project.
     - View and manage the **workflows** in your project.
@@ -148,9 +156,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
         ![](./media/mod01-p2t1p19.png)
 
-1. From the top navigation menu, click **Operate**.
-
-     On this page, you can operate your AI solution by:
+1. From the top navigation menu, click **Operate**. On this page, you can operate your AI solution by:
 
     - Managing **assets** like agents, models, and tools in your project.
     - Manage **compliance** with security policies.
@@ -165,7 +171,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
 ## Task 4: Get AI assistance
 
-As you would expect in a platform for developing cutting edge AI solutions, Microsoft Foundry provides AI-based assistance.
+In this task, you will use the built-in Ask AI feature in the Microsoft Foundry portal. You will enter a prompt to learn about the capabilities of Microsoft Foundry and review the AI-generated response.
 
 1. In the toolbar, use the AI chat icon to open the **Ask AI** pane.
 
@@ -183,7 +189,7 @@ As you would expect in a platform for developing cutting edge AI solutions, Micr
 
     ![](./media/mod01-p2t1p24.png)
 
-    **Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
+    >**Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
 
 1. If you have any questions about some of the things you've explored so far in this exercise, this is the place to ask them!
 
@@ -193,7 +199,7 @@ As you would expect in a platform for developing cutting edge AI solutions, Micr
 
 ## Task 5: Deploy a model
 
-Your Microsoft Foundry resource provides an endpoint in which you can deploy models and use them from applications and agents.
+In this task, you will deploy a generative AI model from the Microsoft Foundry model catalog. You will search for a model, deploy it using the default configuration, and test it in the playground by interacting with the deployed model.
 
 1. From the top navigation menu, click **Home**.
 
@@ -225,7 +231,7 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
    ![](./media/mod01-p2t1p32.png)
 
-1. On the **Playground** page, ensure the deployed model **gpt-4.1-mini** is selected in the **Model** dropdown. Also note dowwn the deployment name, as you will need it later.
+1. On the **Playground** page, ensure the deployed model **gpt-4.1-mini** is selected in the **Model** dropdown. Also note down the deployment name, as you will need it later.
 
     ![](./media/mod01-p2t1p33.png)
 
@@ -235,9 +241,16 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
     ![](./media/mod01-p2t1p35.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+
 ## Task 6: Use your Foundry resource endpoint
 
-Now that you have a Microsoft Foundry resource in Azure, you can use its models and tools from client applications. In this exercise, we'll use a simple AI chat application that has been provided for you.
+In this task, you will use the endpoint and API key of your Microsoft Foundry project to connect a client application to your deployed model. You will configure the application with the required project details and test the integration by interacting with the AI-powered chat application.
 
 1. In the toolbar at the top of the Foundry portal, select your project **myproject<inject key="DeploymentID" enableCopy="false" />** to return to the home page.
 
@@ -278,4 +291,6 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 ## Summary
 
-in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal. You then deployed a model and connected a client application to your Foundry resource.
+In this lab, you created a Microsoft Foundry project and explored the Microsoft Foundry portal. You examined the Azure resources associated with the project, used the built-in AI assistant to learn about platform capabilities, and navigated key sections of the portal used for developing AI solutions. You then deployed a generative AI model from the model catalog and connected a client application to your Foundry resource using the project endpoint and API key, demonstrating how models in Microsoft Foundry can be integrated into applications.
+
+### You've successfully completed the hand's-on lab!

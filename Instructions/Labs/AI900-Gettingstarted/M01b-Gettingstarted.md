@@ -3,45 +3,57 @@
 
 Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Explore Automated Machine Learning in Azure Machine Learning
+# Get started with Microsoft Foundry
 
-### Overall Estimated timing: 60 Minutes
+### Overall Estimated timing: 30 Minutes
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience using the **browser-based Machine Learning Lab** to automate the process of training, evaluating, and deploying machine learning models. You will learn how to create a Machine Learning Lab workspace, use automated machine learning to train a regression model, and deploy the best-performing model as a real-time endpoint. By following step-by-step tasks, you'll upload and prepare data, configure an Automated ML job, review model performance, and test predictions using sample input. By the end of this lab, you'll understand how automated machine learning simplifies building and operationalizing predictive models without requiring Azure access or extensive coding.
+In this hands-on lab, you'll gain practical experience using **Microsoft Foundry** to create and manage AI development resources. You will learn how to create a Microsoft Foundry project, explore the Foundry portal interface, and understand how the project is connected to underlying Azure resources. You will also interact with the built-in **Ask AI** assistant to learn about platform capabilities, deploy a generative AI model from the Foundry model catalog, and test the model in the playground. Finally, you will configure a sample client application using your project’s endpoint, API key, and model deployment to interact with the deployed model. By the end of this lab, you will understand how Microsoft Foundry enables developers to build and integrate AI-powered applications.
 
 ## Objectives
 
-By the end of this lab, you will be able to create a workspace in **Machine Learning Lab**, use automated machine learning to train a predictive model, and deploy the model as a real-time endpoint.
+By the end of this lab, you will be able to create and explore a project in **Microsoft Foundry**, deploy a generative AI model, and connect an application to the deployed model using project credentials.
 
-1. **Create a Machine Learning Lab workspace**: You will learn how to access the browser-based ML Lab environment and create a workspace to organize datasets, experiments, models, and endpoints.
+1. **Create a Microsoft Foundry project**: You will learn how to access the Microsoft Foundry portal, configure project settings such as subscription, resource group, and region, and create a project to organize AI models and resources.
 
-2. **Train a model using automated machine learning**: You will use automated machine learning to train a regression model that predicts ice cream sales based on seasonal and weather-related features, and evaluate multiple algorithms to identify the best-performing model.
+2. **Explore the Microsoft Foundry portal and Azure resources**: You will navigate the Foundry portal to understand its key sections and view the Azure resources that support your Foundry project.
 
-3. **Deploy and test the model**: You will deploy the trained model as a real-time endpoint and test it using sample input data to verify that it returns accurate predictions.
+3. **Deploy and test a generative AI model**: You will deploy a model from the Foundry model catalog, interact with it in the playground, and test its responses using prompts.
+
+4. **Connect an application to the Foundry resource**: You will configure a sample client application using the project endpoint, API key, and model deployment name to interact with the deployed model.
 
 ## Pre-requisites
 
-Basic knowledge of Azure Machine Learning and machine learning concepts. Familiarity with working in the Azure Portal and understanding of datasets and model training would be beneficial.
+Basic familiarity with Azure services and AI concepts is recommended. Experience with navigating the Azure portal and understanding concepts such as AI models, APIs, and cloud resources will be helpful when working with Microsoft Foundry.
 
 ## Architecture
 
-In this hands-on lab, the architecture consists of a simplified end-to-end machine learning workflow using the browser-based Machine Learning Lab environment.
+In this hands-on lab, the architecture demonstrates a simple workflow for developing and using generative AI solutions with Microsoft Foundry.
 
-1. **Machine Learning Lab Workspace and Automated ML**: A workspace is created in ML Lab, and Automated Machine Learning is used to train a regression model on ice cream sales data by evaluating multiple algorithms and selecting the best-performing model.
+1. **Microsoft Foundry Project and Azure Resources**: A Microsoft Foundry project is created and linked to an underlying Foundry resource in Azure. This resource provides the infrastructure required to manage models, endpoints, and AI services used in the project.
 
-2. **Model Deployment as a Real-Time Endpoint**: The selected model is deployed as a real-time endpoint, exposing a service that accepts input data and returns predictions for ice cream demand.
+2. **Model Deployment from the Foundry Model Catalog**: A generative AI model is selected from the Foundry model catalog and deployed to the project. The deployment creates a model endpoint that allows applications and tools to interact with the model.
+
+3. **Client Application Integration**: A sample client application is configured using the project endpoint, API key, and model deployment name. The application sends prompts to the deployed model and receives AI-generated responses, demonstrating how Foundry models can be integrated into real-world applications.
 
 ## Architecture Diagram
 
- ![](../media/lab01-arch.jpg)
+ ![](../media/mod01-archdiagram.png)
 
 ## Explanation of Components
 
-1. **Azure Machine Learning Workspace**: A centralized platform for managing machine learning resources, experiments, and models. It allows users to set up, train, and evaluate models efficiently while managing datasets and compute resources.
+1. **Microsoft Foundry Project**: A workspace used to organize and manage AI assets such as models, agents, tools, and data connections. Projects help structure the development of AI applications and provide a centralized place to configure and access resources required for building AI solutions.
 
-2. **Automated Machine Learning (AutoML)**: A feature in Azure Machine Learning that automates the process of model selection, training, and evaluation. It allows users to quickly build and optimize models without extensive coding by trying multiple algorithms and configurations.
+2. **Microsoft Foundry Resource**: The underlying Azure resource that provides the infrastructure and services required for AI development. It hosts capabilities such as model deployments, APIs, and integrations that allow applications and agents to interact with AI models.
+
+3. **Model Catalog**: A collection of AI models provided by Microsoft, OpenAI, and other providers that can be used in AI applications. The catalog allows developers to browse, evaluate, and deploy models based on their requirements.
+
+4. **Model Deployment**: The process of deploying a selected model to a Foundry resource so it can be accessed through an endpoint. Once deployed, the model can be used by applications, agents, and tools to generate responses or perform AI-powered tasks.
+
+5. **Project Endpoint and API Key**: Secure access credentials used by applications to interact with models and services in a Microsoft Foundry project. The endpoint specifies where requests are sent, while the API key authenticates and authorizes access to the deployed resources.
+
+6. **Ask AI Assistant**: A built-in AI-powered assistant in the Microsoft Foundry portal that helps users understand platform features, find guidance, and explore capabilities by interacting through natural language prompts.
 
 # Getting Started with lab
  
