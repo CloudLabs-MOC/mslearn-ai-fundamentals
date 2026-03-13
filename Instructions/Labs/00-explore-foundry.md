@@ -229,7 +229,7 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-   ![](./media/mod01-p2t1p32.png)
+    ![](./media/mod01-p2t1p32.png)
 
 1. On the **Playground** page, ensure the deployed model **gpt-4.1-mini** is selected in the **Model** dropdown. Also note down the deployment name, as you will need it later.
 
