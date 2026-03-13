@@ -15,7 +15,7 @@ In this hands-on lab, you'll gain practical experience using **Microsoft Foundry
 
 By the end of this lab, you will be able to create and explore a project in **Microsoft Foundry**, deploy a generative AI model, and connect an application to the deployed model using project credentials.
 
-1. **Create a Microsoft Foundry project**: You will learn how to access the Microsoft Foundry portal, configure project settings such as subscription, resource group, and region, and create a project to organize AI models and resources.
+1. **Create a project in Microsoft Foundry**: You will learn how to access the Microsoft Foundry portal, configure project settings such as subscription, resource group, and region, and create a project to organize AI models and resources.
 
 2. **Explore the Microsoft Foundry portal and Azure resources**: You will navigate the Foundry portal to understand its key sections and view the Azure resources that support your Foundry project.
 
