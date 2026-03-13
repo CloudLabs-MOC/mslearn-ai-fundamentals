@@ -121,7 +121,7 @@ On the **Progress (1)** tab, you can view your overall points and validation sta
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-   ![Launch Azure Portal](../media/mod01-gs-t1p1.png)
+    ![Launch Azure Portal](../media/mod01-gs-t1p1.png)
 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your **credentials (1)** and click on **Next (2)**:
  
