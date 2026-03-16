@@ -78,7 +78,7 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+   <validation step="f6e9fda3-e990-4a02-919d-d0f9f3ca86f5" />
 
 ## Task 2: View Azure resources for Microsoft Foundry
 
@@ -125,8 +125,6 @@ In this task, you will explore the Azure resources associated with your Microsof
 ## Task 3: Explore the Microsoft Foundry portal
 
 In this task, you will explore the Microsoft Foundry portal interface. You will navigate through the Home, Discover, Build, Operate, and Docs sections to understand how the portal is used to develop, manage, and operate AI solutions.
-
-> **Note:** The Microsoft Foundry portal is subject to continual improvement and expansion. The interface shown in this exercise may not match the interface of your portal exactly.
 
 1. On the **Home** page for your project, select the **Start building** menu.
 
@@ -248,7 +246,7 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="10cf8d2c-7678-441a-8ad5-7752773b3f33" />
+   <validation step="4239e459-4f98-456a-b65b-da40bbf24eb7" />
 
 ## Task 6: Use your Foundry resource endpoint
 
