@@ -33,7 +33,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-01** **(2)**
-    - **Name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - **Name**: Give name **amlworkspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
     - **Region**: Select **<inject key="location" enableCopy="false" />** **(4)**
     - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
     - **Key vault**: Note the default new key vault that will be created for your workspace. **(6)**
@@ -42,11 +42,11 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 5. Select **Review + create (9)**.
 
-    ![](media/mod1-e1t1p2.png)
+    ![](media/lab1-newamlwork1.png)
 
 6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
-   ![](media/mod1-e1t1p3.png)
+   ![](media/lab1-newamlwork2.png)
    
 7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
@@ -54,15 +54,15 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 8. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and if prompted, sign into **Azure Machine Learning studio** using your Microsoft account). Close any messages that are displayed.
 
-   ![](media/mod1-e1t1p4.png)
+   ![](media/lab1-newamlwork3.png)
 
-   ![](media/mod1-e1t1p5.png)
+   ![](media/lab1-newamlwork4.png)
 
 9. In Azure Machine Learning studio, click on **All workspaces (1)** and the navigate to **Workspaces (2)**, you should see your newly created workspace **(3)**.
 
-    ![](media/mod1-e1t1p6.png)
+    ![](media/lab1-newamlwork5.png)
 
-    ![](media/mod1-e1t1p6(1).png)
+    ![](media/lab1-newamlwork6.png)
 
 ## Validation
 
@@ -257,9 +257,9 @@ When the automated machine learning job has completed, you can review the best m
 
       ![](media/lab1-e1t3p4.png)
 
-      ![](media/lab1-e1t3p5.png)
+      ![](media/lab1-newamlwork7.png)
 
-1. Select **Deploy (8)**
+1. Select **Deploy (8)**.
 
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
 
@@ -271,11 +271,11 @@ Now you can test your deployed service.
 
 1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints (1)** and open the **Real-time endpoints (2)** in the page.
 
-    ![](media/lab1-e1t3p6.png)
+    ![](media/lab1-newamlwork8.png)
 
 1. On the *real-time endpoint* page view the **Test** tab.
 
-    ![](media/lab1-e1t3p7.png)
+    ![](media/lab1-newamlwork9.png)
 
 1. In the **Input data to test endpoint** pane, replace the template JSON with the following input data **(1)**:
 
