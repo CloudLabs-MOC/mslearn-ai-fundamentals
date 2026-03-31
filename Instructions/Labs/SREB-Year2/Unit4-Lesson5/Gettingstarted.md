@@ -6,7 +6,7 @@ Welcome to your Spot Robot OCR & Predictive Maintenance workshop! We've prepared
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/g37.png)
+![Access Your VM and Lab Guide](../images/U4-L5-gettingstarted.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
