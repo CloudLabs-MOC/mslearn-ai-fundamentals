@@ -12,7 +12,7 @@ In this lab, you will perform:
 
 ## Task 1: Create a project in Microsoft Foundry portal
 
-In this task, you will sign in to Microsoft Foundry, explore available models, and create a new project. You will then select the gpt-4.1 model, configure the project with the provided subscription, resource group, and region, and deploy the model for use within your project.
+In this task, you will sign in to Microsoft Foundry, explore available models, and create a new project. You will then select the gpt-5 model, configure the project with the provided subscription, resource group, and region, and deploy the model for use within your project.
 
 1. Right click on the following link [Microsoft Foundry](https://ai.azure.com) then select **Copy link** and then paste it on the web browser to navigate to **Microsoft Foundry**.
 
@@ -26,7 +26,7 @@ In this task, you will sign in to Microsoft Foundry, explore available models, a
 
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. In the **Explore models and capabilities** section, search for `gpt-4.1` **(1)**. Then, in the search results, select the **gpt-4.1 (2)** model to view its details.    
+1. In the **Explore models and capabilities** section, search for `gpt-5` **(1)**. Then, in the search results, select the **gpt-5 (2)** model to view its details.    
 
     ![](./media/af16.png)
 
@@ -41,7 +41,7 @@ In this task, you will sign in to Microsoft Foundry, explore available models, a
 1. On **Select your project**, enter the project name as **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)** then expand **Advanced options (2)**:
 
     - Subscription: **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-12-<inject key="Deployment ID" enableCopy="false"></inject> (4)** 
+    - Resource Group : Select **AI-900-Module-12 (4)** 
     - Region : **<inject key="location" enableCopy="false"></inject>** **(5)**
     - Select **Create and continue (6)**
 
@@ -49,19 +49,10 @@ In this task, you will sign in to Microsoft Foundry, explore available models, a
 
 1. Wait for the set up process to complete. It may take a few minutes.
 
-1. On the **Deploy gpt 4.1**, select **Deploy**.
+1. On the **Deploy gpt-5**, select **Deploy**.
 
     ![](./media/af20.png)
 
-    >**Note**: If you encounter any quota issues while deploying the GPT models, kindly change the deployment type to Standard and attempt the deployment again.
-
-    1. In the **Deploy gpt-4.1** pane, select **Customize**
-
-        ![](./media/lab1-02-old.png)
-
-    1. In the **Deploy gpt-4.1** pane, verify **Standard (1)** is selected under *Deployment type*, and then click **Deploy (2)**.
-
-        ![](./media/lab1-02-old2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
@@ -73,7 +64,7 @@ In this task, you will sign in to Microsoft Foundry, explore available models, a
 
 ## Task 2: Explore generative AI in Foundry's chat playground
 
-In this task, you will explore Foundry’s Chat playground by interacting with a deployed gpt-4.1 model. You will experiment with prompts to understand how generative AI responds to user input, maintains conversational context, follows system instructions, and refines outputs based on additional guidance, constraints, and external information sources.
+In this task, you will explore Foundry’s Chat playground by interacting with a deployed gpt-5 model. You will experiment with prompts to understand how generative AI responds to user input, maintains conversational context, follows system instructions, and refines outputs based on additional guidance, constraints, and external information sources.
 
 1. After the project has been created, in the task pane on the left, select **Playgrounds**. 
 
@@ -89,7 +80,7 @@ In this task, you will explore Foundry’s Chat playground by interacting with a
 
     >*Tip*: If you do not see the **Setup** pane in the Chat playground screen, expand the window size.  
 
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's **Setup** pane, ensure that the **gpt-4.1** model you deployed previously is selected. 
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's **Setup** pane, ensure that the **gpt-5** model you deployed previously is selected. 
 
     >*Note*: You need to select **Apply changes** anytime you make changes in the **Setup** pane.
 

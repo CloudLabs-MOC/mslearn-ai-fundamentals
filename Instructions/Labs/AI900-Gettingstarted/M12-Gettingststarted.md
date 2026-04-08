@@ -8,13 +8,13 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-This lab provides an introduction to generative AI through the Microsoft Foundry portal, Microsoft's platform for creating and deploying intelligent applications. In this lab, you'll interact with the Chat playground in Microsoft Foundry, where you will explore the deployment of the GPT-4.1 model, learn how to optimize responses, and understand effective prompting techniques to refine outputs from generative AI.
+This lab provides an introduction to generative AI through the Microsoft Foundry portal, Microsoft's platform for creating and deploying intelligent applications. In this lab, you'll interact with the Chat playground in Microsoft Foundry, where you will explore the deployment of the GPT-5 model, learn how to optimize responses, and understand effective prompting techniques to refine outputs from generative AI.
 
 ## Objective
 
 By the end of this lab, you will be able to create a project in Microsoft Foundry and explore generative AI capabilities by interacting with a deployed GPT model in the Chat playground.
 
-1. **Create a project in Microsoft Foundry:** You will learn how to create and configure a project in the Microsoft Foundry portal, explore available foundation models, and deploy the gpt-4.1 model for use within the project.
+1. **Create a project in Microsoft Foundry:** You will learn how to create and configure a project in the Microsoft Foundry portal, explore available foundation models, and deploy the gpt-5 model for use within the project.
 
 2. **Explore generative AI using the Chat playground:** You will learn how to interact with a deployed GPT model in Foundry’s Chat playground, experiment with prompts, understand conversational context, system prompts, and refine responses using prompt design techniques.
 
@@ -28,7 +28,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 1. **Microsoft Foundry Portal:** A web-based platform for creating and managing AI projects and accessing generative AI capabilities.
 
-1. **Generative AI Model (gpt-4.1):** A large language model used to generate conversational responses based on user prompts.
+1. **Generative AI Model (gpt-5):** A large language model used to generate conversational responses based on user prompts.
 
 1. **Foundry Project:** A project created within Microsoft Foundry that organizes deployed models and playground configurations.
 
@@ -42,7 +42,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 1. **Microsoft Foundry Portal:** Microsoft Foundry Portal is the centralized platform used to create and manage AI projects and access generative AI capabilities. It provides the environment to browse available models, configure projects, deploy models, and access built-in playgrounds for experimentation.
 
-1. **Generative AI Model (gpt-4.1):** The gpt-4.1 model is a large language model designed to generate human-like text responses. It processes natural language prompts and produces coherent, context-aware responses based on the instructions, conversation history, and constraints provided.
+1. **Generative AI Model (gpt-5):** The gpt-5 model is a large language model designed to generate human-like text responses. It processes natural language prompts and produces coherent, context-aware responses based on the instructions, conversation history, and constraints provided.
 
 1. **Foundry Project:** A Foundry Project serves as a logical container for organizing deployed models and playground configurations. It links the selected subscription, resource group, region, and deployed generative AI model, enabling controlled access to the Chat Playground.
 
