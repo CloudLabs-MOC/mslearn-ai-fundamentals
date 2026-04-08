@@ -64,31 +64,22 @@ In this task, you will learn how to access the Microsoft Foundry portal and crea
 
 In this task, you will explore the model catalog in Microsoft Foundry to understand the variety of foundation models available. You will search for a generative AI model and deploy it using default settings, preparing it for interactive testing and experimentation.
 
-1. On the **Microsoft Foundry** home page, click **Start building (1)**, and then select **Browse models (2)** from the drop-down menu.
+1. On the **Microsoft Foundry** home page, click **Discover**.
 
-    ![](./media/lab13-l5.png)
+    ![](./media/mod01-p2t1p26.png)
 
-1. With the Models page, you can discover thousands of models that are Microsoft and third-party-owned. These models form the foundation of the AI applications by powering their reasoning capabilities. 
+1. Click on **Models** from the left panel. With the Models page, you can discover thousands of models that are Microsoft and third-party-owned. These models form the foundation of the AI applications by powering their reasoning capabilities. 
 
-    ![](./media/lab13-l5.1.png)
+    ![](./media/mod01-p2t1p28.png)
 
-1. On the **Models** page, search for **gpt-4.1 (1)** in the search bar, and then select the **gpt-4.1 (2)** model from the search results.
+1. On the **Models** page, search for **gpt-5 (1)** in the search bar, and then select the **gpt-5 (2)** model from the search results.
 
     ![](./media/lab13-l6.png)
 
-1. On the **gpt-4.1** model details page, click **Deploy (1)**, and then select **Default settings (2)** to deploy the model using the standard configuration.
+1. On the **gpt-5** model details page, click **Deploy (1)**, and then select **Default settings (2)** to deploy the model using the standard configuration.
 
-    ![](./media/lab13-l7.png)
+   ![](./media/lab13-l7.png)
 
-   >**Note**: If you encounter any quota issues while deploying the GPT models, kindly change the deployment type to **Standard** by selecting the **custom settings** and attempt the deployment again.
-
-   1. On the **gpt-4.1** model page, select **Deploy (1)**, and then choose **Custom settings (2)**.
-
-      ![](./media/lab1-02-2.png)
-
-   1. In the **Deploy gpt-4.1** pane, verify **Standard (1)** is selected under **Deployment type**, and then click **Deploy (2)**.
-
-      ![](./media/lab1-02-3.png)
    
 ## Task 3: Test the model in a Playground
 
