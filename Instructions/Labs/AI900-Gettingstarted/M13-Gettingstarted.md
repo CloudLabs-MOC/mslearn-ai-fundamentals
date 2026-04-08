@@ -40,7 +40,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 1. **Microsoft Foundry Project:** A workspace within Microsoft Foundry that groups AI assets such as deployed models and playground configurations for experimentation and testing.
 
-1. **Generative AI Model (gpt-4.1):** A large language model deployed in Microsoft Foundry to generate responses based on user prompts and system instructions.
+1. **Generative AI Model (gpt-5):** A large language model deployed in Microsoft Foundry to generate responses based on user prompts and system instructions.
 
 1. **Playground:** An interactive interface in Microsoft Foundry used to test and evaluate generative AI models by sending prompts and reviewing generated outputs.
 
