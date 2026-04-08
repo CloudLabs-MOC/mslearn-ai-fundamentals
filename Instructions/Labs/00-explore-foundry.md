@@ -126,16 +126,6 @@ In this task, you will explore the Azure resources associated with your Microsof
 
 In this task, you will explore the Microsoft Foundry portal interface. You will navigate through the Home, Discover, Build, Operate, and Docs sections to understand how the portal is used to develop, manage, and operate AI solutions.
 
-1. On the **Home** page for your project, select the **Start building** menu.
-
-    You can use this menu to:
-
-    - Create **agents** that use a generative AI model, instructions, and tools to intelligently automate tasks and information gathering.
-    - Create **workflows** that combine multiple agents in an orchestrated process.
-    - Browse **models** in the Foundry model catalog.
-
-        ![](./media/mod01-p2t1p16.png)
-
 1. From the top navigation menu, click **Discover**. This page surfaces the latest models and services and enables you to find starting points for AI application development.
 
     ![](./media/mod01-p2t1p18.png)
@@ -203,15 +193,11 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
     ![](./media/mod01-p2t1p26.png)
 
-1. Click on **Start building (1)** menu, and select **Browse models (2)** to view the Microsoft Foundry model catalog.
-
-    ![](./media/mod01-p2t1p27.png)
-
 1. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
     ![](./media/mod01-p2t1p28.png)
     
-1. In the search bar, search for `gpt-4.1-mini` **(1)** and select the `gpt-4.1-mini` **(2)** model from the result, and view the page for this model, which describes its features and capabilities.
+1. In the search bar, search for `gpt-5-mini` **(1)** and select the `gpt-5-mini` **(2)** model from the result, and view the page for this model, which describes its features and capabilities.
 
     ![](./media/mod01-p2t1p29.png)
 
@@ -223,13 +209,13 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
 1. Deployment may take a minute or so.
 
-    > **Note:** Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-nano, or gpt-4o-mini.
+    > **Note:** Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-mini, or gpt-5-nano.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-     ![](./media/mod01-p2t1p32.png)
+    ![](./media/mod01-p2t1p32.png)
 
-1. On the **Playground** page, ensure the deployed model **gpt-4.1-mini** is selected in the **Model** dropdown. Also note down the deployment name, as you will need it later.
+1. On the **Playground** page, ensure the deployed model **gpt-5-mini** is selected in the **Model** dropdown. Also note down the deployment name, as you will need it later.
 
     ![](./media/mod01-p2t1p33.png)
 
