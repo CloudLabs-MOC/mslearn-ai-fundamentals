@@ -155,11 +155,12 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
               ![](media/lab1-e1t2p4.png)
 
-              ![](media/lab1-e1t2p4(1).png)
+              ![](media/a1.png)
 
         - On the **Create data asset - Settings** page, leave everything default click **Next**:
 
-          ![](media/lab1-e1t2p5.png)
+          ![](media/a2.png)
+
         - On the **Create data asset - Schema** page, 
           - Include **only** the following columns **(1)** (*Date* is unique for each row, and adds little predictive capability on its own):
             - **DayOfWeek**
@@ -184,16 +185,18 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Task type**: Regression
     - **Data**: ice-cream
     - **Target column**: IceCreamsSold **(1)**
-
-       ![](media/lab1-e1t2p9.png)
-
     - Select **View additional configuration settings (2)** under Target Column:
         - Primary metric: **R2 score** **(3)**
         - Explain best model: **Unselected** **(4)**
         - **Use all supported models**: <u>Un</u>selected.  You'll restrict the job to try only a few specific algorithms.
         - **Allowed models**: Select only **RandomForest** and **LightGBM** **(5)** - normally you'd want to try as many as possible, but each model added increases the time it takes to run the job. Then click on **Save (6)**.
 
-    - **Limits**: **Expand this section**
+       ![](media/lab1-e1t2p9.png)
+
+    - **Limits**: (Expand this section)
+
+       ![](media/a3.png)
+
         - Use the limits to end the training job early based on specific criteria. In this exercise, set the following limits:
           - Metric score threshold: **0.9** **(1)**
           - Experiment Timeout (minutes): **15** **(2)**
