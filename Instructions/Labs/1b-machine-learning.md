@@ -168,7 +168,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
             - **Temperature**
             - **Rainfall**
             - **IceCreamsSold**
-        - review detected columns and types, then click **Next (2)**
+        - Review detected columns and types, then click **Next (2)**
 
           ![](media/lab1-e1t2p6.png)
 
