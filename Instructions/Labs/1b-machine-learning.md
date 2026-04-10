@@ -221,10 +221,6 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
 1. Wait for the job to finish. It might take around `10-15 minutes`, while now might be a good time for a coffee break!
 
->**Note:** If the deployment does not complete within **30 minutes**, you may proceed to the next page and complete the exercise using the **browser-based Machine Learning Lab** instead.
->
-> If your deployment completes within the expected timeframe (approximately **10–15 minutes**), continue with the remaining steps of this lab. After completion of this exercise, if time permits, you may optionally explore the browser-based Machine Learning Lab for additional practice.
-
 **Review the best model**
 
 When the automated machine learning job has completed, you can review the best model it trained.
@@ -259,7 +255,11 @@ When the automated machine learning job has completed, you can review the best m
 
 ### Task 3: Deploy the model
 
-1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and use the **Real-time endpoint (2)** option to deploy the model with the following settings:
+1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and use the **Real-time endpoint (2)** option to deploy the model.
+
+    ![](media/lab1-e1t3p4.png)
+
+1. Deploy the model with the following settings:
 
    - **Instance count**: 3 **(1)** 
     - **Virtual machine**: Standard_DS3_v2 **(2)**
@@ -270,15 +270,11 @@ When the automated machine learning job has completed, you can review the best m
     - **Package Model**: *Disabled* **(7)**
     - Click on  **Deploy (8)**
 
-      ![](media/lab1-e1t3p4.png)
-
       ![](media/lab1-e1t3p5.png)
 
-
-1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
+1. Wait for the **Deploy status** to change to *Succeeded*. This may take 10-15 minutes.
 
    >**Note**: Check the **Notifications** bar to verify the status of the operation.
-
 
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     
