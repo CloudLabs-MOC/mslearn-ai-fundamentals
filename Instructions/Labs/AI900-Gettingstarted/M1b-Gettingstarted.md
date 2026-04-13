@@ -1,8 +1,4 @@
-
-
-
 # Automated Machine Learning using AML
-
 
 ### Overall Estimated timing: 4 Hours
 
@@ -10,7 +6,7 @@
 
 In this lab, you'll explore Azure Machine Learning's capabilities by creating a workspace, setting up compute resources, and creating a dataset. You'll run an automated machine learning job to train and identify the best model, then deploy it as a predictive service. Finally, you'll test the deployed service to ensure it delivers accurate results. This lab will demonstrate how Azure Machine Learning can streamline your workflow and enhance productivity.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will be able to create a workspace in Azure Machine Learning, use automated machine learning to train a predictive model, and deploy the model as a web service.
 
@@ -85,23 +81,23 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your **Lab VM**, click on the **Azure Portal** icon as shown below:
  
    ![Launch Azure Portal](../media/portalll.png)
 
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials and click **Next (2)**:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
  
       ![Enter Your Username](../media/usr1.png)
  
-3. Next, provide your password:
+3. Next, provide your password and click on on **Sign in (2)**:
  
-   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>  **(1)**
  
      ![Enter Your Password](../media/tap.png)
  
-4. If prompted to stay signed in, you can click **No**.
+4. If prompted to stay signed in, click **No**.
 
    ![Enter Your Password](../media/staysign.png)
  
@@ -118,7 +114,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Click on **Next** from the lower right corner to move on to the next page.
+Click on **Next >>** from the lower right corner to move on to the next page.
 
    ![Start Your Azure Journey](../media/nxt.png)
 

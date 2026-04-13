@@ -155,11 +155,12 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
               ![](media/lab1-e1t2p4.png)
 
-              ![](media/lab1-e1t2p4(1).png)
+              ![](media/a1.png)
 
         - On the **Create data asset - Settings** page, leave everything default click **Next**:
 
-          ![](media/lab1-e1t2p5.png)
+          ![](media/a2.png)
+
         - On the **Create data asset - Schema** page, 
           - Include **only** the following columns **(1)** (*Date* is unique for each row, and adds little predictive capability on its own):
             - **DayOfWeek**
@@ -167,7 +168,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
             - **Temperature**
             - **Rainfall**
             - **IceCreamsSold**
-        - review detected columns and types, then click **Next (2)**
+        - Review detected columns and types, then click **Next (2)**
 
           ![](media/lab1-e1t2p6.png)
 
@@ -184,16 +185,18 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Task type**: Regression
     - **Data**: ice-cream
     - **Target column**: IceCreamsSold **(1)**
-
-       ![](media/lab1-e1t2p9.png)
-
     - Select **View additional configuration settings (2)** under Target Column:
         - Primary metric: **R2 score** **(3)**
         - Explain best model: **Unselected** **(4)**
         - **Use all supported models**: <u>Un</u>selected.  You'll restrict the job to try only a few specific algorithms.
         - **Allowed models**: Select only **RandomForest** and **LightGBM** **(5)** - normally you'd want to try as many as possible, but each model added increases the time it takes to run the job. Then click on **Save (6)**.
 
-    - **Limits**: **Expand this section**
+       ![](media/lab1-e1t2p9.png)
+
+    - **Limits**: (Expand this section)
+
+       ![](media/a3.png)
+
         - Use the limits to end the training job early based on specific criteria. In this exercise, set the following limits:
           - Metric score threshold: **0.9** **(1)**
           - Experiment Timeout (minutes): **15** **(2)**
@@ -217,10 +220,6 @@ Automated machine learning enables you to try multiple algorithms and parameters
    ![](media/lab1-e1t2p12.png)
 
 1. Wait for the job to finish. It might take around `10-15 minutes`, while now might be a good time for a coffee break!
-
->**Note:** If the deployment does not complete within **30 minutes**, you may proceed to the next page and complete the exercise using the **browser-based Machine Learning Lab** instead.
->
-> If your deployment completes within the expected timeframe (approximately **10–15 minutes**), continue with the remaining steps of this lab. After completion of this exercise, if time permits, you may optionally explore the browser-based Machine Learning Lab for additional practice.
 
 **Review the best model**
 
@@ -256,7 +255,11 @@ When the automated machine learning job has completed, you can review the best m
 
 ### Task 3: Deploy the model
 
-1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and use the **Real-time endpoint (2)** option to deploy the model with the following settings:
+1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and use the **Real-time endpoint (2)** option to deploy the model.
+
+    ![](media/lab1-e1t3p4.png)
+
+1. Deploy the model with the following settings:
 
    - **Instance count**: 3 **(1)** 
     - **Virtual machine**: Standard_DS3_v2 **(2)**
@@ -267,15 +270,11 @@ When the automated machine learning job has completed, you can review the best m
     - **Package Model**: *Disabled* **(7)**
     - Click on  **Deploy (8)**
 
-      ![](media/lab1-e1t3p4.png)
-
       ![](media/lab1-e1t3p5.png)
 
-
-1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
+1. Wait for the **Deploy status** to change to *Succeeded*. This may take 10-15 minutes.
 
    >**Note**: Check the **Notifications** bar to verify the status of the operation.
-
 
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     
