@@ -1,0 +1,13 @@
+[
+    {
+      "Name": "Akkodis - Azure and Azure AI Learning Workshop",
+      "Language": "English",
+      "Files": [
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/new-ai900-prod/Instructions/Labs/Akkodis/overview.md",
+            "Order": 1
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/new-ai900-prod/Instructions/Labs/Akkodis/getting-started.md",
+            "Order": 2
+        },
