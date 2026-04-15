@@ -10,18 +10,18 @@
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](./media/sign-in-page.png)
+       ![Enter Your Username](../media/sign-in-page.png)
  
 3. Next, provide your **password (1)** and click on **Next (2)**:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](./media/tap-password.png)
+     ![Enter Your Password](../media/tap-password.png)
  
 4. If you see the pop-up **Stay-Signed in?**, click **No**.
 
-    ![](./media/Sign-in-no.png)
+    ![](../media/Sign-in-no.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
 
-    ![](./media/AI-l6-4.png)
+    ![](../media/AI-l6-4.png)
