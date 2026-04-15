@@ -26,22 +26,22 @@ Azure OpenAI service provides two types of deployment SKUs: Standard and PTU-bas
 To monitor and analyse your Azure credit spend, you can navigate to the Azure Subscription page by following the steps mentioned below.
 + From the Azure portal home page, search for **Subscriptions (1)** using the search bar and select the same from the suggestions.
   
-  ![](media/cost1.png "cost analysis")
+  ![](media/ca1.png "cost analysis")
   
 + Select the Cost Analysis tab from the Cost Management pane. You can access a comprehensive breakdown of your Azure spending, offering a granular view of costs associated with various services, and resources.
 
-  ![](media/cost2.png "cost analysis")
+  ![](media/ca4.png "cost analysis")
 
 + To get the accurate consumed cost by you, select the **Calendar (2)** from **Cost analysis (1)**  then **Custom date Range (3)**.
 
-  ![](media/cost3.png "cost analysis")
+  ![](media/ca2.png "cost analysis")
 
 + Now, select the custom dates.
     + **Start Date: (1)** The date when you redeemed voucher and launch the Sandbox environment.
     + **End Date: (2)** Current or future date. If you select the future date, you can also get the forecasted cost based on the current resources you deployed.
     + You can see the **ACTUAL COST (USD) (4)** and the **FORECAST: CHART VIEW ON (5)** cost.
 
-  ![](media/cost4.png "cost analysis")
+  ![](media/ca3.png "cost analysis")
 
 ## Best Practices:
 + **Resources usage:** Please stop the virtual machines, WebApps, Azure Kubernetes service, Azure Container Instance and other resources when not in use to minimize the Azure spend.
