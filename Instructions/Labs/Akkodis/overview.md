@@ -6,7 +6,7 @@ Using this environment, you can explore the full range of Azure capabilities and
 
    | Resources | Value | Remarks |
    | --- | --- | --- |
-   | Enabled Services | `Microsoft Foundry` <br> `Azure AI services`  | You will have access to a dediated subscription with Owner role permissions on the subscription to explore any desired resources |
+   | Enabled Services | `Microsoft Foundry` <br> `Azure AI services` <br> `Azure Storage Accounts` <br> `Azure Compute Services` | You will have access to a dediated subscription with Owner role permissions on the subscription to explore any desired resources |
    | Azure Entra ID User | Pre-created Entra ID user account | You will get one Entra ID User Account. |
    | Azure Subscription Permissions | **Owner** privilege over Azure Subscription | You will get owner access to the Azure subscription. |
    | Azure Credit | **$140USD**| Consumption limit is set on Azure spend to 140 USD. |
@@ -18,6 +18,7 @@ Using this environment, you can explore the full range of Azure capabilities and
 * The Azure credit consumption includes all the resources which you will be deploying while using the sandbox environment for your hackathon use case.
 * You will have owner access on the Azure subscription, you can freely explore the features of required services and are recommended to use it only for learning purposes.
 * Each sandbox environment has a fixed budget cap of USD 140. Please refrain from deploying any resources outside of the sandbox scope, as they may consume the allocated Azure credits and result in the automatic deallocation of the environment once the credit limit is reached.
+* Please ensure that all services are stopped or deallocated when not in use, as required, to optimize cost and resource utilization
 
 ## Azure OpenAI Cost Optimization:
 Azure OpenAI service provides two types of deployment SKUs: Standard and PTU-based deployment. The PTU-based model, although powerful, can be quite costly, with a price of **$2 per hour**. Deploying this model would result in a daily cost of **$48**, which may not be a cost-effective option to consider. Additionally, deploying the PTU-based model would quickly exhaust credits within 2-3 days, leading to the automatic deletion of the environment. Therefore, we recommend opting for the **Standard (On-Demand)** Pricing model instead, which offers a more affordable and sustainable deployment strategy.
