@@ -18,7 +18,6 @@ In this exercise, you will perform:
 - Task 6: Add a knowledge tool to the agent
 - Task 7: Publish the agent and use it in a client app
 
-
 ## Task 1: Create a Microsoft Foundry project
 
 In this task, you will access the Microsoft Foundry portal and create a new project.
@@ -188,9 +187,7 @@ When you're satisfied with the responses a model returns in the playground, you 
 
 ## Task 4: Specify instructions in a system prompt
 
-So far, you've used the model to provide general information. To support specific use cases, you should use a *system prompt* to provide the model with instructions that guide its responses. You can use the system prompt to give the model a specific focus or role, and provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
-
-For example, suppose an organization wants to use a generative AI model to power an AI agent that assists employees with expense claims.
+In this task, you’ll define and apply system instructions to guide the model’s behavior, tone, and response scope for a specific use case.
 
 1. In the model playground, switch back to the **Chat (1)** tab. Then, at the top-right of the chat pane, use the **New chat (3)** button to restart the conversation and removes the conversation history.
 
@@ -232,7 +229,7 @@ For example, suppose an organization wants to use a generative AI model to power
 
 ## Task 5: Save the model configuration as an agent
 
-While you can implement generative AI apps using a standalone model, to create a fully agentic AI experience, you need to encapsulate the model, its instructions, and any tool configuration that provides additional functionality, in an *agent*.
+In this task, you’ll convert the configured model into an agent by saving its instructions and settings as a reusable AI assistant.
 
 1. In the model playground, at the top right select **Save as agent (1)**. Then, when prompted, name your new agent `expenses-agent` **(2)** and then click on **Create (3)**.
 
@@ -282,7 +279,7 @@ While you can implement generative AI apps using a standalone model, to create a
 
 ## Task 6: Add a knowledge tool to the agent
 
-Agents use *tools* to perform tasks or find information. You can use a general web search tool or a simple file search tool to provide a source of knowledge; or for more comprehensive agentic solutions, you can create a *Microsoft Foundry IQ* knowledge store that connects the agent to one or more data sources within your enterprise. In this exercise, we'll use a simple file search tool.
+In this task, you’ll enhance the agent by adding a knowledge source, enabling it to provide more accurate and context-aware responses.
 
 1. Open a new browser tab, and view the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx)** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
 
@@ -424,7 +421,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
 ## Task 7: Publish the agent and use it in a client app
 
-When you're satisfied with your agentic solution, you can *publish* the agent to its own dedicated endpoint, and adapt client applications to use it from there. Publishing the agent makes it available independently from the project, making it a more suitable way to deploy the agent in production.
+In this task, you’ll publish the agent to a dedicated endpoint and use sample code to integrate and interact with it from a client application.
 
 1. Keep the VS Code for the Web tab open, but switch back to the Foundry portal tab.
 

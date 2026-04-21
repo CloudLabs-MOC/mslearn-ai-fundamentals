@@ -4,62 +4,68 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 4a: Get started with speech in Microsoft Foundry
 
-### Overall Estimated Timing: 30 Minutes
+### Overall Estimated Duration: 30 Minutes
 
 ## Overview
 
-In this lab, you will explore Microsoft Foundry to access and interact with a speech-enabled generative AI model. You will use Azure Speech - Voice Live to enable real-time speech-to-text and text-to-speech interactions, experiment with voices, prompts, and model parameters, and review client code to understand how voice-based AI assistants are built.
+In this lab, you will explore Microsoft Foundry to create and interact with a speech-enabled AI agent. You will configure Azure Speech – Voice Live to enable real-time speech-to-text and text-to-speech capabilities, experiment with voice settings and system instructions, and observe how voice interactions are handled in the agent playground. You will also review client code to understand how speech-enabled AI agents can be integrated into applications for real-time conversational experiences.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to organize AI resources and speech services for voice-enabled AI development.
-2. **Access Azure Speech - Voice Live:** Navigate to the Speech Playground and explore real-time speech-to-text and text-to-speech capabilities.
-3. **Configure a speech-enabled generative AI model:** Select a generative AI model and choose a voice for spoken output.
-4. **Interact with a model using speech:** Use spoken input to converse with the model and receive natural-sounding spoken responses.
-5. **Experiment with system prompts and parameters:** Adjust instructions and model settings to control response style, length, and creativity.
-6. **Review client code for voice-based assistants:** Examine sample code to understand how speech and generative AI services are integrated into applications.
+1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to manage AI resources for building a speech-enabled solution.
+2. **Create and configure an agent:** Create an agent, select a generative AI model, and define its behavior using system instructions.
+3. **Enable Azure Speech – Voice Live:** Configure voice capabilities for the agent by enabling speech input and output settings.
+4. **Explore speech-based interaction:** Understand how speech-to-text and text-to-speech enable real-time voice interaction with the agent.
+5. **Review client code for voice-enabled agents:** Examine sample code to understand how speech services and agents are integrated into applications.
+
 
 ## Pre-requisites
 
-* Basic knowledge of Azure Portal.
-* Familiarity with generative AI concepts and chat-based AI interactions.  
+* Basic knowledge of the Azure portal.
+* Familiarity with generative AI concepts and chat-based AI interactions.
+* Basic understanding of speech-based AI concepts such as speech-to-text and text-to-speech.  
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry integrates generative AI models with Azure Speech - Voice Live to enable real-time, voice-based AI interactions. The architecture shows how speech services, generative AI models, and client applications work together to create a conversational voice assistant.
+This lab demonstrates how Microsoft Foundry integrates generative AI models with Azure Speech - Voice Live to enable real-time, voice-based interactions through an agent. The architecture highlights how the agent, speech services, and client applications work together to create a conversational voice-enabled AI experience.
 
-1. **Microsoft Foundry Project:** A workspace to manage AI resources, models, and speech services.
+1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, including agents, models, and configurations required for building speech-enabled AI solutions.
 
-2. **Generative AI Model (GPT-4.1 Mini):** Selected within the Speech Playground and used to generate conversational responses.
+2. **Generative AI Model (GPT-4.1):** The model selected within the agent to generate conversational responses based on user input and system instructions.
 
-3. **Azure Speech - Voice Live Service:** Provides real-time speech-to-text and text-to-speech capabilities for voice interaction.
+3. **Agent Configuration:** Encapsulates the model, system instructions, and voice settings into a unified AI entity that defines the assistant’s behavior and capabilities.
 
-4. **Speech Playground / Voice Assistant App:** A browser-based client that connects speech services with the generative AI model.
+4. **Azure Speech – Voice Live Service:** Provides real-time speech-to-text and text-to-speech functionality, enabling seamless voice interaction with the agent.
 
-5. **Client Code and APIs:** Sample Python code and SDKs that demonstrate how to build and integrate a voice-enabled assistant into applications.
+5. **Agent Playground (Voice Mode):** A browser-based interface where voice mode is enabled, allowing users to interact with the agent using speech and receive audio responses.
+
+6. **Client Code and APIs:** Sample code and SDKs that demonstrate how to connect to the agent, handle audio streaming, and integrate voice-enabled AI interactions into applications.
  
 ## Architecture Diagram
 
-![](../media/lab4a-arch.png)
+![](../media/lab4an-arch.png)
 
 ## Explanation of Components
 
 1. **Microsoft Foundry Project:**
-   The project acts as the central workspace for managing AI resources and accessing Foundry tools. It provides a single place to organize settings, select models, and use the Speech Playground for experimentation.
+   The project serves as the central workspace for managing AI resources and accessing Foundry tools. It provides a unified environment to organize settings, create agents, select models, and use the playground for experimentation.
 
-2. **Generative AI Model (GPT-4.1 Mini):**
-   This is the selected language model used in the Speech Playground to generate conversational responses. It can be configured with system prompts and parameters to control response style, length, and creativity.
+2. **Generative AI Model (GPT-4.1):**
+   This is the language model used by the agent to generate responses. It processes input (including speech converted to text) and can be configured with system instructions to control behavior and output.
 
-3. **Azure Speech - Voice Live Service:**
-   This service enables real-time speech-to-text and text-to-speech capabilities. It converts spoken input into text for the model and converts model responses back into natural-sounding speech.
+3. **Agent Configuration:**
+   The agent encapsulates the model, system instructions, and voice settings into a single AI entity. It defines how the assistant behaves and ensures consistent, task-specific responses.
 
-4. **Speech Playground / Voice Assistant App:**
-   A browser-based application that connects the speech service with the generative AI model, allowing users to have live, voice-based conversations with the assistant.
+4. **Azure Speech - Voice Live Service:**
+   This service enables real-time speech capabilities by providing speech-to-text and text-to-speech functionality. It converts spoken input into text for the model and transforms model responses into natural-sounding speech.
 
-5. **Client Code and APIs:**
-   Sample Python code and SDKs demonstrate how audio processing and Voice Live connections are implemented, showing how developers can build their own voice-enabled assistants using the same approach.
+5. **Agent Playground (Voice Mode):**
+   A browser-based interface where voice mode is enabled, allowing users to interact with the agent using speech and view responses in both audio and text formats.
+
+6. **Client Code and APIs:**
+   Sample code and SDKs demonstrate how to integrate the speech-enabled agent into applications, handling authentication, real-time audio streaming, and interaction with the agent.
 
 # Getting Started with lab
  
