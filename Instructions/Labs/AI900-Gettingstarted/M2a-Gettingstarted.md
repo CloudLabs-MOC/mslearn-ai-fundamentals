@@ -8,17 +8,21 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 ## Overview
 
-In this lab, you will explore Microsoft Foundry to deploy and interact with a generative AI model. You will then extend the model into an agent that can use knowledge tools to answer user questions accurately. The lab demonstrates how to manage AI resources, experiment with model prompts and parameters, and build an agentic AI solution that can be integrated into applications.
+In this lab, you will explore Microsoft Foundry to deploy and interact with a generative AI model. You will use the chat playground to test prompts and experiment with system instructions to guide model behavior. You will then convert the model into an agent, enhance it with knowledge tools, and publish it for use in applications. This lab demonstrates how to manage AI resources, configure model behavior, and build an agentic AI solution that can be integrated into real-world applications.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to organize AI resources, models, and agents for generative AI development.    
-2. **Deploy and interact with a generative AI model:** Use the model playground to test prompts, explore conversation context, and understand interactive AI behavior. 
-3. **Experiment with system prompts and parameters:** Adjust system prompts and model parameters to control response style, length, and creativity. 
-4. **Save a model as an agent and configure instructions:** Convert a deployed model into an agentic AI assistant and define its role for specific tasks. 
-5. **Add knowledge tools and preview the agent:** Upload documents or data sources to enhance agent responses and test integration options for applications.
+1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to manage AI resources, access models, and build generative AI solutions.
+
+2. **Deploy and interact with a generative AI model:** Deploy a model from the Foundry catalog and use the chat playground to test prompts and understand conversational behavior.
+
+3. **Experiment with system prompts and instructions:** Apply and modify system prompts to control the model’s role, tone, and response scope for specific use cases.
+
+4. **Create and configure an agent:** Convert a model into an agent by encapsulating its instructions and settings to build a task-specific AI assistant.
+
+5. **Enhance and use the agent in applications:** Add knowledge tools to improve response accuracy, publish the agent, and integrate it into applications using APIs or SDKs.
 
 ## Pre-requisites
 
@@ -27,17 +31,21 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry supports generative AI model deployment and agent creation. The architecture shows how models, agents, and knowledge tools interact to provide an AI-powered assistant experience.
+This lab demonstrates how Microsoft Foundry enables end-to-end development of generative AI solutions, from model deployment to agent creation and integration. The architecture highlights how models, agents, and knowledge tools work together to deliver an AI-powered assistant experience.
 
-1. **Microsoft Foundry Project:** A workspace to manage AI resources, models, and agents.  
+1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, including model deployments, agents, and tools, as well as to access the model catalog and playgrounds for testing.
 
-2. **Generative AI Model:** Deployed from the Foundry model catalog (e.g., GPT-4.1-mini) for interactive chat and testing.  
+2. **Generative AI Model:** A model (such as GPT-5-mini) deployed from the Foundry model catalog and used for interactive chat, prompt testing, and response generation.
 
-3. **Agent Configuration:** Encapsulates the model, instructions, and tools to create an agentic AI assistant.  
+3. **System Prompt Configuration:** Instructions applied to the model to define its role, behavior, and response constraints, enabling it to perform specific tasks effectively.
 
-4. **Knowledge Tools:** Uploaded documents (like company policies) that the agent can use to provide informed responses.  
+4. **Agent Configuration:** Encapsulates the model, system instructions, and settings into a reusable agent that behaves as a task-specific AI assistant.
 
-5. **Client Integration:** Sample code and APIs to consume the agent programmatically or integrate it into enterprise applications.  
+5. **Knowledge Tools:** External data sources, such as uploaded documents (for example, `expenses_policy.docx`), that the agent can query to provide accurate and context-aware responses.
+
+6. **Published Agent Endpoint:** A dedicated endpoint created when the agent is published, allowing it to be accessed independently of the Foundry project for production scenarios.
+
+7. **Client Integration:** Applications connect to the published agent using APIs or SDKs (such as Python and the OpenAI Responses API) to enable real-time AI interactions within applications or enterprise solutions.
 
 ## Architecture Diagram
 
@@ -45,15 +53,20 @@ This lab demonstrates how Microsoft Foundry supports generative AI model deploym
 
 ## Explanation of Components
 
-1. **Microsoft Foundry Project:** The project is the central workspace to manage AI resources, including models, agents, and knowledge tools. It provides a hub to organize deployments, access model catalogs, and test models in the playground.
+1. **Microsoft Foundry Project:** The project serves as the central workspace for managing AI resources in Microsoft Foundry. It enables you to organize model deployments, create agents, access the model catalog, and use playgrounds for testing and development.
 
-1. **Generative AI Model:** This is the deployed model (e.g., GPT-4.1-mini) that powers chat interactions and generates responses. It can be configured with system prompts and parameters to control style, length, and behavior.
+2. **Generative AI Model:** This is the deployed model (for example, GPT-5-mini) used to power chat interactions in the playground. It generates responses based on user prompts and can be guided using system instructions and parameters.
 
-1. **Agent Configuration:** An agent wraps the model with instructions and parameters to create a task-specific AI assistant. For example, an `expenses-agent` can help employees with expense claims and maintain consistent behavior.
+3. **System Prompt (Instructions):** System prompts define the behavior and role of the model by providing clear instructions. They help control the tone, scope, and relevance of responses, ensuring the model aligns with specific use cases such as assisting with expense-related queries.
 
-1. **Knowledge Tools:** Knowledge tools are files or data sources that the agent can query to provide accurate, context-aware responses. For instance, uploading `expenses_policy.docx` allows the agent to answer questions based on company policies.
+4. **Agent Configuration:** An agent encapsulates the model, its instructions, and configuration settings into a reusable AI entity. For example, an `expenses-agent` can consistently assist users with expense-related questions based on defined behavior.
 
-1. **Client Integration:** Applications interact with the agent using APIs or SDKs, such as Python or OpenAI Responses API. This allows embedding the agent in Microsoft 365, Teams, or custom apps for real-time AI assistance.
+5. **Knowledge Tools:** Knowledge tools provide additional context to the agent by connecting it to external data sources. For instance, uploading `expenses_policy.docx` enables the agent to retrieve and use company policy information to generate accurate and context-aware responses.
+
+6. **Agent Publishing Endpoint:** When an agent is published, it is exposed through a dedicated endpoint that allows it to be accessed independently of the Foundry project, making it suitable for production use.
+
+7. **Client Integration:** Applications interact with the published agent using APIs or SDKs (such as Python with the OpenAI Responses API). This enables integration into applications, bots, or enterprise solutions for real-time AI-driven assistance.
+
 
 # Getting Started with lab
  

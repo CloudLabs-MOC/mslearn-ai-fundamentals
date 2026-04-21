@@ -1,8 +1,10 @@
 # Get started with information extraction in Microsoft Foundry
 
+### Estimated Duration: 30 Minutes
+
 ## Lab overview
 
-In this exercise, you'll use Microsoft Foundry and Azure Content Understanding to analyze documents and extract structured information. You will explore invoice data extraction in the Foundry portal and perform the same analysis programmatically using REST APIs.
+In this lab, you will explore Microsoft Foundry and Azure Content Understanding to extract structured information from documents. You will create a Foundry project and use the Content Understanding analyzer to process invoice documents in the portal. You will review the extracted fields and JSON output, and understand how document analysis can be performed programmatically using REST APIs. This lab demonstrates how AI can be used to automate information extraction from business documents.
 
 ## Lab objectives
 
@@ -10,7 +12,6 @@ In this exercise, you will perform:
 
 - Task 1: Create a Microsoft Foundry project
 - Task 2: Extract information from an invoice in Foundry portal (classic)
-- Task 3: Extract information with the REST API
 
 ## Task 1: Create a Microsoft Foundry project
 
@@ -24,11 +25,11 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
       ![Enter Your Username](./media/mod6-p2t1p2.png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
@@ -108,189 +109,49 @@ In this task, you'll use the Foundry portal to analyze an invoice with the prebu
 
     ![](./media/lab6a-e1t2p5.png)
 
-## Task 3: Extract information with the REST API
+    Developers can use the REST API to build an app that submits a document for analysis using a POST operation. For example, the following cUrl command could be used to analyze an invoice:
 
-In this task, you'll call Azure Content Understanding through the REST API to analyze an invoice, retrieve results, and understand how to integrate Content Understanding into applications programmatically.
-
->**Note**: This section of the exercise requires you to have access to Visual Studio Code (VS Code).  
-
-1. In the (classic) Foundry portal, from the left-side menu, select **Overview** to navigate to your Foundry project's home page.
-
-    ![](./media/lab6a-e1t3p1.png)
-
-1. On the project home page, click the **Copy API key (1)** icon and the **Copy Microsoft Foundry project endpoint (2)** icon to copy the credentials, then paste them into Notepad for use later in the lab.
-
-    ![](./media/lab6a-e1t3p2.png)
-
-1. Open **Visual Studio Code** (VS Code) from the desktop by double-clicking on it.
-
-    ![](./media/lab6a-e1t3p3.png)
-
-1. In VS Code, from the top menu bar, select  **View (1)** and then click on **Command Palette... (2)**. 
-
-    ![](./media/lab6a-e1t3p4.png)
-
-1. Type **Git: Clone (1)** and select it **(2)**. 
-
-    ![](./media/lab6a-e1t3p5.png)
-
-1. Paste the repo URL `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals.git` and press **Enter**.  
-
-    ![](./media/lab6a-e1t3p6.png)
-
-1. From the **Choose a folder to clone** window, select **Downloads (1)** from the Quick access section and then click on **Select as Repository Destination (2)**.
-
-    ![](./media/lab6a-e1t3p7.png)
-
-1. When prompted, click **Open** to start working on the cloned project in VS code.
-
-    ![](./media/lab6a-e1t3p8.png)
-
-1. In the **Do you trust the authors of the files in this folder?** pop-up window, click on **Yes, I trust the authors**.
-
-    ![](./media/lab6a-e1t3p9.png)
-
-1. In the VS Code file explorer, select the **data (1)** folder, then select the **content-understanding (2)** folder.
-
-    ![](./media/lab6a-e1t3p10.png)
-
-1. In the **content-understanding** folder, open the **.env (1)** file. Copy and paste your Foundry project API key **(2)** and Foundry project endpoint **(3)**. Edit the endpoint by deleting the text after *ai.azure.com*. Your endpoint should look like this `https://...ai.azure.com`. Save the file by pressing **Ctrl + S**. 
-
-    ![](./media/lab6a-e1t3p11.png)
-
-1. Now, return to Foundry portal to create Foundry Model deployments of *GPT-4.1*, *GPT-4.1-mini*, and *text-embedding-3-large* in your Foundry resource. 
-
-1. In the (classic) Foundry portal, select **Models + endpoints (1)** from the menu on your left. In the **Model deployments** screen, select **+ Deploy a model (2)**, then select **Deploy base model (3)**.
-
-    ![](./media/lab6a-e1t3p12.png)
-
-1. Search for **GPT-4.1 (1)** and select it **(2)** from the result, then select **Confirm (3)**. 
-
-    ![](./media/lab6a-e1t3p13.png)
-
-1. Keep the default name and default deployment type. Select **Deploy**.
-
-    ![](./media/lab6a-e1t3p14.png)
-
-1. Return to the **Model deployments** page by selecting **Models + endpoints (1)** from the left-side menu. In the **Model deployments** screen, select **+ Deploy a model (2)**, then select **Deploy base model (3)**.
-
-    ![](./media/lab6a-e1t3p15.png)
-
-1. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models (they should be **GPT-4.1**, **GPT-4.1-mini**, and **text-embedding-3-large** unless you customized the names). 
-
-    ![](./media/lab6a-e1t3p16.png)
-
-1. To extract information from content using Content Understanding, you can use the *curl* command to call the REST endpoint. You will need to make three calls: 
-    - To set up a connection between Content Understanding and your Foundry models 
-    - To analyze the content 
-    - To retrieve the result of the analysis  
-
-1. Let's set up a connection between Content Understanding and Foundry models in your Foundry resource. Return to VS Code. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
-
-    ```shell
-    curl -i -X PATCH "{endpoint}/contentunderstanding/defaults?api-version=2025-11-01" \
+    ```bash
+   curl -i -X POST "{endpoint}/contentunderstanding/analyzers/{analyzerId}:analyze?api-version=2025-11-01" \
       -H "Ocp-Apim-Subscription-Key: {key}" \
       -H "Content-Type: application/json" \
       -d '{
-            "modelDeployments": {
-              "gpt-4.1": "{myGPT41Deployment}",
-              "gpt-4.1-mini": "{myGPT41MiniDeployment}",
-              "text-embedding-3-large": "{myEmbeddingDeployment}"
-            }
+            "inputs":[
+              {
+                "url": "https://{url_path}/invoice.png"
+              }          
+            ]
           }'
     ```
 
-    ![](./media/lab6a-e1t3p17.png)
+    The analysis is performed asynchronously, so the response includes an **id** value that can be used to poll for the results:
 
-    >**Note:** Your .sh files also include script at the top that exports everything from .env into the script’s environment. You will see the information following ` #!/bin/bash` at the top of your .sh files. Do not edit this portion of the files.  
-    
-1. Edit the script by replacing `{myGPT41Deployment}`, `{myGPT41MiniDeployment}`, and `{myEmbeddingDeployment}` with your deployed model names. If you haven’t changed them, use `gpt-4.1`, `gpt-4.1-mini`, and `text-embedding-3-large`. Then save the file.
+    ```json
+   {
+      "id": {resultId},
+      "status": "Running",
+      "result": {
+        "analyzerId": {analyzerId},
+        "apiVersion": "2025-11-01",
+        "createdAt": "YYYY-MM-DDTHH:MM:SSZ",
+        "warnings": [],
+        "contents": []
+      }
+    }
+    ```
 
-    ![](./media/lab6a-e1t3p18.png)
-
-1. In VS Code, open the top menu, select **Ellipsis (…) (1)**, choose **Terminal (2)**, and then click **New Terminal (3)**.
-
-    ![](./media/lab6a-e1t3p19.png)
-
-1. From the terminal, click on **Launch profile (1)** and then select **Git Bash (2)** profile from the list.
-
-    ![](./media/lab6a-e1t3p20.png)
-
-1. In the terminal, navigate to the content-understanding folder. Copy and paste the following into the terminal and press Enter. 
+    To retrieve the results using the ID, the client must submit a GET request:
 
     ```bash
-    cd data/content-understanding
-    ```
-    
-    ![](./media/lab6a-e1t3p21.png)
- 
-1. Copy and paste the following command into the terminal to run the script, which establishes a connection between Content Understanding and the deployed models in your profile. 
-
-    ```bash
-    bash set-up-connection.sh
+   curl -i -X GET "{endpoint}/contentunderstanding/analyzerResults/{resultId}?api-version=2025-11-01" \
+      -H "Ocp-Apim-Subscription-Key: {key}"
     ```
 
-    ![](./media/lab6a-e1t3p22.png) 
-
-1. Next, let's analyze our content using the prebuilt-invoice analyzer to extract structured data from an invoice document. We will analyze the same document as we did with the portal earlier in the exercise from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
-
-1. In the VS Code File Explorer, open the **extract-data.sh** file and review where the project endpoint and key variables are defined, as well as where the document URL is specified in the inputs. The script should resemble the following:
-
-    ```shell
-    curl -i -X POST "{endpoint}/contentunderstanding/analyzers/prebuilt-invoice:analyze?api-version=2025-11-01" \
-      -H "Ocp-Apim-Subscription-Key: {key}" \
-      -H "Content-Type: application/json" \
-      -d '{
-            "inputs":[{"url": "https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf"}]
-          }'
-    ```
-
-    ![](./media/lab6a-e1t3p23.png)
-
-1. Copy and paste the following command into the terminal and press **Enter** to run the script, which sends a POST request to analyze the content:
-
-    ```bash
-    bash extract-data.sh
-    ```
-
-1. The POST response should look something like this: 
-
-    ![](./media/lab6a-e1t3p24.png)
-
-1. Copy the `request-id` from the POST response.
-
-    ![](./media/lab6a-e1t3p25.png)
-
-1. From the VS Code file explorer, open **get-results.sh** and review the file. Note where variables for your project endpoint and key are included in the script. The script should look similar to this: 
-
-    ![](./media/lab6a-e1t3p26.png)
-
-1. In the **get-results.sh** file, delete `{REQUEST_ID}` and paste the `request-id` from the POST response. Remember to save the file.
-
-    ![](./media/lab6a-e1t3p27.png)
-    
-1. Copy and paste the following command into the terminal and press **Enter** to run the GET results script, which uses the `request-id` from the POST response to retrieve the analysis result:
-
-    ```bash
-    bash get-results.sh
-    ```
-
-1. Review the JSON returned. See how it provides the same information you saw from the *Results* tab in the Foundry portal after analyzing the same document.
-
-    ![](./media/lab6a-e1t3p28.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="50ef940e-c0bb-40bc-9b5d-f13240344ba3" />
 
 ## Summary
 
-In this exercise, you learned how to use Azure Content Understanding in Microsoft Foundry to extract structured information from invoices using both the Foundry portal and the REST API. You created a Foundry project, deployed required models, analyzed documents, and reviewed the extracted results in JSON format.
+In this exercise, you used Microsoft Foundry and Azure Content Understanding to extract structured information from invoices. You created a Foundry project, analyzed sample and custom invoice documents in the portal, and reviewed the extracted data and JSON responses. You also explored how to perform document analysis programmatically using REST APIs.
 
-These scenarios demonstrate how you can integrate Content Understanding with generative AI models to build applications that automatically process and interpret multi-modal content. From this foundation, you can develop intelligent solutions that extract, analyze, and act on information from documents, images, audio, and video in real-world business workflows.
+This exercise demonstrates how Azure Content Understanding can be used to automate document processing and data extraction. From this foundation, you can build intelligent applications that process and analyze business documents efficiently, enabling automation of real-world workflows.
 
 ### Congratulations, you’ve successfully completed the hands-on lab!
