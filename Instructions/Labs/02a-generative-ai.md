@@ -448,24 +448,24 @@ In this task, you’ll publish the agent to a dedicated endpoint and use sample 
 1. Add the following code to the new **expenses-client.py** file.
 
     ```python
-   from openai import OpenAI
-   from azure.identity import DefaultAzureCredential, get_bearer_token_provider
-    
-   # Replace with your agent endpoint
-   AGENT_ENDPOINT = "YOUR_AGENT_ENDPOINT"
-    
-   # Create OpenAI client authenticated with Azure credentials
-   openai = OpenAI(
-        api_key=get_bearer_token_provider(DefaultAzureCredential(), "https://ai.azure.com/.default"),
-        base_url=AGENT_ENDPOINT,
-        default_query={"api-version": "2025-11-15-preview"}
-   )
-    
-   # Send a request to the published agent
-   response = openai.responses.create(
-        input=input("Prompt:\n"),
-   )
-   print(f"Response output:\n{response.output_text}")
+    from openai import OpenAI
+    from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+        
+    # Replace with your agent endpoint
+    AGENT_ENDPOINT = "YOUR_AGENT_ENDPOINT"
+        
+    # Create OpenAI client authenticated with Azure credentials
+    openai = OpenAI(
+            api_key=get_bearer_token_provider(DefaultAzureCredential(), "https://ai.azure.com/.default"),
+            base_url=AGENT_ENDPOINT,
+            default_query={"api-version": "2025-11-15-preview"}
+    )
+        
+    # Send a request to the published agent
+    response = openai.responses.create(
+            input=input("Prompt:\n"),
+    )
+    print(f"Response output:\n{response.output_text}")
     ```
 
     This code uses the **Open AI Responses** API with Entra ID authentication. Since the agent is published in its own production endpoint, there's no need to connect to the Foundry project using the **Azure.AI.Projects** library or to specify agent details in the **responses.create** method call.
@@ -479,7 +479,7 @@ In this task, you’ll publish the agent to a dedicated endpoint and use sample 
 1. In the VS Code terminal pane, enter the following command to run the code.
 
     ```
-   python expenses-client.py
+    python expenses-client.py
     ```
 
     ![](./media/lab2a-p2t1p40.png)
@@ -487,7 +487,7 @@ In this task, you’ll publish the agent to a dedicated endpoint and use sample 
 1. When prompted, enter the following prompt:
 
     ```
-   How do I submit an expense claim?
+    How do I submit an expense claim?
     ```
 
     The code uses our published agent to get a response, and displays it.
@@ -499,6 +499,5 @@ In this task, you’ll publish the agent to a dedicated endpoint and use sample 
 ## Summary
 
 In this exercise, you explored how to deploy and interact with a generative AI model in Microsoft Foundry. You used the chat playground to test prompts, applied system instructions to shape model behavior, and reviewed sample code for integrating the model into applications. You then created an agent from the model, enhanced it with a knowledge tool, and published it to a dedicated endpoint.
-
 
 ### Congratulations, you’ve successfully completed the hands-on lab!
