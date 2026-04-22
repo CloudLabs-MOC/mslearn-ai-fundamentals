@@ -29,7 +29,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-   - **Name:** Enter Training_data_<inject key="DeploymentID" enableCopy="false"/> **(1)**
+   - **Name:** Enter **Training_data_<inject key="DeploymentID" enableCopy="false"/>** **(1)**
    - **Friendly Name:** (Optional)  
       Azure will auto-fill this based on the name.
    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
@@ -45,7 +45,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.       
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created Training_data_<inject key="DeploymentID" enableCopy="false"/> **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Training_data_<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
    ![](../images/u4-l9-2.png) 
    
@@ -313,7 +313,7 @@ Upload your training dataset that contains only 10–20 rows.
 
     - Name: Enter **`Sensor_Data_1` (1)**  
     - Select type: **Tabular**  
-    - Click **Next (3)**  
+    - Click **Next (2)**  
 
       ![](../images/n49c31.png)     
 
@@ -428,7 +428,7 @@ data.
 
     - Name: Enter **`Sensor_Data_2` (1)**  
     - Select type: **Tabular**  
-    - Click **Next (3)**  
+    - Click **Next (2)**  
 
       ![](../images/n49c34.png)     
 
