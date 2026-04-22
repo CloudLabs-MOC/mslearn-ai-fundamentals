@@ -31,28 +31,27 @@ In this lab, you will be able to complete the following tasks:
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter `Class_Workspace`  **(1)**
-    - **Friendly Name**: Leave default
-    - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
-    - **Advanced Settings**:
-    - **Subscription**: Select the appropriate Azure subscription from the dropdown **(3)**
-    - **Resource Group**: Select **ODL-SREB-U5L07** **(4)**
-    - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+    - **Name:** Enter **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/>**  **(1)**
+    - **Friendly Name:** Leave default
+    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
+    - **Advanced Settings:**
+    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+    - **Resource Group:** Select **ODL-SREB-U5L07** **(4)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/n57-c1.png) 
+      ![](../images/u5-l7-1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Class_Workspace` **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
-     ![](../images/n57c2.png) 
+     ![](../images/u5-l7-2.png) 
 
 1. This will take you inside the workspace where you can build and run machine learning experiments.
   
-
 1. In the side menu of your workspace, select **Designer (1)**. Click **Create a new pipeline using classic prebuilt components (2)**.     
 
      ![](../images/n57c4.png)
@@ -71,7 +70,7 @@ In this lab, you will be able to complete the following tasks:
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Clean Missing Data (2).** Drag that component onto the canvas **(3)**.   
 
-   ![](../images/n57c5.png)
+   ![](../images/u5-l7-5.png)
 
 1. Double click on **Clean Missing Data (1)** and then select **Edit Column (2)** under `Columns to be cleaned`.
 
@@ -119,7 +118,7 @@ In this lab, you will be able to complete the following tasks:
 
 1. Navigate to **Data (1)** from the left navigation and then select **+ Create (2)**.
 
-   ![](../images/n57c3.png)
+   ![](../images/u5-l7-3.png)
 
 1. On **Create data asset** page enter the following data.
 
@@ -216,7 +215,7 @@ not include a bowl game and then **Save (2)**.
 
     ![](../images/n57c27.png)
 
-     >**Note**: This ensures our model only trains on seasons with a **win/loss** outcome in a bowl.
+     >**Note:** This ensures our model only trains on seasons with a **win/loss** outcome in a bowl.
 
 1. The **Split Data** component already handles splitting our data into training and test sets, so now we need to train our model.     
 
@@ -265,7 +264,7 @@ the **Right** **“Dataset”** input of the **“Train Model”** component **(
 
        ![](../images/n57c35.png) 
 
-        >**Note**: This will compare the 
+        >**Note:** This will compare the 
 model’s predictions against the actual win/loss outcomes.     
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Evaluate Model (2).** Drag that component onto the canvas **(3)** below the `Score Model` component. 
@@ -276,7 +275,7 @@ model’s predictions against the actual win/loss outcomes.
 
        ![](../images/n57c36.png) 
 
-        >**Note**: This step will generate metrics like **accuracy, precision, recall, F1 score,** and **AUC**. 
+        >**Note:** This step will generate metrics like **accuracy, precision, recall, F1 score,** and **AUC**. 
   
 
 ### Task 6: Run the Supervised Pipeline
@@ -285,7 +284,7 @@ model’s predictions against the actual win/loss outcomes.
 
     ![](../images/n57c37.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Create new (1)**
    - New experiment name: **Clemson-Supervised-Pipeline(2)**
@@ -307,15 +306,15 @@ pipeline.
 
 1. You are now in the **Virtual Machine** tab for setting up a compute cluster. This step helps Azure decide which kind of machine to use for running your pipeline.
 
-    - **Location**: Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
-    - **Virtual Machine Tier**: Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
-    - **Virtual Machine Type**: Keep this as **CPU (3)** 
-    - **Virtual Machine Size**: Choose **Standard_DS3_v2 (4)**
+    - **Location:** Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
+    - **Virtual Machine Tier:** Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
+    - **Virtual Machine Type:** Keep this as **CPU (3)** 
+    - **Virtual Machine Size:** Choose **Standard_DS3_v2 (4)**
     - Click **Next (5)**  
 
       ![](../images/ag2.png)   
 
-1. **Advanced Settings**: Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings:** Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
 
      ![](../images/nc16.png) 
 
@@ -323,7 +322,7 @@ pipeline.
 
      ![](../images/n56c30.png)
 
-     >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+     >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
@@ -331,7 +330,7 @@ pipeline.
 
 1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n57c43.png) 
+     ![](../images/u5-l7-4.png) 
 
 1. Pipeline may take around `10-15 mins` to complete meanwhile we will move on to setting up our **unsupervised learning pipeline**, which you will build using the previous steps as a guide.      
 
@@ -353,17 +352,17 @@ connected pipeline components.
 
 1. Navigate to **Pipeline (1)** from the left navigation pane and then Select **Pipeline drafts (2)** tab and then click on **Preprocessing_Pipeline (3)**.
 
-    ![](../images/n57c44.png)
+    ![](../images/u5-l7-7.png)
 
 1. Click the **Clone** button at the top. This will create a copy of the pipeline and open it in a new tab.
 
-    ![](../images/n57c45.png)
+    ![](../images/u5-l7-8.png)
 
 1. Select the **Pencil (1)** icon to rename the Pipeline.    
 
-     - Rename your cloned pipeline to **Clemson – Unsupervised Pipeline** and then **Save (2)**. 
+     - Rename your cloned pipeline to **Clemson – Unsupervised Pipeline (2)** and then **Save (3)**. 
 
-       ![](../images/n57c46.png)
+       ![](../images/u5-l7-9.png)
 
 1. Navigate to the **Data (1)** tab on the left, drag your **Clemson dataset** onto the pipeline canvas **(2)** and connect it to the existing **preprocessing pipeline (3)**.
 
@@ -417,7 +416,7 @@ connected pipeline components.
 
     ![](../images/n57c55.png)
 
-     >**Note**: We want to have 3 centroids, so we can group the seasons into “Elite”, “Average”, and “Poor”.
+     >**Note:** We want to have 3 centroids, so we can group the seasons into “Elite”, “Average”, and “Poor”.
 
 1. Double-click **“Train Clustering Model” (1)**. Select **Edit Column (2)** under `Column Set`.
 
@@ -435,7 +434,7 @@ connected pipeline components.
 
     ![](../images/n57c58.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Create new (1)**
    - New experiment name: **Clemson-Unsupervised-Pipeline(2)**
@@ -451,7 +450,7 @@ as before and then **Next (2)**.
 
     ![](../images/n57c60.png)
 
-     >**Note**: It may take some time for the test to get selected. Please try refreshing the cluster periodically until it appears.
+     >**Note:** It may take some time for the test to get selected. Please try refreshing the cluster periodically until it appears.
 
 1. Select **Submit**.
 
@@ -459,7 +458,7 @@ as before and then **Next (2)**.
 
 1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-    ![](../images/n57c62.png)
+    ![](../images/u5-l7-10.png)
 
 1. Pipeline may take around `10-15 mins` to complete. Until then please check the Evaluate result of Supervised Model.
 
@@ -467,7 +466,7 @@ as before and then **Next (2)**.
 
 1. Navigate to **Pipeline (1)** from the left and then select **Clemson-Supervised Pipeline (2)**.
 
-    ![](../images/n57c63.png)
+    ![](../images/u5-l7-11.png)
 
 1. Make sure the pipeline is **completed (1)** if not then please wait. Right click on **Evaluate model (2)** then select  **Preview data (3)** and then select **Evaluation results (4)**.   
 
@@ -493,7 +492,7 @@ as before and then **Next (2)**.
 
 1. Navigate to **Pipeline (1)** from the left and then select **Clemson-Unupervised Pipeline (2)**.
 
-    ![](../images/n57c66.png)
+    ![](../images/u5-l7-12.png)
 
 1. This will take around `10-15 mins` to complete as this has started just now. So please wait until the pipeline completed.    
 
@@ -505,7 +504,7 @@ as before and then **Next (2)**.
 
     ![](../images/g28.png)
 
-     >**Interpretation Tips**: Use your analysis of the clustered data to assign meaningful labels to each group. 
+     >**Interpretation Tips:** Use your analysis of the clustered data to assign meaningful labels to each group. 
 
      For example:
      - Cluster 0 → "Elite"

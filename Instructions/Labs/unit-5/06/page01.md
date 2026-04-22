@@ -17,7 +17,7 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit5-lesson(6).png)
 
-### Task 1: Set Up the Azure ML Workspace
+## Task 1: Set Up the Azure ML Workspace
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
 
@@ -31,18 +31,18 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter `Sports_Analytics`  **(1)**
-    - **Friendly Name**: Leave default
-    - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
-    - **Advanced Settings**:
-    - **Subscription**: Select the appropriate Azure subscription from the dropdown **(3)**
-    - **Resource Group**: Select **ODL-SREB-U5L06** **(4)**
-    - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+    - **Name:** Enter `Sports_Analytics`  **(1)**
+    - **Friendly Name:** Leave default
+    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
+    - **Advanced Settings:**
+    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+    - **Resource Group:** Select **ODL-SREB-U5L06** **(4)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
       ![](../images/n56-c1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
@@ -68,7 +68,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ---   
   
-### Task 2: Add a dataset to your Azure ML pipeline in the Designer
+## Task 2: Add a dataset to your Azure ML pipeline in the Designer
 
 In this task you will upload the SC Basketball Enhanced data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
@@ -130,17 +130,13 @@ In this task you will upload the SC Basketball Enhanced data to your Azure ML wo
 
 ---      
  
-### Task 3: Add the Dataset to Your Pipeline Canvas
+## Task 3: Add the Dataset to Your Pipeline Canvas
 
 In this task, you will add the training dataset to your pipeline canvas and use the Split Data component to divide it into training and testing sets. This prepares your data for model training and evaluation by reserving a portion for validation.
 
-1. From the left panel, drag your **Train_Test_Validation_Dataset** dataset onto the canvas.
+1. From the left panel, under the **Data** tab, locate the uploaded dataset named **Train_Test_Validation_Dataset** and drag it to the canvas **(1)** and then **Save (2)**.  
 
-   ![](../images/n56c11.png) 
-
-1. Click the **Save** button at the top of the canvas to avoid losing progress. 
-
-   ![](../images/n56c12.png)
+   ![](../images/u5-l6-01.png)
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Split Data (2).** Drag that component onto the canvas **(3)**.   
 
@@ -149,7 +145,7 @@ In this task, you will add the training dataset to your pipeline canvas and use 
 
       ![](../images/n56c13.png)  
 
-1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then **Save (7)**:
+1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then **Save (7):**
 
     - Splitting mode: Make sure **Split Rows** is selected **(2)**
     -  Fraction of rows in the first output dataset: Enter `0.7` **(3)** (*This means **70%** of your data will be used for **training**, and the remaining 30% for testing*)
@@ -160,7 +156,7 @@ In this task, you will add the training dataset to your pipeline canvas and use 
       ![](../images/n56c-14.png)     
 
 
-### Task 4: Train the Model
+## Task 4: Train the Model
 
 In this task, you will configure and train a machine learning model using the Linear Regression algorithm. You’ll connect it to your training dataset, specify the target variable (PTS), and prepare it for evaluation using scoring and performance metrics.
 
@@ -212,7 +208,7 @@ training data) **(2)**
 
       ![](../images/n56c23.png)
 
-### Task 5: Run the Pipeline and Submit the Job
+## Task 5: Run the Pipeline and Submit the Job
 
 In this task, you will configure and submit your machine learning pipeline for execution. You’ll walk through setting the experiment name, selecting or creating a compute cluster, and finally submitting the job to train and evaluate your model.
       
@@ -220,7 +216,7 @@ In this task, you will configure and submit your machine learning pipeline for e
 
     ![](../images/n56c24.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Create new (1)**
    - New experiment name: **PTS_Split_70_30(2)**
@@ -242,15 +238,15 @@ pipeline.
 
 1. You are now in the **Virtual Machine** tab for setting up a compute cluster. This step helps Azure decide which kind of machine to use for running your pipeline.
 
-    - **Location**: Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
-    - **Virtual Machine Tier**: Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
-    - **Virtual Machine Type**: Keep this as **CPU (3)** 
-    - **Virtual Machine Size**: Choose **Standard_DS11_v2 (4)**
+    - **Location:** Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
+    - **Virtual Machine Tier:** Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
+    - **Virtual Machine Type:** Keep this as **CPU (3)** 
+    - **Virtual Machine Size:** Choose **Standard_DS11_v2 (4)**
     - Click **Next (5)**  
 
       ![](../images/ag2.png)   
 
-1. **Advanced Settings**: Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings:** Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
 
      ![](../images/n56c29.png)  
 
@@ -258,7 +254,7 @@ pipeline.
 
      ![](../images/n56c30.png)
 
-     >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+     >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
@@ -273,7 +269,7 @@ pipeline.
      ![](../images/n56c33.png)    
 
 
-### Task 6: Model Evaluation Results (Azure ML Designer)
+## Task 6: Model Evaluation Results (Azure ML Designer)
 
 In this task, you will evaluate your trained model’s performance using metrics like MAE and RMSE in Azure ML Designer. You’ll also experiment with different train/test split ratios (70/30, 90/10, 60/40) to compare model accuracy.
 
@@ -297,14 +293,14 @@ In this task, you will evaluate your trained model’s performance using metrics
 
      ![](../images/n56c37.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Select existing (1)**
    - Existing experiment: **PTS_Split_70_30(2)**     
 
      ![](../images/g26.png)  
 
-1. **Inputs & Outputs**: We'll skip the section by clicking **Next**.
+1. **Inputs & Outputs:** We'll skip the section by clicking **Next**.
 
 1. Click on **Review +Submit**.
 
@@ -336,14 +332,14 @@ In this task, you will evaluate your trained model’s performance using metrics
 
      ![](../images/n56c41.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Select existing (1)**
    - Existing experiment: **PTS_Split_70_30(2)**     
 
      ![](../images/g26.png)  
 
-1. **Inputs & Outputs**: We'll skip the section by clicking **Next**.
+1. **Inputs & Outputs:** We'll skip the section by clicking **Next**.
 
 1. Click on **Review +Submit**.     
 
