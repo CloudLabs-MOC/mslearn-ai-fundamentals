@@ -22,7 +22,6 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
 
 1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com?azure-portal=true`
 
-
 1. On the **Microsoft Foundry** home page, click on **Sign in** in the top right corner.
 
    ![](./media/mod6-p2t1p1.png)

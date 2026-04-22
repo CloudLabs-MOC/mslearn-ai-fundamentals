@@ -99,9 +99,9 @@ In this task, you’ll use a generative AI model to analyze text and determine w
 1. In the chat playground, enter the following prompt **(1)** and then select **Send (2)**:
 
     ```
-        Analyze the following review, and determine whether the sentiment is positive, neutral, or negative:
-        ---
-        I spent several nights at the Riverside Heights Hotel during a fall trip, and the experience was outstanding from start to finish. The welcome at arrival was warm and attentive, and the staff consistently went out of their way to be helpful. The overall atmosphere made my stay smooth and relaxing, and the location was extremely convenient for getting around the city. I left with a very positive impression and would confidently recommend this hotel to others looking for a pleasant and stress‑free stay.
+    Analyze the following review, and determine whether the sentiment is positive, neutral, or negative:
+    ---
+    I spent several nights at the Riverside Heights Hotel during a fall trip, and the experience was outstanding from start to finish. The welcome at arrival was warm and attentive, and the staff consistently went out of their way to be helpful. The overall atmosphere made my stay smooth and relaxing, and the location was extremely convenient for getting around the city. I left with a very positive impression and would confidently recommend this hotel to others looking for a pleasant and stress‑free stay.
     ---
     ```
 
@@ -114,7 +114,6 @@ In this task, you’ll use a generative AI model to analyze text and determine w
 1. Enter the following prompt to analyze a different review:
 
     ```
-
     What about this one?
     ---
     I was disappointed with my visit to the Harbor View Inn earlier this year. The front desk process took much longer than expected, and staff responses to questions felt rushed and unhelpful. The room had ongoing maintenance issues, inconsistent internet access, and noticeable noise from the hallway throughout the night. Overall, the experience fell short of expectations, and I would not choose to stay there again.        

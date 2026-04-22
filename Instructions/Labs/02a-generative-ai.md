@@ -488,13 +488,13 @@ In this task, you’ll publish the agent to a dedicated endpoint and use sample 
     python expenses-client.py
     ```
 
-    ![](./media/lab2a-p2t1p40.png)
-
 1. When prompted, enter the following prompt:
 
     ```
     How do I submit an expense claim?
     ```
+
+    ![](./media/lab2a-p2t1p40.png)
 
     The code uses our published agent to get a response, and displays it.
 

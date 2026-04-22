@@ -129,7 +129,7 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/lab5a-e1t2p12.png)
 
-    >**Note:** If the error `ERR_BAD_REQUEST: The provided data does not match the expected schema` is returned, try switching to the Classic portal by de-selecting the New Foundry option. In the classic portal, select **Playground (1)** from the left pane and then open the **Chat playground (2)**.
+    >**Note:** If the error `ERR_BAD_REQUEST: The provided data does not match the expected schema` is returned, try switching to the Classic portal by de-selecting the New Foundry option. In the classic portal, select **Playground (1)** from the left pane and then select the **Try the Chat playground (2)**.
 
     ![](./media/newlab5a-e1t2p11.png)
 
@@ -201,7 +201,7 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
 1. Select **Deploy a base model** to open the model catalog.
 
-    ![](./media/lab5a-e1t3p2.png)
+    ![](./media/newlab5a-e1t2p14.png)
 
 1. In the **Collections** drop-down list, select **Direct from Azure (1)**, and in the **Inference tasks** drop-down list, select **Text to image (2)**. Then view the available models for image generation.
 
