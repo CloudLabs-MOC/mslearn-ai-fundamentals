@@ -1,12 +1,14 @@
 # Get started with computer vision in Microsoft Foundry
 
+### Estimated Duration: 30 Minutes
+
 ## Lab overview
 
 In this exercise, you'll use Microsoft Foundry to deploy and explore generative AI models that work with visual data. You will analyze images, generate new images from text prompts, and create videos using vision-enabled models.
 
 ## Lab objectives
 
-In this exercise, you will perform:
+In this exercise, you will perform the following tasks:
 
 - Task 1: Create a Microsoft Foundry project
 - Task 2: Use a generative AI model to analyze images
@@ -95,21 +97,21 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/lab5a-e1t2p4.png)
 
-1. Return to the browser tab containing your Microsoft Foundry project. Then, click on the **Start building (1)** menu and select **Browse models (2)** to view the Microsoft Foundry model catalog.
+1. Return to the browser tab containing your Microsoft Foundry project. Then, click on the **Start building (1)** menu and select **Find models (2)** to view the Microsoft Foundry model catalog.
 
-    ![](./media/lab5a-e1t2p5.png)
+    ![](./media/newlab5a-e1t2p5.png)
 
-1. Search for the `gpt-4.1-mini` **(1)** model and select the same **(2)** from the result section. 
+1. Search for the `gpt-5-mini` **(1)** model and select the same **(2)** from the result section. 
 
-    ![](./media/lab5a-e1t2p6.png)
+    ![](./media/newlab5a-e1t2p6.png)
 
-1. On the **gpt-4.1-mini** page, click on **Deploy (1)** and select **Default settings (2)**.
+1. On the **gpt-5-mini** page, click on **Deploy (1)** and select **Default settings (2)**.
 
-    ![](./media/lab5a-e1t2p7.png)
+    ![](./media/newlab5a-e1t2p7.png)
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![Screenshot of the model playground.](./media/lab5a-e1t2p8.png)
+    ![](./media/newlab5a-e1t2p8.png)
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 
@@ -117,15 +119,19 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 1. In the left pane, update the **Instructions** field to: `You are an AI cooking assistant who helps chefs with recipes.`
 
-    ![](./media/lab5a-e1t2p10.png)
+    ![](./media/newlab5a-e1t2p9.png)
 
-1. In the chat pane, click on the **Attach files (1)** icon and then in the Open window, select **image1 (2)** and then click on **Open (3)**. The image will be added to the prompt area.
+1. In the chat pane, click on the **Attach files (1)** icon and then in the Open window, select **image1 (2)** from the folder you extracted earlier and then click on **Open (3)**. The image will be added to the prompt area.
 
-    ![](./media/lab5a-e1t2p11.png)
+    ![](./media/newlab5a-e1t2p10.png)
 
 1. Enter a prompt such as `What recipes can I use this in?`, then press **Enter** to submit it.
 
     ![](./media/lab5a-e1t2p12.png)
+
+    >**Note:** If the error `ERR_BAD_REQUEST: The provided data does not match the expected schema` is returned, try switching to the Classic portal by de-selecting the New Foundry option. In the classic portal, select **Playground (1)** from the left pane and then open the **Chat playground (2)**.
+
+    ![](./media/newlab5a-e1t2p11.png)
 
 1. Review the response, which should include relevant recipe suggestions for the image you uploaded.
 
@@ -133,13 +139,13 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 1. Submit prompts that include the other images, such as `How should I cook this?` or `What desserts could I make with this?`
 
-### View code
+### Task 2.1: View code
 
 To develop a client app or agent that can use the model to interpret images, you can use the OpenAI **Responses** API.
 
 1. In the **Chat** pane, select the **Code** tab to view sample code.
 
-    ![](./media/lab5a-e1t2p14.png)
+    ![](./media/newlab5a-e1t2p12.png)
 
 1. Select the following code options:
     - **API**: Responses API
@@ -153,7 +159,7 @@ To develop a client app or agent that can use the model to interpret images, you
     from openai import OpenAI
     
     endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
-    deployment_name = "gpt-4.1-mini"
+    deployment_name = "gpt-5-mini"
     api_key = "<your-api-key>"
     
     client = OpenAI(
@@ -189,9 +195,9 @@ To develop a client app or agent that can use the model to interpret images, you
 
 In this task, you'll deploy an image-generation model and use text prompts to create new images that match your described scenarios.
 
-1. Use the **back** arrow next to the **gpt-4.1-mini** header to view the model deployments in your project.
+1. Use the **back** arrow next to the **gpt-5-mini** header to view the model deployments in your project.
 
-    ![](./media/lab5a-e1t3p1.png)
+    ![](./media/newlab5a-e1t2p13.png)
 
 1. Select **Deploy a base model** to open the model catalog.
 
@@ -207,9 +213,9 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
 1. Select the **FLUX.1-Kontext-pro** model.
 
-    ![](./media/lab5a-e1t3p4.png)
+    ![](./media/newlab5a-e1t2p15.png)
 
-    >**Note:** If you are unable to deploy the model in your subscription, try one of the other image-generation models.
+    >**Note:** If you are unable to deploy the model in your subscription, try one of the other image-generation models like `FLUX.2-pro`.
 
 1. On the **FLUX.1-Kontext-pro** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
@@ -223,7 +229,7 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
     ![](./media/lab5a-e1t3p7.png)
 
-### View code
+### Task 3.1: View code
 
 If you want to develop a client app or agent that generates images using your model, you can use the OpenAI API.
 
@@ -283,7 +289,7 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. From the Models page, select **Deploy a base model** to open the model catalog.
 
-    ![](./media/lab5a-e1t4p2.png)
+    ![](./media/newlab5a-e1t2p16.png)
 
 1. From the **Collections** drop-down, choose **Direct from Azure (1)**, and from the **Inference tasks** drop-down, select **Video generation (2)**. Then review the list of available video generation models.
 
@@ -293,15 +299,15 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
-1. Select the **sora** model from the list.
+1. Select the **Sora-2** model from the list.
 
-    ![](./media/lab5a-e1t4p4.png)
+    ![](./media/newlab5a-e1t2p17.png)
 
     >**Note:** If you are unable to deploy the model in your subscription, try one of the other video-generation models.
 
-1. On the **sora** page, click on **Deploy (1)** and then select **Default settings (2)**.
+1. On the **sora-2** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
-    ![](./media/lab5a-e1t4p5.png)
+    ![](./media/newlab5a-e1t2p18.png)
 
 1. When the model has been deployed, it opens in the video playground.
 
@@ -309,9 +315,9 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. Enter a prompt that describes the video you want, such as `A chef in a busy kitchen.`, then press **Enter** and review the generated result.
 
-    ![](./media/lab5a-e1t4p7.png)
+    ![](./media/newlab5a-e1t2p20.png)
 
-### View code
+### Task 4.1: View code
 
 If you want to develop a client app or agent that generates videos using your model, you can use the REST API.
 
@@ -325,15 +331,15 @@ If you want to develop a client app or agent that generates videos using your mo
     -H "Authorization: Bearer $AZURE_API_KEY" \
     -d '{
         "prompt" : "A video of a cat",
-         "height" : "1080",
-         "width" : "1080",
-         "n_seconds" : "5",
-         "n_variants" : "1",
+        "height" : "1080",
+        "width" : "1080",
+        "n_seconds" : "5",
+        "n_variants" : "1",
         "model": "sora"
         }'
     ```
 
-    ![](./media/lab5a-e1t4p8.png)
+    ![](./media/newlab5a-e1t2p21.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

@@ -4,7 +4,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 5a: Get started with computer vision in Microsoft Foundry
 
-### Overall Estimated Timing: 60 Minutes
+### Overall Estimated Timing: 30 Minutes
 
 ## Overview
 
@@ -14,11 +14,16 @@ In this lab, you will explore Microsoft Foundry to deploy and interact with visi
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to organize AI resources, models, and services used for computer vision solutions.
-2. **Deploy and use a vision-enabled generative AI model:** Deploy a model and use the playground to analyze images and generate meaningful text-based insights.
-3. **Generate images from text prompts:** Use an image-generation model to create new images based on descriptive text.
-4. **Generate videos from text prompts:** Use a video-generation model to create short videos from natural language descriptions.
-5. **Review sample code for vision scenarios:** Examine example code to understand how image and video generation can be implemented in applications.
+1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to organize AI resources, models, and services used in generative AI and computer vision scenarios.
+
+2. **Analyze images with a vision-enabled generative AI model:** Deploy and use a model in the playground to interpret uploaded images and generate text-based responses.
+
+3. **Generate images from text prompts:** Deploy an image-generation model and create new images based on descriptive prompts.
+
+4. **Generate videos from text prompts:** Deploy a video-generation model and generate short videos from natural language descriptions.
+
+5. **Review sample code for multimodal AI scenarios:** Explore example code to understand how image analysis, image generation, and video generation can be integrated into applications.
+
 
 ## Pre-requisites
 
@@ -27,38 +32,39 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry supports deploying and using vision-enabled generative AI models for analyzing and generating visual content. The architecture shows how models, playground experiences, and client applications interact to enable computer vision scenarios.
+This lab demonstrates how Microsoft Foundry supports deploying and using vision-enabled generative AI models for image understanding, image generation, and video generation. The architecture shows how project resources, deployed models, and playground experiences interact to enable computer vision scenarios.
 
-1. **Microsoft Foundry Project:** A workspace to manage AI resources, models, and services used for computer vision workloads.
+1. **Microsoft Foundry Project:** A workspace used to organize AI resources, manage model deployments, and support computer vision workloads throughout the lab.
 
-2. **Vision-Enabled Generative AI Models:** Models deployed from the Foundry model catalog (for example, GPT-4.1 Mini, FLUX-1-Kontext-pro, and Sora) to analyze images, generate images, and create videos.
+2. **Image Analysis with Generative AI:** A vision-enabled model such as **gpt-5-mini** is deployed and used in the chat playground to analyze uploaded images and return text-based responses from visual content.
 
-3. **Model Playgrounds:** Browser-based environments for interacting with deployed models to test image analysis, image generation, and video generation.
+3. **Image Generation Models:** An image generation model such as **FLUX.1-Kontext-pro** is deployed to generate new images from natural language prompts using the image playground.
 
-4. **Prompt and Parameter Configuration:** Instructions and model parameters that control how models interpret images and generate visual or textual outputs.
+4. **Video Generation Models:** A video generation model such as **Sora-2** is deployed to generate short videos from prompts using the video playground.
 
-5. **Client Integration:** Sample code and APIs that demonstrate how image and video generation capabilities can be integrated into applications.
+5. **Prompting and Client Integration:** Prompts, model settings, and sample API code demonstrate how these capabilities can be tested in the playground and integrated into custom applications using OpenAI APIs.
 
 ## Architecture Diagram
 
-![](../media/lab5a-arch.png)
+![](../media/newlab5a-arch.png)
 
 ## Explanation of Components
 
 1. **Microsoft Foundry Project:**
-   The project serves as the central workspace for managing AI resources and services. It provides a hub to organize model deployments, access the model catalog, and use playgrounds for vision-based experimentation.
+   The project serves as the central workspace for managing AI resources, model deployments, and services used throughout the lab. It provides access to the model catalog, playgrounds, and supporting resources for multimodal experimentation.
 
-2. **Vision-Enabled Generative AI Models:**
-   These are the deployed models (for example, GPT-4.1 Mini for image analysis, FLUX-1-Kontext-pro for image generation, and Sora for video generation) that process visual input or generate visual output based on text prompts.
+2. **Image Analysis Model:**
+   A vision-enabled generative AI model such as **gpt-5-mini** is deployed to analyze uploaded images and generate text-based responses, enabling image understanding through natural language interaction.
 
-3. **Model Playgrounds:**
-   Browser-based environments that allow you to interact with deployed models to test image analysis, image generation, and video generation scenarios without writing code.
+3. **Image Generation Model:**
+   An image generation model such as **FLUX.1-Kontext-pro** uses text prompts to create new images, allowing users to generate visual content from descriptive input.
 
-4. **Prompt and Parameter Configuration:**
-   Instructions and model parameters that control how models interpret images and generate text, images, or videos, enabling customization of output style and behavior.
+4. **Video Generation Model:**
+   A video generation model such as **Sora-2** generates short videos from natural language prompts, extending generative AI capabilities beyond static images.
 
-5. **Client Integration:**
-   Applications interact with vision-enabled models using APIs or SDKs, such as Python and the OpenAI Responses API, allowing developers to integrate image and video capabilities into custom applications.
+5. **Playgrounds, Prompts, and Client Integration:**
+   Foundry playgrounds provide no-code environments to test prompts and model behavior, while sample APIs and SDKs demonstrate how image analysis, image generation, and video generation can be integrated into custom applications.
+
 
 # Getting Started with lab
  
