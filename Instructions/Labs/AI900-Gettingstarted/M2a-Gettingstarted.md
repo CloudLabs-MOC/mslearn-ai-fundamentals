@@ -106,6 +106,16 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../media/aig4.png)
 
+## Track Your Progress
+
+Click on the **Progress** tab to track your progress in the lab. The percentage increases as you complete each validation and reaches 100% when all validations are successfully completed.  
+
+On the **Progress (1)** tab, you can view your overall points and validation status, **Validations 0/1 (2)**.    
+
+![Manage Your Virtual Machine](../media/AI-l12-prg.png)
+
+![Manage Your Virtual Machine](../media/AI-l12-prg1.png)
+
 ## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
