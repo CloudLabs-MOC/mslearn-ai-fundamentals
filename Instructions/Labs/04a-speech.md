@@ -61,7 +61,13 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
       
       >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
 
-1. Wait for your project to be created. It may take a few minutes. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
+1. Wait for your project to be created. It may take a few minutes. 
+
+1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
+
+    ![](./media/mod01-p2t1p6.png)
+
+1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
     ![](./media/lab4a-e1t1p2.png)
 

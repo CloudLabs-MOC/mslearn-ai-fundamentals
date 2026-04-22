@@ -58,7 +58,13 @@ In this task, you’ll create and configure a new project in the Microsoft Found
       
       >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
 
-1. Wait for your project created. It may take a few minutes, once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
+1. Wait for your project created. It may take a few minutes. 
+
+1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
+
+    ![](./media/mod01-p2t1p6.png)
+
+1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
    ![](./media/lab3b-p2t1p2.png)
 
@@ -278,41 +284,43 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
     >**Note:** Below is the same sample code in Python for your reference. You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
     ```python
+    key = "paste-your-key-here"
+    endpoint = "paste-your-endpoint-here"
 
-        key = "paste-your-key-here"
-        endpoint = "paste-your-endpoint-here"
+    from azure.ai.textanalytics import TextAnalyticsClient
+    from azure.core.credentials import AzureKeyCredential
 
-        from azure.ai.textanalytics import TextAnalyticsClient
-        from azure.core.credentials import AzureKeyCredential
+    # Authenticate the client using your key and endpoint 
+    def authenticate_client():
+        ta_credential = AzureKeyCredential(key)
+        text_analytics_client = TextAnalyticsClient(
+            endpoint=endpoint, 
+            credential=ta_credential
+        )
+        return text_analytics_client
 
-        # Authenticate the client using your key and endpoint 
-        def authenticate_client():
-            ta_credential = AzureKeyCredential(key)
-            text_analytics_client = TextAnalyticsClient(
-                    endpoint=endpoint, 
-                    credential=ta_credential)
-            return text_analytics_client
+    client = authenticate_client()
 
-        client = authenticate_client()
+    # Example method for detecting sensitive information (PII) from text 
+    def pii_recognition_example(client):
+        documents = [
+            "$documents"
+        ]
+        
+        response = client.recognize_pii_entities(documents, language="en")
+        result = [doc for doc in response if not doc.is_error]
+        
+        for doc in result:
+            print("Redacted Text: {}".format(doc.redacted_text))
+            
+            for entity in doc.entities:
+                print("Entity: {}".format(entity.text))
+                print("\tCategory: {}".format(entity.category))
+                print("\tConfidence Score: {}".format(entity.confidence_score))
+                print("\tOffset: {}".format(entity.offset))
+                print("\tLength: {}".format(entity.length))
 
-        # Example method for detecting sensitive information (PII) from text 
-        def pii_recognition_example(client):
-            documents = [
-                "$documents"
-            ]
-            response = client.recognize_pii_entities(documents, language="en")
-            result = [doc for doc in response if not doc.is_error]
-            for doc in result:
-                print("Redacted Text: {}".format(doc.redacted_text))
-                for entity in doc.entities:
-                    print("Entity: {}".format(entity.text))
-                    print("	Category: {}".format(entity.category))
-                    print("	Confidence Score: {}".format(entity.confidence_score))
-                    print("	Offset: {}".format(entity.offset))
-                    print("	Length: {}".format(entity.length))
-        pii_recognition_example(client)
-
-
+    pii_recognition_example(client)
     ```
 
 ## Summary
