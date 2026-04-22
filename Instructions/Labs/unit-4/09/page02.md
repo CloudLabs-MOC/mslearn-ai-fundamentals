@@ -15,8 +15,7 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit4-lesson9.png) 
 
-
-### Task 1: Create Azure ML Workspace
+## Task 1: Create Azure ML Workspace
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
 
@@ -30,39 +29,39 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-   - **Name**: Enter `Training_data`  **(1)**
-   - **Friendly Name**: *(Optional)*  
+   - **Name:** Enter `Training_data_<inject key="DeploymentID" enableCopy="false"/>`  **(1)**
+   - **Friendly Name:** (Optional)  
       Azure will auto-fill this based on the name.
-   - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
-     - **Advanced Settings**:
-     - **Subscription**: Select the appropriate Azure subscription from the dropdown **(3)**
-   - **Resource Group**: Select **ODL-SREB-U4L09** **(4)**
-   - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+   - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
+     - **Advanced Settings:**
+     - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+   - **Resource Group:** Select **ODL-SREB-U4L09** **(4)**
+   - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
    - After filling out all the required fields, click the **Create (6)** button.
 
-     ![](../images/n49-c1.png) 
+     ![](../images/u4-l9-1.png) 
 
-      >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+      >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.       
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Training_data` **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Training_data_<inject key="DeploymentID" enableCopy="false"/>` **(2)**.
 
-   ![](../images/n49c2.png) 
+   ![](../images/u4-l9-2.png) 
    
 1. This will take you inside the workspace where you can build and run machine learning experiments.
 
-   ![](../images/g13.png) 
+   ![](../images/u4-l9-3.png) 
 
 1. Once you are inside your workspace PCA Anomaly Model, look at the left hand side menu and select the **Designer** tab under the **Authoring** section. 
 
    ![](../images/lab01-image5.png) 
 
-    >**Note**:  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping components.
+    > **Note:** This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping components.
 
 1. Once the **Designer** page is loaded, make sure that you’re on the **Classic prebuilt (1)** tab under the “New pipeline” section. From here, click on the box with a plus sign that says, **Create a new pipeline using classic prebuilt components** **(2)**.
 
-   ![](../images/nc2.png) 
+   ![](../images/u4-l9-4.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -74,7 +73,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ---   
 
-### Task 2: Upload the Dataset
+## Task 2: Upload the Dataset
 
 In this task you will upload the Sensor_data_with_shutdown dataset to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
@@ -136,13 +135,13 @@ In this task you will upload the Sensor_data_with_shutdown dataset to your Azure
 
 ---    
 
-### Task 3: Run the Pipeline    
+## Task 3: Run the Pipeline    
 
 In this task, you will build and run a complete machine learning pipeline in Azure ML Designer. You'll clean the data, split it for training and testing, train a logistic regression model, score the results, evaluate the performance, and finally submit the pipeline for execution.
 
 1. Under the **Data** tab, locate the uploaded dataset named **`Sensor_Data`** and drag it to the canvas **(1)** and then **Save (2)**.  
 
-   ![](../images/n49c10.png)  
+   ![](../images/u4-l9-5.png)  
 
 1. Switch to the **Component (1)** tab and search for **"Clean Missing Data" (2)** by Microsoft. Drag the **Clean Missing Data** data component to the canvas **(3)**.
 
@@ -150,7 +149,7 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 
     - Click on **Save (5)**  
     
-      ![](../images/n49c11.png)
+      ![](../images/u4-l9-6.png)
 
 1. Double click on **Clean Missing Data (1)** and then select **Edit Coloumn (2)** under Columns to be cleaned.
 
@@ -189,7 +188,7 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 
     - Connect **left output** of **Split data** to **right** input of **Train model** **(5)**
 
-    ![](../images/n49c15.png)    
+      ![](../images/n49c15.png)    
 
 1. Double click on **Train Model (1)**, select **Edit Column** under `Label Column` **(2)**.
 
@@ -224,7 +223,7 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 
     ![](../images/n49c21.png)
 
-1. On the **Basics**: First, for easy tracking, we’ll set up a new experiment.
+1. On the **Basics:** First, for easy tracking, we’ll set up a new experiment.
 
     - Under **Experiment name**, select **Create new** **(1)**
     - In the field labeled **“New experiment name”**, type **Training_pipeline (2)**
@@ -234,32 +233,31 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 
       ![](../images/n49c22.png)    
 
-1. **Inputs & Outputs**: We'll skip the section by clicking **Next**.
+1. **Inputs & Outputs:** We'll skip the section by clicking **Next**.
 
     ![](../images/nc13.png) 
 
 1. On the **Runtime Settings**, provide the following details:
 
-    - **Select Compute Type** section, select **Compute 
-Cluster** from the drop down **(1)**
+    - **Select Compute Type** section, select **Compute Cluster** from the drop down **(1)**
 
     - Since no cluster is currently available, we’ll need to create one. Click on **Create Azure ML Compute Cluster (2)**.        
 
-      >**Note**: This will open a new pane or pop-up for you to configure your compute cluster
+      > **Note:** This will open a new pane or pop-up for you to configure your compute cluster
 
        ![](../images/nc14.png) 
 
-1. **Virtual Machine**: 
+1. **Virtual Machine:** 
 
-    - **Location**: Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
-    - **Virtual Machine Tier**: Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
-    - **Virtual Machine Type**: Keep this as **CPU (3)** 
-    - **Virtual Machine Size**: Choose **Standard_DS11_v2 (4)**
+    - **Location:** Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
+    - **Virtual Machine Tier:** Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
+    - **Virtual Machine Type:** Keep this as **CPU (3)** 
+    - **Virtual Machine Size:** Choose **Standard_DS11_v2 (4)**
     - Click **Next (5)**  
 
       ![](../images/ag2.png)     
 
-1. **Advanced Settings**: Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings:** Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
 
     ![](../images/nc16.png) 
 
@@ -267,7 +265,7 @@ Cluster** from the drop down **(1)**
 
     ![](../images/nc17.png) 
 
-     >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+     >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
@@ -281,13 +279,14 @@ Cluster** from the drop down **(1)**
 
     ![](../images/n49c26.png) 
 
-### Task 4: Evaluate Model Performance 
+## Task 4: Evaluate Model Performance 
 
 In this task, you will assess the performance of your trained model using Azure ML Designer. You’ll preview the scored results, analyze evaluation metrics such as accuracy and precision, and observe how changes in data quality impact model behavior. This task also includes experimenting with limited and corrupted datasets to see how they affect predictive outcomes.
 
 1. Right click on the **Score Model (1)** and Select **Preview Data (2)-> Scored Dataset (3)** to compare Scored Labels and actual shutdown
 
     ![](../images/n49c27.png) 
+    
     ![](../images/n49c28.png)     
 
 1. Right click on the **Evaluate Model (1)** and then on **Preview Data (2) -> Evaluation Results (3)**.
@@ -298,13 +297,13 @@ In this task, you will assess the performance of your trained model using Azure 
 
     ![](../images/n49c30.png) 
 
-#### Task 4.1 Limited Dataset (10–20 Rows) – Low Data Volume
+### Task 4.1 Limited Dataset (10–20 Rows) – Low Data Volume
 
 Upload your training dataset that contains only 10–20 rows.
 
-1. Navigate back to the Pipeline designer, select **Designer (1)** and then select the the Pipeline to edit.
+1. Navigate back to the Pipeline designer, select **Designer (1)** and then select the the Pipeline **(2)** to edit.
 
-    ![](../images/g14.png)
+    ![](../images/u4-l9-7.png)
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
@@ -360,7 +359,7 @@ Upload your training dataset that contains only 10–20 rows.
 
 1. Drag the newly created **Sensor_Data_1 (1)**  into the canvas and then connect to **Clean missing data** component **(2)** then **Save (3)** and then **Configure & Submit (4)**.
 
-    ![](../images/n49c41.png)
+    ![](../images/u4-l9-8.png)
 
 1. On the **Basics**  First, for easy tracking, we’ll set up a new experiment.
 
@@ -369,13 +368,13 @@ Upload your training dataset that contains only 10–20 rows.
 
       ![](../images/g16.png)    
 
-1. **Inputs & Outputs**: We'll skip the section by clicking **Next**.     
+1. **Inputs & Outputs:** We'll skip the section by clicking **Next**.     
 
 1. Select the Compute Created **Test (1)** and click **Next (2)**.   
 
     ![](../images/nc17.png) 
 
-     >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+     >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
@@ -383,7 +382,7 @@ Upload your training dataset that contains only 10–20 rows.
 
 1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-    ![](../images/nc-19.png)    
+    ![](../images/u4-l9-9.png)    
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
 
@@ -392,6 +391,7 @@ Upload your training dataset that contains only 10–20 rows.
 1. Right click on the **Score Model (1)** and Select **Preview Data (2)-> Scored Dataset (3)** to compare Scored Labels and actual shutdown
 
     ![](../images/n49c27.png) 
+    
     ![](../images/n49c42.png)     
 
 1. Right click on the **Evaluate Model (1)** and then on **Preview Data (2) -> Evaluation Results (3)**.
@@ -403,7 +403,7 @@ performance changes.
 
     ![](../images/n49c43.png)     
 
-#### Task 4.2 Corrupted Dataset – Noisy or Incomplete Data
+### Task 4.2 Corrupted Dataset – Noisy or Incomplete Data
 
 Here you will be uploading a dataset file thats containes noisy or incomplete Data
 
@@ -466,7 +466,7 @@ data.
 
 1. On the **Review** page, click **Create** to finalize the dataset upload.
 
-    ![](../images/n49c9.png) 
+    ![](../images/u4-l9-10.png) 
 
 1. From the canvas delete the existed `Sensor_Data` Component. Right click on the **Sensor_Data_1 (1)** and then **Delete (2)**.
 
@@ -480,13 +480,13 @@ data.
 
     ![](../images/g19.png)
 
-1. **Inputs & Outputs**: We'll skip the section by clicking **Next**.    
+1. **Inputs & Outputs:** We'll skip the section by clicking **Next**.    
 
 1. Select the Compute Created **Test (1)** and click **Next (2)**.   
 
     ![](../images/nc17.png) 
 
-     >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+     >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
