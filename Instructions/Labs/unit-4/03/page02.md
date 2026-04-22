@@ -34,7 +34,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-   - **Name**: **`PCA_Anomaly_Model` (1)**
+   - **Name**: **PCA_Anomaly_Model<inject key="Deployment ID" enableCopy="false"></inject> (1)**
    - **Friendly Name**: *(Optional)*.
       Azure will auto-fill this based on the name.
    - **Hub (Optional)**: Leave this as “None” unless instructed otherwise.
@@ -50,7 +50,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 1. Wait for the workspace to create — it may take around 2–3 minutes.    
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces” (1)**. Locate the workspace you just created `PCA Anomaly Model` **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **“Workspaces” (1)**. Locate the workspace you just created **PCA_Anomaly_Model<inject key="Deployment ID" enableCopy="false"></inject> (2)**.
 
    ![](../images/lab01-image3.png) 
    
