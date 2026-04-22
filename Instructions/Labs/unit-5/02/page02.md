@@ -31,7 +31,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter `NASCAR-Data`  **(1)**
+    - **Name**: Enter **NASCAR-Data-<inject key="DeploymentID" enableCopy="false" />**  **(1)**
     - **Friendly Name**: Leave default **(2)**
     - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(3)**
     - **Advanced Settings**:
@@ -42,7 +42,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
       ![](../images/n52-c1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 3.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
@@ -77,7 +77,7 @@ In this task you will upload the NASCAR Champions History data to your Azure ML 
 
 1. On **Create data asset** page enter the following data.
 
-    - Name: Enter **`NASCAR_Season_History` (1)**  
+    - Name: Enter **NASCAR_Season_History__<inject key="DeploymentID" enableCopy="false" /> (1)**  
     - Description: `This dataset tracks the victorious drivers and 
 cars throughout NASCAR’s history.` **(2)**
     - Select type: **Tabular (3)**  
@@ -156,13 +156,17 @@ In this task, you will clean and prepare the NASCAR dataset using Azure ML Desig
 
     ![](../images/g21.png)
 
-     >**Note**: We are selecting the features most relevant for identifying topperforming athletes. Columns like Index and Car Number are not helpful for our analysis and are excluded.
+     >**Note**: We are selecting the features most relevant for identifying top performing athletes. Columns like Index and Car Number are not helpful for our analysis and are excluded.
 
      - This is the **eliminating unnecessary features** step.
 
 1. Click on **Save**.
 
     ![](../images/g22.png)
+
+1. Click on the icon to close the settings
+
+   ![](../images/131.png)
 
 1. In the **Component (1)** tab, search for **Remove Duplicate Rows (2)**. Drag it into the canvas **(3)**.
 
@@ -181,6 +185,10 @@ In this task, you will clean and prepare the NASCAR dataset using Azure ML Desig
 1. Set “Retain first duplicate row” to **True (1)** and then click on **Save (2)**.
 
    ![](../images/n52c-18.png)
+
+1. Click on the icon to close the settings
+
+   ![](../images/132.png)
 
 
 ### Task 4: Storing the Data
@@ -222,7 +230,7 @@ In this task, you will configure and run your data preprocessing pipeline in Azu
 
     ![](../images/n52c24.png)
 
-1. Now we’re on the **Runtime settings** step of the pipeline submission process. This is where you choose the **computer (called a compute cluster)** that Azure will use to run your pipeline.
+1. Now we are on the **Runtime settings** step of the pipeline submission process. This is where you choose the **computer (called a compute cluster)** that Azure will use to run your pipeline.
 
     - Select Compute Type: From the dropdown, select **Compute cluster (1)**.
 
@@ -240,11 +248,11 @@ In this task, you will configure and run your data preprocessing pipeline in Azu
 
       ![](../images/ag2.png)  
 
-1. **Advanced Settings**: Give a Compute Name as **Small-Cluster (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings**: Give a Compute Name as **Small-Cluster-<inject key="DeploymentID" enableCopy="false" /> (1)** and leave everything default. Then click **Create (2)**.
 
     ![](../images/n52c26.png) 
 
-1. Select the Compute Created **Small-Cluster (1)** and click **Next (2)**.   
+1. Select the Compute Created **Small-Cluster-<inject key="DeploymentID" enableCopy="false" /> (1)** and click **Next (2)**.   
 
     ![](../images/n52c27.png) 
 
@@ -258,7 +266,7 @@ In this task, you will configure and run your data preprocessing pipeline in Azu
 
     ![](../images/n52c29.png)      
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it is finished successfully, the status will show as **Completed**.
 
     ![](../images/n52c30.png)     
 
@@ -279,13 +287,15 @@ read and learn from.
 
 In this task, you will explore how to visualize your dataset at various stages of the pipeline using Azure ML Designer. You’ll preview the data, examine column profiles, and review visual summaries like histograms, box plots, and value counts to better understand the distribution and characteristics of your features.
 
-1. Right-click the **NASCAR_Season_History (1)** component (your input dataset). Then select **Preview Data (2)**.
+1. Now go to the **Jobs (1)** from the left pane. Right-click on the **NASCAR_Season_History (2)** component (your input dataset). Then select **Preview Data (3)**.
 
-    ![](../images/g23.png)
+    ![](../images/g23-1.png)
 
 1. In the preview window, switch to the **“Profile”** tab. Azure will automatically generate a summary visualization for each column in the dataset, based on its data type.    
 
     ![](../images/n52c36.png)
+
+1. Click on **Index (1)** column and select the chart type **(2)** .
 
 1. Azure offers different chart types depending on the type of data (numerical, categorical, etc.). Some examples include:
 
