@@ -295,9 +295,9 @@ In this task, you will replace the Linear Regression model with a Boosted Decisi
 
      ![](../images/U5lab013-image53.png)
    
-1. Switch to the **Component** tab in the left panel and search and drag a **Boosted Decision Tree Regression** module onto the canvas.
+1. Switch to the **Component (1)** tab in the left panel and search for **Boosted Decision Tree Regression (2)** and drag a **Boosted Decision Tree Regression (3)** module onto the canvas.
 
-1. Delete the **Linear Regression** module and replace it with the **Boosted Decision Tree Regression** module. Then click on **Save**.
+1. Delete the **Linear Regression** module and replace it with the **Boosted Decision Tree Regression (4)** module. Then click on **Save (5)**.
 
     ![](../images/U5lab013-image47.png)
 
