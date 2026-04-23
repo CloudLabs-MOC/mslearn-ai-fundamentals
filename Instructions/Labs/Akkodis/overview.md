@@ -1,4 +1,4 @@
-# Akkodis - Azure and Azure AI Learning Workshop
+# Suncorp Microsoft Foundry Workshop
 
 Using this environment, you can explore the full range of Azure capabilities and services, including Microsoft Foundry, Azure AI services, and many others. A detailed overview of the sandbox environment is provided below.
 
