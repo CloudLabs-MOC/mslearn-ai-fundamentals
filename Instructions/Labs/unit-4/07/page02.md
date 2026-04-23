@@ -499,6 +499,22 @@ on test data.
 
 <validation step="ace2f744-042b-4f87-b587-5fdfbb2f4c68" />
 
+### Resource Cleanup
+
+> **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
+
+1. Navigate back to Azure portal. In the Search bar, search for **Azure Machine Learning (1)** and select **Azure Machine Learning (2)** from the list.
+
+    ![](../images/aml-cleanup-01.png)
+
+1. Select the workspace **Logistics_Prediction**.
+
+    ![](../images/aml-cleanup-U4L07.png)
+
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Logistics_Prediction (3)** to confirm deletion and click on **Delete (4)**.
+
+    ![](../images/aml-cleanup-U4L07-01.png)
+
 # Review 
 
 In this lab, you have completed the following tasks:

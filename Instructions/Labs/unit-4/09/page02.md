@@ -515,6 +515,22 @@ data.
 
     >**Note:** Here you can see less Accuracy, precision values due to Corrupted Dataset 
 
+### Resource Cleanup
+
+> **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
+
+1. Navigate back to Azure portal. In the Search bar, search for **Azure Machine Learning (1)** and select **Azure Machine Learning (2)** from the list.
+
+    ![](../images/aml-cleanup-01.png)
+
+1. Select the workspace **Training_data_<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](../images/aml-cleanup-U4L09.png)
+
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Training_data_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
+
+    ![](../images/aml-cleanup-U4L09-01.png)
+
 ## Review
 
 In this lab, you have completed the following tasks:
