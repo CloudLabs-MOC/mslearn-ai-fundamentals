@@ -271,6 +271,22 @@ Navigate to the **“Recursion”** section in the **notebook** and follow the i
 
 ![](../images/n59c20.png)
 
+### Resource Cleanup
+
+> **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
+
+1. Navigate back to Azure portal. In the Search bar, search for **Azure Machine Learning (1)** and select **Azure Machine Learning (2)** from the list.
+
+    ![](../images/aml-cleanup-01.png)
+
+1. Select the workspace **Class_Workspace**.
+
+    ![](../images/aml-cleanup-U5L07.png)
+
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Class_Workspace (3)** to confirm deletion and click on **Delete (4)**.
+
+    ![](../images/aml-cleanup-U5L07-1.png)
+
 ## Review
 
 In this lab, you have completed the following tasks:
