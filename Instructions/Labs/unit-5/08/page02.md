@@ -32,27 +32,27 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-   - **Name**: `ClemsonWinPredictor`  
-   - **Friendly Name**: *(Optional)*  
+   - **Name:** **ClemsonWinPredictor_<inject key="DeploymentID" enableCopy="false"/> (1)**  
+   - **Friendly Name:** *(Optional)*  
       Azure will auto-fill this based on the name.
-   - **Hub (Optional)**: Leave this as “None” unless instructed otherwise.
-   - **Advanced Settings**:
-   - **Subscription**: Select the appropriate Azure subscription from the dropdown. 
-   - **Resource Group**: **ODL-SREB-<inject key="DeploymentID" enableCopy="false"/>** 
-   - **Region**: Select **<inject key="Region" enableCopy="false" />** for better performance.
-   - After filling out all the required fields, click the **“Create”** button.
+   - **Hub (Optional):** Leave this as “None” unless instructed otherwise **(2)**.
+   - **Advanced Settings:**
+   - **Subscription:** Select the appropriate Azure subscription from the dropdown. 
+   - **Resource Group:** **ODL-SREB-<inject key="DeploymentID" enableCopy="false"/> (3)** 
+   - **Region:** Select **<inject key="Region" enableCopy="false" /> (4)** for better performance.
+   - After filling out all the required fields, click the **Create (5)** button.
 
-        ![](../images/U5lab08-image1.png) 
+        ![](../images/u5-l8-1.png) 
 
-    >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+    >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces**. Locate the workspace you just created **`ClemsonWinPredictor`**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Locate the workspace you just created **ClemsonWinPredictor_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-     ![](../images/U5lab08-image2.png) 
+     ![](../images/u5-l8-2.png) 
    
 1. Click on its name to open it. This will take you inside the workspace where you can build and run machine learning experiments.
 
-    ![](../images/U5lab08-image3.png) 
+    ![](../images/u5-l8-3.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -70,7 +70,7 @@ this tab.
 
     ![](../images/lab01-image5.png) 
 
-   >**Note**:  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
+   >**Note:**  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
 components.
 
 1. Once the **Designer** page is loaded, make sure that you’re on the **Classic prebuilt** tab under the **New pipeline** section. From here, click on the box with a **➕ (plus icon)** that says, **Create a new pipeline using classic prebuilt components**.
@@ -79,37 +79,51 @@ components.
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-    ![](../images/lab01-image7.png) 
+    ![](../images/u5-l8-4.png) 
 
 1. On **Create a new workspace to get started with Azure ML** page enter the following data then click on **Next (2)**.
 
-   - Name the dataset: **`Clemson_Dataset`** **(1)** 
+   - Name the dataset: **Clemson_Dataset** **(1)** 
   
-    ![](../images/U5lab08-image4.png) 
+      ![](../images/U5lab08-image4.png) 
 
 1. On the **Choose a source for your data asset** page, choose **From local files (1)** the click on **Next (2)**. 
 
-    ![](../images/lab01-image9.png) 
+    ![](../images/u5-l8-5.png) 
 
 1. On the **Select a datastore** page select the following option:  
+   
    - Under **Datastore type**, select **Azure Blob Storage (1)**
-   - Choose the datastore named: **`workspaceblobstore` (2)**
+   
+   - Choose the datastore named: **workspaceblobstore (2)**
+   
    - Click **Next (3)**  
 
-   ![](../images/lab01-image10.png)
+     ![](../images/lab01-image10.png)
 
 1. On the **Choose a file or folder** page, select **Upload files or folder (1)** from the dropdown, then select **Upload files (2)**.
 
     ![](../images/lab01-image11.png) 
 
 1. **File or Folder Selection**  
-   - In the file browser, navigate to `C:\Labs\Allfiles\unit5-lesson8` and then select the file: `SREB_U5_L8_CleanedDataset`  
+   
+   - In the file browser, navigate to `C:\Labs\Allfiles\unit5-lesson8` and then select the file: `SREB_U5_L8_CleanedDataset` **(1)**  
+   
    - Wait for the file to appear under Upload list  
-   - Click **Next**  
+   
+   - Click **Next (2)**  
 
-    ![](../images/U5lab08-image5.png) 
+     ![](../images/U5lab08-image5.png) 
 
-1. In **Settings** page, Click on **Next** Button **Twice** and then click on **Create** Button
+1. On the **Settings** page, review the fields and ensure they match the expected format then click **Next**  
+
+    ![](../images/u5-l8-6.png)
+
+1. On the **Schema** page, ensure the schema fields are correctly recognized then click **Next**  
+
+    ![](../images/u5-l8-7.png)
+
+1. On the **Review** page, click **Create** to finalize the dataset upload
 
    ![](../images/U5lab08-image9.png) 
 
@@ -124,11 +138,9 @@ components.
 
 In this task you will prepare your dataset for modeling by **Clemson_Dataset** values. You will add and configure the **Clemson_Dataset** component to handle incomplete or missing sensor readings, ensuring the dataset is reliable for training your anomaly detection model.
 
-1. Under the **Data** tab, locate the uploaded dataset named **Clemson_Dataset**.
+1. Under the **Data (1)** tab, locate the uploaded dataset named **Clemson_Dataset (2)**.
 
-   ![](../images/U5lab08-image10.png)
-
-1. Drag **Clemson_Dataset** onto the canvas
+1. Drag **Clemson_Dataset** onto the canvas **(3)**.
 
     ![](../images/U5lab08-image6.png)
 
@@ -136,7 +148,7 @@ In this task you will prepare your dataset for modeling by **Clemson_Dataset** v
 
 In this task, you will add Select Columns in Dataset Component that filter your dataset to include only the columns (features) relevant to your machine learning model. This helps improve model performance and reduces unnecessary complexity.
 
-1. Switch to the **Component** tab and search for **Select Columns in Dataset**. Then drag the component into your canvas, placing it below the **Clemson_Dataset**.
+1. Switch to the **Component (1)** tab and search for **Select Columns in Dataset (2)**. Then drag the component into your canvas **(3)**, placing it below the **Clemson_Dataset**.
 
     ![](../images/U5lab08-image7.png)
 
@@ -153,9 +165,7 @@ In this task, you will split your cleaned dataset into training and testing sets
 
      ![](../images/U5lab08-image11.png)
 
-1. Choose the following input features then click **Save**
-    **Rk, Year, W, L, T, Conf_W, Conf_L, Conf_T, Conf_Pct, SRS, SOS, AP_Pre, 
-    AP_High, AP_Post, CFP_High, CFP_Final, Pct**
+1. Select **Column names** and then type or select all these columns **Rk, Year, W, L, T, Conf_W, Conf_L, Conf_T, Conf_Pct, SRS, SOS, AP_Pre, AP_High, AP_Post, CFP_High, CFP_Final, Pct** **(1)** and then **Save (2)**.
 
     ![](../images/U5lab013-image37.png)
      
@@ -163,7 +173,7 @@ In this task, you will split your cleaned dataset into training and testing sets
 
     ![](../images/U5lab08-image13.png)
 
-1. Switch to the **Component** tab and search for **Split Data**. Then drag the component into your canvas.
+1. Switch to the **Component (1)** tab in the left panel and search for **Split Data (1)**. Then drag the component into your canvas **(3)**.
 
     ![](../images/U5lab08-image14.png)
 
@@ -171,11 +181,11 @@ In this task, you will split your cleaned dataset into training and testing sets
 
      ![](../images/U5lab08-image15.png)
 
-1. Double click on the **Split Data module** and configure the following then click on **Save**.
+1. Double click on the **Split Data module (1)** and configure the following then click on **Save (4)**.
 
-   a. Fraction of rows in the first output dataset: 0.8 (80% training)
+   a. Fraction of rows in the first output dataset: 0.8 (80% training) **(2)**
 
-   b. Leave Stratified split as default. 
+   b. Leave Stratified split as default **(3)**.  
 
       ![](../images/U5lab08-image16.png)
 
@@ -183,26 +193,28 @@ In this task, you will split your cleaned dataset into training and testing sets
 
 In this task, you will test your trained model on unseen data, evaluate its performance using scoring metrics, and run the full machine learning pipeline using Azure ML’s compute resources.
 
-1. Switch to the **Component** tab and search for **Linear Regression**. Then drag the component into your canvas.
+1. Switch to the **Component (1)** tab in the left panel and search for **Linear Regression (2)**. Then drag the component into your canvas **(3)** beside the Split Data component **(4)**.
    
 1. Drag the **Linear Regression** module onto the canvas as shown in the below image.
 
     ![](../images/U5lab08-image17.png)
 
-1. Search for **Train Model**. Then drag the component into your canvas. Drag the **Train Model** module onto the canvas as shown in the below image.
+1. Switch to the **Component (1)** tab in the left panel and search for **Train Model (2)**. Then drag the component into your canvas **(3)** as shown in the below image **(4)**.
 
     ![](../images/U5lab08-image18.png)
 
 1. Connect:
 
-   - Left input → output of Linear Regression
-   - Right input → first output of Split Data
+   - Left input → output of Linear Regression **(1)**
+   - Right input → first output of Split Data **(2)**
 
       ![](../images/U5lab08-image19.png)
 
-1. Double click on the **Train Model** module. In the right panel, click **Edit column** selection.
+1. Double click on the **Train Model (1)** module. In the right panel, click **Edit column (2)** selection.
 
-1. Set the Label column: Enter **Pct** then click **Save**.
+    ![](../images/u5-l8-8.png)
+
+1. Set the Label column: Enter **Pct (1)** then click **Save (2)**.
 
     ![](../images/U5lab08-image20.png)
 
@@ -210,24 +222,24 @@ In this task, you will test your trained model on unseen data, evaluate its perf
 
 ### Task 4: Add and Configure Score Model and Evaluate Model
 
-1. Search for **Score Model**. Then drag the component into your canvas. Drag the **Score Model** module onto the canvas as shown in the below image.
+1. Switch to the **Component (1)** tab in the left panel and search for and search for **Score Model (2)**. Then drag the component into your canvas **(3)** as shown in the below image.
 
    **Connect:**
 
-   a. Left input → output of Train Model
+   a. Left input → output of Train Model **(4)**
 
-   b. Right input → second output of Split Data (test data)
+   b. Right input → second output of Split Data (test data) **(5)**
 
       ![](../images/U5lab08-image21.png)
 
 1. This module applies the trained model to the test dataset and generates 
 predictions
 
-1. Search for **Evaluate Model**. Then drag the component into your canvas. Drag the **Evaluate Model** module onto the canvas as shown in the below image.
+1. On the **Component (1)** tab in the left panel and search for **Evaluate Model (2)**. Then drag the component into your canvas **(3)** as shown in the below image.
 
    **Connect:**
     
-    - Connect the output of Score Model to the left input of Evaluate Model. Leave the second (right) input empty, since only one model is being evaluated
+    - Connect the output of Score Model to the left input of Evaluate Model **(5)**. Leave the second (right) input empty, since only one model is being evaluated
 
       ![](../images/U5lab08-image22.png)
 
@@ -235,7 +247,7 @@ predictions
    
 1. Click **Save (1)** at the top right. Then select the **Configure & Submit (2)** button in the top-right corner.
 
-     ![](../images/U5lab08-image23.png) 
+     ![](../images/u5-l8-9.png) 
 
 1. Now that your pipeline is fully built with all the components connected—from data ingestion to anomaly scoring—you’re ready to run it.
 
@@ -253,9 +265,11 @@ In this task you will configure the details needed to run your pipeline, includi
 
 1. On the **Inputs & outputs** page, click on **Next** to skip.
 
-1. On the Runtime Settings page, from the dropdown of the **Select Compute Type** section, click on Compute Cluster. Since no cluster is currently available, we’ll need to create one. Click on **Create Azure ML Compute Cluster**.
+1. On the Runtime Settings page, from the dropdown of the **Select Compute Type** section, click on **Compute Cluster (1)**. Since no cluster is currently available, we’ll need to create one. Click on **Create Azure ML Compute Cluster (2)**.
 
-1. On the **Select virtual machine** page, specify the following then click on **Next** :
+    ![](../images/u5-l8-10.png) 
+
+1. On the **Select virtual machine** page, specify the following then click on **Next:**
   
     - Location: Confirm that the selected region is the same as your workspace **<inject key="Region" enableCopy="false" /> (1)**
     
@@ -275,8 +289,7 @@ In this task you will configure the details needed to run your pipeline, includi
 
      ![](../images/lab07-image35.png)
 
-      >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
-
+      >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. On **Review + Submit** page, click on **Submit**. 
 
@@ -284,9 +297,9 @@ In this task you will configure the details needed to run your pipeline, includi
 
 1. Once submitted, a success notification appears at the top of the page. Click on **View details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-      ![](../images/lab07-image37.png)
+      ![](../images/u5-l8-11.png)
 
-1. Once the **Pipeline** is run, you can see the similar result.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once the **Pipeline** is Completed, you can see the similar result.
 
      ![](../images/U5lab08-image26.png) 
 
@@ -294,7 +307,7 @@ In this task you will configure the details needed to run your pipeline, includi
 
    ![](../images/U5lab08-image25.png) 
     
-   >**Note**: Both the Jupyter Notebook and Azure ML pipelines were used to train a Linear Regression model to predict team win percentage (Pct) using the same input features!
+   >**Note:** Both the Jupyter Notebook and Azure ML pipelines were used to train a Linear Regression model to predict team win percentage (Pct) using the same input features!
 
 ### Resource Cleanup
 
@@ -304,13 +317,13 @@ In this task you will configure the details needed to run your pipeline, includi
 
     ![](../images/aml-cleanup-01.png)
 
-1. Select the workspace **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/>**.
+1. Select the workspace **ClemsonWinPredictor_<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](../images/aml-cleanup-U5L07.png)
+    ![](../images/u5-l8-12.png)
 
 1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
-    ![](../images/aml-cleanup-U5L07-1.png)
+    ![](../images/u5-l8-13.png)
 
 ## Review
 
