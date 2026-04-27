@@ -706,7 +706,7 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
 1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
-    ![](../images/aml-cleanup-U5L06-01.png)
+    ![](../images/u5-l10-29.png)
        
 ## Review
 
