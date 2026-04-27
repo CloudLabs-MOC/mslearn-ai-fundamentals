@@ -10,7 +10,7 @@ In this lab, you will be able to complete the following tasks:
 - Task 2: Add a dataset to your Azure ML pipeline in the Designer
 - Task 3: Add the Dataset to Your Pipeline Canvas
 - Task 4: Train the Model
-- Task 5: : Run the Pipeline and Submit the Job
+- Task 5: Run the Pipeline and Submit the Job
 - Task 6: Use existing pipeline and walk through real Azure ML Designer errors
 
 ## Architecture diagram
@@ -170,7 +170,7 @@ training data) **(2)**
 
       ![](../images/n56c17.png)
 
-1. Double Click on the **Train Model** module **(1)**, Click **Edit column** under **Label column**.
+1. Double Click on the **Train Model** module **(1)**, Click **Edit column (2)** under **Label column**.
 
     ![](../images/n56c18.png)
 
@@ -201,7 +201,7 @@ training data) **(2)**
 
       ![](../images/n56c23.png)     
 
-## Task 5: : Run the Pipeline and Submit the Job
+## Task 5: Run the Pipeline and Submit the Job
 
 In this task, you will configure and run your machine learning pipeline on a compute cluster in Azure ML. Once the job completes, you will preview and record the model evaluation results for comparison.
 
@@ -279,7 +279,7 @@ In this task, you will intentionally introduce and resolve common errors in an A
 - Apply a fix using a structured process
 - Rerun the pipeline and reflect
 
-#### Error 1 – Missing Label Column in Train Mode
+### Error 1 – Missing Label Column in Train Mode
 
 **Problem to Simulate:**
 
@@ -366,11 +366,11 @@ outcome.
 
 If you do not understand this, you will continue to make errors in future lessons when working with classification, regression, and evaluation
 
-#### Error 2 – Disconnected Module in Score Model
+### Error 2 – Disconnected Module in Score Model
 
 Problem to Simulate:
 
-`You will intentionally trigger an error by disconnecting the inputs from the **Score Model** module.`
+`You will intentionally trigger an error by disconnecting the inputs from the Score Model module.`
 
 1. Right click on the **links to Score Model** and then **Delete**.
 
@@ -435,7 +435,7 @@ lessons
 
     ![](../images/N10c37.png)
 
-#### Error 3 – Wrong Output from Split Data Connected to Train Model
+### Error 3 – Wrong Output from Split Data Connected to Train Model
 
 **Problem to Simulate:**
 
@@ -509,8 +509,7 @@ This is a foundational lesson for model integrity and trustworthiness.
 
     ![](../images/N10c45.png)
 
-
-#### Error 4 – Dataset Missing Expected Label Column (PTS)
+### Error 4 – Dataset Missing Expected Label Column (PTS)
 
 `Problem to Simulate:`
 
@@ -655,7 +654,7 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
      This will display a structured diagnostic output. In the example shown, Azure states:"Message": `"ColumnNotFound: Column with name or index \"PTS\" not found."`   
 
-1. After a pipeline failure, you can navigate to the Train Model module and select the **Outputs + logs (1)** tab. From there, the **user_logs/std_log.txt (2)** file reveals the full traceback of what went wrong during execution **(3)**. This is often more detailed than the summary shown in **error_info.json**.
+1. After a pipeline failure, you can navigate to the Train Model module and on the **Outputs + logs (1)** tab. From there, select the **user_logs/std_log.txt (2)** file reveals the full traceback of what went wrong during execution **(3)**. This is often more detailed than the summary shown in **error_info.json**.
 
      ![](../images/N10c63.png)
 
@@ -701,11 +700,11 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
     ![](../images/aml-cleanup-01.png)
 
-1. Select the workspace **Sports_Analytics**.
+1. Select the workspace **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](../images/aml-cleanup-U5L06.png)
+    ![](../images/u5-l10-28.png)
 
-1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics (3)** to confirm deletion and click on **Delete (4)**.
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
     ![](../images/aml-cleanup-U5L06-01.png)
        
