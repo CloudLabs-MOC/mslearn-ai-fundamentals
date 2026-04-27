@@ -425,6 +425,14 @@ The agent is defined within your Foundry project, and there's a convenient way t
     >
     >- **Password:** <inject key="AzureAdUserPassword"></inject>
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="26a02172-cb11-4e43-9aae-fb763d33b068" />
+
 ## Task 7: Publish the agent and use it in a client app
 
 In this task, you’ll publish the agent to a dedicated endpoint and use sample code to integrate and interact with it from a client application.

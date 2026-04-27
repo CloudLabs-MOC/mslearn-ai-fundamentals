@@ -120,6 +120,14 @@ In this task, you’ll create an agent, select a generative AI model, and define
 
     ![](./media/lab4an-p2t2p7.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="c1332062-2ffd-464f-9300-783ce72d3269" />
+
 ## Task 3: Configure Azure Speech Voice live
 
 In this task, you’ll enable voice capabilities for the agent by configuring Azure Speech Voice Live and selecting appropriate speech input and output settings.
