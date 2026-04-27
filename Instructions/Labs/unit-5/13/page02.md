@@ -234,7 +234,7 @@ In this task you will configure the details needed to run your pipeline, includi
 
     ![](../images/nc14.png) 
 
-1. On the **Select virtual machine** page, specify the following then click on **Next** :
+1. On the **Select virtual machine** page, specify the following then click on **Next (5):**
   
     - Location: Confirm that the selected region is the same as your workspace **<inject key="Region" enableCopy="false" /> (1)**
     
@@ -264,9 +264,9 @@ In this task you will configure the details needed to run your pipeline, includi
 
       ![](../images/u5-l13-15.png)
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
-     ![](../images/U5lab013-image26.png) 
+     ![](../images/u5-l13-17.png) 
 
 1. Right click on the **Score Model (1)** and Select **Preview Data (2)** > **Scored Dataset (3)** to compare Scored Labels and actual Starter. 
 
@@ -274,7 +274,7 @@ In this task you will configure the details needed to run your pipeline, includi
 
      ![](../images/U5lab013-image23.png)
    
-1. Right click on the **Evaluate Model** and then on **Preview Data** > **Evaluation Results**.
+1. Right click on the **Evaluate Model (1)** and then on **Preview Data (2)** > **Evaluation Results (3)**.
 
    ![](../images/U5lab013-image24.png)
 
