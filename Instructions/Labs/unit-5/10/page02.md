@@ -17,7 +17,7 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit5-lesson10.png)
 
-### Task 1: Set Up the Azure ML Workspace
+## Task 1: Set Up the Azure ML Workspace
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
 
@@ -31,32 +31,32 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter `Sports_Analytics`  **(1)**
-    - **Friendly Name**: Leave default
-    - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
-    - **Advanced Settings**:
-    - **Subscription**: Select the appropriate Azure subscription from the dropdown **(3)**
-    - **Resource Group**: Select **ODL-SREB-U5L10** **(4)**
-    - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+    - **Name:** Enter **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/> (1)**
+    - **Friendly Name:** Leave default
+    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
+    - **Advanced Settings:**
+    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+    - **Resource Group:** Select **ODL-SREB-U5L10** **(4)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/N10-c1.png) 
+      ![](../images/u5-l10-1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Sports_Analytics` **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-     ![](../images/N10c2.png) 
+     ![](../images/u5-l10-2.png) 
 
 1. This will take you inside the workspace where you can build and run machine learning experiments.
 
-     ![](../images/N10c3.png)  
+     ![](../images/u5-l10-3.png)  
 
 1. In the side menu of your workspace, select **Designer (1)**. Click **Create a new pipeline using classic prebuilt components (2)**.     
 
-     ![](../images/N10c4.png) 
+     ![](../images/u5-l10-4.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -65,13 +65,13 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 <validation step="d80779f4-17bd-44fe-a5b0-1ac36411b920" />
 
-### Task 2: Add a dataset to your Azure ML pipeline in the Designer
+## Task 2: Add a dataset to your Azure ML pipeline in the Designer
 
 In this task you will upload the SC Basketball Enhanced data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-     ![](../images/N10c5.png)
+     ![](../images/u5-l10-5.png)
 
 1. On **Create data asset** page enter the following data.
 
@@ -83,7 +83,7 @@ In this task you will upload the SC Basketball Enhanced data to your Azure ML wo
 
 1. On the **Choose a source for your data asset** page, choose **From local files (1)** the click on **Next (2)**. 
 
-    ![](../images/lab01-image9.png) 
+     ![](../images/u5-l8-5.png) 
 
 1. On the **Select a datastore** page select the following option:  
     
@@ -124,22 +124,22 @@ In this task you will upload the SC Basketball Enhanced data to your Azure ML wo
 
 <validation step="b2ba89a5-c09a-446e-9208-e7319ede4bf5" />
 
-### Task 3: Add the Dataset to Your Pipeline Canvas
+## Task 3: Add the Dataset to Your Pipeline Canvas
 
 In this task, you will add the dataset to your Azure ML pipeline canvas and configure a Split Data component. This prepares your data for training and evaluation by splitting it into training and testing subsets.
 
-1. From the left panel, drag your **Train_Test_Validation_Dataset** dataset onto the canvas and then **Save (2)** button at the top of the canvas to avoid losing progress.
+1. From the left panel, drag your **Train_Test_Validation_Dataset (1)** dataset onto the canvas and then **Save (2)** button at the top of the canvas to avoid losing progress.
 
-     ![](../images/N10c11.png)  
+     ![](../images/u5-l10-6.png)  
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Split Data (2).** Drag that component onto the canvas **(3)**.   
 
     - Connect your dataset to the **Split Data** module **(4)**
     - Select **Save (5)**
 
-      ![](../images/n56c13.png)  
+      ![](../images/u5-l10-7.png)  
 
-1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then **Save (7)**:
+1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then **Save (7):**
 
     - Splitting mode: Make sure **Split Rows** is selected **(2)**
     -  Fraction of rows in the first output dataset: Enter `0.7` **(3)**
@@ -149,17 +149,17 @@ In this task, you will add the dataset to your Azure ML pipeline canvas and conf
 
       ![](../images/N10c13.png)  
 
-### Task 4: Train the Model
+## Task 4: Train the Model
 
 In this task, you will train a linear regression model using the training data and evaluate its performance. You’ll add components like Train Model, Score Model, and Evaluate Model to complete and assess your ML pipeline.
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Linear Regression (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c15.png)
+    ![](../images/u5-l10-8.png)
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Train Model (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c16.png)
+    ![](../images/u5-l10-9.png)
 
 1. Connect:
 
@@ -201,7 +201,7 @@ training data) **(2)**
 
       ![](../images/n56c23.png)     
 
-### Task 5: : Run the Pipeline and Submit the Job
+## Task 5: : Run the Pipeline and Submit the Job
 
 In this task, you will configure and run your machine learning pipeline on a compute cluster in Azure ML. Once the job completes, you will preview and record the model evaluation results for comparison.
 
@@ -209,10 +209,10 @@ In this task, you will configure and run your machine learning pipeline on a com
 
     ![](../images/n56c24.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Create new (1)**
-   - New experiment name: **PTS_Split_70_30(2)**
+   - New experiment name: **PTS_Split_70_30 (2)**
 
      ![](../images/n56c25.png)  
 
@@ -231,15 +231,15 @@ pipeline.
 
 1. You are now in the **Virtual Machine** tab for setting up a compute cluster. This step helps Azure decide which kind of machine to use for running your pipeline.
 
-    - **Location**: Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
-    - **Virtual Machine Tier**: Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
-    - **Virtual Machine Type**: Keep this as **CPU (3)** 
-    - **Virtual Machine Size**: Choose **Standard_DS11_v2 (4)**
+    - **Location:** Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
+    - **Virtual Machine Tier:** Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
+    - **Virtual Machine Type:** Keep this as **CPU (3)** 
+    - **Virtual Machine Size:** Choose **Standard_DS11_v2 (4)**
     - Click **Next (5)**  
 
       ![](../images/ag2.png)   
 
-1. **Advanced Settings**: Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings:** Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
 
      ![](../images/n56c29.png)  
 
@@ -247,19 +247,19 @@ pipeline.
 
      ![](../images/n56c30.png)
 
-      >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+      >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
      ![](../images/n56c31.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n56c32.png)      
+     ![](../images/u5-l10-10.png)      
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
 
-     ![](../images/n56c33.png) 
+     ![](../images/u5-l10-11.png) 
 
 1. Once the Pipeline completed, right click on **Evaluate Model (1)** then select **Preview data (2)** and then **Evaluate results (3)**.    
 
@@ -270,7 +270,7 @@ pipeline.
      ![](../images/N10c23.png) 
 
 
-### Task 6: Use existing pipeline and walk through real Azure ML Designer errors
+## Task 6: Use existing pipeline and walk through real Azure ML Designer errors
 
 In this task, you will intentionally introduce and resolve common errors in an Azure ML pipeline to build debugging and troubleshooting skills. You will observe system behavior, apply fixes, and reflect on how these errors impact model training and evaluation.
 
@@ -291,11 +291,11 @@ You will intentionally trigger the error:
 
 1. Navigate to **Designer** from the left navigation pane.
 
-     ![](../images/N10c24.png)
+     ![](../images/u5-l10-12.png)
 
 1. Select the Pipeline.
 
-     ![](../images/N10c25.png)
+     ![](../images/u5-l10-13.png)
 
 1. Right click on **Train Model** module **(1)** and then **Delete (2)**.   
 
@@ -303,7 +303,7 @@ You will intentionally trigger the error:
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Train Model (2).** Drag that component onto the canvas **(3)**.   
 
-     ![](../images/N10c27.png)
+     ![](../images/u5-l10-14.png)
 
 1. Connect it as follows:
 
@@ -315,7 +315,7 @@ You will intentionally trigger the error:
 
       ![](../images/U5lab013-image59.png)    
 
-1. You will now walk through a few configuration steps, then click **Review + Submit (3)**:
+1. You will now walk through a few configuration steps, then click **Review + Submit (3):**
   
    - Experiment name: **Select existing  (1)**
    - Existing experiment: **PTS_Split_70_30(2)**
@@ -329,7 +329,7 @@ You will intentionally trigger the error:
     - **Red warning triangle on the Train Model module (1)**
     - Error panel on the left says: **Label column in Train Model is invalid (2)**.
 
-      ![](../images/N10c30.png)
+      ![](../images/u5-l10-15.png)
 
 **`Fix Instructions:`**
 
@@ -343,7 +343,7 @@ You will intentionally trigger the error:
 
 1. Select **Save (1)** and then after adding the necessary Label Column as, you can see that have fixed the error **(2)**.
 
-    ![](../images/N10c33.png)
+    ![](../images/u5-l10-16.png)
 
 **Why This Is an Error:**
 
@@ -386,6 +386,8 @@ Problem to Simulate:
 
        ![](../images/N10c-34.png)
 
+1. Select **Submit**.
+
 1. What You Will See:
 
      In the error panel:
@@ -394,7 +396,7 @@ Problem to Simulate:
 
      - **The port(s) Dataset of Score Model are required to be connected**
 
-       ![](../images/N10c35.png)
+       ![](../images/u5-l10-17.png)
 
 **Why This Is an Error:**
 
@@ -426,6 +428,8 @@ lessons
      - Select **Configure & Submit (4)**
 
        ![](../images/N10c-36.png)  
+
+1. Select **Submit**.
 
 1. Once you have fixed the error then the pipeline should be fixed and ready to submit.
 
@@ -460,7 +464,7 @@ This may not throw a hard error, but it will lead to incorrect model behavior an
 
 1. Select **View Details**.
 
-    ![](../images/N10c41.png)
+    ![](../images/u5-l10-18.png)
 
 1. Wait for the Pipeline to complete, nce the Pipeline is completed **(1)** then right click on **Evaluate Model (2)** then select **Preview Data (3)** and then **Evaluate results (4)**.
 
@@ -497,7 +501,7 @@ This is a foundational lesson for model integrity and trustworthiness.
 
 1. Navigate to **Designer (1)** from the left pane and then select the **Pipeline created (2)**.
 
-    ![](../images/N10c44.png)
+    ![](../images/u5-l10-19.png)
 
 1. Disconnect the data input to **Train Model**.
 
@@ -574,16 +578,26 @@ You will use a dataset that appears valid but is missing the target column (PTS)
 
      ![](../images/N10c53.png)
 
-1. On the Pipeline setting page, provide the following details and then **Next (3)**:
+1. On the Pipeline setting page, provide the following details and then **Next (3):**
 
     - Experiment name: **Select Existing (1)**
     - Existing experiment: Select **PTS_Split_70_30 (2)**
 
-      ![](../images/N10c54.png)
+      ![](../images/u5-l10-21.png)
+
+1. **Inputs & Outputs**: We'll skip the section by clicking **Next**.
+
+1. Select the Compute Created **Test (1)** and click **Review +Submit (2)**.
+
+     ![](../images/u5-l10-22.png)
+
+1. Select **Submit**.
+
+     ![](../images/u5-l10-20.png)
 
 1. Select **View Details**.
 
-     ![](../images/N10c55.png)
+     ![](../images/u5-l10-18.png)
 
 1. You can see that **Train Model** failed. Azure ML pipeline that fails due to a data 
 schema issue: the dataset Test_dataset_without_Label does not contain the required target column (PTS).
@@ -609,17 +623,17 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
 **Troubleshoot: Finding the Real Error in Azure ML Designer**
 
-1. Click **“Job Overview”** in the top-right after the failed run.
+1. Click **Job Overview** in the top-right after the failed run.
 
-     ![](../images/N10c57.png)
+     ![](../images/u5-l10-23.png)
 
 1. Select **Child jobs**.
 
-     ![](../images/N10c58.png)
+     ![](../images/u5-l10-24.png)
 
 1. Click on the failed module — in this case, **train_model**.     
 
-     ![](../images/N10c59.png)
+     ![](../images/u5-l10-25.png)
 
 1. You will see a Status summary. Click **See more details**.
 
@@ -635,9 +649,9 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
        The label column specified `('PTS')` was not found in the dataset.
 
-1. Once the review is complete, close the page. Then, go to the **Outputs + Logs** tab and Expand the **module_statistics** folder on the left. Click on the **error_info.json** file
+1. Once the review is complete, **Close** the page. Then, go to the **Outputs + Logs (1)** tab and Expand the **module_statistics (2)** folder on the left. Click on the **error_info.json (3)** file
 
-     ![](../images/N10c62.png)
+     ![](../images/u5-l10-26.png)
 
      This will display a structured diagnostic output. In the example shown, Azure states:"Message": `"ColumnNotFound: Column with name or index \"PTS\" not found."`   
 
@@ -645,12 +659,11 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
      ![](../images/N10c63.png)
 
-      >**Note**: The final message highlighted at the bottom is:azureml.studio.common.error ColumnNotFoundError: Column with name or index "PTS" not found.
+      >**Note:** The final message highlighted at the bottom is:azureml.studio.common.error ColumnNotFoundError: Column with name or index "PTS" not found.
 
+1. Navigate to **Designer (1)** from the left pane and then select the **Pipeline created (2)**.
 
-1. Navigate to **Pipeline (1)** and then select the Pipeline created **(2)**.
-
-     ![](../images/N10c64.png)
+     ![](../images/u5-l10-19.png)
 
 1. Right click on **Train_Test_Validation_dataset_1 (1)** and then **Delete (2)**.
 
@@ -664,13 +677,17 @@ This is a common and real-world issue in team workflows, file versioning, and wo
 
      ![](../images/N10c67.png)
 
-1. Select **Review+Submit**.
+1. Select **Review + Submit**.
 
      ![](../images/N10c68.png)
 
-1. Select **View+details**.
+1. Select **Submit**.
 
-     ![](../images/N10c69.png)    
+     ![](../images/u5-l10-20.png)  
+
+1. Once submitted, a success notification appears at the top of the page. Select **View Details**.
+
+     ![](../images/u5-l10-18.png)  
 
 1. Confirm successful run.
 

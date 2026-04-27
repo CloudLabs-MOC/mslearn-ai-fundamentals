@@ -14,7 +14,7 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit5-lesson9.png)
 
-### Task 1: Set Up the Azure ML Workspace
+## Task 1: Set Up the Azure ML Workspace
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Notebook interface to up your Notebook.
 
@@ -28,28 +28,28 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter `Class_Workspace`  **(1)**
-    - **Friendly Name**: Leave default
-    - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
-    - **Advanced Settings**:
-    - **Subscription**: Select the appropriate Azure subscription from the dropdown **(3)**
-    - **Resource Group**: Select **ODL-SREB-U5L09** **(4)**
-    - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+    - **Name:** Enter **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/> (1)**
+    - **Friendly Name:** Leave default
+    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
+    - **Advanced Settings:**
+    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+    - **Resource Group:** Select **ODL-SREB-U5L09** **(4)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/n59-c1.png) 
+      ![](../images/u5-l9-1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Class_Workspac` **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-     ![](../images/n59c2.png) 
+     ![](../images/u5-l9-2.png) 
 
 1. This will take you inside the workspace where you can build and run machine learning experiments.
 
-     ![](../images/n59c21.png)
+     ![](../images/u5-l9-3.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -61,29 +61,31 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ---   
 
-### Task 2: Setting Up Your Notebook
+## Task 2: Setting Up Your Notebook
 
 In this task, you will upload and launch a Jupyter notebook in Azure to explore 2024 season stats from the South Carolina Gamecocks football team. This notebook will help you analyze player data using Python code, setting the foundation for your machine learning tasks.
 
 1. Navigate to **Notebooks (1)** from the left menu and then **Close (2)** the pop up.
 
-   ![](../images/n59c3.png) 
+   ![](../images/u5-l9-4.png) 
 
-1. Select **Add files (1) > Upload files (2)**. 
+1. On Notebooks page, select **Add files (1) > Upload files (2)**. 
 
-   ![](../images/n59c4.png) 
+   ![](../images/u5-l9-5.png) 
 
 1. Click **+** to upload the Notebook.
 
    ![](../images/n59c5.png) 
 
-1. Navigate to  `C:\Labs\Allfiles\unit5-lesson9` and then select the **L9_Notebook.ipynb** and then **Open**.
+1. Navigate to  `C:\Labs\Allfiles\unit5-lesson9` **(1)** and then select the **L9_Notebook.ipynb (2)** and then **Open (3)**.
+
+   ![](../images/u5-l9-6.png) 
 
 1. Once the notebook is uploaded, check the **I trust contents of this file** box **(1)** and then **Upload (2)**.
 
    ![](../images/n59c6.png) 
 
-1. Select **Add files (1) > Upload files (2)**. 
+1. On Notebooks page, select **Add files (1) > Upload files (2)**. 
 
    ![](../images/n59c7.png)
 
@@ -91,7 +93,9 @@ In this task, you will upload and launch a Jupyter notebook in Azure to explore 
 
    ![](../images/n59c5.png)
 
-1. Navigate to  `C:\Labs\Allfiles\unit5-lesson9` and then select **Gamecocks_Running_Stats.csv** and then **Open**.
+1. Navigate to  `C:\Labs\Allfiles\unit5-lesson9` **(1)** and then select **Gamecocks_Running_Stats.csv (2)** and then **Open (3)**.
+
+   ![](../images/u5-l9-7.png) 
 
 1. Once the notebook is uploaded, check the **I trust contents of this file** box **(1)** and then **Upload (2)**.
 
@@ -101,7 +105,7 @@ In this task, you will upload and launch a Jupyter notebook in Azure to explore 
 
    ![](../images/n59c9.png)
 
-1. On the top of the notebook, select **“Select compute”**  dropdown **(1)** and then select the available compute instance **(2)**.
+1. On the top of the notebook, select **Select compute**  dropdown **(1)** and then select the available compute instance **(2)**.
 
    ![](../images/n59c10.png)
 
@@ -109,23 +113,23 @@ In this task, you will upload and launch a Jupyter notebook in Azure to explore 
 
    ![](../images/n59c11.png)
 
-1. Copy the path of your dataset by clicking the three dots to the right of it **(1)** and selecting **“Copy file path” (2)**.
+1. Copy the path of your dataset by clicking the three dots to the right of it **(...) (1)** and selecting **Copy file path (2)**.
 
-   ![](../images/n59c12.png)
+   ![](../images/u5-l9-8.png)
 
-1. Paste the file path in the first code block in the notebook where it says `[INSERT FILE PATH HERE]` as shown below. 
+1. Paste the file path in the first code block in the notebook where it says `[INSERT PATH TO DATASET HERE]` as shown below. 
 
    ![](../images/n59c15.png)
 
-1. Press the **play** button to the left of the first code block. This will start the session, which may take `3-5 minute`s, of which you can move ahead with the lesson while it loads.
+1. Press the **play** button to the left of the first code block. This will start the session, which may take `3-5 minutes`, of which you can move ahead with the lesson while it loads.
    
-   ![](../images/n59c16.png)
+   ![](../images/u5-l9-9.png)
 
 1. This will show the top 5 rows of the dataset you just imported and cleaned.
 
    ![](../images/n59c14.png)
 
-### Task 3: Explore different sections of the Notebook
+## Task 3: Explore different sections of the Notebook
 
 In this task, you will explore key programming concepts—Sequencing, Selection, Iteration, and Recursion—through interactive and technical examples provided in your Jupyter notebook.
 

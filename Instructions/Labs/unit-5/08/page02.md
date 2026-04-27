@@ -18,7 +18,7 @@ In this lab, you will be able to complete the following tasks:
 ## Architecture diagram
 ![](../images/unit5-lesson(8).png)
 
-### Task 1: Create Azure ML Workspace
+## Task 1: Create Azure ML Workspace
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
 
@@ -61,7 +61,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 <validation step="edbc0978-37e1-4c4f-86b3-c450ca55b053" />
 
-### Task 2: Upload the Dataset
+## Task 2: Upload the Dataset
 
 In this task you will upload the SREB U5 L8 CleanedDataset data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
@@ -144,7 +144,7 @@ In this task you will prepare your dataset for modeling by **Clemson_Dataset** v
 
     ![](../images/U5lab08-image6.png)
 
-### Task 4: Add Select Columns in Dataset Component
+## Task 4: Add Select Columns in Dataset Component
 
 In this task, you will add Select Columns in Dataset Component that filter your dataset to include only the columns (features) relevant to your machine learning model. This helps improve model performance and reduces unnecessary complexity.
 
@@ -157,7 +157,7 @@ In this task, you will add Select Columns in Dataset Component that filter your 
     ![](../images/U5lab08-image8.png)
 
 
-### Task 4: Choose Features and Target Column and Add Split Data Module
+## Task 5: Choose Features and Target Column and Add Split Data Module
 
 In this task, you will split your cleaned dataset into training and testing sets, choose a Linear Regression model, and train it using historical data to predict team performance.
 
@@ -189,7 +189,7 @@ In this task, you will split your cleaned dataset into training and testing sets
 
       ![](../images/U5lab08-image16.png)
 
-### Task 4: Add and Configure Linear Regression and Train Model Module
+## Task 6: Add and Configure Linear Regression and Train Model Module
 
 In this task, you will test your trained model on unseen data, evaluate its performance using scoring metrics, and run the full machine learning pipeline using Azure ML’s compute resources.
 
@@ -220,7 +220,7 @@ In this task, you will test your trained model on unseen data, evaluate its perf
 
 1. This step trains the regression model using the training portion of the data
 
-### Task 4: Add and Configure Score Model and Evaluate Model
+## Task 7: Add and Configure Score Model and Evaluate Model
 
 1. Switch to the **Component (1)** tab in the left panel and search for and search for **Score Model (2)**. Then drag the component into your canvas **(3)** as shown in the below image.
 
@@ -251,7 +251,7 @@ predictions
 
 1. Now that your pipeline is fully built with all the components connected—from data ingestion to anomaly scoring—you’re ready to run it.
 
-### Task 5: Configure Pipeline Job Basics and Run the Pipeline
+## Task 8: Configure Pipeline Job Basics and Run the Pipeline
 
 In this task you will configure the details needed to run your pipeline, including setting up a new experiment and creating a compute cluster. You will submit the pipeline job to Azure ML to execute your workflow.
 
@@ -309,7 +309,7 @@ In this task you will configure the details needed to run your pipeline, includi
     
    >**Note:** Both the Jupyter Notebook and Azure ML pipelines were used to train a Linear Regression model to predict team win percentage (Pct) using the same input features!
 
-### Resource Cleanup
+## Resource Cleanup
 
 > **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
 
@@ -321,7 +321,7 @@ In this task you will configure the details needed to run your pipeline, includi
 
     ![](../images/u5-l8-12.png)
 
-1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Class_Workspace_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **ClemsonWinPredictor_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
     ![](../images/u5-l8-13.png)
 
