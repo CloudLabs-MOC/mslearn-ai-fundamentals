@@ -107,7 +107,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
      ![](../images/lab07-image4.png) 
 
-1. On the **Choose a source for your data asset** page, choose **From local files** the click on **Next**. 
+1. On the **Choose a source for your data asset** page, choose **From local files (1)** the click on **Next (2)**. 
 
     ![](../images/lab01-image9.png) 
 
@@ -128,19 +128,19 @@ that says, **Create a new pipeline using classic prebuilt components**.
    
    - In the file browser, navigate to `C:\Labs\Allfiles\unit4-lesson7` and then select the file: **`US_Manufacturing_Logistics_Dataset`**  
    
-   - Wait for the file to appear under Upload list  
+   - Wait for the file to appear under Upload list **(1)**
    
-   - Click **Next**  
+   - Click **Next (2)**  
 
      ![](../images/lab07-image6.png) 
 
 1. On the **Settings** page, review the fields and ensure they match the expected format then click **Next**  
 
-    ![](../images/lab07-image7.png) 
+    ![](../images/u4-l7-01.png) 
 
 1. On the **Schema** page, ensure the schema fields are correctly recognized then click **Next**  
 
-    ![](../images/lab07-image8.png) 
+    ![](../images/u4-l7-02.png) 
 
 1. On the **Review** page, click **Create** to finalize the dataset upload
 
@@ -167,7 +167,7 @@ Inaccurate or missing data can break machine learning models or give unreliable 
 
     ![](../images/lab07-image13.png) 
 
-1. Now you will Configure the **Clean Missing Data** component. Double-click the **Clean Missing Data** block on the canvas. Then click the blue **Edit column** link next to **Columns to be cleaned**. This will open a pop-up window.  
+1. Now you will Configure the **Clean Missing Data** component. Double-click the **Clean Missing Data (1)** block on the canvas. Then click the blue **Edit column (2)** link next to **Columns to be cleaned**. This will open a pop-up window.  
 
     ![](../images/lab07-image14.png) 
 
