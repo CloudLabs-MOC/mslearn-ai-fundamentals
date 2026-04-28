@@ -14,7 +14,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 
 ![](../media/g38.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
@@ -23,7 +23,6 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
 ![Access Your VM and Lab Guide](../media/g39.png)
-
 
 ## Utilizing the Split Window Feature
  
@@ -63,17 +62,15 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Next, provide your Temporary Access Pass:
  
-   - **Enter Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](../media/u4-l9-0.png)
  
-5. If prompted to stay signed in, you can click **No**.
+4. If prompted to stay signed in, you can click **No**.
 
-    ![](../media/staysigned2.png)
- 
-6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
+    ![](../media/u5-l8-0.png)
 
 ## Support Contact
  

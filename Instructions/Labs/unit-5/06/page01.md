@@ -40,7 +40,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
     - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/n56-c1.png) 
+      ![](../images/u5-l06-01.png) 
 
        >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
@@ -48,15 +48,15 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Sports_Analytics` **(2)**.
 
-     ![](../images/n56c2.png) 
+     ![](../images/u5-l06-01.png) 
 
 1. This will take you inside the workspace where you can build and run machine learning experiments.
 
-     ![](../images/n56c3.png)    
+     ![](../images/u5-l06-03.png)    
 
 1. In the side menu of your workspace, select **Designer (1)**. Click **Create a new pipeline using classic prebuilt components (2)**.     
 
-     ![](../images/n56c4.png)
+     ![](../images/u5-l06-04.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -74,7 +74,7 @@ In this task you will upload the SC Basketball Enhanced data to your Azure ML wo
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-   ![](../images/n56c5.png)
+   ![](../images/u5-l06-05.png)
 
 1. On **Create data asset** page enter the following data.
 
@@ -166,7 +166,7 @@ In this task, you will configure and train a machine learning model using the Li
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Train Model (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c16.png)
+    ![](../images/u5-l06-06.png)
 
 1. Connect:
 
@@ -227,8 +227,7 @@ In this task, you will configure and submit your machine learning pipeline for e
 
     ![](../images/n52c24.png)     
 
-1. Now we’re on the **Runtime settings** step of the pipeline submission process. This is where you choose the **computer (called a compute cluster)** that Azure will use to run your 
-pipeline.
+1. Now we’re on the **Runtime settings** step of the pipeline submission process. This is where you choose the **computer (called a compute cluster)** that Azure will use to run your pipeline.
 
     - Select Compute Type: From the dropdown, select **Compute cluster (1)**.
 
@@ -260,14 +259,13 @@ pipeline.
 
      ![](../images/n56c31.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n56c32.png)      
+     ![](../images/u5-l06-08.png)      
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
 
      ![](../images/n56c33.png)    
-
 
 ## Task 6: Model Evaluation Results (Azure ML Designer)
 
@@ -283,7 +281,7 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Navigate to **Designer (1)**  from left and then select the pipeline **(2)**.  
 
-     ![](../images/g25.png)
+     ![](../images/u5-l06-07.png)
 
 1. Double click on the **Split Data (1)** and Change the Split Data fraction to `0.9` **(2)** for a 90/10 split. Click on **Save (3)**.
 
@@ -308,11 +306,11 @@ In this task, you will evaluate your trained model’s performance using metrics
 
      ![](../images/n56c38.png)
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n56c32.png)      
+     ![](../images/u5-l06-08.png)      
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
      ![](../images/n56c33.png)  
 
@@ -326,7 +324,7 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Navigate back to the **Designer (1)**  from left and then select Training type pipeline **(2)**.  
 
-     ![](../images/g25.png)     
+     ![](../images/u5-l06-07.png)     
 
 1. Double click on the **Split Data (1)** and Change the Split Data fraction to `0.6` **(2)** for a 90/10 split. Click on **Save (3)** and select **Configure & Submit (4)**.
 
@@ -347,11 +345,11 @@ In this task, you will evaluate your trained model’s performance using metrics
 
      ![](../images/n56c38.png)
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n56c32.png)  
+     ![](../images/u5-l06-08.png)  
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
      ![](../images/n56c33.png)  
 
@@ -365,7 +363,7 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. After each run, evaluate the model and record your results for comparison. Use the recorded values to decide which split gives the best balance between learning and fair testing.
 
-### Resource Cleanup
+## Resource Cleanup
 
 > **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
 

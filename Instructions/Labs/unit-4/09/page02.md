@@ -107,9 +107,9 @@ In this task you will upload the Sensor_data_with_shutdown dataset to your Azure
 
 1. **File or Folder Selection**  
 
-    - In the file browser, navigate to  `C:\Labs\Allfiles\unit4-lesson9` and select the file: `Sensor_data_with_shutdown.csv` **(1)** 
+    - In the file browser, navigate to  `C:\Labs\Allfiles\unit4-lesson9` and select the file: `Sensor_data_with_shutdown.csv` 
     - Wait for the file to appear under “Upload list”  
-    - Click **Next (2)**  
+    - Click **Next**  
 
       ![](../images/n49c6.png) 
 
@@ -143,7 +143,7 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 
    ![](../images/u4-l9-5.png)  
 
-1. Switch to the **Component (1)** tab and search for **"Clean Missing Data" (2)** by Microsoft. Drag the **Clean Missing Data** data component to the canvas **(3)**.
+1. Switch to the **Component (1)** tab and search for **Clean Missing Data (2)** by Microsoft. Drag the **Clean Missing Data** data component to the canvas **(3)**.
 
     - Connect **Sensor_Data** component to **Clean Missing Data** **(4)**
 
@@ -226,7 +226,7 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 1. On the **Basics:** First, for easy tracking, we’ll set up a new experiment.
 
     - Under **Experiment name**, select **Create new** **(1)**
-    - In the field labeled **“New experiment name”**, type **Training_pipeline (2)**
+    - In the field labeled **New experiment name**, type **Training_pipeline (2)**
     - The **Job Display Name** is automatically generated based on today’s date.
     - You may skip the Optional Fields section.
     - Click the blue **Next (3)** button at the bottom-right corner of the screen
@@ -271,9 +271,9 @@ In this task, you will build and run a complete machine learning pipeline in Azu
 
     ![](../images/nc18.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-    ![](../images/nc-19.png)    
+    ![](../images/u4-l9-09.png)    
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
 
@@ -307,7 +307,7 @@ Upload your training dataset that contains only 10–20 rows.
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-    ![](../images/n49c4.png)
+    ![](../images/lab01-image7.png)
 
 1. On **Create a new workspace to get started with Azure ML** page enter the following data.
 
@@ -380,7 +380,7 @@ Upload your training dataset that contains only 10–20 rows.
 
     ![](../images/nc18.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
     ![](../images/u4-l9-9.png)    
 
@@ -416,13 +416,13 @@ Introduce noise or errors into your dataset. You can:
 This run helps you test how your model reacts when trained on inaccurate or inconsistent 
 data.    
 
-1. Navigate back to the Pipeline designer, select **Designer (1)** and then select the the `Training` type Pipeline to edit.
+1. Navigate back to the Pipeline designer, select **Designer (1)** and then select the the `Training` **(2)** type Pipeline to edit.
 
-    ![](../images/g-18.png)
+    ![](../images/u4-l9-7.png)
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-    ![](../images/n49c4.png)
+    ![](../images/lab01-image7.png)
 
 1. On **Create a new workspace to get started with Azure ML** page enter the following data.
 
@@ -492,9 +492,9 @@ data.
 
     ![](../images/nc18.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-    ![](../images/nc-19.png)    
+    ![](../images/u4-l9-09.png)    
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
 

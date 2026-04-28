@@ -17,32 +17,37 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit4-lesson(8).png)
 
-### Task 1: Create a Custom Vision resource
+## Task 1: Create a Custom Vision resource
 
 In this task, you will create a Custom Vision resource in the Azure portal. This resource will be used to train and deploy your image classification model for detecting casting defects.
 
-1. On the **Azure portal**, search for **Azure AI Services (1)** and selct **Azure AI Foundry (2)**.
+1. On the **Azure portal**, search for **Custom vision (1)** and selct **Custom vision (2)**.
 
-   ![](../images/n48c1.png) 
+   ![](../images/u4-l8-2.png) 
 
-1. Expand **More Services (1)**, select **Custom vision (2)** and then click on **+ Create (3)**.
+1. On **Microsoft Foundry | Custom vision** blade, click on **+ Create**.
 
-   ![](../images/n48c2.png) 
+   ![](../images/u4-l8-3.png) 
 
-1. On the **Create Custom Vision** page, provide the following details and then **Review+Create (7)**.
+1. On the **Create Custom Vision** page, provide the following details and then **Review + Create (7)**.
 
    - Subscription: Leave the deafult one **(1)**
+   
    - Resource group: Select **ODL-SREB-U4L08 (2)**
+   
    - Region: **<inject key="Region" enableCopy="false"/>** **(3)**
-   - Name: Enter **customvision-casting (4)**
+   
+   - Name: Enter **customvision-casting-<inject key="DeploymentID" enableCopy="false"/> (4)**
+   
    - Training pricing tier: Select **Free F0** (2 Transactions per second, 2 Projects) **(5)**
+   
    - Prediction pricing tier: Select **Free F0 (6)** 
 
-     ![](../images/n48c3.png)
+     ![](../images/u4-l8-4.png)
 
-1. Click on **Create**.
+1. On the **Review + create** tab, click **Create** to provision the resource.
 
-   ![](../images/n48c4.png) 
+   ![](../images/u4-l8-5.png) 
 
 1. Wait for the deployment to complete.
 
@@ -59,7 +64,7 @@ In this task, you will create a Custom Vision resource in the Azure portal. This
 ---   
 
 
-### Task 2: Creating a New Project in Custom Vision
+## Task 2: Creating a New Project in Custom Vision
 
 In this task, you will sign in to the Custom Vision portal and create a new image classification project. You’ll configure the project settings to classify casting images as either defective or non-defective.
 
@@ -79,7 +84,7 @@ In this task, you will sign in to the Custom Vision portal and create a new imag
 
    ![](../images/n48c7.png) 
 
-1. Click on **NEW PROJECT**.
+1. On the **Projects** page, click **+ NEW PROJECT** to create your first project.
 
    ![](../images/n48c8.png) 
 
@@ -87,18 +92,19 @@ In this task, you will sign in to the Custom Vision portal and create a new imag
 
     - Name: Enter **Casting Defect Detection (1)**
     - Description: **Classifying casting images as ok or defective (2)**
-    - Resource: **customvisioncasting [F0] (3)**
+    - Resource: **customvisioncasting<inject key="DeploymentID" enableCopy="false"/> [F0] (3)**
     - Project Types: Ensure **Classification** is selected (not Object Detection), as 
 you're identifying overall labels for entire images **(4)**
     - Classification Types: Choose **Multiclass** (Single tag per image) because each image belongs to only one category: either Defect or Non-Defective **(5)**
 
    - Domains: Choose **General (compact) (6)**
-    - Export Capabilities: Leave **Basic platforms (Tensorflow, CoreML, ONNX, 
-…)** selected **(7)**
+    - Export Capabilities: Leave **Basic platforms (Tensorflow, CoreML, ONNX, …)** selected **(7)**
 
-    - Then select **CREATE PROJECT (8)**
+    - Then select **Create project (8)**
 
-      ![](../images/g11.png) 
+      ![](../images/u4-l8-7.png) 
+
+1. Wait for the project to be created and opened in the browser.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -110,35 +116,35 @@ you're identifying overall labels for entire images **(4)**
 
 ---      
 
-### Task 3: Upload and Tag Images
+## Task 3: Upload and Tag Images
 
 Once your project has been created, you'll land on the Training Images tab of your Custom Vision workspace. This is where you'll upload and tag the images your model will learn from. The main panel is empty because no images have been uploaded yet, which is where we’ll start off at in this part!
 
-#### Task 3.1: Adding Training Images for Non-Defective Parts
+### Task 3.1: Adding Training Images for Non-Defective Parts
 
 In this task, you will upload and tag images of non-defective casting parts in your Custom Vision project. These images will be used to train the model to recognize defect-free components.
 
-1. Click on the **Add Images** button.
+1. In the Custom Vision portal, click on the **Add Images** button.
 
-   ![](../images/n48c10.png) 
+   ![](../images/u4-l8-8.png) 
 
-1. Navigate to the `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\ok_front` folder. Click on one image and press **Ctrl+A** to select all the images **(1)** and then **Open (2)**.   
+1. In the **Open** window, navigate to the `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\ok_front` **(1)** folder. Click on one image and press **Ctrl+A** to select all the images **(2)** and then **Open (3)**.   
 
-   ![](../images/n48c11.png)
+   ![](../images/u4-l8-9.png)
 
 1. On the **Image Upload** screen, enter **Non Defective (1)** as **My Tags** and then select **Upload 519 files (2)**.
 
    ![](../images/n48c12.png)
 
-1. Once uploaded, select **Done**.
+1. Once the upload is complete, a confirmation message appears. Click **Done** to finish.
 
-     ![](../images/n48c13.png)
+     ![](../images/u4-l8-10.png)
 
 1. Briefly wait for the images to be uploaded. Once it’s complete, you’ll see a screen like the one below. Navigate to **Tagged (1)** there you can see the **Non Defective (2)** tag.
 
-   ![](../images/n48c14.png)
+   ![](../images/u4-l8-11.png)
 
-#### Task 3.2: Adding Training Images for Defective Parts
+### Task 3.2: Adding Training Images for Defective Parts
 
 In this task, you will upload and tag images of defective casting parts in your Custom Vision project. This will help train the model to distinguish between defective and non-defective components.
 
@@ -146,11 +152,11 @@ In this task, you will upload and tag images of defective casting parts in your 
 
      ![](../images/n48c15.png)
 
-1. Navigate to `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\def_front` folder and select all the images within this folder **(1)** and Click **Open (2)** to upload these images.     
+1. In the **Open** window, navigate to `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\def_front` **(1)** folder and select all the images within this folder **(2)** and Click **Open (3)** to upload these images.     
 
-     ![](../images/n48c16.png)
+     ![](../images/u4-l8-12.png)
 
-1. On the **Image Upload** screen, enter **“Defect (1)** as **My Tags** and then select **Upload files (2)**.
+1. On the **Image Upload** screen, enter **Defect (1)** as **My Tags** and then select **Upload files (2)**.
 
      ![](../images/n48c17.png)  
 
@@ -162,13 +168,13 @@ In this task, you will upload and tag images of defective casting parts in your 
 
      ![](../images/n48c19.png) 
 
-### Task 4: Training the Model
+## Task 4: Training the Model
 
 In this task, you will train your image classification model using the uploaded images of defective and non-defective parts. You will initiate a quick training session and observe the model’s performance metrics upon completion.
 
-1. To get started, click the green **Train** button at the top of screen.
+1. To get started, click the green **(⚙⚙) Train** button at the top of screen.
 
-     ![](../images/n48c20.png)
+     ![](../images/u4-l8-13.png)
 
 1. On the Choose Training Type page, select **Quick Training (1)** and then **Train (2)**.
 
@@ -183,7 +189,7 @@ In this task, you will train your image classification model using the uploaded 
 
 1. Once your training finishes, you’ll automatically see the Performance tab update.
 
-     ![](../images/n48c23.png)
+     ![](../images/u4-l8-14.png)
 
      We can understand the overall model scores as follows:
 
@@ -197,22 +203,24 @@ Performance Per Tag shows separate precision and recall values for the Defect an
 
 The high numbers seen in the figure above suggest that the model is performing very well on the training dataset!  
 
-### Task 5: Test the Model with New Images
+## Task 5: Test the Model with New Images
 
 In this task, you will evaluate your trained model’s performance by testing it with new images of defective and non-defective parts using the Quick Test feature.
 
-#### Task 5.1 Testing the Model with New Defective Images
+### Task 5.1 Testing the Model with New Defective Images
 
 In this task, you will use the Quick Test feature to test your trained model with a new image of a defective part and observe the prediction results.
 
 
 1. Click on the **Quick Test** button located in the top right corner of the screen.
 
-     ![](../images/n48c24.png)
+     ![](../images/u4-l8-15.png)
 
-1. In the Quick Test Panel that opens, click on **Browse Local Files (1)**. Within the file explorer that opens, navigate to `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\def_front` folder. Select any **one image** to perform a quick test **(3)** and then **Open (4)**.
+1. In the Quick Test Panel that opens, click on **Browse Local Files**. Within the file explorer that opens, navigate to `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\def_front` **(1)** folder. Select any **one image** to perform a quick test **(2)** and then **Open (3)**.
 
-     ![](../images/n48c25.png)
+     ![](../images/u4-l8-16.png)
+
+     ![](../images/u4-l8-17.png)
 
 1. Once uploaded, you’ll see prediction results as shown in the figure below. The 
 percentages next to the tags **Defect and Non Defective** let us know the model’s selection between the two. With a `99.9%` confidence rating, this tells us that the model is highly confident that the image is a `Defective` part.    
@@ -220,22 +228,23 @@ percentages next to the tags **Defect and Non Defective** let us know the model�
      ![](../images/n48c26.png)
 
 
-#### Task 5.2: Testing the Model with New Non-Defective Images
+### Task 5.2: Testing the Model with New Non-Defective Images
 
 In this task, you’ll take the same steps over to test the model’s capabilities with new images. However, instead of picking from the def_front folder, you’ll pick one image from the ok_front folder under test.
 
-1. In the Quick Test Panel that opens, click on **Browse Local Files (1)**. Within the file explorer that opens, navigate to `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\ok_front`
-folder. Select any **one image** to perform a quick test **(3)** and then **Open (4)**.
+1. In the Quick Test Panel that opens, click on **Browse Local Files**. Within the file explorer that opens, navigate to `C:\srebdatafiles\Dataset\casting_512x512\casting_512x512\ok_front` **(1)** folder. Select any **one image** to perform a quick test **(2)** and then **Open (3)**.
 
-     ![](../images/n48c27.png) 
+     ![](../images/u4-l8-16.png)
 
-### Task 6: Exporting Capabilities
+     ![](../images/u4-l8-18.png) 
+
+## Task 6: Exporting Capabilities
 
 In this task, you will explore the export options available for deploying your trained model to different platforms such as TensorFlow, CoreML, and ONNX—though no export action is required.
 
 1. Once everything is done with testing the model with new images, let’s take a look at the export functionality. To do so, we’ll click on the **Export** button seen below.
 
-     ![](../images/n48c30.png) 
+     ![](../images/u4-l8-19.png) 
 
 1. A list of available platforms will be shown. **You do not need to proceed with using these options**, we’re simply just exploring!
 

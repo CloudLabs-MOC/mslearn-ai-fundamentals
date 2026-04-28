@@ -19,7 +19,7 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit5-lesson7.png)
 
-### Task 1: Set Up the Azure ML Workspace
+## Task 1: Set Up the Azure ML Workspace
 
 1. Open a new tab in the browser, right-click on the following link [Azure Machine Learning Studio](https://ml.azure.com/), then **Copy link** and paste it in a new browser tab to log in to **Azure Machine Learning Studio**.
 
@@ -54,7 +54,7 @@ In this lab, you will be able to complete the following tasks:
   
 1. In the side menu of your workspace, select **Designer (1)**. Click **Create a new pipeline using classic prebuilt components (2)**.     
 
-     ![](../images/n57c4.png)
+     ![](../images/u5-l06-04.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -66,7 +66,7 @@ In this lab, you will be able to complete the following tasks:
 
 ---   
 
-### Task 2: Create a Preprocessing Pipeline     
+## Task 2: Create a Preprocessing Pipeline     
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Clean Missing Data (2).** Drag that component onto the canvas **(3)**.   
 
@@ -114,7 +114,7 @@ In this lab, you will be able to complete the following tasks:
 
      ![](../images/n57c14.png)
 
-### Task 3: Add the Dataset to Your Pipeline Canvas     
+## Task 3: Add the Dataset to Your Pipeline Canvas     
 
 1. Navigate to **Data (1)** from the left navigation and then select **+ Create (2)**.
 
@@ -175,11 +175,11 @@ In this lab, you will be able to complete the following tasks:
 
 ---       
 
-### Task 4: Cloning our Preprocessing Pipeline
+## Task 4: Cloning our Preprocessing Pipeline
 
 1. Navigate to **Pipeline (1)** from the left navigation pane and then Select **Pipeline drafts (2)** tab and then click on **Preprocessing_Pipeline (3)**.
 
-   ![](../images/n57c-20.png)
+   ![](../images/u5-l07-01.png)
 
 1. Click the **Clone** button at the top. This will create a copy of the pipeline and open it in a new tab.
 
@@ -193,8 +193,7 @@ In this lab, you will be able to complete the following tasks:
 
    ![](../images/n57c23.png)
 
-
-### Task 5: Classification in Azure (Supervised)
+## Task 5: Classification in Azure (Supervised)
 
 We will be using logistic regression, a common supervised learning model, to predict whether Clemson will win or lose a bowl game based on the season’s performance data.
 
@@ -278,7 +277,7 @@ model’s predictions against the actual win/loss outcomes.
         >**Note:** This step will generate metrics like **accuracy, precision, recall, F1 score,** and **AUC**. 
   
 
-### Task 6: Run the Supervised Pipeline
+## Task 6: Run the Supervised Pipeline
       
 1. Make sure your pipeline is saved, then click **Configure & Submit** at the top of the screen. 
 
@@ -334,7 +333,7 @@ pipeline.
 
 1. Pipeline may take around `10-15 mins` to complete meanwhile we will move on to setting up our **unsupervised learning pipeline**, which you will build using the previous steps as a guide.      
 
-### Task 7: Clustering in Azure (Unsupervised)
+## Task 7: Clustering in Azure (Unsupervised)
 
 Now you will build an unsupervised machine learning pipeline on your own, following the same general structure as the supervised model we just completed. The goal is to use K-Means Clustering to separate the seasons into three groups that you can later interpret and label as “Elite,” “Average,” and “Poor” based on performance metrics.
 
@@ -462,7 +461,7 @@ as before and then **Next (2)**.
 
 1. Pipeline may take around `10-15 mins` to complete. Until then please check the Evaluate result of Supervised Model.
 
-### Task 8: Evaluate the Models
+## Task 8: Evaluate the Models
 
 1. Navigate to **Pipeline (1)** from the left and then select **Clemson-Supervised Pipeline (2)**.
 
@@ -513,7 +512,7 @@ as before and then **Next (2)**.
 
      Keep in mind that K-Means Clustering does not label clusters automatically. It is up to the human analyst to interpret the patterns and decide what each group represents.
 
-### Resource Cleanup
+## Resource Cleanup
 
 > **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
 
