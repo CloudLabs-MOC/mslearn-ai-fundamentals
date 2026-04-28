@@ -22,7 +22,7 @@ In this lab, you will be able to complete the following tasks:
 ![](../images/unit4-lesson6.png) 
 
 
-### Task 1: Setting up the Project
+## Task 1: Setting up the Project
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
 
@@ -36,36 +36,36 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-   - Name: Enter **Customer_Feedback_Analysis (1)**
+   - Name: Enter **Customer_Feedback_Analysis<inject key="DeploymentID" enableCopy="false"/> (1)**
 
    - Friendly Name: Leave default 
 
    - Hub (Optional): You can leave this as **None (2)**
 
-   - **Advanced Settings**:
+   - **Advanced Settings:**
 
      - Subscription: Leave the default Azure subscription **(3)**
      - Resource Group: Select **anomaly-rg (4)**
      - Region: Select **<inject key="Region" enableCopy="false" /> (5)**
    - After filling out all fields, click the **Create (6)** button.
 
-      ![](../images/n46-c1.png) 
+      ![](../images/u4-l6-1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       > **Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
-1. On the left-hand menu, find and click **Workspaces (1)** and then select the workspace named **Customer Feedback Analysis (2)** the one which you have just created. 
+1. On the left-hand menu, find and click **Workspaces (1)** and then select the workspace named **Customer_Feedback_Analysis<inject key="DeploymentID" enableCopy="false"/> (2)** the one which you have just created. 
 
-   ![](../images/n46c2.png) 
+   ![](../images/u4-l6-2.png) 
 
-    >**Note**: This will take you inside the workspace where you can build and run machine learning experiments.
+    >**Note:** This will take you inside the workspace where you can build and run machine learning experiments.
 
 1. From the left-hand side menu to find the **Designer (1)** tab under the **Authoring** section. 
 
    - Make sure that you’re on the **Classic prebuilt**tab under the “New pipeline” section. From here, click on the box with a **plus sign (2)** that says, `Create a new pipeline using classic prebuilt components`.
 
-     ![](../images/n46c3.png)
+     ![](../images/u4-l6-3.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -77,13 +77,13 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ---     
 
-### Task 2: Uploading the Dataset
+## Task 2: Uploading the Dataset
 
 In this task you will upload the Manufacturing Custome Feedback data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
 1. On the left panel, under the **Data (1)** tab, click the **+ (plus icon) (2)** to upload a dataset.
 
-   ![](../images/n46c4.png) 
+   ![](../images/u4-l6-4.png) 
 
 1. On the **Data type**, provide the following details:
 
@@ -95,7 +95,7 @@ In this task you will upload the Manufacturing Custome Feedback data to your Azu
 
 1. On the **Choose a source for your data asset** page, choose **From local files (1)** the click on **Next (2)**. 
 
-   ![](../images/lab01-image9.png) 
+   ![](../images/u5-l8-5.png) 
 
 1. On the **Select a datastore** page select the following option:  
     
@@ -127,15 +127,13 @@ In this task you will upload the Manufacturing Custome Feedback data to your Azu
 
 1. On the **Review** page, click **Create** to finalize the dataset upload
 
-   ![](../images/n46c9.png) 
+   ![](../images/u4-l6-5.png) 
 
 1. Under the **Data** tab, locate the uploaded dataset named **`Customer_Feedback_dataset` (1)**. Click on the dataset card. **Drag it from the left panel** and drop it onto the empty space in the pipeline canvas on the right **(2)** 
+        
+1. Then **Save (3)**.
 
-   ![](../images/n46c10.png)          
-
-1. Then **Save**.
-
-   ![](../images/n46c11.png)
+   ![](../images/u4-l6-6.png)  
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -147,13 +145,13 @@ In this task you will upload the Manufacturing Custome Feedback data to your Azu
 
 ---                
 
-### Task 3: Preprocess the Text
+## Task 3: Preprocess the Text
 
 In this task, you will use the Preprocess Text component to clean and prepare customer feedback data for machine learning. You'll specify the target text column and apply standard text preprocessing steps to ensure consistent input for modeling.
 
 1. In the **Component (1)** tab (left panel), search for the **Preprocess Text (2)** module by Microsoft. Drag the **Preprocess Text** module into your pipeline workspace **(3)**.
 
-   ![](../images/n46c12.png) 
+   ![](../images/u4-l6-7.png) 
 
 1. Connect the dataset to the module by clicking on the **small circle** at the bottom of **Customer_Feedback_dataset**. Then, drag a connection line to the **top-left circle** of the **Preprocess Text** module named **Dataset**
 
@@ -173,7 +171,7 @@ In this task, you will use the Preprocess Text component to clean and prepare cu
 
    ![](../images/n46c16.png) 
 
-### Task 4: Extract N-Gram Features
+## Task 4: Extract N-Gram Features
 
 In this task, you will convert the cleaned text data into numerical features using the Extract N-Gram Features from Text module. You’ll configure it to generate bigrams (2-word combinations) with term frequency weighting, preparing the data for training machine learning models.
 
@@ -196,7 +194,7 @@ In this task, you will convert the cleaned text data into numerical features usi
 
     ![](../images/n46c20.png)
 
-1. On the **Extract N-Gram Features from Text**, set the following fields and then **Save (9)**:
+1. On the **Extract N-Gram Features from Text**, set the following fields and then **Save (9):**
 
     - `Vocabulary Mode`: Leave it as **Create (1)**. 
     - `N-Grams Size`: Change the value to `2` **(2)**. 
@@ -211,7 +209,7 @@ In this task, you will convert the cleaned text data into numerical features usi
 
       ![](../images/n46c21.png)
 
-### Task 5: Split the Data
+## Task 5: Split the Data
 
 In this task, you will use the Split Data module to divide your dataset into training and testing sets. This prepares your data so that 70% is used to train the model and 30% is reserved to evaluate its performance.
 
@@ -236,7 +234,7 @@ In this task, you will use the Split Data module to divide your dataset into tra
 
       ![](../images/n46c24.png)    
 
-### Task 6: Add Logistic Regression and Trace the Model
+## Task 6: Add Logistic Regression and Trace the Model
 
 In this task, you will add and configure a Two-Class Logistic Regression model to train on your dataset. You will link it with the training data and set the target column to predict customer satisfaction scores.
 
@@ -267,7 +265,7 @@ In this task, you will add and configure a Two-Class Logistic Regression model t
 
     ![](../images/n46c30.png)
       
-### Task 7: Score the Model
+## Task 7: Score the Model
 
 In this task, you will use the Score Model module to test your trained logistic regression model on new (unseen) customer reviews. This will generate predictions that can later be evaluated for accuracy.
 
@@ -284,7 +282,7 @@ In this task, you will use the Score Model module to test your trained logistic 
       ![](../images/n46c32.png)
 
 
-### Task 8: Evaluate the Model
+## Task 8: Evaluate the Model
 
 In this task, you will add the Evaluate Model component to analyze how well your trained model performs using key metrics like accuracy, precision, recall, and the confusion matrix.
 
@@ -306,7 +304,7 @@ Once this is complete, you'll be able to run the pipeline and preview your model
 
     ![](../images/n46c34.png)
 
-### Task 9: Run the Pipeline  
+## Task 9: Run the Pipeline  
 
 In this task, you will run the complete machine learning pipeline you built. This includes configuring the experiment, selecting the compute resource, and submitting the pipeline for execution in Azure Machine Learning Studio.
 
@@ -316,9 +314,9 @@ In this task, you will run the complete machine learning pipeline you built. Thi
 
 1. On the **Basic** tab,
 
-    -  **Experiment name**: Select **Create new (1)**
+    -  **Experiment name:** Select **Create new (1)**
 
-    - **New experiment name**: Enter **Test_Customer_Feedback (2)**
+    - **New experiment name:** Enter **Test_Customer_Feedback (2)**
 
     - Click **Next (3)**
 
@@ -338,15 +336,15 @@ In this task, you will run the complete machine learning pipeline you built. Thi
 
 1. You are now in the **Virtual Machine** tab for setting up a compute cluster. This step helps Azure decide which kind of machine to use for running your pipeline.
 
-    - **Location**: Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
-    - **Virtual Machine Tier**: Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
-    - **Virtual Machine Type**: Keep this as **CPU (3)** 
-    - **Virtual Machine Size**: Choose **Standard_DS11_v2 (4)**
+    - **Location:** Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
+    - **Virtual Machine Tier:** Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
+    - **Virtual Machine Type:** Keep this as **CPU (3)** 
+    - **Virtual Machine Size:** Choose **Standard_DS11_v2 (4)**
     - Click **Next (5)**  
 
       ![](../images/ag2.png)  
 
-1. **Advanced Settings**: Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings:** Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
 
     ![](../images/n46c40.png) 
 
@@ -354,22 +352,21 @@ In this task, you will run the complete machine learning pipeline you built. Thi
 
     ![](../images/n46c41.png) 
 
-     >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+     >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
     ![](../images/n46c42.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-    ![](../images/n46c43.png)    
+    ![](../images/u4-l6-8.png)    
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
 
-    ![](../images/n46c44.png)   
+    ![](../images/u4-l6-9.png)   
 
-
-### Task 10: View Preview Results
+## Task 10: View Preview Results
 
 In this task, you will preview and interpret the evaluation results of your trained model. You’ll analyze key metrics and charts such as the ROC curve, confusion matrix, and precision-recall to assess model performance.
 
@@ -379,7 +376,7 @@ In this task, you will preview and interpret the evaluation results of your trai
 
 1. After training a model, it’s important to evaluate how well it performs. The evaluation results include charts and metrics that show how accurately the model made predictions on test data.
 
-    - **ROC Curve**:  The **ROC** (Receiver Operating Characteristic) curve helps us see how well the model separates positive and negative cases. 
+    - **ROC Curve:**  The **ROC** (Receiver Operating Characteristic) curve helps us see how well the model separates positive and negative cases. 
 
        ![](../images/n46c46.png) 
 
@@ -387,7 +384,7 @@ In this task, you will preview and interpret the evaluation results of your trai
         - The vertical axis shows the true positive rate (correctly predicting "yes"). 
         - A perfect model would have a curve that reaches the top-left corner — which this model does. That means the model never confused a negative example for a positive one
 
-    - **Precision-Recall Curve**:  
+    - **Precision-Recall Curve:**  
 
        ![](../images/n46c48.png) 
 
@@ -396,13 +393,13 @@ In this task, you will preview and interpret the evaluation results of your trai
         - Recall is how many of the actual positive cases the model found.
         - A curve that reaches the top-right corner means the model found all positives without making any mistake 
 
-    - **Lift Curve**: The lift curve shows whether the model ranks the most important predictions (true positives) higher than others.
+    - **Lift Curve:** The lift curve shows whether the model ranks the most important predictions (true positives) higher than others.
 
         - A steep curve means the model successfully puts the most important cases at the top. In this case, the curve rises sharply, showing that the model ranks positive examples very effectively.    
 
           ![](../images/n46c47.png)  
 
-    - **Threshold Slider**: The threshold is the cutoff point the model uses to decide between predicting "Delayed" or "On Time." In this case, a value of 0.5 means that any shipment with a predicted probability of delay equal to or greater than 0.5 is classified as "Delayed." The model is performing strongly even at this threshold, showing it makes confident and consistent predictions.
+    - **Threshold Slider:** The threshold is the cutoff point the model uses to decide between predicting "Delayed" or "On Time." In this case, a value of 0.5 means that any shipment with a predicted probability of delay equal to or greater than 0.5 is classified as "Delayed." The model is performing strongly even at this threshold, showing it makes confident and consistent predictions.
 
       ![](../images/n46c49.png)   
 
@@ -446,7 +443,7 @@ false alarms.
         - `Negative precision / Negative recall`: These metrics measure how well the model predicts the on-time (negative) class. High values mean the model rarely mislabels on-time shipments.
         - `Cumulative AUC`: Tracks the model’s overall ability to rank predictions as we move through the score bins. This value increases as bins with high separation power are included.    
           
-### Resource Cleanup
+## Resource Cleanup
 
 > **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
 
@@ -454,13 +451,13 @@ false alarms.
 
     ![](../images/aml-cleanup-01.png)
 
-1. Select the workspace **Customer_Feedback_Analysis**.
+1. Select the workspace **Customer_Feedback_Analysis<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](../images/aml-cleanup-U4L06.png)
+    ![](../images/u4-l6-10.png)
 
-1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Customer_Feedback_Analysis (3)** to confirm deletion and click on **Delete (4)**.
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Customer_Feedback_Analysis<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
-    ![](../images/aml-cleanup-U4L06-1.png)
+    ![](../images/u4-l6-11.png)
 
 ## Review
 
