@@ -4,7 +4,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 5a: Get started with computer vision in Microsoft Foundry
 
-### Overall Estimated Timing: 30 Minutes
+### Overall Estimated Timing: 60 Minutes
 
 ## Overview
 

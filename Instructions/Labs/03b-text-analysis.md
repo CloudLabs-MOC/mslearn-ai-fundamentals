@@ -1,6 +1,6 @@
 # Get started with text analysis in Microsoft Foundry
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 45 Minutes
 
 ## Lab Overview
 

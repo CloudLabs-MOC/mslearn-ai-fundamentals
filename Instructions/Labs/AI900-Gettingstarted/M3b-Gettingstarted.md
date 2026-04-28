@@ -4,7 +4,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 3b: Get started with text analysis in Microsoft Foundry
 
-### Overall Estimated Timing: 30 Minutes
+### Overall Estimated Timing: 45 Minutes
 
 ## Overview
 

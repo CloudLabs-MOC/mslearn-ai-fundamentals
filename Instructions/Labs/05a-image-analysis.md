@@ -1,6 +1,6 @@
 # Get started with computer vision in Microsoft Foundry
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab overview
 

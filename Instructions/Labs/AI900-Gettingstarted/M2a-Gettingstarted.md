@@ -4,7 +4,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 2a: Get started with generative AI and agents in Microsoft Foundry
 
-### Overall Estimated Timing: 45 Minutes
+### Overall Estimated Timing: 60 Minutes
 
 ## Overview
 
