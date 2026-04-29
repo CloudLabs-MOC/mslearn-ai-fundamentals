@@ -14,7 +14,7 @@
 
     >**Note**: You can also retrieve the credentials from the **Environment** tab.
 
-       ![Enter Your Username](./envsun.png)  
+   ![Enter Your Username](./envsun.png)  
     
 3. Next, provide your **password (1)** and click on **Sign in (2)**:
  
