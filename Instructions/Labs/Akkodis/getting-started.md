@@ -11,7 +11,11 @@
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
        ![Enter Your Username](../media/sign-in-page.png)
- 
+
+    >**Note**: You can also retrieve the credentials from the **Environment** tab.
+
+      ![Enter Your Username](./envsun.png)  
+    
 3. Next, provide your **password (1)** and click on **Next (2)**:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
