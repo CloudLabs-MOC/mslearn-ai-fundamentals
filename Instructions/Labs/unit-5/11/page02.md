@@ -32,7 +32,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter `Sports_Analytics`  **(1)**
+    - **Name**: Enter **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" />  **(1)**
     - **Friendly Name**: Leave default
     - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
     - **Advanced Settings**:
@@ -41,13 +41,13 @@ In this task you will set up an Azure Machine Learning workspace where all your 
     - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/n11-c1.png) 
+      ![](../images/n11-c1-1.png) 
 
        >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **`Sports_Analytics`** **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" />** **(2)**.
 
      ![](../images/n56c2.png) 
 
@@ -66,7 +66,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 In this task you will upload the SC Basketball Enhanced data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
-1. Once you are inside your workspace **`Sports_Analytics`**, look at the left hand side menu to find the **Designer** tab under the Authoring section. Click on 
+1. Once you are inside your workspace **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" />**, look at the left hand side menu to find the **Designer** tab under the Authoring section. Click on 
 this tab.
 
     ![](../images/lab01-image5.png) 
@@ -85,7 +85,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 1. On **Create a new workspace to get started with Azure ML** page enter the following data then click on **Next (1)**.
 
-    - Name: Enter **`SC_Basketball_Dataset` (1)**  
+    - Name: Enter **SC_Basketball_Dataset__<inject key="DeploymentID" enableCopy="false" /> (1)**  
     - Select type: **Tabular (2)**  
     - Click **Next (3)**  
 
@@ -138,7 +138,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 In this task, you will add your dataset to the pipeline canvas and use the Split Data component to divide your data into training and testing sets. You will configure the split ratio and random seed to ensure consistent and reproducible results.
 
-1. From the left panel, drag your **SC_Basketball_Dataset** dataset onto the canvas. Click the **Save** button at the top of the canvas to avoid losing progress. 
+1. From the left panel, drag your **SC_Basketball_Dataset__<inject key="DeploymentID" enableCopy="false" /> (1)** dataset onto the canvas **(2)**. Click the **Save (3)** button at the top of the canvas to avoid losing progress. 
 
    ![](../images/U5lab011-image3.png)
 
@@ -202,7 +202,7 @@ training data) **(2)**
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Evaluate Model (2).** Drag that component onto the canvas **(3)**.   
 
-    - Connect the **output from Score Model to Evaluate Model (4)**
+    - Connect the **output from Score Model to left input of Evaluate Model (4)**
     - Select **Save (5)**
 
       ![](../images/n56c23.png)
@@ -295,9 +295,9 @@ In this task, you will replace the Linear Regression model with a Boosted Decisi
 
      ![](../images/U5lab013-image53.png)
    
-1. Switch to the **Component** tab in the left panel and search for Drag a **Boosted Decision Tree Regression** module onto the canvas.
+1. Switch to the **Component (1)** tab in the left panel and search for **Boosted Decision Tree Regression (2)** and drag a **Boosted Decision Tree Regression (3)** module onto the canvas.
 
-1. Delete the **Linear Regression** module and replace it with the **Boosted Decision Tree Regression** module. Then click on **Save**.
+1. Delete the **Linear Regression** module and replace it with the **Boosted Decision Tree Regression (4)** module. Then click on **Save (5)**.
 
     ![](../images/U5lab013-image47.png)
 
