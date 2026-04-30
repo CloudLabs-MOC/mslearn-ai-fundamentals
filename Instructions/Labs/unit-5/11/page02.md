@@ -18,7 +18,7 @@ In this lab, you will be able to complete the following tasks:
 
 ![](../images/unit5-lesson11.png)
 
-### Task 1: Set Up the Azure ML Workspace
+## Task 1: Set Up the Azure ML Workspace
 
 In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
 
@@ -32,28 +32,28 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name**: Enter **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" />  **(1)**
-    - **Friendly Name**: Leave default
-    - **Hub (Optional)**: Leave this as **None** unless instructed otherwise **(2)**
-    - **Advanced Settings**:
-    - **Subscription**: Select the appropriate Azure subscription from the dropdown **(3)**
-    - **Resource Group**: Select **ODL-SREB-U4L11** **(4)**
-    - **Region**: Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+    - **Name:** Enter **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Friendly Name:** Leave default
+    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
+    - **Advanced Settings:**
+    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+    - **Resource Group:** Select **ODL-SREB-U4L11** **(4)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/n11-c1-1.png) 
+      ![](../images/u5-l11-1.png) 
 
-       >**Note**: If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
+       >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
 1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" />** **(2)**.
 
-     ![](../images/n56c2.png) 
+     ![](../images/u5-l11-2.png) 
 
 1. This will take you inside the workspace where you can build and run machine learning experiments.
 
-     ![](../images/n56c3.png)    
+     ![](../images/u5-l11-3.png)    
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -62,7 +62,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 <validation step="75aee6ee-f1b5-48b0-a3d3-5da64fc6b8aa" />
 
-### Task 2: Add a dataset to your Azure ML pipeline in the Designer
+## Task 2: Add a dataset to your Azure ML pipeline in the Designer
 
 In this task you will upload the SC Basketball Enhanced data to your Azure ML workspace. You will create a tabular dataset from a local CSV file, configure the data source, and add it to your pipeline canvas for further processing.
 
@@ -71,7 +71,7 @@ this tab.
 
     ![](../images/lab01-image5.png) 
 
-   >**Note**:  This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
+   >**Note:** This will open the Azure Machine Learning Designer interface where you can  begin creating your machine learning pipeline by dragging and dropping 
 components.
 
 1. Once the **Designer** page is loaded, make sure that you’re on the **Classic prebuilt** tab under the **New pipeline** section. From here, click on the box with  **➕ (plus icon)** 
@@ -81,11 +81,11 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 1. On the **left panel**, under the **Data (1)** tab, click the **➕ (plus icon) (2)** to upload a dataset.  
 
-    ![](../images/lab01-image7.png) 
+    ![](../images/u5-l11-4.png) 
 
 1. On **Create a new workspace to get started with Azure ML** page enter the following data then click on **Next (1)**.
 
-    - Name: Enter **SC_Basketball_Dataset__<inject key="DeploymentID" enableCopy="false" /> (1)**  
+    - Name: Enter **SC_Basketball_Dataset (1)**  
     - Select type: **Tabular (2)**  
     - Click **Next (3)**  
 
@@ -93,7 +93,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 1. On the **Choose a source for your data asset** page, choose **From local files (1)** the click on **Next (2)**. 
 
-    ![](../images/lab01-image9.png) 
+    ![](../images/u5-l8-5.png) 
 
 1. On the **Select a datastore** page select the following option:  
     
@@ -125,7 +125,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 1. On the **Review** page, click **Create** to finalize the dataset upload
 
-    ![](../images/n11c6.png)
+    ![](../images/u5-l11-5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -134,7 +134,7 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
 <validation step="06a77f45-32e1-47c0-ba75-38ed22c2b7a7" />
 
-### Task 3: Add the Dataset to Your Pipeline Canvas
+## Task 3: Add the Dataset to Your Pipeline Canvas
 
 In this task, you will add your dataset to the pipeline canvas and use the Split Data component to divide your data into training and testing sets. You will configure the split ratio and random seed to ensure consistent and reproducible results.
 
@@ -148,24 +148,24 @@ In this task, you will add your dataset to the pipeline canvas and use the Split
 
       ![](../images/U5lab013-image46.png)
 
-1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then click on **Save (4)**:
+1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then click on **Save (4):**
 
     - Fraction of rows in the first output dataset: **0.75**  **(2)**
     - Random seed: **42**  **(3)**
 
         ![](../images/U5lab013-image45.png)
 
-### Task 4: Train the Model
+## Task 4: Train the Model
 
 In this task, you will set up and connect components to train, score, and evaluate a regression model predicting player points (PTS) using Azure ML Designer.
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Linear Regression (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c15.png)
+    ![](../images/u5-l11-6.png)
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Train Model (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c16.png)
+    ![](../images/u5-l11-7.png)
 
 1. Connect:
 
@@ -190,7 +190,7 @@ training data) **(2)**
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Score Model (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c21.png)
+    ![](../images/u5-l11-8.png)
 
 1. Connect:
 
@@ -205,9 +205,9 @@ training data) **(2)**
     - Connect the **output from Score Model to left input of Evaluate Model (4)**
     - Select **Save (5)**
 
-      ![](../images/n56c23.png)
+      ![](../images/u5-l11-9.png)
 
-### Task 5: Run the Pipeline and Submit the Job
+## Task 5: Run the Pipeline and Submit the Job
       
 In this task, you will configure, submit, and run your Azure ML pipeline by selecting or creating a compute cluster, then monitor the pipeline’s execution until it completes successfully.      
 
@@ -215,7 +215,7 @@ In this task, you will configure, submit, and run your Azure ML pipeline by sele
 
     ![](../images/n56c24.png)
 
-1. You will now walk through a few configuration steps, then click **Next (3)**:
+1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Create new (1)**
    - New experiment name: **PTS_Split_70_30 (2)**
@@ -226,8 +226,7 @@ In this task, you will configure, submit, and run your Azure ML pipeline by sele
 
     ![](../images/n52c24.png)     
 
-1. Now we’re on the **Runtime settings** step of the pipeline submission process. This is where you choose the **computer (called a compute cluster)** that Azure will use to run your 
-pipeline.
+1. Now we’re on the **Runtime settings** step of the pipeline submission process. This is where you choose the **computer (called a compute cluster)** that Azure will use to run your pipeline.
 
     - Select Compute Type: From the dropdown, select **Compute cluster (1)**.
 
@@ -237,15 +236,15 @@ pipeline.
 
 1. You are now in the **Virtual Machine** tab for setting up a compute cluster. This step helps Azure decide which kind of machine to use for running your pipeline.
 
-    - **Location**: Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
-    - **Virtual Machine Tier**: Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
-    - **Virtual Machine Type**: Keep this as **CPU (3)** 
-    - **Virtual Machine Size**: Choose **Standard_DS11_v2 (4)**
+    - **Location:** Confirm that the selected region is the same as your workspace (**<inject key="Region" enableCopy="false" />**) **(1)**
+    - **Virtual Machine Tier:** Leave as default. (do not select "Dedicated" or "Low priority" unless specified otherwise for cost-saving purposes) **(2)**
+    - **Virtual Machine Type:** Keep this as **CPU (3)** 
+    - **Virtual Machine Size:** Choose **Standard_DS11_v2 (4)**
     - Click **Next (5)**  
 
       ![](../images/ag2.png)   
 
-1. **Advanced Settings**: Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
+1. **Advanced Settings:** Give a Compute Name as **Test (1)** and leave everything default. Then click **Create (2)**.
 
      ![](../images/n56c29.png)  
 
@@ -253,33 +252,37 @@ pipeline.
 
      ![](../images/n56c30.png)
 
-      >**Note**: The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
+      >**Note:** The creation of the compute cluster takes approximately 3–5 minutes. You’ll be able to select the cluster only after it’s fully created. Please wait until the process is complete, and keep refreshing the cluster.
 
 1. Once on the **final** page, click **Submit**.     
 
      ![](../images/n56c31.png) 
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n56c32.png)      
+     ![](../images/u5-l11-10.png)      
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
-     ![](../images/n56c33.png)    
+     ![](../images/u5-l11-11.png)    
 
-### Task 6: Model Evaluation Results (Azure ML Designer)
+## Task 6: Model Evaluation Results (Azure ML Designer)
 
 In this task, you will review and analyze the model’s performance by comparing predicted scores with actual values and examining key evaluation metrics like RMSE and R² to assess accuracy and predictive quality.
 
-1. Right click on the **Score Model** and Select **Preview Data -> Scored Dataset** to compare Scored Labels and actual PTS.
+1. Right click on the **Score Model (1)** and Select **Preview Data (2) -> Scored Dataset (3)** to compare Scored Labels and actual PTS.
 
-      ![](../images/U5lab013-image54.png)
+     ![](../images/u5-l11-12.png)
+
+     ![](../images/U5lab013-image54.png)
        
-1. Right click on the **Evaluate Model** and then on **Preview Data -> Evaluation Results**.
+1. Right click on the **Evaluate Model (1)** and then on **Preview Data (2) -> Evaluation Results (3)**.
 
     - RMSE (Root Mean Squared Error)
      
     - R² (how well the model explains the data)
+
+       ![](../images/u5-l11-13.png)
 
        ![](../images/U5lab013-image55.png)
       
@@ -287,13 +290,13 @@ In this task, you will review and analyze the model’s performance by comparing
 
      - Was the model accurate? Did it predict well for all players or only some.
 
-### Task 7: Swap in Boosted Decision Tree Regression
+## Task 7: Swap in Boosted Decision Tree Regression
 
 In this task, you will replace the Linear Regression model with a Boosted Decision Tree Regression model, rerun the pipeline, and compare the new model’s prediction performance using evaluation metrics to see if it improves accuracy.
 
-1. Navigate back to the Designer tab and select your pipeline.
+1. Navigate back to the **Designer (1)** tab and select your pipeline **(2)**.
 
-     ![](../images/U5lab013-image53.png)
+     ![](../images/u5-l11-14.png)
    
 1. Switch to the **Component (1)** tab in the left panel and search for **Boosted Decision Tree Regression (2)** and drag a **Boosted Decision Tree Regression (3)** module onto the canvas.
 
@@ -313,21 +316,25 @@ In this task, you will replace the Linear Regression model with a Boosted Decisi
 
       ![](../images/U5lab013-image50.png)
 
-1. Once submitted, a success notification appears at the top of the page. Click on **'View details'** to monitor the pipeline. It may take some time for the pipeline to complete.
+1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/n56c32.png)      
+     ![](../images/u5-l11-10.png)    
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
    
-1. Right click on the Score Model and Select **Preview Data -> Scored Dataset** to compare Scored Labels and actual PTS
+1. Right click on the **Score Model (1)** and Select **Preview Data (2) -> Scored Dataset (3)** to compare Scored Labels and actual PTS
+
+     ![](../images/u5-l11-12.png)  
 
      ![](../images/U5lab013-image52.png)
 
-1. Right click on the **Evaluate Model** and then on **Preview Data -> Evaluation Results**
+1. Right click on the **Evaluate Model (1)** and then on **Preview Data (2) -> Evaluation Results (3)**
+
+     ![](../images/u5-l11-13.png) 
 
      ![](../images/U5lab013-image51.png)
 
-### Resource Cleanup
+## Resource Cleanup
 
 > **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
 
@@ -335,13 +342,13 @@ In this task, you will replace the Linear Regression model with a Boosted Decisi
 
     ![](../images/aml-cleanup-01.png)
 
-1. Select the workspace **Sports_Analytics**.
+1. Select the workspace **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](../images/aml-cleanup-U5L06.png)
+    ![](../images/u5-l11-15.png)
 
-1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics (3)** to confirm deletion and click on **Delete (4)**.
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
-    ![](../images/aml-cleanup-U5L06-01.png)
+    ![](../images/u5-l11-16.png)
 
 ## Review
 
