@@ -71,11 +71,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 4. If prompted to stay signed in, you can click **No**.
  
     ![](../media/staysignin.png)
- 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
-
-6. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
 
 ## Support Contact
  

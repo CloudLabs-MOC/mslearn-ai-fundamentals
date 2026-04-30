@@ -32,13 +32,13 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
     - **Name:** Enter **NASCAR-Data-<inject key="DeploymentID" enableCopy="false" />**  **(1)**
-    - **Friendly Name:** Leave default **(2)**
-    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(3)**
+    - **Friendly Name:** Leave default
+    - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
     - **Advanced Settings:**
-    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(4)**
-    - **Resource Group:** Select **nascar-rg** **(5)**
-    - **Region:** Select **<inject key="Region" enableCopy="false" /> (6)** for better performance.
-    - After filling out all the required fields, click the **Create (7)** button.
+    - **Subscription:** Select the appropriate Azure subscription from the dropdown **(3)**
+    - **Resource Group:** Select **nascar-rg** **(4)**
+    - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
+    - After filling out all the required fields, click the **Create (6)** button.
 
       ![](../images/u5-l02-01.png) 
 
@@ -50,7 +50,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
      ![](../images/u5-l02-02.png) 
 
-1. In the side menu of your workspace, select **Designer (1)**. Click **Create a new pipeline using classic prebuilt components (2)**.     
+1. In the side menu of your workspace, select **Designer (1)**. Click **+ Create a new pipeline using classic prebuilt components (2)**.     
 
      ![](../images/u5-l02-03.png) 
 
