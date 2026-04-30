@@ -150,6 +150,13 @@ that says, **Create a new pipeline using classic prebuilt components**.
 
      ![](../images/u4-l7-4.png) 
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
+<validation step="ace2f744-042b-4f87-b587-5fdfbb2f4c68" />
+
 ## Task 3: Configure Clean Missing Data   
 
 In this task, you will add the “Clean Missing Data” module to handle any incomplete values in the dataset. You configure it to either remove or fill missing fields. 
@@ -491,14 +498,7 @@ on test data.
 
     >**Note:** These are the highest possible scores and indicate perfect performance.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-
-<validation step="ace2f744-042b-4f87-b587-5fdfbb2f4c68" />
-
-### Resource Cleanup
+## Resource Cleanup
 
 > **NOTE:** Perform this task only if you are completed with the lab and no longer require Machine Learning Workspace.
 
