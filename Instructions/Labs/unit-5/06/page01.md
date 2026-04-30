@@ -31,7 +31,7 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    
 1. On the **Create a new workspace to get started with Azure ML** fill in the following fields:
 
-    - **Name:** Enter `Sports_Analytics`  **(1)**
+    - **Name:** Enter **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" /> (1)**
     - **Friendly Name:** Leave default
     - **Hub (Optional):** Leave this as **None** unless instructed otherwise **(2)**
     - **Advanced Settings:**
@@ -40,23 +40,23 @@ In this task you will set up an Azure Machine Learning workspace where all your 
     - **Region:** Select **<inject key="Region" enableCopy="false" /> (5)** for better performance.
     - After filling out all the required fields, click the **Create (6)** button.
 
-      ![](../images/u5-l06-01.png) 
+      ![](../images/u5-l06-1.png) 
 
        >**Note:** If you **did not** see the page like Figure 1, simply click **“Create Workspace”** on your dashboard and fill out the fields as described in Step 2.
 
 1. Wait for the workspace to create, it may take around 2-3 minutes.
 
-1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created `Sports_Analytics` **(2)**.
+1. Now navigate to your newly created workspace. On the **left-hand menu**, click **Workspaces (1)**. Select the workspace you just created **Sports_Analytics_<inject key="DeploymentID" enableCopy="false" /> (2)**.
 
-     ![](../images/u5-l06-01.png) 
+     ![](../images/u5-l6-3.png) 
 
 1. This will take you inside the workspace where you can build and run machine learning experiments.
 
-     ![](../images/u5-l06-03.png)    
+     ![](../images/u5-l6-4.png)    
 
-1. In the side menu of your workspace, select **Designer (1)**. Click **Create a new pipeline using classic prebuilt components (2)**.     
+1. In the side menu of your workspace, select **Designer (1)**. Click **+ Create a new pipeline using classic prebuilt components (2)**.     
 
-     ![](../images/u5-l06-04.png)
+     ![](../images/u5-l6-5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -86,7 +86,7 @@ In this task you will upload the SC Basketball Enhanced data to your Azure ML wo
 
 1. On the **Choose a source for your data asset** page, choose **From local files (1)** the click on **Next (2)**. 
 
-    ![](../images/lab01-image9.png) 
+    ![](../images/u5-l8-5.png) 
 
 1. On the **Select a datastore** page select the following option:  
     
@@ -118,7 +118,7 @@ In this task you will upload the SC Basketball Enhanced data to your Azure ML wo
 
 1. On the **Review** page, click **Create** to finalize the dataset upload
 
-    ![](../images/n56c10.png)
+    ![](../images/u5-l6-8.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -136,14 +136,14 @@ In this task, you will add the training dataset to your pipeline canvas and use 
 
 1. From the left panel, under the **Data** tab, locate the uploaded dataset named **Train_Test_Validation_Dataset** and drag it to the canvas **(1)** and then **Save (2)**.  
 
-   ![](../images/u5-l6-01.png)
+   ![](../images/u5-l6--09.png)
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Split Data (2).** Drag that component onto the canvas **(3)**.   
 
     - Connect your dataset to the **Split Data** module **(4)**
     - Select **Save (5)**
 
-      ![](../images/n56c13.png)  
+      ![](../images/u5-l6--10.png)  
 
 1. Double-click the **Split Data (1)** component to open its settings. Specify the following and then **Save (7):**
 
@@ -162,7 +162,7 @@ In this task, you will configure and train a machine learning model using the Li
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Linear Regression (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c15.png)
+    ![](../images/u5-l6--11.png)
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Train Model (2).** Drag that component onto the canvas **(3)**.   
 
@@ -191,7 +191,7 @@ training data) **(2)**
 
 1. Switch to the **Component** tab in the left panel **(1)** and search for **Score Model (2).** Drag that component onto the canvas **(3)**.   
 
-    ![](../images/n56c21.png)
+    ![](../images/u5-l6--12.png)
 
 1. Connect:
 
@@ -219,9 +219,9 @@ In this task, you will configure and submit your machine learning pipeline for e
 1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Create new (1)**
-   - New experiment name: **PTS_Split_70_30(2)**
+   - New experiment name: **PTS_Split_70_30 (2)**
 
-     ![](../images/n56c25.png)  
+     ![](../images/u5-l6--13.png)  
 
 1. Leave Inputs & Outputs as is, there is nothing to configure for this step. Click **Next.**      
 
@@ -261,11 +261,11 @@ In this task, you will configure and submit your machine learning pipeline for e
 
 1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/u5-l06-08.png)      
+     ![](../images/u5-l6--14.png)      
 
-1. Please wait for the pipeline to complete, which may take approximately `10–15 `minutes. Once it's finished successfully, the status will show as **Completed**.
+1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
-     ![](../images/n56c33.png)    
+     ![](../images/u5-l6--15.png)    
 
 ## Task 6: Model Evaluation Results (Azure ML Designer)
 
@@ -281,7 +281,7 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Navigate to **Designer (1)**  from left and then select the pipeline **(2)**.  
 
-     ![](../images/u5-l06-07.png)
+     ![](../images/u5-l6--16.png)
 
 1. Double click on the **Split Data (1)** and Change the Split Data fraction to `0.9` **(2)** for a 90/10 split. Click on **Save (3)**.
 
@@ -289,12 +289,12 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Select **Configure & Submit**.
 
-     ![](../images/n56c37.png)
+     ![](../images/u5-l6--17.png)
 
 1. You will now walk through a few configuration steps, then click **Next (3):**
   
    - Experiment name: **Select existing (1)**
-   - Existing experiment: **PTS_Split_70_30(2)**     
+   - Existing experiment: **PTS_Split_70_30 (2)**     
 
      ![](../images/g26.png)  
 
@@ -308,11 +308,11 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/u5-l06-08.png)      
+     ![](../images/u5-l6--14.png)      
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
-     ![](../images/n56c33.png)  
+     ![](../images/u5-l6--18.png)  
 
 1. Right-click on the **Evaluate Model (1)** module. Choose **Preview Data (2) > Evaluation results (3)** to view how well your model predicted PTS.
 
@@ -324,7 +324,7 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Navigate back to the **Designer (1)**  from left and then select Training type pipeline **(2)**.  
 
-     ![](../images/u5-l06-07.png)     
+     ![](../images/u5-l6--16.png)     
 
 1. Double click on the **Split Data (1)** and Change the Split Data fraction to `0.6` **(2)** for a 90/10 split. Click on **Save (3)** and select **Configure & Submit (4)**.
 
