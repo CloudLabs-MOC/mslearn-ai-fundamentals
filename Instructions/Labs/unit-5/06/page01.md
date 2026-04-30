@@ -328,7 +328,7 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Double click on the **Split Data (1)** and Change the Split Data fraction to `0.6` **(2)** for a 90/10 split. Click on **Save (3)** and select **Configure & Submit (4)**.
 
-     ![](../images/n56c41.png)
+     ![](../images/u5-l6--19.png)
 
 1. You will now walk through a few configuration steps, then click **Next (3):**
   
@@ -347,11 +347,11 @@ In this task, you will evaluate your trained model’s performance using metrics
 
 1. Once submitted, a success notification appears at the top of the page. Click on **View Details** to monitor the pipeline. It may take some time for the pipeline to complete.
 
-     ![](../images/u5-l06-08.png)  
+     ![](../images/u5-l6--14.png)  
 
 1. Please wait for the pipeline to complete, which may take approximately `10–15` minutes. Once it's finished successfully, the status will show as **Completed**.
 
-     ![](../images/n56c33.png)  
+     ![](../images/u5-l6--20.png)  
 
 1. Right-click on the **Evaluate Model (1)** module. Choose **Preview Data (2) > Evaluation results (3)** to view how well your model predicted PTS.
 
@@ -371,13 +371,13 @@ In this task, you will evaluate your trained model’s performance using metrics
 
     ![](../images/aml-cleanup-01.png)
 
-1. Select the workspace **Sports_Analytics**.
+1. Select the workspace **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](../images/aml-cleanup-U5L06.png)
+    ![](../images/u5-l6--21.png)
 
-1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics (3)** to confirm deletion and click on **Delete (4)**.
+1. Click on **Delete (1)**, there will a Delete Resource window opened at the right, select the **checkbox (2)** next to Delete this resource permanently. Provide the workspace name **Sports_Analytics_<inject key="DeploymentID" enableCopy="false"/> (3)** to confirm deletion and click on **Delete (4)**.
 
-    ![](../images/aml-cleanup-U5L06-01.png)
+    ![](../images/u5-l6--22.png)
 
 ## Review
 
