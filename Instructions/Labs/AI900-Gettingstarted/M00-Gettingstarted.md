@@ -5,7 +5,7 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 # Get started with Microsoft Foundry
 
-### Overall Estimated timing: 30 Minutes
+### Overall Estimated timing: 45 Minutes
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # Get started with generative AI and agents in Microsoft Foundry
 
-### Estimated Duration: 45 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab overview
 
@@ -173,7 +173,7 @@ When you're satisfied with the responses a model returns in the playground, you 
         from openai import OpenAI
         
         endpoint = "https://{your-foundry-resource}.openai.azure.com/openai/v1/"
-        deployment_name = "gpt-4.1-mini"
+        deployment_name = "gpt-5-mini"
         api_key = "<your-api-key>"
         
         client = OpenAI(

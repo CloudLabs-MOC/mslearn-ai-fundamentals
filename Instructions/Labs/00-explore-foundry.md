@@ -1,6 +1,6 @@
 # Get started with Microsoft Foundry
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 45 Minutes
 
 ## Lab Overview
 
@@ -199,13 +199,13 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
     
 1. In the search bar, search for `gpt-5-mini` **(1)** and select the `gpt-5-mini` **(2)** model from the result, and view the page for this model, which describes its features and capabilities.
 
-    ![](./media/mod01-p2t1p29.png)
+    ![](./media/ai900lab1-t5p1.png)
 
-    ![](./media/mod01-p2t1p30.png)
+    ![](./media/ai900lab1-t5p2.png)
 
 1. Click the **Deploy (1)** button to deploy the model and then select the **Default settings (2)**. 
 
-    ![](./media/mod01-p2t1p31.png)
+    ![](./media/ai900lab1-t5p3.png)
 
 1. Deployment may take a minute or so.
 
@@ -213,15 +213,15 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![](./media/mod01-p2t1p32.png)
+    ![](./media/ai900lab1-t5p4.png)
 
 1. On the **Playground** page, ensure the deployed model **gpt-5-mini** is selected in the **Model** dropdown. Also note down the deployment name, as you will need it later.
 
-    ![](./media/mod01-p2t1p33.png)
+    ![](./media/ai900lab1-t5p5.png)
 
 1. In the **Chat** pane, test your model by entering a message like `What is AI?`
 
-    ![](./media/mod01-p2t1p34.png)
+    ![](./media/ai900lab1-t5p6.png)
 
     ![](./media/mod01-p2t1p35.png)
 
