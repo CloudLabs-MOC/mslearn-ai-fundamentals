@@ -4,7 +4,7 @@
       "Language": "English",
       "Files": [
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/M00-Gettingstarted.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/AI900-Gettingstarted/M00-Gettingstarted.md",
           "Order": 1
         },
         {
@@ -28,7 +28,7 @@
             "Order": 6
          },
          {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/06a-content-inderstanding.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/06a-content-understanding.md",
           "Order": 7
         }
       ]
