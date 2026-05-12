@@ -49,7 +49,7 @@ This lab demonstrates how Microsoft Foundry enables end-to-end development of ge
 
 ## Architecture Diagram
 
-![](../media/lab2a-arch.png)
+![](../media/lab2a-arch(1).png)
 
 ## Explanation of Components
 
@@ -63,10 +63,7 @@ This lab demonstrates how Microsoft Foundry enables end-to-end development of ge
 
 5. **Knowledge Tools:** Knowledge tools provide additional context to the agent by connecting it to external data sources. For instance, uploading `expenses_policy.docx` enables the agent to retrieve and use company policy information to generate accurate and context-aware responses.
 
-6. **Agent Publishing Endpoint:** When an agent is published, it is exposed through a dedicated endpoint that allows it to be accessed independently of the Foundry project, making it suitable for production use.
-
-7. **Client Integration:** Applications interact with the published agent using APIs or SDKs (such as Python with the OpenAI Responses API). This enables integration into applications, bots, or enterprise solutions for real-time AI-driven assistance.
-
+6. **Client Integration:** Applications interact with the published agent using APIs or SDKs (such as Python with the OpenAI Responses API). This enables integration into applications, bots, or enterprise solutions for real-time AI-driven assistance.
 
 # Getting Started with lab
  
