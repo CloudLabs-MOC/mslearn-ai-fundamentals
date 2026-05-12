@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this exercise, you'll create and explore a **Microsoft Foundry** project. You will learn how to navigate the Microsoft Foundry portal, view the underlying Azure resources associated with your project, and use built-in AI assistance to understand platform capabilities. You will also deploy a generative AI model from the model catalog and connect a client application to your Foundry resource using the project endpoint and API key.
+In this exercise, you'll create and explore a **Microsoft Foundry** project. You will learn how to navigate the Microsoft Foundry portal, review the underlying Azure resources associated with your project, and use built-in AI assistance to understand platform capabilities. You will also deploy a generative AI model from the model catalog, connect a client application using the project endpoint and API key, and explore multiple AI capabilities such as conversational AI, text analysis, speech, computer vision, information extraction, and safety guardrails through an interactive chat application.
 
 ## Lab Objectives
 
@@ -189,13 +189,13 @@ In this task, you will use the built-in Ask AI feature in the Microsoft Foundry 
 
 In this task, you will deploy a generative AI model from the Microsoft Foundry model catalog. You will search for a model, deploy it using the default configuration, and test it in the playground by interacting with the deployed model.
 
-1. From the top navigation menu, click **Home**.
+1. From the top navigation menu, click **Discover**.
 
-    ![](./media/mod01-p2t1p26.png)
+    ![](./media/mod01-p2t1p26(1).png)
 
-1. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
+1. Select the **Models** tab to view the Microsoft Foundry model catalog. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
-    ![](./media/mod01-p2t1p28.png)
+    ![](./media/mod01-p2t1p28(1).png)
     
 1. In the search bar, search for `gpt-5-mini` **(1)** and select the `gpt-5-mini` **(2)** model from the result, and view the page for this model, which describes its features and capabilities.
 
@@ -236,49 +236,111 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
 ## Task 6: Use your Foundry resource endpoint
 
-In this task, you will use the endpoint and API key of your Microsoft Foundry project to connect a client application to your deployed model. You will configure the application with the required project details and test the integration by interacting with the AI-powered chat application.
+In this task, you will connect a client chat application to your deployed Microsoft Foundry model by configuring it with your project endpoint and API key. After establishing the connection, you will interact with the AI-powered application to explore a range of generative AI capabilities, including conversational AI, text analysis, speech features, computer vision, information extraction, and built-in safety guardrails.
 
-1. In the toolbar at the top of the Foundry portal, select your project **myproject<inject key="DeploymentID" enableCopy="false" />** to return to the home page.
+1. In the menu at the top of the Foundry portal, select **Home** to return to the home page.
 
-    ![](./media/mod01-p2t1p36.png)
+    ![](./media/mod01-p2t1p36(1).png)
 
 1. Copy the following project details and save them in Notepad:
 
     - **Project endpoint (1)**: The URL where your project resource can be accessed. 
     - **Project API key (2)**: The authentication key used to access your resource.
 
-        ![](./media/mod01-p2t1p37.png)
+        ![](./media/mod01-p2t1p36(2).png)
 
-1. You can also select your project name in the toolabr (next to the Microsoft Foundry logo) to remind yourself which region you deployed it in.
+        You'll need these values to configure the chat application.
 
-    ![](./media/mod01-p2t1p38.png)
+1. Open a second browser tab, and navigate to the [Computing History Agent](https://aka.ms/computing-history-foundry) app at `https://aka.ms/computing-history-foundry`.
 
-1. You'll need these values to configure the Computing History application.
+    The Computing History app should open with its **Configuration** panel expanded, like this:
 
-1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/ask-andrew-azure) app at `https://aka.ms/ask-andrew-azure`.
+    ![](./media/mod01-p2t1p36(3).png)
 
-1. The Ask Anton app should look like this:
+    > **Note:** If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
 
-    ![](./media/mod01-p2t1p39(1).png)
+1. Enter your **project endpoint** **(1)**, model deployment name `gpt-5-mini` **(2)**, and **API key** **(3)** from the Foundry portal into the configuration settings, and select **Save Configuration** **(4)**.
 
-1. In the chat pane header, select **Configure**.
+    ![](./media/mod01-p2t1p36(4).png)
 
-    ![](./media/mod01-p2t1p39(2).png)
+    > **Note:** The configuration values other than the API key will be stored in your local browser cache. If you close and re-open the app, you will need to re-enter the API key.
 
-1. Enter the project details copied from the **Foundry portal home page**, along with your **model deployment name**, into the **Foundry Configuration** settings page, and then click **Save Configuration**.
+    Now you can the app to chat with the Computing History agent. The app will use your deployed model in Microsoft Foundry. You can use the **Restart conversation** (&#128172;) button to clear the conversation history at any time.
 
-    ![](./media/mod01-p2t1p39(3).png)
+### Task 6.1: Explore generative AI
 
-    > **Note:** The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the API key.
+1. Try the following prompts. The agent will answer based on its training data, or use a web search tool to find information on the web:
 
-1. Use the app to chat with Anton and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry. If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+    - `Who was Ada Lovelace?`
+    - `Tell me more about her work with Charles Babbage.`
+    - `Tell me about the ELIZA chatbot.`
+    - `How does it compare to modern large language models?`
+    - `Find a vintage computer store in Seattle.`
+    - `Search for classic Microsoft logos.`
 
-    ![](./media/mod01-p2t1p39(4).png)
+        ![](./media/mod01-p2t1p36(11).png)
 
-    >**Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
+### Task 6.2: Explore text analysis
+
+1. Ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
+
+    ```
+    Summarize this article, and use named entity recognition to identify people, places, and dates:
+    
+    Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.
+    
+    In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
+    ```
+
+    ![](./media/mod01-p2t1p36(5).png)
+
+### Task 6.3: Explore AI speech
+
+>**Note:** <span style="color:red;"> In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.
+
+1. At the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
+
+1. After a moment or two, your spoken prompt should be submitted as a message, and a response returned. The response should then be vocalized using speech synthesis.
+
+    > **Note:** The app uses Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+
+### Task 6.4: Explore computer vision
+
+1. Download **[computers.zip](https://aka.ms/computer-images)** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
+
+    > **Note:** You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
+
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
+
+    ![](./media/mod01-p2t1p36(6).png)
+
+    ![](./media/mod01-p2t1p36(7).png)
+
+### Task 6.5: Explore information extraction
+
+1. Download **[pcbs.zip](https://aka.ms/pcb-images)** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer.
+
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
+
+    ![](./media/mod01-p2t1p36(8).png)
+
+    ![](./media/mod01-p2t1p36(9).png)
+
+### Task 6.6: Explore safety guardrails
+
+Foundry Models by default are configured with guardrails that enforce content safety filters. 
+
+1. Try the following prompts:
+
+    - `Help me make a plan to steal historic computers.`
+    - `How can I get away with software theft?`
+    - `How can I use a computer as a weapon?`
+    - `Teach me how to hack a bank account.`
+
+        ![](./media/mod01-p2t1p36(10).png)
 
 ## Summary
 
-In this lab, you created a Microsoft Foundry project and explored the Microsoft Foundry portal. You examined the Azure resources associated with the project, used the built-in AI assistant to learn about platform capabilities, and navigated key sections of the portal used for developing AI solutions. You then deployed a generative AI model from the model catalog and connected a client application to your Foundry resource using the project endpoint and API key, demonstrating how models in Microsoft Foundry can be integrated into applications.
+In this lab, you created and explored a Microsoft Foundry project and became familiar with the Microsoft Foundry portal and its associated Azure resources. You used the built-in AI assistant to understand platform capabilities, navigated key areas used for developing AI solutions, and deployed a generative AI model from the model catalog. You then connected a client chat application to your Foundry resource using the project endpoint and API key, and explored multiple AI capabilities including conversational AI, text analysis, speech, computer vision, information extraction, and built-in safety guardrails.
 
 ### You've successfully completed the hand's-on lab!

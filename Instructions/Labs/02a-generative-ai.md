@@ -16,7 +16,6 @@ In this exercise, you will perform:
 - Task 4: Specify instructions in a system prompt
 - Task 5: Save the model configuration as an agent
 - Task 6: Add a knowledge tool to the agent
-- Task 7: Publish the agent and use it in a client app
 
 ## Task 1: Create a Microsoft Foundry project
 
@@ -195,7 +194,7 @@ When you're satisfied with the responses a model returns in the playground, you 
 
 In this task, you’ll define and apply system instructions to guide the model’s behavior, tone, and response scope for a specific use case.
 
-1. In the model playground, switch back to the **Chat (1)** tab. Then, at the top-right of the chat pane, use the **New chat (3)** button to restart the conversation and removes the conversation history.
+1. In the model playground, switch back to the **Chat (1)** tab. Then, at the top-right of the chat pane, use the **New chat (2)** button to restart the conversation and removes the conversation history.
 
     ![](./media/lab2a-p2t1p13.png)
 
@@ -241,7 +240,7 @@ In this task, you’ll convert the configured model into an agent by saving its 
 
     ![](./media/lab2a-p2t1p17.png)
 
-    ![](./media/lab2a-p2t1p18.png)
+    ![](./media/lab2a-may26-p2t1p1.png)
 
 1. When the agent is created, it opens in a new playground specifically for working with agents.
 
@@ -354,7 +353,23 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
     Congratulations! We have a working agent with access to the knowledge it needs. Now we're ready to develop apps that use it.
 
-### Task 6.1: View client code to access the agent in your project
+### Task 6.1: Preview the agent
+
+In this task, you’ll preview your working agent in a basic web chat application.
+
+1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Preview (1)** drop-down list, select **Preview agent (2)**.
+
+    ![](./media/lab2a-may26-p2t1p2.png)
+
+1. A preview chat interface is opened in a new browser tab.
+
+    ![](./media/lab2a-may26-p2t1p3.png)
+
+1. Enter a prompt, such as `How do I submit an expense claim?` and view the response from your agent.
+
+    ![Screenshot of an agent preview chat interface.](./media/lab2a-may26-p2t1p4.png)
+
+### Task 6.2: View client code to access the agent in your project
 
 The agent is defined within your Foundry project, and there's a convenient way to develop apps that connect to it there; allowing you to iteratively refine both the agent and the client app to create the solution you need.
 
@@ -405,6 +420,10 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     ![](./media/lab2a-p2t1p32.png)
 
+1. Enter a name for the workspace folder, such as **azuredev-8dde**, then press **Enter** to create the folder in Azure Cloud Shell. You can keep the default name or provide any random folder name of your choice.
+
+    ![](./media/lab2a-may26-p2t1p5.png)
+
 1. After VS Code for the web has opened and the environment has been set up, close the GitHib Copilot **Chat** pane on the right side to give you more room, and note that the **Instructions.md** file contains the instructions you need to run the sample code (which is in the **run_agent.py** file in the VS Code Explorer pane on the left.)
 
     ![](./media/lab2a-p2t1p33.png)
@@ -433,6 +452,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
   <validation step="26a02172-cb11-4e43-9aae-fb763d33b068" />
 
+<!---
 ## Task 7: Publish the agent and use it in a client app
 
 In this task, you’ll publish the agent to a dedicated endpoint and use sample code to integrate and interact with it from a client application.
@@ -509,6 +529,7 @@ In this task, you’ll publish the agent to a dedicated endpoint and use sample 
     ![](./media/lab2a-p2t1p41.png)
 
     >**Note:** It might take a few minutes to generate the response.
+--->
 
 ## Summary
 

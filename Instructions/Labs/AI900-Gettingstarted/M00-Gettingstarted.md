@@ -9,7 +9,10 @@ Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience using **Microsoft Foundry** to create and manage AI development resources. You will learn how to create a Microsoft Foundry project, explore the Foundry portal interface, and understand how the project is connected to underlying Azure resources. You will also interact with the built-in **Ask AI** assistant to learn about platform capabilities, deploy a generative AI model from the Foundry model catalog, and test the model in the playground. Finally, you will configure a sample client application using your project’s endpoint, API key, and model deployment to interact with the deployed model. By the end of this lab, you will understand how Microsoft Foundry enables developers to build and integrate AI-powered applications.
+In this hands-on lab, you'll gain practical experience using **Microsoft Foundry** to create and manage AI development resources. You will learn how to create a Microsoft Foundry project, explore the Foundry portal interface, and understand how the project is connected to underlying Azure resources. You will also interact with the built-in **Ask AI** assistant to learn about platform capabilities, deploy a generative AI model from the Foundry model catalog, and test the deployed model in the playground.
+
+Additionally, you will configure a sample client application using your project endpoint, API key, and model deployment to connect with your deployed model. Through this application, you will explore a variety of AI capabilities including conversational AI, text analysis, speech features, computer vision, information extraction, and built-in safety guardrails. By the end of this lab, you will understand how Microsoft Foundry enables developers to build, deploy, and integrate AI-powered applications.
+
 
 ## Objectives
 
