@@ -1,6 +1,6 @@
-# AI-900: Microsoft Azure AI Fundamentals Workshop
+# AI-901: Microsoft Azure AI Fundamentals Workshop
 
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We're excited to guide you through hands-on learning with Azure AI services. Let’s continue by diving deeper into content moderation.
+Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited to guide you through hands-on learning with Azure AI services. Let’s continue by diving deeper into content moderation.
 
 # Module 2a: Get started with generative AI and agents in Microsoft Foundry
 
@@ -67,7 +67,7 @@ This lab demonstrates how Microsoft Foundry enables end-to-end development of ge
 
 # Getting Started with lab
  
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
+Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  

@@ -1,7 +1,7 @@
 
-# AI-900: Microsoft Azure AI Fundamentals Workshop
+# AI-901: Microsoft Azure AI Fundamentals Workshop
 
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
+Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
 # Get started with Microsoft Foundry
 
@@ -60,7 +60,7 @@ In this hands-on lab, the architecture demonstrates a simple workflow for develo
 
 # Getting Started with lab
  
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
+Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
