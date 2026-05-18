@@ -1,14 +1,14 @@
 [
     {
-      "Name": "AI 900 AI Fundamentals-Module-04a-Get started with speech in Microsoft Foundry",
+      "Name": "AI-901: AI Fundamentals-Module-04a-Get started with speech in Microsoft Foundry",
       "Language": "English",
       "Files": [
           {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/AI900-Gettingstarted/M4a-Gettingstarted.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/AI901-Gettingstarted/M4a-Gettingstarted.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/04a-speech.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/04a-speech.md",
           "Order": 2
         }
       ]
