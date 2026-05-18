@@ -1,32 +1,25 @@
----
-lab:
-  title: Explore AI workloads
-  description: Use an AI agent to explore AI workloads.
-  duration: 15
-  level: 100
-  islab: true
----
+# Lab: Explore AI workloads
 
-# Explore AI workloads
+## Lab Overview
 
-In this exercise, you'll explore common AI workloads in an AI chat application that provides information about computing history, and help with historical computing projects and vintage computer restoration.
+In this lab, you'll explore common AI workloads through an interactive AI agent application focused on computing history and vintage computers. The goal of this lab is to understand how generative AI, AI agents, text analysis, speech recognition, computer vision, information extraction, and content safety work together to enable intelligent, multimodal AI experiences.
 
-To complete this lab, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by the AI agent app. On older or low-spec computers, the app may run very slowly or experience errors.
+## Lab Objectives
 
-> **Minimum spec**
->
-> - 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-> - GPU required for the default Phi 3-mini model.
-> - 8+ GB system RAM (16 GB recommended)
-> - Enough storage to cache ~300MB–800MB model assets
-> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is required for the default model; a WASM-based fallback is provided)
-> - Audio hardware (mic and speaker) required for speech functionality
+In this lab, you will complete the following tasks:
 
-If your computer does not meet these requirements, the CPU-based fallback model may not run successfully. However, the app does support a failsafe "Basic" mode in which no model is used; which you may be able to use.
+- Task 1: Open the Computing History agent
+- Task 2: Explore a generative AI model
+- Task 3: Explore an agent with tools
+- Task 4: Explore text analysis
+- Task 5: Explore computer speech
+- Task 6: Explore computer vision
+- Task 7: Explore information extraction
+- Task 8: Explore safety guardrails
 
-This exercise should take approximately **15** minutes to complete.
+### Estimated timing: 15 Minutes
 
-## Open the Computing History agent
+## Task 1: Open the Computing History agent
 
 The Computing History agent is a simple example of an AI agent that provides a chat interface for exploring AI history and vintage computers.
 
@@ -40,7 +33,7 @@ The Computing History agent is a simple example of an AI agent that provides a c
 
     > **Tip**: After the app has initialized, on older or low-spec devices, you may get more reliable behavior by switching to Basic mode, even if GPU or CPU mode is available.
 
-## Explore a generative AI model
+## Task 2: Explore a generative AI model
 
 Generative AI uses *large language models* (LLMs) to user *prompts*.
 
@@ -60,7 +53,7 @@ Generative AI uses *large language models* (LLMs) to user *prompts*.
     - `What was ENIAC?`
     - `Tell me about Grace Hopper.`
 
-## Explore an agent with tools
+## Task 3: Explore an agent with tools
 
 Agents are generative AI applications that go beyond basic chat functionality and support the use of *tools* to retrieve knowledge outside of the model's training data as well as to automate tasks.
 
@@ -83,7 +76,7 @@ Agents are generative AI applications that go beyond basic chat functionality an
     - `Search for classic Microsoft logos.`
     - `Help me buy a PS/2 mouse for an old PC.`
 
-## Explore text analysis
+## Task 4: Explore text analysis
 
 Text analysis is a subset of natural language processing, in which AI can apply various analytical techniques to summarize, categorize, and extract details from text.
 
@@ -115,7 +108,7 @@ Text analysis is a subset of natural language processing, in which AI can apply 
     In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
     ```
 
-## Explore computer speech
+## Task 5: Explore computer speech
 
 *Speech recognition* enables AI to process spoken input, which *speech synthesis* enables it to vocalize output.
 
@@ -133,7 +126,7 @@ Text analysis is a subset of natural language processing, in which AI can apply 
     - *Explain speech recognition*
     - *What is a vocoder?*
 
-## Explore computer vision
+## Task 6: Explore computer vision
 
 Computer vision uses image-based models to enable AI to interpret visual input.
 
@@ -160,7 +153,7 @@ Computer vision uses image-based models to enable AI to interpret visual input.
     - Non-computers
     - Printed circuit boards (PCBs)
 
-## Explore information extraction
+## Task 7: Explore information extraction
 
 Information extraction combines multiple AI workloads to analyze content and identify important data values. In this example, we'll use the Computing History app to analyze photographs of printed circuit boards (PCBs) and try to extract information from them.
 
@@ -178,7 +171,7 @@ Information extraction combines multiple AI workloads to analyze content and ide
 
     You can also download images of circuit boards and try them, but the simple OCR implementation used in the browser-based application will likely produce poor results.
 
-## Explore safety guardrails
+## Task 8: Explore safety guardrails
 
 Content safety is an important element of responsible AI. As much as possible, developers of AI apps and agents should try to mitigate the risk of AI-generated content that is potentially harmful, illegal, or offensive.
 

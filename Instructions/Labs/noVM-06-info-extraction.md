@@ -1,32 +1,23 @@
----
-lab:
-  title: Explore information extraction
-  description: Use OCR and generative AI to extract information from documents.
-  duration: 15
-  level: 100
-  islab: true
----
+# Lab: Explore information extraction
+### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
 
-# Explore information extraction
+## Lab Overview
 
-In this exercise, you'll use optical character recognition (OCR) and generative AI to extract information from receipts. The goal of this exercise is to explore for yourself how information extraction from documents involves an OCR process to detect text, and a field extraction stage to map specific text strings to field values.
+In this lab, you'll use optical character recognition (OCR) and generative AI to extract information from receipts. The goal of this lab is to explore for yourself how information extraction from documents involves an OCR process to detect text, and a field extraction stage to map specific text strings to field values.
 
-To complete this lab, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by the AI agent app. On older or low-spec computers, the app may run very slowly or experience errors.
+## Lab Objectives
 
-**Minimum spec**
+In this lab, you will complete the following task:
 
-- 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-- 8+ GB system RAM (16 GB recommended)
-- Enough storage to cache ~300MB–800MB model assets
-- Latest Chrome / Edge / Firefox (WebGPU support is required for the default model; a modelless fallback implementation is provided)
++ Task 1: Extract information from receipts
 
-This exercise should take approximately **15** minutes to complete.
+### Estimated timing: 15 Minutes
 
-## Extract information from receipts
+## Task 1: Extract information from receipts
 
 Suppose you need to extract data fields from scanned receipts to help automate an expense claim solution. You can use an AI technique called optical character recognition (OCR) to identify text and its location in images. By combining this text extraction with a generative AI model, you can then apply semantic analysis to associate individual text values with specific data fields - such as names, phone numbers, dates, amounts, and so on.
 
-> **Note**: The models used in this exercise will run in your browser, on your local computer. Performance may vary depending on the available memory in your computer and your network bandwidth to download the model. If WebLLM models are not supported in your browser, a fallback mode with reduced functionality will be enabled, allowing you to use OCR to extract text and statistical heuristics to match fields.
+> **Note**: The models used in this lab will run in your browser, on your local computer. Performance may vary depending on the available memory in your computer and your network bandwidth to download the model. If WebLLM models are not supported in your browser, a fallback mode with reduced functionality will be enabled, allowing you to use OCR to extract text and statistical heuristics to match fields.
 
 1. In a web browser, open the **[Information Extractor](https://aka.ms/info-extractor)** app at `https://aka.ms/info-extractor`.
 1. Wait for the model to download and initialize.

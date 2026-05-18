@@ -1,35 +1,21 @@
----
-lab:
-  title: Explore AI text analysis
-  description: Use AI to analyze text.
-  duration: 15
-  level: 100
-  islab: true
----
+# Lab: Explore text analytics
 
-# Explore text analytics
+### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
 
-In this exercise, you'll use AI natural language processing functionality to analyze text. The goal of this exercise is to explore common applications of text analysis techniques.
+## Lab Overview
 
-We'll use browser-based applications that are based on simplified implementations of the chat and language playgrounds in the Microsoft Foundry portal.
+In this lab, you'll use AI natural language processing functionality to analyze text. The goal of this lab is to explore common applications of text analysis techniques.
 
-To complete this exercise, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by the *Chat Playground* app. On older or low-spec computers, the app may run very slowly or experience errors.
+## Lab Objectives
 
-> **Minimum spec**
->
-> - 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-> - GPU required for the default Phi 3-mini model.
-> - 8+ GB system RAM (16 GB recommended)
-> - Enough storage to cache ~300MB–800MB model assets
-> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is required for the default model; a WASM-based fallback is provided)
+In this lab, you will complete the following tasks:
 
-If your computer does not meet these requirements, the CPU-based fallback model may not run successfully.
++ Task 1: Use a generative AI model to analyze text
+- Task 2: Use a specialized language analysis tool
 
-> **Note**: The Chat Playground app includes a failsafe mode that uses Wikipedia to answer questions. This mode does <u>not</u> support the text analysis tasks in this exercise.
+### Estimated timing: 15 Minutes
 
-This exercise should take approximately **15** minutes to complete.
-
-## Use a generative AI model to analyze text
+## Task 1: Use a generative AI model to analyze text
 
 Let's start by using a chat interface to submit prompts to a generative AI model to perform common text analysis tasks. In this exercise, we'll use a small language model that is useful for general chat solutions in low bandwidth scenarios.
 
@@ -40,7 +26,7 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
     > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is activated (which does not support the tasks in this exercise).
 
-### Analyze sentiment
+### Task 1.1: Analyze sentiment
 
 Sentiment analysis is a common NLP task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
 
@@ -69,7 +55,7 @@ Sentiment analysis is a common NLP task. It's used to determine whether text con
 
     You can experiment further by creating your own prompts. The results may vary due to the small language model used in this lightweight app.
 
-### Extract named entities
+### Task 1.2: Extract named entities
 
 Named entities are the people, places, dates, and other important items mentioned in text.
 
@@ -88,7 +74,7 @@ Named entities are the people, places, dates, and other important items mentione
 
     ![Screenshot of named entity recognition results in the chat playground.](./media/lab3-t2.png)
 
-### Summarize text
+### Task 1.3: Summarize text
 
 Summarization is a way to distill the main points in a document into a shorter amount of text.
 
@@ -114,7 +100,7 @@ Summarization is a way to distill the main points in a document into a shorter a
 
     ![Screenshot of summarization results in the chat playground.](./media/lab3-t3.png)
 
-## Use a specialized language analysis tool
+## Task 2: Use a specialized language analysis tool
 
 While a large language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
 
@@ -122,7 +108,7 @@ While a large language model that's trained for general generative AI workloads 
 
     > **Note**: The Language Playground app uses statistical text analysis techniques to perform language detection and personally identifiable information (PII) redaction.
 
-### Detect language
+### Task 2.1: Detect language
 
 In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
 
@@ -158,7 +144,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
     > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
 
-### Identify PII in text
+### Task 2.2: Identify PII in text
 
 To comply with privacy policies and laws, organizations often need to detect and redact personally identifiable information (PII) such as names, addresses, phone numbers, email addresses, and other personal details.
 

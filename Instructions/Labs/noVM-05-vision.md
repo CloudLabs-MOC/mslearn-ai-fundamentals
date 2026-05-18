@@ -1,33 +1,22 @@
----
-lab:
-  title: Explore computer vision
-  description: Use image analysis with a generative AI model.
-  duration: 15
-  level: 100
-  islab: true
----
+# Lab: Explore computer vision
 
-# Explore computer vision
+### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
 
-In this exercise, you'll use a chat playground to interact with a generative AI solution that can analyze and interpret images. The goal of this exercise is to explore a common pattern for combining text and visual input in a prompt for a generative AI model.
+## Lab Overview
 
-To complete this exercise, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by *Chat Playground* the app. On older or low-spec computers, the apps may run very slowly or experience errors.
+In this lab, you'll use a chat playground to interact with a generative AI solution that can analyze and interpret images. The goal of this lab is to explore a common pattern for combining text and visual input in a prompt for a generative AI model.
 
-> **Minimum spec**
->
-> - 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-> - GPU required for the default Phi 3-mini model.
-> - 8+ GB system RAM (16 GB recommended)
-> - Enough storage to cache ~300MB–800MB model assets
-> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is required for the default model; a WASM-based fallback is provided)
+## Lab Objectives
 
-If your computer does not meet these requirements, the CPU-based fallback model may not run successfully. However, the app supports a failsafe mode in which no model is used; which you may be able to use.
+In this lab, you will complete the following task:
 
-This exercise should take approximately **15** minutes to complete.
++ Task 1: Prepare for image-based chat
 
-## Prepare for image-based chat
+### Estimated timing: 15 Minutes
 
-In this exercise you use a generative AI model in a chat playground to respond to prompts that include image data.
+## Task 1: Prepare for image-based chat
+
+In this task, you use a generative AI model in a chat playground to respond to prompts that include image data.
 
 > **Note**: The chat application uses a small language model to interpret and respond to prompts. If WebGPU is supported in your browser, the *Microsoft Phi 3 mini* model is run on your computer's GPU; if not, the *Microsoft Phi 2* model is run on the CPU. On older or low-spec devices, you may get more reliable behavior by switching to the *None* model even if CPU or GPU is available. Many modern large language models are *multimodal* - in other words, they support multiple formats of input, including text and images. However, the Microsoft Phi 3 mini and Phi 2 models are text-based only, so we'll also use the the **MobileNetV3** CNN-based computer vision model for image classification and include the predicted image class in the prompt.
 

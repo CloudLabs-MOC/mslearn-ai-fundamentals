@@ -1,31 +1,23 @@
----
-lab:
-  title: Explore generative AI
-  description: Use a chat playground to interact with a generative AI model
-  duration: 15
-  level: 100
-  islab: true
----
+# Lab: Explore generative AI
 
-# Explore generative AI
+### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
 
-In this exercise, you'll use a chat playground to interact with a generative AI model, and explore how it could be used to support an employee expenses agent that helps employees with expense claim policies and processes.
+## Lab Overview
 
-To complete this exercise, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by the *Chat Playground* and *Model Coder* apps. On older or low-spec computers, the apps may run very slowly or experience errors.
+In this lab, you'll explore how generative AI models can be used through interactive chat and developer tools. The goal of this lab is to understand how system prompts influence responses, how grounding models with external data improves answer relevance, and how developers can build AI-powered applications using OpenAI-compatible APIs in Python.
 
-> **Minimum spec**
->
-> - 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-> - GPU required for the default Phi 3-mini model.
-> - 8+ GB system RAM (16 GB recommended)
-> - Enough storage to cache ~300MB–800MB model assets
-> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is required for the default model; a WASM-based fallback is provided)
+## Lab Objectives
 
-If your computer does not meet these requirements, the CPU-based fallback model may not run successfully. However, the apps support a failsafe mode in which no model is used; which you may be able to use.
+In this lab, you will complete the following tasks:
 
-This exercise should take approximately **15** minutes to complete.
++ Task 1: Chat with a model
+- Task 2: Ground responses with data
+- Task 3: Explore client code
 
-## Chat with a model
+
+### Estimated timing: 15 Minutes
+
+## Task 1:  Chat with a model
 
 Let's start by using a chat interface to submit prompts to a generative AI model. In this exercise, we'll use a small language model that is useful for general chat solutions in low bandwidth scenarios.
 
@@ -53,7 +45,7 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
     > **Note**: Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `How are they reimbursed?`, "they" is interpreted as relating to per-diem allowances).
 
-## Ground responses with data
+## Task 2: Ground responses with data
 
 Generative AI is the foundation for *agentic* solutions; in which AI agents can assist you and act on your behalf. To accomplish this, agents need *tools* that allow them to access specific knowledge and perform tasks.
 
@@ -74,7 +66,7 @@ In the case of our expenses assistant, we need to provide a tool with access to 
 
     **Note**: The small amount of data and the limited capabilities of the small models used in this exercise may result in some inaccurate responses; but the principle of *retrieving* contextual information, using it to *augment* the prompt, and *generating* responses based on the data is a common pattern in generative AI solutions known as *Retrieval Augmented Generation* (or *RAG*).
 
-## Explore client code
+## Task 3: Explore client code
 
 You've seen how models and agents can be used in a pre-provided chat playground, but how do developers build apps and agents that submit prompts to models and process responses?
 

@@ -1,32 +1,22 @@
----
-lab:
-  title: Explore AI speech
-  description: Use AI to explore speech-to-text and text-to-speech capabilities with a generative AI model.
-  duration: 15
-  level: 100
-  islab: true
----
+# Lab: Explore AI speech
 
-# Explore AI speech
+### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
 
-In this exercise, you'll interact with a generative AI model using speech. The goal of this exercise is to explore speech-to-text (STT) and text-to-speech (TTS) functionality with a generative AI model.
+## Lab Overview
 
-To complete this lab, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by the *Chat Playground* app. On older or low-spec computers, the app may run very slowly or experience errors.
+In this lab, you'll interact with a generative AI model using speech. The goal of this lab is to explore speech-to-text (STT) and text-to-speech (TTS) functionality with a generative AI model.
 
-> **Minimum spec**
->
-> - 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-> - GPU required for the default Phi 3-mini model.
-> - 8+ GB system RAM (16 GB recommended)
-> - Enough storage to cache ~300MB–800MB model assets
-> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is required for the default model; a WASM-based fallback is provided)
-> - Audio hardware (mic and speaker) required for speech functionality
+## Lab Objectives
 
-If your computer does not meet these requirements, the CPU-based fallback model may not run successfully. However, the app does support a failsafe mode in which no model is used; which you may be able to use.
+In this lab, you will complete the following tasks:
 
-This exercise should take approximately **15** minutes to complete.
++ Task 1: Open the Chat Playground app
+- Task 2: Configure Voice mode
+- Task 3: Use speech to interact with the model
 
-## Open the Chat Playground app
+### Estimated timing: 15 Minutes
+
+## Task 1: Open the Chat Playground app
 
 Let's start by chatting with a generative AI model. In this exercise, we'll use a browser-based application to chat with a small language model that is useful for general chat solutions in low bandwidth scenarios. The app also uses Web Speech APIs for speech recognition and synthesis.
 
@@ -42,7 +32,7 @@ Let's start by chatting with a generative AI model. In this exercise, we'll use 
 
    ![Screenshot of the Chat Playground app.](./media/lab4-t1.png)
 
-## Configure Voice mode
+## Task 2: Configure Voice mode
 
 The Chat playground application supports *voice mode*, in which you can interact with a generative AI model using speech.
 
@@ -66,7 +56,7 @@ The Chat playground application supports *voice mode*, in which you can interact
 
 1. When you have selected the voice you want to use, close the **Configuration** pane.
 
-## Use speech to interact with the model
+## Task 3: Use speech to interact with the model
 
 The app supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model.
 
