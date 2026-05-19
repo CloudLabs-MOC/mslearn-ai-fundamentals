@@ -211,10 +211,11 @@ In this task, you'll understand how developers can use REST APIs to submit docum
     ```
 
 1. Consider what you would need to specify in the cUrl command:
-   - *analzyerID*
-   - *endpoint*
-   - *key*
-   - *url_path* to the document
+   
+    - *analzyerID*
+    - *endpoint*
+    - *key*
+    - *url_path* to the document
 
 1. When you run the command, you receive a response in JSON. The analysis is performed asynchronously, so the response includes an **id** value specific to the analysis job that can be used to poll for the results:
 
@@ -242,9 +243,9 @@ In this task, you'll understand how developers can use REST APIs to submit docum
     ```
 
 1. Consider what you would need to specify in the cUrl command:
-   - *resultID*
-   - *endpoint*
-   - *key*
+    - *resultID*
+    - *endpoint*
+    - *key*
 
 ## Task 4: Understand how to extract content with the Python SDK
 
