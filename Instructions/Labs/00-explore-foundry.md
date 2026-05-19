@@ -48,12 +48,12 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
     - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-01 (4)** 
+    - Resource Group : Select **AI-901 (4)** 
     - Microsoft Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (5)**
     - Region : Select **<inject key="location" enableCopy="false"/> (6)**
     - Click on **Create** **(7)**
 
-      ![](./media/mod01-p2t1p5.png)
+      ![](./media/ai901-l1-01.png)
 
         >**Note:** Make a note of the region you selected. You'll need it later!
 
@@ -65,11 +65,11 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
 1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![](./media/mod01-p2t1p7.png)
+    ![](./media/ai901-l1-4.png)
 
 1. The project has an **endpoint** and **key**, which can be used to securely access models, agents, and other assets in the project from client applications.
 
-    ![](./media/mod01-p2t1p8.png)
+    ![](./media/ai901-l1-5.png)
 
     >**Note:** You're going to need the project key and endpoint later!
 
@@ -92,7 +92,7 @@ In this task, you will explore the Azure resources associated with your Microsof
 
 1. Note the name of the parent resource for your project. 
 
-    ![](./media/mod01-p2t1p10.png)
+    ![](./media/ai901-l1-6.png)
 
 1. Then, open a new browser tab and navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com` and if prompted, sign in using your Azure credentials.
 
@@ -128,12 +128,11 @@ In this task, you will explore the Microsoft Foundry portal interface. You will 
 
 1. From the top navigation menu, click **Discover**. This page surfaces the latest models and services and enables you to find starting points for AI application development.
 
-    ![](./media/mod01-p2t1p18.png)
+    ![](./media/ai901-l1-7.png)
 
 1. From the top navigation menu, click **Build**. This page is where you develop AI solutions. Here you can:
 
     - View and manage the **agents** in your project.
-    - View and manage the **workflows** in your project.
     - View and manage the **models** in your project.
     - **Fine-tune** base models to respond to queries based on your application's specific needs.
     - Add and configure **tools** that agents can use to perform tasks.
@@ -142,7 +141,7 @@ In this task, you will explore the Microsoft Foundry portal interface. You will 
     - Create **evaluations** to compare model performance.
     - Define and manage **guardrails** to ensure compliance with responsible AI policies for generative AI content and behavior.
 
-        ![](./media/mod01-p2t1p19.png)
+        ![](./media/ai901-l1-8.png)
 
 1. From the top navigation menu, click **Operate**. On this page, you can operate your AI solution by:
 
@@ -155,7 +154,7 @@ In this task, you will explore the Microsoft Foundry portal interface. You will 
 
 1. From the top navigation menu, click **Docs**. This page provides access to Microsoft Foundry documentation.
 
-    ![](./media/mod01-p2t1p21.png)
+    ![](./media/ai901-l1-9.png)
 
 ## Task 4: Get AI assistance
 
@@ -163,7 +162,7 @@ In this task, you will use the built-in Ask AI feature in the Microsoft Foundry 
 
 1. In the toolbar, use the AI chat icon to open the **Ask AI** pane.
 
-    ![](./media/mod01-p2t1p22.png)
+    ![](./media/ai901-l1-10.png)
 
 1. Enter the following prompt in the chat box **(1)**, then click the **Send** (blue arrow) icon **(2)**. 
 

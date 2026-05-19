@@ -53,12 +53,12 @@ This project acts as a workspace to organize and manage resources required for b
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
     - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-02a (4)** 
+    - Resource Group : Select **AI-901 (4)** 
     - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
     - Region : Select **<inject key="location" enableCopy="false"/> (6)**
     - Click on **Create** **(7)**
 
-      ![](./media/lab2a-p2t1p1.png)
+      ![](./media/ai901-l2-01.png)
       
       >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
 
@@ -102,7 +102,7 @@ In this task, you will explore the model catalog in Microsoft Foundry and deploy
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![](./media/lab2a-p2t1p6.png)
+    ![](./media/ai901-l2-02.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

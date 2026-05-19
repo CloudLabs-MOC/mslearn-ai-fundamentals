@@ -49,12 +49,12 @@ In this task, you’ll create and configure a new project in the Microsoft Found
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
     - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-03b (4)** 
+    - Resource Group : Select **AI-901 (4)** 
     - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
     - Region : Select **<inject key="location" enableCopy="false"/> (6)**
     - Click on **Create** **(7)**
 
-      ![](./media/lab3b-p2t1p1.png)
+      ![](./media/ai901-l3-01.png)
       
       >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
 
@@ -66,7 +66,7 @@ In this task, you’ll create and configure a new project in the Microsoft Found
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
-   ![](./media/lab3b-p2t1p2.png)
+   ![](./media/ai901-l3-02.png)
 
    >**Note:** Close any quick start panes in order to access your project's Foundry home page.
 
@@ -84,7 +84,7 @@ In this task, you’ll deploy a general-purpose AI model and use the chat playgr
 
 1. From the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
-    ![](./media/ab3b-p2t2p1.png)
+    ![](./media/ai901-l3-03.png)
 
 2. In the **Models** page, enter `gpt-5` **(1)** in the search bar, then select the **gpt-5** **(2)** model from the results to open its details page and review its features and capabilities.
 
@@ -92,11 +92,11 @@ In this task, you’ll deploy a general-purpose AI model and use the chat playgr
 
 3. On the model details page, select **Deploy (1)**, then choose **Default settings (2)** to deploy the model with the standard configuration.
 
-    ![](./media/lab3b-p2t2p3.png)
+    ![](./media/ai901-l3-04.png)
 
 1. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground, where you can test out the model's capabilities.
 
-    ![](./media/lab3b-p2t2p4.png)
+    ![](./media/ai901-l3-05.png)
 
 ### Task 2.1: Analyze sentiment
 
@@ -113,7 +113,7 @@ In this task, you’ll use a generative AI model to analyze text and determine w
     ---
     ```
 
-    ![](./media/lab3b-p2t2p5.png)
+    ![](./media/ai901-l3-06.png)
 
 1. Review the response, which should include an analysis of the text's sentiment.
 
@@ -204,11 +204,11 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
 1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
-    ![](./media/lab3b-p2t3p1.png)
+    ![](./media/ai901-l3-07.png)
 
-2. On the **Build** page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Models (1)**. Then, at the top of the **Models** page, select **AI Services (2)**. 
+2. On the **Build** page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments (1)**. Then, at the top of the **Models** page, select **AI Services (2)**. 
 
-    ![](./media/lab3b-p2t3p2.png)
+    ![](./media/ai901-l3-08.png)
 
 ### Task 3.1: Detect language
 
@@ -218,11 +218,11 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
 1. From the list of AI services, select the **Azure Language - Language detection** analyzer.
 
-    ![](./media/lab3b-p2t3p3.png)
+    ![](./media/ai901-l3-09.png)
 
 2. In the **Input text** list, select one of the provided sample documents **(1)**. Then use the **Detect (2)** button to detect the language in which the sample is written.
 
-    ![](./media/lab3b-p2t3p4.png)
+    ![](./media/ai901-l3-10.png)
 
 3. After reviewing the detected language details, click on the **Edit** button icon to make the input text editable again. Now you can:
     
@@ -230,7 +230,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
     - Type your own text.
     - Upload a text file.
 
-        ![](./media/lab3b-p2t3p5.png)
+        ![](./media/ai901-l3-11.png)
 
 1. For example, enter the following input text and detect the language it is written in:
 
@@ -246,7 +246,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
 5. Return to the list of AI services when you are done experimenting. You can click on the back button **(1)** at the top of the playground screen.
 
-    ![](./media/lab3b-p2t3p7.png)
+    ![](./media/ai901-l3-12.png)
 
 ### Task 3.2: Identify PII in text
 
@@ -256,13 +256,13 @@ To comply with privacy policies and laws, organizations often need to detect and
 
 1. In the list of AI services, select the **Azure Language - Text PII extraction** analyzer.
 
-    ![](./media/lab3b-p2t3p8.png)
+    ![](./media/ai901-l3-13.png)
 
 2. In the **Input text** list, select one of the provided sample documents **(1)**. Then use the **Detect (2)** button to detect PII values in the text.
 
-    ![](./media/lab3b-p2t3p9.png)
+    ![](./media/ai901-l3-14.png)
 
-    ![](./media/lab3b-p2t3p10.png)
+    ![](./media/ai901-l3-15.png)
 
 3. After reviewing the detected PII details, click on the **Edit** button to make the input text editable again. Now you can:
 
@@ -295,7 +295,7 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
 
 1. Select the **Code** tab on the right to view sample code for PII identification. 
 
-    ![](./media/lab3b-p2t3p12.png)
+    ![](./media/ai901-l3-16.png)
 
     >**Note:** Below is the same sample code in Python for your reference. You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 

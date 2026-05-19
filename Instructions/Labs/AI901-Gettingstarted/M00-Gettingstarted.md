@@ -76,7 +76,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/aig2.png)
+![Explore Lab Resources](../media/ai901-g1.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -88,7 +88,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/aig3.png)
+![Use the Split Window Feature](../media/ai901-g2.png)
 
 ## Managing Your Virtual Machine
  
@@ -142,9 +142,9 @@ On the **Progress (1)** tab, you can view your overall points and validation sta
 
     ![](../media/mod01-gs-t1p4.png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later**.
 
-    ![](../media/AI-l6-4.png)
+    ![](../media/lab2a-g4.png)
 
 ## Support Contact
  
