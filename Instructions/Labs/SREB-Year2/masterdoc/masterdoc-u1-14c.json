@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB-Unit1-Lesson 14C-K-Means Clustering, Interpretation, and Traffic Operations Memo",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Lesson14C/Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Lesson14C/L14C_U01.md",
+          "Order": 2
+        }
+      ]
+    }
+]

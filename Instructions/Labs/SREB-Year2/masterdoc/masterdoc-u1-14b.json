@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB-Unit1-Lesson 14B-Two-Class Classification (Predicting Traffic Congestion)",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Lesson14B/Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Lesson14B/L14B_U01.md",
+          "Order": 2
+        }
+      ]
+    }
+]

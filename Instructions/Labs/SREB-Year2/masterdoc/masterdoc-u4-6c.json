@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB-Unit4-Lesson 6c-Using Azure on Large Manufacturing Data",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit4-Lesson6B/Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit4-Lesson6B/L6B_U01.md",
+          "Order": 2
+        }
+      ]
+    }
+]

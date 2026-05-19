@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB-Unit1-Lesson 13B-Cleaning the Clustering Dataset in Azure ML Designer",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Lesson13B/Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Lesson13B/L13B_U01.md",
+          "Order": 2
+        }      
+      ]
+    }
+]

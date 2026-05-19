@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB-Unit4-Lesson 6a-Large Manufacturing Dataset From Kaggle",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit4-Lesson6A/Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit4-Lesson6A/L6A_U01.md",
+          "Order": 2
+        }
+      ]
+    }
+]
