@@ -72,13 +72,6 @@ This project acts as a workspace to organize and manage resources required for b
 
    ![](./media/lab2a-p2t1p2.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="41ca39eb-3ddc-4498-89e5-e45e1c9c9239" />
 
 ## Task 2: Deploy a model
 
@@ -104,13 +97,6 @@ In this task, you will explore the model catalog in Microsoft Foundry and deploy
 
     ![](./media/ai901-l2-02.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="53a76f5b-037d-4dff-a723-3e67a901b5f5" />
 
 ## Task 3: Chat with the model
 
@@ -406,7 +392,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain priveleged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
 
-    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we peviously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
+    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
 1. In the **Code** tab, use the **Open in VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
 
@@ -414,7 +400,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     Wait for the environment to be set up.
 
-    > **Note:** It can take a few minutes to set the envionment up!
+    > **Note:** It can take a few minutes to set the environment up!
 
 1. On the **Welcome to VS Code** pop-up, select **Skip**.
 
@@ -424,7 +410,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     ![](./media/lab2a-may26-p2t1p5.png)
 
-1. After VS Code for the web has opened and the environment has been set up, close the GitHib Copilot **Chat** pane on the right side to give you more room, and note that the **Instructions.md** file contains the instructions you need to run the sample code (which is in the **run_agent.py** file in the VS Code Explorer pane on the left.)
+1. After VS Code for the web has opened and the environment has been set up, close the GitHub Copilot **Chat** pane on the right side to give you more room, and note that the **Instructions.md** file contains the instructions you need to run the sample code (which is in the **run_agent.py** file in the VS Code Explorer pane on the left.)
 
     ![](./media/lab2a-p2t1p33.png)
 
@@ -434,7 +420,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
    python run_agent.py
     ```
 
-1. The output should inlude a response to the prompt `Tell me what you can help with.`
+1. The output should include a response to the prompt `Tell me what you can help with.`
 
     ![](./media/lab2a-p2t1p34.png)
 
@@ -444,13 +430,6 @@ The agent is defined within your Foundry project, and there's a convenient way t
     >
     >- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="26a02172-cb11-4e43-9aae-fb763d33b068" />
 
 <!---
 ## Task 7: Publish the agent and use it in a client app
