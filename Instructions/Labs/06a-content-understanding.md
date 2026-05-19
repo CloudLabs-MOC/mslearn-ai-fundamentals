@@ -91,9 +91,9 @@ In this task, you'll use Azure Content Understanding analyzers in Microsoft Foun
 
 3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting:
 
-   - **Content Understanding - Read**: Raw text extraction only. Answers the question, "What text is here?"
-   - **Content Understanding - Layout**: Adds structure, hierarchy, and positioning. Answers the question, "How is this content organized?"
-   - **Content Understanding**: offers the full analyzer capability by extracting fields and structure and generating insights. Answers the question, "What does this content mean and what should I do with it?"
+    - **Content Understanding - Read**: Raw text extraction only. Answers the question, "What text is here?"
+    - **Content Understanding - Layout**: Adds structure, hierarchy, and positioning. Answers the question, "How is this content organized?"
+    - **Content Understanding**: offers the full analyzer capability by extracting fields and structure and generating insights. Answers the question, "What does this content mean and what should I do with it?"
 
       ![](./media/ai901-lab6a-t2p3.png)
 
