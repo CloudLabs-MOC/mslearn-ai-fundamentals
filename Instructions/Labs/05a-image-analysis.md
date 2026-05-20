@@ -341,6 +341,12 @@ If you want to develop a client app or agent that generates videos using your mo
 
     ![](./media/newlab5a-e1t2p21.png)
 
+
+<question source="Questions/Module-5/question-01.md" />
+
+<question source="Questions/Module-5/question-02.md" />
+
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. You will receive a success message. 

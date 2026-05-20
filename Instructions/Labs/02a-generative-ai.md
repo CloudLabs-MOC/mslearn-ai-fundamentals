@@ -452,84 +452,9 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
   <validation step="26a02172-cb11-4e43-9aae-fb763d33b068" />
 
-<!---
-## Task 7: Publish the agent and use it in a client app
+<question source="Questions/Module-2/question-01.md" />
 
-In this task, you’ll publish the agent to a dedicated endpoint and use sample code to integrate and interact with it from a client application.
-
-1. Keep the VS Code for the Web tab open, but switch back to the Foundry portal tab.
-
-1. In the agent playground, in the **Publish (1)** drop-down list, select **Publish agent (2)**.
-
-    ![](./media/lab2a-p2t1p35.png)
-
-1. When prompted, confirm you want to publish the agent to production. and 
-
-    ![](./media/lab2a-p2t1p36.png)
-
-1. After a few seconds, view the published agent details. In particular, copy the Responses API endpoint **(1)** that clients apps can use to connect to your agent.
-
-1. Note that you can perform additional steps to publish your agent for integration with Teams and Microsoft 365 Copilot. However, in this exercise, select **Close (2)**.
-
-    ![](./media/lab2a-p2t1p37.png)
-
-    > **Note:** You can use the **View details** option in the **Publish** drop-down list to re-open the agent details.
-
-1. Switch back to the VS Code for the Web tab, and in the Explorer pane, select **New File... (1)** and name the new file as `expenses-client.py`.
-
-    ![](./media/lab2a-p2t1p38.png)
-
-1. Add the following code to the new **expenses-client.py** file.
-
-    ```python
-    from openai import OpenAI
-    from azure.identity import DefaultAzureCredential, get_bearer_token_provider
-        
-    # Replace with your agent endpoint
-    AGENT_ENDPOINT = "YOUR_AGENT_ENDPOINT"
-        
-    # Create OpenAI client authenticated with Azure credentials
-    openai = OpenAI(
-            api_key=get_bearer_token_provider(DefaultAzureCredential(), "https://ai.azure.com/.default"),
-            base_url=AGENT_ENDPOINT,
-            default_query={"api-version": "2025-11-15-preview"}
-    )
-        
-    # Send a request to the published agent
-    response = openai.responses.create(
-            input=input("Prompt:\n"),
-    )
-    print(f"Response output:\n{response.output_text}")
-    ```
-
-    This code uses the **Open AI Responses** API with Entra ID authentication. Since the agent is published in its own production endpoint, there's no need to connect to the Foundry project using the **Azure.AI.Projects** library or to specify agent details in the **responses.create** method call.
-
-1. Replace the **YOUR_AGENT_ENDPOINT** placeholder with the Responses API endpoint for your agent (copied from the published agent details in the Foundry portal).
-
-    ![](./media/lab2a-p2t1p39.png)
-
-1. Save the changes to the **expenses-client.py** code file **(CTRL+S)**.
-
-1. In the VS Code terminal pane, enter the following command to run the code.
-
-    ```
-    python expenses-client.py
-    ```
-
-1. When prompted, enter the following prompt:
-
-    ```
-    How do I submit an expense claim?
-    ```
-
-    ![](./media/lab2a-p2t1p40.png)
-
-    The code uses our published agent to get a response, and displays it.
-
-    ![](./media/lab2a-p2t1p41.png)
-
-    >**Note:** It might take a few minutes to generate the response.
---->
+<question source="Questions/Module-2/question-02.md" />
 
 ## Summary
 

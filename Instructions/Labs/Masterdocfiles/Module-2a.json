@@ -4,11 +4,11 @@
       "Language": "English",
       "Files": [
           {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/AI900-Gettingstarted/M2a-Gettingstarted.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/demo-ai900-2026/Instructions/Labs/AI900-Gettingstarted/M2a-Gettingstarted.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai900-2026/Instructions/Labs/02a-generative-ai.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/demo-ai900-2026/Instructions/Labs/02a-generative-ai.md",
           "Order": 2
         }
       ]

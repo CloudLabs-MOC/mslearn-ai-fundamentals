@@ -339,6 +339,11 @@ Foundry Models by default are configured with guardrails that enforce content sa
 
         ![](./media/mod01-p2t1p36(10).png)
 
+
+<question source="Questions/Module-1/question-01.md" />
+
+<question source="Questions/Module-1/question-02.md" />
+
 ## Summary
 
 In this lab, you created and explored a Microsoft Foundry project and became familiar with the Microsoft Foundry portal and its associated Azure resources. You used the built-in AI assistant to understand platform capabilities, navigated key areas used for developing AI solutions, and deployed a generative AI model from the model catalog. You then connected a client chat application to your Foundry resource using the project endpoint and API key, and explored multiple AI capabilities including conversational AI, text analysis, speech, computer vision, information extraction, and built-in safety guardrails.

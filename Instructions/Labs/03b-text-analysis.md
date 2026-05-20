@@ -339,6 +339,10 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
     pii_recognition_example(client)
     ```
 
+<question source="Questions/Module-3/question-01.md" />
+
+<question source="Questions/Module-3/question-02.md" />
+
 ## Summary
 
 In this exercise, you explored how to use Microsoft Foundry to perform text analysis using both generative AI models and specialized language tools. You deployed a general-purpose model and used it in the chat playground to analyze sentiment, extract entities, and summarize text. You then used Azure Language analyzers to detect language and identify PII, gaining experience with structured and deterministic text analysis techniques.

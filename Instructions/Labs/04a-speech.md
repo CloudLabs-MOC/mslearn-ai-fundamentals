@@ -188,6 +188,10 @@ In this task, you’ll review sample code to understand how to integrate speech-
     - Audio streaming for input and output.
     - Use of audio devices, such as microphones and speakers.
 
+<question source="Questions/Module-4/question-01.md" />
+
+<question source="Questions/Module-4/question-02.md" />
+
 ## Summary
 
 In this exercise, you explored how to use Microsoft Foundry and Azure Speech Voice Live to create and configure a speech-enabled AI agent. You created an agent, defined its behavior using system instructions, enabled voice capabilities, and reviewed how speech input and output are handled in the playground. You also examined sample client code to understand how real-time voice interactions can be implemented in applications.

@@ -253,6 +253,12 @@ In this task, you'll review how the Python SDK can be used to analyze documents 
 
    ![](./media/ai901-lab6a-t2p23.png)
 
+
+<question source="Questions/Module-6/question-01.md" />
+
+<question source="Questions/Module-6/question-02.md" />
+
+
 ## Summary
 
 In this lab, you explored Azure Content Understanding in Foundry and learned how it transforms unstructured content into structured, usable data. You tried out three analyzers, each building on the previous one in capability:
