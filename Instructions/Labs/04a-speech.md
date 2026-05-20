@@ -30,7 +30,7 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+      ![Enter Your Username](./media/ai901-l4-0.png)
  
    - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
@@ -51,12 +51,12 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and expand **Advanced options (2)** to specify the following settings for your project: 
 
     - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-04a (4)** 
+    - Resource Group : Select **AI-901 (4)** 
     - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
     - Region : Select **<inject key="location" enableCopy="false"/> (6)**
     - Click on **Create** **(7)**
 
-      ![](./media/lab4a-e1t1p1.png)
+      ![](./media/ai901-l4-2.png)
       
       >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
 
@@ -68,35 +68,27 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
-    ![](./media/lab4a-e1t1p2.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="37d9e28f-12f2-487e-8bcc-bb7f8ca4db98" />
+    ![](./media/ai901-l4-3.png)
 
 ## Task 2: Create an agent
 
 In this task, you’ll create an agent, select a generative AI model, and define its behavior using system instructions.
 
-1. From the Microsoft Foundry Home page, select **Start building (1)**, and then choose **Create agents (2)** to begin creating a new agent.
+1. From the Home page of the Microsoft Foundry portal, select **Create agents** to begin creating a new agent.
 
-    ![](./media/lab4an-p2t2p1.png)
+    ![](./media/ai901-l4-4.png)
 
 1. In the **Create an agent** dialog, enter a name for your agent `speech-agent` **(1)**, and then select **Create (2)** to proceed.
 
-    ![](./media/lab4an-p2t2p2.png)
+    ![](./media/ai901-l4-5.png)
 
 1. When ready, your agent opens in the agent playground.
 
-    ![](./media/lab4an-p2t2p3.png)
+    ![](./media/ai901-l4-6.png)
 
 1. In the model drop-down list, ensure that a **gpt-4.1** model has been deployed and selected for your agent.
 
-    ![](./media/lab4an-p2t2p4.png)
+    ![](./media/ai901-l4-7.png)
 
 1. Assign your agent the following **Instructions**:
 
@@ -119,14 +111,6 @@ In this task, you’ll create an agent, select a generative AI model, and define
     The agent should respond with an appropriate answer based on its instructions.
 
     ![](./media/lab4an-p2t2p7.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="c1332062-2ffd-464f-9300-783ce72d3269" />
 
 ## Task 3: Configure Azure Speech Voice live
 

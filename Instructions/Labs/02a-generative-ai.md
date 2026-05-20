@@ -32,7 +32,7 @@ This project acts as a workspace to organize and manage resources required for b
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+      ![Enter Your Username](./media/ai901-l4-0.png)
  
    - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
