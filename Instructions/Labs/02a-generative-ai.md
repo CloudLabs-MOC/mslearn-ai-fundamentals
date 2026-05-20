@@ -452,9 +452,9 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
   <validation step="26a02172-cb11-4e43-9aae-fb763d33b068" />
 
-<question source="Questions/Module-2/question-01.md" />
+<question source="./Questions/Module-2/question-01.md" />
 
-<question source="Questions/Module-2/question-02.md" />
+<question source="./Questions/Module-2/question-02.md" />
 
 ## Summary
 
