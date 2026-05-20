@@ -30,7 +30,7 @@ In this task, you'll create a Microsoft Foundry project and configure the basic 
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+      ![Enter Your Username](./media/ai901-l4-0.png)
  
    - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
@@ -51,26 +51,25 @@ In this task, you'll create a Microsoft Foundry project and configure the basic 
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and expand **Advanced options (2)** to specify the following settings for your project: 
 
     - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-05a (4)** 
+    - Resource Group : Select **AI-901 (4)** 
     - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
     - Region : Select **<inject key="location" enableCopy="false"/> (6)**
     - Click on **Create** **(7)**
 
-      ![](./media/lab5a-e1t1p1.png)
+      ![](./media/ai901-l5-1.png)
       
       >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
 
-1. Wait for your project to be created. It may take a few minutes. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
+1. Wait for your project to be created. It may take a few minutes. 
 
-    ![](./media/lab4a-e1t1p2.png)
+1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    ![](./media/mod01-p2t1p6.png)
 
-  <validation step="4ab20ea3-18c3-4c44-8425-121300a14289" />
+1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
+
+    ![](./media/ai901-l4-3.png)
+
 
 ## Task 2: Use a generative AI model to analyze images
 
@@ -97,9 +96,9 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/lab5a-e1t2p4.png)
 
-1. Return to the browser tab containing your Microsoft Foundry project. Then, click on the **Start building (1)** menu and select **Find models (2)** to view the Microsoft Foundry model catalog.
+1. Return to the browser tab containing your Microsoft Foundry project, from the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
-    ![](./media/newlab5a-e1t2p5.png)
+    ![](./media/ai901-l3-03.png)
 
 1. Search for the `gpt-5-mini` **(1)** model and select the same **(2)** from the result section. 
 
@@ -111,7 +110,7 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![](./media/newlab5a-e1t2p8.png)
+    ![](./media/ai901-l5-2.png)
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 
@@ -145,7 +144,7 @@ To develop a client app or agent that can use the model to interpret images, you
 
 1. In the **Chat** pane, select the **Code** tab to view sample code.
 
-    ![](./media/newlab5a-e1t2p12.png)
+    ![](./media/ai901-l5-3.png)
 
 1. Select the following code options:
     - **API**: Responses API
@@ -183,13 +182,6 @@ To develop a client app or agent that can use the model to interpret images, you
 
     > **Note:** If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code), and you can use the image **[orange.jpg](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg`. To learn more about using the OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="c6119e13-52f2-488b-b355-20bc23360a82" />
 
 ## Task 3: Use a generative AI model to create new images
 
@@ -220,6 +212,8 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 1. On the **FLUX.1-Kontext-pro** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
     ![](./media/lab5a-e1t3p5.png)
+
+    > **Note:** If the **Deploy Flux.1-Kontext-pro** popup appears, select **Agree and proceed** to continue.
 
 1. When the model has been deployed, it opens in the image playground.
 
@@ -271,14 +265,6 @@ If you want to develop a client app or agent that generates images using your mo
 
     ![](./media/lab5a-e1t3p9.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="0a471e0d-9ad1-466f-ba17-cf2382d12a15" />
-
 ## Task 4: Use a generative AI model to create video
 
 In this task, you'll deploy a video-generation model and use text prompts to generate short videos based on your descriptions.
@@ -293,7 +279,7 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. From the **Collections** drop-down, choose **Direct from Azure (1)**, and from the **Inference tasks** drop-down, select **Video generation (2)**. Then review the list of available video generation models.
 
-    ![](./media/lab5a-e1t4p3.png)
+    ![](./media/ai901-l5-9.png)
 
     ![](./media/lab5a-e1t4p3(1).png)
 
@@ -301,7 +287,7 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. Select the **Sora-2** model from the list.
 
-    ![](./media/newlab5a-e1t2p17.png)
+    ![](./media/ai901-l5-10.png)
 
     >**Note:** If you are unable to deploy the model in your subscription, try one of the other video-generation models.
 
@@ -311,7 +297,7 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. When the model has been deployed, it opens in the video playground.
 
-    ![](./media/lab5a-e1t4p6.png)
+    ![](./media/ai901-l5-11.png)
 
 1. Enter a prompt that describes the video you want, such as `A chef in a busy kitchen.`, then press **Enter** and review the generated result.
 
@@ -340,14 +326,6 @@ If you want to develop a client app or agent that generates videos using your mo
     ```
 
     ![](./media/newlab5a-e1t2p21.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="8def21a5-74c7-40a3-af35-366491f2fd7c" />
 
 ## Summary
 
