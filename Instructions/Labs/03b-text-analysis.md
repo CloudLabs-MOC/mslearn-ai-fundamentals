@@ -339,9 +339,9 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
     pii_recognition_example(client)
     ```
 
-<question source="./Questions/Module-3/question-01.md" />
+<question source="Questions/question-01.md" />
 
-<question source="./Questions/Module-3/question-02.md" />
+<question source="Questions/Module-3/question-02.md" />
 
 ## Summary
 
