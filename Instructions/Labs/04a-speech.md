@@ -70,6 +70,14 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
 
     ![](./media/ai901-l4-3.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="4c8b405f-1e52-4064-833b-c3b37cb5ba0b" />
+
 ## Task 2: Create an agent
 
 In this task, you’ll create an agent, select a generative AI model, and define its behavior using system instructions.
@@ -111,6 +119,14 @@ In this task, you’ll create an agent, select a generative AI model, and define
     The agent should respond with an appropriate answer based on its instructions.
 
     ![](./media/lab4an-p2t2p7.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="44086315-289e-4dc5-b10e-c115a9fb514b" />
 
 ## Task 3: Configure Azure Speech Voice live
 

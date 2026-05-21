@@ -73,6 +73,14 @@ This project acts as a workspace to organize and manage resources required for b
    ![](./media/lab2a-p2t1p2.png)
 
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="f179f7a3-eee2-4776-b013-696a6be31f59" />
+
 ## Task 2: Deploy a model
 
 In this task, you will explore the model catalog in Microsoft Foundry and deploy a generative AI model. The deployed model will be used for interactive testing and experimentation in the playground.
@@ -97,6 +105,14 @@ In this task, you will explore the model catalog in Microsoft Foundry and deploy
 
     ![](./media/ai901-l2-02.png)
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="6d51d370-fbe8-4b78-ac65-6daae4aea306" />
 
 ## Task 3: Chat with the model
 
@@ -267,6 +283,14 @@ In this task, you’ll convert the configured model into an agent by saving its 
     ![](./media/lab2a-p2t1p22.png)
 
     The response is likely to be generic. Accurate; but not particularly helpful to the employee. We need to give the agent some knowledge about the company's expense policies and procedures.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="6c0bebb0-789f-4b1a-b8e2-07f5ac7982b2" />
 
 ## Task 6: Add a knowledge tool to the agent
 

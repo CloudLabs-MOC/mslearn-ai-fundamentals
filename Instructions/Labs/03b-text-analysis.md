@@ -71,6 +71,14 @@ In this task, you’ll create and configure a new project in the Microsoft Found
    >**Note:** Close any quick start panes in order to access your project's Foundry home page.
 
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="ba1316a1-e65a-4f8f-a945-c839e3cd6736" />
+
 ## Task 2: Explore a general-purpose AI model's text analysis capabilities 
 
 In this task, you’ll deploy a general-purpose AI model and use the chat playground to perform text analysis tasks through natural language prompts.
@@ -178,6 +186,14 @@ In this task, you’ll generate concise summaries of longer text passages using 
 
     ![](./media/lab3b-p2t2p10.png)
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="5468fcc2-fe83-4b11-a8c1-450edeec0bf5" />
 
 ## Task 3: Use a specialized language analysis tool
 

@@ -1,6 +1,6 @@
 # Get started with information extraction in Microsoft Foundry
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 45 Minutes
 
 ## Lab overview
 
@@ -75,7 +75,7 @@ In this task, you'll create and configure a Microsoft Foundry project to manage 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="ef1ed7b3-d177-4af2-b182-064e6945644b" />
+  <validation step="d54b3abe-8f62-4f21-a451-21a3bef84bef" />
 
 ## Task 2: Extract information from documents in the new Foundry portal
 
@@ -190,6 +190,14 @@ In this task, you'll use the **Document fields** analyzer to extract structured 
     ![](./media/ai901-lab6a-t2p21.png)
 
     > **Note:** Consider this: the *Fields* tab displays the information from the raw JSON in the *Results* tab in a user-friendly way.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="8a0430c3-4f2b-4e6a-8973-f7b385f3062f" />
 
 ## Task 3: Understand how to extract content with the REST API
 
