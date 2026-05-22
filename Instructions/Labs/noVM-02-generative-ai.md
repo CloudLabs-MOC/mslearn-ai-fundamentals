@@ -11,9 +11,8 @@ In this lab, you'll explore how generative AI models can be used through interac
 In this lab, you will complete the following tasks:
 
 + Task 1: Chat with a model
-- Task 2: Ground responses with data
-- Task 3: Explore client code
-
++ Task 2: Ground responses with data
++ Task 3: Explore client code
 
 ### Estimated timing: 15 Minutes
 

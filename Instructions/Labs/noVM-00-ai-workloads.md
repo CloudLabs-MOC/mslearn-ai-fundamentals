@@ -1,5 +1,7 @@
 # Lab: Explore AI workloads
 
+### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
+
 ## Lab Overview
 
 In this lab, you'll explore common AI workloads through an interactive AI agent application focused on computing history and vintage computers. The goal of this lab is to understand how generative AI, AI agents, text analysis, speech recognition, computer vision, information extraction, and content safety work together to enable intelligent, multimodal AI experiences.

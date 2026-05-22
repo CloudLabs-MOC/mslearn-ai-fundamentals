@@ -11,7 +11,7 @@ In this lab, you'll use AI natural language processing functionality to analyze 
 In this lab, you will complete the following tasks:
 
 + Task 1: Use a generative AI model to analyze text
-- Task 2: Use a specialized language analysis tool
++ Task 2: Use a specialized language analysis tool
 
 ### Estimated timing: 15 Minutes
 

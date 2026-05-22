@@ -11,8 +11,8 @@ In this lab, you'll interact with a generative AI model using speech. The goal o
 In this lab, you will complete the following tasks:
 
 + Task 1: Open the Chat Playground app
-- Task 2: Configure Voice mode
-- Task 3: Use speech to interact with the model
++ Task 2: Configure Voice mode
++ Task 3: Use speech to interact with the model
 
 ### Estimated timing: 15 Minutes
 
