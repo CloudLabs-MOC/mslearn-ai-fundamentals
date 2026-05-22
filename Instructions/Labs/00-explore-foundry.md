@@ -121,8 +121,6 @@ In this task, you will explore the Azure resources associated with your Microsof
 
 1. Then use the **back arrow** icon next to the **All projects** page header to return to the home page for your project.
 
-    ![](./media/ai901-l1-11.png)
-
 ## Task 3: Explore the Microsoft Foundry portal
 
 In this task, you will explore the Microsoft Foundry portal interface. You will navigate through the Home, Discover, Build, Operate, and Docs sections to understand how the portal is used to develop, manage, and operate AI solutions.

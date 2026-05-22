@@ -187,7 +187,7 @@ In this task, you'll use the **Document fields** analyzer to extract structured 
 
 7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used. You can find a list of prebuilt Content Understanding analyzers [here](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers). 
 
-    ![](./media/ai901-lab6a-t2p21.png)
+    ![](./media/ai901-lab6a-t2p22.png)
 
     > **Note:** Consider this: the *Fields* tab displays the information from the raw JSON in the *Results* tab in a user-friendly way.
 
