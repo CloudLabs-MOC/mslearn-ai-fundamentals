@@ -294,7 +294,7 @@ In this task, you will connect a client chat application to your deployed Micros
 
     ![](./media/mod01-p2t1p36(5).png)
 
-### Task 6.3: Explore AI speech
+### Task 6.3: Explore AI speech (Read Only)
 
 >**Note:** <span style="color:red;"> In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.
 
