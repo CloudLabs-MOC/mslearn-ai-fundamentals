@@ -49,8 +49,6 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
       ![](./media/mod7-t1p2.png)
 
-        >**Note:** Make a note of the region you selected. You'll need it later!
-
 1. Wait for your project to be created. It may take a few minutes. 
 
 1. In the **All set, Let's build your agents** window, click **Let's go**.
@@ -125,7 +123,7 @@ In this task, you will create a custom guardrail to strengthen content filtering
 
     ![](./media/mod7-t1p12.png)
 
-1. In the **Guardrail** page, select **Create**.
+1. In the **Guardrails** page, select **Create**.
 
     ![](./media/mod7-t1p13.png)
 
