@@ -1,0 +1,17 @@
+[
+    {
+      "Name": "AI-901: AI Fundamentals-Module-09-Face Analysis in Microsoft Foundry",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/AI901-Gettingstarted/M7new-Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/07new-explore-content-filter.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
+  
