@@ -41,10 +41,10 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    - Microsoft Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
     - Subscription : **Leave default subscription (4)** 
     - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource Group : Select **AI-901 (6)** 
+    - Resource group : Select **AI-901 (6)** 
     - Click on **Create** **(7)**
 
       ![](./media/mod7-t1p2.png)
@@ -58,6 +58,14 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![](./media/mod7-t1p4.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="2205c369-e68b-46f3-9572-d67b7c279681" />
 
 ## Task 2: Deploy a model
 
@@ -78,6 +86,14 @@ In this task, you will deploy a generative AI model in Microsoft Foundry. You wi
 1. When the model has been deployed, it will open in the model playground - you can test it there if you like.
 
     ![](./media/mod7-t1p8.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="915a6171-4864-42b7-bec6-21ecbea31292" />
 
 ## Task 3: Chat using the default guardrail
 

@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this exercise, you'll use Azure Translator in Microsoft Foundry to explore translation capabilities for multilingual applications. You will connect the Translator service to a Foundry project, perform text translation using the Azure-MT Neural Machine Translation (NMT) model, detect languages automatically, and perform transliteration between scripts. You will also explore GPT-4o-powered translation features such as tone and gender control, translate documents while preserving formatting, and build a Python client that uses the Translator REST API. Through these activities, you'll learn how Azure Translator supports Natural Language Processing (NLP) scenarios and multilingual AI solutions.
+In this exercise, you'll use Azure Translator in Microsoft Foundry to explore translation capabilities for multilingual applications. You will connect the Translator service to a Foundry project, perform text translation using the Azure-MT Neural Machine Translation (NMT) model, detect languages automatically, and perform transliteration between scripts. You will also explore GPT-5.1-powered translation features such as tone and gender control, translate documents while preserving formatting, and build a Python client that uses the Translator REST API. Through these activities, you'll learn how Azure Translator supports Natural Language Processing (NLP) scenarios and multilingual AI solutions.
 
 ## Lab Objectives
 
@@ -18,62 +18,77 @@ In this exercise, you will perform the following tasks:
 * Task 6: Build a Python translation client
 * Task 7: Compare NMT and LLM translation quality
 
-## Task 1: Connect Azure Translator to your Foundry project
+## Task 1: Create a Microsoft Foundry project
 
-In this task, you will connect Azure Translator to your Microsoft Foundry project and access the Text Translation playground.
+In this task, you will create a Microsoft Foundry project. You will sign in to the Microsoft Foundry portal, configure the project settings such as the subscription, resource group, Foundry resource, and region, and create the project that will be used to manage models, deployments, guardrails, and other AI assets.
 
-1. Copy the **Microsoft Foundry** link and paste it into a new browser tab:
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-   ```
-   https://ai.azure.com
-   ```
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-2. Navigate to your previously created project **Myproject<inject key="DeploymentID" enableCopy="false" />**.
+     ![](./media/mod7-t1p1.png)
 
-3. Click the **Microsoft Foundry** logo in the upper-left corner and scroll down to **Explore Foundry Tools**.
+1. If prompted to sign in, enter your credentials:
+ 
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+ 
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
+ 
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+ 
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
-4. Select **Language + Translator (1)**.
+1. If prompted to **Stay signed in?**, you can click **No**.
 
-5. On the **Language + Translator** page, locate **Azure Translator (2)** and select it.
+    ![](./media/mod6-p2t1p3.png)
 
-6. Click **Add to project (3)**.
+1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-7. When prompted, select **Use existing resource** and choose the Azure AI Services resource from the **AI-901** resource group.
+    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-901 (6)** 
+    - Click on **Create** **(7)**
 
-8. Click **Connect**.
+      ![](./media/mod7-t1p2.png)
 
-   > **Note:** If you are using a multi-service Azure AI Services resource, Azure Translator is already included and no separate Translator resource is required.
+1. Wait for your project to be created. It may take a few minutes. 
 
-9. Verify that **Translator** is listed as **Connected**.
+1. In the **All set, Let's build your agents** window, click **Let's go**.
 
-10. In the left navigation pane, select **Translation → Text translation (4)**.
+    ![](./media/mod7-t1p3.png)
 
-    The Text Translation playground opens and is ready for testing.
+1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
----
+    ![](./media/mod7-t1p4.png)
+
 
 ## Task 2: Translate text using the Azure-MT model
 
 In this task, you will use the Azure-MT Neural Machine Translation (NMT) model to translate text into multiple languages.
 
-1. In the **Text Translation** playground, verify that the model is set to **Azure-MT (1)**.
+1. In the **Azure Translator - Text Translation** playground, verify that the model is set to **Azure-MT (1)**.
+
+   ![](./media/lab8new-t1p1.png)
+
+   ![](./media/lab8new-t1p2.png)
 
 2. Set:
 
-   * **Source language:** Auto-detect (2)
-   * **Target language:** Spanish (es) (3)
+   * **Source language:** Auto-detect **(1)**
+   * **Target language:** Spanish **(2)**
 
-3. In the input box, enter the following text:
+3. In the input box, enter the following text **(3)** and click **Translate (4)**.
 
    ```
-   Dear customer, thank you for contacting our support team.
-   Your case has been assigned to a specialist who will
-   respond within 24 hours. We appreciate your patience.
+   Dear customer, thank you for contacting our support team. Your case has been assigned to a specialist who will respond within 24 hours. We appreciate your patience.
    ```
 
-4. Click **Translate (4)**.
+      ![](./media/lab8new-t1p3.png)
 
 5. Observe the translated output and detected language.
+
+   ![](./media/lab8new-t1p4.png)
 
 6. Change the target language to:
 
@@ -96,13 +111,12 @@ In this task, you will use the Azure-MT Neural Machine Translation (NMT) model t
 
 > **AI-901 Exam Tip:** Azure Translator can return translations for multiple target languages in a single API call.
 
----
 
 ## Task 3: Use language detection and transliteration
 
 In this task, you will explore language detection and transliteration capabilities.
 
-### Language Detection
+### Task 3.1: Language Detection
 
 1. Set the source language to **Auto-detect**.
 
@@ -170,7 +184,7 @@ In this task, you will explore language detection and transliteration capabiliti
 
 In this task, you will use GPT-4o translation capabilities to apply tone and gender controls.
 
-1. In the Text Translation playground, change the model to **GPT-4o mini** or **GPT-4o**.
+1. In the Text Translation playground, change the model to **GPT-5.1** or **GPT-4o**.
 
 2. Verify that the following controls are available:
 
@@ -183,9 +197,7 @@ In this task, you will use GPT-4o translation capabilities to apply tone and gen
 1. Enter the following text:
 
    ```
-   Hey, can you send me the report when you get a chance?
-   I need it before the meeting tomorrow morning.
-   Thanks a lot!
+   Hey, can you send me the report when you get a chance? I need it before the meeting tomorrow morning. Thanks a lot!
    ```
 
 2. Set:
@@ -196,7 +208,7 @@ In this task, you will use GPT-4o translation capabilities to apply tone and gen
 
 3. Click **Translate** and review the output.
 
-4. Change **Tone** to **Informal**.
+4. Change **Tone** to **Casual**.
 
 5. Click **Translate** again.
 
@@ -218,19 +230,19 @@ In this task, you will use GPT-4o translation capabilities to apply tone and gen
 
 3. Compare the resulting translations.
 
-### Adaptive Custom Translation
+### Adaptive Customization
 
 1. Under **Reference translations**, select **Add reference pair**.
 
 2. Enter:
 
-   **Source (English):**
+   **Source Text (English):**
 
    ```
    Please submit your expense claim through the Tepuy Pay portal.
    ```
 
-   **Reference (Spanish):**
+   **Target Text (Spanish):**
 
    ```
    Por favor envíe su solicitud de gastos a través del portal Tepuy Pay.
@@ -250,7 +262,7 @@ In this task, you will use GPT-4o translation capabilities to apply tone and gen
 
 In this task, you will translate a document while preserving its formatting.
 
-1. Create a Word document containing the following content:
+1. Create a Word document using notepad containing the following content:
 
    ```
    Title: Company Expense Policy — Summary
