@@ -4,52 +4,64 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 07: Apply guardrails to prevent the output of harmful content
 
-### Overall Estimated Timing: 30 Minutes
+### Overall Estimated Timing: 60 Minutes
+
+I can create it in the same polished style as the Translation lab. Based on the uploaded document , here are the rewritten sections.
 
 ## Overview
 
-In this lab, you will explore how to use Microsoft Foundry to implement responsible AI practices through the use of content safety guardrails. You will create a Microsoft Foundry project, deploy a GPT-5 model, and interact with the model using the default content filtering configuration. By testing a variety of prompts, including harmful, offensive, and sensitive requests, you will observe how built-in guardrails help manage AI-generated content.
+In this lab, you will use the multimodal capabilities of GPT-5 Mini in Microsoft Foundry to analyze images and extract information from visual content. You will begin by verifying image input support in the Chat Playground and designing prompts that instruct the model to perform face and image analysis. You will explore different prompting techniques to understand how prompt structure affects the quality and usefulness of generated results.
 
-You will then create and apply a custom guardrail with stricter filtering thresholds for categories such as Hate, Violence, Sexual, and Self-harm content. Finally, you will verify the guardrail configuration and understand how content filtering supports the development of safe, responsible, and trustworthy AI applications.
+You will then build a Python application using the Azure AI Foundry SDK that sends image URLs to a deployed GPT-5 Mini model and returns structured face analysis results. Finally, you will explore Content Understanding in Microsoft Foundry and compare it with multimodal prompting approaches for extracting information from images. Through these activities, you will gain hands-on experience building vision-enabled AI applications using Microsoft Foundry.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up and configure a Microsoft Foundry project to manage AI resources, model deployments, and guardrail configurations.
+1. **Verify multimodal model capabilities:** Confirm that GPT-5 Mini supports image input and visual analysis in Microsoft Foundry.
 
-2. **Deploy a generative AI model:** Browse the Microsoft Foundry model catalog, review model details, and deploy a GPT-5 model using the recommended default settings.
+2. **Design image analysis prompts:** Create and test prompts that instruct the model to analyze faces, expressions, age estimates, and contextual information from images.
 
-3. **Explore default content safety guardrails:** Interact with a deployed model and observe how built-in content filters handle potentially harmful, offensive, and sensitive prompts.
+3. **Compare prompting strategies:** Evaluate how open-ended, structured, and confidence-based prompts affect the quality and format of image analysis results.
 
-4. **Test model behavior with different prompt types:** Evaluate the responses generated for prompts related to violence, hate speech, and self-harm, and understand how default guardrails influence model outputs.
+4. **Build a vision-enabled application:** Develop a Python application using the Azure AI Foundry SDK to perform face and image analysis programmatically.
 
-5. **Create and configure custom guardrails:** Define stricter content filtering policies for Hate, Violence, Sexual, and Self-harm categories by configuring custom guardrail settings.
+5. **Analyze images using URLs:** Send publicly accessible image URLs to a deployed multimodal model and process the returned results.
 
-6. **Apply guardrails to model deployments:** Associate a custom guardrail with a deployed model and verify that the updated content safety controls are active.
+6. **Generate structured outputs:** Use prompt engineering techniques to obtain structured JSON responses suitable for downstream applications.
 
-7. **Understand responsible AI practices:** Learn how content filtering and guardrails help reduce harmful content generation and support the development of safe, responsible, and trustworthy AI applications.
+7. **Explore Content Understanding:** Investigate Microsoft's Content Understanding capabilities and compare them with multimodal prompting approaches.
+
+8. **Understand computer vision use cases in Foundry:** Learn how multimodal AI models can be used to interpret visual content and support real-world vision applications.
 
 ## Pre-requisites
 
-* Basic knowledge of the Azure portal and navigating cloud resources.
-* Familiarity with Microsoft Foundry and its project-based workspace experience.
-* General understanding of generative AI models and prompt-based interactions.
-* Basic awareness of Responsible AI concepts, including content safety and content moderation.
+* Basic knowledge of Python programming and executing commands from a terminal.
+* Familiarity with Microsoft Foundry and navigating project workspaces.
+* General understanding of generative AI models and prompt engineering concepts.
+* Basic awareness of computer vision concepts such as image analysis, face detection, and visual attribute extraction.
+* Access to a Microsoft Foundry environment with permissions to create projects and deploy models.
+* An active Azure subscription with access to Microsoft Foundry services.
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry uses content safety guardrails to control interactions with generative AI models. The architecture highlights how prompts and model responses are evaluated against safety policies before being returned to the user.
+This lab demonstrates how Microsoft Foundry and a deployed GPT-5 Mini multimodal model can be used to analyze images and extract structured information from visual content. The architecture highlights how image URLs and prompts are processed by the model to generate face and image analysis results.
 
-1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, model deployments, and guardrail configurations.
+1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, model deployments, project settings, and application integration.
 
-2. **GPT-5 Model Deployment:** The generative AI model that processes user prompts and generates responses within the Foundry project.
+2. **GPT-5 Mini Multimodal Deployment:** A deployed multimodal model capable of processing both text and image inputs and generating descriptive or structured outputs.
 
-3. **Content Safety Guardrails:** Built-in and custom content filtering policies that evaluate prompts and model responses for harmful content categories such as Hate, Violence, Sexual, and Self-harm.
+3. **Chat Playground:** A browser-based interface used to test image analysis prompts and evaluate model responses before application development.
 
-4. **Foundry Playground:** A browser-based interface used to interact with the deployed model, test prompts, and observe the effects of content filtering.
+4. **Azure AI Foundry SDK Application:** A Python application that connects to the Foundry project and programmatically invokes the deployed model.
 
-5. **Filtered Responses:** User prompts and model completions are checked against the configured guardrails, ensuring that potentially harmful content is blocked or moderated before being displayed.
+5. **Image URL Input:** Publicly accessible image URLs that are passed to the model as part of multimodal prompts for analysis.
+
+6. **Prompt-Based Vision Processing:** Instructions provided through prompts that guide the model to perform face analysis, image description, and structured information extraction.
+
+7. **Content Understanding Service:** A Foundry capability used to extract structured information from images through predefined analysis pipelines.
+
+8. **Structured Analysis Results:** The outputs generated by the model, including face counts, expressions, age estimates, contextual observations, and other visual attributes.
 
 ## Architecture Diagram
 
@@ -58,29 +70,34 @@ This lab demonstrates how Microsoft Foundry uses content safety guardrails to co
 ## Explanation of Components
 
 1. **Microsoft Foundry Project:**
-   The project serves as the central workspace for managing AI resources, model deployments, playground experiences, and guardrail configurations used throughout the lab.
+   The project serves as the central workspace for managing AI resources, model deployments, playground experiences, and application configurations used throughout the lab.
 
-2. **GPT-5 Model Deployment:**
-   A generative AI model deployed within the Foundry project that processes user prompts and generates responses based on its training and configured safety settings.
+2. **GPT-5 Mini Multimodal Model:**
+   A generative AI model that accepts both text and image inputs, enabling image understanding, face analysis, and visual reasoning tasks.
 
-3. **Content Safety Guardrails:**
-   Safety controls that evaluate user prompts and model responses for harmful content. These guardrails help detect and mitigate risks related to hate speech, violence, sexual content, and self-harm.
+3. **Chat Playground:**
+   A browser-based interface used to interact with the deployed model, test multimodal prompts, and validate image analysis results.
 
-4. **Default Guardrail Configuration:**
-   The built-in content filtering policy applied to model deployments by default. It provides a balanced approach to content moderation by blocking potentially harmful content while allowing safe interactions.
+4. **Visual Prompts:**
+   Prompts that combine image references and text instructions to guide the model in analyzing visual content and generating relevant outputs.
 
-5. **Custom Guardrails:**
-   User-defined content filtering policies that enable organizations to adjust blocking thresholds for specific risk categories and enforce stricter responsible AI requirements.
+5. **Image URL Input:**
+   A method of providing images to the model through publicly accessible URLs rather than uploading image files directly.
 
-6. **Foundry Playground Experience:**
-   A browser-based interface used to interact with the deployed model, test prompts, observe model behavior, and validate the impact of content filtering settings.
+6. **Face Analysis:**
+   The process of identifying and describing visible faces within an image, including facial expressions, estimated age ranges, head orientation, and contextual observations.
 
-7. **Prompt and Response Evaluation:**
-   The process by which both user inputs and AI-generated outputs are analyzed against configured guardrail policies before a response is returned to the user.
+7. **Azure AI Foundry SDK:**
+   A Python SDK that enables developers to connect applications to Microsoft Foundry projects and invoke deployed AI models programmatically.
 
-8. **Filtered Responses:**
-   The final outputs returned to users after content safety checks have been applied, helping ensure that harmful or inappropriate content is blocked or moderated according to organizational policies.
+8. **Structured Output Prompting:**
+   A prompt engineering technique used to instruct the model to return results in a predefined format such as JSON, making outputs easier to process programmatically.
 
+9. **Content Understanding:**
+   A Microsoft Foundry capability that extracts structured information from images through configurable analysis pipelines designed for production workflows.
+
+10. **Analysis Results:**
+    The final outputs generated by the model, including face counts, facial attributes, confidence assessments, image descriptions, and structured visual information.
 
 # Getting Started with lab
  

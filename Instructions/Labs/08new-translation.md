@@ -111,9 +111,7 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 
 In this task, you'll use the Chat Playground to create and test translation and transliteration prompts, exploring the model's multilingual text-processing capabilities.
 
-1. Now click on **Playground** to go back to the chat playgorund.
-
-   ![](./media/lab8new-t1p7.png)
+1. Make sure you are on the **Playground** tab of gpt-5-mini.
 
 1. In Chat Playground of **gpt-5-mini**, in the **Instructions** section, copy and paste the following:
 
