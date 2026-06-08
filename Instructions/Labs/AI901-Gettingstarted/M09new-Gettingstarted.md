@@ -2,7 +2,7 @@
 
 Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited to guide you through hands-on learning with Azure AI services. Let’s continue by diving deeper into content moderation.
 
-# Module 07: Apply guardrails to prevent the output of harmful content
+# Module 09: Face & Image Analysis with Microsoft Foundry
 
 ### Overall Estimated Timing: 60 Minutes
 
