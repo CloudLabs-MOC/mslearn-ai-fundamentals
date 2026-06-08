@@ -1,25 +1,26 @@
 # Language Translation with Microsoft Foundry
 
-### Estimated Duration: 45 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab Overview
 
-In this exercise, you'll use Microsoft Foundry and a deployed gpt-5-mini model to build a language translation application. You will use the Chat Playground to create and test prompts for translation and transliteration tasks. You will then build a Python application using the Foundry SDK that performs translation, transliteration, language detection, and sentiment analysis using a single deployed model.
+In this lab, you will use Microsoft Foundry to create a project, deploy a GPT-5 Mini model, and explore its multilingual text-processing capabilities. You will begin by testing translation and transliteration prompts in the Chat Playground to understand how the model can translate text between languages and convert text between writing systems without changing its meaning.
 
-Through these activities, you'll gain hands-on experience with text analysis capabilities in Microsoft Foundry and learn how generative AI models can be used for multilingual applications.
+You will then build a Python application using the Azure AI Foundry SDK and connect it to your deployed model. The application will perform translation, transliteration, and language detection tasks. Finally, you will extend the application by adding sentiment analysis, enabling the same deployed model to classify text as Positive, Negative, or Neutral. Through these activities, you will gain hands-on experience using a single generative AI model to perform multiple natural language processing tasks in Microsoft Foundry.
 
 ## Lab Objectives
 
 In this exercise, you will perform the following tasks:
 
-- Task 1: Verify the gpt-5-mini deployment
-- Task 2: Design translation and transliteration prompts
-- Task 3: Build a translation and transliteration application
-- Task 4: Add sentiment analysis to the application
+- Task 1: Create a Microsoft Foundry project
+- Task 2: Deploy a model
+- Task 3: Design Translation & Transliteration Prompts in Chat Playground
+- Task 4: Build a Translation and Transliteration Application with Foundry SDK
+- Task 5: Add Sentiment Analysis to the Application
 
 ## Task 1: Create a Microsoft Foundry project
 
-In this task, you will create a Microsoft Foundry project. You will sign in to the Microsoft Foundry portal, configure the project settings such as the subscription, resource group, Foundry resource, and region, and create the project that will be used to manage models, deployments, guardrails, and other AI assets.
+In this task, you'll create a Microsoft Foundry project, configure the required Azure resources, and obtain the project endpoint needed for application development.
 
 1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
@@ -75,7 +76,7 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
 ## Task 2: Deploy a model
 
-In this task, you will deploy a generative AI model in Microsoft Foundry. You will browse the model catalog, locate the GPT-5 model, review its capabilities, and deploy it using the default settings so that it can be used for testing and evaluation.
+In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain the deployment name required for testing and application integration.
 
 1. Now you're ready to explore models. On the **Discover (1)** page, select the **Models (2)** tab to view the Microsoft Foundry model catalog.
 
@@ -107,6 +108,8 @@ In this task, you will deploy a generative AI model in Microsoft Foundry. You wi
   <validation step="" />
 
 ## Task 3: Design Translation & Transliteration Prompts in Chat Playground
+
+In this task, you'll use the Chat Playground to create and test translation and transliteration prompts, exploring the model's multilingual text-processing capabilities.
 
 1. Now click on **Playground** to go back to the chat playgorund.
 
@@ -165,7 +168,7 @@ In this task, you will deploy a generative AI model in Microsoft Foundry. You wi
 
 ## Task 4: Build a Translation and Transliteration Application with Foundry SDK
 
-In this task, you will build a Python application using the Azure AI Foundry SDK. The application will use a single deployed gpt-5-mini model to perform translation, transliteration, and language detection tasks.
+In this task, you'll build a Python application using the Azure AI Foundry SDK to perform translation, transliteration, and language detection tasks.
 
 1. Click the **Call model** tab next to the **Chat** tab to view the endpoint details and sample code for calling the deployed model programmatically.
 
@@ -330,7 +333,7 @@ In this task, you will build a Python application using the Azure AI Foundry SDK
 
 ## Task 5: Add Sentiment Analysis to the Application
 
-In this task, you will extend the application to perform sentiment analysis. The deployed gpt-5-mini model will classify text as Positive, Negative, or Neutral, demonstrating how a single model can perform multiple text analysis tasks.
+In this task, you'll extend the application by adding sentiment analysis functionality, enabling the model to classify text as Positive, Negative, or Neutral
 
 1. Open the **translate_foundry.py** file created in the previous task.
 
@@ -384,8 +387,8 @@ In this task, you will extend the application to perform sentiment analysis. The
 
 ## Summary
 
-In this lab, you verified a gpt-5-mini deployment in Microsoft Foundry and used the Chat Playground to test translation and transliteration prompts. You then built a Python application using the Azure AI Foundry SDK to perform translation, transliteration, and language detection.
+In this lab, you created a Microsoft Foundry project and deployed a GPT-5 Mini model for text-processing tasks. You used the Chat Playground to design and test prompts for translation and transliteration, observing how the model can both translate text into different languages and convert text between writing systems while preserving meaning.
 
-Finally, you extended the application with sentiment analysis, demonstrating how a single deployed model can support multiple text analysis tasks through prompt engineering. These capabilities are commonly used in multilingual applications, customer support systems, content processing workflows, and AI-powered business solutions.
+You then built a Python application using the Azure AI Foundry SDK and connected it to your deployed model. The application was used to perform translation, transliteration, and language detection tasks. Finally, you enhanced the application by adding sentiment analysis, allowing the model to classify text as Positive, Negative, or Neutral. This lab demonstrated how a single deployed generative AI model can support multiple natural language processing scenarios through effective prompt engineering and application integration
 
 ### You've successfully completed the hands-on lab!

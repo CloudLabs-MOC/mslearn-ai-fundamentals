@@ -2,54 +2,58 @@
 
 Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited to guide you through hands-on learning with Azure AI services. Let’s continue by diving deeper into content moderation.
 
-# Module 07: Apply guardrails to prevent the output of harmful content
+# Module 08: Language Translation with Microsoft Foundry
 
-### Overall Estimated Timing: 30 Minutes
+### Overall Estimated Timing: 60 Minutes
 
 ## Overview
 
-In this lab, you will explore how to use Microsoft Foundry to implement responsible AI practices through the use of content safety guardrails. You will create a Microsoft Foundry project, deploy a GPT-5 model, and interact with the model using the default content filtering configuration. By testing a variety of prompts, including harmful, offensive, and sensitive requests, you will observe how built-in guardrails help manage AI-generated content.
+In this lab, you will use Microsoft Foundry to build a multilingual text-processing application powered by a deployed GPT-5 Mini model. You will begin by creating a Microsoft Foundry project and deploying a model that will be used throughout the lab. Using the Chat Playground, you will design and test prompts for translation and transliteration, learning how generative AI can translate text between languages and convert text between writing systems while preserving meaning.
 
-You will then create and apply a custom guardrail with stricter filtering thresholds for categories such as Hate, Violence, Sexual, and Self-harm content. Finally, you will verify the guardrail configuration and understand how content filtering supports the development of safe, responsible, and trustworthy AI applications.
+You will then build a Python application using the Azure AI Foundry SDK and connect it to your deployed model. The application will perform translation, transliteration, and language detection tasks using prompt engineering. Finally, you will extend the application by adding sentiment analysis capabilities, enabling the model to classify text as Positive, Negative, or Neutral. Through these activities, you will gain hands-on experience integrating generative AI models into applications and using a single deployment to perform multiple natural language processing tasks.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up and configure a Microsoft Foundry project to manage AI resources, model deployments, and guardrail configurations.
+1. **Create a Microsoft Foundry project:** Set up and configure a Microsoft Foundry project and obtain the project endpoint required for model integration and application development.
 
-2. **Deploy a generative AI model:** Browse the Microsoft Foundry model catalog, review model details, and deploy a GPT-5 model using the recommended default settings.
+2. **Deploy a generative AI model:** Browse the Microsoft Foundry model catalog and deploy a GPT-5 Mini model using the recommended default configuration.
 
-3. **Explore default content safety guardrails:** Interact with a deployed model and observe how built-in content filters handle potentially harmful, offensive, and sensitive prompts.
+3. **Design and test translation prompts:** Use the Chat Playground to create and evaluate prompts that translate text between different languages.
 
-4. **Test model behavior with different prompt types:** Evaluate the responses generated for prompts related to violence, hate speech, and self-harm, and understand how default guardrails influence model outputs.
+4. **Design and test transliteration prompts:** Explore how generative AI can convert text between writing systems while preserving the original language and meaning.
 
-5. **Create and configure custom guardrails:** Define stricter content filtering policies for Hate, Violence, Sexual, and Self-harm categories by configuring custom guardrail settings.
+5. **Build a Python application with the Azure AI Foundry SDK:** Create an application that connects to a deployed model and performs text-processing tasks programmatically.
 
-6. **Apply guardrails to model deployments:** Associate a custom guardrail with a deployed model and verify that the updated content safety controls are active.
+6. **Implement translation, transliteration, and language detection:** Use prompt engineering to perform multiple multilingual text-processing tasks with a single deployed model.
 
-7. **Understand responsible AI practices:** Learn how content filtering and guardrails help reduce harmful content generation and support the development of safe, responsible, and trustworthy AI applications.
+7. **Add sentiment analysis capabilities:** Extend the application to classify text as Positive, Negative, or Neutral using the same GPT-5 Mini deployment.
+
+8. **Understand multi-purpose AI model usage:** Learn how a single generative AI model can support multiple natural language processing scenarios through effective prompting and application integration.
+
 
 ## Pre-requisites
 
-* Basic knowledge of the Azure portal and navigating cloud resources.
-* Familiarity with Microsoft Foundry and its project-based workspace experience.
+* Basic knowledge of Python programming and running commands from a terminal or command-line interface.
 * General understanding of generative AI models and prompt-based interactions.
-* Basic awareness of Responsible AI concepts, including content safety and content moderation.
+* Basic knowledge of language translation, transliteration, and sentiment analysis concepts.
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry uses content safety guardrails to control interactions with generative AI models. The architecture highlights how prompts and model responses are evaluated against safety policies before being returned to the user.
+This lab demonstrates how Microsoft Foundry and the Azure AI Foundry SDK can be used to build a multilingual text-processing application powered by a deployed GPT-5 Mini model. The architecture highlights how user input is processed through prompts and sent to the deployed model to perform multiple natural language processing tasks.
 
-1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, model deployments, and guardrail configurations.
+1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, model deployments, project settings, and application connectivity.
 
-2. **GPT-5 Model Deployment:** The generative AI model that processes user prompts and generates responses within the Foundry project.
+2. **GPT-5 Mini Model Deployment:** The generative AI model deployed within Microsoft Foundry that processes prompts and generates responses for translation, transliteration, language detection, and sentiment analysis tasks.
 
-3. **Content Safety Guardrails:** Built-in and custom content filtering policies that evaluate prompts and model responses for harmful content categories such as Hate, Violence, Sexual, and Self-harm.
+3. **Chat Playground:** A browser-based interface used to design, test, and refine translation and transliteration prompts before integrating them into an application.
 
-4. **Foundry Playground:** A browser-based interface used to interact with the deployed model, test prompts, and observe the effects of content filtering.
+4. **Azure AI Foundry SDK Application:** A Python application that connects to the Foundry project and invokes the deployed model programmatically using the project endpoint and deployment name.
 
-5. **Filtered Responses:** User prompts and model completions are checked against the configured guardrails, ensuring that potentially harmful content is blocked or moderated before being displayed.
+5. **Prompt-Based NLP Processing:** User input is sent to the deployed model through carefully designed prompts, enabling the model to perform translation, transliteration, language detection, and sentiment analysis using a single deployment.
+
+6. **Generated Results:** The model returns translated text, transliterated text, detected language information, or sentiment classifications, which are then displayed by the application to the user.
 
 ## Architecture Diagram
 
@@ -58,29 +62,34 @@ This lab demonstrates how Microsoft Foundry uses content safety guardrails to co
 ## Explanation of Components
 
 1. **Microsoft Foundry Project:**
-   The project serves as the central workspace for managing AI resources, model deployments, playground experiences, and guardrail configurations used throughout the lab.
+   The project acts as the central workspace for managing AI resources, model deployments, project settings, and application integration used throughout the lab.
 
-2. **GPT-5 Model Deployment:**
-   A generative AI model deployed within the Foundry project that processes user prompts and generates responses based on its training and configured safety settings.
+2. **GPT-5 Mini Model Deployment:**
+   A generative AI model deployed within Microsoft Foundry that processes prompts and generates responses for translation, transliteration, language detection, and sentiment analysis tasks.
 
-3. **Content Safety Guardrails:**
-   Safety controls that evaluate user prompts and model responses for harmful content. These guardrails help detect and mitigate risks related to hate speech, violence, sexual content, and self-harm.
+3. **Chat Playground:**
+   A browser-based interface used to interact with the deployed model, experiment with prompts, and evaluate translation and transliteration capabilities before integrating them into an application.
 
-4. **Default Guardrail Configuration:**
-   The built-in content filtering policy applied to model deployments by default. It provides a balanced approach to content moderation by blocking potentially harmful content while allowing safe interactions.
+4. **Azure AI Foundry SDK:**
+   A Python SDK that enables applications to connect to Microsoft Foundry projects, authenticate securely, and invoke deployed AI models programmatically.
 
-5. **Custom Guardrails:**
-   User-defined content filtering policies that enable organizations to adjust blocking thresholds for specific risk categories and enforce stricter responsible AI requirements.
+5. **Translation Functionality:**
+   The capability of the deployed model to convert text from one language to another while preserving the original meaning and context.
 
-6. **Foundry Playground Experience:**
-   A browser-based interface used to interact with the deployed model, test prompts, observe model behavior, and validate the impact of content filtering settings.
+6. **Transliteration Functionality:**
+   The process of converting text from one writing system to another without changing the language or meaning of the original text.
 
-7. **Prompt and Response Evaluation:**
-   The process by which both user inputs and AI-generated outputs are analyzed against configured guardrail policies before a response is returned to the user.
+7. **Language Detection:**
+   A text-processing capability that identifies the language of the input text and can be combined with translation to provide output in a target language.
 
-8. **Filtered Responses:**
-   The final outputs returned to users after content safety checks have been applied, helping ensure that harmful or inappropriate content is blocked or moderated according to organizational policies.
+8. **Sentiment Analysis:**
+   A natural language processing task that classifies text as Positive, Negative, or Neutral based on the overall tone and sentiment expressed in the content.
 
+9. **Prompt-Based Processing:**
+   The technique of guiding model behavior through carefully designed prompts, enabling a single deployed model to perform multiple language-related tasks without additional training.
+
+10. **Application Output:**
+    The results generated by the model, including translated text, transliterated text, detected language information, and sentiment classifications, which are displayed to the user through the Python application.
 
 # Getting Started with lab
  
