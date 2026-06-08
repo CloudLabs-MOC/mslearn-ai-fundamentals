@@ -1,22 +1,21 @@
-# Translation with Azure Translator in Foundry
+# Language Translation with Microsoft Foundry
 
-### Estimated Duration: 55 Minutes
+### Estimated Duration: 45 Minutes
 
 ## Lab Overview
 
-In this exercise, you'll use Azure Translator in Microsoft Foundry to explore translation capabilities for multilingual applications. You will connect the Translator service to a Foundry project, perform text translation using the Azure-MT Neural Machine Translation (NMT) model, detect languages automatically, and perform transliteration between scripts. You will also explore GPT-5.1-powered translation features such as tone and gender control, translate documents while preserving formatting, and build a Python client that uses the Translator REST API. Through these activities, you'll learn how Azure Translator supports Natural Language Processing (NLP) scenarios and multilingual AI solutions.
+In this exercise, you'll use Microsoft Foundry and a deployed gpt-5-mini model to build a language translation application. You will use the Chat Playground to create and test prompts for translation and transliteration tasks. You will then build a Python application using the Foundry SDK that performs translation, transliteration, language detection, and sentiment analysis using a single deployed model.
+
+Through these activities, you'll gain hands-on experience with text analysis capabilities in Microsoft Foundry and learn how generative AI models can be used for multilingual applications.
 
 ## Lab Objectives
 
 In this exercise, you will perform the following tasks:
 
-* Task 1: Connect Azure Translator to your Foundry project
-* Task 2: Translate text using the Azure-MT model
-* Task 3: Use language detection and transliteration
-* Task 4: Translate with GPT-4o using tone and gender controls
-* Task 5: Translate a document using the Document Translation playground
-* Task 6: Build a Python translation client
-* Task 7: Compare NMT and LLM translation quality
+- Task 1: Verify the gpt-5-mini deployment
+- Task 2: Design translation and transliteration prompts
+- Task 3: Build a translation and transliteration application
+- Task 4: Add sentiment analysis to the application
 
 ## Task 1: Create a Microsoft Foundry project
 
@@ -42,6 +41,10 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
     ![](./media/mod6-p2t1p3.png)
 
+1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+
+   ![](./media/lab8new-t1p1.png)
+
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
     - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
@@ -58,358 +61,331 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
     ![](./media/mod7-t1p3.png)
 
-1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
+1. After the project is created, the Microsoft Foundry portal will open to a page similar to the one shown below. Locate and copy the **Project Endpoint**, then save it in a text file or Notepad, as it will be required later when configuring the Python application in this lab.
 
-    ![](./media/mod7-t1p4.png)
+    ![](./media/lab8new-t1p2.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Translate text using the Azure-MT model
+  <validation step="" />
 
-In this task, you will use the Azure-MT Neural Machine Translation (NMT) model to translate text into multiple languages.
+## Task 2: Deploy a model
 
-1. In the **Azure Translator - Text Translation** playground, verify that the model is set to **Azure-MT (1)**.
+In this task, you will deploy a generative AI model in Microsoft Foundry. You will browse the model catalog, locate the GPT-5 model, review its capabilities, and deploy it using the default settings so that it can be used for testing and evaluation.
 
-   ![](./media/lab8new-t1p1.png)
+1. Now you're ready to explore models. On the **Discover (1)** page, select the **Models (2)** tab to view the Microsoft Foundry model catalog.
 
-   ![](./media/lab8new-t1p2.png)
+    ![](./media/mod7-t1p5.png)
 
-2. Set:
+1. In the **Models** page, enter **`gpt-5-mini`** in the search box **(1)** and select the **gpt-5-mini (2)** model from the search results.
 
-   * **Source language:** Auto-detect **(1)**
-   * **Target language:** Spanish **(2)**
+    ![](./media/lab8new-t1p3.png)
 
-3. In the input box, enter the following text **(3)** and click **Translate (4)**.
+1. Review the model card, then click **Deploy (1)** and select **Default settings (2)** to deploy the model using the recommended default configuration.
 
-   ```
-   Dear customer, thank you for contacting our support team. Your case has been assigned to a specialist who will respond within 24 hours. We appreciate your patience.
-   ```
+    ![](./media/lab8new-t1p4.png)
 
-      ![](./media/lab8new-t1p3.png)
+1. When the model has been deployed, it will open in the model playground.
 
-5. Observe the translated output and detected language.
+    ![](./media/lab8new-t1p5.png)
 
-   ![](./media/lab8new-t1p4.png)
-
-6. Change the target language to:
-
-   * French (fr)
-   * Arabic (ar)
-   * Japanese (ja)
-   * Portuguese (pt)
-
-   Repeat the translation for each language.
-
-### Multiple Target Languages
-
-1. Select **Add target language (5)**.
-
-2. Add **German (de)** as an additional target language.
-
-3. Click **Translate** again.
-
-4. Observe that translations for multiple target languages are returned in a single request.
-
-> **AI-901 Exam Tip:** Azure Translator can return translations for multiple target languages in a single API call.
+1. Make a note of the **Deployment Name**, as it will be used later in the lab when configuring the Python application.
+   
+   ![](./media/lab8new-t1p6(1).png)
 
 
-## Task 3: Use language detection and transliteration
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. You will receive a success message. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-In this task, you will explore language detection and transliteration capabilities.
+  <validation step="" />
 
-### Task 3.1: Language Detection
+## Task 3: Design Translation & Transliteration Prompts in Chat Playground
 
-1. Set the source language to **Auto-detect**.
+1. Now click on **Playground** to go back to the chat playgorund.
 
-2. Test the following inputs one at a time:
+   ![](./media/lab8new-t1p7.png)
+
+1. In Chat Playground of **gpt-5-mini**, in the **Instructions** section, copy and paste the following:
 
    ```
-   ¿Dónde está la biblioteca?
+   You are a professional language assistant. You can perform translation (converting text to a different language) and transliteration (converting text to a different script without changing the language). When the user specifies the task and target, respond ONLY with the result - no explanation, no preamble.
    ```
 
-   ```
-   Je voudrais un café, s’il vous plaît.
-   ```
+   ![](./media/lab8new-t1p8.png)
 
-   ```
-   こんにちは、元気ですか？
-   ```
+1. In the model playground, paste the following prompt **(1)** and click on the **blue arrow (2)** to submit.
 
-   ```
-   Olha que coisa mais linda, mais cheia de graça.
+   ```text
+   Translate to French: The conference begins at 9am tomorrow.
    ```
 
-   ```
-   Wie heißen Sie?
-   ```
+   ![](./media/lab8new-t1p9.png)
+
+1. Now review the response.
+
+   ![](./media/lab8new-t1p10.png)
+
+1. Similarly you try the following prompts as well:
+
+   - `Translate to Japanese: Please submit your report by Friday.`
+   - `Translate to Portuguese: Welcome to our AI training program.`
+
+1. Click the **New Chat** icon in the upper-right corner of the chat pane to start a new conversation.
+
+   ![](./media/lab8new-t1p11.png)
+
+1. Now test transliteration prompts and observe that only the script changes while the language and meaning remain unchanged ":
 
    ```
-   Merhaba, nasılsınız?
+   Transliterate to Latin script: مرحبا  
    ```
 
-3. Observe the detected language and confidence score for each input.
+   Arabic for "Hello" - expected output: Marhaba
 
-> **Note:** Language detection returns the detected language code, confidence score, and supported translation/transliteration information.
+   ![](./media/lab8new-t1p12.png)
 
-### Transliteration
+1. Similarly, test the following transliteration prompts and verify that only the script changes while the language and meaning remain unchanged:
 
-1. Select the **Transliteration** tab.
+   - `Transliterate to Latin script: Привет`
 
-2. Configure:
+      Russian for "Hello" - expected output: Privet
 
-   * Language: Arabic (ar)
-   * From script: Arabic
-   * To script: Latin
+   - `Transliterate to Latin script: こんにちは`
 
-3. Enter the following Arabic text:
+      Japanese for "Hello" - expected output: Konnichiwa
 
-   ```
-   مرحبا، كيف حالك؟
-   ```
+      ![](./media/lab8new-t1p13.png)
 
-4. Click **Transliterate**.
+## Task 4: Build a Translation and Transliteration Application with Foundry SDK
 
-5. Observe the Latin script output.
+In this task, you will build a Python application using the Azure AI Foundry SDK. The application will use a single deployed gpt-5-mini model to perform translation, transliteration, and language detection tasks.
 
-6. Repeat the exercise using Hindi text:
+1. Click the **Call model** tab next to the **Chat** tab to view the endpoint details and sample code for calling the deployed model programmatically.
 
-   ```
-   नमस्ते, आप कैसे हैं?
-   ```
+   ![](./media/lab8new-t1p14.png)
 
-> **Note:** Transliteration changes the script but not the language or meaning.
+1. Scroll down and click **Skip setup with VS Code for the Web** to launch an online VS Code environment in a new tab.
 
----
+   ![](./media/lab8new-t1p15.png)
 
-## Task 4: Translate with GPT-4o using tone and gender controls
+1. When prompted, leave the default workspace folder name unchanged and press **Enter** to create the workspace.
 
-In this task, you will use GPT-4o translation capabilities to apply tone and gender controls.
+   ![](./media/lab8new-t1p16.png)
 
-1. In the Text Translation playground, change the model to **GPT-5.1** or **GPT-4o**.
+1. Please wait while the environment is being set up. This process may take a few minutes to complete.
 
-2. Verify that the following controls are available:
+   ![](./media/lab8new-t1p17.png)
 
-   * Tone
-   * Gender
-   * Reference translations
+1. The integrated terminal should open automatically after the environment setup is complete. If it does not appear, open it manually by selecting **Hamburger Menu (1) → View (2) → Terminal (3)**, or press **Ctrl + `** on your keyboard. The terminal will be used to run commands throughout this lab.
 
-### Formal and Informal Tone
+   ![](./media/lab8new-t1p18.png)
 
-1. Enter the following text:
-
-   ```
-   Hey, can you send me the report when you get a chance? I need it before the meeting tomorrow morning. Thanks a lot!
-   ```
-
-2. Set:
-
-   * Target language: French (fr)
-   * Tone: Formal
-   * Gender: Neutral
-
-3. Click **Translate** and review the output.
-
-4. Change **Tone** to **Casual**.
-
-5. Click **Translate** again.
-
-6. Compare the two outputs.
-
-### Gender-Specific Translation
-
-1. Enter the following text:
-
-   ```
-   The doctor was very professional and helpful during the consultation.
-   ```
-
-2. Translate to Spanish with:
-
-   * Gender = Male
-   * Gender = Female
-   * Gender = Neutral
-
-3. Compare the resulting translations.
-
-### Adaptive Customization
-
-1. Under **Reference translations**, select **Add reference pair**.
-
-2. Enter:
-
-   **Source Text (English):**
-
-   ```
-   Please submit your expense claim through the Tepuy Pay portal.
-   ```
-
-   **Target Text (Spanish):**
-
-   ```
-   Por favor envíe su solicitud de gastos a través del portal Tepuy Pay.
-   ```
-
-3. Translate the following sentence:
-
-   ```
-   Your expense claim has been approved and will be processed through Tepuy Pay.
-   ```
-
-4. Observe how the translation follows the terminology and style from the reference pair.
-
----
-
-## Task 5: Translate a document using the Document Translation playground
-
-In this task, you will translate a document while preserving its formatting.
-
-1. Create a Word document using notepad containing the following content:
-
-   ```
-   Title: Company Expense Policy — Summary
-
-   Section 1: Travel Expenses
-
-   Employees may claim up to $150 per night for hotel accommodation when traveling on company business. All claims must be submitted within 30 days of the travel date.
-
-   Section 2: Meal Allowances
-
-   The standard meal allowance is $50 per day. Receipts are required for all meal claims above $25. Business entertainment meals require manager approval in advance.
-
-   Section 3: Transportation
-
-   Taxi and rideshare receipts must be submitted for all trips. Public transit costs are reimbursed at the actual fare paid.
-   ```
-
-2. Save the document as:
-
-   ```
-   expense_policy_EN.docx
-   ```
-
-3. In Microsoft Foundry, select:
-
-   **Translation → Document Translation**
-
-4. Click **Browse for a file (2)** and upload the document.
-
-5. Configure:
-
-   * Source language: English (en)
-   * Target language: Spanish (es)
-
-6. Click **Translate (3)**.
-
-7. Download and open the translated document.
-
-8. Verify:
-
-   * Text is translated
-   * Formatting is preserved
-   * Dollar amounts remain unchanged
-   * Proper nouns are preserved
-
-9. Repeat the translation using **French (fr)** as the target language.
-
----
-
-## Task 6: Build a Python translation client
-
-In this task, you will create a Python application that uses the Azure Translator API.
-
-1. In Microsoft Foundry, navigate to:
-
-   **Settings → Connected resources**
-
-2. Locate the Azure AI Services resource.
-
-3. Copy:
-
-   * Endpoint URL
-   * Key 1
-   * Region
-
-4. Open:
-
-   ```
-   https://vscode.dev
-   ```
-
-5. Open a terminal and install requests if necessary:
+1. Run the following command in the terminal to install the Azure AI Foundry SDK and authentication libraries required to connect to your Foundry project and interact with the deployed **gpt-5-mini** model from Python:
 
    ```bash
-   pip install requests
+   pip install --user azure-ai-projects azure-identity
    ```
 
-6. Create a file named:
+1. Now in the **Explorer** pane click on **New File... (1)** icon to create a new file **(2)** named:
 
+   ```text
+   translate_foundry.py
    ```
-   translator_client.py
-   ```
 
-7. Add the sample Python code provided in the lab.
+   ![](./media/lab8new-t1p19.png)
 
-8. Replace:
+1. Copy and paste the following code into **translate_foundry.py**:
 
    ```python
-   KEY = "your-translator-key-here"
-   REGION = "eastus"
+   import os
+   from azure.ai.projects import AIProjectClient
+   from azure.identity import DefaultAzureCredential
+
+   # Foundry Connection
+   PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
+   DEPLOYMENT_NAME = "gpt-5-mini"
+
+   client = AIProjectClient(
+      endpoint=PROJECT_ENDPOINT,
+      credential=DefaultAzureCredential()
+   )
+
+   # Helper Function
+   def call_model(system, user, max_tokens=500, temperature=0.1):
+      openai_client = client.get_openai_client()
+
+      response = openai_client.chat.completions.create(
+         model=DEPLOYMENT_NAME,
+         messages=[
+               {"role": "system", "content": system},
+               {"role": "user", "content": user}
+         ],
+         max_completion_tokens=max_tokens
+      )
+
+      return response.choices[0].message.content.strip()
+
+   # Translation
+   def translate(text, target_lang):
+      return call_model(
+         system="You are a translation assistant. Respond ONLY with the translated text.",
+         user=f"Translate to {target_lang}: {text}"
+      )
+
+   # Transliteration
+   def transliterate(text, target_script="Latin"):
+      return call_model(
+         system=(
+               "You are a transliteration assistant. "
+               "Transliteration changes only the writing script. "
+               "Do not translate the text."
+         ),
+         user=f"Transliterate to {target_script} script: {text}"
+      )
+
+   # Language Detection
+   def detect_and_translate(text):
+      return call_model(
+         system="You are a language detection and translation assistant.",
+         user=(
+               f"Identify the language of this text and translate it to English.\n\n"
+               f"Text: {text}"
+         )
+      )
+
+   print("=" * 60)
+   print("Lab 3C - Translation and Transliteration")
+   print("=" * 60)
+
+   # Translation Tests
+   translations = [
+      ("Good morning, how are you today?", "Spanish"),
+      ("The meeting has been rescheduled.", "French"),
+      ("Azure AI Foundry is the future of AI.", "Japanese")
+   ]
+
+   print("\n--- Translation Tests ---")
+
+   for text, lang in translations:
+      result = translate(text, lang)
+      print(f"\nOriginal: {text}")
+      print(f"Translated: {result}")
+
+   # Transliteration Tests
+   translit_tests = [
+      ("مرحبا", "Latin"),
+      ("Привет", "Latin"),
+      ("こんにちは", "Latin")
+   ]
+
+   print("\n--- Transliteration Tests ---")
+
+   for text, script in translit_tests:
+      result = transliterate(text, script)
+      print(f"\nOriginal: {text}")
+      print(f"Transliterated: {result}")
+
+   # Language Detection
+   unknowns = [
+      "Bonjour, comment allez-vous?",
+      "Guten Morgen, wie geht es Ihnen?",
+      "Buenos dias, me llamo Juan."
+   ]
+
+   print("\n--- Language Detection ---")
+
+   for text in unknowns:
+      result = detect_and_translate(text)
+      print(f"\nInput: {text}")
+      print(result)
    ```
 
-   with your actual values.
+    ![](./media/lab8new-t1p20.png)
 
-9. Run the application:
+1. Update the following placeholders with the values you noted earlier from Microsoft Foundry:
+
+   - PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
+   - DEPLOYMENT_NAME = "gpt-5-mini"
+
+      ![](./media/lab8new-t1p21.png)
+
+   >**Note:** Replace `YOUR_TARGET_URI_HERE` with your copied Project Endpoint. If your deployed model uses a different Deployment Name, replace `gpt-5-mini` with that exact deployment name. Using an incorrect endpoint or deployment name will prevent the application from connecting to the model successfully.
+
+1. Run the application by using the following command in the terminal:
 
    ```bash
-   python translator_client.py
+   python translate_foundry.py
    ```
 
-10. Verify:
+1. Verify the translation results.
 
-    * Language detection works correctly
-    * Multi-language translation returns results
-    * Transliteration returns Arabic text in Latin script
+   ![](./media/lab8new-t1p22.png)
 
----
+## Task 5: Add Sentiment Analysis to the Application
 
-## Task 7: Compare NMT and LLM translation quality
+In this task, you will extend the application to perform sentiment analysis. The deployed gpt-5-mini model will classify text as Positive, Negative, or Neutral, demonstrating how a single model can perform multiple text analysis tasks.
 
-In this task, you will compare Azure-MT and GPT-4o translations.
+1. Open the **translate_foundry.py** file created in the previous task.
 
-1. Translate the following text samples into Spanish using both models:
+1. Add the following function below the existing code. This function uses the deployed gpt-5-mini model to perform sentiment analysis and classify the input text as Positive, Negative, or Neutral.
 
-   ```
-   It's raining cats and dogs outside!
-   ```
-
-   ```
-   Please submit your TPS reports by EOD Friday.
-   ```
-
-   ```
-   The quarterly earnings exceeded analyst expectations.
+   ```python
+   def analyze_sentiment(text):
+      """Classify sentiment as Positive, Negative, or Neutral."""
+      return call_model(
+         system="Respond only with: Positive, Negative, or Neutral.",
+         user=text,
+         max_tokens=200
+      )
    ```
 
+   ![](./media/lab8new-t1p23.png)
+
+1. Add the following test code below the existing application. This code demonstrates a simple translation and sentiment analysis pipeline by translating each input sentence into Spanish and then analyzing its sentiment using the gpt-5-mini model.
+
+   ```python
+   # Translation + Sentiment Analysis Pipeline
+
+   pipeline_tests = [
+      "I love this product, it works perfectly!",
+      "The service was terrible and very slow.",
+      "The package arrived on Tuesday."
+   ]
+
+   print("\n--- Translation + Sentiment Pipeline ---")
+
+   for text in pipeline_tests:
+      translated = translate(text, "Spanish")
+      sentiment = analyze_sentiment(text)
+
+      print(f"\nOriginal  : {text}")
+      print(f"Spanish   : {translated}")
+      print(f"Sentiment : {sentiment}")
    ```
-   omg this is literally the best day ever lol
+
+    ![](./media/lab8new-t1p24.png)
+
+1. Run the application again using the following commnad:
+
+   ```bash
+   python translate_foundry.py
    ```
 
-   ```
-   The patient presented with acute myocardial infarction.
-   ```
+1. Review the output generated by the sentiment analysis function.
 
-2. Compare:
-
-   * Translation quality
-   * Natural language usage
-   * Technical accuracy
-   * Handling of idioms and slang
-
-3. Record your observations and determine which model performs better for each scenario.
-
----
+    ![](./media/lab8new-t1p25.png)
 
 ## Summary
 
-In this lab, you connected Azure Translator to a Microsoft Foundry project and explored multiple translation capabilities available through Azure Translator. You used the Azure-MT Neural Machine Translation model for text translation, performed automatic language detection and transliteration, and explored GPT-4o translation features such as tone and gender control. You translated documents while preserving formatting and built a Python application that used the Translator REST API for translation, language detection, and transliteration. Finally, you compared NMT and LLM-based translation approaches and observed their strengths across different translation scenarios.
+In this lab, you verified a gpt-5-mini deployment in Microsoft Foundry and used the Chat Playground to test translation and transliteration prompts. You then built a Python application using the Azure AI Foundry SDK to perform translation, transliteration, and language detection.
+
+Finally, you extended the application with sentiment analysis, demonstrating how a single deployed model can support multiple text analysis tasks through prompt engineering. These capabilities are commonly used in multilingual applications, customer support systems, content processing workflows, and AI-powered business solutions.
 
 ### You've successfully completed the hands-on lab!
