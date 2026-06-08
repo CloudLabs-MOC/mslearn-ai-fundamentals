@@ -194,6 +194,8 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
    pip install --user azure-ai-projects azure-identity
    ```
 
+   >**Note:** Note: If you receive a warning such as `ansible-core requires packaging, which is not installed`, you can safely ignore it for this lab.
+
 1. Now in the **Explorer** pane click on **New File... (1)** icon to create a new file **(2)** named:
 
    ```text
