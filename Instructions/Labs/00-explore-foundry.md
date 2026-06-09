@@ -17,45 +17,51 @@ In this lab, you will perform the following tasks:
 * Task 5: Deploy a model
 * Task 6: Use your Foundry resource endpoint
 
-## Task 1: Create a project in Microsoft Foundry
+## Task 1: Create a Microsoft Foundry project
 
-In this task, you will create a Microsoft Foundry project. You will sign in to the Microsoft Foundry portal, configure the project settings such as the subscription, resource group, Foundry resource, and region, and create the project that will be used to manage models, agents, and other AI assets.
+In this task, you'll create a Microsoft Foundry project, configure the required Azure resources, and obtain the project endpoint needed for application development.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com`.
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-1. Click the **Sign in** button in the top-right corner. 
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-    ![](./media/mod01-p2t1p1.png)
+     ![](./media/mod7-t1p1.png)
 
-1. When prompted, sign in using the Azure credentials listed below.
+1. If prompted to sign in, enter your credentials:
+ 
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+ 
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
+ 
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+ 
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
-    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+1. If prompted to **Stay signed in?**, you can click **No**.
 
-    - **Password:** <inject key="AzureAdUserPassword"></inject>
+    ![](./media/mod6-p2t1p3.png)
 
-1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
 
-    ![](./media/mod01-p2t1p2.png)
-
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
-
-    ![](./media/mod01-p2t1p3.png)
-
-1. In the **Select a project to continue** window, open the **Select or search for a project** dropdown and click **Create a new project**.
-
-    ![](./media/mod01-p2t1p4.png)
+   ![](./media/lab8new-t1p1.png)
 
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-901 (4)** 
-    - Microsoft Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (5)**
-    - Region : Select **<inject key="location" enableCopy="false"/> (6)**
+    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-901 (6)** 
     - Click on **Create** **(7)**
 
-      ![](./media/ai901-l1-01.png)
+      ![](./media/mod7-t1p2.png)
 
-        >**Note:** Make a note of the region you selected. You'll need it later!
+      >**Note:** Make a note of the region you selected. You'll need it later!
+
+1. Wait for your project to be created. It may take a few minutes. 
+
+1. In the **All set, Let's build your agents** window, click **Let's go**.
+
+    ![](./media/mod7-t1p3.png)
 
 1. Wait for your project to be created. It may take a few minutes. 
 

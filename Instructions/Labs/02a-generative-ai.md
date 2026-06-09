@@ -19,54 +19,47 @@ In this exercise, you will perform:
 
 ## Task 1: Create a Microsoft Foundry project
 
-In this task, you will access the Microsoft Foundry portal and create a new project.
-This project acts as a workspace to organize and manage resources required for building generative AI solutions.
+In this task, you'll create a Microsoft Foundry project, configure the required Azure resources, and obtain the project endpoint needed for application development.
 
-1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com?azure-portal=true`
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-1. On the **Microsoft Foundry** home page, click on **Sign in** in the top right corner.
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-   ![](./media/mod6-p2t1p1.png)
+     ![](./media/mod7-t1p1.png)
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/ai901-l4-0.png)
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
-     ![Enter Your Password](./media/mod6-p2t1p2(1).png)
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
-   ![](./media/mod6-p2t1p3.png)
+    ![](./media/mod6-p2t1p3.png)
 
-   > **Note:** Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
 
-1. At the top of the **Microsoft Foundry** portal, enable the **New Foundry toggle (1)** to switch to the latest Foundry user interface.
-
-1. From the **Select a project to continue** dialog, click the drop-down under **Select or search for a project**, and then select **Create a new project (2)**.
-
-    ![](./media/lab2a-l1.png)
+   ![](./media/lab8new-t1p1.png)
 
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-901 (4)** 
-    - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
-    - Region : Select **<inject key="location" enableCopy="false"/> (6)**
+    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-901 (6)** 
     - Click on **Create** **(7)**
 
-      ![](./media/ai901-l2-01.png)
-      
-      >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
+      ![](./media/ai901-l5-1(1).png)
 
-1. Wait for your project created. It may take a few minutes. 
+1. Wait for your project to be created. It may take a few minutes. 
 
-1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
+1. In the **All set, Let's build your agents** window, click **Let's go**.
 
-    ![](./media/mod01-p2t1p6.png)
+    ![](./media/mod7-t1p3.png)
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
