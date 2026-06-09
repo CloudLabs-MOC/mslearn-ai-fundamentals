@@ -149,27 +149,27 @@ In this task, you'll verify that GPT-5 Mini supports image input and perform bas
 
 1. Right click on the image and select **Save image as**.
 
-   ![](./media/lab09new-t1p4(1).png)
+     ![](./media/lab09new-t1p4(1).png)
 
 1. In the **Save As** window, select **Download (1)** folder from the left pane and click on **Save (2)**.
 
-   ![](./media/lab09new-t1p4(2).png)
+     ![](./media/lab09new-t1p4(2).png)
 
 1. Go back to the **Microsoft Foundry** tab in the browser, click on the **Attach files (1)** icon and from the **Open** window select image **(2)** you have saved earlier and click on **Open (3)**. 
 
-   ![](./media/lab09new-t1p4(3).png)
+     ![](./media/lab09new-t1p4(3).png)
 
 10. Paste the following prompt and press **Enter** to submit
 
-    ```text
-    How many people are visible? Describe each person's expression and approximate age.
-    ```
+     ```text
+     How many people are visible? Describe each person's expression and approximate age.
+     ```
 
-    ![](./media/lab09new-t1p4(4).png)
+     ![](./media/lab09new-t1p4(4).png)
 
 11. Review the results and observe how the model analyzes multiple faces in a single image.
 
-    ![](./media/lab09new-t1p4(5).png)
+     ![](./media/lab09new-t1p4(5).png)
 
 ## Task 4: Design Face Analysis Prompts
 
@@ -193,21 +193,20 @@ In this task, you'll create and compare different face analysis prompts to under
 
 5. Submit the following structured prompt:
 
-    ```text
-   Analyze all faces. Return ONLY a JSON object with these keys:
-
-   {
-     "face_count": <number>,
-     "faces": [
-       {
+      ```text
+      Analyze all faces. Return ONLY a JSON object with these keys:
+      {
+      "face_count": <number>,
+      "faces": [
+         {
          "expression": "",
          "age_estimate": "",
          "head_orientation": "",
          "notes": ""
-       }
-     ]
-   }
-    ```
+         }
+      ]
+      }
+      ```
 
 6. Review the generated response and observe how the model returns information in a structured format suitable for application integration.
 
