@@ -353,8 +353,8 @@ In this task, you'll create a Python application that uses the Azure AI Foundry 
       # Test Images 
       TEST_IMAGES = [
          (
-               'Mona Lisa (single face)',
-               'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/Mona_Lisa.jpg?raw=true'
+               'Potrait (single face)',
+               'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/President_Barack_Obama.jpg?raw=true'
             ),
          (
             'Group photo (multiple faces)',
