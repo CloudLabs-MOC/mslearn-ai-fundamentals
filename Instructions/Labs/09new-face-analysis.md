@@ -318,7 +318,7 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
                   ]}
             ],
 
-            max_completion_tokens=800
+            max_completion_tokens=5000
          )
 
          raw = response.choices[0].message.content.strip()
@@ -360,7 +360,7 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
             ),
          (
             'Group photo (multiple faces)',
-            'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/group-image.jpg?raw=true'
+            'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/group-photo.jpg?raw=true'
          ),
       ]
 
@@ -410,76 +410,44 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
 In this task, you'll explore the Content Understanding capability in Microsoft Foundry and compare it with the multimodal prompting approach used in the previous tasks.
 
-1. Return to the **Microsoft Foundry** portal.
+1. Go back to the **Microsoft Foundry** portal, where the **gpt-5-mini** playground is still open.
 
-2. In the left navigation pane, look for **Content Understanding** under:
+1. Now paste the given URL in a new tab and save the image on the LabVM. 
 
-   * **Build and customize**
+    ```text
+    https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/group-photo.jpg?raw=true
+    ```
 
-    or
+1. Right click on the image and select **Save image as**.
 
-   * **Foundry Tools**
+     ![](./media/lab09new-t1p16.png)
 
-3. If **Content Understanding** is available in your environment, open it and click **Create new task** (or **Try it out**).
+1. In the **Save As** window, select **Download (1)** folder from the left pane and click on **Save (2)**.
 
-4. Select **Image Analysis** as the task type.
+     ![](./media/lab09new-t1p17.png)
 
-5. Upload an image containing one or more faces, or provide a publicly accessible image URL.
+1. Go back to the **Microsoft Foundry** tab in the browser, click on the **Attach files (1)** icon and from the **Open** window select image **(2)** you have saved earlier and click on **Open (3)**. 
 
-6. Run the analysis and review the generated output.
+     ![](./media/lab09new-t1p18.png)
 
-7. Observe how Content Understanding returns structured information extracted from the image through a predefined processing pipeline.
+1. Paste the following prompt along with the image:
 
-8. If Content Understanding is not available in your Foundry environment, return to the **Chat Playground** and use the following prompt with one of the image URLs used earlier:
+      ```text
+      Extract the following fields from this image:
 
-   ```text
-   Extract the following fields from this image:
+      - Number of people visible
+      - Dominant emotion for each person
+      - Estimated age range for each person
+      - Setting or environment description
 
-   - Number of people visible
-   - Dominant emotion for each person
-   - Estimated age range for each person
-   - Setting or environment description
+      Return the results as a structured table.
+      ```
 
-   Return the results as a structured table.
-   ```
+      ![](./media/lab09new-t1p19.png)
 
 9. Review the generated output and compare it with the results returned by the face analysis application created in the previous task.
 
-10. Consider the strengths of each approach:
-
-    * **Multimodal Prompting**
-
-      * Flexible and conversational
-      * Supports custom output formats
-      * Easily adapted through prompt engineering
-      * Ideal for exploratory and interactive scenarios
-
-    * **Content Understanding**
-
-      * Uses predefined extraction pipelines
-      * Produces highly structured outputs
-      * Suitable for large-scale processing workflows
-      * Better aligned with production extraction scenarios
-
-11. Compare the outputs and identify which approach would be most appropriate for the following scenarios:
-
-    * Interactive image analysis applications
-    * Customer-facing AI assistants
-    * Automated document and image processing workflows
-    * Enterprise-scale extraction pipelines
-
-### Concept Check
-
-Consider the following questions before completing the lab:
-
-* What is the primary difference between multimodal prompting and Content Understanding?
-* In which situations would Content Understanding be preferred over direct multimodal prompting?
-* How does prompt engineering influence the quality of image analysis results?
-* Why are structured outputs important when integrating AI models into production applications?
-
-By completing this task, you have explored two different approaches to extracting information from visual content in Microsoft Foundry and gained a better understanding of when each approach is most appropriate.
-
----
+   ![](./media/lab09new-t1p20.png)
 
 ## Summary
 

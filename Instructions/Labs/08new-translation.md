@@ -215,52 +215,52 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
       DEPLOYMENT_NAME = "gpt-5-mini"
 
       client = AIProjectClient(
-      endpoint=PROJECT_ENDPOINT,
-      credential=DefaultAzureCredential()
+         endpoint=PROJECT_ENDPOINT,
+         credential=DefaultAzureCredential()
       )
 
       # Helper Function
       def call_model(system, user, max_tokens=500, temperature=0.1):
-      openai_client = client.get_openai_client()
+         openai_client = client.get_openai_client()
 
-      response = openai_client.chat.completions.create(
-         model=DEPLOYMENT_NAME,
-         messages=[
-               {"role": "system", "content": system},
-               {"role": "user", "content": user}
-         ],
-         max_completion_tokens=max_tokens
-      )
+         response = openai_client.chat.completions.create(
+            model=DEPLOYMENT_NAME,
+            messages=[
+                  {"role": "system", "content": system},
+                  {"role": "user", "content": user}
+            ],
+            max_completion_tokens=max_tokens
+         )
 
-      return response.choices[0].message.content.strip()
+         return response.choices[0].message.content.strip()
 
       # Translation
       def translate(text, target_lang):
-      return call_model(
-         system="You are a translation assistant. Respond ONLY with the translated text.",
-         user=f"Translate to {target_lang}: {text}"
-      )
+         return call_model(
+            system="You are a translation assistant. Respond ONLY with the translated text.",
+            user=f"Translate to {target_lang}: {text}"
+         )
 
       # Transliteration
       def transliterate(text, target_script="Latin"):
-      return call_model(
-         system=(
-               "You are a transliteration assistant. "
-               "Transliteration changes only the writing script. "
-               "Do not translate the text."
-         ),
-         user=f"Transliterate to {target_script} script: {text}"
-      )
+         return call_model(
+            system=(
+                  "You are a transliteration assistant. "
+                  "Transliteration changes only the writing script. "
+                  "Do not translate the text."
+            ),
+            user=f"Transliterate to {target_script} script: {text}"
+         )
 
       # Language Detection
       def detect_and_translate(text):
-      return call_model(
-         system="You are a language detection and translation assistant.",
-         user=(
-               f"Identify the language of this text and translate it to English.\n\n"
-               f"Text: {text}"
+         return call_model(
+            system="You are a language detection and translation assistant.",
+            user=(
+                  f"Identify the language of this text and translate it to English.\n\n"
+                  f"Text: {text}"
+            )
          )
-      )
 
       print("=" * 60)
       print("Lab 3C - Translation and Transliteration")
@@ -268,45 +268,45 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
       # Translation Tests
       translations = [
-      ("Good morning, how are you today?", "Spanish"),
-      ("The meeting has been rescheduled.", "French"),
-      ("Azure AI Foundry is the future of AI.", "Japanese")
+         ("Good morning, how are you today?", "Spanish"),
+         ("The meeting has been rescheduled.", "French"),
+         ("Azure AI Foundry is the future of AI.", "Japanese")
       ]
 
       print("\n--- Translation Tests ---")
 
       for text, lang in translations:
-      result = translate(text, lang)
-      print(f"\nOriginal: {text}")
-      print(f"Translated: {result}")
+         result = translate(text, lang)
+         print(f"\nOriginal: {text}")
+         print(f"Translated: {result}")
 
       # Transliteration Tests
       translit_tests = [
-      ("مرحبا", "Latin"),
-      ("Привет", "Latin"),
-      ("こんにちは", "Latin")
+         ("مرحبا", "Latin"),
+         ("Привет", "Latin"),
+         ("こんにちは", "Latin")
       ]
 
       print("\n--- Transliteration Tests ---")
 
       for text, script in translit_tests:
-      result = transliterate(text, script)
-      print(f"\nOriginal: {text}")
-      print(f"Transliterated: {result}")
+         result = transliterate(text, script)
+         print(f"\nOriginal: {text}")
+         print(f"Transliterated: {result}")
 
       # Language Detection
       unknowns = [
-      "Bonjour, comment allez-vous?",
-      "Guten Morgen, wie geht es Ihnen?",
-      "Buenos dias, me llamo Juan."
+         "Bonjour, comment allez-vous?",
+         "Guten Morgen, wie geht es Ihnen?",
+         "Buenos dias, me llamo Juan."
       ]
 
       print("\n--- Language Detection ---")
 
       for text in unknowns:
-      result = detect_and_translate(text)
-      print(f"\nInput: {text}")
-      print(result)
+         result = detect_and_translate(text)
+         print(f"\nInput: {text}")
+         print(result)
       ```
 
       ![](./media/lab8new-t1p20.png)
