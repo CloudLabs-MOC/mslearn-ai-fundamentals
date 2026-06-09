@@ -1,6 +1,6 @@
 # Apply guardrails to prevent the output of harmful content
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 45 Minutes
 
 ## Lab Overview
 

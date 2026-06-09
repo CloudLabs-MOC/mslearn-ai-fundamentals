@@ -4,7 +4,7 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 # Module 07: Apply guardrails to prevent the output of harmful content
 
-### Overall Estimated Timing: 30 Minutes
+### Overall Estimated Timing: 45 Minutes
 
 ## Overview
 
