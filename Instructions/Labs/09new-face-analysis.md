@@ -432,7 +432,7 @@ In this task, you'll use GPT-5 Mini to extract structured information from image
 
      ![](./media/lab09new-t1p18.png)
 
-1. Paste the following prompt along with the image:
+1. Paste the following prompt along with the image and press **Enter**:
 
       ```text
       Extract the following fields from this image:

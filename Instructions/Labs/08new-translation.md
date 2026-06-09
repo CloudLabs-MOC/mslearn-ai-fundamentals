@@ -132,7 +132,7 @@ In this task, you'll use the Chat Playground to create and test translation and 
 
     ![](./media/lab8new-t1p10.png)
 
-1. Similarly you try the following prompts as well:
+1. Similarly you can try the following prompts as well:
 
     - `Translate to Japanese: Please submit your report by Friday.`
     - `Translate to Portuguese: Welcome to our AI training program.`
@@ -141,7 +141,7 @@ In this task, you'll use the Chat Playground to create and test translation and 
 
     ![](./media/lab8new-t1p11.png)
 
-1. Now test transliteration prompts and observe that only the script changes while the language and meaning remain unchanged ":
+1. Now test transliteration prompts and observe that only the script changes while the language and meaning remain unchanged:
 
     ```
     Transliterate to Latin script: مرحبا  
@@ -151,7 +151,7 @@ In this task, you'll use the Chat Playground to create and test translation and 
 
     ![](./media/lab8new-t1p12.png)
 
-1. Similarly, test the following transliteration prompts and verify that only the script changes while the language and meaning remain unchanged:
+1. Similarly, test the following transliteration prompts:
 
     - `Transliterate to Latin script: Привет`
 
