@@ -205,22 +205,22 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
 1. Copy and paste the following code into **translate_foundry.py**:
 
-    ```python
-   import os
-   from azure.ai.projects import AIProjectClient
-   from azure.identity import DefaultAzureCredential
+      ```python
+      import os
+      from azure.ai.projects import AIProjectClient
+      from azure.identity import DefaultAzureCredential
 
-   # Foundry Connection
-   PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
-   DEPLOYMENT_NAME = "gpt-5-mini"
+      # Foundry Connection
+      PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
+      DEPLOYMENT_NAME = "gpt-5-mini"
 
-   client = AIProjectClient(
+      client = AIProjectClient(
       endpoint=PROJECT_ENDPOINT,
       credential=DefaultAzureCredential()
-   )
+      )
 
-   # Helper Function
-   def call_model(system, user, max_tokens=500, temperature=0.1):
+      # Helper Function
+      def call_model(system, user, max_tokens=500, temperature=0.1):
       openai_client = client.get_openai_client()
 
       response = openai_client.chat.completions.create(
@@ -234,15 +234,15 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
       return response.choices[0].message.content.strip()
 
-   # Translation
-   def translate(text, target_lang):
+      # Translation
+      def translate(text, target_lang):
       return call_model(
          system="You are a translation assistant. Respond ONLY with the translated text.",
          user=f"Translate to {target_lang}: {text}"
       )
 
-   # Transliteration
-   def transliterate(text, target_script="Latin"):
+      # Transliteration
+      def transliterate(text, target_script="Latin"):
       return call_model(
          system=(
                "You are a transliteration assistant. "
@@ -252,8 +252,8 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
          user=f"Transliterate to {target_script} script: {text}"
       )
 
-   # Language Detection
-   def detect_and_translate(text):
+      # Language Detection
+      def detect_and_translate(text):
       return call_model(
          system="You are a language detection and translation assistant.",
          user=(
@@ -262,54 +262,54 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
          )
       )
 
-   print("=" * 60)
-   print("Lab 3C - Translation and Transliteration")
-   print("=" * 60)
+      print("=" * 60)
+      print("Lab 3C - Translation and Transliteration")
+      print("=" * 60)
 
-   # Translation Tests
-   translations = [
+      # Translation Tests
+      translations = [
       ("Good morning, how are you today?", "Spanish"),
       ("The meeting has been rescheduled.", "French"),
       ("Azure AI Foundry is the future of AI.", "Japanese")
-   ]
+      ]
 
-   print("\n--- Translation Tests ---")
+      print("\n--- Translation Tests ---")
 
-   for text, lang in translations:
+      for text, lang in translations:
       result = translate(text, lang)
       print(f"\nOriginal: {text}")
       print(f"Translated: {result}")
 
-   # Transliteration Tests
-   translit_tests = [
+      # Transliteration Tests
+      translit_tests = [
       ("مرحبا", "Latin"),
       ("Привет", "Latin"),
       ("こんにちは", "Latin")
-   ]
+      ]
 
-   print("\n--- Transliteration Tests ---")
+      print("\n--- Transliteration Tests ---")
 
-   for text, script in translit_tests:
+      for text, script in translit_tests:
       result = transliterate(text, script)
       print(f"\nOriginal: {text}")
       print(f"Transliterated: {result}")
 
-   # Language Detection
-   unknowns = [
+      # Language Detection
+      unknowns = [
       "Bonjour, comment allez-vous?",
       "Guten Morgen, wie geht es Ihnen?",
       "Buenos dias, me llamo Juan."
-   ]
+      ]
 
-   print("\n--- Language Detection ---")
+      print("\n--- Language Detection ---")
 
-   for text in unknowns:
+      for text in unknowns:
       result = detect_and_translate(text)
       print(f"\nInput: {text}")
       print(result)
-    ```
+      ```
 
-     ![](./media/lab8new-t1p20.png)
+      ![](./media/lab8new-t1p20.png)
 
 1. Update the following placeholders with the values you noted earlier from Microsoft Foundry:
 
@@ -338,41 +338,41 @@ In this task, you'll extend the application by adding sentiment analysis functio
 
 1. Add the following function below the existing code. This function uses the deployed gpt-5-mini model to perform sentiment analysis and classify the input text as Positive, Negative, or Neutral.
 
-    ```python
-   def analyze_sentiment(text):
-      """Classify sentiment as Positive, Negative, or Neutral."""
-      return call_model(
-         system="Respond only with: Positive, Negative, or Neutral.",
-         user=text,
-         max_tokens=200
-      )
-    ```
+      ```python
+      def analyze_sentiment(text):
+         """Classify sentiment as Positive, Negative, or Neutral."""
+         return call_model(
+            system="Respond only with: Positive, Negative, or Neutral.",
+            user=text,
+            max_tokens=200
+         )
+      ```
 
-    ![](./media/lab8new-t1p23.png)
+     ![](./media/lab8new-t1p23.png)
 
 1. Add the following test code below the existing application. This code demonstrates a simple translation and sentiment analysis pipeline by translating each input sentence into Spanish and then analyzing its sentiment using the gpt-5-mini model.
 
-    ```python
-   # Translation + Sentiment Analysis Pipeline
+      ```python
+      # Translation + Sentiment Analysis Pipeline
 
-   pipeline_tests = [
-      "I love this product, it works perfectly!",
-      "The service was terrible and very slow.",
-      "The package arrived on Tuesday."
-   ]
+      pipeline_tests = [
+         "I love this product, it works perfectly!",
+         "The service was terrible and very slow.",
+         "The package arrived on Tuesday."
+      ]
 
-   print("\n--- Translation + Sentiment Pipeline ---")
+      print("\n--- Translation + Sentiment Pipeline ---")
 
-   for text in pipeline_tests:
-      translated = translate(text, "Spanish")
-      sentiment = analyze_sentiment(text)
+      for text in pipeline_tests:
+         translated = translate(text, "Spanish")
+         sentiment = analyze_sentiment(text)
 
-      print(f"\nOriginal  : {text}")
-      print(f"Spanish   : {translated}")
-      print(f"Sentiment : {sentiment}")
-    ```
+         print(f"\nOriginal  : {text}")
+         print(f"Spanish   : {translated}")
+         print(f"Sentiment : {sentiment}")
+      ```
 
-     ![](./media/lab8new-t1p24.png)
+      ![](./media/lab8new-t1p24.png)
 
 1. Run the application again using the following commnad:
 

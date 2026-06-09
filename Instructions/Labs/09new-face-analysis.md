@@ -117,46 +117,59 @@ In this task, you'll verify that GPT-5 Mini supports image input and perform bas
 
 3. In the **Instructions** section, enter the following system message:
 
-   ```text
-   You are a computer vision assistant specializing in face and image analysis. When given an image, provide a detailed, structured analysis of all visible faces including: count, estimated age range, emotional expression, head orientation, and any relevant contextual observations.
-   ```
+    ```text
+    You are a computer vision assistant specializing in face and image analysis. When given an image, provide a detailed, structured analysis of all visible faces including: count, estimated age range, emotional expression, head orientation, and any relevant contextual observations.
+    ```
 
-   ![](./media/lab09new-t1p1.png)
+    ![](./media/lab09new-t1p1.png)
 
 1. In the chat input area, paste the following image URL:
 
-   ```text
-   https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg
-   ```
+    ```text
+    https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg
+    ```
 
 1. After attaching the image URL, enter the following prompt and press Enter to submit it. The model will analyze the image and provide details about the visible face, including its expression, estimated age range, and overall context:
 
-   ```text
-   Analyze all faces in this image. Describe expression, estimated age, and context.
-   ```
+    ```text
+    Analyze all faces in this image. Describe expression, estimated age, and context.
+    ```
 
-   ![](./media/lab09new-t1p2.png)
+    ![](./media/lab09new-t1p2.png)
 
 8. Review the generated response.
 
-   ![](./media/lab09new-t1p3.png)
+    ![](./media/lab09new-t1p3.png)
 
 9. Now paste the given URL in a new tab and save the image on the LabVM. 
 
-   ```text
-   https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Beatles_with_Ed_Sullivan.jpg/960px-Beatles_with_Ed_Sullivan.jpg
-   ```
+    ```text
+    https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/group-image.jpg?raw=true
+    ```
+
+1. Right click on the image and select **Save image as**.
+
+   ![](./media/lab09new-t1p4(1).png)
+
+1. In the **Save As** window, select **Download (1)** folder from the left pane and click on **Save (2)**.
+
+   ![](./media/lab09new-t1p4(2).png)
+
+1. Go back to the **Microsoft Foundry** tab in the browser, click on the **Attach files (1)** icon and from the **Open** window select image **(2)** you have saved earlier and click on **Open (3)**. 
+
+   ![](./media/lab09new-t1p4(3).png)
 
 10. Paste the following prompt and press **Enter** to submit
 
-      ```text
-      How many people are visible? Describe each person's expression and approximate age.
-      ```
+    ```text
+    How many people are visible? Describe each person's expression and approximate age.
+    ```
+
+    ![](./media/lab09new-t1p4(4).png)
 
 11. Review the results and observe how the model analyzes multiple faces in a single image.
 
-      ![](./media/lab09new-t1p4.png)
-
+    ![](./media/lab09new-t1p4(5).png)
 
 ## Task 4: Design Face Analysis Prompts
 
@@ -164,23 +177,23 @@ In this task, you'll create and compare different face analysis prompts to under
 
 1. Click **New Chat** to start a new conversation while keeping the same system message configured in the previous task.
 
-   ![](./media/lab09new-t1p5.png)
+    ![](./media/lab09new-t1p5.png)
 
 2. Use the same **Mona Lisa** image URL from the previous task and submit the following open-ended prompt:
 
-   ```text
-   What do you see in this image?
-   ```
+    ```text
+    What do you see in this image?
+    ```
 
 3. Review the response and observe how the model describes the image when no specific output format is requested.
 
-   ![](./media/lab09new-t1p6.png)
+    ![](./media/lab09new-t1p6.png)
 
 4. Start a new chat session and attach the same image URL again.
 
 5. Submit the following structured prompt:
 
-   ```text
+    ```text
    Analyze all faces. Return ONLY a JSON object with these keys:
 
    {
@@ -194,23 +207,23 @@ In this task, you'll create and compare different face analysis prompts to under
        }
      ]
    }
-   ```
+    ```
 
 6. Review the generated response and observe how the model returns information in a structured format suitable for application integration.
 
-   ![](./media/lab09new-t1p8.png)
+    ![](./media/lab09new-t1p8.png)
 
 7. Start a new chat session and attach the same image URL once again.
 
 8. Submit the following confidence-rating prompt:
 
-   ```text
-   On a scale of 1–10, rate the confidence of each facial attribute you detect: expression clarity, age estimate accuracy, head pose, and emotional tone. Explain each rating.
-   ```
+    ```text
+    On a scale of 1–10, rate the confidence of each facial attribute you detect: expression clarity, age estimate accuracy, head pose, and emotional tone. Explain each rating.
+    ```
 
 9. Review the response and observe how the model evaluates its confidence when describing visual attributes.
 
-   ![](./media/lab09new-t1p9.png)
+    ![](./media/lab09new-t1p9.png)
 
 10. Compare the outputs generated by all three prompting strategies and note the differences in:
 
@@ -227,168 +240,172 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
 1. Click the **Call model** tab next to the **Chat** tab to view the endpoint details and sample code for calling the deployed model programmatically.
 
-   ![](./media/lab09new-t1p10.png)
+    ![](./media/lab09new-t1p10.png)
 
 2. Scroll down and click **Skip setup with VS Code for the Web** to launch an online VS Code environment in a new tab.
 
-   ![](./media/lab09new-t1p11.png)
+    ![](./media/lab09new-t1p11.png)
 
 1. When prompted, leave the default workspace folder name unchanged and press **Enter** to create the workspace.
 
-   ![](./media/lab8new-t1p16.png)
+    ![](./media/lab8new-t1p16.png)
 
 1. Please wait while the environment is being set up. This process may take a few minutes to complete.
 
-   ![](./media/lab8new-t1p17.png)
+    ![](./media/lab8new-t1p17.png)
 
 1. The integrated terminal should open automatically after the environment setup is complete. If it does not appear, open it manually by selecting **Hamburger Menu (1) → View (2) → Terminal (3)**, or press **Ctrl + `** on your keyboard. The terminal will be used to run commands throughout this lab.
 
-   ![](./media/lab8new-t1p18.png)
+    ![](./media/lab8new-t1p18.png)
 
 1. Run the following command in the terminal to install the Azure AI Foundry SDK and authentication libraries required to connect to your Foundry project and interact with the deployed **gpt-5-mini** model from Python:
 
-   ```bash
-   pip install --user azure-ai-projects azure-identity
-   ```
+    ```bash
+    pip install --user azure-ai-projects azure-identity
+    ```
 
-   >**Note:** Note: If you receive a warning such as `ansible-core requires packaging, which is not installed`, you can safely ignore it for this lab.
+    >**Note:** Note: If you receive a warning such as `ansible-core requires packaging, which is not installed`, you can safely ignore it for this lab.
 
 1. Now in the **Explorer** pane click on **New File... (1)** icon to create a new file **(2)** named:
 
-   ```text
-   face_analysis_foundry.py
-   ```
+    ```text
+    face_analysis_foundry.py
+    ```
 
-   ![](./media/lab09new-t1p12.png)
+    ![](./media/lab09new-t1p12.png)
 
 8. Copy and paste the following code into **face_analysis_foundry.py**:
 
-   ```python
-   import json
-   from azure.ai.projects import AIProjectClient
-   from azure.identity import DefaultAzureCredential
+      ```python
+      import json
+      from azure.ai.projects import AIProjectClient
+      from azure.identity import DefaultAzureCredential
 
-   # Foundry Connection 
-   PROJECT_ENDPOINT = 'YOUR_TARGET_URI_HERE'  
-   DEPLOYMENT_NAME = 'gpt-5-mini'
+      # Foundry Connection 
+      PROJECT_ENDPOINT = 'YOUR_TARGET_URI_HERE'  
+      DEPLOYMENT_NAME = 'gpt-5-mini'
 
-   client = AIProjectClient(
-      endpoint=PROJECT_ENDPOINT,
-      credential=DefaultAzureCredential()
-   )
-
-   # System Prompt 
-   SYSTEM_PROMPT = (
-      'You are a computer vision assistant specializing in face analysis. '
-      'When given an image URL, analyze all visible faces and return ONLY '
-      'a valid JSON object — no markdown, no explanation — with this structure: '
-      '{ "face_count": <int>, "faces": [ { "expression": "<string>", '
-      '"age_estimate": "<string>", "head_orientation": "<string>", '
-      '"confidence": "<high|medium|low>", "notes": "<string>" } ] }'
-   )
-
-   def analyze_faces(image_url):
-      """Send an image URL to gpt-5-mini for face analysis."""
-      openai_client = client.get_openai_client()
-      response = openai_client.chat.completions.create(
-         model=DEPLOYMENT_NAME,
-         messages=[
-               {'role': 'system', 'content': SYSTEM_PROMPT},
-               {'role': 'user', 'content': [
-                  {
-                     'type': 'image_url',
-                     'image_url': {'url': image_url}
-                  },
-                  {
-                     'type': 'text',
-                     'text': 'Analyze all faces in this image.'
-                  }
-               ]}
-         ],
-
-         max_completion_tokens=800
+      client = AIProjectClient(
+         endpoint=PROJECT_ENDPOINT,
+         credential=DefaultAzureCredential()
       )
 
-      raw = response.choices[0].message.content.strip()
+      # System Prompt 
+      SYSTEM_PROMPT = (
+         'You are a computer vision assistant specializing in face analysis. '
+         'When given an image URL, analyze all visible faces and return ONLY '
+         'a valid JSON object — no markdown, no explanation — with this structure: '
+         '{ "face_count": <int>, "faces": [ { "expression": "<string>", '
+         '"age_estimate": "<string>", "head_orientation": "<string>", '
+         '"confidence": "<high|medium|low>", "notes": "<string>" } ] }'
+      )
 
-      # Strip markdown fences if present
-      if raw.startswith('```'):
-         raw = raw.split('```')[1]
-         if raw.startswith('json'):
-               raw = raw[4:]
+      def analyze_faces(image_url):
+         """Send an image URL to gpt-5-mini for face analysis."""
+         openai_client = client.get_openai_client()
+         response = openai_client.chat.completions.create(
+            model=DEPLOYMENT_NAME,
+            messages=[
+                  {'role': 'system', 'content': SYSTEM_PROMPT},
+                  {'role': 'user', 'content': [
+                     {
+                        'type': 'image_url',
+                        'image_url': {'url': image_url}
+                     },
+                     {
+                        'type': 'text',
+                        'text': 'Analyze all faces in this image.'
+                     }
+                  ]}
+            ],
 
-      try:
-         return json.loads(raw)
-      except json.JSONDecodeError:
-         return {'raw_response': raw}
+            max_completion_tokens=800
+         )
 
-   def print_analysis(result, label):
-      """Pretty-print face analysis results."""
-      print(f'\n--- {label} ---')
+         raw = response.choices[0].message.content.strip()
 
-      if 'raw_response' in result:
-         print(result['raw_response'])
-         return
+         # Strip markdown fences if present
+         if raw.startswith('```'):
+            raw = raw.split('```')[1]
+            if raw.startswith('json'):
+                  raw = raw[4:]
 
-      print(f'Faces detected : {result.get("face_count", "?")}')
+         try:
+            return json.loads(raw)
+         except json.JSONDecodeError:
+            return {'raw_response': raw}
 
-      for i, face in enumerate(result.get('faces', [])):
-         print(f'\n  Face {i+1}:')
-         print(f'    Expression      : {face.get("expression")}')
-         print(f'    Age estimate    : {face.get("age_estimate")}')
-         print(f'    Head orientation: {face.get("head_orientation")}')
-         print(f'    Confidence      : {face.get("confidence")}')
-         print(f'    Notes           : {face.get("notes")}')
+      def print_analysis(result, label):
+         """Pretty-print face analysis results."""
+         print(f'\n--- {label} ---')
 
-   # Test Images 
-   TEST_IMAGES = [
-      (
-            'Mona Lisa (single face)',
-            'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/Mona_Lisa.jpg?raw=true'
+         if 'raw_response' in result:
+            print(result['raw_response'])
+            return
+
+         print(f'Faces detected : {result.get("face_count", "?")}')
+
+         for i, face in enumerate(result.get('faces', [])):
+            print(f'\n  Face {i+1}:')
+            print(f'    Expression      : {face.get("expression")}')
+            print(f'    Age estimate    : {face.get("age_estimate")}')
+            print(f'    Head orientation: {face.get("head_orientation")}')
+            print(f'    Confidence      : {face.get("confidence")}')
+            print(f'    Notes           : {face.get("notes")}')
+
+      # Test Images 
+      TEST_IMAGES = [
+         (
+               'Mona Lisa (single face)',
+               'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/Mona_Lisa.jpg?raw=true'
+            ),
+         (
+            'Group photo (multiple faces)',
+            'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/group-image.jpg?raw=true'
          ),
-      (
-         'Group photo (multiple faces)',
-         'https://github.com/CloudLabs-MOC/mslearn-ai-fundamentals/blob/ai901-2026/Instructions/Labs/images/group-image.jpg?raw=true'
-      ),
-   ]
+      ]
 
-   print('=' * 65)
-   print('  Lab 4B — Face Analysis via Microsoft Foundry + gpt-5-mini')
-   print('=' * 65)
+      print('=' * 65)
+      print('  Lab 4B — Face Analysis via Microsoft Foundry + gpt-5-mini')
+      print('=' * 65)
 
-   for label, url in TEST_IMAGES:
-      result = analyze_faces(url)
-      print_analysis(result, label)
+      for label, url in TEST_IMAGES:
+         result = analyze_faces(url)
+         print_analysis(result, label)
 
-   print('\n' + '=' * 65)
-   ```
+      print('\n' + '=' * 65)
+      ```
+
+      ![](./media/lab09new-t1p13.png)
 
 13. Update the following placeholders with the values you noted earlier from Microsoft Foundry:
 
-```python
-PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
-DEPLOYMENT_NAME = "gpt-5-mini"
-```
+    - PROJECT_ENDPOINT = `'YOUR_TARGET_URI_HERE'`
+    - DEPLOYMENT_NAME = `'gpt-5-mini'`
+   
+       > **Note:** Replace `YOUR_TARGET_URI_HERE` with your copied **Project Endpoint**. If your deployment uses a different deployment name, replace `gpt-5-mini` with the exact deployment name.
 
-> **Note:** Replace `YOUR_TARGET_URI_HERE` with your copied **Project Endpoint**. If your deployment uses a different deployment name, replace `gpt-5-mini` with the exact deployment name shown in **Models + endpoints**.
+       ![](./media/lab09new-t1p14.png)
 
 14. Run the application using the following command:
 
-   ```bash
-   python face_analysis_foundry.py
-   ```
+    ```bash
+    python face_analysis_foundry.py
+    ```
 
 15. Review the generated results.
 
+    ![](./media/lab09new-t1p15.png)
+
 16. Verify that:
 
-* The Mona Lisa image returns a single detected face.
-* The output includes expression, age estimate, head orientation, and confidence values.
-* The group image returns multiple face entries with individual analysis results.
+      * The Mona Lisa image returns a single detected face.
+      * The output includes expression, age estimate, head orientation, and confidence values.
+      * The group image returns multiple face entries with individual analysis results.
 
 17. Observe how a single multimodal model can extract structured visual information directly from image URLs using prompt engineering and the Azure AI Foundry SDK.
 
-> **Expected Outcome:** The application should successfully analyze both images and return structured face analysis information generated by GPT-5 Mini.
+      > **Expected Outcome:** The application should successfully analyze both images and return structured face analysis information generated by GPT-5 Mini.
 
 ## Task 6: Explore Content Understanding in Microsoft Foundry
 
@@ -400,7 +417,7 @@ In this task, you'll explore the Content Understanding capability in Microsoft F
 
    * **Build and customize**
 
-   or
+    or
 
    * **Foundry Tools**
 
@@ -473,4 +490,4 @@ You then explored different prompt engineering strategies and observed how promp
 
 Through these activities, you gained hands-on experience using multimodal AI models for computer vision scenarios and learned how Microsoft Foundry can be used to build vision-enabled AI applications.
 
-### You've successfully completed the hands-on lab! 🎉
+### You've successfully completed the hands-on lab!
