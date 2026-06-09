@@ -96,8 +96,7 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 
 1. Make a note of the **Deployment Name**, as it will be used later in the lab when configuring the Python application.
    
-   ![](./media/lab8new-t1p6(1).png)
-
+    ![](./media/lab8new-t1p6(1).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -115,54 +114,54 @@ In this task, you'll use the Chat Playground to create and test translation and 
 
 1. In Chat Playground of **gpt-5-mini**, in the **Instructions** section, copy and paste the following:
 
-   ```
-   You are a professional language assistant. You can perform translation (converting text to a different language) and transliteration (converting text to a different script without changing the language). When the user specifies the task and target, respond ONLY with the result - no explanation, no preamble.
-   ```
+    ```
+    You are a professional language assistant. You can perform translation (converting text to a different language) and transliteration (converting text to a different script without changing the language). When the user specifies the task and target, respond ONLY with the result - no explanation, no preamble.
+    ```
 
-   ![](./media/lab8new-t1p8.png)
+    ![](./media/lab8new-t1p8.png)
 
 1. In the model playground, paste the following prompt **(1)** and click on the **blue arrow (2)** to submit.
 
-   ```text
-   Translate to French: The conference begins at 9am tomorrow.
-   ```
+    ```text
+    Translate to French: The conference begins at 9am tomorrow.
+    ```
 
-   ![](./media/lab8new-t1p9.png)
+    ![](./media/lab8new-t1p9.png)
 
 1. Now review the response.
 
-   ![](./media/lab8new-t1p10.png)
+    ![](./media/lab8new-t1p10.png)
 
 1. Similarly you try the following prompts as well:
 
-   - `Translate to Japanese: Please submit your report by Friday.`
-   - `Translate to Portuguese: Welcome to our AI training program.`
+    - `Translate to Japanese: Please submit your report by Friday.`
+    - `Translate to Portuguese: Welcome to our AI training program.`
 
 1. Click the **New Chat** icon in the upper-right corner of the chat pane to start a new conversation.
 
-   ![](./media/lab8new-t1p11.png)
+    ![](./media/lab8new-t1p11.png)
 
 1. Now test transliteration prompts and observe that only the script changes while the language and meaning remain unchanged ":
 
-   ```
-   Transliterate to Latin script: مرحبا  
-   ```
+    ```
+    Transliterate to Latin script: مرحبا  
+    ```
 
-   Arabic for "Hello" - expected output: Marhaba
+    Arabic for "Hello" - expected output: Marhaba
 
-   ![](./media/lab8new-t1p12.png)
+    ![](./media/lab8new-t1p12.png)
 
 1. Similarly, test the following transliteration prompts and verify that only the script changes while the language and meaning remain unchanged:
 
-   - `Transliterate to Latin script: Привет`
+    - `Transliterate to Latin script: Привет`
 
-      Russian for "Hello" - expected output: Privet
+       Russian for "Hello" - expected output: Privet
 
-   - `Transliterate to Latin script: こんにちは`
+    - `Transliterate to Latin script: こんにちは`
 
-      Japanese for "Hello" - expected output: Konnichiwa
+       Japanese for "Hello" - expected output: Konnichiwa
 
-      ![](./media/lab8new-t1p13.png)
+       ![](./media/lab8new-t1p13.png)
 
 ## Task 4: Build a Translation and Transliteration Application with Foundry SDK
 
@@ -170,43 +169,43 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
 1. Click the **Call model** tab next to the **Chat** tab to view the endpoint details and sample code for calling the deployed model programmatically.
 
-   ![](./media/lab8new-t1p14.png)
+    ![](./media/lab8new-t1p14.png)
 
 1. Scroll down and click **Skip setup with VS Code for the Web** to launch an online VS Code environment in a new tab.
 
-   ![](./media/lab8new-t1p15.png)
-
+    ![](./media/lab8new-t1p15.png)
+ 
 1. When prompted, leave the default workspace folder name unchanged and press **Enter** to create the workspace.
 
-   ![](./media/lab8new-t1p16.png)
+    ![](./media/lab8new-t1p16.png)
 
 1. Please wait while the environment is being set up. This process may take a few minutes to complete.
 
-   ![](./media/lab8new-t1p17.png)
+    ![](./media/lab8new-t1p17.png)
 
 1. The integrated terminal should open automatically after the environment setup is complete. If it does not appear, open it manually by selecting **Hamburger Menu (1) → View (2) → Terminal (3)**, or press **Ctrl + `** on your keyboard. The terminal will be used to run commands throughout this lab.
 
-   ![](./media/lab8new-t1p18.png)
+    ![](./media/lab8new-t1p18.png)
 
 1. Run the following command in the terminal to install the Azure AI Foundry SDK and authentication libraries required to connect to your Foundry project and interact with the deployed **gpt-5-mini** model from Python:
 
-   ```bash
-   pip install --user azure-ai-projects azure-identity
-   ```
+    ```bash
+    pip install --user azure-ai-projects azure-identity
+    ```
 
-   >**Note:** Note: If you receive a warning such as `ansible-core requires packaging, which is not installed`, you can safely ignore it for this lab.
+    >**Note:** Note: If you receive a warning such as `ansible-core requires packaging, which is not installed`, you can safely ignore it for this lab.
 
 1. Now in the **Explorer** pane click on **New File... (1)** icon to create a new file **(2)** named:
 
-   ```text
-   translate_foundry.py
-   ```
+    ```text
+    translate_foundry.py
+    ```
 
-   ![](./media/lab8new-t1p19.png)
+    ![](./media/lab8new-t1p19.png)
 
 1. Copy and paste the following code into **translate_foundry.py**:
 
-   ```python
+    ```python
    import os
    from azure.ai.projects import AIProjectClient
    from azure.identity import DefaultAzureCredential
@@ -308,28 +307,28 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
       result = detect_and_translate(text)
       print(f"\nInput: {text}")
       print(result)
-   ```
+    ```
 
-    ![](./media/lab8new-t1p20.png)
+     ![](./media/lab8new-t1p20.png)
 
 1. Update the following placeholders with the values you noted earlier from Microsoft Foundry:
 
-   - PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
-   - DEPLOYMENT_NAME = "gpt-5-mini"
+    - PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
+    - DEPLOYMENT_NAME = "gpt-5-mini"
 
-      ![](./media/lab8new-t1p21.png)
+       ![](./media/lab8new-t1p21.png)
 
-   >**Note:** Replace `YOUR_TARGET_URI_HERE` with your copied Project Endpoint. If your deployed model uses a different Deployment Name, replace `gpt-5-mini` with that exact deployment name. Using an incorrect endpoint or deployment name will prevent the application from connecting to the model successfully.
+       >**Note:** Replace `YOUR_TARGET_URI_HERE` with your copied Project Endpoint. If your deployed model uses a different Deployment Name, replace `gpt-5-mini` with that exact deployment name. Using an incorrect endpoint or deployment name will prevent the application from connecting to the model successfully.
 
 1. Run the application by using the following command in the terminal:
 
-   ```bash
-   python translate_foundry.py
-   ```
+    ```bash
+    python translate_foundry.py
+    ```
 
 1. Verify the translation results.
 
-   ![](./media/lab8new-t1p22.png)
+    ![](./media/lab8new-t1p22.png)
 
 ## Task 5: Add Sentiment Analysis to the Application
 
@@ -339,7 +338,7 @@ In this task, you'll extend the application by adding sentiment analysis functio
 
 1. Add the following function below the existing code. This function uses the deployed gpt-5-mini model to perform sentiment analysis and classify the input text as Positive, Negative, or Neutral.
 
-   ```python
+    ```python
    def analyze_sentiment(text):
       """Classify sentiment as Positive, Negative, or Neutral."""
       return call_model(
@@ -347,13 +346,13 @@ In this task, you'll extend the application by adding sentiment analysis functio
          user=text,
          max_tokens=200
       )
-   ```
+    ```
 
-   ![](./media/lab8new-t1p23.png)
+    ![](./media/lab8new-t1p23.png)
 
 1. Add the following test code below the existing application. This code demonstrates a simple translation and sentiment analysis pipeline by translating each input sentence into Spanish and then analyzing its sentiment using the gpt-5-mini model.
 
-   ```python
+    ```python
    # Translation + Sentiment Analysis Pipeline
 
    pipeline_tests = [
@@ -371,15 +370,15 @@ In this task, you'll extend the application by adding sentiment analysis functio
       print(f"\nOriginal  : {text}")
       print(f"Spanish   : {translated}")
       print(f"Sentiment : {sentiment}")
-   ```
+    ```
 
-    ![](./media/lab8new-t1p24.png)
+     ![](./media/lab8new-t1p24.png)
 
 1. Run the application again using the following commnad:
 
-   ```bash
-   python translate_foundry.py
-   ```
+    ```bash
+    python translate_foundry.py
+    ```
 
 1. Review the output generated by the sentiment analysis function.
 

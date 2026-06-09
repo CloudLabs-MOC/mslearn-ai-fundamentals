@@ -101,7 +101,6 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
    
    ![](./media/lab8new-t1p6(1).png)
 
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. You will receive a success message. 
