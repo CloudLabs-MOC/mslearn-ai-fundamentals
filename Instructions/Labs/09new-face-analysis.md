@@ -75,7 +75,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="" />
+  <validation step="18a45d8c-6200-4fa9-bbe4-136ad8bb9a24" />
 
 ## Task 2: Deploy a model
 
@@ -107,7 +107,7 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="" />
+  <validation step="b140bb55-525d-45f3-aa02-c86f0c8fa0bf" />
 
 ## Task 3: Verify Multimodal Image Analysis in Chat Playground
 

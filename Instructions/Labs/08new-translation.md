@@ -72,7 +72,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="" />
+  <validation step="e5dc05c2-1c74-47d8-a112-1956348a759a" />
 
 ## Task 2: Deploy a model
 
@@ -104,7 +104,7 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="" />
+  <validation step="a4ce357b-cbb8-44f4-9dba-f135bc47b071" />
 
 ## Task 3: Design Translation & Transliteration Prompts in Chat Playground
 
