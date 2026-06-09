@@ -6,33 +6,33 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 ### Overall Estimated Timing: 60 Minutes
 
-I can create it in the same polished style as the Translation lab. Based on the uploaded document , here are the rewritten sections.
+### Overview
 
-## Overview
+In this lab, you will explore the multimodal capabilities of GPT-5 Mini in Microsoft Foundry to analyze images and extract meaningful information from visual content. You will begin by verifying image input support in the Chat Playground and experimenting with prompts that instruct the model to identify people, analyze facial attributes, describe scenes, and generate contextual observations.
 
-In this lab, you will use the multimodal capabilities of GPT-5 Mini in Microsoft Foundry to analyze images and extract information from visual content. You will begin by verifying image input support in the Chat Playground and designing prompts that instruct the model to perform face and image analysis. You will explore different prompting techniques to understand how prompt structure affects the quality and usefulness of generated results.
+You will then explore different prompting techniques to understand how prompt structure influences the detail, consistency, and format of image analysis results. Next, you will build a Python application using the Azure AI Foundry SDK that sends image URLs to a deployed GPT-5 Mini model and returns structured face analysis data in JSON format. Finally, you will use GPT-5 Mini to extract structured information from images and generate organized outputs such as tables and summaries.
 
-You will then build a Python application using the Azure AI Foundry SDK that sends image URLs to a deployed GPT-5 Mini model and returns structured face analysis results. Finally, you will explore Content Understanding in Microsoft Foundry and compare it with multimodal prompting approaches for extracting information from images. Through these activities, you will gain hands-on experience building vision-enabled AI applications using Microsoft Foundry.
+Through these activities, you will gain hands-on experience building multimodal AI applications, designing effective prompts for image analysis, and using Microsoft Foundry to process and interpret visual content.
 
-## Objectives
+### Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Verify multimodal model capabilities:** Confirm that GPT-5 Mini supports image input and visual analysis in Microsoft Foundry.
+1. **Verify multimodal model capabilities:** Confirm that GPT-5 Mini supports image inputs and can analyze visual content in Microsoft Foundry.
 
-2. **Design image analysis prompts:** Create and test prompts that instruct the model to analyze faces, expressions, age estimates, and contextual information from images.
+2. **Design image analysis prompts:** Create and test prompts that instruct the model to identify people, analyze facial attributes, describe scenes, and generate contextual observations.
 
-3. **Compare prompting strategies:** Evaluate how open-ended, structured, and confidence-based prompts affect the quality and format of image analysis results.
+3. **Compare prompting strategies:** Evaluate how open-ended, structured, and confidence-based prompts affect the quality, detail, and format of image analysis results.
 
-4. **Build a vision-enabled application:** Develop a Python application using the Azure AI Foundry SDK to perform face and image analysis programmatically.
+4. **Build a multimodal application:** Develop a Python application using the Azure AI Foundry SDK to perform image and face analysis programmatically.
 
-5. **Analyze images using URLs:** Send publicly accessible image URLs to a deployed multimodal model and process the returned results.
+5. **Analyze images using URLs:** Send publicly accessible image URLs to a deployed GPT-5 Mini model and process the returned analysis results.
 
-6. **Generate structured outputs:** Use prompt engineering techniques to obtain structured JSON responses suitable for downstream applications.
+6. **Generate structured outputs:** Use prompt engineering techniques to obtain structured JSON responses suitable for application integration and downstream processing.
 
-7. **Explore Content Understanding:** Investigate Microsoft's Content Understanding capabilities and compare them with multimodal prompting approaches.
+7. **Extract structured insights from images:** Use GPT-5 Mini to transform visual information into organized outputs such as tables, summaries, and structured reports.
 
-8. **Understand computer vision use cases in Foundry:** Learn how multimodal AI models can be used to interpret visual content and support real-world vision applications.
+8. **Understand multimodal AI use cases in Foundry:** Learn how multimodal AI models can interpret visual content and support real-world image analysis scenarios.
 
 ## Pre-requisites
 
@@ -41,63 +41,62 @@ By the end of this lab, you will be able to:
 * General understanding of generative AI models and prompt engineering concepts.
 * Basic awareness of computer vision concepts such as image analysis, face detection, and visual attribute extraction.
 * Access to a Microsoft Foundry environment with permissions to create projects and deploy models.
-* An active Azure subscription with access to Microsoft Foundry services.
 
-## Architecture
+### Architecture
 
-This lab demonstrates how Microsoft Foundry and a deployed GPT-5 Mini multimodal model can be used to analyze images and extract structured information from visual content. The architecture highlights how image URLs and prompts are processed by the model to generate face and image analysis results.
+This lab demonstrates how Microsoft Foundry and a deployed GPT-5 Mini multimodal model can be used to analyze images, extract visual information, and generate structured outputs through prompt-driven image analysis.
 
-1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, model deployments, project settings, and application integration.
+1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, model deployments, project settings, and application development.
 
-2. **GPT-5 Mini Multimodal Deployment:** A deployed multimodal model capable of processing both text and image inputs and generating descriptive or structured outputs.
+2. **GPT-5 Mini Multimodal Deployment:** A deployed multimodal model capable of processing both text and image inputs to generate descriptive, analytical, and structured responses.
 
-3. **Chat Playground:** A browser-based interface used to test image analysis prompts and evaluate model responses before application development.
+3. **Chat Playground:** A browser-based interface used to test image analysis prompts, upload images, and evaluate model responses interactively.
 
-4. **Azure AI Foundry SDK Application:** A Python application that connects to the Foundry project and programmatically invokes the deployed model.
+4. **Azure AI Foundry SDK Application:** A Python application that connects to the Foundry project and programmatically invokes the deployed GPT-5 Mini model.
 
-5. **Image URL Input:** Publicly accessible image URLs that are passed to the model as part of multimodal prompts for analysis.
+5. **Image Inputs:** Visual content provided either through image URLs or uploaded image files, which are analyzed by the multimodal model.
 
-6. **Prompt-Based Vision Processing:** Instructions provided through prompts that guide the model to perform face analysis, image description, and structured information extraction.
+6. **Prompt-Driven Image Analysis:** User-defined prompts that guide the model to perform tasks such as face analysis, scene description, people identification, and structured information extraction.
 
-7. **Content Understanding Service:** A Foundry capability used to extract structured information from images through predefined analysis pipelines.
+7. **Structured Data Generation:** Prompt engineering techniques used to generate organized outputs such as JSON objects, tables, summaries, and visual attribute reports.
 
-8. **Structured Analysis Results:** The outputs generated by the model, including face counts, expressions, age estimates, contextual observations, and other visual attributes.
+8. **Analysis Results:** The outputs generated by the model, including face counts, facial attributes, scene descriptions, contextual observations, confidence assessments, and other structured insights derived from images.
 
 ## Architecture Diagram
 
-![](../media/mod7new-archdiagram.png)
+![](../media/lab09new-archdiagram.png)
 
-## Explanation of Components
+### Explanation of Components
 
 1. **Microsoft Foundry Project:**
    The project serves as the central workspace for managing AI resources, model deployments, playground experiences, and application configurations used throughout the lab.
 
 2. **GPT-5 Mini Multimodal Model:**
-   A generative AI model that accepts both text and image inputs, enabling image understanding, face analysis, and visual reasoning tasks.
+   A multimodal AI model capable of processing both text and image inputs, enabling image understanding, face analysis, scene interpretation, and visual reasoning tasks.
 
 3. **Chat Playground:**
-   A browser-based interface used to interact with the deployed model, test multimodal prompts, and validate image analysis results.
+   A browser-based interface used to interact with the deployed model, test multimodal prompts, upload images, and evaluate image analysis results.
 
 4. **Visual Prompts:**
-   Prompts that combine image references and text instructions to guide the model in analyzing visual content and generating relevant outputs.
+   Prompts that combine image inputs with text instructions to guide the model in analyzing visual content and generating relevant responses.
 
-5. **Image URL Input:**
-   A method of providing images to the model through publicly accessible URLs rather than uploading image files directly.
+5. **Image Inputs:**
+   Images provided either through publicly accessible URLs or uploaded files, allowing the model to analyze visual content without additional preprocessing.
 
 6. **Face Analysis:**
-   The process of identifying and describing visible faces within an image, including facial expressions, estimated age ranges, head orientation, and contextual observations.
+   The process of identifying and describing visible faces within an image, including facial expressions, estimated age ranges, head orientation, confidence levels, and contextual observations.
 
 7. **Azure AI Foundry SDK:**
    A Python SDK that enables developers to connect applications to Microsoft Foundry projects and invoke deployed AI models programmatically.
 
 8. **Structured Output Prompting:**
-   A prompt engineering technique used to instruct the model to return results in a predefined format such as JSON, making outputs easier to process programmatically.
+   A prompt engineering technique used to instruct the model to return results in predefined formats such as JSON objects, tables, or structured summaries, making outputs easier to process programmatically.
 
-9. **Content Understanding:**
-   A Microsoft Foundry capability that extracts structured information from images through configurable analysis pipelines designed for production workflows.
+9. **Prompt-Driven Information Extraction:**
+   A technique that uses carefully designed prompts to extract specific information from images, such as people counts, facial attributes, scene descriptions, and structured insights.
 
 10. **Analysis Results:**
-    The final outputs generated by the model, including face counts, facial attributes, confidence assessments, image descriptions, and structured visual information.
+    The final outputs generated by the model, including face counts, facial attributes, confidence assessments, scene descriptions, contextual observations, and structured visual information extracted from images.
 
 # Getting Started with lab
  

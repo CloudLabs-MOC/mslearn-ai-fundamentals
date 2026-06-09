@@ -4,20 +4,18 @@
 
 ## Lab Overview
 
-In this lab, you will use the multimodal capabilities of GPT-5 Mini in Microsoft Foundry to analyze images and extract information from visual content. You will begin by verifying image input support in the Chat Playground and testing prompts that instruct the model to identify faces, describe expressions, estimate age ranges, and provide contextual observations.
+In this lab, you will explore the multimodal capabilities of GPT-5 Mini in Microsoft Foundry to analyze and interpret visual content from images. You will begin by verifying image input support in the Chat Playground and experimenting with prompts that instruct the model to identify people, describe visual attributes, estimate facial characteristics, and provide contextual observations about an image.
 
-You will then experiment with different prompting strategies to understand how prompt design affects the structure and usefulness of image analysis results. Next, you will build a Python application using the Azure AI Foundry SDK that sends image URLs to a deployed GPT-5 Mini model and returns structured face analysis data. Finally, you will explore Content Understanding in Microsoft Foundry and compare it with multimodal prompting approaches for extracting information from images.
-
-Through these activities, you will gain hands-on experience building vision-enabled AI applications and using multimodal AI models to interpret visual content.
+You will then compare different prompting strategies to understand how prompt design influences the quality, structure, and usefulness of image analysis results. Next, you will build a Python application using the Azure AI Foundry SDK that sends image URLs to a deployed GPT-5 Mini model and returns structured image analysis information in JSON format. Finally, you will perform structured information extraction from images using GPT-5 Mini and observe how multimodal prompting can be used to generate organized outputs such as tables and structured summaries.
 
 ## Lab Objectives
 
 In this exercise, you will perform the following tasks:
 
 * Task 1: Create a Microsoft Foundry project
-* Task 2: Deploy a multimodal model
-* Task 3: Verify multimodal image analysis in Chat Playground
-* Task 4: Design face analysis prompts
+* Task 2: Deploy a model
+* Task 3: Verify Multimodal Image Analysis in Chat Playground
+* Task 4: Design Face Analysis Prompts
 * Task 5: Build a face analysis application with Foundry SDK
 * Task 6: Explore Content Understanding in Microsoft Foundry
 
@@ -111,7 +109,7 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 
 ## Task 3: Verify Multimodal Image Analysis in Chat Playground
 
-In this task, you'll verify that GPT-5 Mini supports image input and perform basic face analysis using the Chat Playground.
+In this task, you'll verify image input support in GPT-5 Mini and perform basic image analysis to understand how the model interprets visual content.
 
 1. Make sure you are on the **Playground** tab of gpt-5-mini.
 
@@ -173,7 +171,7 @@ In this task, you'll verify that GPT-5 Mini supports image input and perform bas
 
 ## Task 4: Design Face Analysis Prompts
 
-In this task, you'll create and compare different face analysis prompts to understand how prompt structure influences the quality, detail, and usefulness of image analysis results.
+In this task, you'll experiment with different prompting techniques and compare how prompt structure affects the detail, format, and usefulness of image analysis results.
 
 1. Click **New Chat** to start a new conversation while keeping the same system message configured in the previous task.
 
@@ -235,7 +233,7 @@ In this task, you'll create and compare different face analysis prompts to under
 
 ## Task 5: Build a Face Analysis Application with Foundry SDK
 
-In this task, you'll build a Python application using the Azure AI Foundry SDK to analyze images and extract structured face analysis information using the deployed GPT-5 Mini model.
+In this task, you'll create a Python application that uses the Azure AI Foundry SDK to analyze images and return structured face analysis information.
 
 1. Click the **Call model** tab next to the **Chat** tab to view the endpoint details and sample code for calling the deployed model programmatically.
 
@@ -408,9 +406,13 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
 ## Task 6: Explore Content Understanding in Microsoft Foundry
 
-In this task, you'll explore the Content Understanding capability in Microsoft Foundry and compare it with the multimodal prompting approach used in the previous tasks.
+In this task, you'll use GPT-5 Mini to extract structured information from images and generate organized outputs such as tables and summaries.
 
 1. Go back to the **Microsoft Foundry** portal, where the **gpt-5-mini** playground is still open.
+
+1. You can click on **New Chat** to start a new conversation.
+
+      ![](./media/lab09new-t1p5.png)
 
 1. Now paste the given URL in a new tab and save the image on the LabVM. 
 
@@ -447,14 +449,14 @@ In this task, you'll explore the Content Understanding capability in Microsoft F
 
 9. Review the generated output and compare it with the results returned by the face analysis application created in the previous task.
 
-   ![](./media/lab09new-t1p20.png)
+     ![](./media/lab09new-t1p20.png)
 
 ## Summary
 
-In this lab, you created a Microsoft Foundry project and deployed a GPT-5 Mini multimodal model capable of processing both text and image inputs. You verified image analysis capabilities in the Chat Playground and experimented with prompts that enabled the model to identify faces, describe expressions, estimate age ranges, and provide contextual observations.
+In this lab, you created a Microsoft Foundry project and deployed a GPT-5 Mini multimodal model capable of processing both text and image inputs. You verified image analysis capabilities in the Chat Playground and experimented with prompts that enabled the model to identify people, analyze facial attributes, describe scenes, and generate contextual observations from images.
 
-You then explored different prompt engineering strategies and observed how prompt structure affects the quality and format of generated outputs. Next, you built a Python application using the Azure AI Foundry SDK that analyzed images through publicly accessible URLs and returned structured face analysis results. Finally, you explored Content Understanding in Microsoft Foundry and compared its structured extraction capabilities with the flexibility of multimodal prompting.
+You then explored different prompt engineering strategies and observed how prompt structure affects the quality, consistency, and format of generated outputs. Next, you built a Python application using the Azure AI Foundry SDK that analyzed images through publicly accessible URLs and returned structured JSON-based image analysis results. Finally, you used GPT-5 Mini to extract structured information from images and generate organized outputs such as tables, demonstrating how multimodal prompting can be used to transform visual content into actionable information.
 
-Through these activities, you gained hands-on experience using multimodal AI models for computer vision scenarios and learned how Microsoft Foundry can be used to build vision-enabled AI applications.
+Through these activities, you gained practical experience using multimodal AI models for image analysis scenarios and learned how Microsoft Foundry can be used to build intelligent applications that extract insights from visual data.
 
 ### You've successfully completed the hands-on lab!

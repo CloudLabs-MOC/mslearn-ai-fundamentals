@@ -57,7 +57,7 @@ This lab demonstrates how Microsoft Foundry and the Azure AI Foundry SDK can be 
 
 ## Architecture Diagram
 
-![](../media/mod7new-archdiagram.png)
+![](../media/lab8new-archdiagram.png)
 
 ## Explanation of Components
 
