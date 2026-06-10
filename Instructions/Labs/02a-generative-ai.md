@@ -41,7 +41,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -55,6 +55,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
       ![](./media/ai901-l5-1(1).png)
 
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
+
 1. Wait for your project to be created. It may take a few minutes. 
 
 1. In the **All set, Let's build your agents** window, click **Let's go**.
@@ -64,6 +68,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
    ![](./media/lab2a-p2t1p2.png)
+
+   > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -78,13 +86,9 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
 In this task, you will explore the model catalog in Microsoft Foundry and deploy a generative AI model. The deployed model will be used for interactive testing and experimentation in the playground.
 
-1. On the **Microsoft Foundry** home page, then select **Find models** to view the Microsoft Foundry model catalog.
+1. On the **Microsoft Foundry** home page, then select **Discover (1)** and then click on **Model (2)** to view the Microsoft Foundry model catalog.
 
-     ![](./media/lab2a-p2t1p3.png)
-
-1. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
-
-    ![](./media/lab2a-l5.png)
+     ![](./media/ai901-l5-1(4).png)
 
 1. On the **Models** page, search for **gpt-5-mini (1)** in the search bar, and then select the **gpt-5-mini (2)** model from the search results.
 
@@ -114,6 +118,8 @@ You will ask questions, observe responses, and understand how conversation conte
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 
+    ![](./media/ai901-l5-1(5).png)
+
 1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
 
     ![](./media/lab2a-p2t1p7.png)
@@ -138,9 +144,9 @@ You will ask questions, observe responses, and understand how conversation conte
 
 When you're satisfied with the responses a model returns in the playground, you can develop client applications that consume it. Microsoft Foundry provides a REST API and multiple language-specific SDKs that you can use to connect to the deployed model and chat with it.
 
-1. In the **Chat** pane, select the **Code** tab.
+1. In the **Chat** pane, select the **Call model** tab.
 
-    ![](./media/lab2a-p2t1p11.png)
+    ![](./media/ai901-l5-1(6).png)
 
 1. This tab shows sample code that a client application can use to chat with the model. Above the sample code, you can choose preferences for:
 
@@ -159,7 +165,7 @@ When you're satisfied with the responses a model returns in the playground, you 
     - **SDK**: OpenAI SDK **(3)**
     - **Authentication**: Key authentication **(4)**
 
-        ![](./media/lab2a-p2t1p12.png)
+        ![](./media/ai901-l5-1(7).png)
 
         The resulting sample should be similar to the following code:
 
@@ -191,7 +197,7 @@ In this task, you’ll define and apply system instructions to guide the model�
 
 1. In the model playground, switch back to the **Chat (1)** tab. Then, at the top-right of the chat pane, use the **New chat (2)** button to restart the conversation and removes the conversation history.
 
-    ![](./media/lab2a-p2t1p13.png)
+    ![](./media/ai901-l5-1(8).png)
 
 1. In the pane on the left, in the **Instructions** text area, change the system prompt to:
 
@@ -239,7 +245,7 @@ In this task, you’ll convert the configured model into an agent by saving its 
 
 1. When the agent is created, it opens in a new playground specifically for working with agents.
 
-    ![](./media/lab2a-p2t1p19.png)
+    ![](./media/ai901-l5-1(9).png)
 
 1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
 
@@ -263,7 +269,7 @@ In this task, you’ll convert the configured model into an agent by saving its 
     status: active
     ```
 
-    ![](./media/lab2a-p2t1p20.png)
+    ![](./media/ai901-l5-1(10).png)
 
 1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`
 
@@ -291,7 +297,7 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
 1. Open a new browser tab, and view the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx)** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
 
-1. Download **`expenses_policy.docx`**.
+1. Download **`expenses_policy.docx`** file.
 
     >**Note:** `If the link does not open or the file cannot be downloaded, try accessing it in an InPrivate/Incognito browser window.`
 
@@ -315,7 +321,7 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
 1. At the top of the agent playground, use the **Save** button to update the agent definition.
 
-    ![](./media/lab2a-p2t1p28.png)
+    ![](./media/ai901-l5-1(11).png)
 
 1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition now includes the file search tool you added (in the **tools** section):
 
@@ -360,9 +366,11 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
 In this task, you’ll preview your working agent in a basic web chat application.
 
-1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Preview (1)** drop-down list, select **Preview agent (2)**.
+1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Publish (1)** drop-down list, select **Preview web app (2)**.
 
-    ![](./media/lab2a-may26-p2t1p2.png)
+    A preview chat interface is opened in a new browser tab.
+
+    ![](./media/ai901-l5-1(13).png)
 
 1. A preview chat interface is opened in a new browser tab.
 
@@ -376,7 +384,7 @@ In this task, you’ll preview your working agent in a basic web chat applicatio
 
 The agent is defined within your Foundry project, and there's a convenient way to develop apps that connect to it there; allowing you to iteratively refine both the agent and the client app to create the solution you need.
 
-1. In the agent playground, switch from the **Chat** tab to the **Code** tab, and view the sample code for consuming the agent; which should be similar to this:
+1. In the agent playground, switch from the **Chat** tab to the **Call agent** tab, and view the sample code for consuming the agent; which should be similar to this:
 
     ```python
     # Before running the sample:
@@ -411,15 +419,15 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
-1. In the **Code** tab, use the **Open in VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
+1. In the **Call agent** tab, use the **Skip setup with VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
 
-    ![](./media/lab2a-p2t1p31.png)
+    ![](./media/ai901-l5-1(14).png)
 
     Wait for the environment to be set up.
 
     > **Note:** It can take a few minutes to set the environment up!
 
-1. On the **Welcome to VS Code** pop-up, select **Skip**.
+1. If prompted with the **Welcome to VS Code** pop-up, select **Skip**.
 
     ![](./media/lab2a-p2t1p32.png)
 

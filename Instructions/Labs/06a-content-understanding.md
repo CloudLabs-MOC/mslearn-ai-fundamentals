@@ -42,7 +42,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -56,7 +56,11 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
       ![](./media/mod7-t1p2.png)
 
-      >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later. At the time of writing, Content Understanding is supported in these regions: `West US`,`Sweden Central`, and `Australia East`.
+        > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+        ![](./media/ai901-l5-1(2).png)
+
+        >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later. At the time of writing, Content Understanding is supported in these regions: `West US`,`Sweden Central`, and `Australia East`.
 
 1. Wait for your project to be created. It may take a few minutes. 
 
@@ -67,6 +71,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
       ![](./media/ai901-lab6a-t1p2.png)
+
+      > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

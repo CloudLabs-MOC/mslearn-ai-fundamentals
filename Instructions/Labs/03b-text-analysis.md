@@ -38,7 +38,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -52,6 +52,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
       ![](./media/ai901-l5-1(1).png)
 
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
+
 1. Wait for your project to be created. It may take a few minutes. 
 
 1. In the **All set, Let's build your agents** window, click **Let's go**.
@@ -63,6 +67,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
    ![](./media/ai901-l3-02.png)
 
    >**Note:** Close any quick start panes in order to access your project's Foundry home page.
+
+   > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -80,6 +88,10 @@ In this task, you’ll deploy a general-purpose AI model and use the chat playgr
 1. From the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
     ![](./media/ai901-l3-03.png)
+
+    >**Note:** You can also access the models from the **Microsoft Foundry** home page by selecting **Discover (1)** and then click on **Model (2)** to view the Microsoft Foundry model catalog.
+
+    ![](./media/ai901-l5-1(4).png)
 
 2. In the **Models** page, enter `gpt-5` **(1)** in the search bar, then select the **gpt-5** **(2)** model from the results to open its details page and review its features and capabilities.
 
@@ -201,9 +213,11 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
     ![](./media/ai901-l3-07.png)
 
-2. On the **Build** page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments (1)**. Then, at the top of the **Models** page, select **AI Services (2)**. 
+2. On the **Build** page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments (1)**. Then, at the top of the **Deployments** page, select **AI Services (2)**. 
 
     ![](./media/ai901-l3-08.png)
+
+    >**Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
 
 ### Task 3.1: Detect language
 

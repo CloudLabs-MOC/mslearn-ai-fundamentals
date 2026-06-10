@@ -41,7 +41,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -54,6 +54,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
     - Click on **Create** **(7)**
 
       ![](./media/mod7-t1p2.png)
+
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
 
       >**Note:** Make a note of the region you selected. You'll need it later!
 
@@ -78,6 +82,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
     ![](./media/ai901-l1-5.png)
 
     >**Note:** You're going to need the project key and endpoint later!
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -200,6 +208,8 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 1. Select the **Models** tab to view the Microsoft Foundry model catalog. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
     ![](./media/mod01-p2t1p28(1).png)
+
+    >**Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
     
 1. In the search bar, search for `gpt-5-mini` **(1)** and select the `gpt-5-mini` **(2)** model from the result, and view the page for this model, which describes its features and capabilities.
 

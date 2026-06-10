@@ -39,7 +39,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -53,6 +53,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
       ![](./media/ai901-l5-1(1).png)
 
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
+
 1. Wait for your project to be created. It may take a few minutes. 
 
 1. In the **All set, Let's build your agents** window, click **Let's go**.
@@ -62,6 +66,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
     ![](./media/ai901-l4-3.png)
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -100,6 +108,10 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 1. Return to the browser tab containing your Microsoft Foundry project, from the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
     ![](./media/ai901-l3-03.png)
+
+    > **Note:** Depending on the version of Microsoft Foundry available in your environment, you may see **Explore models** instead of **Find models** on the Home page. If **Find models** is not displayed, select **Explore models** to access the Microsoft Foundry model catalog. Alternatively, you can select **Discover** from the top navigation menu and then choose **Models** from the left navigation pane to access the same catalog and continue with the lab instructions.
+    
+    ![](./media/ai901-l5-1(20).png)
 
 1. Search for the `gpt-5-mini` **(1)** model and select the same **(2)** from the result section. 
 
@@ -151,9 +163,9 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 To develop a client app or agent that can use the model to interpret images, you can use the OpenAI **Responses** API.
 
-1. In the **Chat** pane, select the **Code** tab to view sample code.
+1. In the **Chat** pane, select the **Call model** tab to view sample code.
 
-    ![](./media/ai901-l5-3.png)
+    ![](./media/ai901-l5-1(18).png)
 
 1. Select the following code options:
     - **API**: Responses API
@@ -200,9 +212,9 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
     ![](./media/newlab5a-e1t2p13.png)
 
-1. Select **Deploy a base model** to open the model catalog.
+1. On the Models page, click on **Deploy (1)** drop down and then select **Deploy a base model (2)** to open the model catalog.
 
-    ![](./media/newlab5a-e1t2p14.png)
+    ![](./media/ai901-l5-1(19).png)
 
 1. In the **Collections** drop-down list, select **Direct from Azure (1)**, and in the **Inference tasks** drop-down list, select **Text to image (2)**. Then view the available models for image generation.
 
@@ -212,7 +224,7 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
     >**Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
-1. Select the **FLUX.1-Kontext-pro** model.
+1. Select the **FLUX.2-pro** or **FLUX.1-Kontext-pro** model.
 
     ![](./media/newlab5a-e1t2p15.png)
 
@@ -291,9 +303,9 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
     ![](./media/lab5a-e1t4p1.png)
 
-1. From the Models page, select **Deploy a base model** to open the model catalog.
+1. On the Models page, click on **Deploy (1)** drop down and then select **Deploy a base model (2)** to open the model catalog.
 
-    ![](./media/newlab5a-e1t2p16.png)
+    ![](./media/ai901-l5-1(19).png)
 
 1. From the **Collections** drop-down, choose **Direct from Azure (1)**, and from the **Inference tasks** drop-down, select **Video generation (2)**. Then review the list of available video generation models.
 

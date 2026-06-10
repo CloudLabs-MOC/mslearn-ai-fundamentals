@@ -42,7 +42,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. 1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -56,6 +56,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
       ![](./media/mod7-t1p2.png)
 
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
+
 1. Wait for your project to be created. It may take a few minutes. 
 
 1. In the **All set, Let's build your agents** window, click **Let's go**.
@@ -65,6 +69,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 1. After the project is created, the Microsoft Foundry portal will open to a page similar to the one shown below. Locate and copy the **Project Endpoint**, then save it in a text file or Notepad, as it will be required later when configuring the Python application in this lab.
 
     ![](./media/lab8new-t1p2.png)
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -81,6 +89,8 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 1. Now you're ready to explore models. On the **Discover (1)** page, select the **Models (2)** tab to view the Microsoft Foundry model catalog.
 
     ![](./media/mod7-t1p5.png)
+
+    >**Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
 
 1. In the **Models** page, enter **`gpt-5-mini`** in the search box **(1)** and select the **gpt-5-mini (2)** model from the search results.
 

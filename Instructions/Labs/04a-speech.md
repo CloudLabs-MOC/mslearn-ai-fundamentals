@@ -40,7 +40,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. On the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -54,6 +54,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
       ![](./media/ai901-l5-1(1).png)
 
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
+
 1. Wait for your project to be created. It may take a few minutes. 
 
 1. In the **All set, Let's build your agents** window, click **Let's go**.
@@ -63,6 +67,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
     ![](./media/ai901-l4-3.png)
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -79,6 +87,10 @@ In this task, you’ll create an agent, select a generative AI model, and define
 1. From the Home page of the Microsoft Foundry portal, select **Create agents** to begin creating a new agent.
 
     ![](./media/ai901-l4-4.png)
+
+    > **Note:** Depending on the version of Microsoft Foundry available in your environment, you may see a **Start building** button instead of **Create agents** on the Home page.
+
+    ![](./media/ai901-l5-1(15).png)
 
 1. In the **Create an agent** dialog, enter a name for your agent `speech-agent` **(1)**, and then select **Create (2)** to proceed.
 
@@ -138,7 +150,7 @@ In this task, you’ll enable voice capabilities for the agent by configuring Az
 
 1. **Close (1)** the **Configuration** pane and use the **Save (2)** button to save the agent.
 
-    ![](./media/lab4an-p2t2p10.png)
+    ![](./media/ai901-l5-1(16).png)
 
 ## Task 4: Use speech to interact with the agent (Read Only)
 
@@ -173,9 +185,9 @@ In this task, you’ll explore how speech-based interaction works by observing h
 
 In this task, you’ll review sample code to understand how to integrate speech-enabled agents into applications using APIs and SDKs for real-time voice interactions.
 
-1. Select **Code** at the top of the chat screen to view sample code for an agent client.
+1. Select **Call agent** at the top of the chat screen to view sample code for an agent client.
 
-    ![](./media/lab4an-p2t2p13.png)
+    ![](./media/ai901-l5-1(17).png)
 
 1. Review the code; noting that it handles:
     - Connectivity to your project to access the agent.
