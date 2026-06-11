@@ -68,7 +68,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
    >**Note:** Close any quick start panes in order to access your project's Foundry home page.
 
-   > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+   > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
 
     ![](./media/ai901-l5-1(3).png)
 

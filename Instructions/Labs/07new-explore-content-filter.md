@@ -67,7 +67,7 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
     ![](./media/mod7-t1p4.png)
 
-    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
 
     ![](./media/ai901-l5-1(3).png)
 

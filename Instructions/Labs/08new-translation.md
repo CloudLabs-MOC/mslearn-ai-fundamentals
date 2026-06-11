@@ -42,7 +42,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. 1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
    ![](./media/lab8new-t1p1.png)
 
@@ -70,7 +70,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/lab8new-t1p2.png)
 
-    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
 
     ![](./media/ai901-l5-1(3).png)
 
@@ -323,8 +323,8 @@ In this task, you'll build a Python application using the Azure AI Foundry SDK t
 
 1. Update the following placeholders with the values you noted earlier from Microsoft Foundry:
 
-    - PROJECT_ENDPOINT = "YOUR_TARGET_URI_HERE"
-    - DEPLOYMENT_NAME = "gpt-5-mini"
+    - **PROJECT_ENDPOINT** = `"YOUR_TARGET_URI_HERE"`
+    - **DEPLOYMENT_NAME** = `"gpt-5-mini"`
 
        ![](./media/lab8new-t1p21.png)
 

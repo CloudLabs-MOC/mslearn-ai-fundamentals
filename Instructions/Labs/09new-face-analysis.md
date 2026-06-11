@@ -71,7 +71,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/lab8new-t1p2.png)
 
-    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. f your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
 
     ![](./media/ai901-l5-1(3).png)
 
@@ -387,8 +387,8 @@ In this task, you'll create a Python application that uses the Azure AI Foundry 
 
 13. Update the following placeholders with the values you noted earlier from Microsoft Foundry:
 
-      - PROJECT_ENDPOINT = `'YOUR_TARGET_URI_HERE'`
-      - DEPLOYMENT_NAME = `'gpt-5-mini'`
+      - **PROJECT_ENDPOINT** = `'YOUR_TARGET_URI_HERE'`
+      - **DEPLOYMENT_NAME** = `'gpt-5-mini'`
    
          > **Note:** Replace `YOUR_TARGET_URI_HERE` with your copied **Project Endpoint**. If your deployment uses a different deployment name, replace `gpt-5-mini` with the exact deployment name.
 
