@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "SREB-Unit5-Lesson 9- Healthcare Data Visualization in Power BI",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit5-Lesson9/Gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year2/Unit5-Lesson9/L9_U01.md",
+          "Order": 2
+        }      
+      ]
+    }
+]
