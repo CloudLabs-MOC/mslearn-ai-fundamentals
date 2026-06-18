@@ -104,9 +104,13 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/lab5a-e1t2p4.png)
 
-1. Return to the browser tab containing your Microsoft Foundry project. Then, click on the **Start building (1)** menu and select **Find models (2)** to view the Microsoft Foundry model catalog.
+1. Return to the browser tab containing your Microsoft Foundry project, from the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
-    ![](./media/newlab5a-e1t2p5.png)
+    ![](./media/ai901-l3-03.png)
+
+    > **Note:** Depending on the version of Microsoft Foundry available in your environment, you may see **Explore models** instead of **Find models** on the Home page. If **Find models** is not displayed, select **Explore models** to access the Microsoft Foundry model catalog. Alternatively, you can select **Discover** from the top navigation menu and then choose **Models** from the left navigation pane to access the same catalog and continue with the lab instructions.
+    
+    ![](./media/ai901-l5-1(20).png)
 
 1. Search for the `gpt-5-mini` **(1)** model and select the same **(2)** from the result section. 
 
