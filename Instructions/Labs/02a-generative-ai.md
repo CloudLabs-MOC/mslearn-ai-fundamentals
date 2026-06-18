@@ -22,55 +22,57 @@ In this exercise, you will perform:
 In this task, you will access the Microsoft Foundry portal and create a new project.
 This project acts as a workspace to organize and manage resources required for building generative AI solutions.
 
-1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com?azure-portal=true`
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-1. On the **Microsoft Foundry** home page, click on **Sign in** in the top right corner.
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-   ![](./media/mod6-p2t1p1.png)
+     ![](./media/mod7-t1p1.png)
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
-     ![Enter Your Password](./media/mod6-p2t1p2(1).png)
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
-   ![](./media/mod6-p2t1p3.png)
+    ![](./media/mod6-p2t1p3.png)
 
-   > **Note:** Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
-1. At the top of the **Microsoft Foundry** portal, enable the **New Foundry toggle (1)** to switch to the latest Foundry user interface.
-
-1. From the **Select a project to continue** dialog, click the drop-down under **Select or search for a project**, and then select **Create a new project (2)**.
-
-    ![](./media/lab2a-l1.png)
+   ![](./media/lab8new-t1p1.png)
 
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-02a (4)** 
-    - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
-    - Region : Select **<inject key="location" enableCopy="false"/> (6)**
+    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-900-Module-02a (6)** 
     - Click on **Create** **(7)**
 
-      ![](./media/lab2a-p2t1p1.png)
-      
-      >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
+      ![](./media/ai901-l5-1(1).png)
 
-1. Wait for your project created. It may take a few minutes. 
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
 
-1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
+      ![](./media/ai901-l5-1(2).png)
 
-    ![](./media/mod01-p2t1p6.png)
+1. Wait for your project to be created. It may take a few minutes. 
+
+1. In the **All set, Let's build your agents** window, click **Let's go**.
+
+    ![](./media/mod7-t1p3.png)
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
    ![](./media/lab2a-p2t1p2.png)
+
+   > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -84,9 +86,9 @@ This project acts as a workspace to organize and manage resources required for b
 
 In this task, you will explore the model catalog in Microsoft Foundry and deploy a generative AI model. The deployed model will be used for interactive testing and experimentation in the playground.
 
-1. On the **Microsoft Foundry** home page, then select **Find models** to view the Microsoft Foundry model catalog.
+1. On the **Microsoft Foundry** home page, then select **Discover (1)** and then click on **Model (2)** to view the Microsoft Foundry model catalog.
 
-     ![](./media/lab2a-p2t1p3.png)
+     ![](./media/ai901-l5-1(4).png)
 
 1. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
@@ -119,6 +121,8 @@ You will ask questions, observe responses, and understand how conversation conte
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 
+    ![](./media/ai901-l5-1(5).png)
+
 1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
 
     ![](./media/lab2a-p2t1p7.png)
@@ -141,11 +145,9 @@ You will ask questions, observe responses, and understand how conversation conte
  
 ### Task 3.1: View client code to chat with a model
 
-When you're satisfied with the responses a model returns in the playground, you can develop client applications that consume it. Microsoft Foundry provides a REST API and multiple language-specific SDKs that you can use to connect to the deployed model and chat with it.
+1. In the **Chat** pane, select the **Call model** tab.
 
-1. In the **Chat** pane, select the **Code** tab.
-
-    ![](./media/lab2a-p2t1p11.png)
+    ![](./media/ai901-l5-1(6).png)
 
 1. This tab shows sample code that a client application can use to chat with the model. Above the sample code, you can choose preferences for:
 
@@ -164,7 +166,7 @@ When you're satisfied with the responses a model returns in the playground, you 
     - **SDK**: OpenAI SDK **(3)**
     - **Authentication**: Key authentication **(4)**
 
-        ![](./media/lab2a-p2t1p12.png)
+        ![](./media/ai901-l5-1(7).png)
 
         The resulting sample should be similar to the following code:
 
@@ -196,7 +198,7 @@ In this task, you’ll define and apply system instructions to guide the model�
 
 1. In the model playground, switch back to the **Chat (1)** tab. Then, at the top-right of the chat pane, use the **New chat (2)** button to restart the conversation and removes the conversation history.
 
-    ![](./media/lab2a-p2t1p13.png)
+    ![](./media/ai901-l5-1(8).png)
 
 1. In the pane on the left, in the **Instructions** text area, change the system prompt to:
 
@@ -312,8 +314,7 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
 1. At the top of the agent playground, use the **Save** button to update the agent definition.
 
-    ![](./media/lab2a-p2t1p28.png)
-
+    ![](./media/ai901-l5-1(11).png)
 1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition now includes the file search tool you added (in the **tools** section):
 
     ```yml
@@ -357,9 +358,11 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
 In this task, you’ll preview your working agent in a basic web chat application.
 
-1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Preview (1)** drop-down list, select **Preview agent (2)**.
+1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Publish (1)** drop-down list, select **Preview web app (2)**.
 
-    ![](./media/lab2a-may26-p2t1p2.png)
+    A preview chat interface is opened in a new browser tab.
+
+    ![](./media/ai901-l5-1(13).png)
 
 1. A preview chat interface is opened in a new browser tab.
 
@@ -373,7 +376,7 @@ In this task, you’ll preview your working agent in a basic web chat applicatio
 
 The agent is defined within your Foundry project, and there's a convenient way to develop apps that connect to it there; allowing you to iteratively refine both the agent and the client app to create the solution you need.
 
-1. In the agent playground, switch from the **Chat** tab to the **Code** tab, and view the sample code for consuming the agent; which should be similar to this:
+1. In the agent playground, switch from the **Chat** tab to the **Call agent** tab, and view the sample code for consuming the agent; which should be similar to this:
 
     ```python
     # Before running the sample:
@@ -408,13 +411,13 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we peviously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
-1. In the **Code** tab, use the **Open in VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
+1. In the **Call agent** tab, use the **Skip setup with VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
 
-    ![](./media/lab2a-p2t1p31.png)
+    ![](./media/ai901-l5-1(14).png)
 
     Wait for the environment to be set up.
 
-    > **Note:** It can take a few minutes to set the envionment up!
+    > **Note:** It can take a few minutes to set the environment up!
 
 1. On the **Welcome to VS Code** pop-up, select **Skip**.
 

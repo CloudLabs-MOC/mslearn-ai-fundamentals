@@ -19,50 +19,57 @@ In this exercise, you will perform the following tasks:
 
 In this task, you'll create a Microsoft Foundry project and configure the basic settings required to organize models, resources, and services used throughout the lab.
 
-1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com?azure-portal=true`
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-1. On the **Microsoft Foundry** home page, click on **Sign in** in the top right corner.
-
-   ![](./media/mod6-p2t1p1.png)
+     ![](./media/mod7-t1p1.png)
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
-     ![Enter Your Password](./media/mod6-p2t1p2(1).png)
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
-   ![](./media/mod6-p2t1p3.png)
+    ![](./media/mod6-p2t1p3.png)
 
-   > **Note:** Close any tips or quick start panes that are opened the first time you sign in, and if necessary, use the **Foundry** logo at the top left to navigate to the home page.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
-1. At the top of the **Microsoft Foundry** portal, enable the **New Foundry toggle (1)** to switch to the latest Foundry user interface.
+   ![](./media/lab8new-t1p1.png)
 
-1. From the **Select a project to continue** dialog, click the drop-down under **Select or search for a project**, and then select **Create a new project (2)**.
+1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    ![](./media/lab2a-l1.png)
-
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and expand **Advanced options (2)** to specify the following settings for your project: 
-
-    - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-05a (4)** 
-    - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
-    - Region : Select **<inject key="location" enableCopy="false"/> (6)**
+    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-900-Module-05a (6)** 
     - Click on **Create** **(7)**
 
-      ![](./media/lab5a-e1t1p1.png)
-      
-      >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
+      ![](./media/ai901-l5-1(1).png)
 
-1. Wait for your project to be created. It may take a few minutes. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
 
-    ![](./media/lab4a-e1t1p2.png)
+      ![](./media/ai901-l5-1(2).png)
+
+1. Wait for your project to be created. It may take a few minutes. 
+
+1. In the **All set, Let's build your agents** window, click **Let's go**.
+
+    ![](./media/mod7-t1p3.png)
+
+1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
+
+    ![](./media/lab2a-p2t1p2.png)
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -143,9 +150,9 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 To develop a client app or agent that can use the model to interpret images, you can use the OpenAI **Responses** API.
 
-1. In the **Chat** pane, select the **Code** tab to view sample code.
+1. In the **Chat** pane, select the **Call model** tab to view sample code.
 
-    ![](./media/newlab5a-e1t2p12.png)
+    ![](./media/ai901-l5-1(18).png)
 
 1. Select the following code options:
     - **API**: Responses API
@@ -199,9 +206,9 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
     ![](./media/newlab5a-e1t2p13.png)
 
-1. Select **Deploy a base model** to open the model catalog.
+1. On the Models page, click on **Deploy (1)** drop down and then select **Deploy a base model (2)** to open the model catalog.
 
-    ![](./media/newlab5a-e1t2p14.png)
+    ![](./media/ai901-l5-1(19).png)
 
 1. In the **Collections** drop-down list, select **Direct from Azure (1)**, and in the **Inference tasks** drop-down list, select **Text to image (2)**. Then view the available models for image generation.
 
@@ -287,9 +294,9 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
     ![](./media/lab5a-e1t4p1.png)
 
-1. From the Models page, select **Deploy a base model** to open the model catalog.
+1. On the Models page, click on **Deploy (1)** drop down and then select **Deploy a base model (2)** to open the model catalog.
 
-    ![](./media/newlab5a-e1t2p16.png)
+    ![](./media/ai901-l5-1(19).png)
 
 1. From the **Collections** drop-down, choose **Direct from Azure (1)**, and from the **Inference tasks** drop-down, select **Video generation (2)**. Then review the list of available video generation models.
 

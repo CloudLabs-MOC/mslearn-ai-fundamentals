@@ -20,55 +20,57 @@ In this exercise, you will perform the following tasks:
 
 In this task, you'll create and configure a Microsoft Foundry project to organize the resources and services required for building a speech-enabled AI application.
 
-1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com?azure-portal=true`
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-1. On the **Microsoft Foundry** home page, click on **Sign in** in the top right corner.
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-   ![](./media/mod6-p2t1p1.png)
+     ![](./media/mod7-t1p1.png)
 
 1. If prompted to sign in, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
  
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
  
-     ![Enter Your Password](./media/mod6-p2t1p2(1).png)
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
-   ![](./media/mod6-p2t1p3.png)
+    ![](./media/mod6-p2t1p3.png)
 
-   > **Note:** Close any tips or quick start panes that are opened the first time you sign in, and if necessary, use the **Foundry** logo at the top left to navigate to the home page.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
 
-1. At the top of the **Microsoft Foundry** portal, enable the **New Foundry toggle (1)** to switch to the latest Foundry user interface.
+   ![](./media/lab8new-t1p1.png)
 
-1. From the **Select a project to continue** dialog, click the drop-down under **Select or search for a project**, and then select **Create a new project (2)**.
+1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    ![](./media/lab2a-l1.png)
-
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and expand **Advanced options (2)** to specify the following settings for your project: 
-
-    - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-04a (4)** 
-    - Microsoft Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (5)**
-    - Region : Select **<inject key="location" enableCopy="false"/> (6)**
+    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-900-Module-04a (6)** 
     - Click on **Create** **(7)**
 
-      ![](./media/lab4a-e1t1p1.png)
-      
-      >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.
+      ![](./media/ai901-l5-1(1).png)
+
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
 
 1. Wait for your project to be created. It may take a few minutes. 
 
-1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
+1. In the **All set, Let's build your agents** window, click **Let's go**.
 
-    ![](./media/mod01-p2t1p6.png)
+    ![](./media/mod7-t1p3.png)
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
-    ![](./media/lab4a-e1t1p2.png)
+    ![](./media/lab2a-p2t1p2.png)
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -82,9 +84,13 @@ In this task, you'll create and configure a Microsoft Foundry project to organiz
 
 In this task, you’ll create an agent, select a generative AI model, and define its behavior using system instructions.
 
-1. From the Microsoft Foundry Home page, select **Start building (1)**, and then choose **Create agents (2)** to begin creating a new agent.
+1. From the Home page of the Microsoft Foundry portal, select **Create agents** to begin creating a new agent.
 
-    ![](./media/lab4an-p2t2p1.png)
+    ![](./media/ai901-l4-4.png)
+
+    > **Note:** Depending on the version of Microsoft Foundry available in your environment, you may see a **Start building** button instead of **Create agents** on the Home page.
+
+    ![](./media/ai901-l5-1(15).png)
 
 1. In the **Create an agent** dialog, enter a name for your agent `speech-agent` **(1)**, and then select **Create (2)** to proceed.
 
@@ -144,7 +150,7 @@ In this task, you’ll enable voice capabilities for the agent by configuring Az
 
 1. **Close (1)** the **Configuration** pane and use the **Save (2)** button to save the agent.
 
-    ![](./media/lab4an-p2t2p10.png)
+    ![](./media/ai901-l5-1(16).png)
 
 ## Task 4: Use speech to interact with the agent (Read Only)
 
@@ -179,9 +185,9 @@ In this task, you’ll explore how speech-based interaction works by observing h
 
 In this task, you’ll review sample code to understand how to integrate speech-enabled agents into applications using APIs and SDKs for real-time voice interactions.
 
-1. Select **Code** at the top of the chat screen to view sample code for an agent client.
+1. Select **Call agent** at the top of the chat screen to view sample code for an agent client.
 
-    ![](./media/lab4an-p2t2p13.png)
+    ![](./media/ai901-l5-1(17).png)
 
 1. Review the code; noting that it handles:
     - Connectivity to your project to access the agent.

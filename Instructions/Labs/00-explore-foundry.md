@@ -21,41 +21,51 @@ In this lab, you will perform the following tasks:
 
 In this task, you will create a Microsoft Foundry project. You will sign in to the Microsoft Foundry portal, configure the project settings such as the subscription, resource group, Foundry resource, and region, and create the project that will be used to manage models, agents, and other AI assets.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com`.
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-1. Click the **Sign in** button in the top-right corner. 
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-    ![](./media/mod01-p2t1p1.png)
+     ![](./media/mod7-t1p1.png)
 
-1. When prompted, sign in using the Azure credentials listed below.
+1. If prompted to sign in, enter your credentials:
+ 
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+ 
+        ![Enter Your Username](./media/mod6-p2t1p2.png)
+ 
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+ 
+      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
 
-    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+1. If prompted to **Stay signed in?**, you can click **No**.
 
-    - **Password:** <inject key="AzureAdUserPassword"></inject>
+    ![](./media/mod6-p2t1p3.png)
 
-1. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**,
 
-    ![](./media/mod01-p2t1p2.png)
-
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
-
-    ![](./media/mod01-p2t1p3.png)
-
-1. In the **Select a project to continue** window, open the **Select or search for a project** dropdown and click **Create a new project**.
-
-    ![](./media/mod01-p2t1p4.png)
+    ![](./media/lab8new-t1p1.png)
 
 1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
 
-    - Subscription : **Leave default subscription (3)** 
-    - Resource Group : Select **AI-900-Module-01 (4)** 
-    - Microsoft Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (5)**
-    - Region : Select **<inject key="location" enableCopy="false"/> (6)**
+    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - Subscription : **Leave default subscription (4)** 
+    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
+    - Resource group : Select **AI-900-Module-01 (6)** 
     - Click on **Create** **(7)**
 
-      ![](./media/mod01-p2t1p5.png)
+      ![](./media/mod7-t1p2(1).png)
 
-        >**Note:** Make a note of the region you selected. You'll need it later!
+      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+
+      ![](./media/ai901-l5-1(2).png)
+
+      >**Note:** Make a note of the region you selected. You'll need it later!
+
+1. Wait for your project to be created. It may take a few minutes. 
+
+1. In the **All set, Let's build your agents** window, click **Let's go**.
+
+    ![](./media/mod7-t1p3.png)
 
 1. Wait for your project to be created. It may take a few minutes. 
 
@@ -65,13 +75,17 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
 1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![](./media/mod01-p2t1p7.png)
+    ![](./media/ai901-l1-4(1).png)
 
 1. The project has an **endpoint** and **key**, which can be used to securely access models, agents, and other assets in the project from client applications.
 
-    ![](./media/mod01-p2t1p8.png)
+    ![](./media/ai901-l1-5(1).png)
 
     >**Note:** You're going to need the project key and endpoint later!
+
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+
+    ![](./media/ai901-l5-1(3).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
@@ -294,7 +308,7 @@ In this task, you will connect a client chat application to your deployed Micros
 
     ![](./media/mod01-p2t1p36(5).png)
 
-### Task 6.3: Explore AI speech
+### Task 6.3: Explore AI speech (Read Only)
 
 >**Note:** <span style="color:red;"> In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.
 

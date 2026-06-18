@@ -84,7 +84,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/aig2.png)
+![Explore Lab Resources](../media/new-envtab.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -96,7 +96,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/aig3.png)
+![Use the Split Window Feature](../media/new-splittab.png)
 
 ## Managing Your Virtual Machine
  
