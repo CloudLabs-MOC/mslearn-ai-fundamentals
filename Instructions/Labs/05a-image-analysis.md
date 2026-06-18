@@ -106,7 +106,7 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 1. Return to the browser tab containing your Microsoft Foundry project, from the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
-    ![](./media/ai901-l3-03.png)
+    ![](./media/ai901-l3-03(1).png)
 
     > **Note:** Depending on the version of Microsoft Foundry available in your environment, you may see **Explore models** instead of **Find models** on the Home page. If **Find models** is not displayed, select **Explore models** to access the Microsoft Foundry model catalog. Alternatively, you can select **Discover** from the top navigation menu and then choose **Models** from the left navigation pane to access the same catalog and continue with the lab instructions.
     
