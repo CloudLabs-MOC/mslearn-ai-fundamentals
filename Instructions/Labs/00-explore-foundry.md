@@ -340,7 +340,7 @@ Foundry Models by default are configured with guardrails that enforce content sa
         ![](./media/mod01-p2t1p36(10).png)
 
 
-<question source="./Questions/Module-1/question-01.md" />
+<question source="Questions/Module-1/question-01.md" />
 
 <question source="Questions/Module-1/question-02.md" />
 
