@@ -4,26 +4,26 @@ Question Type : Single Choice
 
 ## Question
 
-What is the purpose of the **Resource Visualizer** in the Microsoft Azure portal for a Microsoft Foundry project?
+What information is required to connect the Computing History Agent app to a deployed model in Microsoft Foundry?
 
 ## Options
 
-Option 1 : To deploy AI models automatically
-Option 2 : To monitor token usage in the playground
-Option 3 : To view relationships between Foundry resources and child projects
-Option 4 : To generate API keys for applications
+Option 1 : Subscription ID and Resource Group
+Option 2 : Project endpoint, deployment name, and API key
+Option 3 : Azure tenant ID and storage account
+Option 4 : Model version and workspace ID
 
 ## Answers
 
-Option 3
+Option 2
 
 ## Correct Answer Feedback
 
-Option 3 is the correct answer. The Resource Visualizer shows the relationship between the parent Foundry resource and its child projects.
+Option 2 is the correct answer. The chat application requires the project endpoint, deployment name, and API key to connect to the deployed model.
 
 ## Incorrect Answer Feedback
 
-Selected option is incorrect. Option 3 is the correct answer.
+Selected option is incorrect. Option 2 is the correct answer.
 
 ## Number of Retries
 
