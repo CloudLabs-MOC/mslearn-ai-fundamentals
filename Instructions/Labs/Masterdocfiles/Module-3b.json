@@ -4,11 +4,11 @@
       "Language": "English",
       "Files": [
           {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/AI901-Gettingstarted/M3b-Gettingstarted.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/AI901-Gettingstarted/M3b-Gettingstarted.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/03b-text-analysis.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/03b-text-analysis.md",
           "Order": 2
         }
       ]
