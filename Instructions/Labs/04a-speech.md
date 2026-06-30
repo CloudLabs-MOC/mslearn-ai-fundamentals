@@ -98,11 +98,11 @@ In this task, you’ll create an agent, select a generative AI model, and define
 
 1. When ready, your agent opens in the agent playground.
 
-    ![](./media/ai901-l4-6.png)
+    ![](./media/june26-lab4a-p2t1p1.png)
 
-1. In the model drop-down list, ensure that a **gpt-4.1** model has been deployed and selected for your agent.
+1. In the model drop-down list, ensure that a **gpt-5** model has been deployed and selected for your agent.
 
-    ![](./media/ai901-l4-7.png)
+    ![](./media/june26-lab4a-p2t1p2.png)
 
 1. Assign your agent the following **Instructions**:
 
@@ -110,11 +110,11 @@ In this task, you’ll create an agent, select a generative AI model, and define
    You are an AI agent that provides information about AI and related topics. You answer questions concisely and precisely.
     ```
 
-    ![](./media/lab4an-p2t2p5.png)
+    ![](./media/june26-lab4a-p2t1p3.png)
 
 1. Use the **Save** button to save the changes.
 
-    ![](./media/lab4an-p2t2p6.png)
+    ![](./media/june26-lab4a-p2t1p4.png)
 
 1. Test the agent by entering the following prompt in the **Chat** pane:
 
@@ -140,13 +140,13 @@ In this task, you’ll enable voice capabilities for the agent by configuring Az
 
 1. In the pane on the left, under the model selection list, enable **Voice mode**.
 
-    ![](./media/lab4an-p2t2p8.png)
+    ![](./media/june26-lab4a-p2t1p5.png)
 
     >**Note:** If the **Configuration** pane does not open automatically, use the "cog" icon above the chat interface to open it.
 
 1. In the configuration pane on the left, view the voices in the **Speech output (1)** drop-down list. Review the default speech input and output configuration. You can try different voices, previewing them until you decide which one to use.
 
-    ![](./media/lab4an-p2t2p9.png)
+    ![](./media/june26-lab4a-p2t1p6.png)
 
 1. **Close (1)** the **Configuration** pane and use the **Save (2)** button to save the agent.
 
@@ -160,7 +160,7 @@ In this task, you’ll explore how speech-based interaction works by observing h
 
 1. In the **Chat** pane, click **Start** to begin a conversation with the model. If asked, allow microphone access. The agent will then introduce itself.
 
-    ![](./media/lab4an-p2t2p11.png)
+    ![](./media/june26-lab4a-p2t1p7.png)
 
     >**Note**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the *lock icon* next to the url. Select *Permissions*, *Microphone*, and *Allow*. Then refresh the page and try again.
 

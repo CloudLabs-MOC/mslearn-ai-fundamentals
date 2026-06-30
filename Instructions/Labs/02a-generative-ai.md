@@ -120,25 +120,17 @@ You will ask questions, observe responses, and understand how conversation conte
 
     ![](./media/ai901-l5-1(5).png)
 
-1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
+1. In the **Chat** pane, enter a prompt such as `In the context of a business, what is expense management?`, and review the response.
 
-    ![](./media/lab2a-p2t1p7.png)
+    ![](./media/june26-lab2a-p2t1p1.png)
 
-1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
+1. Enter a follow-up prompt, such as `Tell me about per-diem allowances.` and review the response.
 
-    ![](./media/lab2a-p2t1p8.png)
+    ![](./media/june26-lab2a-p2t1p2.png)
 
     > **Note:** Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
 
-1. At the top-right of the chat pane, use the **New chat** button to restart the conversation. This removes all conversation history.
-
-     ![](./media/lab2a-p2t1p9.png)
-
-1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
-
-     ![](./media/lab2a-p2t1p10.png)
-
-1. Continue the conversation with prompts such as `How does it compare with modern LLMs?`
+1. Continue the conversation with prompts such as `How are they reimbursed?`
  
 ### Task 3.1: View client code to chat with a model
 
@@ -160,36 +152,33 @@ When you're satisfied with the responses a model returns in the playground, you 
         - **Microsoft Entra ID authentication**: The client app presents an authentication token based on an identify that is assigned to it (or to the current user).
 
 1. Select the following code options:
-    - **API**: Responses API **(1)**
-    - **Language**: Python **(2)**
-    - **SDK**: OpenAI SDK **(3)**
-    - **Authentication**: Key authentication **(4)**
+    - **Language**: Python
+    - **Authentication**: Key authentication
 
-        ![](./media/ai901-l5-1(7).png)
+    The resulting sample should be similar to the following code:
 
-        The resulting sample should be similar to the following code:
+    ```python
+    from openai import OpenAI
+    
+    endpoint = "https://{your-foundry-resource}.openai.azure.com/openai/v1/"
+    deployment_name = "gpt-5-mini"
+    api_key = "<your-api-key>"
+    
+    client = OpenAI(
+        base_url=endpoint,
+        api_key=api_key
+    )
+    
+    response = client.responses.create(
+        model=deployment_name,
+        input="What is the capital of France?",
+    )
+    
+    print(f"answer: {response.output[0]}")
+    ```
 
-        ```python
-        from openai import OpenAI
-        
-        endpoint = "https://{your-foundry-resource}.openai.azure.com/openai/v1/"
-        deployment_name = "gpt-5-mini"
-        api_key = "<your-api-key>"
-        
-        client = OpenAI(
-            base_url=endpoint,
-            api_key=api_key
-        )
-        
-        response = client.responses.create(
-            model=deployment_name,
-            input="What is the capital of France?",
-        )
-        
-        print(f"answer: {response.output[0]}")
-        ```
+    The code connects to the **OpenAI** endpoint for your Microsoft Foundry resource, using its secret authentication key (which you would need to copy into the code to set the **api_key** variable). It then uses the **responses.create** method to generate a response from your deployed model from an input prompt (in this case, the hard-coded question "What is the capital of France?") and prints the response to the output console.
 
-        The code connects to the **OpenAI** endpoint for your Microsoft Foundry resource, using its secret authentication key (which you would need to copy into the code to set the **api_key** variable). It then uses the **responses.create** method to generate a response from your deployed model from an input prompt (in this case, the hard-coded question "What is the capital of France?") and prints the response to the output console.
 
 ## Task 4: Specify instructions in a system prompt
 
@@ -207,15 +196,15 @@ In this task, you’ll define and apply system instructions to guide the model�
 
     ![](./media/lab2a-p2t1p14.png)
 
-1. Now enter a new user prompt related to expense claims, such as `What kinds of business expense are typically reimbursed by employers?`
+1. Now enter a new user prompt related to expense claims, such as `What's a purchasing card?`
 
-    ![](./media/lab2a-p2t1p15.png)
+    ![](./media/june26-lab2a-p2t1p3.png)
 
 1. Review the response, which should provide some general guidance about expense claims.
 
-1. Try re-asking a previously-asked question that is unrelated to expenses, such as `Tell me about the ELIZA chatbot`; and compare the response now that the system prompt has changed.
+1. Try asking a question that is unrelated to expenses, such as `What's the capital of Spain?`; and compare the response now that the system prompt has changed.
 
-    ![](./media/lab2a-p2t1p16.png)
+    ![](./media/june26-lab2a-p2t1p4.png)
 
     So far, we've specified instructions in the *playground*; but they're not saved outside of that environment. In a client application, you would need to include the system prompt as an **instructions** parameter in the **responses.create** method, like this:
 
@@ -237,39 +226,15 @@ In this task, you’ll define and apply system instructions to guide the model�
 
 In this task, you’ll convert the configured model into an agent by saving its instructions and settings as a reusable AI assistant.
 
-1. In the model playground, at the top right select **Save as agent (1)**. Then, when prompted, name your new agent `expenses-agent` **(2)** and then click on **Create (3)**.
+1. In the model playground, at the top right select **Save as agent (1)**. Then, when prompted, name your new agent `expenses-agent` **(2)** and then click on **Create and open playground (3)**.
 
     ![](./media/lab2a-p2t1p17.png)
 
-    ![](./media/lab2a-may26-p2t1p1.png)
+    ![](./media/june26-lab2a-p2t1p5.png)
 
 1. When the agent is created, it opens in a new playground specifically for working with agents.
 
     ![](./media/ai901-l5-1(9).png)
-
-1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
-
-    ```yml
-    metadata:
-      logo: Avatar_Default.svg
-      microsoft.voice-live.enabled: "false"
-    object: agent.version
-    id: expenses-agent:1
-    name: expenses-agent
-    version: "1"
-    description: ""
-    created_at: 1776115196
-    definition:
-      kind: prompt
-      model: gpt-5-mini
-      instructions: You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
-      temperature: 1
-      top_p: 1
-      tools: []
-    status: active
-    ```
-
-    ![](./media/ai901-l5-1(10).png)
 
 1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`
 
@@ -323,6 +288,16 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
 
     ![](./media/ai901-l5-1(11).png)
 
+1. Switch back to the **Chat** tab, and enter the same expenses-related prompt as before (for example, `How much can I claim for a taxi?`) and view the response.
+
+    This time the response should be informed by the information in the expenses data source.
+
+    ![](./media/lab2a-p2t1p30.png)
+
+1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
+
+    Congratulations! We have a working agent with access to the knowledge it needs. Now we're ready to develop apps that use it.
+
 1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition now includes the file search tool you added (in the **tools** section):
 
     ```yml
@@ -351,16 +326,6 @@ In this task, you’ll enhance the agent by adding a knowledge source, enabling 
     ```
 
     ![](./media/lab2a-p2t1p29.png)
-
-1. Switch back to the **Chat** tab, and enter the same expenses-related prompt as before (for example, `How much can I claim for a taxi?`) and view the response.
-
-    This time the response should be informed by the information in the expenses data source.
-
-    ![](./media/lab2a-p2t1p30.png)
-
-1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
-
-    Congratulations! We have a working agent with access to the knowledge it needs. Now we're ready to develop apps that use it.
 
 ### Task 6.1: Preview the agent
 
