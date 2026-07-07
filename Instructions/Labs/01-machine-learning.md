@@ -138,7 +138,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
             ![](media/T2copylink-0707.png)
 
-        - Extract the downloaded **ml-data.zip** by navigating to **File explorer (1)** in VM. From **Downloads (2)**, right click on **ml-data.zip** and select **Extracl all (3).** Note that one of these files is **ice-cream.csv**, which contains the ice cream sales data required for this exercise. Once uploaded, click on **Next**.
+        - Extract the downloaded **ml-data.zip** by navigating to **File explorer (1)** in VM. From **Downloads (2)**, right click on **ml-data.zip** and select **Extract all (3).** Note that one of these files is **ice-cream.csv**, which contains the ice cream sales data required for this exercise. Once uploaded, click on **Next**.
 
             ![](media/T2extract1-0707.png)
 
