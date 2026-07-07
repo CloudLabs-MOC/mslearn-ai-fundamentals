@@ -1,4 +1,4 @@
-# Explore Automated Machine Learning in Azure Machine Learning
+# Module 01: Explore Automated Machine Learning in Azure Machine Learning
 
 ## Lab overview
 
@@ -31,7 +31,7 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 4. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: Use existing Azure subscription. **(1)**
-    - **Resource group**: Select **AI-900-Module-01** **(2)**
+    - **Resource group**: Select **machinelearning** **(2)**
     - **Name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
     - **Region**: Select **<inject key="location" enableCopy="false" />** **(4)**
     - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
@@ -41,46 +41,44 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
 5. Select **Review + create (9)**.
 
-    ![](media/mod1-e1t1p2.png)
+    ![](media/T1S5-0707.png)
 
 6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
-   ![](media/mod1-e1t1p3.png)
+   ![](media/T1S6-0707.png)
    
 7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
-   ![](media/lab1-10.png)
+   ![](media/T1S7-0707.png)
 
 8. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and if prompted, sign into **Azure Machine Learning studio** using your Microsoft account). Close any messages that are displayed.
 
-   ![](media/mod1-e1t1p4.png)
+   ![](media/T1S8a-0707.png)
 
-   ![](media/mod1-e1t1p5.png)
+   ![](media/T1S8b-0707.png)
 
 9. In Azure Machine Learning studio, click on **All workspaces (1)** and the navigate to **Workspaces (2)**, you should see your newly created workspace **(3)**.
 
-    ![](media/mod1-e1t1p6.png)
+    ![](media/T1S9a-0707.png)
 
-    ![](media/mod1-e1t1p6(1).png)
-
-## Validation
+    ![](media/T1S9b-0707.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="0e571ab6-2856-478e-afa3-41efc38df116" />
+  <validation step="19f87603-9f16-4107-b94f-d92593b422ce" />
 
 ### Enable preview features
 
 Some features of Azure Machine Learning are in preview and need to be explicitly enabled in your workspace.
 
-1. In Azure Machine Learning Studio, click on **manage preview features** (the loud speaker icon - &#128363;).
+1. In **Azure Machine Learning** studio, click on **manage preview features** (the loud speaker icon - &#128363;).
 
      ![](media/lab1-5.png)
 
-1. Enable the following preview feature, if not enabled.
+1. Enable the following preview feature, if not enabled: `Guided experience to importing from external data sources (PREVIEW)`
 
      ![](media/mod1-e1t1p7.png)
 
@@ -90,9 +88,9 @@ In this task, you will learn how to use automated machine learning to train a mo
 
 Automated machine learning enables you to try multiple algorithms and parameters to train multiple models, and identify the best one for your data. In this exercise, you'll use a dataset of ice cream sales to train a model that predicts the demand for ice creams that should be expected on a given day, based on seasonal and meteorological features.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), navigate to the **Automated ML (1)** page (under **Authoring**), select  **+ New Automated ML job (2)**.
+1. In **Azure Machine Learning** studio, navigate to the **Automated ML (1)** page under **Authoring**, select  **+ New Automated ML job (2)**.
 
-   ![](media/lab1-e1t2p1.png)  
+   ![](media/T2S1-0707.png)  
 
 1. Create a new Automated ML job with the following settings, using **Next (5)** as required to progress through the user interface:
 
@@ -103,95 +101,106 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Description**: Automated machine learning for ice cream demand prediction **(3)**
     - **Tags**: Leave default **(4)**
 
-       ![](media/lab1-e1t2p2.png)
+       ![](media/T2S2a-0707.png)
 
-   **Task type & data**:
+1. On the **Task type & data** page:
 
     - **Select task type**: Regression **(1)**
     - **Select data**: Select **+ Create (2)** 
 
         ![](media/lab1-25.png)
 
-    - To create new data with the following settings:
+1. This will open a new Create data set page. To create new data with the following settings:
 
-         - **Data type**:
-            - **Name**: `ice-cream` **(1)**
-            - **Description**: `Historic ice cream sales data` **(2)**
-            - **Type**: Tabular **(3)**
-            - Click **Next (4)**
+    - **Data type**:
+      - **Name**: `ice-cream` **(1)**
+      - **Description**: `Historic ice cream sales data` **(2)**
+      - **Type**: Tabular **(3)**
+      - Click **Next (4)**
 
-              ![](media/lab1-e1t2p3.png)
-        - **Data source**:
-            - Select **From local files (1)**
-            - Click **Next (2)**
+          ![](media/lab1-e1t2p3.png)
+      
+    - **Data source**:
+        - Select **From local files (1)**
+        - Click **Next (2)**
 
-              ![](media/AI-900-lab1-2.png)
-        - **Destination storage type**:
-            - **Datastore type**: Azure Blob Storage **(1)**
-            - **Name**: workspaceblobstore **(2)**
-            - Click **Next (3)**
+            ![](media/AI-900-lab1-2.png)
+        
+    - **Destination storage type**:
+        - **Datastore type**: Azure Blob Storage **(1)**
+        - **Name**: workspaceblobstore **(2)**
+        - Click **Next (3)**
 
-              ![](media/AI-900-lab1-3.png)
-        - **Files or Folder selection**:
-            - **Upload files or folder**: Download and extract the contents of the folder from [`https://aka.ms/mslearn-ml-data`](https://aka.ms/mslearn-ml-data), extract the downloaded **ml-data.zip** archive to see the files it contains. Note that one of these files is **ice-cream.csv**, which contains the ice cream sales data required for this exercise. Once uploaded, click on **Next**.
+            ![](media/AI-900-lab1-3.png)
 
-            - On the **Create data asset – File or folder selection** page, click **Upload files or folder (1)** and choose **Upload files (2)** to upload files from your local drive.
+    - **Files or Folder selection**:
+        - **Upload files or folder**: Download and extract the contents of the folder from [`https://aka.ms/mslearn-ml-data`](https://aka.ms/mslearn-ml-data), by right-clicking the link and selecting **Copy Link**. Paste the link in a new browser tab to download the **ml-data.zip** file. 
 
-              ![](media/AI-900-lab1-4.png)
+            ![](media/T2copylink-0707.png)
 
-            - In the **Open** dialog, select **ice-cream (1)**, then click **Open (2)** to upload the file.
+        - Extract the downloaded **ml-data.zip** by navigating to **File explorer (1)** in VM. From **Downloads (2)**, right click on **ml-data.zip** and select **Extracl all (3).** Note that one of these files is **ice-cream.csv**, which contains the ice cream sales data required for this exercise. Once uploaded, click on **Next**.
 
-              ![](media/lab1-e1t2p4.png)
+            ![](media/T2extract1-0707.png)
 
-              ![](media/lab1-e1t2p4(1).png)
+            ![](media/T2extract2-0707.png)              
 
-        - On the **Create data asset - Settings** page, leave everything default click **Next**:
+    - On the **Create data asset – File or folder selection** page, click **Upload files or folder (1)** and choose **Upload files (2)** to upload files from your local drive.
 
-          ![](media/lab1-e1t2p5.png)
-        - On the **Create data asset - Schema** page, 
-          - Include **only** the following columns **(1)** (*Date* is unique for each row, and adds little predictive capability on its own):
-            - **DayOfWeek**
-            - **Month**
-            - **Temperature**
-            - **Rainfall**
-            - **IceCreamsSold**
-        - review detected columns and types, then click **Next (2)**
+        ![](media/AI-900-lab1-4.png)
+
+        - In the **Open** dialog, select **ice-cream (1)**, then click **Open (2)** to upload the file.
+
+          ![](media/lab1-e1t2p4.png)
+
+          ![](media/lab1-e1t2p4(1).png)
+
+    - On the **Create data asset - Settings** page, leave everything default click **Next**:
+
+        ![](media/lab1-e1t2p5.png)
+        
+    - On the **Create data asset - Schema** page, 
+      - Include **only** the following columns **(1)** (*Date* is unique for each row, and adds little predictive capability on its own):
+        - **DayOfWeek**
+        - **Month**
+        - **Temperature**
+        - **Rainfall**
+        - **IceCreamsSold**
+        - Review detected columns and types, then click **Next (2)**
 
           ![](media/lab1-e1t2p6.png)
 
-        - Select **Create**. 
+    - Select **Create**. 
   
-          ![](media/lab1-e1t2p7.png)
+        ![](media/lab1-e1t2p7.png)
       
-        - After the dataset is created, select the **ice-cream (1)** dataset to continue to submit the Automated ML job. Select **Next (2)**
+1. After the dataset is created, select the **ice-cream (1)** dataset to continue to submit the Automated ML job. Select **Next (2)**
 
-          ![](media/lab1-e1t2p8.png)
+    ![](media/lab1-e1t2p8.png)
         
-    **Task settings**:
+1. On the **Task settings** page, configure the following settings:
 
-    - **Task type**: Regression
-    - **Data**: ice-cream
     - **Target column**: IceCreamsSold **(1)**
-
-       ![](media/lab1-e1t2p9.png)
 
     - Select **View additional configuration settings (2)** under Target Column:
         - Primary metric: **R2 score** **(3)**
         - Explain best model: **Unselected** **(4)**
-        - **Use all supported models**: <u>Un</u>selected.  You'll restrict the job to try only a few specific algorithms.
-        - **Allowed models**: Select only **RandomForest** and **LightGBM** **(5)** - normally you'd want to try as many as possible, but each model added increases the time it takes to run the job. Then click on **Save (6)**.
+        - Use all supported models: **Unselected**.  
+        - Allowed models: Select only **RandomForest** and **LightGBM** **(5)** - normally you'd want to try as many as possible, but each model added increases the time it takes to run the job. Then click on **Save (6)**.
+
+          ![](media/lab1-e1t2p9.png)
 
     - **Limits**: **Expand this section**
         - Use the limits to end the training job early based on specific criteria. In this exercise, set the following limits:
-          - Metric score threshold: **0.9** **(1)**
-          - Experiment Timeout (minutes): **15** **(2)**
-          - Click **Next (3)**
+        - Metric score threshold: **0.9** **(1)**
+        - Experiment Timeout (minutes): **15** **(2)**
+        - Click **Next (3)**
 
-            ![](media/lab1-e1t2p10.png)
+          ![](media/lab1-e1t2p10.png)
 
-            >**Note:** It's important to set these limits when using Azure Machine Learning, as running training jobs for every possible algorithm and featurization combination could potentially take hours.
+          >**Note:** It's important to set these limits when using Azure Machine Learning, as running training jobs for every possible algorithm and featurization combination could potentially take hours.
 
-    **Compute**:
+1. On the **Compute** page, configure the following settings:
+
     - **Select compute type**: Serverless **(1)**
     - **Virtual machine type**: CPU **(2)**
     - **Virtual machine tier**: Dedicated **(3)**
@@ -212,9 +221,9 @@ When the automated machine learning job has completed, you can review the best m
 
 1. On the **Overview** tab of the automated machine learning job, note the best model summary.
 
-    ![](media/lab1-e1t3p1.png)
+    ![](media/T2S11-0707.png)
 
-    > **Note**: You may see a message under the status "Warning: User specified exit score reached...". This is an expected message. Please continue to the next step.
+    > **Note**: The Warning message under the status "Warning: User specified exit score reached...". This is an expected message. Please continue to the next step.
   
 1. Select the text under **Algorithm name** for the best model to view its details.
 
@@ -240,7 +249,11 @@ When the automated machine learning job has completed, you can review the best m
 
 ### Task 3: Deploy and test the model
 
-1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and use the **Real-time endpoint (2)** option to deploy the model with the following settings:
+1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy (1)** and select the **Real-time endpoint (2)**. 
+
+    ![](media/lab1-e1t3p4.png)
+
+1. On the Deploy window, select the following settings and click on **Deploy (8)**:
 
    - **Instance count**: 3 **(1)** 
     - **Virtual machine**: Standard_DS3_v2 **(2)**
@@ -250,11 +263,7 @@ When the automated machine learning job has completed, you can review the best m
     - **Inferencing data collection**: *Disabled* **(6)**
     - **Package Model**: *Disabled* **(7)**
 
-      ![](media/lab1-e1t3p4.png)
-
       ![](media/lab1-e1t3p5.png)
-
-1. Select **Deploy (8)**
 
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
 
@@ -303,21 +312,17 @@ Now you can test your deployed service.
 
     The test pane took the input data and used the model you trained to return the predicted number of ice creams sold.
 
-Let’s review what you have done. You used a dataset of historical ice cream sales data to train a model. The model predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features.
-
-## Validation
+Let’s review what you have done - you used a dataset of historical ice cream sales data to train a model. The model predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="d5b3d279-a696-4a1d-b7c5-370eca8ae53a" />
+  <validation step="aa2662f4-59fd-4d38-9d2f-201214b4f21b" />
 
-### Review
-In this lab, you have completed the following tasks:
-- Created an *Azure Machine Learning workspace* resource
-- Utilized automated machine learning to train a model
-- Deployed the model
+## Summary
+
+In this lab, you have learned how to use automated machine learning in Azure Machine Learning to train a model that predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features. You also learned how to deploy the model as a real-time endpoint and test it with sample input data.
   
-## You have successfully completed this lab.
+### Congratulations! You have successfully completed this lab.
