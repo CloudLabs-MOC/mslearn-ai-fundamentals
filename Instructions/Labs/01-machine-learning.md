@@ -1,10 +1,10 @@
 # Module 01: Explore Automated Machine Learning in Azure Machine Learning
 
-## Lab overview
+## Overview
 
-In this exercise, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
+In this module, you'll use the automated machine learning feature in **Azure Machine Learning** to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
-## Lab Objectives
+## Objectives
 
 In this lab, you will perform:
 
@@ -43,11 +43,11 @@ In this task, you will create an Azure Machine Learning workspace. You will sear
 
     ![](media/T1S5-0707.png)
 
-6. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+6. After completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
    ![](media/T1S6-0707.png)
    
-7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
+7. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button. This will take you to your workspace resource.
 
    ![](media/T1S7-0707.png)
 
@@ -86,7 +86,7 @@ Some features of Azure Machine Learning are in preview and need to be explicitly
 
 In this task, you will learn how to use automated machine learning to train a model efficiently without writing extensive code.
 
-Automated machine learning enables you to try multiple algorithms and parameters to train multiple models, and identify the best one for your data. In this exercise, you'll use a dataset of ice cream sales to train a model that predicts the demand for ice creams that should be expected on a given day, based on seasonal and meteorological features.
+Automated machine learning enables you to try multiple algorithms and parameters to train multiple models and identify the best one for your data. In this exercise, you'll use a dataset of ice cream sales to train a model that predicts the demand for ice cream that should be expected on a given day, based on seasonal and meteorological features.
 
 1. In **Azure Machine Learning** studio, navigate to the **Automated ML (1)** page under **Authoring**, select  **+ New Automated ML job (2)**.
 
@@ -273,7 +273,7 @@ When the automated machine learning job has completed, you can review the best m
 
 Now you can test your deployed service.
 
-1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints (1)** and open the **Real-time endpoints (2)** in the page.
+1. In **Azure Machine Learning** studio, on the left-hand menu, select **Endpoints (1)** and open the **Real-time endpoints (2)** in the page.
 
     ![](media/lab1-e1t3p6.png)
 
@@ -323,6 +323,6 @@ Let’s review what you have done - you used a dataset of historical ice cream s
 
 ## Summary
 
-In this lab, you have learned how to use automated machine learning in Azure Machine Learning to train a model that predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features. You also learned how to deploy the model as a real-time endpoint and test it with sample input data.
+In this module, you have learned how to use automated machine learning in Azure Machine Learning to train a model that predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features. You also learned how to deploy the model as a real-time endpoint and test it with sample input data.
   
 ### Congratulations! You have successfully completed this lab.
