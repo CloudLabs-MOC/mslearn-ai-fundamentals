@@ -1,9 +1,8 @@
-
 # AI-900: Microsoft Azure AI Fundamentals Workshop
 
 Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Module 01: Explore Automated Machine Learning in Azure Machine Learning
+## Module 01: Explore Automated Machine Learning in Azure Machine Learning
 
 ### Overall Estimated timing: 60 minutes
 
@@ -45,13 +44,11 @@ In this hands-on lab, the architecture flow includes several essential component
 
 # Getting Started with lab
  
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
- 
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/4-7.png)
+![Access Your VM and Lab Guide](../media/guide-0707.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -61,7 +58,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/aig2.png)
+![Explore Lab Resources](../media/env-0707.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -73,14 +70,15 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/aig3.png)
+![Use the Split Window Feature](../media/split-0707.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/aig4.png)
+![Manage Your Virtual Machine](../media/res-0707.png)
 
+<!--
 ## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
@@ -94,6 +92,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
    ![Manage Your Virtual Machine](../media/gext2.png)
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+-->
 
 ## Let's Get Started with Azure Portal
  
@@ -111,17 +110,17 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../media/pwd.png)
+     ![Enter Your Password](../media/pass-0707.png)
  
 4. If prompted to stay signed in, you can click **No**.
 
-    ![](../media/staysigned2.png)
+    ![](../media/stay-signed-0707.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
 
 ## Support Contact
  
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels explicitly tailored for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The **CloudLabs support team** is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels explicitly tailored for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
  
 Learner Support Contacts:
  
