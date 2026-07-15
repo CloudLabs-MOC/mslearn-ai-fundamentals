@@ -67,11 +67,9 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod7-t1p3.png)
 
-1. Wait for your project to be created. It may take a few minutes. 
+1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
 
-1. In the **Welcome to new Microsoft Foundry** window, click the **X** icon in the top-right corner to close the welcome screen.
-
-    ![](./media/mod01-p2t1p6.png)
+    ![](./media/july26-lab5t1p1.png)
 
 1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 

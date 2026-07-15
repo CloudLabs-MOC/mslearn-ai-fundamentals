@@ -63,6 +63,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod7-t1p3.png)
 
+1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
+
+    ![](./media/july26-lab5t1p1.png)
+
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
     ![](./media/ai901-l4-3.png)
@@ -129,17 +133,17 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/lab5a-e1t2p9.png)
 
-1. In the left pane, update the **Instructions** field to: `You are an AI cooking assistant who helps chefs with recipes.`
+1. In the left pane, update the **Instructions** field to: `You are an AI assistant that helps people identify vintage computer hardware.`
 
-    ![](./media/newlab5a-e1t2p9.png)
+    ![](./media/july26-lab5t1p2.png)
 
 1. In the chat pane, click on the **Attach files (1)** icon and then in the Open window, select **image1 (2)** from the folder you extracted earlier and then click on **Open (3)**. The image will be added to the prompt area.
 
     ![](./media/newlab5a-e1t2p10.png)
 
-1. Enter a prompt such as `What recipes can I use this in?`, then press **Enter** to submit it.
+1. Enter a prompt such as `What can you tell me about this?`, then press **Enter** to submit it.
 
-    ![](./media/lab5a-e1t2p12.png)
+    ![](./media/july26-lab5t1p3.png)
 
     >**Note:** If the error `ERR_BAD_REQUEST: The provided data does not match the expected schema` is returned, try switching to the Classic portal by de-selecting the New Foundry option. In the classic portal, select **Playground (1)** from the left pane and then select the **Try the Chat playground (2)**.
 
@@ -147,9 +151,11 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
 1. Review the response, which should include relevant recipe suggestions for the image you uploaded.
 
-    ![](./media/lab5a-e1t2p13.png)
+    ![](./media/july26-lab5t1p4.png)
 
-1. Submit prompts that include the other images, such as `How should I cook this?` or `What desserts could I make with this?`
+    ![](./media/july26-lab5t1p5.png)
+
+1. Submit prompts that include the other images, such as `What is this?` or `Tell me about this.`
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -212,9 +218,9 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
     ![](./media/newlab5a-e1t2p13.png)
 
-1. On the Models page, click on **Deploy (1)** drop down and then select **Deploy a base model (2)** to open the model catalog.
+1. On the Models page, click on **Deploy a base model** to open the model catalog.
 
-    ![](./media/ai901-l5-1(19).png)
+    ![](./media/july26-lab5t1p6.png)
 
 1. In the **Collections** drop-down list, select **Direct from Azure (1)**, and in the **Inference tasks** drop-down list, select **Text to image (2)**. Then view the available models for image generation.
 
@@ -224,25 +230,21 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
     >**Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
-1. Select the **FLUX.2-pro** or **FLUX.1-Kontext-pro** model.
+1. Select the **FLUX.2-pro** or **gpt-image-1-mini** model.
 
-    ![](./media/newlab5a-e1t2p15.png)
+    ![](./media/july26-lab5t1p7.png)
 
-    >**Note:** If you are unable to deploy the model in your subscription, try one of the other image-generation models like `FLUX.2-pro`.
+1. On the **gpt-image-1-mini** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
-1. On the **FLUX.1-Kontext-pro** page, click on **Deploy (1)** and then select **Default settings (2)**.
-
-    ![](./media/lab5a-e1t3p5.png)
-
-    > **Note:** If the **Deploy Flux.1-Kontext-pro** popup appears, select **Agree and proceed** to continue.
+    ![](./media/july26-lab5t1p8.png)
 
 1. When the model has been deployed, it opens in the image playground.
 
-    ![](./media/lab5a-e1t3p6.png)
+    ![](./media/july26-lab5t1p9.png)
 
-1. Enter a prompt that describes the image you want, such as `A chef preparing a meal.`, then press **Enter** and review the generated image.
+1. Enter a prompt that describes the image you want, such as `A vintage PC with a CRT monitor.`, then press **Enter** and review the generated image.
 
-    ![](./media/lab5a-e1t3p7.png)
+    ![](./media/july26-lab5t1p10.png)
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -259,7 +261,7 @@ If you want to develop a client app or agent that generates images using your mo
 
 1. In the **Chat** pane, select the **</> View code** tab to view sample code.
 
-    ![](./media/lab5a-e1t3p8.png)
+    ![](./media/july26-lab5t1p11.png)
 
 1. Select the following code options:
     - **Language**: Python
@@ -271,29 +273,29 @@ If you want to develop a client app or agent that generates images using your mo
     ```python
     import base64
     from openai import OpenAI
-    
+
     endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
-    deployment_name = "FLUX.1-Kontext-pro"
+    deployment_name = "your-text-to-image-model-deployment"
     api_key = "<your-api-key>"
-    
+
     client = OpenAI(
         base_url=endpoint,
         api_key=api_key
     )
-    
+
     img = client.images.generate(
         model=deployment_name,
         prompt="A cute baby polar bear",
         n=1,
         size="1024x1024",
     )
-    
+
     image_bytes = base64.b64decode(img.data[0].b64_json)
     with open("output.png", "wb") as f:
         f.write(image_bytes)
     ```
 
-    ![](./media/lab5a-e1t3p9.png)
+    ![](./media/july26-lab5t1p12.png)
 
 ## Task 4: Use a generative AI model to create video
 
@@ -301,11 +303,11 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. Use the **back** arrow next to the image-generation model header to view the model deployments in your project.
 
-    ![](./media/lab5a-e1t4p1.png)
+    ![](./media/july26-lab5t1p13.png)
 
-1. On the Models page, click on **Deploy (1)** drop down and then select **Deploy a base model (2)** to open the model catalog.
+1. On the Models page, click on **Deploy a base model** to open the model catalog.
 
-    ![](./media/ai901-l5-1(19).png)
+    ![](./media/july26-lab5t1p14.png)
 
 1. From the **Collections** drop-down, choose **Direct from Azure (1)**, and from the **Inference tasks** drop-down, select **Video generation (2)**. Then review the list of available video generation models.
 
@@ -329,9 +331,9 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
     ![](./media/ai901-l5-11.png)
 
-1. Enter a prompt that describes the video you want, such as `A chef in a busy kitchen.`, then press **Enter** and review the generated result.
+1. Enter a prompt that describes the video you want, such as `A retro computer game.`, then press **Enter** and review the generated result.
 
-    ![](./media/newlab5a-e1t2p20.png)
+    ![](./media/july26-lab5t1p15.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  

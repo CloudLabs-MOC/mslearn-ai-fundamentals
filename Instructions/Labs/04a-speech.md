@@ -64,6 +64,10 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod7-t1p3.png)
 
+1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
+
+    ![](./media/july26-lab5t1p1.png)
+
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
     ![](./media/ai901-l4-3.png)
