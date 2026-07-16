@@ -1,8 +1,10 @@
 # Lab: Explore generative AI
 
+### Estimated timing: 60 Minutes
+
 ## Lab Overview
 
-In this lab, you'll explore how generative AI models can be used through interactive chat and developer tools. The goal of this lab is to understand how system prompts influence responses, how grounding models with external data improves answer relevance, and how developers can build AI-powered applications using OpenAI-compatible APIs in Python.
+In this lab, you'll explore the fundamentals of generative AI using interactive browser-based applications. You'll interact with a language model in Chat Playground, enhance its capabilities with web and file search tools, and learn how developers integrate AI models into applications by using the OpenAI Python SDK.
 
 ## Lab Objectives
 
@@ -18,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Chat with a model
 
-Let's start by using a chat interface to submit prompts to a generative AI model. In this exercise, we'll use a small language model that is useful for general chat solutions in low bandwidth scenarios.
+In this task, you'll interact with a generative AI model in Chat Playground, modify the system prompt, and observe how prompts and conversation history influence the model's responses.
 
 1. On your virtual machine, click on the **Microsoft Edge** icon as shown below:
 
@@ -56,9 +58,7 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
 ## Task 2: Extend the model's capabilities with tools
 
-Generative AI is the foundation for *agentic* solutions; in which AI agents can assist you and act on your behalf. To accomplish this, agents need *tools* that allow them to access specific knowledge and perform tasks.
-
-In the case of our expenses assistant, we can equip the agent with tools that enable it to access relevant information beyond the data with which the model was trained.
+In this task, you'll add web search and file search tools to the AI model, enabling it to retrieve information from the web and uploaded documents to provide more accurate, context-aware responses.
 
 1. In the chat playground, at the top of the chat pane, use the **New chat (1)** (&#128172;) button to restart the conversation.
 
@@ -108,11 +108,9 @@ In the case of our expenses assistant, we can equip the agent with tools that en
 
     > **Note:** The small amount of data and the limited capabilities of the small models used in this exercise may result in some inaccurate responses; but the principle of *retrieving* contextual information, using it to *augment* the prompt, and *generating* responses based on the data is a common pattern in generative AI solutions known as *Retrieval Augmented Generation* (or *RAG*).
 
-## Task 2: Explore client code
+## Task 3: Explore client code
 
-You've seen how models and agents can be used in a pre-provided chat playground, but how do developers build apps and agents that submit prompts to models and process responses?
-
-One of the most commonly used application programming interfaces (APIs) used to develop apps that work with LLMs is the OpenAI API - and in particular the Python SDK for the OpenAI API.
+In this task, you'll explore a Python application that uses the OpenAI Responses API, update the system prompt, and run the application to interact with a generative AI model programmatically.
 
 1. Open a new browser tab, enter the following URL in the address bar, and then wait for the Python environment and model to finish loading.
 
@@ -217,6 +215,8 @@ One of the most commonly used application programming interfaces (APIs) used to 
 
 ## Summary 
 
-In this exercise, you explored a generative AI model in a chat playground. You've seen how a model's responses can be affected by changing the system prompt, configuring model parameters, and by adding data. Finally, you've explored how developers can build generative AI client applications through OpenAI-compatible APIs in Python.
+In this lab, you explored a generative AI model in a chat playground. You've seen how a model's responses can be affected by changing the system prompt, configuring model parameters, and by adding data. Finally, you've explored how developers can build generative AI client applications through OpenAI-compatible APIs in Python.
 
-The interface and techniques used in this exercise are similar to those in Microsoft Foundry portal; a platform for building AI apps and agents in the Microsoft Azure cloud. You can use the OpenAI SDK to connect to Microsoft Foundry endpoints and work with your models and agents there.
+The interface and techniques used in this lab are similar to those in Microsoft Foundry portal; a platform for building AI apps and agents in the Microsoft Azure cloud. You can use the OpenAI SDK to connect to Microsoft Foundry endpoints and work with your models and agents there.
+
+### You've successfully completed the hand's-on lab!

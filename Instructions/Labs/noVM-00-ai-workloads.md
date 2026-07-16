@@ -1,27 +1,34 @@
 # Lab: Explore AI workloads
 
+### Estimated timing: 60 Minutes
+
 ## Lab Overview
 
-In this lab, you'll explore common AI workloads through an interactive AI agent application focused on computing history and vintage computers. The goal of this lab is to understand how generative AI, AI agents, text analysis, speech recognition, computer vision, information extraction, and content safety work together to enable intelligent, multimodal AI experiences.
+In this lab, you will explore common AI workloads through a browser-based application. You'll interact with a generative AI model, use AI agents with tools, and experience text analysis, speech, computer vision, information extraction, and AI safety features. By the end of the lab, you'll understand how these AI capabilities work together to power modern AI applications.
 
 ## Lab Objectives
 
 In this lab, you will complete the following tasks:
 
 - Task 1: Open the Computing History agent
-- Task 2: Explore a generative AI model
-- Task 3: Explore an agent with tools
-- Task 4: Explore text analysis
-- Task 5: Explore computer speech (Read Only)
-- Task 6: Explore computer vision
-- Task 7: Explore information extraction
-- Task 8: Explore safety guardrails
 
-### Estimated timing: 60 Minutes
+- Task 2: Explore a generative AI model
+
+- Task 3: Explore an agent with tools
+
+- Task 4: Explore text analysis
+
+- Task 5: Explore computer speech (Read Only)
+
+- Task 6: Explore computer vision
+
+- Task 7: Explore information extraction
+
+- Task 8: Explore safety guardrails
 
 ## Task 1: Open the Computing History agent
 
-The Computing History agent is a simple example of an AI agent that provides a chat interface for exploring AI history and vintage computers.
+In this task, you'll launch the Computing History agent and initialize the AI models required for the exercises in this lab.
 
 > **Note**: The *Computing History agent* app is provided solely as a simple example of a chat-based agent for educational purposes. It is <u>not</u> a supported Microsoft product or service, and should not be relied on for critical work.
 
@@ -41,7 +48,7 @@ The Computing History agent is a simple example of an AI agent that provides a c
 
 ## Task 2: Explore a generative AI model
 
-Generative AI uses *large language models* (LLMs) to user *prompts*.
+In this task, you'll interact with a generative AI model by submitting prompts, asking follow-up questions, and observing how conversation context influences responses.
 
 1. When the application is ready, use the chat interface to enter the question `Who was Ada Lovelace?` and review the responses returned by the agent.
 
@@ -69,7 +76,7 @@ Generative AI uses *large language models* (LLMs) to user *prompts*.
 
 ## Task 3: Explore an agent with tools
 
-Agents are generative AI applications that go beyond basic chat functionality and support the use of *tools* to retrieve knowledge outside of the model's training data as well as to automate tasks.
+In this task, you'll explore an AI agent that uses built-in tools to retrieve information from the web and enhance its responses.
 
 1. In the Computing History app, use the **Restart conversation** (&#128172;) button to clear the conversation history.
 
@@ -100,7 +107,7 @@ Agents are generative AI applications that go beyond basic chat functionality an
 
 ## Task 4: Explore text analysis
 
-Text analysis is a subset of natural language processing, in which AI can apply various analytical techniques to summarize, categorize, and extract details from text.
+In this task, you'll use AI to analyze text by extracting key entities and generating concise summaries from provided content.
 
 1. In the Computing history application, use the **Restart conversation** (&#128172;) button to clear the conversation history.
 
@@ -130,7 +137,7 @@ Text analysis is a subset of natural language processing, in which AI can apply 
 
 ## Task 5: Explore computer speech (Read Only)
 
-*Speech recognition* enables AI to process spoken input, which *speech synthesis* enables it to vocalize output.
+In this task, you'll explore speech recognition and speech synthesis capabilities by interacting with the application using voice input.
 
 > **Note:** `In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.`
 
@@ -151,7 +158,7 @@ Text analysis is a subset of natural language processing, in which AI can apply 
 
 ## Task 6: Explore computer vision
 
-Computer vision uses image-based models to enable AI to interpret visual input.
+In this task, you'll upload images and use AI-powered computer vision to identify and describe the visual content.
 
 1. Open a new browser tab, enter the following URL in the address bar, and then download the **computers.zip** file.
 
@@ -204,7 +211,7 @@ Computer vision uses image-based models to enable AI to interpret visual input.
 
 ## Task 7: Explore information extraction
 
-Information extraction combines multiple AI workloads to analyze content and identify important data values. In this example, we'll use the Computing History app to analyze photographs of printed circuit boards (PCBs) and try to extract information from them.
+In this task, you'll analyze printed circuit board images and use AI to extract text and identify relevant information from them.
 
 1. In a new browser tab, download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer.
 
@@ -226,7 +233,7 @@ Information extraction combines multiple AI workloads to analyze content and ide
 
 ## Task 8: Explore safety guardrails
 
-Content safety is an important element of responsible AI. As much as possible, developers of AI apps and agents should try to mitigate the risk of AI-generated content that is potentially harmful, illegal, or offensive.
+In this task, you'll explore responsible AI by testing how the application handles unsafe or inappropriate prompts using built-in safety guardrails.
 
 1. In the Computing History application, use the **Restart conversation** (&#128172;) button to clear the conversation history.
 
@@ -248,4 +255,6 @@ Content safety is an important element of responsible AI. As much as possible, d
 
 ## Summary
 
-In this exercise, you explored common AI workloads in a simple example application. The application's functionality is limited, and does not reflect the kind of performance or capabilities you can expect in a production quality agent such as you would build with Microsoft Foundry; but it should serve to show the kinds of functionality you can achieve with AI.
+In this lab, you explored common AI workloads in a simple example application. The application's functionality is limited, and does not reflect the kind of performance or capabilities you can expect in a production quality agent such as you would build with Microsoft Foundry; but it should serve to show the kinds of functionality you can achieve with AI.
+
+### You've successfully completed the hand's-on lab!
