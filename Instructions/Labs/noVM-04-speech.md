@@ -1,5 +1,7 @@
 # Lab: Explore AI speech
 
+### Estimated timing: 30 Minutes
+
 ## Lab Overview
 
 In this lab, you'll interact with a generative AI model using speech. The goal of this lab is to explore speech-to-text (STT) and text-to-speech (TTS) functionality with a generative AI model.
@@ -13,8 +15,6 @@ In this lab, you will complete the following tasks:
 + Task 2: Configure Voice mode
 
 + Task 3: Use speech to interact with the model (Read Only)
-
-### Estimated timing: 60 Minutes
 
 ## Task 1: Open the Chat Playground app
 

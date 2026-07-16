@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this lab, you will explore common AI workloads through a browser-based application. You'll interact with a generative AI model, use AI agents with tools, and experience text analysis, speech, computer vision, information extraction, and AI safety features. By the end of the lab, you'll understand how these AI capabilities work together to power modern AI applications.
+In this lab, you will explore common AI workloads through a browser-based application. You'll interact with a generative AI model, use AI agents with tools, and experience text analysis, computer vision, information extraction, and AI safety features. By the end of the lab, you'll understand how these AI capabilities work together to power modern AI applications.
 
 ## Lab Objectives
 
@@ -18,13 +18,11 @@ In this lab, you will complete the following tasks:
 
 - Task 4: Explore text analysis
 
-- Task 5: Explore computer speech (Read Only)
+- Task 5: Explore computer vision
 
-- Task 6: Explore computer vision
+- Task 6: Explore information extraction
 
-- Task 7: Explore information extraction
-
-- Task 8: Explore safety guardrails
+- Task 7: Explore safety guardrails
 
 ## Task 1: Open the Computing History agent
 
@@ -135,28 +133,7 @@ In this task, you'll use AI to analyze text by extracting key entities and gener
     In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
     ```
 
-## Task 5: Explore computer speech (Read Only)
-
-In this task, you'll explore speech recognition and speech synthesis capabilities by interacting with the application using voice input.
-
-> **Note:** `In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.`
-
-1. In the Computing History application, use the **Restart conversation** (&#128172;) button to clear the conversation history.
-
-1. At the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "*Tell me about the history of voice computing*".
-
-    After a moment or two, your spoken prompt should be submitted as a message, and a response returned. The response should then be vocalized using speech synthesis.
-
-    > **Note**: Speech support for the browser-based application is based on the Web Speech library that is common in most modern browsers. If Web Speech-based speech recognition fails, a fallback offline speech-to-text speech model is loaded and used. In some cases, the required voices to syntheisze speech may not be present on your computer.
-
-1. Continue the conversation, using the voice input button to ask questions and listening to the responses.
-
-    **Suggestions for other prompts to try:**
-
-    - *Explain speech recognition*
-    - *How does speech synthesis work?*
-
-## Task 6: Explore computer vision
+## Task 5: Explore computer vision
 
 In this task, you'll upload images and use AI-powered computer vision to identify and describe the visual content.
 
@@ -209,7 +186,7 @@ In this task, you'll upload images and use AI-powered computer vision to identif
     - Non-computers
     - Printed circuit boards (PCBs)
 
-## Task 7: Explore information extraction
+## Task 6: Explore information extraction
 
 In this task, you'll analyze printed circuit board images and use AI to extract text and identify relevant information from them.
 
@@ -231,7 +208,7 @@ In this task, you'll analyze printed circuit board images and use AI to extract 
 
     You can also download images of circuit boards and try them, but the simple OCR implementation used in the browser-based application will likely produce poor results.
 
-## Task 8: Explore safety guardrails
+## Task 7: Explore safety guardrails
 
 In this task, you'll explore responsible AI by testing how the application handles unsafe or inappropriate prompts using built-in safety guardrails.
 
@@ -255,6 +232,6 @@ In this task, you'll explore responsible AI by testing how the application handl
 
 ## Summary
 
-In this lab, you explored common AI workloads in a simple example application. The application's functionality is limited, and does not reflect the kind of performance or capabilities you can expect in a production quality agent such as you would build with Microsoft Foundry; but it should serve to show the kinds of functionality you can achieve with AI.
+In this lab, you explored several common AI workloads using the Computing History agent. You interacted with a generative AI model, used AI-powered tools, analyzed text, identified images, extracted information from printed circuit boards, and observed how safety guardrails help promote responsible AI. These capabilities demonstrate how multiple AI workloads can be combined to build intelligent, context-aware applications.
 
 ### You've successfully completed the hand's-on lab!

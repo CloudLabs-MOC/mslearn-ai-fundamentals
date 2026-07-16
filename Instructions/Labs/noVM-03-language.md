@@ -1,5 +1,7 @@
 # Lab: Explore text analytics
 
+### Estimated timing: 60 Minutes
+
 ## Lab Overview
 
 In this lab, you will explore the text analytics capabilities of AI using browser-based applications. You will use the **Chat Playground** to generate concise summaries from text and the **Language Playground** to perform specialized language analysis tasks, including language detection and personally identifiable information (PII) extraction. By completing this lab, you will gain hands-on experience with common natural language processing (NLP) techniques and learn how AI can be used to analyze and process text efficiently.
@@ -9,9 +11,8 @@ In this lab, you will explore the text analytics capabilities of AI using browse
 In this lab, you will complete the following tasks:
 
 + Task 1: Use a generative AI model to summarize text
-+ Task 2: Use a specialized language analysis tool
 
-### Estimated timing: 15 Minutes
++ Task 2: Use a specialized language analysis tool
 
 ## Task 1: Use a generative AI model to summarize text
 
@@ -66,7 +67,7 @@ In this task, you will use the Language Playground to perform specialized text a
 
     > **Note**: The Language Playground app uses the same Phi 3.5-mini model as the Chat Playground app, with a fallback Basic mode that uses statistical text analysis techniques to perform language detection and personally identifiable information (PII) redaction.
 
-### Detect language
+### Task 2.1: Detect language
 
 In this task, you will use the Language Detection analyzer to identify the primary language of sample and custom text. You will review the detection results and explore how AI can automatically determine the language of a document.
 
@@ -114,7 +115,7 @@ In this task, you will use the Language Detection analyzer to identify the prima
 
     > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
 
-### Identify PII in text
+### Task 2.2: Identify PII in text
 
 In this task, you will use the Text PII Extraction analyzer to detect personally identifiable information (PII), such as names, phone numbers, email addresses, and street addresses, in sample and custom text. You will review the detected PII results to understand how AI identifies sensitive information.
 
@@ -139,9 +140,7 @@ In this task, you will use the Text PII Extraction analyzer to detect personally
    A customer named Mary Jones called from 021 946 0958 and asked us to send her documents to 42 Market Road, London, UK, SW1A 1AA.
     ```
     
-
     ![](./media/LAB-03-10.png)
-
 
 1. The model should generate a output of the text.
 
