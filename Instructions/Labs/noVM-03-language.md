@@ -1,132 +1,102 @@
 # Lab: Explore text analytics
 
-### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
-
 ## Lab Overview
 
-In this lab, you'll use AI natural language processing functionality to analyze text. The goal of this lab is to explore common applications of text analysis techniques.
+In this lab, you will explore the text analytics capabilities of AI using browser-based applications. You will use the **Chat Playground** to generate concise summaries from text and the **Language Playground** to perform specialized language analysis tasks, including language detection and personally identifiable information (PII) extraction. By completing this lab, you will gain hands-on experience with common natural language processing (NLP) techniques and learn how AI can be used to analyze and process text efficiently.
 
 ## Lab Objectives
 
 In this lab, you will complete the following tasks:
 
-+ Task 1: Use a generative AI model to analyze text
++ Task 1: Use a generative AI model to summarize text
 + Task 2: Use a specialized language analysis tool
 
 ### Estimated timing: 15 Minutes
 
-## Task 1: Use a generative AI model to analyze text
+## Task 1: Use a generative AI model to summarize text
 
-Let's start by using a chat interface to submit prompts to a generative AI model to perform common text analysis tasks. In this exercise, we'll use a small language model that is useful for general chat solutions in low bandwidth scenarios.
+In this task, you will use the Chat Playground to interact with a generative AI model and perform text summarization. You will provide a detailed review as input and use a prompt to generate a concise summary, demonstrating how generative AI can quickly extract the key points from large amounts of text.
 
-> **Note**: If your browser supports WebGPU, the chat playground uses the *Microsoft Phi 3 Mini* model running on your computer's GPU. If not, the *Microsoft Phi 2* model is used, running on CPU - with reduced response-generation quality. Performance for either model may vary depending on the available memory in your computer and your network bandwidth to download the model. After opening the app, use the **?** (*About this app*) icon in the chat area to find out more.
+1. On your virtual machine, click on the **Microsoft Edge** icon as shown below:
+
+    ![](./media/lab1-07-0.png)
 
 1. In a web browser, open the **[Chat Playground](https://aka.ms/chat-playground)** at `https://aka.ms/chat-playground`.
+
 1. Wait for the model to download and initialize.
 
-    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is activated (which does not support the tasks in this exercise).
+    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is used.    
 
-### Task 1.1: Analyze sentiment
-
-Sentiment analysis is a common NLP task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
-
-1. In the chat playground, ensure either the **Phi 3 Mini** or **Phi 2** model is selected, and enter the following prompt (using SHIFT+ENTER for new lines if typing)
+1. In the pane on the left, change the default **Instructions** to:
 
     ```
-   Analyze the following review, and determine whether the sentiment is positive or negative:
-   ---
-   I stayed at the Hudson View Hotel in New York for four nights in November, and it exceeded every expectation. From the moment I arrived, the staff made the experience memorable.
-   Overall, the Hudson View Hotel made my trip to New York feel effortless and enjoyable. Highly recommended for anyone wanting friendly service and a great location.
-   ---
+   You are an AI assistant that analyzes and summarizes text.
     ```
-
-1. Review the response, which should include an analysis of the text's sentiment.
-
-    ![Screenshot of sentiment analysis results in the chat playground.](./media/lab3-t1.png)
-
-1. Enter the following prompt to analyze a different review:
-
-    ```
-   What about this one?
-   ---
-   I had a terrible stay at the Sunset Palms Hotel in September. Check‑in was slow, and most of the staff seemed overwhelmed and uninterested. Between the thin walls, unreliable Wi‑Fi, and general lack of cleanliness, I wouldn’t stay at Sunset Palms again.
-   ---
-    ```
-
-    You can experiment further by creating your own prompts. The results may vary due to the small language model used in this lightweight app.
-
-### Task 1.2: Extract named entities
-
-Named entities are the people, places, dates, and other important items mentioned in text.
+    ![](./media/LAB-03-1.png)
 
 1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
-1. Ensure either the **Phi 3 Mini** or **Phi 2** model is selected, and then enter the following prompt and review the results:
+
+    ![](./media/LAB-03-2.png)
+
+1. Enter the following prompt (you can press CTRL+ENTER for a new line):
 
     ```
-   List the places mentioned in this text:
-   ---
-   Welcome to the AI Tour!
-   We're looking forward to seeing you in New York, Boston, Seattle, or San Francisco in July!
-   See the website for dates and venue details!
-   ```
+   Summarize this review as a single, short paragraph:
 
-    The model should identify the specific places mentioned in the text.
-
-    ![Screenshot of named entity recognition results in the chat playground.](./media/lab3-t2.png)
-
-### Task 1.3: Summarize text
-
-Summarization is a way to distill the main points in a document into a shorter amount of text.
-
-1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
-1. Ensure either the **Phi 3 Mini** or **Phi 2** model is selected, and then enter the following prompt and review the results:
-
+   This AI training course provides a clear and engaging introduction to core concepts such as machine learning, neural networks, and generative AI, making it accessible even to learners with limited prior experience. The course consistently reinforces key ideas through practical examples and hands-on exercises, which helps learners build confidence while applying AI techniques in real-world scenarios.
+    
+   Another strength is the emphasis on modern tools and workflows, including prompt design and model evaluation, which are highly relevant for current industry needs. The instructors communicate complex topics in a simple, structured way, and the course materials are well organized to support progressive learning. I particularly appreciated how the course revisits important themes like model accuracy, responsible AI, and iterative improvement across multiple modules, reinforcing their importance.
+    
+   Overall, this course offers a highly practical and well-rounded learning experience for anyone looking to develop foundational and applied skills in AI.
     ```
+    ![](./media/LAB-03-3.png)
 
-   Summarize the following meeting transcript in a single paragraph
-   ---
-   Alex Chen: “We need an offsite location that’s easy to reach—Denver and Austin were my first thoughts.”
-   Priya Nair: “Austin’s appealing, but I’m worried about hotel availability and overall cost.”
-   Miguel Torres: “I checked a few options, and Las Vegas consistently comes out easier for flights and venues.”
-   Alex Chen: “That’s true—Vegas also gives us more flexibility than Denver or San Diego.”
-   Priya Nair: “San Diego would be nice, but when we compare logistics, Vegas clearly wins.”
-   Miguel Torres: “Exactly—it’s simpler and more scalable than the other options.”
-   Alex Chen: “Sounds like we’re aligned that Las Vegas is the best choice overall.”
-   Priya Nair: “Yes, I’m comfortable choosing Vegas over the other locations.”
-   Miguel Torres: “Agreed—let’s lock in Las Vegas for the offsite.”
-   ```
+1. The model should generate a summary of the text.
 
-    The model should generate a summary of the text.
+    ![](./media/LAB-03-4.png)
 
-    ![Screenshot of summarization results in the chat playground.](./media/lab3-t3.png)
 
 ## Task 2: Use a specialized language analysis tool
 
-While a large language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
+In this task, you will use the Language Playground to perform specialized text analysis. You will detect the language of input text and identify personally identifiable information (PII), such as names, phone numbers, email addresses, and street addresses, demonstrating how AI-powered language tools can analyze and protect sensitive information.
 
-1. In your web browser, open the **[Language Playground](https://aka.ms/language-app)** at `https://aka.ms/language-app`.
+1. In your web browser, navigate to the **Language Playground** app at `https://aka.ms/language-app`.
 
-    > **Note**: The Language Playground app uses statistical text analysis techniques to perform language detection and personally identifiable information (PII) redaction.
+1. Wait until the model is ready.
 
-### Task 2.1: Detect language
+    > **Note**: The Language Playground app uses the same Phi 3.5-mini model as the Chat Playground app, with a fallback Basic mode that uses statistical text analysis techniques to perform language detection and personally identifiable information (PII) redaction.
 
-In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
+### Detect language
 
-1. In the Language Playground app, ensure that the **Language detection** analyzer is selected.
-1. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect the language in which the sample is written.
+In this task, you will use the Language Detection analyzer to identify the primary language of sample and custom text. You will review the detection results and explore how AI can automatically determine the language of a document.
 
-    ![Screenshot of a detected language in the Language Playground](./media/lab3-t4.png)
+1. In the Language Playground app, ensure that the **Language detection (1)** analyzer is selected.
+
+1. In the **Input text (2)** list, select one of the provided sample documents, then select **Detect (3)** button to detect the language in which the sample is written.
+
+    ![](./media/LAB-03-5.png)
+
+    > **Tip**: You can switch between *light* and *dark* themes using the &#x263C; / &#x263E; toggle at the top right.
+
+1. The model should generate a output of the text.
+
+    ![](./media/LAB-03-6a.png)
 
 1. After reviewing the detected language details, use the **Edit** button to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
 
-    For example, enter the following input text and detect the language it is written in:
+    Enter the following input text and detect the language it is written in **(1)**, then select **Detect (2)**:
 
     ```
    ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
     ```
+    ![](./media/LAB-03-12.png)
+
+1. The model should generate a output of the text.
+
+    ![](./media/LAB-03-7.png)
 
 1. Experiment with input of your own. The Language Playground app is designed to support detection of the following languages:
 
@@ -144,25 +114,38 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
     > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
 
-### Task 2.2: Identify PII in text
+### Identify PII in text
 
-To comply with privacy policies and laws, organizations often need to detect and redact personally identifiable information (PII) such as names, addresses, phone numbers, email addresses, and other personal details.
+In this task, you will use the Text PII Extraction analyzer to detect personally identifiable information (PII), such as names, phone numbers, email addresses, and street addresses, in sample and custom text. You will review the detected PII results to understand how AI identifies sensitive information.
 
-1. In the Language Playground app, select the **Text PII extraction** analyzer.
-1. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect PII values in the text.
+1. In the Language Playground app, select the **Text PII extraction (1)** analyzer.
 
-    ![Screenshot of a detected PII in the Language Playground](./media/lab3-t5.png)
+1. In the **Input text (2)** list, select one of the provided sample documents, then select **Detect (3)** button to detect PII values in the text.
+
+    ![](./media/LAB-03-8.png)
+
+1. The model should generate a summary of the text.
+
+    ![](./media/LAB-03-9.png)
 
 1. After reviewing the detected PII details, use the **Edit** button to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
 
-    For example, enter the following input text and detect any PII it contains:
+    Enter the following input text and detect any PII it contains **(1)**, then select **Detect (2)**:
 
     ```
    A customer named Mary Jones called from 021 946 0958 and asked us to send her documents to 42 Market Road, London, UK, SW1A 1AA.
     ```
+    
+
+    ![](./media/LAB-03-10.png)
+
+
+1. The model should generate a output of the text.
+
+    ![](./media/LAB-03-11.png)
 
 1. Experiment with input of your own. The Language Playground app is designed to support detection of the following types of PII:
 
@@ -175,6 +158,6 @@ To comply with privacy policies and laws, organizations often need to detect and
 
 ## Summary
 
-In this exercise, you explored the use of a AI to analyze text, using NLP functionality in browser-based apps.
+In this lab, you explored AI-powered text analytics using browser-based applications. You used the Chat Playground to summarize text with a generative AI model and the Language Playground to perform specialized language analysis tasks, including language detection and personally identifiable information (PII) extraction. Through these tasks, you learned how AI can analyze, summarize, and identify sensitive information in text.
 
-While the small models and statistical techniques in this exercise are sufficient to demonstrate the concepts, to perform high-quality language analytics at scale, you should use a cloud-based AI platform like Microsoft Foundry. Microsoft Foundry includes a wide range of generative AI models, many of which are extremely proficient at language processing tasks. Additionally, Azure Language in Microsoft Foundry tools offers a specialized service with APIs for common text analytics tasks.
+### You've successfully completed the hand's-on lab!
