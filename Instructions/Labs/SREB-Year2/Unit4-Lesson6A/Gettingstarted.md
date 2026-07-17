@@ -1,6 +1,6 @@
-# Getting Started with Introduction to Databases & Transportation Data
+# Getting Started with Large Manufacturing Dataset From Kaggle
 
-Welcome to your Introduction to Databases & Transportation Data workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
+Welcome to your Large Manufacturing Dataset From Kaggle Data workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  

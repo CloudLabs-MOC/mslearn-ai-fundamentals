@@ -1,6 +1,6 @@
-# Getting Started with Introduction to Databases & Transportation Data
+# Getting Started with Two-Class Classification (Predicting Traffic Congestion)
 
-Welcome to your Introduction to Databases & Transportation Data workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
+Welcome to your Two-Class Classification (Predicting Traffic Congestion) Data workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
