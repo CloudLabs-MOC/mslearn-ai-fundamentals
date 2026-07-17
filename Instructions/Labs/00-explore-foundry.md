@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this exercise, you'll create and explore a **Microsoft Foundry** project. You will learn how to navigate the Microsoft Foundry portal, review the underlying Azure resources associated with your project, and use built-in AI assistance to understand platform capabilities. You will also deploy a generative AI model from the model catalog, connect a client application using the project endpoint and API key, and explore multiple AI capabilities such as conversational AI, text analysis, speech, computer vision, information extraction, and safety guardrails through an interactive chat application.
+In this lab, you will create and explore a **Microsoft Foundry** project and become familiar with the Microsoft Foundry development experience. You will provision a project, examine its associated Azure resources, and understand the relationship between a Foundry parent resource and its child projects. You will explore the Microsoft Foundry portal, use the built-in AI assistant to learn about platform capabilities, deploy a generative AI model from the model catalog, and connect a client application using your project endpoint and API key. Finally, you will interact with the deployed model to explore conversational AI, text analysis, speech, computer vision, information extraction, and built-in AI safety guardrails.
 
 ## Lab Objectives
 
@@ -95,7 +95,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
 ## Task 2: View project and resources 
 
-In this task, you will explore the Azure resources associated with your Microsoft Foundry project. You will locate the parent Foundry resource in the Azure portal, view the relationship between the resource and its child project using the Resource Visualizer, and understand how Foundry projects are implemented as Azure resources.
+In this task, you will explore the Azure resources that make up a Microsoft Foundry project. You will identify the relationship between a Foundry parent resource and its child project, examine the associated resources available in the Azure portal, and understand how Microsoft Foundry projects are organized and managed within an Azure subscription.
 
 1. On the project home page, in the toolbar at the top left, select your project **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all resources (2)** to see all of the projects to which you have access.
 
@@ -337,6 +337,6 @@ Foundry Models by default are configured with guardrails that enforce content sa
 
 ## Summary
 
-In this lab, you created and explored a Microsoft Foundry project and became familiar with the Microsoft Foundry portal and its associated Azure resources. You used the built-in AI assistant to understand platform capabilities, navigated key areas used for developing AI solutions, and deployed a generative AI model from the model catalog. You then connected a client chat application to your Foundry resource using the project endpoint and API key, and explored multiple AI capabilities including conversational AI, text analysis, speech, computer vision, information extraction, and built-in safety guardrails.
+In this lab, you created a Microsoft Foundry project and explored the Microsoft Foundry portal and its underlying Azure resources. You examined how Foundry projects are organized within a parent Foundry resource, explored the portal's key capabilities, and used the built-in AI assistant to learn more about the platform. You then deployed a generative AI model from the model catalog and connected a client application using your project endpoint and API key. Finally, you interacted with the deployed model to explore a variety of AI capabilities, including conversational AI, text analysis, speech, computer vision, information extraction, and built-in responsible AI safety guardrails.
 
-### You've successfully completed the hand's-on lab!
+### You've successfully completed the hands-on lab!
