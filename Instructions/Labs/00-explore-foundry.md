@@ -11,7 +11,7 @@ In this exercise, you'll create and explore a **Microsoft Foundry** project. You
 In this lab, you will perform the following tasks:
 
 * Task 1: Create a project in Microsoft Foundry
-* Task 2: View Azure resources for Microsoft Foundry
+* Task 2: View project and resources 
 * Task 3: Explore the Microsoft Foundry portal
 * Task 4: Get AI assistance
 * Task 5: Deploy a model
@@ -93,45 +93,27 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
   <validation step="91c175c7-0028-444a-b325-f1c0a0b297fa" />
 
-## Task 2: View Azure resources for Microsoft Foundry
+## Task 2: View project and resources 
 
 In this task, you will explore the Azure resources associated with your Microsoft Foundry project. You will locate the parent Foundry resource in the Azure portal, view the relationship between the resource and its child project using the Resource Visualizer, and understand how Foundry projects are implemented as Azure resources.
 
-1. On the project home page, in the toolbar at the top left, select your project **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all projects (2)** to see all of the projects to which you have access.
+1. On the project home page, in the toolbar at the top left, select your project **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all resources (2)** to see all of the projects to which you have access.
 
-    ![](./media/mod01-p2t1p9.png)
+    ![](./media/lab1july26-t1p1.png)
 
-     Each project has a *parent* resource, in which services and configuration can be applied to multiple child projects.
+     Each project has a parent resource, in which services and configuration can be applied to multiple child projects. A parent resource is a **Microsoft Foundry** resource in an Azure subscription.
 
-1. Note the name of the parent resource for your project. 
+1. Select the parent resource for your project, and view its details.
 
-    ![](./media/ai901-l1-6.png)
+    ![](./media/lab1july26-t1p2.png)
 
-1. Then, open a new browser tab and navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com` and if prompted, sign in using your Azure credentials.
+    You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
 
-    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
-    - **Password:** <inject key="AzureAdUserPassword"></inject>
+    ![](./media/lab1july26-t1p3.png)
 
-1. In the Azure portal home page, in the search box at the top of the page, search for your Microsoft Foundry parent resource **(1)** and then select **(2)** the **Foundry** resource that matches your parent resource name to open it.
-
-    ![](./media/mod01-p2t1p11.png)
-
-1. In the page for your Foundry resource, from the left navigation pane, select the **Resource Visualizer** to view the relationship between the resource and its child project(s).
-
-    ![](./media/mod01-p2t1p12.png)
-
-1. Select the child project you created in this resource to open its page in the Azure portal.
-
-    ![](./media/mod01-p2t1p13.png)
-
-1. While most tasks to develop and manage AI projects can be performed in the **Microsoft Foundry** portal, it's important to understand that projects and the services they use are implemented as resources in Microsoft Azure; where they may be subject to enterprise governance and security policies.
-
-    ![](./media/mod01-p2t1p14.png)
-
-1. Close the browser tab containing the Azure portal and return to the Microsoft Foundry portal. 
-
-1. Then use the **back arrow** icon next to the **All projects** page header to return to the home page for your project.
+    >**Tip:** When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
 
 ## Task 3: Explore the Microsoft Foundry portal
 
