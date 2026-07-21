@@ -51,29 +51,21 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
-## Let's Get Started with Azure Portal
+## Let's Get Started with Power BI Portal
  
-1. On your virtual machine, click on the **Azure Portal** icon as shown below:
- 
-   ![Launch Azure Portal](../images/open-azure-portal.png)
+1. Open the **Microsoft Edge** browser.
 
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-       ![Enter Your Username](../images/sign-in-page.png)
- 
-3. Next, provide your password:
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-     ![Enter Your Password](../images/tap-password.png)
- 
-4. If prompted to stay signed in, you can click **No**.
+    ![](../images/launchedge.png)
 
-    ![](../images/Sign-in-no.png)
+1. Navigate to **Power BI** portal using the below URL:
 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **cancel tour**.
+    ```
+    https://app.powerbi.com/
+    ```
+
+1. Add your **Email (1)** - "<inject key="AzureAdUserEmail"></inject>" and click on **Submit (2)**.
+
+    ![](../images/L16-00.png)
 
 ## Support Contact
  
