@@ -4,15 +4,17 @@
 
 ## Lab Overview
 
-In this lab, you'll explore how generative AI models can be used through interactive chat and developer tools. The goal of this lab is to understand how system prompts influence responses, how grounding models with external data improves answer relevance, and how developers can build AI-powered applications using OpenAI-compatible APIs in Python.
+In this lab, you explore the capabilities of generative AI by interacting with a language model through a chat playground. You learn how system instructions influence model responses, enhance responses using web search and file-based knowledge, and understand Retrieval-Augmented Generation (RAG). Finally, you explore how developers use the OpenAI Python SDK to build AI-powered applications that interact with generative AI models through OpenAI-compatible APIs.
 
 ## Lab Objectives
 
 In this lab, you will complete the following tasks:
 
 + Task 1: Chat with a model
-+ Task 2: Ground responses with data
-+ Task 3: Explore client code
++ Task 2: Specify *instructions*
++ Task 3: Add a web search tool
++ Task 4: Add knowledge
++ Task 5: Explore client code
 
 ### Estimated timing: 15 Minutes
 
@@ -27,59 +29,104 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
     > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is used.
 
-1. When the model is ready, enter the prompt `What is expense management?`, and review the response (which may take some time to be generated).
+    When ready, the Chat Playground looks like this:
 
-    ![Screenshot of the chat playground.](./media/lab2-t1.png)
+      ![](./media/Lab2-task-1.png)
 
-1. In the pane on the left, in the **Instructions** text area, change the model's instructions to `You are an AI assistant that provides short, concise answers to expense-related questions.`
+1. When the model is ready, enter the prompt `Who was Ada Lovelace?`, and review the response (which may take some time to be generated).
 
-    Instructions, sometimes known as a *system prompt*, are used to provide the model with an overall context for its responses. You can use the system prompt to provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
+    ![Screenshot of the chat playground.](./media/Lab2-task-2.png)
 
-1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
+1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
 
-1. Now try the same prompt as before (`What is expense management?`) and review the output.
+    Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `Tell me more about her work with Charles Babbage.`, "her" is interpreted as referring to Ada Lovelace)
 
-1. Enter another prompt, such as `Tell about per-diem allowances.` and review the response.
-1. Now try a follow-up question: `How are they reimbursed?`
+    > **Note**: In *Basic* mode, the conversation history is not retained; so the follow up prompt results in a new Wikipedia query based on the keywords "Charles Babbage".
 
-    > **Note**: Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `How are they reimbursed?`, "they" is interpreted as relating to per-diem allowances).
+## Task 2: Specify *instructions*
 
-## Task 2: Ground responses with data
+To support specific use cases and behaviors, you should use *instructions* (often referred to as a *system prompt*) to guide the model to generate appropriate responses. You can use instructions to give the model a specific focus or role, and provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
 
-Generative AI is the foundation for *agentic* solutions; in which AI agents can assist you and act on your behalf. To accomplish this, agents need *tools* that allow them to access specific knowledge and perform tasks.
+1. In the model playground, at the top-right of the chat pane, use the **New chat** (💬) button to restart the conversation and remove the conversation history.
+1. In the pane on the left, in the **Instructions** text area, change the system prompt to:
 
-In the case of our expenses assistant, we need to provide a tool with access to the company's expenses policy documentation.
+    ```
+   You are an expert in the history of computing and AI. You provide succinct and concise responses.
+    ```
 
-1. Open a new browser tab, and view the **[expenses guide](https://aka.ms/expenses-txt)** at `https://aka.ms/expenses-txt`. We'll use this to ground the model, so it has some context for questions about expenses.
+1. Now enter a new user prompt related to computing history, such as `What can you tell me about ELIZA?`
 
-    > **Note**: This is a very small document for the purposes of this exercise. In a real scenario, an AI agent might have access to large volumes of data; usually in the form of a *vector index*.
+    Review the response, which should provide some relevant information.
 
-1. Save the **expenses.txt** file on your local computer.
-1. Return to the tab containing the chat playground, and in the pane on the left, expand the **Tools** section if it's not already expanded.
-1. Upload the **expenses.txt** file. The chat is automatically restarted.
-1. Enter the prompt `How do I submit a claim?` and view the response.
+1. Ask the follow-up question `How did it compare to modern LLMs?`
 
-    This time the response should be informed by the information in the expenses data source.
+## Task 3: Add a web search tool
 
-1. Try a few more expenses-related prompts: `How much can I spend on a taxi?`, `What about a hotel?` and `Can I claim the cost of my dinner?`
+So far, the model has answered questions based on the data with which it was trained. While this is useful, that leaves out a lot of current information on the web; which might help the model give more relevant answers.
 
-    **Note**: The small amount of data and the limited capabilities of the small models used in this exercise may result in some inaccurate responses; but the principle of *retrieving* contextual information, using it to *augment* the prompt, and *generating* responses based on the data is a common pattern in generative AI solutions known as *Retrieval Augmented Generation* (or *RAG*).
+We can use *tools* to give models access to external data sources, and to perform custom tasks. Let's add a tool that enables the model to search the Web for up-to-date information.
 
-## Task 3: Explore client code
+1. In the pane on the left, under the instructions, expand the **Tools** section if it is not already expanded.
 
-You've seen how models and agents can be used in a pre-provided chat playground, but how do developers build apps and agents that submit prompts to models and process responses?
+1. In the **Add** drop-down list, select **Web search** (<u>not</u> *File_search*).
+
+1. After adding the *Web search* tool, in the chat pane, enter the prompt `Find a vintage computer store near Seattle` (*or your local city!*) and review the response.
+
+    The model should have searched the Web for vintage computer stores near the specific city.
+
+    ![Screenshot of the chat playground with a search result.](./media/Lab2-task-3.png)
+
+## Task 4: Add knowledge
+
+The combination of the model's training data and a tool to search the web can often be enough to support a comprehensive, general-purpose chat agent. However, often an agent needs to work in the context of a particular business or scenario, in which there is specialized or proprietary information that it needs to reason over when responding.
+
+In this exercise, we'll give the model a *file search* tool with access to information about common manufacturer serial numbers that might be found on the printed circuit boards (PCBs) of vintage computers.
+
+1. Open a new browser tab, and view the **[PCB Info](https://aka.ms/pcb_info)** file at `https://aka.ms/pcb_info`. We'll use this to ground the model, so it has some context for questions about serial numbers printed on PCBs.
+
+    > **Note**: This is a very small document for the purposes of this exercise. In a real scenario, an AI agent might have access to large volumes of data; usually in the form of a *vector index*. In an enterprise solution, access to multiple sources of knowledge can be centralized through *Foundry IQ* - a tool in Microsoft Foundry built on *Azure AI Search*.  
+
+1. Save the **pcb_info.txt** file on your local computer, by creating the file in your local computer.
+
+1. Return to the tab containing the chat playground, and in the pane on the left, in the **Tools** section, add the **File search** tool (or select **Upload files**).
+
+1. Upload the **pcb_info.txt** file. The chat is automatically restarted.
+
+1. Enter the prompt `I have a printed circuit board with the "ASSY 250425" on it. What can you tell me about it?` and view the response.
+
+    This time the response should be informed by the information in the file.
+
+    ![Screenshot of the chat playground using the file search tool.](./media/Lab2-task-4.png)
+
+1. Try a few more prompts - for example, `What kind of computer does a PCB with "820-001A" come from?` or `What about "i386"?`.
+
+    When there's relevant information in the file, the model will use it to answer. If no information is found, the model will use its own training knowledge.
+
+    > **Note**: The small amount of data and the limited capabilities of the small models used in this exercise may result in some inaccurate or incomplete responses; but the principle of *retrieving* contextual information, using it to *augment* the prompt, and *generating* responses based on the data is a common pattern in generative AI apps and agents known as *Retrieval Augmented Generation* (or *RAG*).
+
+## Task 5: Explore client code
+
+You've seen how a model can be used in a pre-provided chat playground, but how do developers build apps and agents that submit prompts to models and process responses?
 
 One of the most commonly used application programming interfaces (APIs) used to develop apps that work with LLMs is the OpenAI API - and in particular the Python SDK for the OpenAI API.
 
 1. Navigate away from the Chat Playground app to the **[Model Coder](https://aka.ms/model-coder)** app at `https://aka.ms/model-coder` and wait for the Python environment and model to load.
 
-    > **Note**: As with the chat playground, the first time the model is loaded it may take a minute or so. If your browser supports WebGPU, the Microsoft Phi 3-mini model will be loaded using the WebLLM engine. Otherwise, the SmolLM2 model will be used in wllama, running in CPU mode.
+    As with the chat playground, the first time the model is loaded it may take a minute or so.
 
-    ![Screenshot of Model Coder](./media/lab2-t2.png)
+    > **Tip**: If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the **Mode** list.
+
+    ![Screenshot of Model Coder](./media/model-coder.png)
+
+    > **Tip**: You can switch between *light* and *dark* themes using the &#9681; icon at the top right.
 
     This app provides an in-browser sandbox with a Python library that encapsulates the most common classes in the OpenAI SDK. You'll use it to write and run real Python code that submits prompts to a local LLM running in the browser.
 
-1. When the model has loaded, ensure the **Blank Page** sample is selected and that there is no existing code in the **Editor** pane. Then add the following code to implement a simple AI agent that can help you categorize expenses:
+1. When the model has loaded, select the **Streaming (Responses API)** template, and view the code in the **Editor** pane.
+
+   The Model Coder app includes multiple examples of submitting prompts to a generative AI model. The *Streaming (Responses API)* example maintains conversation history and uses a *streaming* interface to maximize resposiveness by displaying partial responses as they're received from the model.
+
+1. Edit the code to change the **instructions** for the model to the same computing history related one you used in the chat playground (`You are an expert in the history of computing and AI. You provide succinct and concise responses`), as shown here:
 
     ```python
    # import namespace
@@ -91,7 +138,7 @@ One of the most commonly used application programming interfaces (APIs) used to 
             # Configuration settings 
             endpoint = "https://local/openai"
             key = "key123"
-            model_name = "local-llm"
+            model_name = "phi"
     
             # Initialize the OpenAI client
             openai_client = OpenAI(
@@ -99,16 +146,33 @@ One of the most commonly used application programming interfaces (APIs) used to 
                 api_key=key
             )
             
-            # Get a response to a prompt
-            input_text = input('\nAgent: Enter a question about expenses.\nYou: ')
-            response = openai_client.responses.create(
-                        model=model_name,
-                        instructions="""
-                        You are an AI assistant that provides short, concise answers to expense-related questions.
-                        """,
-                        input=input_text
-            )
-            print(f"Agent: {response.output_text}")
+            # Track responses
+            last_response_id = None
+            print("Enter a prompt (or type 'quit' to exit)")
+            while True:
+                input_text = input('You: ')
+                if input_text.lower() == "quit":
+                    print("Goodbye!")
+                    break
+                if len(input_text) == 0:
+                    print("Please enter a prompt:")
+                    continue
+    
+                # Get a response
+                stream = openai_client.responses.create(
+                            model=model_name,
+                            instructions="You are an expert in the history of computing and AI. You provide succinct and concise responses",
+                            input=input_text,
+                            previous_response_id=last_response_id,
+                            stream=True
+                )
+                print("Assistant:")
+                for event in stream:
+                    if event.type == "response.output_text.delta":
+                        print(event.delta, end="")
+                    elif event.type == "response.completed":
+                        last_response_id = event.response.id
+                print()
                 
     
         except Exception as ex:
@@ -124,18 +188,23 @@ One of the most commonly used application programming interfaces (APIs) used to 
 
     The code runs in the **Terminal** pane at the bottom of the screen (it may take a minute or so to run).
 
-1. When prompted, enter a question about expense categories; such as:
+1. When prompted, enter questions about computing history and view the responses.
 
-    ```
-   What's a purchasing card?
-    ```
+    Some suggested prompts to try:
 
-1. Wait for the response, and then review the answer that was returned.
+    - `Tell me about the Commodore 64`
+    - `What about the ZX Spectrum?`
+    - `Who was Grace Hopper?`
+    - `What was Alan Turing's contribution to AI?`
+
+    ![Screenshot of Model Coder with code running.](./media/model-coder-2.png)
 
     > **Note**: The model used in this app is a small language model with limited training data and a small context window. Responses may not be accurate. However, the point of the exercise is to explore the OpenAI SDK syntax to submit prompts and receive responses.
 
+1. When you're finished, enter `quit`.
+
 ## Summary
 
-In this exercise, you explored a generative AI model in a chat playground. You've seen how a model's responses can be affected by changing the system prompt, configuring model parameters, and by adding data. Finally, you've explored how developers can build generative AI client applications through OpenAI-compatible APIs in Python.
+In this lab, you explored a generative AI model in a chat playground. You've seen how a model's responses can be affected by providing instructions, tools, and knowledge. Finally, you've explored how developers can build generative AI client apps and agents through OpenAI-compatible APIs in Python.
 
 The interface and techniques used in this exercise are similar to those in Microsoft Foundry portal; a platform for building AI apps and agents in the Microsoft Azure cloud. You can use the OpenAI SDK to connect to Microsoft Foundry endpoints and work with your models and agents there.
