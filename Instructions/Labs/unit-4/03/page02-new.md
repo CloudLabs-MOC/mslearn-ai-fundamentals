@@ -129,7 +129,7 @@ In this task, you'll upload the `anomaly_data.csv` file and register it as a Dat
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-<validation step="b5ee7dd0-0dc9-4f9d-872e-48a9545daddf" />
+<validation step="3d02dc16-c8d2-473a-98ba-56cd0c659cb2" />
 
 ### Task 4: Load the Manufacturing Dataset
 
