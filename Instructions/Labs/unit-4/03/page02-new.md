@@ -19,7 +19,7 @@ In this lab, you will be able to complete the following tasks:
 
 ## Architecture diagram
 
-![](../images/unit4-lesson3.png)
+![](../../media/y1july26-archdiagram.png)
 
 ### Task 1: Create a Compute Instance
 
@@ -155,7 +155,7 @@ In this task, you'll authenticate your notebook session, install a required pack
 
 1. After the above command finishes running, select the **More actions (...) (1)** menu, and then select **Restart kernel (2)** to apply the package changes before continuing.
 
-   ![](../../media/y1july26-p1t1p23.png)
+   ![](<../../media/y1july26-p1t1p22(1).png>)
 
 1. On the **Restart kernel?** dialog, select **Restart**.
 
@@ -165,7 +165,7 @@ In this task, you'll authenticate your notebook session, install a required pack
 
    ![](../../media/y1july26-p1t1p24.png)
 
-1. Paste the following code into the notebook cell **(1)**, and then select the **Run** button **(2)** to execute the cell.
+1. Paste the following code into the notebook cell **(1)**, and then select the **Run** button **(2)** to execute the cell. This code connects the notebook to your Azure Machine Learning workspace, retrieves the registered **anomaly_data** Data Asset, loads the dataset into a pandas DataFrame, and displays the first five rows so you can verify that the data has been loaded successfully.
 
    ```python
    import pandas as pd
@@ -191,6 +191,8 @@ In this task, you'll authenticate your notebook session, install a required pack
    ```
 
    ![](../../media/y1july26-p1t1p25.png)
+
+   The output should display the first five rows of the anomaly_data dataset, confirming that the Data Asset was loaded successfully into the notebook.
 
 1. After executing the notebook cell, you should see a table similar to the following:
 
@@ -332,13 +334,13 @@ In this task, you'll save the prediction results to a CSV file and register them
 
 In this lab, you have completed the following tasks:
 
-Created a Compute Instance
-Created a Notebook
-Registered Our Dataset
-Loaded the Manufacturing Dataset
-Cleaned Our Data
-Trained an Isolation Forest Model
-Evaluated the Model
-Saved Our Results to Azure Blob Storage
+- Created a Compute Instance
+- Created a Notebook
+- Registered Our Dataset
+- Loaded the Manufacturing Dataset
+- Cleaned Our Data
+- Trained an Isolation Forest Model
+- Evaluated the Model
+- Saved Our Results to Azure Blob Storage
 
-## You have successfully completed the lab
+### You have successfully completed the lab
