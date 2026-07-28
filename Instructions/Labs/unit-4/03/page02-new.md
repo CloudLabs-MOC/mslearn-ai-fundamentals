@@ -66,7 +66,7 @@ In this task, you'll sign in to Azure Machine Learning Studio, open your existin
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-<validation step="a5f62ceb-23d9-4082-9f63-2b94da3ee1ed" />
+<validation step="4f66146e-17d0-450c-b290-c77cbe2af90a" />
 
 ### Task 2: Create a Notebook
 
