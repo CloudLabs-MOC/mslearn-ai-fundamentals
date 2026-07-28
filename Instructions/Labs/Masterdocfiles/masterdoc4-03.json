@@ -1,25 +1,24 @@
 [
-    {
-      "Name": "SREB",
-      "Language": "English",
-      "Files": [
-          {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/NancyGettingstartedpages/GettingStartedU4L03.md",
-          "Order": 1
-        },
-        {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/unit-4/03/page01.md",
-          "Order": 2
-        },
-        {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/unit-4/03/page02.md",
-          "Order": 3
-        },
-        {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/unit-4/03/page03.md",
-          "Order": 4
-        }
-      ]
-    }
+  {
+    "Name": "SREB",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/NancyGettingstartedpages/GettingStartedU4L03.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/unit-4/03/page01-new.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/unit-4/03/page02-new.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/unit-4/03/page03-new.md",
+        "Order": 4
+      }
+    ]
+  }
 ]
-  

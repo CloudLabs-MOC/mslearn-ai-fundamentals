@@ -1,8 +1,8 @@
-## Hands-On-Lab: Deploying PCA-Based Pipelines
+## Hands-On-Lab: Building an Anomaly Detection Notebook in Azure Machine Learning
 
-In this hands-on lab, you will build and deploy a machine learning pipeline in Azure Machine Learning Designer that detects anomalies in manufacturing sensor data using a technique called Principal Component Analysis (PCA).
+In this hands-on lab, you will build and evaluate a machine learning workflow in Azure Machine Learning Studio Notebooks that detects anomalies in manufacturing sensor data using a technique called Isolation Forest.
 
-You will begin by setting up an Azure ML workspace and uploading a dataset of machine sensor readings. Then, you'll clean the data, apply PCA-based anomaly detection, and score the dataset to identify unusual behavior. Finally, you'll export the model’s predictions to Azure Blob Storage, ensuring the results are saved for reporting, auditing, and future analysis.
+You will begin by creating a Compute Instance and a notebook, then register and load a dataset of machine sensor readings. Next, you'll clean the data, train an Isolation Forest model to identify unusual sensor behavior, and evaluate the model's predictions against known anomaly labels. Finally, you'll export the model's predictions to Azure Blob Storage as a new Data Asset, ensuring the results are saved for reporting, auditing, and future analysis.
 
 ## Lab Objectives
 
@@ -23,7 +23,7 @@ In this lab, you will be able to complete the following tasks:
 
 ### Task 1: Create a Compute Instance
 
-In this task you will set up an Azure Machine Learning workspace where all your machine learning assets and experiments will be organized and run. You will learn how to create a workspace in the Azure ML Studio, select the appropriate region and resource group, and navigate to the Designer interface to start building your pipeline.
+In this task, you'll sign in to Azure Machine Learning Studio, open your existing workspace, and create a Compute Instance - the cloud computer that will run your notebook, execute your Python code, and train your model.
 
 1. Open a new tab in the browser, right-click on the following link [Azure Machine Learning Studio](https://ml.azure.com/), then **Copy link** and paste it in a new browser tab to log in to **Azure Machine Learning Studio**.
 
@@ -70,6 +70,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ### Task 2: Create a Notebook
 
+In this task, you'll create a new notebook file named `anomaly_detection.ipynb` and connect it to your running Compute Instance and the **Python 3.10 - SDK v2** kernel, so it's ready to run the Python code used throughout the rest of this lab.
+
 1. Select **Notebooks (1)** from the left navigation pane, select **+ Files (2)**, and then choose **Create new folder (3)** to create a new folder for storing your notebook and related files.
 
    ![](../../media/y1july26-p1t1p8.png)
@@ -87,6 +89,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    ![](../../media/y1july26-p1t1p11.png)
 
 ### Task 3: Register the Dataset
+
+In this task, you'll upload the `anomaly_data.csv` file and register it as a Data Asset in your Azure Machine Learning workspace, giving it version control and a reusable reference that your notebook - and any future notebook - can retrieve without needing the original local file.
 
 1. Select **Data (1)** from the left navigation pane, ensure the **Data assets (2)** tab is selected, and then select **+ Create (3)** to create a new data asset for your machine learning workspace.
 
@@ -128,6 +132,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 <validation step="b5ee7dd0-0dc9-4f9d-872e-48a9545daddf" />
 
 ### Task 4: Load the Manufacturing Dataset
+
+In this task, you'll authenticate your notebook session, install a required package, and write Python code that retrieves the registered Data Asset and loads it into a pandas DataFrame, so it's ready to be cleaned and analyzed.
 
 1. Select **Notebooks (1)** from the left navigation pane, open the **anomaly_detection.ipynb (2)** notebook, and proceed to add the code required for the anomaly detection workflow.
 
@@ -194,6 +200,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ### Task 5: Clean the Dataset
 
+In this task, you'll check the dataset for missing values and create a cleaned copy of the data, preparing it for training the anomaly detection model.
+
 1. Select **+ Code** to add a new code cell below the current cell.
 
 1. Paste the following code into the notebook cell, and then select the **Run** button to execute the cell. This code checks the dataset for missing values, removes any rows containing missing data, creates a clean copy of the dataset, and displays the number of rows before and after the cleaning process.
@@ -213,6 +221,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    Since there are no missing values, the row count should remain unchanged.
 
 ### Task 6: Training the Isolation Forest Model
+
+In this task, you'll train an Isolation Forest model using scikit-learn to detect anomalies in the sensor readings, and generate an anomaly score for every observation in the dataset.
 
 1. Select **+ Code** to add a new code cell below the current cell.
 
@@ -252,6 +262,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ### Task 7: Ealuate the Model
 
+In this task, you'll compare the model's predictions against the known anomaly labels using a confusion matrix and classification report, so you can judge how accurate the model actually is before trusting its results.
+
 1. Select **+ Code** to add a new code cell below the current cell.
 
 1. Paste the following code into the notebook cell, and then select the **Run** button to execute the cell. This code compares the model's predictions with the actual anomaly labels, generates a confusion matrix and classification report, and displays key evaluation metrics such as true positives, false positives, true negatives, and false negatives.
@@ -285,6 +297,8 @@ In this task you will set up an Azure Machine Learning workspace where all your 
 
 ### Task 8: Export the Results
 
+In this task, you'll save the prediction results to a CSV file and register them as a new Data Asset in Azure Blob Storage, so the results can be reused in future notebooks, dashboards, or reporting workflows.
+
 1. Select **+ Code** to add a new code cell below the current cell.
 
 1. Paste the following code into the notebook cell, and then select the **Run** button to execute the cell. This code saves the prediction results as a CSV file, uploads the file to your Azure Machine Learning workspace, and creates a versioned **Data Asset** that can be reused in future notebooks and machine learning workflows.
@@ -313,3 +327,18 @@ In this task you will set up an Azure Machine Learning workspace where all your 
    ![](../../media/y1july26-p1t1p30.png)
 
    The output should display the message **"Prediction results successfully uploaded."**, indicating that the CSV file has been uploaded and registered as a new **Data Asset** in the Azure Machine Learning workspace.
+
+## Review
+
+In this lab, you have completed the following tasks:
+
+Created a Compute Instance
+Created a Notebook
+Registered Our Dataset
+Loaded the Manufacturing Dataset
+Cleaned Our Data
+Trained an Isolation Forest Model
+Evaluated the Model
+Saved Our Results to Azure Blob Storage
+
+## You have successfully completed the lab
