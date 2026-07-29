@@ -43,27 +43,11 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
    ![](./media/lab8new-t1p1.png)
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/mod7-t1p2.png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, close **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
 
@@ -137,7 +121,7 @@ In this task, you'll verify image input support in GPT-5 Mini and perform basic 
     https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg
     ```
 
-1. After attaching the image URL, enter the following prompt and press Enter to submit it. The model will analyze the image and provide details about the visible face, including its expression, estimated age range, and overall context:
+1. After attaching the image URL **(1)**, enter the following prompt and press **Enter (2)** to submit it. The model will analyze the image and provide details about the visible face, including its expression, estimated age range, and overall context:
 
     ```text
     Analyze all faces in this image. Describe expression, estimated age, and context.
@@ -167,7 +151,7 @@ In this task, you'll verify image input support in GPT-5 Mini and perform basic 
 
      ![](./media/lab09new-t1p4(3).png)
 
-10. Paste the following prompt and press **Enter** to submit
+10. Paste the following prompt **(1)** and press **Enter (2)** to submit
 
      ```text
      How many people are visible? Describe each person's expression and approximate age.
@@ -270,6 +254,7 @@ In this task, you'll create a Python application that uses the Azure AI Foundry 
     ```bash
     pip install --user azure-ai-projects azure-identity
     ```
+    ![](./media/lab8new-t1p18-bg.png)
 
     >**Note:** Note: If you receive a warning such as `ansible-core requires packaging, which is not installed`, you can safely ignore it for this lab.
 
