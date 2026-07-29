@@ -28,7 +28,7 @@ Suppose you need to extract data fields from scanned receipts to help automate a
     >
     > If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available modes at any time by using the Use Generative AI toggle.
 
-1. While you're waiting for the model to initialize, in a new browser tab, download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images` and  **[receipts.zip](https://aka.ms/receipts){:target="_blank"}** from `https://aka.ms/receipts` to your local computer. You'll use the the app to extract information from the images in these archives.
+1. While you're waiting for the model to initialize, in a new browser tab, download **[pcbs.zip](https://aka.ms/pcb-images)** from `https://aka.ms/pcb-images` and  **[receipts.zip](https://aka.ms/receipts)** from `https://aka.ms/receipts` to your local computer. You'll use the the app to extract information from the images in these archives.
 
 1. Return to the browser tab containing the Information Extractor app, which should look similar to this:
 

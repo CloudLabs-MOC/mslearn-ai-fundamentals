@@ -35,8 +35,7 @@ The Computing History agent is a simple example of an AI agent that provides a c
 
     The app downloads and initializes the required the *MobileNet* computer vision model and and *Phi 3.5-mini* model (if supported on your device). The first time you download the *Phi 3.5-mini* model, it may take several minutes. Subsequent downloads will be faster.
 
-
-    > **Tip**: After the app has initialized, on older or low-spec devices, you may get more reliable behavior by switching to Basic mode, even if GPU or CPU mode is available.
+    >**Tip**: After the app has initialized, on older or low-spec devices, you may get more reliable behavior by switching to Basic mode, even if GPU or CPU mode is available.
 
 ## Task 2: Explore a generative AI model
 

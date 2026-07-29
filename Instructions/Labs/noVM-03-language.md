@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Use a generative AI model to analyze text
 
-1. In a web browser, open the **[Chat Playground](https://aka.ms/chat-playground){:target="_blank"}** at `https://aka.ms/chat-playground`.
+1. In a web browser, open the **[Chat Playground](https://aka.ms/chat-playground)** at `https://aka.ms/chat-playground`.
 
 1. Wait for the model to download and initialize.
 
