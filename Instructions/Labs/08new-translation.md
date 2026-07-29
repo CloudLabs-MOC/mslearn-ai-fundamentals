@@ -42,27 +42,11 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
    ![](./media/lab8new-t1p1.png)
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/mod7-t1p2.png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
 
@@ -96,9 +80,19 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 
     ![](./media/lab8new-t1p3.png)
 
-1. Review the model card, then click **Deploy (1)** and select **Default settings (2)** to deploy the model using the recommended default configuration.
+1. On the Details Page, select **Custom Deploy** to deploy the model using the recommended default configuration.
 
     ![](./media/lab8new-t1p4.png)
+
+1. On the **Deploy gpt-5-mini** pane, 
+
+    - Rename the Deployment name to **gpt-5-mini (1)**
+    - Set token limit to **100000** **(2)**
+    - Click on **Deploy (3)**
+
+    ![](./media/lab8new-t1p4-bd.png)
+
+    > **Note:** Ensure that the model deployment name exactly matches the deployment created in your Azure AI Foundry resource. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
 
 1. When the model has been deployed, it will open in the model playground.
 
