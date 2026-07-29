@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this exercise, you'll use Microsoft Foundry to deploy a generative AI model and explore how guardrails help prevent harmful, offensive, or unsafe content. You will interact with a model using the default content filtering settings, test its responses to potentially harmful prompts, and create a custom guardrail with stricter content filtering policies. Through these activities, you'll learn how guardrails support responsible AI practices by controlling model inputs and outputs and reducing the risk of harmful content generation.
+In this hands-on lab, you'll use Microsoft Foundry to deploy a generative AI model and explore how guardrails help prevent harmful, offensive, or unsafe content. You will interact with a model using the default content filtering settings, test its responses to potentially harmful prompts, and create a custom guardrail with stricter content filtering policies. Through these activities, you'll learn how guardrails support responsible AI practices by controlling model inputs and outputs and reducing the risk of harmful content generation.
 
 ## Lab Objectives
 
@@ -39,31 +39,15 @@ In this task, you will create a Microsoft Foundry project. You will sign in to t
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
-   ![](./media/lab8new-t1p1.png)
+   ![](./media/lab8new-t1p1.png) 
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/mod7-t1p2.png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
 
-1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
+1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
 
     ![](./media/mod7-t1p4.png)
 
@@ -157,51 +141,23 @@ In this task, you will create a custom guardrail to strengthen content filtering
 
     ![](./media/mod7-t1p13.png)
 
-    The **Create guardrail controls** page is where you can create and apply content filters and other risk mitigation settings.
-
-1. Under **Add controls**, select the **Risk (1)** dropdown.
-
-    You can select the risk you specifically want to address with your content filter.
-
-1. Select the **Hate (2)** category, and then raise the blocking threshold for **Hate** content to the *Highest blocking* **(3)** level.
+1. On the **Create guardrail** page, scroll down, then select the **Hate (1)**, **Violence (2)**, **Sexual (3)**, and **Self-harm (4)**, and then raise the blocking threshold to the **Highest blocking** level. Next select **Next (5)**.
 
     ![](./media/mod7-t1p14.png)
 
-1. Select **Add control** to apply the new content filter settings to your model deployment.
-
-    ![](./media/mod7-t1p15.png)
-
-1. Since the content filter already has a setting for Hate risk mitigation, you'll be prompted to confirm that you want to replace the existing content filter with the new one. Select **OK** to confirm that you want to replace the existing content filter.
-
-    ![](./media/mod7-t1p16.png)
-
-1. Repeat the content filter configuration steps to create and apply new content filters for the **Violence**, **Sexual**, and **Self-harm** categories, setting the blocking threshold to the *Highest blocking* level for each category.
-
-    Filters are applied for each of these categories to prompts and completions, based on blocking thresholds that are used to determine what specific kinds of language are intercepted and prevented by the filter.
-
-1. Select **Next** when you've modified the content filter settings for all four risk categories.
-
-    ![](./media/mod7-t1p17.png)
-
-1. On the **Select agents and models** section, select **Add models (1)**, and then apply the new guardrail to the **gpt-5 (2)** model and click on **Save (3)**.
+1. On the **Select agents and models** section, select **gpt-5 (1)** model and click on **Next (2)**.
 
     ![](./media/mod7-t1p18.png)
 
-    ![](./media/mod7-t1p19.png)
-
-1. Now click on **Next**.
-
-    ![](./media/mod7-t1p20.png)
-
-1. On the **Review** section, provide the Guardrail name as **Guardrails<inject key="DeploymentID" enableCopy="false" /> (1)**, read the summary and then select **Submit (2)**, and wait for the guardrail to be saved.
+1. On the **Review** section, provide the Guardrail name as **Guardrails<inject key="DeploymentID" enableCopy="false" /> (1)**, read the defaults and then select **Create (2)**, and wait for the guardrail to be saved.
 
     ![](./media/mod7-t1p21.png)
 
-1. In the pane on the left, select **Models (1)** and then under **Deployments (2)** tab, select the **gpt-5 (3)** model to open it in the playground.
+1. In the pane on the left, select **Deployments (1)** and then under **Deployed models (2)** tab, select the **gpt-5 (3)** model to open it in the playground.
 
     ![](./media/mod7-t1p22.png)
 
-1. Select the model's **Details (1)** page, and sroll down to confirm that the new guardrail has been applied to the model **(2)**.
+1. Select the model's **Details (1)** page, and scroll down to confirm that the new **guardrail** has been applied to the model **(2)**.
 
     ![](./media/mod7-t1p23.png)
 
