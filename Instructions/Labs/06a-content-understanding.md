@@ -4,11 +4,11 @@
 
 ## Lab overview
 
-In this lab, you will explore how to use Microsoft Foundry and Azure AI Content Understanding to extract structured information from documents using AI-powered analyzers. You will begin by creating a Microsoft Foundry project and accessing the Content Understanding playground, where you'll explore different prebuilt analyzers such as OCR/Read, Layout, and Receipt.
+In this lab, you will explore how to use Microsoft Foundry and Azure AI Content Understanding to analyze and extract information from documents and images using prebuilt AI analyzers. You will begin by creating a Microsoft Foundry project and accessing the Content Understanding playground, where you'll work with analyzers such as OCR/Read, Layout, and Receipt.
 
-You will learn how each analyzer extracts progressively richer information—from raw text and document layout to structured business fields. You'll analyze sample documents, review extracted fields, markdown output, tables, and JSON results, and understand how Azure AI transforms unstructured content into structured information suitable for business applications.
+You'll learn how these analyzers extract progressively richer information-from raw text to document structure and business-specific fields-by analyzing sample documents as well as real-world PCB images. You'll review the extracted markdown, paragraphs, tables, fields, and JSON output to understand how Azure AI transforms unstructured content into structured information.
 
-Finally, you'll explore the automatically generated Python SDK sample code to understand how developers can integrate Azure AI Content Understanding into custom applications for automated document analysis and intelligent document processing.
+Finally, you'll examine the automatically generated Python SDK sample code to understand how developers can integrate Azure AI Content Understanding into their own applications for intelligent document processing and automated information extraction.
 
 ## Lab objectives
 
@@ -42,65 +42,47 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
-   ![](./media/lab8new-t1p1.png)
+   ![](./media/lab8new-t1p1.png) 
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/mod7-t1p2.png)
-
-        > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-        ![](./media/ai901-l5-1(2).png)
-
-        >**Note:** Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later. At the time of writing, Content Understanding is supported in these regions: `West US`,`Sweden Central`, and `Australia East`.
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
 
-1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
+1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
 
-    ![](./media/july26-lab5t1p1.png)
+    ![](./media/mod7-t1p4.png)
 
-1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
-
-      ![](./media/ai901-lab6a-t1p2.png)
-
-      > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
 
     ![](./media/ai901-l5-1(3).png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="d54b3abe-8f62-4f21-a451-21a3bef84bef" />
-
 ## Task 2: Use Content Understanding to extract information from documents
 
-In this task, you will use the Azure AI Content Understanding playground to analyze documents with different prebuilt analyzers. You'll compare how OCR/Read, Layout, and Receipt analyzers extract increasing levels of information-from plain text to document structure and business-specific fields-and review the generated markdown, tables, extracted fields, and raw JSON results.
+In this task, you will use the Azure AI Content Understanding playground to analyze documents and images with different prebuilt analyzers. You'll compare how the OCR/Read, Layout, and Receipt analyzers extract progressively richer information-from plain text to document structure and business-specific fields. You'll also analyze custom PCB images and review the generated markdown, extracted fields, tables, and raw JSON results to understand how Azure AI processes real-world content.
+
+### Task 2.1: Open the Content Understanding playground in Foundry portal
 
 1. In the new Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 
     ![](./media/ai901-lab6a-t2p1.png)
 
-1. On the **Build** page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Models (1)**. Then, at the top of the Models page, select **AI Services (2)**. 3. Select **Content Understanding (3)** to open the **Content Understanding** tool playground.
+1. On the **Build** page, in the menu on the left-side of the screen, select the **Services**.
 
-    ![](./media/july26-lab6t1p1.png)
+    ![](./media/july26(1)-lab6t1p1.png)
 
-4. Select **OCR/Read** from the **Content Understanding** playground page.
+    >**Note:** In some cases, you may see a slightly different interface in which the list of **AI services** can be found by selecting the **Deployments** page, and viewing its **AI Services** tab.
+
+1. Select **Content Understanding** to open the *Content Understanding* tool playground.
+
+    ![](./media/july26(1)-lab6t1p2.png)
+
+### Task 2.2: Use OCR to read text in an image
+
+Suppose you want to find information related to a piece of computer hardware or some other item with information printed on it. A first step might be to digitize the text so you can use it to look up details on the Internet or in an AI assistant. You can use an AI technique called optical character recognition (OCR) to "read" text in images.
+
+1. Select **OCR/Read** from the **Content Understanding** playground page.
 
     ![](./media/july26-lab6t1p2.png)
 
@@ -113,6 +95,32 @@ In this task, you will use the Azure AI Content Understanding playground to anal
     The `OCR/Read` analyzer extracts text from documents. However, sometimes it may be useful to extract additional information about the `layout` of the text in the document.
 
     ![](./media/july26-lab6t1p4.png)
+
+1. In a new browser tab, download **[pcbs.zip](https://aka.ms/pcb-images)** from `https://aka.ms/pcb-images`.
+
+1. Select the **open folder** icon next to the downloaded pcbs.zip file to open its location in File Explorer.
+
+    ![](./media/july26(1)-lab6t1p3.png)
+
+1. In File Explorer, right-click the downloaded **pcbs.zip file (1)** and select **Extract All... (2)** to extract the contents of the ZIP archive.
+
+    ![](./media/july26(1)-lab6t1p4.png)
+
+1. In the **Extract Compressed (Zipped)** Folders dialog, verify the destination folder **(1)** where the files will be extracted, and then select **Extract (2)** to extract the contents.
+
+    ![](./media/july26(1)-lab6t1p5.png)
+
+1. Select **Browse for files (1)**, navigate to the extracted **pcbs** folder **(2)**, select the **pcb-1** file **(3)**, and then select **Open (4)** to upload the document to the Content Understanding Playground.
+
+    ![](./media/july26(1)-lab6t1p6.png)
+
+1. Click on **Run analysis** to run analysis on the uploaded image and review the results.
+
+    ![](./media/july26(1)-lab6t1p7.png)
+
+1. Repeat the process to analyze the other PCB images you downloaded.
+
+    The *OCR/Read* analyzer extracts text from images. However, sometimes it may be useful to extract additional information about the *layout* of the text in the image.
 
 7. In the list of analyzers, click on the drop-down **(1)** and select **Layout (2)**.
 
@@ -127,6 +135,10 @@ In this task, you will use the Azure AI Content Understanding playground to anal
     Extacting the text and page layout is useful when the documents need to scan have a consistent, well-defined structure. In many cases though, you need to be able to identify which text values map to which data fields; so a more specific analyzer is needed.
 
     ![](./media/july26-lab6t1p7.png)
+
+### Task 2.3: Extract fields from documents
+
+Now suppose you need to extract data fields from scanned receipts to help automate an expense claim solution. You can use OCR to identify text and its location in images, and then use a generative AI model to associate individual text values with specific data fields - such as company names, phone numbers, dates, amounts, and so on.
 
 1. In the list of analyzer drop-down **(1)**, select **Procurement (2)**.
 
@@ -229,16 +241,17 @@ In this task, you will examine the Python SDK code generated by Microsoft Foundr
 
 ## Summary
 
-In this lab, you explored how Azure AI Content Understanding within Microsoft Foundry enables intelligent document processing by transforming unstructured documents into structured, machine-readable information.
+In this lab, you explored how **Azure AI Content Understanding** in **Microsoft Foundry** enables intelligent document and image processing by transforming unstructured content into structured, machine-readable information.
+You created a Microsoft Foundry project and used the **Content Understanding** playground to analyze both sample documents and real-world PCB images using multiple prebuilt analyzers.
+During the lab, you learned how different analyzers provide progressively richer insights:
 
-You learned how different analyzers provide progressively richer insights:
 
-OCR/Read extracts raw text from documents and images.
-Layout identifies document structure, including paragraphs, tables, and reading order.
-Receipt extracts structured business information such as key-value pairs and fields from business documents.
+* **OCR/Read** extracts text from documents and images.
+* **Layout** identifies the document structure, including paragraphs, tables, and reading order.
+* **Receipt** extracts structured business information such as key-value pairs and receipt fields.
 
-You also explored the generated Python SDK code and learned how developers can integrate Azure AI Content Understanding into custom applications to automate document analysis and build intelligent document processing solutions.
+Finally, you examined the automatically generated **Python SDK** sample code to understand how applications authenticate with Azure AI Content Understanding, submit documents for analysis, and consume the structured JSON results returned by the service.
 
-By completing this lab, you gained practical experience using Microsoft Foundry and Azure AI Content Understanding to extract text, document structure, and business-specific information for real-world AI-powered document processing scenarios.
+By completing this lab, you gained practical experience using Microsoft Foundry and Azure AI Content Understanding to analyze documents and images, extract meaningful information, and understand how these capabilities can be integrated into AI-powered applications for intelligent document processing. 
 
 ### Congratulations, you’ve successfully completed the hands-on lab!
