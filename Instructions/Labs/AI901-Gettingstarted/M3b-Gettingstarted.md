@@ -8,23 +8,21 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 ## Overview
 
-In this lab, you will explore Microsoft Foundry to perform text analysis using both generative AI models and specialized Azure Language tools. You will create a project, deploy a model, and use the chat playground to analyze text through prompts. You will then use purpose-built language analyzers to perform tasks such as language detection and PII extraction. The lab demonstrates how to combine flexible, prompt-based AI capabilities with structured analysis tools to build practical natural language processing (NLP) solutions.
-
+In this lab, you will explore text analysis capabilities in Microsoft Foundry using both generative AI models and specialized Azure Language services. You will create a Microsoft Foundry project, deploy a GPT model, and use the chat playground to summarize text through natural language prompts. You will then use Azure Language analyzers to detect the language of input text and identify personally identifiable information (PII). Finally, you will review the sample client code for integrating Azure Language capabilities into your own applications. This lab demonstrates how Microsoft Foundry combines generative AI with purpose-built language services to support real-world natural language processing (NLP) scenarios.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to manage AI resources, access models, and use built-in tools for text analysis.
+1. **Create a Microsoft Foundry project:** Set up a Microsoft Foundry project to provision AI resources and access models and AI services.
 
-2. **Deploy and interact with a generative AI model:** Deploy a model from the Foundry catalog and use the chat playground to perform text analysis through natural language prompts.
+2. **Deploy and interact with a generative AI model:** Deploy a GPT model from the Microsoft Foundry model catalog and use the chat playground to summarize text using natural language prompts.
 
-3. **Perform prompt-based text analysis tasks:** Use prompts to analyze sentiment, extract named entities, and generate summaries from text.
+3. **Use Azure Language analyzers for structured text analysis:** Detect the language of input text and identify personally identifiable information (PII) using specialized Azure Language services.
 
-4. **Use Azure Language analyzers for structured analysis:** Apply specialized tools to detect language and identify personally identifiable information (PII) in text.
+4. **Compare generative AI and specialized language services:** Understand when to use prompt-based AI models versus purpose-built language analyzers for different text analysis scenarios.
 
-5. **Explore integration options with sample code:** Review provided code samples to understand how to incorporate text analysis capabilities into applications using APIs and SDKs.
-
+5. **Explore integration options with sample code:** Review the sample Python code provided by Microsoft Foundry to understand how Azure Language capabilities can be integrated into custom applications.
 
 ## Pre-requisites
 
@@ -34,25 +32,25 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry supports text analysis using both generative AI models and specialized language services. The architecture highlights how different components work together to enable flexible and structured natural language processing workflows.
+This lab demonstrates how Microsoft Foundry combines generative AI models with specialized Azure Language services to support both flexible and deterministic text analysis workflows.
 
-1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, access the model catalog, deploy models, and utilize tools for building and testing solutions.
+1. **Microsoft Foundry Project:** A centralized workspace used to provision AI resources, manage model deployments, and access AI services and playgrounds within Microsoft Foundry.
 
-2. **Generative AI Model:** A model (such as GPT-5) deployed from the Foundry model catalog and used in the chat playground to perform text analysis tasks through natural language prompts.
+2. **Generative AI Model:** A GPT model (such as **gpt-5**) deployed from the Microsoft Foundry model catalog and used in the chat playground to perform prompt-based text summarization.
 
-3. **Chat Playground:** An interactive environment where users can test the deployed model, submit prompts, and evaluate responses for tasks like sentiment analysis, entity extraction, and summarization.
+3. **Chat Playground:** An interactive environment for testing prompts, configuring model instructions, and evaluating model responses through conversational interactions.
 
-4. **Prompt-Based Processing:** A flexible approach where natural language instructions guide the model to perform various text analysis tasks without requiring predefined schemas.
+4. **Azure Language Services:** Purpose-built language analyzers that provide structured and deterministic results for tasks such as language detection and personally identifiable information (PII) recognition.
 
-5. **Azure Language Services:** Purpose-built AI services available in Foundry that provide structured and deterministic outputs for tasks such as language detection and PII extraction.
+5. **Azure Language Playground:** An interface for interacting with Azure Language analyzers, enabling users to submit text, review analysis results, and experiment with different language processing capabilities.
 
-6. **AI Services Playground:** A dedicated interface to interact with Azure Language analyzers, allowing users to input text, run analyses, and review structured results.
+6. **Sample Client Code:** Automatically generated Python code that demonstrates how to authenticate and integrate Azure Language services into custom applications using the Azure AI Text Analytics SDK.
 
-7. **Client Integration:** Sample code and SDKs (such as Python) that enable integration of text analysis capabilities into applications, supporting automation and real-world AI solution development.
+7. **Application Integration:** Client applications consume Azure Language services through SDKs and REST APIs, enabling automated text analysis in enterprise applications, workflows, and AI-powered solutions.
  
 ## Architecture Diagram
 
-![](../media/lab3b-arch.png)
+![](../media/lab3b(1)-archdiagram.png)
 
 ## Explanation of Components
 

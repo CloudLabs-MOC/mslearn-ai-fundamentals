@@ -171,7 +171,7 @@ In this task, you'll upload a document as a knowledge source and configure a Fil
 
     >**Note:** If the document does not open in your browser, open the link in an InPrivate or Incognito browser window and download the file.
 
-1. Download **vintage_computer_identifiers.docx** to your local computer.
+1. Download **vintage_computer_identifiers.docx** to the labvm.
 
     ![](./media/lab2a(1)-p2t1p11.png)
 

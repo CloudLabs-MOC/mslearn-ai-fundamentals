@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this lab, you will use Microsoft Foundry to explore text analysis using both general-purpose AI models and specialized Azure Language tools. You’ll create a project in the Foundry portal, deploy a generative AI model, and use the chat playground to perform tasks such as sentiment analysis, named entity recognition, and text summarization. You will then use Azure Language analyzers to detect language and identify personally identifiable information (PII) in text. Through these hands-on activities, you’ll gain practical experience in applying different approaches to natural language processing (NLP) in real-world AI scenarios.
+In this lab, you will explore text analysis capabilities in Microsoft Foundry using both generative AI models and specialized Azure Language services. You'll create a Microsoft Foundry project, deploy a GPT model, and use the chat playground to summarize text through natural language prompts. You'll then explore Azure Language analyzers to detect the language of input text and identify personally identifiable information (PII). Finally, you'll review the sample client code for integrating Azure Language capabilities into your own applications. This lab demonstrates how Microsoft Foundry supports both flexible AI-powered text analysis and deterministic language processing for real-world natural language processing (NLP) scenarios.
 
 ## Lab Objectives
 
@@ -38,41 +38,19 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
-   ![](./media/lab8new-t1p1.png)
+   ![](./media/lab8new-t1p1.png) 
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/ai901-l5-1(1).png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
 
-1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
+1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
 
-    ![](./media/july26-lab5t1p1.png)
+    ![](./media/mod7-t1p4.png)
 
-1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
-
-   ![](./media/ai901-l3-02.png)
-
-   >**Note:** Close any quick start panes in order to access your project's Foundry home page.
-
-   > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
 
     ![](./media/ai901-l5-1(3).png)
 
@@ -83,11 +61,11 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="ba1316a1-e65a-4f8f-a945-c839e3cd6736" />
+  <validation step="3e8f2a7d-a870-414a-b4c1-c61de986d8f3" />
 
 ## Task 2: Explore a general-purpose AI model's text analysis capabilities 
 
-In this task, you’ll deploy a general-purpose AI model and use the chat playground to perform text analysis tasks through natural language prompts.
+In this task, you'll deploy a GPT model from the Microsoft Foundry model catalog and use the chat playground to summarize text using natural language prompts.
 
 1. From the Home page of the Microsoft Foundry portal, select **Find models** to access the Microsoft Foundry model catalog.
 
@@ -105,97 +83,53 @@ In this task, you’ll deploy a general-purpose AI model and use the chat playgr
 
     ![](./media/ai901-l3-04.png)
 
+    >**Note:** If the **Default settings** option is not available when deploying the model, click **Custom deploy (1)** instead. In the **Deploy** pane, enter **`gpt-5`** as the **Deployment name (2)**. If a warning appears indicating that the deployment name is already used by an instant model, you can safely ignore it for this lab. Leave the remaining settings at their default values, and then click **Deploy (3)** to create the deployment.
+    >
+    >![](./media/lab3b(1)-p2t1p1.png)
+    >
+    >![](./media/lab3b(1)-p2t1p2.png)
+
 1. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground, where you can test out the model's capabilities.
 
     ![](./media/ai901-l3-05.png)
 
-### Task 2.1: Analyze sentiment
+### Task 2.1: Summarize text
 
-In this task, you’ll use a generative AI model to analyze text and determine whether its sentiment is positive, neutral, or negative.
+A common requirement in text processing is to *summarize* a large body of text to distill it to its most salient points.
 
-**Sentiment analysis** is a common *natural language processing* (NLP) task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
+For example, suppose you've found an old article from a computer trade magazine, that includes a review of a home computer that was launched in the 1980s. Rather than reading the whole artice, you might want to generate a summary that highlights the key positives and negatives the reviewer found; and the overall conclusion.
 
-1. In the chat playground, enter the following prompt **(1)** and then select **Send (2)**:
+1. In the chat playground page, use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 
-    ```
-    Analyze the following review, and determine whether the sentiment is positive, neutral, or negative:
-    ---
-    I spent several nights at the Riverside Heights Hotel during a fall trip, and the experience was outstanding from start to finish. The welcome at arrival was warm and attentive, and the staff consistently went out of their way to be helpful. The overall atmosphere made my stay smooth and relaxing, and the location was extremely convenient for getting around the city. I left with a very positive impression and would confidently recommend this hotel to others looking for a pleasant and stress‑free stay.
-    ---
-    ```
+    ![](./media/lab3b(1)-p2t1p3.png)
 
-    ![](./media/ai901-l3-06.png)
-
-1. Review the response, which should include an analysis of the text's sentiment.
-
-    ![](./media/lab3b-p2t2p6.png)
-
-1. Enter the following prompt to analyze a different review:
+1. In the pane on the left, change the default **Instructions** to:
 
     ```
-    What about this one?
-    ---
-    I was disappointed with my visit to the Harbor View Inn earlier this year. The front desk process took much longer than expected, and staff responses to questions felt rushed and unhelpful. The room had ongoing maintenance issues, inconsistent internet access, and noticeable noise from the hallway throughout the night. Overall, the experience fell short of expectations, and I would not choose to stay there again.        
-    ---
+   You are an AI assistant that analyzes and summarizes text.
     ```
 
-    ![](./media/lab3b-p2t2p7.png)
+    ![](./media/lab3b(1)-p2t1p4.png)
 
-1. You can experiment further by creating your own prompts. 
-
-### Task 2.2: Extract named entities
-
-In this task, you’ll identify and extract named entities such as people, locations, and other key elements from text using a generative AI model.
-
-**Named entities** are the people, places, dates, and other important items mentioned in text.
-
-1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
-
-    ![](./media/lab3b-p2t2p8.png)
-
-2. Enter the following prompt, and review the results:
+1. Enter the following prompt:
 
     ```
-    List the named entities mentioned in this text:
-    ---
-    Welcome to the Global Innovation Workshop!
-    We’re excited to host sessions in London, Toronto, Chicago, and Austin this spring.
-    Visit our event page for specific dates, venues, and city details.
-    ---
+   Summarize this review as a single short paragraph:
+
+   Commodore 64: A Strong Contender in the Home Computer Market
+
+   Commodore's long-awaited Commodore 64 has finally arrived on dealers' shelves, and first impressions suggest that the company may have another substantial success on its hands. Priced aggressively and boasting a full 64K of RAM, the machine offers specifications that would have seemed remarkable in a home computer only a short time ago. Its colourful graphics and impressive sound capabilities place it among the most capable entertainment-oriented systems currently available.
+
+   Particularly noteworthy is the SID sound generator, which produces effects and musical output far beyond what users have come to expect from machines in this price bracket. Software houses are already expressing strong interest in the platform, and the combination of advanced graphics and sound should make the Commodore 64 an attractive proposition for both game developers and serious hobbyists alike.
+
+   The machine is not without its shortcomings, however. The keyboard, while serviceable, lacks the solid feel of some competing systems, and Commodore's documentation will do little to reassure newcomers to computing. Furthermore, prospective purchasers may wish to consider the total cost of ownership, as disk drives and other peripherals remain relatively expensive. Nevertheless, the Commodore 64 enters the market as one of the most compelling home computers currently available and is likely to be a significant force in the months ahead.
     ```
 
-    The model should identify the specific places mentioned in the text.
+    The model should generate a summary of the review.
 
-    ![](./media/lab3b-p2t2p9.png)
+    ![](./media/lab3b(1)-p2t1p5.png)
 
-### Task 2.3: Summarize text
-
-In this task, you’ll generate concise summaries of longer text passages using a generative AI model.
-
-**Summarization** is a way to distill the main points in a document into a shorter amount of text.
-
-1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
-
-1. Enter the following prompt, and review the results:
-
-    ```
-    Summarize the following meeting transcript in a single paragraph
-    ---
-    Jordan Lee: “We should pick a retreat location that’s convenient for most people—Chicago and Nashville came to mind first.”
-    Anika Sharma: “Chicago is central, but the venue costs there can add up quickly.”
-    Carlos Ramirez: “I looked into a few alternatives, and Phoenix seems much easier when it comes to flights and space.”
-    Jordan Lee: “That makes sense—Phoenix does offer more flexibility than Chicago or Portland.”
-    Anika Sharma: “Portland would be enjoyable, but from a planning standpoint, Phoenix is simpler.”
-    Carlos Ramirez: “Exactly. It scales better and avoids some of the pricing issues.”
-    Jordan Lee: “So it sounds like Phoenix is our strongest option overall.”
-    Anika Sharma: “Yes, I’m comfortable choosing Phoenix over the other cities.”
-    Carlos Ramirez: “Agreed—let’s move forward with Phoenix for the retreat.”
-    ```
-
-    The model should generate a summary of the text.
-
-    ![](./media/lab3b-p2t2p10.png)
-
+    Large language models (LLMs) are built on machine learning techniques that have their origins in natural language processing and text analysis, so they're good at summarizing text, extracting named entities (such as people and place names), and classifying documents based on sentiment, topic, style, and other factors.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -207,21 +141,17 @@ In this task, you’ll generate concise summaries of longer text passages using 
 
 ## Task 3: Use a specialized language analysis tool
 
-In this task, you’ll explore Azure Language tools in Microsoft Foundry to perform structured and deterministic text analysis using purpose-built analyzers.
+In this task, you'll use Azure Language analyzers in Microsoft Foundry to detect the language of text, identify personally identifiable information (PII), and review sample code for integrating these capabilities into your own applications.
 
-While a language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
+1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build (1)**. Navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select the **Services (2)** page.
 
-The **Azure Language in Foundry Tools** provides purpose-built analyzers that use statistical techniques to return structured, deterministic results - ideal for consistent output in automated pipelines.
+    ![](./media/lab3b(1)-p2t1p6.png)
 
-1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
+    >**Note:** In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the Deployments page, and viewing its AI Services tab.
 
-    ![](./media/ai901-l3-07.png)
+1. Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
 
-2. On the **Build** page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments (1)**. Then, at the top of the **Deployments** page, select **AI Services (2)**. 
-
-    ![](./media/ai901-l3-08.png)
-
-    >**Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
+1. Note the available services; which include Azure Language services for language detection and PII redaction.
 
 ### Task 3.1: Detect language
 
@@ -231,11 +161,11 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
 1. From the list of AI services, select the **Azure Language - Language detection** analyzer.
 
-    ![](./media/ai901-l3-09.png)
+    ![](./media/lab3b(1)-p2t1p7.png)
 
 2. In the **Input text** list, select one of the provided sample documents **(1)**. Then use the **Detect (2)** button to detect the language in which the sample is written.
 
-    ![](./media/ai901-l3-10.png)
+    ![](./media/lab3b(1)-p2t1p8.png)
 
 3. After reviewing the detected language details, click on the **Edit** button icon to make the input text editable again. Now you can:
     
@@ -243,117 +173,120 @@ In scenarios where text could potentially be in one of multiple languages, the f
     - Type your own text.
     - Upload a text file.
 
-        ![](./media/ai901-l3-11.png)
+        ![](./media/lab3b(1)-p2t1p9.png)
 
-1. For example, enter the following input text and detect the language it is written in:
+    For example, suppose you encounter a vintage computer, and you're curious about its history. You find a label that contains the following text on the computer casing. Enter the text and detect the language it is written in:
 
     ```
-    ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
+    CPC 464
+    Art.-Nr.: 31020
+    Serien-Nr.: 464-87-041256
+    220–240 V ~ 50 Hz
+    40 W
+    Hergestellt in Korea
+    SCHNEIDER RUNDFUNKWERKE AG
+    Türkheim/Unterallgäu
+    Bundesrepublik Deutschland
     ```
 
-    ![](./media/lab3b-p2t3p6.png)
+    ![](./media/lab3b(1)-p2t1p10.png)
 
-4. Experiment with input of your own. 
-
-    > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
-
-5. Return to the list of AI services when you are done experimenting. You can click on the back button **(1)** at the top of the playground screen.
-
-    ![](./media/ai901-l3-12.png)
+    >**Note:**  If you want to investigate further, Foundry Tools includes a **Text Translator** service in the AI Services page; which you could use to translate the text.
 
 ### Task 3.2: Identify PII in text
 
-In this task, you’ll detect and extract personally identifiable information (PII) such as names, phone numbers, and addresses from text.
-
 To comply with privacy policies and laws, organizations often need to detect and redact **personally identifiable information (PII)** such as names, addresses, phone numbers, email addresses, and other personal details.
 
-1. In the list of AI services, select the **Azure Language - Text PII extraction** analyzer.
+1. On the language detection playground page, in the **Type (1)** drop-down list, select **Text PII Redaction (2)** (or return to the list of AI services and select **Azure Language - Text PII Redaction**).
 
-    ![](./media/ai901-l3-13.png)
+    ![](./media/lab3b(1)-p2t1p11.png)
 
-2. In the **Input text** list, select one of the provided sample documents **(1)**. Then use the **Detect (2)** button to detect PII values in the text.
+2. In the **Input text (1)** list, select one of the provided sample documents. Then use the **Detect (2)** button to detect PII values in the text.
 
-    ![](./media/ai901-l3-14.png)
+    ![](./media/lab3b(1)-p2t1p12.png)
 
-    ![](./media/ai901-l3-15.png)
-
-3. After reviewing the detected PII details, click on the **Edit** button to make the input text editable again. Now you can:
-
+3. After reviewing the detected PII details, use the **Edit** button to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
 
-1. For example, enter the following input text and detect any PII it contains:
+        ![](./media/lab3b(1)-p2t1p13.png)
+
+    For example, suppose you find the following invoice in the box of a vintage computer you have purchased:
 
     ```
-    Maria Garcia called from 020 7946 0958 and asked to send documents to 42 Market Road, London, UK, SW1A 1AA.
+   Tailspin Toys Ltd
+   Invoice
+   14 September 1984
+    
+   Customer:
+     Margaret Ellis
+     128 High Street, Reading, Berkshire RG1 2AB
+     Telephone: 021 685 4215
+    
+   Item: ZX Spectrum 48K home computer (includes power supply, RF lead, and user manual)
+   Price: £79.00
+   Payment received:  £79.00
     ```
 
-    ![](./media/lab3b-p2t3p11.png)
+    Enter this text and determine what personally identifiable information it contains.
 
-4. Experiment with input of your own. 
+    ![](./media/lab3b(1)-p2t1p14.png)
 
-    >**Note:** Azure Language can recognize an extensive list of PII. You can see the full list [here](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/concepts/entity-categories-list). A few of those entities include: 
-    >
-    >- People names
-    >- Email addresses
-    >- Phone numbers
-    >- Street addresses
+4. Experiment with input of your own. Azure Language can recognize an extensive list of PII. You can see the full list [here](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/concepts/entity-categories-list). A few of those entities include:
+
+    - People names
+    - Email addresses
+    - Phone numbers
+    - Street addresses
 
 ### Task 3.3: Review the sample code
 
-In this task, you’ll examine sample code for Azure Language capabilities to understand how to integrate text analysis features into your own applications.
+Foundry provides sample code for some Azure Language capabilities. You can use the sample code to begin creating your own client application.
 
-Foundry provides sample code for some Azure Language capabilities. You can use the sample code to begin creating your own client application. 
-
-1. Select the **Code** tab on the right to view sample code for PII identification. 
-
-    ![](./media/ai901-l3-16.png)
-
-    >**Note:** Below is the same sample code in Python for your reference. You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
+1. Select the **Code** tab on the right to view sample code for PII identification, which should be similar to this:
 
     ```python
-    key = "paste-your-key-here"
-    endpoint = "paste-your-endpoint-here"
-
-    from azure.ai.textanalytics import TextAnalyticsClient
-    from azure.core.credentials import AzureKeyCredential
-
-    # Authenticate the client using your key and endpoint 
-    def authenticate_client():
+   key = "<your-api-key>"
+   endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
+    
+   from azure.ai.textanalytics import TextAnalyticsClient
+   from azure.core.credentials import AzureKeyCredential
+    
+   # Authenticate the client using your key and endpoint 
+   def authenticate_client():
         ta_credential = AzureKeyCredential(key)
         text_analytics_client = TextAnalyticsClient(
-            endpoint=endpoint, 
-            credential=ta_credential
-        )
+                endpoint=endpoint, 
+                credential=ta_credential)
         return text_analytics_client
-
-    client = authenticate_client()
-
-    # Example method for detecting sensitive information (PII) from text 
-    def pii_recognition_example(client):
+    
+   client = authenticate_client()
+    
+   # Example method for detecting sensitive information (PII) from text 
+   def pii_recognition_example(client):
         documents = [
             "$documents"
         ]
-        
         response = client.recognize_pii_entities(documents, language="en")
         result = [doc for doc in response if not doc.is_error]
-        
         for doc in result:
             print("Redacted Text: {}".format(doc.redacted_text))
-            
             for entity in doc.entities:
                 print("Entity: {}".format(entity.text))
-                print("\tCategory: {}".format(entity.category))
-                print("\tConfidence Score: {}".format(entity.confidence_score))
-                print("\tOffset: {}".format(entity.offset))
-                print("\tLength: {}".format(entity.length))
-
-    pii_recognition_example(client)
+                print(" Category: {}".format(entity.category))
+                print(" Confidence Score: {}".format(entity.confidence_score))
+                print(" Offset: {}".format(entity.offset))
+                print(" Length: {}".format(entity.length))
+   pii_recognition_example(client)
     ```
+
+    ![](./media/lab3b(1)-p2t1p15.png)
+    
+    >**Note:** You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Summary
 
-In this exercise, you explored how to use Microsoft Foundry to perform text analysis using both generative AI models and specialized language tools. You deployed a general-purpose model and used it in the chat playground to analyze sentiment, extract entities, and summarize text. You then used Azure Language analyzers to detect language and identify PII, gaining experience with structured and deterministic text analysis techniques.
+In this lab, you created a Microsoft Foundry project and explored text analysis using both generative AI models and specialized Azure Language services. You deployed a GPT model to summarize text in the chat playground, used Azure Language analyzers to detect languages and identify personally identifiable information (PII), and reviewed sample code for integrating these capabilities into applications. This hands-on experience demonstrates how Microsoft Foundry combines the flexibility of generative AI with purpose-built language services to support a wide range of natural language processing (NLP) scenarios.
 
 ### Congratulations, you’ve successfully completed the hands-on lab!
