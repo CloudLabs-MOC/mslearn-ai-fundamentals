@@ -177,9 +177,9 @@ In this task, you'll upload a document as a knowledge source and configure a Fil
 
 1.  Return to the browser tab containing the **Agent Playground**. In the **Tools** section, click **Upload files (1)**, then select **browse for files (2)**. In the file picker, open the **Downloads (3)** folder, select the **vintage_computer_identifiers.docx (4)** file, and click **Open (5)**. Wait for the file to be indexed using the default index name. When the indexing process is complete, click **Attach** to add the knowledge index to the agent.
 
-    ![](./media/lab2a(1)-p2t1p12.png)
+      ![](./media/lab2a(1)-p2t1p12.png)
 
-    ![](./media/lab2a(1)-p2t1p13.png)
+      ![](./media/lab2a(1)-p2t1p13.png)
 
 1. In the model playground, at the top right of the chat pane, use the **New chat** button to restart the conversation.
 
