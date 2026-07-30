@@ -90,9 +90,9 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
     - Set token limit to **100000** **(2)**
     - Click on **Deploy (3)**
 
-    ![](./media/lab8new-t1p4-bd.png)
+        ![](./media/lab8new-t1p4-bd.png)
 
-    > **Note:** Ensure that the model deployment name exactly matches the deployment created in your Azure AI Foundry resource. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
+        > **Note:** Ensure that the model deployment name exactly matches. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
 
 1. When the model has been deployed, it will open in the model playground.
 
