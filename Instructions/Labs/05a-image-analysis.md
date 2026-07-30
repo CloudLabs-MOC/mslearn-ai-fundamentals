@@ -62,7 +62,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="598e92f9-f98b-427e-8997-510732cae1e8" />
+  <validation step="ac2b92a8-c87d-45e2-a7ed-853a7ec835e8" />
 
 ## Task 2: Use a generative AI model to analyze images
 
@@ -315,7 +315,9 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
     ![](./media/ai901-l5-10.png)
 
-    >**Note:** If you are unable to deploy the model in your subscription, try one of the other video-generation models.
+    >**Note:** If you are unable to deploy the model, create a new Microsoft Foundry project. From the Microsoft Foundry portal, select the **project selector (1)** at the top of the page, and then select **Create new project (2)**. On the Create a project pane, enter a Project name like **myproject-1-<inject key="DeploymentID" enableCopy="false" /> (3)**, verify that the **Foundry resource (4)** is automatically populated, leave the Set up recommended resources so I can explore everything Foundry has to offer option **disabled (5)**, and then select **Create (6)**. Once the project has been created successfully, proceed with the remaining steps in this task.
+    ![](./media/img2.png)
+    ![](./media/img3.png)
 
 1. On the **sora-2** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
