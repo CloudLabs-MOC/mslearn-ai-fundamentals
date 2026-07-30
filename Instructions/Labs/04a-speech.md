@@ -62,7 +62,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="5230c20d-4932-4abf-a2a4-82942f5fe2e1" />
+  <validation step="e6bbdd80-28ec-4643-b2df-3f0131d1c958" />
 
 ## Task 2: Create an agent
 
