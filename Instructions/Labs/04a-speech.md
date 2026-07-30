@@ -4,11 +4,11 @@
 
 ## Lab Overview
 
-In this lab, you will explore Microsoft Foundry to build and interact with a speech-enabled generative AI agent. You will create an agent, configure Azure Speech Voice Live to enable voice capabilities, and experiment with speech input and output in the agent playground. You will also review how system instructions influence responses and examine client code used to implement real-time voice interactions. This lab demonstrates how to integrate speech capabilities with generative AI to create interactive, voice-based experiences.
+In this hands-on lab, you will explore Microsoft Foundry to build and interact with a speech-enabled generative AI agent. You will create an agent, configure Azure Speech Voice Live to enable voice capabilities, and experiment with speech input and output in the agent playground. You will also review how system instructions influence responses and examine client code used to implement real-time voice interactions. This lab demonstrates how to integrate speech capabilities with generative AI to create interactive, voice-based experiences.
 
 ## Lab Objectives
 
-In this exercise, you will perform the following tasks:
+In this lab, you will perform the following tasks:
 
 - Task 1: Create a Microsoft Foundry project
 - Task 2: Create an agent
@@ -40,33 +40,13 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
    ![](./media/lab8new-t1p1.png)
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/ai901-l5-1(1).png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
-
-1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
-
-    ![](./media/july26-lab5t1p1.png)
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
@@ -82,7 +62,7 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="4c8b405f-1e52-4064-833b-c3b37cb5ba0b" />
+  <validation step="5230c20d-4932-4abf-a2a4-82942f5fe2e1" />
 
 ## Task 2: Create an agent
 
