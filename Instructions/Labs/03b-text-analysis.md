@@ -114,15 +114,11 @@ For example, suppose you've found an old article from a computer trade magazine,
 1. Enter the following prompt:
 
     ```
-   Summarize this review as a single short paragraph:
-
-   Commodore 64: A Strong Contender in the Home Computer Market
-
-   Commodore's long-awaited Commodore 64 has finally arrived on dealers' shelves, and first impressions suggest that the company may have another substantial success on its hands. Priced aggressively and boasting a full 64K of RAM, the machine offers specifications that would have seemed remarkable in a home computer only a short time ago. Its colourful graphics and impressive sound capabilities place it among the most capable entertainment-oriented systems currently available.
-
-   Particularly noteworthy is the SID sound generator, which produces effects and musical output far beyond what users have come to expect from machines in this price bracket. Software houses are already expressing strong interest in the platform, and the combination of advanced graphics and sound should make the Commodore 64 an attractive proposition for both game developers and serious hobbyists alike.
-
-   The machine is not without its shortcomings, however. The keyboard, while serviceable, lacks the solid feel of some competing systems, and Commodore's documentation will do little to reassure newcomers to computing. Furthermore, prospective purchasers may wish to consider the total cost of ownership, as disk drives and other peripherals remain relatively expensive. Nevertheless, the Commodore 64 enters the market as one of the most compelling home computers currently available and is likely to be a significant force in the months ahead.
+    Summarize this review as a single short paragraph:
+    Commodore 64: A Strong Contender in the Home Computer Market
+    Commodore's long-awaited Commodore 64 has finally arrived on dealers' shelves, and first impressions suggest that the company may have another substantial success on its hands. Priced aggressively and boasting a full 64K of RAM, the machine offers specifications that would have seemed remarkable in a home computer only a short time ago. Its colourful graphics and impressive sound capabilities place it among the most capable entertainment-oriented systems currently available.
+    Particularly noteworthy is the SID sound generator, which produces effects and musical output far beyond what users have come to expect from machines in this price bracket. Software houses are already expressing strong interest in the platform, and the combination of advanced graphics and sound should make the Commodore 64 an attractive proposition for both game developers and serious hobbyists alike.
+    The machine is not without its shortcomings, however. The keyboard, while serviceable, lacks the solid feel of some competing systems, and Commodore's documentation will do little to reassure newcomers to computing. Furthermore, prospective purchasers may wish to consider the total cost of ownership, as disk drives and other peripherals remain relatively expensive. Nevertheless, the Commodore 64 enters the market as one of the most compelling home computers currently available and is likely to be a significant force in the months ahead.
     ```
 
     The model should generate a summary of the review.
@@ -206,6 +202,7 @@ To comply with privacy policies and laws, organizations often need to detect and
     ![](./media/lab3b(1)-p2t1p12.png)
 
 3. After reviewing the detected PII details, use the **Edit** button to make the input text editable again. Now you can:
+
     - Select another sample.
     - Type your own text.
     - Upload a text file.
@@ -215,18 +212,16 @@ To comply with privacy policies and laws, organizations often need to detect and
     For example, suppose you find the following invoice in the box of a vintage computer you have purchased:
 
     ```
-   Tailspin Toys Ltd
-   Invoice
-   14 September 1984
-    
-   Customer:
-     Margaret Ellis
-     128 High Street, Reading, Berkshire RG1 2AB
-     Telephone: 021 685 4215
-    
-   Item: ZX Spectrum 48K home computer (includes power supply, RF lead, and user manual)
-   Price: £79.00
-   Payment received:  £79.00
+    Tailspin Toys Ltd
+    Invoice
+    14 September 1984
+    Customer:
+        Margaret Ellis
+        128 High Street, Reading, Berkshire RG1 2AB
+        Telephone: 021 685 4215
+    Item: ZX Spectrum 48K home computer (includes power supply, RF lead, and user manual)
+    Price: £79.00
+    Payment received:  £79.00
     ```
 
     Enter this text and determine what personally identifiable information it contains.
@@ -247,24 +242,24 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
 1. Select the **Code** tab on the right to view sample code for PII identification, which should be similar to this:
 
     ```python
-   key = "<your-api-key>"
-   endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
-    
-   from azure.ai.textanalytics import TextAnalyticsClient
-   from azure.core.credentials import AzureKeyCredential
-    
-   # Authenticate the client using your key and endpoint 
-   def authenticate_client():
+    key = "<your-api-key>"
+    endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
+
+    from azure.ai.textanalytics import TextAnalyticsClient
+    from azure.core.credentials import AzureKeyCredential
+
+    # Authenticate the client using your key and endpoint 
+    def authenticate_client():
         ta_credential = AzureKeyCredential(key)
         text_analytics_client = TextAnalyticsClient(
                 endpoint=endpoint, 
                 credential=ta_credential)
         return text_analytics_client
-    
-   client = authenticate_client()
-    
-   # Example method for detecting sensitive information (PII) from text 
-   def pii_recognition_example(client):
+
+    client = authenticate_client()
+
+    # Example method for detecting sensitive information (PII) from text 
+    def pii_recognition_example(client):
         documents = [
             "$documents"
         ]
@@ -278,7 +273,7 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
                 print(" Confidence Score: {}".format(entity.confidence_score))
                 print(" Offset: {}".format(entity.offset))
                 print(" Length: {}".format(entity.length))
-   pii_recognition_example(client)
+    pii_recognition_example(client)
     ```
 
     ![](./media/lab3b(1)-p2t1p15.png)
