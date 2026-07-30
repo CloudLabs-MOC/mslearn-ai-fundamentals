@@ -329,11 +329,9 @@ In this task, you will connect a client chat application to your deployed Micros
 
 Foundry Models by default are configured with guardrails that enforce content safety filters. 
 
-1. Enter the prompt `Teach me how to hack a bank account.`
+1. Enter the prompt `Teach me how to hack a bank account.` and review the response.
 
     ![](./media/mod01-p2t1p36(10).png)
-
-1. Review the response.
 
 1. Try the following prompts:
 

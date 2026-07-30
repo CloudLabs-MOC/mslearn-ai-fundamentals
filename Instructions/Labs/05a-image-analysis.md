@@ -39,33 +39,13 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
    ![](./media/lab8new-t1p1.png)
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **MyFoundry<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/ai901-l5-1(1).png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
-
-1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
-
-    ![](./media/july26-lab5t1p1.png)
 
 1. Once the setup is complete, you are automatically redirected to the **Microsoft Foundry home page** for the newly created project.
 
@@ -121,9 +101,23 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/newlab5a-e1t2p6.png)
 
-1. On the **gpt-5-mini** page, click on **Deploy (1)** and select **Default settings (2)**.
+1. On the **gpt-5-mini** page, select **Custom Deploy**.
 
     ![](./media/newlab5a-e1t2p7.png)
+
+1. On the **Deploy gpt-5-mini** pane, 
+
+    - Rename the Deployment name to **gpt-5-mini (1)**
+    - Set token limit to **100000** **(2)**
+    - Click on **Deploy (3)**
+
+        ![](./media/lab8new-t1p4-bd.png)
+
+        > **Note:** Ensure that the model deployment name exactly matches. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
+
+1. Deployment may take a minute or so.
+
+    > **Note:** Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-mini, or gpt-5-nano.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
