@@ -8,21 +8,21 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 ## Overview
 
-In this lab, you will explore Microsoft Foundry to deploy and interact with a generative AI model. You will use the chat playground to test prompts and experiment with system instructions to guide model behavior. You will then convert the model into an agent, enhance it with knowledge tools, and publish it for use in applications. This lab demonstrates how to manage AI resources, configure model behavior, and build an agentic AI solution that can be integrated into real-world applications.
+In this lab, you will explore Microsoft Foundry to build and enhance a generative AI agent. You will create a Microsoft Foundry project, deploy a GPT model, and interact with it using the chat playground. You'll customize the model's behavior with system instructions, extend its capabilities using Web Search and File Search tools, and save it as a reusable agent. Finally, you'll preview the agent and review the sample client code used to integrate it into applications. This lab demonstrates how to build, customize, and deploy intelligent AI agents using Microsoft Foundry.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to manage AI resources, access models, and build generative AI solutions.
+1. **Create a Microsoft Foundry project:** Set up a Microsoft Foundry project and provision the Azure resources required to build and manage AI solutions.
 
-2. **Deploy and interact with a generative AI model:** Deploy a model from the Foundry catalog and use the chat playground to test prompts and understand conversational behavior.
+2. **Deploy and interact with a generative AI model:** Deploy a GPT model from the Microsoft Foundry model catalog and use the chat playground to explore conversational AI capabilities.
 
-3. **Experiment with system prompts and instructions:** Apply and modify system prompts to control the model’s role, tone, and response scope for specific use cases.
+3. **Customize model behavior with system instructions:** Configure system instructions to define the model’s role, tone, and response boundaries for a specific use case.
 
-4. **Create and configure an agent:** Convert a model into an agent by encapsulating its instructions and settings to build a task-specific AI assistant.
+4. **Enhance the model using AI tools and custom knowledge:** Extend the model with Web Search for current information and File Search for domain-specific knowledge to improve response quality.
 
-5. **Enhance and use the agent in applications:** Add knowledge tools to improve response accuracy, publish the agent, and integrate it into applications using APIs or SDKs.
+5. **Create, preview, and integrate an AI agent:** Save the configured model as a reusable AI agent, preview its behavior, and review the sample client code required to integrate it into applications using the Azure AI Projects SDK.
 
 ## Pre-requisites
 
@@ -31,39 +31,41 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry enables end-to-end development of generative AI solutions, from model deployment to agent creation and integration. The architecture highlights how models, agents, and knowledge tools work together to deliver an AI-powered assistant experience.
+This lab demonstrates how Microsoft Foundry enables the end-to-end development of generative AI agents, from project creation and model deployment to agent configuration and application integration. The architecture illustrates how models, tools, and knowledge sources work together to deliver an intelligent, context-aware AI assistant.
 
-1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, including model deployments, agents, and tools, as well as to access the model catalog and playgrounds for testing.
+1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, including model deployments, agents, tools, and playgrounds for developing, testing, and managing AI solutions.
 
-2. **Generative AI Model:** A model (such as GPT-5-mini) deployed from the Foundry model catalog and used for interactive chat, prompt testing, and response generation.
+2. **Generative AI Model:** A GPT model (such as **gpt-5-mini**) deployed from the Microsoft Foundry model catalog and used to generate responses in the chat playground.
 
-3. **System Prompt Configuration:** Instructions applied to the model to define its role, behavior, and response constraints, enabling it to perform specific tasks effectively.
+3. **System Instructions:** Custom instructions that define the model's role, behavior, tone, and response boundaries, enabling it to perform specialized tasks.
 
-4. **Agent Configuration:** Encapsulates the model, system instructions, and settings into a reusable agent that behaves as a task-specific AI assistant.
+4. **AI Tools:** Built-in tools that extend the model's capabilities, including **Web Search** for retrieving current information from the internet and **File Search** for querying uploaded documents.
 
-5. **Knowledge Tools:** External data sources, such as uploaded documents (for example, `expenses_policy.docx`), that the agent can query to provide accurate and context-aware responses.
+5. **Knowledge Source:** A custom document (for example, **vintage_computer_identifiers.docx**) uploaded and indexed as a File Search knowledge source, allowing the agent to answer questions using domain-specific information.
 
-6. **Published Agent Endpoint:** A dedicated endpoint created when the agent is published, allowing it to be accessed independently of the Foundry project for production scenarios.
+6. **Agent Configuration:** A reusable AI agent that combines the deployed model, system instructions, and connected tools into a task-specific assistant that can be tested, reused, and shared.
 
-7. **Client Integration:** Applications connect to the published agent using APIs or SDKs (such as Python and the OpenAI Responses API) to enable real-time AI interactions within applications or enterprise solutions.
+7. **Client Integration:** Applications connect to the agent using the **Azure AI Projects SDK** and the **OpenAI Responses API**, enabling seamless integration of AI-powered experiences into custom applications and enterprise solutions.
 
 ## Architecture Diagram
 
-![](../media/lab2a-arch(1).png)
+![](../media/lab2a-archjuly26.png)
 
 ## Explanation of Components
 
-1. **Microsoft Foundry Project:** The project serves as the central workspace for managing AI resources in Microsoft Foundry. It enables you to organize model deployments, create agents, access the model catalog, and use playgrounds for testing and development.
+1. **Microsoft Foundry Project:** The project serves as the central workspace for developing and managing AI solutions in Microsoft Foundry. It provides access to model deployments, agents, tools, the model catalog, and playgrounds for testing and experimentation.
 
-2. **Generative AI Model:** This is the deployed model (for example, GPT-5-mini) used to power chat interactions in the playground. It generates responses based on user prompts and can be guided using system instructions and parameters.
+2. **Generative AI Model:** This is the deployed GPT model (for example, **gpt-5-mini**) that powers conversations in the chat playground. It generates responses based on user prompts and can be customized through system instructions and connected tools.
 
-3. **System Prompt (Instructions):** System prompts define the behavior and role of the model by providing clear instructions. They help control the tone, scope, and relevance of responses, ensuring the model aligns with specific use cases such as assisting with expense-related queries.
+3. **System Instructions:** System instructions define the model's role, behavior, tone, and response boundaries. They ensure the model responds consistently and remains focused on the intended domain, such as the history of computing and AI.
 
-4. **Agent Configuration:** An agent encapsulates the model, its instructions, and configuration settings into a reusable AI entity. For example, an `expenses-agent` can consistently assist users with expense-related questions based on defined behavior.
+4. **AI Tools:** AI tools extend the capabilities of the model beyond its built-in knowledge. In this lab, **Web Search** enables the model to retrieve up-to-date information from the internet, while **File Search** allows it to query uploaded documents for domain-specific knowledge.
 
-5. **Knowledge Tools:** Knowledge tools provide additional context to the agent by connecting it to external data sources. For instance, uploading `expenses_policy.docx` enables the agent to retrieve and use company policy information to generate accurate and context-aware responses.
+5. **Knowledge Source:** A custom document, such as **vintage_computer_identifiers.docx**, is uploaded and indexed as a knowledge source. The model uses this information to answer questions about vintage computer serial numbers, product identifiers, and other specialized data that is not part of its training.
 
-6. **Client Integration:** Applications interact with the published agent using APIs or SDKs (such as Python with the OpenAI Responses API). This enables integration into applications, bots, or enterprise solutions for real-time AI-driven assistance.
+6. **Agent Configuration:** An agent combines the deployed model, system instructions, and connected tools into a reusable AI assistant. This configuration enables consistent behavior and allows the agent to be previewed and reused across different applications.
+
+7. **Client Integration:** Applications interact with the agent using the **Azure AI Projects SDK** and the **OpenAI Responses API**. This enables developers to integrate the agent into custom applications, chatbots, and enterprise solutions for intelligent, real-time AI interactions.
 
 # Getting Started with lab
  
