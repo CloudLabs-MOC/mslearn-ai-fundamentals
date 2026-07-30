@@ -247,7 +247,7 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="19b41870-89a0-46fc-b7be-95d15a691506" />
+  <validation step="d85f7aec-df37-4968-9b0c-50ccc91aebe8" />
 
 ### Task 3.1: View code
 
