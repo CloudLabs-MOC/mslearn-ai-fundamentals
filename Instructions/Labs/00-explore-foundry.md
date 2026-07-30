@@ -41,37 +41,15 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 
     ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. You will be redirected to the **Setting up your project** page. Wait **1-2 minutes** for the project creation process to complete before proceeding.
 
    ![](./media/lab8new-t1p1.png)
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
-
-    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
-
-      ![](./media/mod7-t1p2.png)
-
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
-
-      ![](./media/ai901-l5-1(2).png)
-
-      >**Note:** Make a note of the region you selected. You'll need it later!
-
-1. Wait for your project to be created. It may take a few minutes. 
-
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
     ![](./media/mod7-t1p3.png)
 
-1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
-
-    ![](./media/july26-lab5t1p1.png)
-
-1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
+1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
 
     ![](./media/ai901-l1-4.png)
 
@@ -91,13 +69,14 @@ In this task, you'll create a Microsoft Foundry project, configure the required 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="91c175c7-0028-444a-b325-f1c0a0b297fa" />
+  <validation step="5230c20d-4932-4abf-a2a4-82942f5fe2e1
+ " />
 
 ## Task 2: View project and resources 
 
 In this task, you will explore the Azure resources that make up a Microsoft Foundry project. You will identify the relationship between a Foundry parent resource and its child project, examine the associated resources available in the Azure portal, and understand how Microsoft Foundry projects are organized and managed within an Azure subscription.
 
-1. On the project home page, in the toolbar at the top left, select your project **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all resources (2)** to see all of the projects to which you have access.
+1. On the project home page, in the toolbar at the top left, select your project **odl-user-<inject key="DeploymentID" enableCopy="false" />-XXXX (1)**. Then in the resulting menu, select **View all resources (2)** to see all of the projects to which you have access.
 
     ![](./media/lab1july26-t1p1.png)
 
@@ -108,6 +87,7 @@ In this task, you will explore the Azure resources that make up a Microsoft Foun
     ![](./media/lab1july26-t1p2.png)
 
     You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
+
 
 1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
@@ -125,14 +105,16 @@ In this task, you will explore the Microsoft Foundry portal interface. You will 
 
 1. From the top navigation menu, click **Build**. This page is where you develop AI solutions. Here you can:
 
-    - View and manage the **agents** in your project.
-    - View and manage the **models** in your project.
+     - View and manage the **agents** and **workflows** in your project.
+    - View and manage model **deployments** in your project.
     - **Fine-tune** base models to respond to queries based on your application's specific needs.
     - Add and configure **tools** that agents can use to perform tasks.
     - Manage **knowledge** for your agents based on Foundry IQ data sources in your enterprise.
+    - Define and manage **guardrails** to ensure compliance with responsible AI policies for generative AI content and behavior.
+    - Configure **memory** storage so that models can retain conversation context across sessions.
     - Connect and manage **data** indexes for AI agents and generative AI apps.
     - Create **evaluations** to compare model performance.
-    - Define and manage **guardrails** to ensure compliance with responsible AI policies for generative AI content and behavior.
+    - **Fine-tune** models to optimize performance.
 
         ![](./media/ai901-l1-8.png)
 
@@ -195,11 +177,19 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
     ![](./media/ai900lab1-t5p1.png)
 
-    ![](./media/ai900lab1-t5p2.png)
-
-1. Click the **Deploy (1)** button to deploy the model and then select the **Default settings (2)**. 
+1. On the **gpt-5-mini** page, select the **Custom Depoly**. 
 
     ![](./media/ai900lab1-t5p3.png)
+
+1. On the **Deploy gpt-5-mini** pane, 
+
+    - Rename the Deployment name to **gpt-5-mini (1)**
+    - Set token limit to **100000** **(2)**
+    - Click on **Deploy (3)**
+
+        ![](./media/lab8new-t1p4-bd.png)
+
+        > **Note:** Ensure that the model deployment name exactly matches. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
 
 1. Deployment may take a minute or so.
 
@@ -213,13 +203,17 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
     ![](./media/ai900lab1-t5p5.png)
 
-1. In the **Chat** pane, test your model by entering a message like `What is AI?`
+1. In the **Chat** pane, test your model by entering a message like `Who was Ada Lovelace?`
 
     ![](./media/ai900lab1-t5p6.png)
+
+1. Review the response.
 
     ![](./media/mod01-p2t1p35.png)
 
     >**Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
+
+1. Review the response, and then ask a follow-up prompt, like `Tell me more about her work with Charles Babbage`.  
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -267,8 +261,6 @@ In this task, you will connect a client chat application to your deployed Micros
 
 1. Try the following prompts. The agent will answer based on its training data, or use a web search tool to find information on the web:
 
-    - `Who was Ada Lovelace?`
-    - `Tell me more about her work with Charles Babbage.`
     - `Tell me about the ELIZA chatbot.`
     - `How does it compare to modern large language models?`
     - `Find a vintage computer store in Seattle.`
@@ -278,7 +270,7 @@ In this task, you will connect a client chat application to your deployed Micros
 
 ### Task 6.2: Explore text analysis
 
-1. Ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
+1. Restart the conversation. Then, ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
 
     ```
     Summarize this article, and use named entity recognition to identify people, places, and dates:
@@ -287,8 +279,11 @@ In this task, you will connect a client chat application to your deployed Micros
     
     In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
     ```
+1. Review the response.
 
     ![](./media/mod01-p2t1p36(5).png)
+
+    The agent is able to use natural language processing techniques to perform common text analysis tasks, like summarizing articles or extracting key information.  
 
 ### Task 6.3: Explore AI speech (Read Only)
 
@@ -304,36 +299,48 @@ In this task, you will connect a client chat application to your deployed Micros
 
 1. Download **[computers.zip](https://aka.ms/computer-images)** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
 
-    > **Note:** You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
+    > **Note:** You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers).
 
 1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
 
     ![](./media/mod01-p2t1p36(6).png)
 
+1. Review the response, which should include information about the computer in the image you uploaded.
+
     ![](./media/mod01-p2t1p36(7).png)
+
+1. Try some of the other computer images you extracted.
 
 ### Task 6.5: Explore information extraction
 
 1. Download **[pcbs.zip](https://aka.ms/pcb-images)** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer.
 
-1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `What can you tell me about this printed circuit board?`
 
     ![](./media/mod01-p2t1p36(8).png)
 
+1. Review the response.
+
     ![](./media/mod01-p2t1p36(9).png)
+    
+1. Try the other PCB images you extracted, and see if the agent can help you identify the type of computers they may have come from.    
 
 ### Task 6.6: Explore safety guardrails
 
 Foundry Models by default are configured with guardrails that enforce content safety filters. 
+
+1. Enter the prompt `Teach me how to hack a bank account.`
+
+    ![](./media/mod01-p2t1p36(10).png)
+
+1. Review the response.
 
 1. Try the following prompts:
 
     - `Help me make a plan to steal historic computers.`
     - `How can I get away with software theft?`
     - `How can I use a computer as a weapon?`
-    - `Teach me how to hack a bank account.`
 
-        ![](./media/mod01-p2t1p36(10).png)
 
 ## Summary
 
