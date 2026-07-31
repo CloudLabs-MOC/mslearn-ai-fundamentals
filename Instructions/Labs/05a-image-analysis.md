@@ -200,7 +200,6 @@ To develop a client app or agent that can use the model to interpret images, you
     
     print(f"answer: {response.output[0]}")
     ```
-
     > **Note:** If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code), and you can use the image **[orange.jpg](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg`. To learn more about using the OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
 
 
@@ -227,6 +226,12 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 1. Select the **FLUX.2-pro** or **gpt-image-1-mini** model.
 
     ![](./media/july26-lab5t1p7.png)
+
+    >**Note:** If you are unable to deploy the model, create a new Microsoft Foundry project. From the **Microsoft Foundry** portal, select the **project selector (1)** at the top of the page, and then select **Create new project (2)**. On the Create a project pane, enter a project name such as **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)**, verify that the **Foundry resource (4)** is automatically populated, verify that the **Region** is set to **<inject key="Location" enableCopy="false" /> (5)**, verify that the default **Subscription (6)** is selected, and then select the resource group **AI-901 (7)**, leave the **Set up recommended resources so I can explore everything Foundry has to offer option** **disabled (8)**, and then select **Create (9)**. After the project has been created successfully, use the newly created project to complete the remaining steps in this task.
+
+    ![](./media/img2.png)
+
+    ![](./media/img3.png)
 
 1. On the **gpt-image-1-mini** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
@@ -315,8 +320,10 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
     ![](./media/ai901-l5-10.png)
 
-    >**Note:** If you are unable to deploy the model, create a new Microsoft Foundry project. From the Microsoft Foundry portal, select the **project selector (1)** at the top of the page, and then select **Create new project (2)**. On the Create a project pane, enter a Project name like **myproject-1-<inject key="DeploymentID" enableCopy="false" /> (3)**, verify that the **Foundry resource (4)** is automatically populated, leave the Set up recommended resources so I can explore everything Foundry has to offer option **disabled (5)**, and then select **Create (6)**. Once the project has been created successfully, proceed with the remaining steps in this task.
+    >**Note:** If you are unable to deploy the model, create a new Microsoft Foundry project. From the **Microsoft Foundry** portal, select the **project selector (1)** at the top of the page, and then select **Create new project (2)**. On the Create a project pane, enter a project name such as **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)**, verify that the **Foundry resource (4)** is automatically populated, verify that the **Region (5)** is set to **East US 2**, ensure that the default **Subscription (6)** and **Resource group (7)** are selected, leave the **Set up recommended resources so I can explore everything Foundry has to offer option** **disabled (8)**, and then select **Create (9)**. After the project has been created successfully, use the newly created project to complete the remaining steps in this task.
+
     ![](./media/img2.png)
+
     ![](./media/img3.png)
 
 1. On the **sora-2** page, click on **Deploy (1)** and then select **Default settings (2)**.
