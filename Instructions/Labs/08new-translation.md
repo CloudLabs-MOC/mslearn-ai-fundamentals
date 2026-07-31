@@ -84,6 +84,11 @@ In this task, you'll deploy the GPT-5 Mini model in Microsoft Foundry and obtain
 
     ![](./media/lab8new-t1p4.png)
 
+   >**Note:** If the **Custom deploy** option is not available when deploying the model, select **Deploy (1)**, then click **Default settings (2)** instead. 
+    >
+    >![](./media/lab2a-p2t1p5.png)
+     
+
 1. On the **Deploy gpt-5-mini** pane, 
 
     - Rename the Deployment name to **gpt-5-mini (1)**

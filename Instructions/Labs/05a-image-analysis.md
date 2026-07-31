@@ -105,6 +105,10 @@ In this task, you'll deploy a vision-enabled generative AI model and use it to a
 
     ![](./media/newlab5a-e1t2p7.png)
 
+    >**Note:** If the **Custom deploy** option is not available when deploying the model, select **Deploy (1)**, then click **Default settings (2)** instead. 
+    >
+    >![](./media/lab2a-p2t1p5.png)
+
 1. On the **Deploy gpt-5-mini** pane, 
 
     - Rename the Deployment name to **gpt-5-mini (1)**
@@ -228,10 +232,10 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
     ![](./media/july26-lab5t1p7.png)
 
     >**Note:** If you are unable to deploy the model, create a new Microsoft Foundry project. From the **Microsoft Foundry** portal, select the **project selector (1)** at the top of the page, and then select **Create new project (2)**. On the Create a project pane, enter a project name such as **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)**, verify that the **Foundry resource (4)** is automatically populated, verify that the **Region** is set to **<inject key="Location" enableCopy="false" /> (5)**, verify that the default **Subscription (6)** is selected, and then select the resource group **AI-901 (7)**, leave the **Set up recommended resources so I can explore everything Foundry has to offer option** **disabled (8)**, and then select **Create (9)**. After the project has been created successfully, use the newly created project to complete the remaining steps in this task.
-
-    ![](./media/img2.png)
-
-    ![](./media/img3.png)
+    >
+    >![](./media/img2.png)
+    >
+    >![](./media/img3.png)
 
 1. On the **gpt-image-1-mini** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
@@ -321,10 +325,10 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
     ![](./media/ai901-l5-10.png)
 
     >**Note:** If you are unable to deploy the model, create a new Microsoft Foundry project. From the **Microsoft Foundry** portal, select the **project selector (1)** at the top of the page, and then select **Create new project (2)**. On the Create a project pane, enter a project name such as **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)**, verify that the **Foundry resource (4)** is automatically populated, verify that the **Region (5)** is set to **East US 2**, ensure that the default **Subscription (6)** and **Resource group (7)** are selected, leave the **Set up recommended resources so I can explore everything Foundry has to offer option** **disabled (8)**, and then select **Create (9)**. After the project has been created successfully, use the newly created project to complete the remaining steps in this task.
-
-    ![](./media/img2.png)
-
-    ![](./media/img3.png)
+    >
+    >![](./media/img2.png)
+    >
+    >![](./media/img3.png)
 
 1. On the **sora-2** page, click on **Deploy (1)** and then select **Default settings (2)**.
 
