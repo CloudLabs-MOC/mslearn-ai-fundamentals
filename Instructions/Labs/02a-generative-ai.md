@@ -81,9 +81,23 @@ In this task, you will explore the model catalog in Microsoft Foundry and deploy
 
      ![](./media/lab2a-p2t1p4.png)
 
-1. On the **gpt-5-mini** model details page, click **Deploy (1)**, and then select **Default settings (2)** to deploy the model using the standard configuration.
+1. Review the model card, then click  select **Custom Deploy** to deploy the model using the recommended default configuration.
 
-    ![](./media/lab2a-p2t1p5.png)
+    ![](./media/lab8new-t1p4.png)
+
+    >**Note:** If the **Custom deploy** option is not available when deploying the model, select **Deploy (1)**, then click **Default settings (2)** instead. 
+    >
+    >![](./media/lab2a-p2t1p5.png)
+     
+1. On the **Deploy gpt-5-mini** pane, 
+
+    - Rename the Deployment name to **gpt-5-mini (1)**
+    - Set token limit to **100000** **(2)**
+    - Click on **Deploy (3)**
+
+        ![](./media/lab8new-t1p4-bd.png)
+
+        > **Note:** Ensure that the model deployment name exactly matches. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 

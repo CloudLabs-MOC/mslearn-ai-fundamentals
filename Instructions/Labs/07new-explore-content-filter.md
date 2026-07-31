@@ -81,6 +81,12 @@ In this task, you will deploy a generative AI model in Microsoft Foundry. You wi
 
     ![](./media/mod7-t1p7.png)
 
+    >**Note:** If the **Default settings** option is not available when deploying the model, click **Custom deploy (1)** instead. In the **Deploy** pane, enter **`gpt-5`** as the **Deployment name (2)**. If a warning appears indicating that the deployment name is already used by an instant model, you can safely ignore it for this lab. Leave the remaining settings at their default values, and then click **Deploy (3)** to create the deployment.
+    >
+    >![](./media/lab3b(1)-p2t1p1.png)
+    >
+    >![](./media/lab3b(1)-p2t1p2.png)
+
 1. When the model has been deployed, it will open in the model playground - you can test it there if you like.
 
     ![](./media/mod7-t1p8.png)

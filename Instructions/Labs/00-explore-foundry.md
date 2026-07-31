@@ -181,6 +181,10 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
     ![](./media/ai900lab1-t5p3.png)
 
+    >**Note:** If the **Custom deploy** option is not available when deploying the model, select **Deploy (1)**, then click **Default settings (2)** instead. 
+    >
+    >![](./media/lab2a-p2t1p5.png)
+
 1. On the **Deploy gpt-5-mini** pane, 
 
     - Rename the Deployment name to **gpt-5-mini (1)**
