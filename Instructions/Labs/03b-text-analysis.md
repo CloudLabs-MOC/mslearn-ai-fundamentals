@@ -164,7 +164,7 @@ For example, suppose you've found an old article from a computer trade magazine,
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="5468fcc2-fe83-4b11-a8c1-450edeec0bf5" />
+  <validation step="2d5afc6e-926e-49a0-97ff-cf90e3d3275e" />
 
 ## Task 3: Use a specialized language analysis tool
 

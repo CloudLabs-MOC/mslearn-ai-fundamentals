@@ -235,7 +235,7 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="ad0ac477-86cd-4258-a5a0-d27c3df4c8a4" />
+  <validation step="435cfbf6-ca6f-4c6b-bd51-2deff5c1a95b" />
 
 ## Task 6: Use your Foundry resource endpoint
 
