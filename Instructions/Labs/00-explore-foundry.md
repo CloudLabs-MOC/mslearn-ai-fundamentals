@@ -10,110 +10,106 @@ In this lab, you will create and explore a **Microsoft Foundry** project and bec
 
 In this lab, you will perform the following tasks:
 
-* Task 1: Create a project in Microsoft Foundry
-* Task 2: View project and resources 
-* Task 3: Explore the Microsoft Foundry portal
-* Task 4: Get AI assistance
-* Task 5: Deploy a model
-* Task 6: Use your Foundry resource endpoint
+- Task 1: Get started with Microsoft Foundry
+- Task 2: View project and resources
+- Task 3: Explore the Microsoft Foundry portal
+- Task 4: Get AI assistance
+- Task 5: Deploy a model
+- Task 6: Use your Foundry resource endpoint
 
-## Task 1: Create a Microsoft Foundry project
+## Task 1: Get started with Microsoft Foundry
 
-In this task, you'll create a Microsoft Foundry project, configure the required Azure resources, and obtain the project endpoint needed for application development.
+In this task, you'll sign in to the Microsoft Foundry portal, access a pre-configured Microsoft Foundry project, and familiarize yourself with the project workspace that will be used throughout the lab.
 
 1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
 1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-     ![](./media/mod7-t1p1.png)
+   ![](./media/mod7-t1p1.png)
 
 1. If prompted to sign in, enter your credentials:
- 
    - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
- 
-        ![Enter Your Username](./media/mod6-p2t1p2.png)
- 
+
+     ![Enter Your Username](./media/mod6-p2t1p2.png)
+
    - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
- 
-      ![Enter Your Password](./media/mod6-p2t1p2(1).png)
+
+     ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
-    ![](./media/mod6-p2t1p3.png)
+   ![](./media/mod6-p2t1p3.png)
 
-1. If prompted with, the **Get started with Microsoft Foundry** page, click on **Create project**.
+1. After signing in to the **Microsoft Foundry** portal, you will be taken to the **All resources** page. A project named **myproject<inject key="DeploymentID"></inject>** has already been created for you. Select this pre-created project to open it. You will use this project throughout the remainder of the lab.
 
-   ![](./media/lab8new-t1p1.png)
+   ![](./media/ai901-new-l6t1p1.png)
 
-1. In the **Create a project** wizard, enter project name **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**, and **Expand Advanced options (2)** to specify the following settings for your project: 
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
-    - Foundry resource: **AI<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - Subscription : **Leave default subscription (4)** 
-    - Region : Select **<inject key="location" enableCopy="false"/> (5)**
-    - Resource group : Select **AI-901 (6)** 
-    - Click on **Create** **(7)**
+   ![](./media/mod7-t1p3.png)
 
-      ![](./media/mod7-t1p2.png)
+1. After selecting the project in the **Foundry** portal, it should open in a page similar to the following image:
 
-      > **Note:** If project creation gives an authorization error related to Application Insights or Log Analytics resources (for example, errors containing `Microsoft.OperationalInsights/workspaces/write` or `Microsoft.Insights/components/write`), **Toggle off** the *Set up recommended resources so I can explore everything Foundry has to offer* option before creating the project.
+   ![](./media/mod7-t1p4.png)
 
-      ![](./media/ai901-l5-1(2).png)
+### Task 1.1: Create a Microsoft Foundry project (READ ONLY)
 
-      >**Note:** Make a note of the region you selected. You'll need it later!
+> ### **Note:** <span style="color:maroon">A Microsoft Foundry resource and project have already been created and configured for your lab environment. This section is provided for demonstration purposes only to show how a Foundry resource and project can be created in Microsoft Foundry. The following steps are **read-only** and **do not need to be performed** as part of this lab. Continue using the pre-created project for the remaining exercises.</span>
 
-1. Wait for your project to be created. It may take a few minutes. 
+In this task, you'll learn how to create a Microsoft Foundry project by configuring the required Azure settings, including the Foundry resource, region, subscription, and resource group. This is a demonstration only and does not require any action during the lab.
 
-1. In the **All set, Let's build your agents** window, click **Let's go**.
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-    ![](./media/mod7-t1p3.png)
+   ![](./media/mod7-t1p1.png)
 
-1. On the **Your project is set up. What would you like to do next?** pop-up, select **Skip**.
+1. If prompted to sign in, enter your credentials:
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
 
-    ![](./media/july26-lab5t1p1.png)
+     ![Enter Your Username](./media/mod6-p2t1p2.png)
 
-1. After creating a project in the new Foundry portal, it should open in a page similar to the following image:
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
 
-    ![](./media/ai901-l1-4.png)
+     ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
 
-1. The project has an **endpoint** and **key**, which can be used to securely access models, agents, and other assets in the project from client applications.
+1. If prompted to **Stay signed in?**, you can click **No**.
 
-    ![](./media/ai901-l1-5.png)
+   ![](./media/mod6-p2t1p3.png)
 
-    >**Note:** You're going to need the project key and endpoint later!
+1. From the **Microsoft Foundry** portal, select the **project selector (1)** located at the top of the page, and then choose **Create new project (2)**. In the **Create a project** pane, enter a unique project name like **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)** Verify that the **Foundry resource (4)** is automatically populated, set the **Region** to **<inject key="Location" enableCopy="false" /> (5)**, confirm that the default **Subscription (6)** is selected, and choose the appropriate **Resource group (7)**. Ensure that the **Set up recommended resources so I can explore everything Foundry has to offer** option is **disabled (8)**, and then select **Create (9)**.
 
-    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
+   ![](./media/ai901-new-l6t1p2.png)
 
-    ![](./media/ai901-l5-1(3).png)
+   ![](./media/ai901-new-l6t1p3.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
-  <validation step="91c175c7-0028-444a-b325-f1c0a0b297fa" />
+   ![](./media/mod7-t1p3.png)
 
-## Task 2: View project and resources 
+1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
+
+   ![](./media/mod7-t1p4.png)
+
+## Task 2: View project and resources
 
 In this task, you will explore the Azure resources that make up a Microsoft Foundry project. You will identify the relationship between a Foundry parent resource and its child project, examine the associated resources available in the Azure portal, and understand how Microsoft Foundry projects are organized and managed within an Azure subscription.
 
-1. On the project home page, in the toolbar at the top left, select your project **Myproject<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all resources (2)** to see all of the projects to which you have access.
+1. On the project home page, in the toolbar at the top left, select your project **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)**. Then in the resulting menu, select **View all resources (2)** to see all of the projects to which you have access.
 
-    ![](./media/lab1july26-t1p1.png)
+   ![](./media/ai901-new-l1t1p1.png)
 
-     Each project has a parent resource, in which services and configuration can be applied to multiple child projects. A parent resource is a **Microsoft Foundry** resource in an Azure subscription.
+   Each project has a parent resource, in which services and configuration can be applied to multiple child projects. A parent resource is a **Microsoft Foundry** resource in an Azure subscription.
 
 1. Select the parent resource for your project, and view its details.
 
-    ![](./media/lab1july26-t1p2.png)
+   ![](./media/ai901-new-l1t1p2.png)
 
-    You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
+   You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
 
 1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
-    ![](./media/lab1july26-t1p3.png)
+   ![](./media/lab1july26-t1p3.png)
 
-    >**Tip:** When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
+   > **Tip:** When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
 
 ## Task 3: Explore the Microsoft Foundry portal
 
@@ -121,61 +117,61 @@ In this task, you will explore the Microsoft Foundry portal interface. You will 
 
 1. From the top navigation menu, click **Discover**. This page surfaces the latest models and services and enables you to find starting points for AI application development.
 
-    ![](./media/ai901-l1-7.png)
+   ![](./media/ai901-l1-7.png)
 
 1. From the top navigation menu, click **Build**. This page is where you develop AI solutions. Here you can:
+   - View and manage the **agents** and **workflows** in your project.
+   - View and manage model **deployments** in your project.
+   - **Fine-tune** base models to respond to queries based on your application's specific needs.
+   - Add and configure **tools** that agents can use to perform tasks.
+   - Manage **knowledge** for your agents based on Foundry IQ data sources in your enterprise.
+   - Define and manage **guardrails** to ensure compliance with responsible AI policies for generative AI content and behavior.
+   - Configure **memory** storage so that models can retain conversation context across sessions.
+   - Connect and manage **data** indexes for AI agents and generative AI apps.
+   - Create **evaluations** to compare model performance.
+   - **Fine-tune** models to optimize performance.
 
-    - View and manage the **agents** in your project.
-    - View and manage the **models** in your project.
-    - **Fine-tune** base models to respond to queries based on your application's specific needs.
-    - Add and configure **tools** that agents can use to perform tasks.
-    - Manage **knowledge** for your agents based on Foundry IQ data sources in your enterprise.
-    - Connect and manage **data** indexes for AI agents and generative AI apps.
-    - Create **evaluations** to compare model performance.
-    - Define and manage **guardrails** to ensure compliance with responsible AI policies for generative AI content and behavior.
-
-        ![](./media/ai901-l1-8.png)
+     ![](./media/ai901-l1-8.png)
 
 1. From the top navigation menu, click **Operate**. On this page, you can operate your AI solution by:
+   - Managing **assets** like agents, models, and tools in your project.
+   - Manage **compliance** with security policies.
+   - View and manage **quota** configuration that defines limits for usage of models and other assets in your project.
+   - Perform **admin** tasks to manage your projects.
 
-    - Managing **assets** like agents, models, and tools in your project.
-    - Manage **compliance** with security policies.
-    - View and manage **quota** configuration that defines limits for usage of models and other assets in your project.
-    - Perform **admin** tasks to manage your projects.
-
-        ![](./media/mod01-p2t1p20.png)
+     ![](./media/mod01-p2t1p20.png)
 
 1. From the top navigation menu, click **Docs**. This page provides access to Microsoft Foundry documentation.
 
-    ![](./media/ai901-l1-9.png)
+   ![](./media/ai901-new-l1t1p3.png)
 
 ## Task 4: Get AI assistance
 
 In this task, you will use the built-in Ask AI feature in the Microsoft Foundry portal. You will enter a prompt to learn about the capabilities of Microsoft Foundry and review the AI-generated response.
 
-1. In the toolbar, use the AI chat icon to open the **Ask AI** pane.
+1. In the toolbar, use the AI chat icon to open the **Agent Helper** pane.
 
-    ![](./media/ai901-l1-10.png)
+   ![](./media/ai901-new-l1t1p4.png)
 
-1. Enter the following prompt in the chat box **(1)**, then click the **Send** (blue arrow) icon **(2)**. 
+1. Enter the following prompt in the chat box **(1)**, then click the **Send** (blue arrow) icon **(2)**.
 
-    ```
-    What can I do with Microsoft Foundry?
-    ```
+   ```
+   What can I do with Microsoft Foundry?
+   ```
 
-    ![](./media/mod01-p2t1p23.png)
+   ![](./media/mod01-p2t1p23.png)
 
 1. Review the response generated.
 
-    ![](./media/mod01-p2t1p24.png)
+   ![](./media/mod01-p2t1p24.png)
 
-    >**Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
+   > **Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
 
 1. If you have any questions about some of the things you've explored so far in this exercise, this is the place to ask them!
 
 1. After reviewing the response, click the **X** icon in the top-right corner to close the **Ask AI** panel.
 
-    ![](./media/mod01-p2t1p25.png)
+   ![](./media/mod01-p2t1p25.png)
 
 ## Task 5: Deploy a model
 
@@ -183,52 +179,63 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
 1. From the top navigation menu, click **Discover**.
 
-    ![](./media/mod01-p2t1p26(1).png)
+   ![](<./media/mod01-p2t1p26(1).png>)
 
 1. Select the **Models** tab to view the Microsoft Foundry model catalog. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
-    ![](./media/mod01-p2t1p28(1).png)
+   ![](./media/ai901-new-l1t1p5.png)
 
-    >**Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
-    
+   > **Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
+
 1. In the search bar, search for `gpt-5-mini` **(1)** and select the `gpt-5-mini` **(2)** model from the result, and view the page for this model, which describes its features and capabilities.
 
-    ![](./media/ai900lab1-t5p1.png)
+   ![](./media/ai900lab1-t5p1.png)
 
-    ![](./media/ai900lab1-t5p2.png)
+1. On the **gpt-5-mini** page, select **Deploy (1)**, then click **Custom settings (2)** instead.
 
-1. Click the **Deploy (1)** button to deploy the model and then select the **Default settings (2)**. 
+   ![](./media/ai901-new-l1t1p6.png)
 
-    ![](./media/ai900lab1-t5p3.png)
+1. On the **Deploy gpt-5-mini** pane,
+   - Rename the Deployment name to **gpt-5-mini (1)**
+   - Deployment type: **Global Standard (2)**
+   - Set token limit to **100000** **(3)**
+   - Click on **Deploy (4)**
+
+     ![](./media/ai901-new-l1t1p7.png)
+
+     > **Note:** Ensure that the model deployment name exactly matches. If the deployment name is incorrect or does not match the lab instructions, the validation will fail.
 
 1. Deployment may take a minute or so.
 
-    > **Note:** Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-mini, or gpt-5-nano.
+   > **Note:** Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-mini, or gpt-5-nano.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![](./media/ai900lab1-t5p4.png)
+   ![](./media/ai900lab1-t5p4.png)
 
 1. On the **Playground** page, ensure the deployed model **gpt-5-mini** is selected in the **Model** dropdown. Also note down the deployment name, as you will need it later.
 
-    ![](./media/ai900lab1-t5p5.png)
+   ![](./media/ai900lab1-t5p5.png)
 
-1. In the **Chat** pane, test your model by entering a message like `What is AI?`
+1. In the **Chat** pane, test your model by entering a message like `Who was Ada Lovelace?`
 
-    ![](./media/ai900lab1-t5p6.png)
+   ![](./media/ai901-new-l1t1p8.png)
 
-    ![](./media/mod01-p2t1p35.png)
+1. Review the response.
 
-    >**Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
+   ![](./media/ai901-new-l1t1p9.png)
+
+   > **Note:** The response generated by the AI may vary and might not exactly match the one shown in the screenshot above.
+
+1. Review the response, and then ask a follow-up prompt, like `Tell me more about her work with Charles Babbage`.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. You will receive a success message. 
+
+- Hit the Validate button for the corresponding task. You will receive a success message.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="ad0ac477-86cd-4258-a5a0-d27c3df4c8a4" />
-
 
 ## Task 6: Use your Foundry resource endpoint
 
@@ -236,104 +243,112 @@ In this task, you will connect a client chat application to your deployed Micros
 
 1. In the menu at the top of the Foundry portal, select **Home** to return to the home page.
 
-    ![](./media/mod01-p2t1p36(1).png)
+   ![](<./media/mod01-p2t1p36(1).png>)
 
 1. Copy the following project details and save them in Notepad:
+   - **Project endpoint (1)**: The URL where your project resource can be accessed.
+   - **Project API key (2)**: The authentication key used to access your resource.
 
-    - **Project endpoint (1)**: The URL where your project resource can be accessed. 
-    - **Project API key (2)**: The authentication key used to access your resource.
+     ![](./media/ai901-new-l1t1p10.png)
 
-        ![](./media/mod01-p2t1p36(2).png)
-
-        You'll need these values to configure the chat application.
+     You'll need these values to configure the chat application.
 
 1. Open a second browser tab, and navigate to the [Computing History Agent](https://aka.ms/computing-history-foundry) app at `https://aka.ms/computing-history-foundry`.
 
-    The Computing History app should open with its **Configuration** panel expanded, like this:
+   The Computing History app should open with its **Configuration** panel expanded, like this:
 
-    ![](./media/mod01-p2t1p36(3).png)
+   ![](<./media/mod01-p2t1p36(3).png>)
 
-    > **Note:** If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
+   > **Note:** If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
 
 1. Enter your **project endpoint** **(1)**, model deployment name `gpt-5-mini` **(2)**, and **API key** **(3)** from the Foundry portal into the configuration settings, and select **Save Configuration** **(4)**.
 
-    ![](./media/mod01-p2t1p36(4).png)
+   ![](<./media/mod01-p2t1p36(4).png>)
 
-    > **Note:** The configuration values other than the API key will be stored in your local browser cache. If you close and re-open the app, you will need to re-enter the API key.
+   > **Note:** The configuration values other than the API key will be stored in your local browser cache. If you close and re-open the app, you will need to re-enter the API key.
 
-    Now you can the app to chat with the Computing History agent. The app will use your deployed model in Microsoft Foundry. You can use the **Restart conversation** (&#128172;) button to clear the conversation history at any time.
+   Now you can the app to chat with the Computing History agent. The app will use your deployed model in Microsoft Foundry. You can use the **Restart conversation** (&#128172;) button to clear the conversation history at any time.
 
 ### Task 6.1: Explore generative AI
 
 1. Try the following prompts. The agent will answer based on its training data, or use a web search tool to find information on the web:
+   - `Tell me about the ELIZA chatbot.`
+   - `How does it compare to modern large language models?`
+   - `Find a vintage computer store in Seattle.`
+   - `Search for classic Microsoft logos.`
 
-    - `Who was Ada Lovelace?`
-    - `Tell me more about her work with Charles Babbage.`
-    - `Tell me about the ELIZA chatbot.`
-    - `How does it compare to modern large language models?`
-    - `Find a vintage computer store in Seattle.`
-    - `Search for classic Microsoft logos.`
-
-        ![](./media/mod01-p2t1p36(11).png)
+     ![](<./media/mod01-p2t1p36(11).png>)
 
 ### Task 6.2: Explore text analysis
 
-1. Ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
+1. Restart the conversation. Then, ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
 
-    ```
-    Summarize this article, and use named entity recognition to identify people, places, and dates:
-    
-    Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.
-    
-    In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
-    ```
+   ```
+   Summarize this article, and use named entity recognition to identify people, places, and dates:
 
-    ![](./media/mod01-p2t1p36(5).png)
+   Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.
+
+   In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
+   ```
+
+1. Review the response.
+
+   ![](<./media/mod01-p2t1p36(5).png>)
+
+   The agent is able to use natural language processing techniques to perform common text analysis tasks, like summarizing articles or extracting key information.
 
 ### Task 6.3: Explore AI speech (Read Only)
 
->**Note:** <span style="color:red;"> In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.
+> **Note:** <span style="color:red;"> In the current lab environment, audio input (microphone) is not supported due to platform limitations; therefore, while you can perform the steps in this task, you will not be able to provide prompts using voice.
 
-1. At the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
+1. At the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "**_Tell me about computer speech_**".
 
 1. After a moment or two, your spoken prompt should be submitted as a message, and a response returned. The response should then be vocalized using speech synthesis.
 
-    > **Note:** The app uses Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+   > **Note:** The app uses Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
 
 ### Task 6.4: Explore computer vision
 
 1. Download **[computers.zip](https://aka.ms/computer-images)** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
 
-    > **Note:** You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
+   > **Note:** You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers).
 
 1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
 
-    ![](./media/mod01-p2t1p36(6).png)
+   ![](<./media/mod01-p2t1p36(6).png>)
 
-    ![](./media/mod01-p2t1p36(7).png)
+1. Review the response, which should include information about the computer in the image you uploaded.
+
+   ![](<./media/mod01-p2t1p36(7).png>)
+
+1. Try some of the other computer images you extracted.
 
 ### Task 6.5: Explore information extraction
 
 1. Download **[pcbs.zip](https://aka.ms/pcb-images)** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer.
 
-1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `What can you tell me about this printed circuit board?`
 
-    ![](./media/mod01-p2t1p36(8).png)
+   ![](<./media/mod01-p2t1p36(8).png>)
 
-    ![](./media/mod01-p2t1p36(9).png)
+1. Review the response.
+
+   ![](<./media/mod01-p2t1p36(9).png>)
+
+1. Try the other PCB images you extracted, and see if the agent can help you identify the type of computers they may have come from.
 
 ### Task 6.6: Explore safety guardrails
 
-Foundry Models by default are configured with guardrails that enforce content safety filters. 
+Foundry Models by default are configured with guardrails that enforce content safety filters.
+
+1. Enter the prompt `Teach me how to hack a bank account.` and review the response.
+
+   ![](<./media/mod01-p2t1p36(10).png>)
 
 1. Try the following prompts:
-
-    - `Help me make a plan to steal historic computers.`
-    - `How can I get away with software theft?`
-    - `How can I use a computer as a weapon?`
-    - `Teach me how to hack a bank account.`
-
-        ![](./media/mod01-p2t1p36(10).png)
+   - `Help me make a plan to steal historic computers.`
+   - `How can I get away with software theft?`
+   - `How can I use a computer as a weapon?`
 
 ## Summary
 

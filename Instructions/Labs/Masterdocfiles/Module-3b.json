@@ -1,16 +1,16 @@
 [
-    {
-      "Name": "AI-901: AI Fundamentals-Module-03b-Get started with text analysis in Microsoft Foundry",
-      "Language": "English",
-      "Files": [
-          {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/AI901-Gettingstarted/M3b-Gettingstarted.md",
-          "Order": 1
-        },
-        {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/03b-text-analysis.md",
-          "Order": 2
-        }
-      ]
-    }
-  ]
+  {
+    "Name": "AI-901: AI Fundamentals-Module-03b-Get started with text analysis in Microsoft Foundry",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026-new/Instructions/Labs/AI901-Gettingstarted/M3b-Gettingstarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026-new/Instructions/Labs/03b-text-analysis.md",
+        "Order": 2
+      }
+    ]
+  }
+]
