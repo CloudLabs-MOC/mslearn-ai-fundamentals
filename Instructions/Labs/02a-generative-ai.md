@@ -8,14 +8,17 @@ In this lab, you will use Microsoft Foundry to deploy and interact with a genera
 
 ## Lab objectives
 
-In this exercise, you will perform:
+In this lab, you will perform following tasks:
 
 - Task 1: Get started with Microsoft Foundry
-- Task 2: Deploy a model
-- Task 3: Chat with the model
-- Task 4: Specify instructions in a system prompt
-- Task 5: Save the model configuration as an agent
-- Task 6: Add a knowledge tool to the agent
+- Task 2: Deploy a model.
+- Task 3: Chat with the model.
+- Task 4: Specify instructions.
+- Task 5: Add a web_search tool.
+- Task 6: Add knowledge.
+- Task 7: Save the model configuration as an agent.
+- Task 8: Preview the agent.
+- Task 9: View client code to access the agent in your project.
 
 ## Task 1: Get started with Microsoft Foundry
 
@@ -129,7 +132,7 @@ In this task, you will explore the model catalog in Microsoft Foundry and deploy
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="6d51d370-fbe8-4b78-ac65-6daae4aea306" />
+  <validation step="ad4308f9-fe06-4e05-be11-23c0ad8f1650" />
 
 ## Task 3: Chat with the model
 
@@ -286,7 +289,7 @@ In this task, you'll save the configured model as a reusable AI agent that inclu
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="6c0bebb0-789f-4b1a-b8e2-07f5ac7982b2" />
+  <validation step="33c84c36-21ea-4389-8600-ec30c4ed63ac" />
 
 ## Task 8: Preview the agent
 
