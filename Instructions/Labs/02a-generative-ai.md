@@ -318,40 +318,40 @@ In this task, you'll review the sample client code that connects to your Microso
 
 1. In the agent playground, switch from the **Chat** tab to the **Call agent** tab, and view the sample code for consuming the agent; which should be similar to this:
 
-    ```python
-   # Before running the sample:
-   # pip install azure-ai-projects>=2.1.0
+      ```python
+      # Before running the sample:
+      # pip install azure-ai-projects>=2.1.0
 
-   from azure.identity import DefaultAzureCredential
-   from azure.ai.projects import AIProjectClient
+      from azure.identity import DefaultAzureCredential
+      from azure.ai.projects import AIProjectClient
 
-   endpoint = "https://ai-resrce.services.ai.azure.com/api/projects/ai-project"
+      endpoint = "https://ai-resrce.services.ai.azure.com/api/projects/ai-project"
 
-   project_client = AIProjectClient(
-       endpoint=endpoint,
-       credential=DefaultAzureCredential(),
-   )
+      project_client = AIProjectClient(
+         endpoint=endpoint,
+         credential=DefaultAzureCredential(),
+      )
 
-   my_agent = "computing-historian"
-   my_version = "1"
+      my_agent = "computing-historian"
+      my_version = "1"
 
-   openai_client = project_client.get_openai_client()
+      openai_client = project_client.get_openai_client()
 
-   # Reference the agent to get a response
+      # Reference the agent to get a response
 
-   response = openai_client.responses.create(
-       input=[{"role": "user", "content": "Tell me what you can help with."}],
-       extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
-   )
+      response = openai_client.responses.create(
+         input=[{"role": "user", "content": "Tell me what you can help with."}],
+         extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
+      )
 
-   print(f"Response output: {response.output_text}")
-   ```
+      print(f"Response output: {response.output_text}")
+      ```
 
-     ![](<./media/lab2a(1)-p2t1p23.png>)
+      ![](<./media/lab2a(1)-p2t1p23.png>)
 
-     The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain privileged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
+      The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain privileged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
 
-     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
+      After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
 ## Summary
 

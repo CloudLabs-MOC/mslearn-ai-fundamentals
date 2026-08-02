@@ -271,44 +271,44 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
 
 1. Select the **Code** tab on the right to view sample code for PII identification, which should be similar to this:
 
-     ```python
-   key = "<your-api-key>"
-   endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
+      ```python
+      key = "<your-api-key>"
+      endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
 
-   from azure.ai.textanalytics import TextAnalyticsClient
-   from azure.core.credentials import AzureKeyCredential
+      from azure.ai.textanalytics import TextAnalyticsClient
+      from azure.core.credentials import AzureKeyCredential
 
-   # Authenticate the client using your key and endpoint
-   def authenticate_client():
-       ta_credential = AzureKeyCredential(key)
-       text_analytics_client = TextAnalyticsClient(
+      # Authenticate the client using your key and endpoint
+      def authenticate_client():
+         ta_credential = AzureKeyCredential(key)
+         text_analytics_client = TextAnalyticsClient(
                endpoint=endpoint,
                credential=ta_credential)
-       return text_analytics_client
+         return text_analytics_client
 
-   client = authenticate_client()
+      client = authenticate_client()
 
-   # Example method for detecting sensitive information (PII) from text
-   def pii_recognition_example(client):
-       documents = [
-           "$documents"
-       ]
-       response = client.recognize_pii_entities(documents, language="en")
-       result = [doc for doc in response if not doc.is_error]
-       for doc in result:
-           print("Redacted Text: {}".format(doc.redacted_text))
-           for entity in doc.entities:
+      # Example method for detecting sensitive information (PII) from text
+      def pii_recognition_example(client):
+         documents = [
+            "$documents"
+         ]
+         response = client.recognize_pii_entities(documents, language="en")
+         result = [doc for doc in response if not doc.is_error]
+         for doc in result:
+            print("Redacted Text: {}".format(doc.redacted_text))
+            for entity in doc.entities:
                print("Entity: {}".format(entity.text))
                print(" Category: {}".format(entity.category))
                print(" Confidence Score: {}".format(entity.confidence_score))
                print(" Offset: {}".format(entity.offset))
                print(" Length: {}".format(entity.length))
-   pii_recognition_example(client)
-     ```
+      pii_recognition_example(client)
+      ```
 
-     ![](<./media/lab3b(1)-p2t1p15.png>)
+      ![](<./media/lab3b(1)-p2t1p15.png>)
 
-     > **Note:** You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
+      > **Note:** You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Summary
 
