@@ -50,10 +50,6 @@ In this task, you'll create a Microsoft Foundry project and provision the Azure 
 
     ![](./media/mod7-t1p4.png)
 
-    > **Note:** The Microsoft Foundry landing page may vary depending on the version of the portal, your account configuration, or recent UI updates. If your home page looks different, continue with the lab by locating the required menu options using the navigation menu. The appearance of the portal may differ, but the functionality and lab steps remain the same.
-
-    ![](./media/ai901-l5-1(3).png)
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
 - Hit the Validate button for the corresponding task. You will receive a success message. 

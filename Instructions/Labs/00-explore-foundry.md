@@ -88,7 +88,6 @@ In this task, you will explore the Azure resources that make up a Microsoft Foun
 
     You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
 
-
 1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
     ![](./media/lab1july26-t1p3.png)
@@ -135,9 +134,9 @@ In this task, you will explore the Microsoft Foundry portal interface. You will 
 
 In this task, you will use the built-in Ask AI feature in the Microsoft Foundry portal. You will enter a prompt to learn about the capabilities of Microsoft Foundry and review the AI-generated response.
 
-1. In the toolbar, use the AI chat icon to open the **Ask AI** pane.
+1. In the toolbar, use the AI chat icon to open the **Agent Helper** pane.
 
-    ![](./media/ai901-l1-10.png)
+    ![](./media/ai901-new-l1t1p4.png)
 
 1. Enter the following prompt in the chat box **(1)**, then click the **Send** (blue arrow) icon **(2)**. 
 
@@ -169,7 +168,7 @@ In this task, you will deploy a generative AI model from the Microsoft Foundry m
 
 1. Select the **Models** tab to view the Microsoft Foundry model catalog. Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
-    ![](./media/mod01-p2t1p28(1).png)
+    ![](./media/ai901-new-l1t1p5.png)
 
     >**Note:** Depending on the version of Microsoft Foundry and your portal experience, the **Deployments** menu may appear as **Models**. Both options provide access to model deployments and related management capabilities. If you do not see **Deployments**, select **Models** and continue with the lab instructions.
     
@@ -241,7 +240,7 @@ In this task, you will connect a client chat application to your deployed Micros
     - **Project endpoint (1)**: The URL where your project resource can be accessed. 
     - **Project API key (2)**: The authentication key used to access your resource.
 
-        ![](./media/mod01-p2t1p36(2).png)
+        ![](./media/ai901-new-l1t1p10.png)
 
         You'll need these values to configure the chat application.
 

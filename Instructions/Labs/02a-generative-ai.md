@@ -183,7 +183,7 @@ In this task, you'll upload a document as a knowledge source and configure a Fil
 
 1. Open a new browser tab, and view the **[vintage_computer_identifiers.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/vintage_computer_identifiers.docx)** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/vintage_computer_identifiers.docx`. We'll use this to provide a knowledge source that the agent can use to identify computers based on serial numbers, product IDs, and other common printed details.
 
-    >**Note:** If the document does not open in your browser, open the link in an InPrivate or Incognito browser window and download the file.
+    >**Note:** If the document does not open in your browser, open the link in an **InPrivate** or **Incognito** browser window and download the file.
 
 1. Download **vintage_computer_identifiers.docx** to the labvm.
 
