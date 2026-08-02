@@ -148,17 +148,17 @@ In this task, you’ll enable voice capabilities for the agent by configuring Az
 
 1. In the pane on the left, under the model selection list, enable **Voice mode**.
 
-   ![](./media/june26-lab4a-p2t1p5.png)
+     ![](./media/june26-lab4a-p2t1p5.png)
 
-   > **Note:** If the **Configuration** pane does not open automatically, use the "cog" icon above the chat interface to open it.
+     > **Note:** If the **Configuration** pane does not open automatically, use the "cog" icon above the chat interface to open it.
 
 1. In the configuration pane on the left, view the voices in the **Speech output (1)** drop-down list. Review the default speech input and output configuration. You can try different voices, previewing them until you decide which one to use.
 
-   ![](./media/june26-lab4a-p2t1p6.png)
+     ![](./media/june26-lab4a-p2t1p6.png)
 
 1. **Close (1)** the **Configuration** pane and use the **Save (2)** button to save the agent.
 
-   ![](<./media/ai901-l5-1(16).png>)
+     ![](<./media/ai901-l5-1(16).png>)
 
 ## Task 4: Use speech to interact with the agent (Read Only)
 
@@ -168,22 +168,22 @@ In this task, you’ll explore how speech-based interaction works by observing h
 
 1. In the **Chat** pane, click **Start** to begin a conversation with the model. If asked, allow microphone access. The agent will then introduce itself.
 
-   ![](./media/june26-lab4a-p2t1p7.png)
+     ![](./media/june26-lab4a-p2t1p7.png)
 
-   > **Note**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the _lock icon_ next to the url. Select _Permissions_, _Microphone_, and _Allow_. Then refresh the page and try again.
+     > **Note**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the _lock icon_ next to the url. Select _Permissions_, _Microphone_, and _Allow_. Then refresh the page and try again.
 
 1. When the app status is **Listening…**, say something like `"How does speech recognition work?"` and wait for a response.
 
-   ![](./media/lab4an-p2t2p12.png)
+     ![](./media/lab4an-p2t2p12.png)
 
 1. Verify that the app status changes to **Processing…**. The app will process the spoken input, using speech-to-text to convert your speech to text and submit it to the model as a prompt.
 
-   > **Note**: The processing speed may be so fast that you do not actually see the status before it changes back to _Speaking_.
+     > **Note**: The processing speed may be so fast that you do not actually see the status before it changes back to _Speaking_.
 
 1. When the status changes to **Speaking…**, the app uses text-to-speech to vocalize the response from the model. To see the original prompt and the response as text, select the **cc** button at the bottom of the chat screen.
 
-   > **Note**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done.
-   > **Note**: You can also use the Stop generation button in the chat pane to stop long-running responses. The button will end the conversation. You will need to start a new conversation to continue using the agent.
+     > **Note**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done.
+     > **Note**: You can also use the Stop generation button in the chat pane to stop long-running responses. The button will end the conversation. You will need to start a new conversation to continue using the agent.
 
 1. To continue the conversation, submit a second spoken prompt, such as `"How does speech synthesis work?"`, and review the response.
 
@@ -195,12 +195,12 @@ In this task, you’ll review sample code to understand how to integrate speech-
 
 1. Select **Call agent** at the top of the chat screen to view sample code for an agent client.
 
-   ![](<./media/ai901-l5-1(17).png>)
+     ![](<./media/ai901-l5-1(17).png>)
 
 1. Review the code; noting that it handles:
-   - Connectivity to your project to access the agent.
-   - Audio streaming for input and output.
-   - Use of audio devices, such as microphones and speakers.
+     - Connectivity to your project to access the agent.
+     - Audio streaming for input and output.
+     - Use of audio devices, such as microphones and speakers.
 
 ## Summary
 
