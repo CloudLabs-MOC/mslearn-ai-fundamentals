@@ -173,9 +173,9 @@ In this task, you'll use Azure Language analyzers in Microsoft Foundry to detect
 
 1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build (1)**. Navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select the **Services (2)** page.
 
-    ![](<./media/lab3b(1)-p2t1p6.png>)
+     ![](<./media/lab3b(1)-p2t1p6.png>)
 
-    > **Note:** In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the Deployments page, and viewing its AI Services tab.
+     > **Note:** In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the Deployments page, and viewing its AI Services tab.
 
 1. Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
 
@@ -193,33 +193,33 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
 2. In the **Input text** list, select one of the provided sample documents **(1)**. Then use the **Detect (2)** button to detect the language in which the sample is written.
 
-    ![](<./media/lab3b(1)-p2t1p8.png>)
+     ![](<./media/lab3b(1)-p2t1p8.png>)
 
 3. After reviewing the detected language details, click on the **Edit** button icon to make the input text editable again. Now you can:
 
-    - Select another sample.
-    - Type your own text.
-    - Upload a text file.
+     - Select another sample.
+     - Type your own text.
+     - Upload a text file.
 
-       ![](<./media/lab3b(1)-p2t1p9.png>)
+        ![](./media/lab3b(1)-p2t1p9.png)
 
-    For example, suppose you encounter a vintage computer, and you're curious about its history. You find a label that contains the following text on the computer casing. Enter the text and detect the language it is written in:
+     For example, suppose you encounter a vintage computer, and you're curious about its history. You find a label that contains the following text on the computer casing. Enter the text and detect the language it is written in:
 
-    ```
-    CPC 464
-    Art.-Nr.: 31020
-    Serien-Nr.: 464-87-041256
-    220–240 V ~ 50 Hz
-    40 W
-    Hergestellt in Korea
-    SCHNEIDER RUNDFUNKWERKE AG
-    Türkheim/Unterallgäu
-    Bundesrepublik Deutschland
-    ```
+     ```
+     CPC 464
+     Art.-Nr.: 31020
+     Serien-Nr.: 464-87-041256
+     220–240 V ~ 50 Hz
+     40 W
+     Hergestellt in Korea
+     SCHNEIDER RUNDFUNKWERKE AG
+     Türkheim/Unterallgäu
+     Bundesrepublik Deutschland
+     ```
 
-    ![](<./media/lab3b(1)-p2t1p10.png>)
+     ![](<./media/lab3b(1)-p2t1p10.png>)
 
-    > **Note:** If you want to investigate further, Foundry Tools includes a **Text Translator** service in the AI Services page; which you could use to translate the text.
+     > **Note:** If you want to investigate further, Foundry Tools includes a **Text Translator** service in the AI Services page; which you could use to translate the text.
 
 ### Task 3.2: Identify PII in text
 
@@ -227,43 +227,43 @@ To comply with privacy policies and laws, organizations often need to detect and
 
 1. On the language detection playground page, in the **Type (1)** drop-down list, select **Text PII Redaction (2)** (or return to the list of AI services and select **Azure Language - Text PII Redaction**).
 
-    ![](<./media/lab3b(1)-p2t1p11.png>)
+     ![](<./media/lab3b(1)-p2t1p11.png>)
 
 2. In the **Input text (1)** list, select one of the provided sample documents. Then use the **Detect (2)** button to detect PII values in the text.
 
-    ![](<./media/lab3b(1)-p2t1p12.png>)
+     ![](<./media/lab3b(1)-p2t1p12.png>)
 
 3. After reviewing the detected PII details, use the **Edit** button to make the input text editable again. Now you can:
-   - Select another sample.
-   - Type your own text.
-   - Upload a text file.
+     - Select another sample.
+     - Type your own text.
+     - Upload a text file.
 
-      ![](<./media/lab3b(1)-p2t1p13.png>)
+       ![](<./media/lab3b(1)-p2t1p13.png>)
 
-    For example, suppose you find the following invoice in the box of a vintage computer you have purchased:
+     For example, suppose you find the following invoice in the box of a vintage computer you have purchased:
 
-    ```
-    Tailspin Toys Ltd
-    Invoice
-    14 September 1984
-    Customer:
-        Margaret Ellis
-        128 High Street, Reading, Berkshire RG1 2AB
-        Telephone: 021 685 4215
-    Item: ZX Spectrum 48K home computer (includes power supply, RF lead, and user manual)
-    Price: £79.00
-    Payment received:  £79.00
-    ```
+     ```
+     Tailspin Toys Ltd
+     Invoice
+     14 September 1984
+     Customer:
+         Margaret Ellis
+         128 High Street, Reading, Berkshire RG1 2AB
+         Telephone: 021 685 4215
+     Item: ZX Spectrum 48K home computer (includes power supply, RF lead, and user manual)
+     Price: £79.00
+     Payment received:  £79.00
+     ```
 
-    Enter this text and determine what personally identifiable information it contains.
+     Enter this text and determine what personally identifiable information it contains.
 
-    ![](<./media/lab3b(1)-p2t1p14.png>)
+     ![](<./media/lab3b(1)-p2t1p14.png>)
 
 4. Experiment with input of your own. Azure Language can recognize an extensive list of PII. You can see the full list [here](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/concepts/entity-categories-list). A few of those entities include:
-    - People names
-    - Email addresses
-    - Phone numbers
-    - Street addresses
+     - People names
+     - Email addresses
+     - Phone numbers
+     - Street addresses
 
 ### Task 3.3: Review the sample code
 
@@ -271,7 +271,7 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
 
 1. Select the **Code** tab on the right to view sample code for PII identification, which should be similar to this:
 
-    ```python
+     ```python
    key = "<your-api-key>"
    endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
 
@@ -304,11 +304,11 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
                print(" Offset: {}".format(entity.offset))
                print(" Length: {}".format(entity.length))
    pii_recognition_example(client)
-    ```
+     ```
 
-    ![](<./media/lab3b(1)-p2t1p15.png>)
+     ![](<./media/lab3b(1)-p2t1p15.png>)
 
-    > **Note:** You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
+     > **Note:** You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Summary
 

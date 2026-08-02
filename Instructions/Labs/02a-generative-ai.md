@@ -144,13 +144,13 @@ You can use the playground to explore the model by chatting with it.
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
 
-    ![](<./media/lab2a(1)-p2t1p6.png>)
+     ![](<./media/lab2a(1)-p2t1p6.png>)
 
 1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
 
-    ![](<./media/lab2a(1)-p2t1p7.png>)
+     ![](<./media/lab2a(1)-p2t1p7.png>)
 
-    > **Tip**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
+     > **Tip**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
 
 ## Task 4: Specify instructions
 
@@ -158,27 +158,27 @@ In this task, you'll customize the model's behavior by defining system instructi
 
 1. In the model playground, switch back to the **Chat (1)** tab. Then, at the top-right of the chat pane, use the **New chat (2)** button to restart the conversation and removes the conversation history.
 
-    ![](<./media/ai901-l5-1(8).png>)
+     ![](<./media/ai901-l5-1(8).png>)
 
 1. In the pane on the left, in the **Instructions** text area, change the system prompt to:
 
-    ```
-    You are an expert in the history of computing and AI. You only answer questions about significant people and events in the development of computing, and about notable vintage computers. Do not engage in conversations on any topic that is unrelated to computing history.
-    ```
+     ```
+     You are an expert in the history of computing and AI. You only answer questions about significant people and events in the development of computing, and about notable vintage computers. Do not engage in conversations on any topic that is unrelated to computing history.
+     ```
 
-    ![](<./media/lab2a(1)-p2t1p1.png>)
+     ![](<./media/lab2a(1)-p2t1p1.png>)
 
 1. Enter a new prompt, such as `Tell me about ELIZA.` and view the response.
 
-    ![](<./media/lab2a(1)-p2t1p2.png>)
+     ![](<./media/lab2a(1)-p2t1p2.png>)
 
 1. Continue the conversation with prompts such as `How does it compare with modern LLMs?`.
 
-    ![](<./media/lab2a(1)-p2t1p3.png>)
+     ![](<./media/lab2a(1)-p2t1p3.png>)
 
 1. Try asking an "off-topic" question, such as `What's the capital of Spain?`; and view the response.
 
-    ![](<./media/lab2a(1)-p2t1p4.png>)
+     ![](<./media/lab2a(1)-p2t1p4.png>)
 
 ## Task 5: Add a web_search tool
 
@@ -188,17 +188,17 @@ In this task, you'll enable the Web Search tool so the model can retrieve curren
 
 1. In the **Add (1)** drop-down list, enable **Web search (2)**. Then read the information about the tool.
 
-    ![](<./media/lab2a(1)-p2t1p8.png>)
+     ![](<./media/lab2a(1)-p2t1p8.png>)
 
 1. In the model playground, at the top right of the chat pane, use the **New chat** button to restart the conversation.
 
-    ![](<./media/lab2a(1)-p2t1p9.png>)
+     ![](<./media/lab2a(1)-p2t1p9.png>)
 
 1. With the _web_search_ tool listed in the pane on the left, in the chat pane, enter the prompt `Find a vintage computer store near Seattle` (_or your local city!_) and review the response.
 
-    ![](<./media/lab2a(1)-p2t1p10.png>)
+     ![](<./media/lab2a(1)-p2t1p10.png>)
 
-    The model should have searched the Web for vintage computer stores near the specific city.
+     The model should have searched the Web for vintage computer stores near the specific city.
 
 ## Task 6: Add knowledge
 
@@ -206,31 +206,31 @@ In this task, you'll upload a document as a knowledge source and configure a Fil
 
 1. Open a new browser tab, and view the **[vintage_computer_identifiers.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/vintage_computer_identifiers.docx)** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/vintage_computer_identifiers.docx`. We'll use this to provide a knowledge source that the agent can use to identify computers based on serial numbers, product IDs, and other common printed details.
 
-    > **Note:** If the document does not open in your browser, open the link in an **InPrivate** or **Incognito** browser window and download the file.
+     > **Note:** If the document does not open in your browser, open the link in an **InPrivate** or **Incognito** browser window and download the file.
 
 1. Download **vintage_computer_identifiers.docx** to the labvm.
 
-    ![](<./media/lab2a(1)-p2t1p11.png>)
+     ![](<./media/lab2a(1)-p2t1p11.png>)
 
 1. Return to the browser tab containing the **Agent Playground**. In the **Tools** section, click **Upload files (1)**, then select **browse for files (2)**. In the file picker, open the **Downloads (3)** folder, select the **vintage_computer_identifiers.docx (4)** file, and click **Open (5)**. Wait for the file to be indexed using the default index name. When the indexing process is complete, click **Attach** to add the knowledge index to the agent.
 
-    ![](<./media/lab2a(1)-p2t1p12.png>)
+     ![](<./media/lab2a(1)-p2t1p12.png>)
 
-    ![](<./media/lab2a(1)-p2t1p13.png>)
+     ![](<./media/lab2a(1)-p2t1p13.png>)
 
 1. In the model playground, at the top right of the chat pane, use the **New chat** button to restart the conversation.
 
 1. In the **Chat** tab, enter the prompt `I have a printed circuit board with the "ASSY 250425" on it. What can you tell me about it?` and view the response.
 
-    ![](<./media/lab2a(1)-p2t1p14.png>)
+     ![](<./media/lab2a(1)-p2t1p14.png>)
 
-    This time the response should be informed by the information in the expenses data source.
+     This time the response should be informed by the information in the expenses data source.
 
 1. Try a few more prompts - for example, `What kind of computer does a PCB with "820-001A" come from?` or `What about "i386"?`.
 
-    ![](<./media/lab2a(1)-p2t1p15.png>)
+     ![](<./media/lab2a(1)-p2t1p15.png>)
 
-    When there's relevant information in the file, the model will use it to answer. If no information is found, the model will use its own training knowledge or the web_search tool.
+     When there's relevant information in the file, the model will use it to answer. If no information is found, the model will use its own training knowledge or the web_search tool.
 
 ## Task 7: Save the model configuration as an agent
 
@@ -238,9 +238,9 @@ In this task, you'll save the configured model as a reusable AI agent that inclu
 
 1. In the model playground, at the top right select **Save as agent (1)**. Then, when prompted, name your new agent `computing-historian` **(2)** and then click on **Create and open playground (3)**.
 
-    ![](<./media/lab2a(1)-p2t1p16.png>)
+     ![](<./media/lab2a(1)-p2t1p16.png>)
 
-    ![](<./media/lab2a(1)-p2t1p17.png>)
+     ![](<./media/lab2a(1)-p2t1p17.png>)
 
 1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
 
@@ -276,13 +276,13 @@ In this task, you'll save the configured model as a reusable AI agent that inclu
    agent_guid: c0000000-0000000-000000000
     ```
 
-    ![](<./media/lab2a(1)-p2t1p19.png>)
+     ![](<./media/lab2a(1)-p2t1p19.png>)
 
 1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`
 
-    The response should indicate that the agent is "aware" of its role as a computing historian.
+     The response should indicate that the agent is "aware" of its role as a computing historian.
 
-    ![](<./media/lab2a(1)-p2t1p18.png>)
+     ![](<./media/lab2a(1)-p2t1p18.png>)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -298,19 +298,19 @@ In this task, you'll preview the published agent in a web-based chat interface a
 
 1. At the top of the chat pane, in the **Preview (1)** drop-down list, select **Preview agent (2)**.
 
-    ![](<./media/lab2a(1)-p2t1p20.png>)
+     ![](<./media/lab2a(1)-p2t1p20.png>)
 
-    > **Note:** If the menu appears differently, select the **Publish** drop-down **(1)** and choose the option that allows you to **Preview web app (2)**. The appearance of the menu may differ, but the functionality remains the same.
+     > **Note:** If the menu appears differently, select the **Publish** drop-down **(1)** and choose the option that allows you to **Preview web app (2)**. The appearance of the menu may differ, but the functionality remains the same.
 
-    ![](./media/ai901-new-l2t1p1.png)
+     ![](./media/ai901-new-l2t1p1.png)
 
 1. A preview chat interface is opened in a new browser tab.
 
-    ![](<./media/lab2a(1)-p2t1p21.png>)
+     ![](<./media/lab2a(1)-p2t1p21.png>)
 
 1. Enter a prompt, such as `What can you tell me about the Altair 8800?` and view the response from your agent.
 
-    ![](<./media/lab2a(1)-p2t1p22.png>)
+     ![](<./media/lab2a(1)-p2t1p22.png>)
 
 ## Task 9: View client code to access the agent in your project
 
@@ -347,11 +347,11 @@ In this task, you'll review the sample client code that connects to your Microso
    print(f"Response output: {response.output_text}")
    ```
 
-    ![](<./media/lab2a(1)-p2t1p23.png>)
+     ![](<./media/lab2a(1)-p2t1p23.png>)
 
-    The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain privileged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
+     The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain privileged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
 
-    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
+     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
 ## Summary
 
