@@ -140,7 +140,7 @@ In this task, you’ll create an agent, select a generative AI model, and define
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="44086315-289e-4dc5-b10e-c115a9fb514b" />
+  <validation step="c4972679-5e6a-442e-a6cf-a8cb23dee898" />
 
 ## Task 3: Configure Azure Speech Voice live
 
