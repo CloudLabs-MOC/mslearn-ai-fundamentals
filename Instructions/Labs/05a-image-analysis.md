@@ -187,43 +187,43 @@ To develop a client app or agent that can use the model to interpret images, you
 
 1. In the **Chat** pane, select the **Call model** tab to view sample code.
 
-   ![](<./media/ai901-l5-1(18).png>)
+     ![](<./media/ai901-l5-1(18).png>)
 
 1. Select the following code options:
-   - **API**: Responses API
-   - **Language**: Python
-   - **SDK**: OpenAI SDK
-   - **Authentication**: Key authentication
+      - **API**: Responses API
+      - **Language**: Python
+      - **SDK**: OpenAI SDK
+      - **Authentication**: Key authentication
 
-   The default sample code includes only a text-based prompt. To submit a prompt that analyzes an image, you can modify the **input** parameter to include both text and image content, as shown here:
+      The default sample code includes only a text-based prompt. To submit a prompt that analyzes an image, you can modify the **input** parameter to include both text and image content, as shown here:
 
-   ```python
-   from openai import OpenAI
+      ```python
+      from openai import OpenAI
 
-   endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
-   deployment_name = "gpt-5-mini"
-   api_key = "<your-api-key>"
+      endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
+      deployment_name = "gpt-5-mini"
+      api_key = "<your-api-key>"
 
-   client = OpenAI(
-       base_url=endpoint,
-       api_key=api_key
-   )
+      client = OpenAI(
+            base_url=endpoint,
+            api_key=api_key
+      )
 
-   response = client.responses.create(
-       model=deployment_name,
-       input=[{
-           "role": "user",
-           "content": [
-               {"type": "input_text", "text": "what's in this image?"},
-               {"type": "input_image", "image_url": "https://an-online-image.jpg"},
-           ],
-       }],
-   )
+      response = client.responses.create(
+            model=deployment_name,
+            input=[{
+               "role": "user",
+               "content": [
+                  {"type": "input_text", "text": "what's in this image?"},
+                  {"type": "input_image", "image_url": "https://an-online-image.jpg"},
+               ],
+            }],
+      )
 
-   print(f"answer: {response.output[0]}")
-   ```
+      print(f"answer: {response.output[0]}")
+      ```
 
-   > **Note:** If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code), and you can use the image **[orange.jpg](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg){:target="\_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg`. To learn more about using the OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
+      > **Note:** If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code), and you can use the image **[orange.jpg](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg){:target="\_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg`. To learn more about using the OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
 
 ## Task 3: Use a generative AI model to create new images
 
@@ -231,43 +231,43 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
 1. Use the **back** arrow next to the **gpt-5-mini** header to view the model deployments in your project.
 
-   ![](./media/newlab5a-e1t2p13.png)
+     ![](./media/newlab5a-e1t2p13.png)
 
 1. On the Models page, click on **Deploy a base model** to open the model catalog.
 
-   ![](./media/july26-lab5t1p6.png)
+     ![](./media/july26-lab5t1p6.png)
 
 1. In the **Collections** drop-down list, select **Direct from Azure (1)**, and in the **Inference tasks** drop-down list, select **Text to image (2)**. Then view the available models for image generation.
 
-   ![](./media/lab5a-e1t3p3.png)
+     ![](./media/lab5a-e1t3p3.png)
 
-   ![](<./media/lab5a-e1t3p3(1).png>)
+     ![](<./media/lab5a-e1t3p3(1).png>)
 
-   > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
+     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
 1. Select the **FLUX.2-pro** or **gpt-image-1-mini** model.
 
-   ![](./media/july26-lab5t1p7.png)
+     ![](./media/july26-lab5t1p7.png)
 
 1. On the **gpt-image-1-mini** page, click on **Deploy (1)** and then select **Custom settings (2)**.
 
-   ![](./media/ai901-new-l5t1p1.png)
+     ![](./media/ai901-new-l5t1p1.png)
 
 1. On the **gpt-image-1-mini** pane,
-   - Rename the Deployment name to **gpt-image-1-mini (1)**
-   - Deployment type: **Global Standard (2)**
-   - Set _Requests per Minute Rate Limit_ **3** **(3)**
-   - Click on **Deploy (4)**
+      - Rename the Deployment name to **gpt-image-1-mini (1)**
+      - Deployment type: **Global Standard (2)**
+      - Set _Requests per Minute Rate Limit_ **3** **(3)**
+      - Click on **Deploy (4)**
 
-     ![](./media/ai901-new-l5t1p2.png)
+         ![](./media/ai901-new-l5t1p2.png)
 
 1. When the model has been deployed, it opens in the image playground.
 
-   ![](./media/july26-lab5t1p9.png)
+     ![](./media/july26-lab5t1p9.png)
 
 1. Enter a prompt that describes the image you want, such as `A vintage PC with a CRT monitor.`, then press **Enter** and review the generated image.
 
-   ![](./media/july26-lab5t1p10.png)
+     ![](./media/july26-lab5t1p10.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -283,41 +283,41 @@ If you want to develop a client app or agent that generates images using your mo
 
 1. In the **Chat** pane, select the **</> View code** tab to view sample code.
 
-   ![](./media/july26-lab5t1p11.png)
+     ![](./media/july26-lab5t1p11.png)
 
 1. Select the following code options:
-   - **Language**: Python
-   - **SDK**: OpenAI SDK
-   - **Authentication**: Key authentication
+      - **Language**: Python
+      - **SDK**: OpenAI SDK
+      - **Authentication**: Key authentication
 
-   The default sample code should look similar to this:
+      The default sample code should look similar to this:
 
-   ```python
-   import base64
-   from openai import OpenAI
+      ```python
+      import base64
+      from openai import OpenAI
 
-   endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
-   deployment_name = "your-text-to-image-model-deployment"
-   api_key = "<your-api-key>"
+      endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
+      deployment_name = "your-text-to-image-model-deployment"
+      api_key = "<your-api-key>"
 
-   client = OpenAI(
-       base_url=endpoint,
-       api_key=api_key
-   )
+      client = OpenAI(
+            base_url=endpoint,
+            api_key=api_key
+      )
 
-   img = client.images.generate(
-       model=deployment_name,
-       prompt="A cute baby polar bear",
-       n=1,
-       size="1024x1024",
-   )
+      img = client.images.generate(
+            model=deployment_name,
+            prompt="A cute baby polar bear",
+            n=1,
+            size="1024x1024",
+      )
 
-   image_bytes = base64.b64decode(img.data[0].b64_json)
-   with open("output.png", "wb") as f:
-       f.write(image_bytes)
-   ```
+      image_bytes = base64.b64decode(img.data[0].b64_json)
+      with open("output.png", "wb") as f:
+            f.write(image_bytes)
+      ```
 
-   ![](./media/july26-lab5t1p12.png)
+      ![](./media/july26-lab5t1p12.png)
 
 ## Task 4: Use a generative AI model to create video
 
@@ -325,45 +325,45 @@ In this task, you'll deploy a video-generation model and use text prompts to gen
 
 1. Use the **back** arrow next to the image-generation model header to view the model deployments in your project.
 
-   ![](./media/july26-lab5t1p13.png)
+     ![](./media/july26-lab5t1p13.png)
 
 1. On the Models page, click on **Deploy a base model** to open the model catalog.
 
-   ![](./media/july26-lab5t1p14.png)
+     ![](./media/july26-lab5t1p14.png)
 
 1. From the **Collections** drop-down, choose **Direct from Azure (1)**, and from the **Inference tasks** drop-down, select **Video generation (2)**. Then review the list of available video generation models.
 
-   ![](./media/ai901-l5-9.png)
+     ![](./media/ai901-l5-9.png)
 
-   ![](<./media/lab5a-e1t4p3(1).png>)
+     ![](<./media/lab5a-e1t4p3(1).png>)
 
-   > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
+     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
 1. Select the **Sora-2** model from the list.
 
-   ![](./media/ai901-l5-10.png)
+     ![](./media/ai901-l5-10.png)
 
-   > **Note:** If you are unable to deploy the model in your subscription, try one of the other video-generation models.
+     > **Note:** If you are unable to deploy the model in your subscription, try one of the other video-generation models.
 
 1. On the **sora-2** page, click on **Deploy (1)** and then select **Custom settings (2)**.
 
-   ![](./media/ai901-new-l5t1p1.png)
+    ![](./media/ai901-new-l5t1p1.png)
 
 1. On the **Deploy gpt-5-mini** pane,
-   - Rename the Deployment name to **sora-2 (1)**
-   - Deployment type: **Global Standard (2)**
-   - Set _Requests per Minute Rate Limit_ **3** **(3)**
-   - Click on **Deploy (4)**
+      - Rename the Deployment name to **sora-2 (1)**
+      - Deployment type: **Global Standard (2)**
+      - Set _Requests per Minute Rate Limit_ **3** **(3)**
+      - Click on **Deploy (4)**
 
-     ![](./media/ai901-new-l5t1p3.png)
+         ![](./media/ai901-new-l5t1p3.png)
 
 1. When the model has been deployed, it opens in the video playground.
 
-   ![](./media/ai901-l5-11.png)
+     ![](./media/ai901-l5-11.png)
 
 1. Enter a prompt that describes the video you want, such as `  `, then press **Enter** and review the generated result.
 
-   ![](./media/july26-lab5t1p15.png)
+     ![](./media/july26-lab5t1p15.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -379,23 +379,23 @@ If you want to develop a client app or agent that generates videos using your mo
 
 1. In the **Chat** pane, select the **</> View Code** tab to view sample code.
 
-   The default sample code uses the _curl_ command to call the REST endpoint, and should look similar to this:
+      The default sample code uses the _curl_ command to call the REST endpoint, and should look similar to this:
 
-   ```bash
-   curl -X POST "https://your-project-resource.openai.azure.com/openai/v1/video/generations/jobs" \
-   -H "Content-Type: application/json" \
-   -H "Authorization: Bearer $AZURE_API_KEY" \
-   -d '{
-       "prompt" : "A video of a cat",
-       "height" : "1080",
-       "width" : "1080",
-       "n_seconds" : "5",
-       "n_variants" : "1",
-       "model": "sora"
-       }'
-   ```
+      ```bash
+      curl -X POST "https://your-project-resource.openai.azure.com/openai/v1/video/generations/jobs" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $AZURE_API_KEY" \
+      -d '{
+            "prompt" : "A video of a cat",
+            "height" : "1080",
+            "width" : "1080",
+            "n_seconds" : "5",
+            "n_variants" : "1",
+            "model": "sora"
+            }'
+      ```
 
-   ![](./media/newlab5a-e1t2p21.png)
+      ![](./media/newlab5a-e1t2p21.png)
 
 ## Summary
 
