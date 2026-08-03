@@ -235,7 +235,7 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 
      > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
-1. Select the **FLUX.2-pro** or **gpt-image-1-mini** model.
+1. Select the **gpt-image-1-mini** or **FLUX.2-pro** model.
 
      ![](./media/july26-lab5t1p7.png)
 
@@ -246,7 +246,7 @@ In this task, you'll deploy an image-generation model and use text prompts to cr
 1. On the **gpt-image-1-mini** pane,
       - Rename the Deployment name to **gpt-image-1-mini (1)**
       - Deployment type: **Global Standard (2)**
-      - Set _Requests per Minute Rate Limit_ **3** **(3)**
+      - Set _Requests per Minute Rate Limit_ **`3`** **(3)**
       - Click on **Deploy (4)**
 
          ![](./media/ai901-new-l5t1p2.png)
