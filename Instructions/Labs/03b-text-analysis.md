@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this lab, you will use Microsoft Foundry to explore text analysis using both general-purpose AI models and specialized Azure Language tools. You’ll create a project in the Foundry portal, deploy a generative AI model, and use the chat playground to perform tasks such as sentiment analysis, named entity recognition, and text summarization. You will then use Azure Language analyzers to detect language and identify personally identifiable information (PII) in text. Through these hands-on activities, you’ll gain practical experience in applying different approaches to natural language processing (NLP) in real-world AI scenarios.
+In this lab, you will use a pre-configured Microsoft Foundry resource and project to explore text analysis using both general-purpose AI models and specialized Azure Language tools. You will deploy a generative AI model and use the chat playground to perform text summarization using natural language prompts. You will then use Azure Language analyzers in Microsoft Foundry to detect the language of text, identify personally identifiable information (PII), and review sample code for integrating these capabilities into your own applications. Through these hands-on activities, you will gain practical experience applying different approaches to natural language processing (NLP) using Microsoft Foundry.
 
 ## Lab Objectives
 
@@ -27,64 +27,54 @@ In this task, you'll sign in to the Microsoft Foundry portal, access a pre-confi
 1. If prompted to sign in, enter your credentials:
    - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
 
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
+     ![Enter Your Username](./media/mod6-p2t1p2.png)
 
    - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
 
-      ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
+     ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
    ![](./media/mod6-p2t1p3.png)
 
-1. After signing in to the **Microsoft Foundry** portal, you will be taken to the **All resources** page. A project named **myproject<inject key="DeploymentID"></inject>** has already been created for you. Select this pre-created project to open it. You will use this project throughout the remainder of the lab.
+### Task 1.1: Create a Microsoft Foundry Project (READ ONLY)
 
-    ![](./media/ai901-new-l6t1p1.png)
-
-1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
-
-    ![](./media/mod7-t1p3.png)
-
-1. After selecting the project in the **Foundry** portal, it should open in a page similar to the following image:
-
-    ![](./media/mod7-t1p4.png)
-
-### Task 1.1: Create a Microsoft Foundry project (READ ONLY)
-
-> ### **Note:** <span style="color:maroon">A Microsoft Foundry resource and project have already been created and configured for your lab environment. This section is provided for demonstration purposes only to show how a Foundry resource and project can be created in Microsoft Foundry. The following steps are **read-only** and **do not need to be performed** as part of this lab. Continue using the pre-created project for the remaining exercises.</span>
+> ### **Note:** <span style="color:maroon"> A Microsoft Foundry resource and project have already been created and configured for your lab environment. To optimize AI resource usage during the lab, additional Microsoft Foundry resources cannot be created. This is a **read-only** task provided for demonstration purposes and does not require any action. For the remainder of the lab, please use the pre-configured Microsoft Foundry resource and project that have been provisioned for your environment.
+</span>
 
 In this task, you'll learn how to create a Microsoft Foundry project by configuring the required Azure settings, including the Foundry resource, region, subscription, and resource group. This is a demonstration only and does not require any action during the lab.
 
-1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
+1. On the **All resources** page, click on **Create Project**.
 
-   ![](./media/mod7-t1p1.png)
+   ![](./media/ai901-new-l5t1p5.png)
 
-1. If prompted to sign in, enter your credentials:
-   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+1. In the **Create a project** pane, enter a unique project name like **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)** Verify that the **Foundry resource (2)** is automatically populated, set the **Region** to **<inject key="Location" enableCopy="false" /> (3)**, confirm that the default **Subscription (4)** is selected, and choose the appropriate **Resource group (5)**. Ensure that the **Set up recommended resources so I can explore everything Foundry has to offer** option is **disabled (6)**, and then select **Create (7)**.
 
-      ![Enter Your Username](./media/mod6-p2t1p2.png)
-
-   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
-
-      ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
-
-1. If prompted to **Stay signed in?**, you can click **No**.
-
-    ![](./media/mod6-p2t1p3.png)
-
-1. From the **Microsoft Foundry** portal, select the **project selector (1)** located at the top of the page, and then choose **Create new project (2)**. In the **Create a project** pane, enter a unique project name like **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)** Verify that the **Foundry resource (4)** is automatically populated, set the **Region** to **<inject key="Location" enableCopy="false" /> (5)**, confirm that the default **Subscription (6)** is selected, and choose the appropriate **Resource group (7)**. Ensure that the **Set up recommended resources so I can explore everything Foundry has to offer** option is **disabled (8)**, and then select **Create (9)**.
-
-    ![](./media/ai901-new-l6t1p2.png)
-
-    ![](./media/ai901-new-l6t1p3.png)
+   ![](./media/ai901-new-l6t1p3.png)
 
 1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
 
-    ![](./media/mod7-t1p3.png)
+   ![](./media/mod7-t1p3.png)
 
 1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
 
-    ![](./media/mod7-t1p4.png)
+   ![](./media/mod7-t1p4.png)
+
+### Task 1.2: Open the Pre-configured Microsoft Foundry Project
+
+In this task, you'll access the pre-configured Microsoft Foundry project, dismiss the welcome prompt, and explore the project workspace that will be used for the remainder of the lab.
+
+1. From the **All resources** page select the project named **myproject<inject key="DeploymentID"></inject>** that has been already been created for you to open it. You will use this project throughout the remainder of the lab.
+
+   ![](./media/ai901-new-l6t1p1.png)
+
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
+
+   ![](./media/mod7-t1p3.png)
+
+1. After selecting the project in the **Foundry** portal, it should open in a page similar to the following image:
+
+   ![](./media/mod7-t1p4.png)
 
 ## Task 2: Explore a general-purpose AI model's text analysis capabilities
 
@@ -312,6 +302,6 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
 
 ## Summary
 
-In this lab, you created a Microsoft Foundry project and explored text analysis using both generative AI models and specialized Azure Language services. You deployed a GPT model to summarize text in the chat playground, used Azure Language analyzers to detect languages and identify personally identifiable information (PII), and reviewed sample code for integrating these capabilities into applications. This hands-on experience demonstrates how Microsoft Foundry combines the flexibility of generative AI with purpose-built language services to support a wide range of natural language processing (NLP) scenarios.
+In this lab, you used a pre-configured Microsoft Foundry resource and project to explore text analysis using both generative AI models and specialized Azure Language services. You deployed a GPT model and used the chat playground to summarize text using natural language prompts. You then used Azure Language analyzers to detect the language of text and identify personally identifiable information (PII), and reviewed sample code for integrating these capabilities into your own applications. Through these exercises, you gained hands-on experience using Microsoft Foundry to combine the flexibility of generative AI with purpose-built language services for a variety of natural language processing (NLP) scenarios.
 
 ### Congratulations, you’ve successfully completed the hands-on lab!

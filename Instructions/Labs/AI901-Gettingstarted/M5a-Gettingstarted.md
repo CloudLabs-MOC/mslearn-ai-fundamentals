@@ -8,21 +8,25 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 ## Overview
 
-In this lab, you will explore Microsoft Foundry to deploy and interact with vision-enabled generative AI models. You will analyze images, generate new images from text prompts, and create videos using generative AI. The lab demonstrates how to manage AI resources, work with visual data, and build applications that understand and generate visual content.
+In this hands-on lab, you will explore computer vision capabilities in Microsoft Foundry by using a pre-configured Microsoft Foundry resource and project. You will deploy a vision-enabled generative AI model to analyze images, use an image generation model to create images from natural language prompts, and deploy a video generation model to create short videos from text descriptions.
+
+You will interact with each model through the Microsoft Foundry playgrounds to understand how multimodal AI can interpret and generate visual content. Finally, you will review sample code that demonstrates how to integrate image analysis, image generation, and video generation capabilities into your own applications using OpenAI APIs and SDKs.
+
+By the end of this lab, you will understand how Microsoft Foundry enables developers to build intelligent applications that analyze images and generate both images and videos using generative AI models. 
 
 ## Objectives
 
-By the end of this lab, you will be able to:
+By the end of this lab, you will be able to deploy and use multimodal AI models for image analysis, image generation, and video generation in Microsoft Foundry.
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to organize AI resources, models, and services used in generative AI and computer vision scenarios.
+1. **Explore a Microsoft Foundry project**: Access a pre-configured Microsoft Foundry project and become familiar with the workspace used throughout the lab.
 
-2. **Analyze images with a vision-enabled generative AI model:** Deploy and use a model in the playground to interpret uploaded images and generate text-based responses.
+2. **Analyze images using a multimodal AI model**: Deploy a vision-enabled generative AI model and use it to understand and describe image content through natural language prompts.
 
-3. **Generate images from text prompts:** Deploy an image-generation model and create new images based on descriptive prompts.
+3. **Generate images from text prompts**: Deploy an image generation model and create images based on descriptive text using the image playground.
 
-4. **Generate videos from text prompts:** Deploy a video-generation model and generate short videos from natural language descriptions.
+4. **Generate videos from text prompts**: Deploy a video generation model and create short videos from natural language descriptions using the video playground.
 
-5. **Review sample code for multimodal AI scenarios:** Explore example code to understand how image analysis, image generation, and video generation can be integrated into applications.
+5. **Review application integration**: Examine sample code that demonstrates how to integrate image analysis, image generation, and video generation capabilities into applications using OpenAI APIs and SDKs. 
 
 
 ## Pre-requisites
@@ -32,38 +36,39 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry supports deploying and using vision-enabled generative AI models for image understanding, image generation, and video generation. The architecture shows how project resources, deployed models, and playground experiences interact to enable computer vision scenarios.
+In this hands-on lab, the architecture demonstrates how Microsoft Foundry supports multimodal AI workflows for understanding and generating visual content.
 
-1. **Microsoft Foundry Project:** A workspace used to organize AI resources, manage model deployments, and support computer vision workloads throughout the lab.
+1. **Pre-configured Microsoft Foundry Project**: A Microsoft Foundry project provides the workspace for deploying multimodal AI models, managing model deployments, and accessing vision-related playgrounds.
 
-2. **Image Analysis with Generative AI:** A vision-enabled model such as **gpt-5-mini** is deployed and used in the chat playground to analyze uploaded images and return text-based responses from visual content.
+2. **Vision-enabled Generative AI Model**: A multimodal language model is deployed to analyze uploaded images, interpret visual content, and generate natural language responses.
 
-3. **Image Generation Models:** An image generation model such as **FLUX.1-Kontext-pro** is deployed to generate new images from natural language prompts using the image playground.
+3. **Image Generation Model**: A text-to-image model generates images from descriptive prompts, enabling developers to create visual content through natural language.
 
-4. **Video Generation Models:** A video generation model such as **Sora-2** is deployed to generate short videos from prompts using the video playground.
+4. **Video Generation Model**: A text-to-video model generates short videos from natural language descriptions, extending generative AI capabilities to dynamic visual media.
 
-5. **Prompting and Client Integration:** Prompts, model settings, and sample API code demonstrate how these capabilities can be tested in the playground and integrated into custom applications using OpenAI APIs.
+5. **Application Integration**: Sample code demonstrates how applications can securely connect to deployed models and use OpenAI APIs and SDKs to analyze images and generate images and videos programmatically. 
 
 ## Architecture Diagram
 
-![](../media/newlab5a-arch.png)
+![](../media/ai901-new-lab5.png)
 
 ## Explanation of Components
 
-1. **Microsoft Foundry Project:**
-   The project serves as the central workspace for managing AI resources, model deployments, and services used throughout the lab. It provides access to the model catalog, playgrounds, and supporting resources for multimodal experimentation.
+1. **Microsoft Foundry Project**: A centralized workspace used to organize AI assets, deployed models, playgrounds, and project configurations required for developing multimodal AI applications.
 
-2. **Image Analysis Model:**
-   A vision-enabled generative AI model such as **gpt-5-mini** is deployed to analyze uploaded images and generate text-based responses, enabling image understanding through natural language interaction.
+2. **Vision-enabled Generative AI Model**: A multimodal AI model capable of processing both text and images. It analyzes uploaded images, understands visual content, and generates descriptive or contextual responses in natural language.
 
-3. **Image Generation Model:**
-   An image generation model such as **FLUX.1-Kontext-pro** uses text prompts to create new images, allowing users to generate visual content from descriptive input.
+3. **Image Playground**: An interactive environment for testing image analysis and image generation models by uploading images or entering natural language prompts.
 
-4. **Video Generation Model:**
-   A video generation model such as **Sora-2** generates short videos from natural language prompts, extending generative AI capabilities beyond static images.
+4. **Image Generation Model**: A text-to-image model that creates high-quality images based on natural language descriptions, enabling developers to generate visual content for a wide range of scenarios.
 
-5. **Playgrounds, Prompts, and Client Integration:**
-   Foundry playgrounds provide no-code environments to test prompts and model behavior, while sample APIs and SDKs demonstrate how image analysis, image generation, and video generation can be integrated into custom applications.
+5. **Video Generation Model**: A text-to-video model that generates short videos from descriptive prompts, allowing applications to create dynamic visual content using generative AI.
+
+6. **Model Deployments**: Deployed instances of vision, image generation, and video generation models that expose secure endpoints for playgrounds and client applications.
+
+7. **OpenAI APIs and SDKs**: Client libraries and REST APIs that enable developers to integrate image analysis, image generation, and video generation capabilities into applications using authenticated requests.
+
+8. **Client Application**: An application that connects to Microsoft Foundry to analyze images, generate images from text prompts, and create videos programmatically using deployed AI models. 
 
 
 # Getting Started with lab

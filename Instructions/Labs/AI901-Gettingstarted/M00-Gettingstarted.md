@@ -9,22 +9,25 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience using **Microsoft Foundry** to create and manage AI development resources. You will learn how to create a Microsoft Foundry project, explore the Foundry portal interface, and understand how the project is connected to underlying Azure resources. You will also interact with the built-in **Ask AI** assistant to learn about platform capabilities, deploy a generative AI model from the Foundry model catalog, and test the deployed model in the playground.
+In this hands-on lab, you will explore the Microsoft Foundry development experience by using a pre-configured Microsoft Foundry resource and project. You will learn how Microsoft Foundry projects are organized within a parent resource, navigate the Foundry portal, and examine the Azure resources associated with your project.
 
-Additionally, you will configure a sample client application using your project endpoint, API key, and model deployment to connect with your deployed model. Through this application, you will explore a variety of AI capabilities including conversational AI, text analysis, speech features, computer vision, information extraction, and built-in safety guardrails. By the end of this lab, you will understand how Microsoft Foundry enables developers to build, deploy, and integrate AI-powered applications.
+You will use the built-in Ask AI assistant to explore Microsoft Foundry capabilities, deploy a generative AI model from the model catalog, and test the deployed model in the playground. You will then configure a sample client application using your project endpoint, API key, and model deployment to connect to your deployed model.
 
+Finally, you will interact with the application to explore a variety of AI capabilities, including conversational AI, text summarization, entity extraction, speech, computer vision, information extraction, and built-in responsible AI safety guardrails. By the end of this lab, you will understand how Microsoft Foundry provides a unified platform for deploying, managing, and integrating AI models into intelligent applications.
 
 ## Objectives
 
-By the end of this lab, you will be able to create and explore a project in **Microsoft Foundry**, deploy a generative AI model, and connect an application to the deployed model using project credentials.
+By the end of this lab, you will be able to explore and use a pre-configured **Microsoft Foundry** project, deploy a generative AI model, and connect an application to the deployed model using project credentials.
 
-1. **Create a project in Microsoft Foundry**: You will learn how to access the Microsoft Foundry portal, configure project settings such as subscription, resource group, and region, and create a project to organize AI models and resources.
+1. **Explore a Microsoft Foundry project**: Access a pre-configured Microsoft Foundry project and understand how projects are organized within a parent Foundry resource.
 
-2. **Explore the Microsoft Foundry portal and Azure resources**: You will navigate the Foundry portal to understand its key sections and view the Azure resources that support your Foundry project.
+2. **Explore the Microsoft Foundry portal**: Navigate the Discover, Build, Operate, and Docs sections to understand the tools and capabilities available for AI development and management.
 
-3. **Deploy and test a generative AI model**: You will deploy a model from the Foundry model catalog, interact with it in the playground, and test its responses using prompts.
+3. **Deploy and test a generative AI model**: Deploy a model from the Microsoft Foundry model catalog and interact with it in the playground using natural language prompts.
 
-4. **Connect an application to the Foundry resource**: You will configure a sample client application using the project endpoint, API key, and model deployment name to interact with the deployed model.
+4. **Connect an application to the Foundry project**: Configure a sample client application using the project endpoint, API key, and model deployment name to communicate with the deployed model.
+
+5. **Explore AI capabilities**: Use the client application to experience conversational AI, text analysis, speech services, computer vision, information extraction, and responsible AI safety guardrails. 
 
 ## Pre-requisites
 
@@ -32,31 +35,37 @@ Basic familiarity with Azure services and AI concepts is recommended. Experience
 
 ## Architecture
 
-In this hands-on lab, the architecture demonstrates a simple workflow for developing and using generative AI solutions with Microsoft Foundry.
+In this hands-on lab, the architecture demonstrates how a client application interacts with a pre-configured Microsoft Foundry project to access deployed AI models and built-in AI capabilities.
 
-1. **Microsoft Foundry Project and Azure Resources**: A Microsoft Foundry project is created and linked to an underlying Foundry resource in Azure. This resource provides the infrastructure required to manage models, endpoints, and AI services used in the project.
+1. **Pre-configured Microsoft Foundry Project**: A Microsoft Foundry project is already provisioned and connected to a parent Foundry resource in Azure. The project provides a workspace for managing AI assets, model deployments, and project configurations.
 
-2. **Model Deployment from the Foundry Model Catalog**: A generative AI model is selected from the Foundry model catalog and deployed to the project. The deployment creates a model endpoint that allows applications and tools to interact with the model.
+2. **Model Deployment**: A generative AI model is deployed from the Microsoft Foundry model catalog. The deployment exposes an endpoint that enables applications and playground experiences to interact with the model.
 
-3. **Client Application Integration**: A sample client application is configured using the project endpoint, API key, and model deployment name. The application sends prompts to the deployed model and receives AI-generated responses, demonstrating how Foundry models can be integrated into real-world applications.
+3. **Client Application Integration**: A sample client application is configured using the project endpoint, API key, and model deployment name. The application securely communicates with the deployed model to process prompts and return AI-generated responses.
+
+4. **AI Capabilities**: Through the deployed model and Microsoft Foundry services, the application demonstrates conversational AI, text analysis, speech processing, computer vision, information extraction, and built-in responsible AI guardrails. 
 
 ## Architecture Diagram
 
- ![](../media/mod01-archdiagram.png)
+![](../media/ai901-new-lab1.png)
 
 ## Explanation of Components
 
-1. **Microsoft Foundry Project**: A workspace used to organize and manage AI assets such as models, agents, tools, and data connections. Projects help structure the development of AI applications and provide a centralized place to configure and access resources required for building AI solutions.
+1. **Microsoft Foundry Parent Resource**: The Azure resource that provides the underlying infrastructure for Microsoft Foundry. It centrally manages projects, users, connected resources, model deployments, and administrative settings shared across multiple projects.
 
-2. **Microsoft Foundry Resource**: The underlying Azure resource that provides the infrastructure and services required for AI development. It hosts capabilities such as model deployments, APIs, and integrations that allow applications and agents to interact with AI models.
+2. **Microsoft Foundry Project**: A project workspace within the parent resource used to organize AI assets, model deployments, agents, tools, workflows, and project-specific configurations required for developing AI applications.
 
-3. **Model Catalog**: A collection of AI models provided by Microsoft, OpenAI, and other providers that can be used in AI applications. The catalog allows developers to browse, evaluate, and deploy models based on their requirements.
+3. **Model Catalog**: A curated collection of AI models from Microsoft, OpenAI, and other providers. Developers can browse available models, review their capabilities, and deploy them to their Foundry projects.
 
-4. **Model Deployment**: The process of deploying a selected model to a Foundry resource so it can be accessed through an endpoint. Once deployed, the model can be used by applications, agents, and tools to generate responses or perform AI-powered tasks.
+4. **Model Deployment**: A deployed instance of a selected AI model that creates an inference endpoint. Applications and playgrounds use this deployment to send prompts and receive AI-generated responses.
 
-5. **Project Endpoint and API Key**: Secure access credentials used by applications to interact with models and services in a Microsoft Foundry project. The endpoint specifies where requests are sent, while the API key authenticates and authorizes access to the deployed resources.
+5. **Project Endpoint and API Key**: Secure connection details used by client applications to access deployed models. The endpoint identifies the project resource, while the API key authenticates requests.
 
-6. **Ask AI Assistant**: A built-in AI-powered assistant in the Microsoft Foundry portal that helps users understand platform features, find guidance, and explore capabilities by interacting through natural language prompts.
+6. **Client Application**: A sample application configured with the project endpoint, API key, and model deployment. It demonstrates how external applications can integrate with Microsoft Foundry to consume AI services.
+
+7. **Ask AI Assistant**: A built-in AI assistant within the Microsoft Foundry portal that helps users understand platform features, discover capabilities, and receive guidance through natural language conversations.
+
+8. **AI Capabilities**: The deployed model enables multiple AI experiences, including conversational AI, text summarization, entity extraction, speech processing, computer vision, information extraction, and responsible AI safety guardrails that help ensure safe and compliant AI interactions. 
 
 # Getting Started with lab
  

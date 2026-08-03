@@ -8,18 +8,25 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We're excited 
 
 ## Overview
 
-In this lab, you will explore Microsoft Foundry to create and interact with a speech-enabled AI agent. You will configure Azure Speech – Voice Live to enable real-time speech-to-text and text-to-speech capabilities, experiment with voice settings and system instructions, and observe how voice interactions are handled in the agent playground. You will also review client code to understand how speech-enabled AI agents can be integrated into applications for real-time conversational experiences.
+In this hands-on lab, you will explore speech-enabled AI experiences in Microsoft Foundry by using a pre-configured Microsoft Foundry resource and project. You will create an AI agent, configure its behavior using system instructions, and enable Azure Speech Voice Live to add real-time speech input and output capabilities.
+
+You will explore how voice interactions work within the agent playground, understand how speech is converted to text for processing by a generative AI model, and how responses are synthesized back into natural-sounding speech. Finally, you will review sample client code that demonstrates how to integrate speech-enabled AI agents into applications using Microsoft Foundry APIs and SDKs.
+
+By the end of this lab, you will understand how Microsoft Foundry combines generative AI and Azure Speech services to build intelligent, voice-enabled conversational applications.
 
 ## Objectives
 
-By the end of this lab, you will be able to:
+By the end of this lab, you will be able to create and configure a speech-enabled AI agent and understand how real-time voice interactions are implemented in Microsoft Foundry.
 
-1. **Create a Microsoft Foundry project:** Set up a workspace in Microsoft Foundry to manage AI resources for building a speech-enabled solution.
-2. **Create and configure an agent:** Create an agent, select a generative AI model, and define its behavior using system instructions.
-3. **Enable Azure Speech – Voice Live:** Configure voice capabilities for the agent by enabling speech input and output settings.
-4. **Explore speech-based interaction:** Understand how speech-to-text and text-to-speech enable real-time voice interaction with the agent.
-5. **Review client code for voice-enabled agents:** Examine sample code to understand how speech services and agents are integrated into applications.
+1. **Explore a Microsoft Foundry project**: Access a pre-configured Microsoft Foundry project and become familiar with the workspace used throughout the lab.
 
+2. **Create and configure an AI agent**: Create an AI agent, select a generative AI model, and define its behavior using system instructions.
+
+3. **Enable Azure Speech Voice Live**: Configure speech input and output settings to add real-time voice capabilities to the AI agent.
+
+4. **Explore speech interactions**: Understand how speech input is converted into text, processed by the AI model, and returned as synthesized speech through the agent playground.
+
+5. **Review application integration**: Examine sample client code that demonstrates how to integrate speech-enabled AI agents into applications using Microsoft Foundry APIs and SDKs. 
 
 ## Pre-requisites
 
@@ -29,43 +36,41 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-This lab demonstrates how Microsoft Foundry integrates generative AI models with Azure Speech - Voice Live to enable real-time, voice-based interactions through an agent. The architecture highlights how the agent, speech services, and client applications work together to create a conversational voice-enabled AI experience.
+In this hands-on lab, the architecture demonstrates how Microsoft Foundry integrates generative AI models with Azure Speech services to enable real-time voice conversations.
 
-1. **Microsoft Foundry Project:** A centralized workspace used to manage AI resources, including agents, models, and configurations required for building speech-enabled AI solutions.
+1. **Pre-configured Microsoft Foundry Project**: A Microsoft Foundry project provides the workspace for creating AI agents, configuring speech capabilities, and managing project resources.
 
-2. **Generative AI Model (GPT-4.1):** The model selected within the agent to generate conversational responses based on user input and system instructions.
+2. **AI Agent Configuration**: An AI agent is created using a deployed generative AI model and customized with system instructions that define its behavior and responses.
 
-3. **Agent Configuration:** Encapsulates the model, system instructions, and voice settings into a unified AI entity that defines the assistant’s behavior and capabilities.
+3. **Azure Speech Voice Live**: Speech Voice Live enables real-time speech recognition and speech synthesis, allowing users to communicate with the AI agent using natural voice interactions.
 
-4. **Azure Speech – Voice Live Service:** Provides real-time speech-to-text and text-to-speech functionality, enabling seamless voice interaction with the agent.
+4. **Voice Interaction Workflow**: Spoken user input is converted into text using speech recognition, processed by the generative AI model, and converted back into natural speech using text-to-speech synthesis.
 
-5. **Agent Playground (Voice Mode):** A browser-based interface where voice mode is enabled, allowing users to interact with the agent using speech and receive audio responses.
-
-6. **Client Code and APIs:** Sample code and SDKs that demonstrate how to connect to the agent, handle audio streaming, and integrate voice-enabled AI interactions into applications.
+5. **Application Integration**: Sample client code demonstrates how applications can connect to Microsoft Foundry, access the speech-enabled AI agent, and manage real-time audio streaming using supported APIs and SDKs. 
  
 ## Architecture Diagram
 
-![](../media/lab4an-arch.png)
+![](../media/ai901-new-lab4.png)
 
 ## Explanation of Components
 
-1. **Microsoft Foundry Project:**
-   The project serves as the central workspace for managing AI resources and accessing Foundry tools. It provides a unified environment to organize settings, create agents, select models, and use the playground for experimentation.
+1. **Microsoft Foundry Project**: A centralized workspace used to organize AI assets, agents, deployed models, tools, and project configurations required for developing AI-powered applications.
 
-2. **Generative AI Model (GPT-4.1):**
-   This is the language model used by the agent to generate responses. It processes input (including speech converted to text) and can be configured with system instructions to control behavior and output.
+2. **AI Agent**: A reusable conversational AI solution built on a deployed generative AI model. The agent combines model capabilities with configurable instructions to deliver responses tailored to a specific purpose.
 
-3. **Agent Configuration:**
-   The agent encapsulates the model, system instructions, and voice settings into a single AI entity. It defines how the assistant behaves and ensures consistent, task-specific responses.
+3. **Generative AI Model**: A deployed language model (such as GPT-5) that interprets user prompts, generates contextual responses, and powers the conversational capabilities of the AI agent.
 
-4. **Azure Speech - Voice Live Service:**
-   This service enables real-time speech capabilities by providing speech-to-text and text-to-speech functionality. It converts spoken input into text for the model and transforms model responses into natural-sounding speech.
+4. **System Instructions**: Configuration prompts that define the agent's role, behavior, communication style, and response boundaries, enabling developers to customize how the agent interacts with users.
 
-5. **Agent Playground (Voice Mode):**
-   A browser-based interface where voice mode is enabled, allowing users to interact with the agent using speech and view responses in both audio and text formats.
+5. **Azure Speech Voice Live**: A real-time speech service that enables bidirectional voice communication by providing speech recognition for spoken input and speech synthesis for AI-generated responses.
 
-6. **Client Code and APIs:**
-   Sample code and SDKs demonstrate how to integrate the speech-enabled agent into applications, handling authentication, real-time audio streaming, and interaction with the agent.
+6. **Speech-to-Text (STT)**: A speech recognition capability that converts spoken audio into text before submitting it to the generative AI model for processing.
+
+7. **Text-to-Speech (TTS)**: A speech synthesis capability that converts the AI model's text response into natural-sounding audio for playback to the user.
+
+8. **Agent Playground**: An interactive environment for configuring, testing, and validating speech-enabled AI agents before integrating them into applications.
+
+9. **Client Application**: An application that connects to the Microsoft Foundry project and communicates with the speech-enabled AI agent, handling real-time audio streaming, user interactions, and AI responses through supported APIs and SDKs. 
 
 # Getting Started with lab
  

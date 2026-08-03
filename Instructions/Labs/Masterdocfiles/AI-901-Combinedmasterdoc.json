@@ -4,31 +4,31 @@
       "Language": "English",
       "Files": [
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/AI901-Gettingstarted/M00-Gettingstarted.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/AI901-Gettingstarted/M00-Gettingstarted.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/00-explore-foundry.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/00-explore-foundry.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/02a-generative-ai.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/02a-generative-ai.md",
           "Order": 3
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/03b-text-analysis.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/03b-text-analysis.md",
           "Order": 4
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/04a-speech.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/04a-speech.md",
           "Order": 5
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/05a-image-analysis.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/05a-image-analysis.md",
           "Order": 6
          },
          {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai901-2026/Instructions/Labs/06a-content-understanding.md",
+          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/ai-901-2026-new/Instructions/Labs/06a-content-understanding.md",
           "Order": 7
         }
       ]

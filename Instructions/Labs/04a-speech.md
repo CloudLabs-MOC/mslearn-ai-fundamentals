@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this lab, you will explore Microsoft Foundry to build and interact with a speech-enabled generative AI agent. You will create an agent, configure Azure Speech Voice Live to enable voice capabilities, and experiment with speech input and output in the agent playground. You will also review how system instructions influence responses and examine client code used to implement real-time voice interactions. This lab demonstrates how to integrate speech capabilities with generative AI to create interactive, voice-based experiences.
+In this lab, you will use a pre-configured Microsoft Foundry resource and project to build and interact with a speech-enabled AI agent. You will create an agent, configure Azure Speech Voice Live to enable voice capabilities, and explore how speech input and output are used in the agent playground. You will also define the agent's behavior using system instructions and review sample client code for implementing real-time voice interactions. Through these hands-on activities, you will gain practical experience integrating speech capabilities with generative AI to build interactive, voice-enabled applications.
 
 ## Lab Objectives
 
@@ -39,44 +39,18 @@ In this task, you'll sign in to the Microsoft Foundry portal, access a pre-confi
 
    ![](./media/mod6-p2t1p3.png)
 
-1. After signing in to the **Microsoft Foundry** portal, you will be taken to the **All resources** page. A project named **myproject<inject key="DeploymentID"></inject>** has already been created for you. Select this pre-created project to open it. You will use this project throughout the remainder of the lab.
+### Task 1.1: Create a Microsoft Foundry Project (READ ONLY)
 
-   ![](./media/ai901-new-l6t1p1.png)
-
-1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
-
-   ![](./media/mod7-t1p3.png)
-
-1. After selecting the project in the **Foundry** portal, it should open in a page similar to the following image:
-
-   ![](./media/mod7-t1p4.png)
-
-### Task 1.1: Create a Microsoft Foundry project (READ ONLY)
-
-> ### **Note:** <span style="color:maroon">A Microsoft Foundry resource and project have already been created and configured for your lab environment. This section is provided for demonstration purposes only to show how a Foundry resource and project can be created in Microsoft Foundry. The following steps are **read-only** and **do not need to be performed** as part of this lab. Continue using the pre-created project for the remaining exercises.</span>
+> ### **Note:** <span style="color:maroon"> A Microsoft Foundry resource and project have already been created and configured for your lab environment. To optimize AI resource usage during the lab, additional Microsoft Foundry resources cannot be created. This is a **read-only** task provided for demonstration purposes and does not require any action. For the remainder of the lab, please use the pre-configured Microsoft Foundry resource and project that have been provisioned for your environment.
+</span>
 
 In this task, you'll learn how to create a Microsoft Foundry project by configuring the required Azure settings, including the Foundry resource, region, subscription, and resource group. This is a demonstration only and does not require any action during the lab.
 
-1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
+1. On the **All resources** page, click on **Create Project**.
 
-   ![](./media/mod7-t1p1.png)
+   ![](./media/ai901-new-l5t1p5.png)
 
-1. If prompted to sign in, enter your credentials:
-   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
-
-     ![Enter Your Username](./media/mod6-p2t1p2.png)
-
-   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
-
-     ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
-
-1. If prompted to **Stay signed in?**, you can click **No**.
-
-   ![](./media/mod6-p2t1p3.png)
-
-1. From the **Microsoft Foundry** portal, select the **project selector (1)** located at the top of the page, and then choose **Create new project (2)**. In the **Create a project** pane, enter a unique project name like **myproject-<inject key="DeploymentID" enableCopy="false" /> (3)** Verify that the **Foundry resource (4)** is automatically populated, set the **Region** to **<inject key="Location" enableCopy="false" /> (5)**, confirm that the default **Subscription (6)** is selected, and choose the appropriate **Resource group (7)**. Ensure that the **Set up recommended resources so I can explore everything Foundry has to offer** option is **disabled (8)**, and then select **Create (9)**.
-
-   ![](./media/ai901-new-l6t1p2.png)
+1. In the **Create a project** pane, enter a unique project name like **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)** Verify that the **Foundry resource (2)** is automatically populated, set the **Region** to **<inject key="Location" enableCopy="false" /> (3)**, confirm that the default **Subscription (4)** is selected, and choose the appropriate **Resource group (5)**. Ensure that the **Set up recommended resources so I can explore everything Foundry has to offer** option is **disabled (6)**, and then select **Create (7)**.
 
    ![](./media/ai901-new-l6t1p3.png)
 
@@ -88,6 +62,22 @@ In this task, you'll learn how to create a Microsoft Foundry project by configur
 
    ![](./media/mod7-t1p4.png)
 
+### Task 1.2: Open the Pre-configured Microsoft Foundry Project
+
+In this task, you'll access the pre-configured Microsoft Foundry project, dismiss the welcome prompt, and explore the project workspace that will be used for the remainder of the lab.
+
+1. From the **All resources** page select the project named **myproject<inject key="DeploymentID"></inject>** that has been already been created for you to open it. You will use this project throughout the remainder of the lab.
+
+   ![](./media/ai901-new-l6t1p1.png)
+
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
+
+   ![](./media/mod7-t1p3.png)
+
+1. After selecting the project in the **Foundry** portal, it should open in a page similar to the following image:
+
+   ![](./media/mod7-t1p4.png)
+   
 ## Task 2: Create an agent
 
 In this task, you’ll create an agent, select a generative AI model, and define its behavior using system instructions.
@@ -204,6 +194,6 @@ In this task, you’ll review sample code to understand how to integrate speech-
 
 ## Summary
 
-In this exercise, you explored how to use Microsoft Foundry and Azure Speech Voice Live to create and configure a speech-enabled AI agent. You created an agent, defined its behavior using system instructions, enabled voice capabilities, and reviewed how speech input and output are handled in the playground. You also examined sample client code to understand how real-time voice interactions can be implemented in applications.
+In this lab, you used a pre-configured Microsoft Foundry resource and project to create and configure a speech-enabled AI agent. You defined the agent's behavior using system instructions, enabled Azure Speech Voice Live to add speech capabilities, and explored how speech input and output are handled in the agent playground. You also reviewed sample client code to understand how speech-enabled agents can be integrated into applications using APIs and SDKs for real-time voice interactions. Through these exercises, you gained hands-on experience building and configuring voice-enabled AI solutions with Microsoft Foundry.
 
 ### Congratulations, you’ve successfully completed the hands-on lab!
