@@ -7,6 +7,93 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared
  
 Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about machine learning and AI concepts and related Microsoft Azure services. Let's begin by making the most of this experience:
  
+## Overview
+
+In these hands-on labs, you will develop the skills required to build, deploy, and manage AI-powered solutions using **Microsoft Foundry** and Azure AI services. Working through a series of guided exercises, you will create Microsoft Foundry projects, deploy generative AI models such as GPT-4.1, GPT-4o, GPT-5, and GPT-5 Mini, and interact with them through chat, vision, speech, image, and video playgrounds. You will build and configure AI agents with system instructions, Web Search, File Search, and Azure Speech - Voice Live capabilities, and connect applications to deployed models using the Azure AI Foundry SDK, Azure AI Projects SDK, REST APIs, and Python sample code.
+
+The labs also cover Azure AI Language capabilities such as sentiment analysis, key phrase extraction, named entity recognition, text summarization, language detection, and PII detection, along with Conversational Language Understanding (CLU) and Question Answering knowledge bases. You will use Azure AI Vision, Azure AI Face, and Azure AI Content Understanding to analyze images, detect faces and objects, read text with OCR, and extract structured information from documents, receipts, and invoices. Additional labs explore Azure AI Search for building intelligent, AI-enriched search indexes, Azure AI Translator for multilingual translation and transliteration, and responsible AI practices through content safety guardrails and content filters. By completing these labs, you will gain the practical experience needed to build, secure, and operate intelligent, multimodal AI applications on Azure.
+
+## Objectives
+
+By the end of these labs, you will be able to:
+
+1. **Create and configure Microsoft Foundry projects:** Set up Microsoft Foundry/Azure AI Foundry projects, provision the underlying Azure resources, and explore the Foundry portal, AI hubs, and connected resources.
+
+2. **Deploy and interact with generative AI models:** Deploy models such as GPT-4.1, GPT-4o, GPT-5, and GPT-5 Mini from the Foundry model catalog and use the Chat Playground to design, test, and refine prompts.
+
+3. **Build and extend AI agents:** Create AI agents, configure system instructions, and extend agent capabilities with Web Search, File Search, and Azure Speech - Voice Live for real-time voice interaction.
+
+4. **Analyze and process text with Azure AI Language:** Perform sentiment analysis, key phrase extraction, named entity recognition, text summarization, language detection, and PII detection using the Language Playground and Language Studio.
+
+5. **Build conversational and question-answering solutions:** Create and train Conversational Language Understanding (CLU) apps with intents, utterances, and entities, and build, train, and deploy a Question Answering knowledge base.
+
+6. **Analyze images, faces, and video with Azure AI Vision:** Generate captions, tags, and object detections, detect faces, read text with OCR, and generate new images and videos from text prompts using vision-enabled generative models.
+
+7. **Extract structured information with Azure AI Content Understanding and Document Intelligence:** Use OCR/Read, Layout, and Receipt analyzers, and Document Intelligence, to extract fields, tables, and JSON output from documents, receipts, and invoices.
+
+8. **Build intelligent search solutions:** Create an Azure AI Search resource, index documents stored in Azure Storage, enrich content with AI skills, and query the search index and knowledge store.
+
+9. **Translate and localize content:** Use Azure AI Translator and generative AI prompts to translate, transliterate, and detect the language of text.
+
+10. **Apply responsible AI practices:** Configure and test content safety guardrails and content filters to manage harmful, offensive, or sensitive model outputs.
+
+11. **Integrate AI capabilities into applications:** Build Python applications using the Azure AI Foundry SDK, Azure AI Projects SDK, and REST APIs to connect client applications to deployed models, agents, and AI services.
+
+## Pre-requisites
+
+- Basic familiarity with the Azure portal and navigating Azure services.
+- Basic knowledge of Python programming and running commands from a terminal or command-line interface.
+- General understanding of generative AI models, prompt engineering, and chat-based AI interactions.
+- Familiarity with core AI concepts such as natural language processing, computer vision, speech recognition, and responsible AI is helpful but not required.
+
+## Architecture
+
+The lab architecture demonstrates how Microsoft Foundry and Azure AI services work together to build, deploy, and operate intelligent, multimodal AI applications. Throughout these labs, you will provision Foundry projects, deploy and test generative AI models, build AI agents, and integrate language, vision, speech, search, and translation services into real-world scenarios.
+
+1. **Microsoft Foundry Projects and Azure Resources:** Foundry projects are created and linked to underlying Azure resources that provide the infrastructure for model deployments, agents, and AI services used across the labs.
+
+2. **Generative AI Models and Chat Playground:** Models such as GPT-4.1, GPT-4o, GPT-5, and GPT-5 Mini are deployed from the Foundry model catalog and tested in the Chat Playground using prompts, system instructions, and content filters.
+
+3. **AI Agents and Tools:** Agents are configured with system instructions and extended with Web Search, File Search, and Azure Speech - Voice Live to build task-specific, voice- and knowledge-enabled assistants.
+
+4. **Azure AI Language Services:** Language, Conversational Language Understanding, and Question Answering resources analyze and interpret text, powering sentiment analysis, entity extraction, summarization, and conversational understanding scenarios.
+
+5. **Azure AI Vision and Content Understanding:** Vision, Face, Document Intelligence, and Content Understanding services analyze images, video, and documents to generate captions, detect objects and faces, perform OCR, and extract structured fields.
+
+6. **Azure AI Search and Storage:** Azure AI Search indexes documents stored in Azure Storage, using AI skills to enrich content and enable intelligent querying.
+
+7. **Azure AI Translator:** Provides text translation, transliteration, and language detection for building multilingual applications.
+
+8. **Client Applications and Developer Tools:** Python applications, the Azure AI Foundry SDK, Azure AI Projects SDK, and REST APIs connect to deployed models, agents, and AI services, while the Azure Portal and Foundry portal are used to provision, configure, and monitor resources throughout the labs.
+
+## Explanation of Components
+
+1. **Microsoft Foundry Portal:** The centralized platform used to create and manage AI projects, hubs, connected resources, model deployments, agents, and playgrounds throughout the labs.
+
+1. **Generative AI Models (GPT-4.1, GPT-4o, GPT-5, GPT-5 Mini):** Large language models deployed from the Foundry model catalog that generate conversational, text, and multimodal responses based on prompts and system instructions.
+
+1. **AI Agents:** Reusable, task-specific assistants that combine a deployed model, system instructions, and tools such as Web Search, File Search, and Voice Live to perform specialized tasks and be integrated into applications.
+
+1. **Azure AI Language:** A cloud-based natural language processing service used for sentiment analysis, key phrase extraction, named entity recognition, text summarization, language detection, and PII detection.
+
+1. **Question Answering:** A feature used to build, train, and deploy a knowledge base of question-and-answer pairs for FAQ-style bots and services.
+
+1. **Azure AI Vision:** A service used to generate image captions and tags, detect objects and faces, and extract text from images using OCR.
+
+1. **Azure AI Speech:** A service that provides real-time speech-to-text, text-to-speech, and Voice Live capabilities for building voice-enabled applications and agents.
+
+1. **Azure AI Content Understanding:** A multimodal analysis service that uses prebuilt analyzers such as OCR/Read, Layout, and Receipt to extract structured fields, tables, and JSON output from documents, images, audio, and video.
+
+1. **Azure AI Document Intelligence:** A service used to analyze documents such as receipts and invoices and extract key business fields for downstream processing.
+
+1. **Azure AI Search:** A cloud-based search service that indexes documents from Azure Storage and provides AI-enriched, queryable search indexes and knowledge stores.
+
+1. **Azure AI Translator:** A service that provides text translation, transliteration, and language detection for multilingual applications.
+
+1. **Content Safety Guardrails and Content Filters:** Built-in and custom filtering policies that evaluate prompts and model responses for harmful content categories such as Hate, Violence, Sexual, and Self-harm, supporting responsible AI practices.
+
+1. **Azure AI Foundry SDK, Azure AI Projects SDK, and REST APIs:** Developer tools used to connect client applications to deployed models, agents, and AI services, enabling programmatic integration of AI capabilities.
+
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
