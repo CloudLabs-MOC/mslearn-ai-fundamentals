@@ -1,4 +1,5 @@
 # Lab: Explore information extraction
+
 ### Please be aware that no Lab VM is provided for this lab. You will need to complete the lab on your personal computer.
 
 ## Lab Overview
