@@ -124,6 +124,13 @@ Now you're ready to create an agent that can help employees with expense claims.
 
     Let's fix that!
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
+   <validation step="c1f23550-2cfc-49e1-a1a3-62185bdc8693" />   
+
 ## Task 3: Add a Foundry IQ knowledge base
 
 Foundry IQ is a central connection point for data sources that agents can use as knowledge bases. It enables you to create and manage a collection of knowledge that multiple agents can use, without the need to code data access and query logic in each agent.
@@ -154,6 +161,14 @@ Foundry IQ is a central connection point for data sources that agents can use as
     When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
 
     ![Screenshot of the Foundry IQ knowledge bases page.](./media/mod7-img11.png)
+    
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
+   <validation step="98e19d99-067d-4d49-b90f-c6d0c5c2e5ff" />   
 
 ### Task 3.2: Create a knowledge base
 
@@ -197,11 +212,26 @@ Foundry IQ is a central connection point for data sources that agents can use as
 
 ### Task 3.3: Configure access permissions
 
-1. Open a new browser tab and navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`; signing in with your Azure credentials.
+1. Open a new browser tab and navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`
 
-1. Browse to the resource group where you created your Foundry IQ resource, and verify that it is listed along with your Microsoft Foundry resource and project.
+1. If prompted to sign in, enter your credentials:
+   - **Email/Username:** **<inject key="AzureAdUserEmail"></inject>**
 
-1. Select the Foundry IQ search service resource to open it, and view its **Access control (IAM) (1)** page. In the **+ Add (2)** drop-down list, select **Add role assignment (3)**. 
+   - **Password:** **<inject key="AzureAdUserPassword"></inject>**
+
+1. If prompted to **Stay signed in?**, you can click **No**.
+
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups (1)**, and then select **Resource groups (2)** under services.
+
+    ![](./media/mod7-img24.png)
+
+1. Select the **labvm-rg** from the listed resource groups.    
+
+1. Select the Foundry IQ search service resource to open it.
+
+    ![](./media/mod7-img25.png)
+
+1. On Foundry IQ page, select **Access control (IAM) (1)** page. In the **+ Add (2)** drop-down list, select **Add role assignment (3)**. 
 
     ![](./media/mod7-img17.png)
 
