@@ -121,7 +121,7 @@ In this task, you will create a new AI agent called **expenses-agent** and confi
    How much can I claim for a taxi?
     ```
     ![](./media/mod7-img6.png)
-    
+
     The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of your company's expense policies and procedures; so the answer isn't grounded in accurate information.
 
     Let's fix that!
@@ -148,20 +148,21 @@ In this task, you will set up and configure a Foundry IQ knowledge base to store
       ![](./media/mod7-img9.png)
 
 1. Enter the following values, accept the cost acknowledgement, and create your resource:
-
+        
       - **Resource name**: **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)**
+
       - **Subscription**: Leave the Subscription default **(2)**
       - **Resource group**: labvm-rg **(3)**
       - **Region**: West US **(4)**
       - **Pricing tier**: Basic **(5)**
       - **Create (6)**
-
-          ![](./media/mod7-img10.png)
+      
+        ![](./media/mod7-img10.png)
 
 1. Wait for the Foundry IQ resource to be created and configured for secure access.
 
-      When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
-
+    When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
+    
       ![Screenshot of the Foundry IQ knowledge bases page.](./media/mod7-img11.png)
     
 
@@ -179,6 +180,7 @@ In this task, you will set up and configure a Foundry IQ knowledge base to store
       ![](./media/mod7-img12.png)
 
 1. Complete the basic configuration of the knowledge base by assigning the following values:
+
       - **Name**: `expenses-documentation` **(1)**
       - **Description**: `Expense guidelines for employees` **(2)**
       - **Chat completions model**: *Select the existing model deployment* **(3)**
@@ -225,29 +227,29 @@ In this task, you will set up and configure a Foundry IQ knowledge base to store
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups (1)**, and then select **Resource groups (2)** under services.
 
-      ![](./media/mod7-img24.png)
+     ![](./media/mod7-img24.png)
 
 1. Select the **labvm-rg** from the listed resource groups.    
 
 1. Select the Foundry IQ search service resource to open it.
 
-      ![](./media/mod7-img25.png)
+     ![](./media/mod7-img25.png)
 
 1. On Foundry IQ page, select **Access control (IAM) (1)** page. In the **+ Add (2)** drop-down list, select **Add role assignment (3)**. 
 
-      ![](./media/mod7-img17.png)
+     ![](./media/mod7-img17.png)
 
 1. On the **Role** tab, search for `Search Data Index Reader` **(1)** and select the `Search Data Index Reader` **(2)** role, and then select **Next (3)**.
 
-      ![](./media/mod7-img18.png)
+     ![](./media/mod7-img18.png)
 
 1. On the **Members** tab, select **Managed identity (1)**, and then use the **+ Select members (2)** link to search for and select your **Foundry project (3)** identity, then click on **Select (4)**. 
 
-      ![](./media/mod7-img19.png)
+     ![](./media/mod7-img19.png)
 
 1. Complete the process to **Review and assign** twice the role membership to add you Foundry project's managed identity to the *Search Data Index Reader* role. your Foundry IQ search resource.
 
-      ![](./media/mod7-img20.png)
+     ![](./media/mod7-img20.png)
 
 1. Close the tab containing the Azure portal and return to the Foundry portal, where your knowledge store page should still be open.
 
