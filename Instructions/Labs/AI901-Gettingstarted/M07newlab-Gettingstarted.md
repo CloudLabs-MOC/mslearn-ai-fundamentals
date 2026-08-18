@@ -9,63 +9,66 @@ Welcome to your AI-901: Microsoft Azure AI Fundamentals workshop! We've prepared
 
 ## Overview
 
-In this hands-on lab, you will explore the Microsoft Foundry development experience by using a pre-configured Microsoft Foundry resource and project. You will learn how Microsoft Foundry projects are organized within a parent resource, navigate the Foundry portal, and examine the Azure resources associated with your project.
-
-You will use the built-in Ask AI assistant to explore Microsoft Foundry capabilities, deploy a generative AI model from the model catalog, and test the deployed model in the playground. You will then configure a sample client application using your project endpoint, API key, and model deployment to connect to your deployed model.
-
-Finally, you will interact with the application to explore a variety of AI capabilities, including conversational AI, text summarization, entity extraction, speech, computer vision, information extraction, and built-in responsible AI safety guardrails. By the end of this lab, you will understand how Microsoft Foundry provides a unified platform for deploying, managing, and integrating AI models into intelligent applications.
+In this hands-on lab, you will build and enhance an AI agent within Microsoft Foundry that can assist employees with expense claim policies and procedures. You will start by accessing a pre-configured Microsoft Foundry project and creating an AI agent named **expenses-agent** with specific instructions to help employees understand expense policies. Then, you will create a Foundry IQ knowledge base to store and manage your organization's expense policy documentation. Finally, you will integrate the knowledge base with your agent to enable it to provide accurate, context-grounded responses to employee questions about expense claims. This hands-on experience demonstrates how to use Foundry IQ as a central knowledge management system that improves agent accuracy and reliability by connecting agents to real company data and policies.
 
 ## Objectives
 
-By the end of this lab, you will be able to explore and use a pre-configured **Microsoft Foundry** project, deploy a generative AI model, and connect an application to the deployed model using project credentials.
+By the end of this lab, you will be able to create and configure AI agents in Microsoft Foundry, build knowledge bases using Foundry IQ, and connect them to provide intelligent, context-aware responses.
 
-1. **Explore a Microsoft Foundry project**: Access a pre-configured Microsoft Foundry project and understand how projects are organized within a parent Foundry resource.
+1. **Get started with Microsoft Foundry**: Access a pre-configured Microsoft Foundry project and familiarize yourself with the project workspace and portal interface.
 
-2. **Explore the Microsoft Foundry portal**: Navigate the Discover, Build, Operate, and Docs sections to understand the tools and capabilities available for AI development and management.
+2. **Create an AI agent**: Build a new AI agent called expenses-agent and configure it with system instructions that define its role as an advisor on company expense policies.
 
-3. **Deploy and test a generative AI model**: Deploy a model from the Microsoft Foundry model catalog and interact with it in the playground using natural language prompts.
+3. **Add a Foundry IQ knowledge base**: Set up a Foundry IQ resource and create a knowledge base connected to your company's expense policy documentation stored in Azure Blob Storage.
 
-4. **Connect an application to the Foundry project**: Configure a sample client application using the project endpoint, API key, and model deployment name to communicate with the deployed model.
-
-5. **Explore AI capabilities**: Use the client application to experience conversational AI, text analysis, speech services, computer vision, information extraction, and responsible AI safety guardrails. 
+4. **Use the knowledge store in the expenses agent**: Connect the knowledge base to your agent and verify that it can now provide accurate, policy-based answers with citations from the knowledge base. 
 
 ## Pre-requisites
 
-Basic familiarity with Azure services and AI concepts is recommended. Experience with navigating the Azure portal and understanding concepts such as AI models, APIs, and cloud resources will be helpful when working with Microsoft Foundry.
+To get the most out of this lab, you should have:
+
+- **Basic understanding of AI and chatbots**: Know what AI agents are and how they can answer questions.
+- **Familiarity with the Azure portal**: Ability to navigate and use basic Azure services.
+- **Understanding of cloud concepts**: Basic knowledge of resources, subscriptions, and resource groups in Azure.
+- **No coding experience required**: This lab uses the Microsoft Foundry portal interface, so you do not need to write any code.
 
 ## Architecture
 
-In this hands-on lab, the architecture demonstrates how a client application interacts with a pre-configured Microsoft Foundry project to access deployed AI models and built-in AI capabilities.
+In this hands-on lab, the architecture demonstrates how an AI agent uses a knowledge base to provide accurate answers based on company policies and procedures.
 
-1. **Pre-configured Microsoft Foundry Project**: A Microsoft Foundry project is already provisioned and connected to a parent Foundry resource in Azure. The project provides a workspace for managing AI assets, model deployments, and project configurations.
+1. **Microsoft Foundry Project**: A pre-configured project workspace where you create AI agents, manage deployments, and configure knowledge bases.
 
-2. **Model Deployment**: A generative AI model is deployed from the Microsoft Foundry model catalog. The deployment exposes an endpoint that enables applications and playground experiences to interact with the model.
+2. **Expenses Agent**: An AI agent created within Foundry that is trained to help employees with expense claim questions. It can be enhanced with knowledge from policy documents.
 
-3. **Client Application Integration**: A sample client application is configured using the project endpoint, API key, and model deployment name. The application securely communicates with the deployed model to process prompts and return AI-generated responses.
+3. **Model Deployment**: A generative AI model that powers the expenses agent. This model generates responses based on user questions and available knowledge.
 
-4. **AI Capabilities**: Through the deployed model and Microsoft Foundry services, the application demonstrates conversational AI, text analysis, speech processing, computer vision, information extraction, and built-in responsible AI guardrails. 
+4. **Foundry IQ Knowledge Base**: A searchable database that stores your company's expense policy documents. It retrieves relevant information when the agent is asked a question.
+
+5. **Azure Blob Storage**: Cloud storage where the expense policy documents are stored. The knowledge base indexes these documents for quick retrieval.
+
+6. **Knowledge Retrieval Flow**: When a user asks the agent a question, it searches the knowledge base, finds relevant policies, and provides an answer with citations to the source documents. 
 
 ## Architecture Diagram
 
-![](../media/ai901-new-lab1.png)
+![](../media/ai901-newlab7archdiagram.png)
 
 ## Explanation of Components
 
-1. **Microsoft Foundry Parent Resource**: The Azure resource that provides the underlying infrastructure for Microsoft Foundry. It centrally manages projects, users, connected resources, model deployments, and administrative settings shared across multiple projects.
+1. **Microsoft Foundry Portal**: The web-based interface where you manage AI projects, create agents, and configure knowledge bases. It provides a user-friendly workspace for building AI applications without coding.
 
-2. **Microsoft Foundry Project**: A project workspace within the parent resource used to organize AI assets, model deployments, agents, tools, workflows, and project-specific configurations required for developing AI applications.
+2. **Expenses Agent**: An AI agent designed to answer employee questions about expense policies. It has system instructions that guide its responses and can be connected to a knowledge base for accurate information.
 
-3. **Model Catalog**: A curated collection of AI models from Microsoft, OpenAI, and other providers. Developers can browse available models, review their capabilities, and deploy them to their Foundry projects.
+3. **Generative AI Model**: The language model that powers the agent. It understands user questions and generates helpful responses. In this lab, a pre-deployed model is available for your use.
 
-4. **Model Deployment**: A deployed instance of a selected AI model that creates an inference endpoint. Applications and playgrounds use this deployment to send prompts and receive AI-generated responses.
+4. **Foundry IQ**: A knowledge management system that allows you to upload and organize company documents (like expense policies). It makes this information searchable and accessible to agents.
 
-5. **Project Endpoint and API Key**: Secure connection details used by client applications to access deployed models. The endpoint identifies the project resource, while the API key authenticates requests.
+5. **Knowledge Base**: A searchable database created within Foundry IQ that stores your expense policy documents. When the agent needs to answer a question, it searches this knowledge base for relevant information.
 
-6. **Client Application**: A sample application configured with the project endpoint, API key, and model deployment. It demonstrates how external applications can integrate with Microsoft Foundry to consume AI services.
+6. **Azure Blob Storage**: Cloud storage service where the actual policy documents are stored. The knowledge base connects to these documents to retrieve the most up-to-date policy information.
 
-7. **Ask AI Assistant**: A built-in AI assistant within the Microsoft Foundry portal that helps users understand platform features, discover capabilities, and receive guidance through natural language conversations.
+7. **Access Control (IAM)**: Azure's security system that controls which applications and agents can access which resources. In this lab, you'll set permissions so the agent can read from the knowledge base.
 
-8. **AI Capabilities**: The deployed model enables multiple AI experiences, including conversational AI, text summarization, entity extraction, speech processing, computer vision, information extraction, and responsible AI safety guardrails that help ensure safe and compliant AI interactions. 
+8. **Citations and Grounding**: The agent can reference specific sections of policy documents in its responses, showing users exactly where the information came from. This builds trust and ensures accuracy. 
 
 # Getting Started with lab
  
