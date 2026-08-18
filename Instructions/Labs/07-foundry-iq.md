@@ -1,174 +1,261 @@
----
-lab:
-  title: Get started with Foundry IQ in Microsoft Foundry
-  description: Use Foundry IQ to connect an agent to knowledge.
-  level: 200
-  duration: 20 minutes
-  islab: true
-  primarytopics:
-    - Microsoft Foundry
----
-
 # Get started with Foundry IQ in Microsoft Foundry
 
-![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab; in which you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in expenses policy documentation to advise employees on expense claim guidelines and procedures.
+### Estimated Duration: 45 Minutes
 
-If you want more interactive help, you can chat with me in the *[Ask Anton](https://aka.ms/choose-anton){:target="_blank"}* app.
+## Lab Overview
 
-<details>
-<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is a generative AI agent that can answer questions about AI concepts and Microsoft Foundry technologies. It's available in two versions at <code>https://aka.ms/choose-anton</code>:
-<ul>
-<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
-<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
-</ul>
-<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
-</blockquote>
-</details>
-<hr/>
+In this lab, you will explore the Microsoft Foundry development experience by using a pre-configured Microsoft Foundry resource and project. You will familiarize yourself with the Microsoft Foundry portal, examine the relationship between a Foundry parent resource and its child projects, and explore the Azure resources associated with your project. You will use the built-in AI assistant to learn about Microsoft Foundry capabilities, deploy a generative AI model from the model catalog, and connect a client application using your project endpoint and API key. Finally, you will interact with the deployed model to explore conversational AI, text analysis, speech, computer vision, information extraction, and built-in AI safety guardrails.
 
-This exercise should take approximately **20** minutes to complete.
+## Lab Objectives
 
-> **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
+In this lab, you will perform the following tasks:
 
-## Create a Microsoft Foundry project
+- Task 1: Get started with Microsoft Foundry
+- Task 2: Create an AI agent
+- Task 3: Add a Foundry IQ knowledge base
+- Task 4: Use the knowledge store in the expenses agent
 
-Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
+## Task 1: Get started with Microsoft Foundry
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
-1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
-    - **Foundry resource**: *A valid name for your Foundry resource.*
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Region**: Select any of the **AI Foundry recommended** regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#supported-regions){:target="_blank"}
+In this task, you'll sign in to the Microsoft Foundry portal, access a pre-configured Microsoft Foundry project, and familiarize yourself with the project workspace that will be used throughout the lab.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+1. Copy the **Microsoft Foundry** link and paste it into a new browser tab to access the portal: `https://ai.azure.com/`
 
-1. Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
+1. On the **Microsoft Foundry** home page, click on **Start building** in the top right corner.
 
-    After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+   ![](./media/mod7-t1p1.png)
 
-    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
+1. If prompted to sign in, enter your credentials:
+   - **Email/Username:** Enter <inject key="AzureAdUserEmail"></inject> **(1)** and click on **Next (2)**.
+
+     ![Enter Your Username](./media/mod6-p2t1p2.png)
+
+   - **Password:** Enter <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+
+     ![Enter Your Password](<./media/mod6-p2t1p2(1).png>)
+
+1. If prompted to **Stay signed in?**, you can click **No**.
+
+   ![](./media/mod6-p2t1p3.png)
+
+### Task 1.1: Create a Microsoft Foundry Project (READ ONLY)
+
+> ### **Note:** <span style="color:maroon"> A Microsoft Foundry resource and project have already been created and configured for your lab environment. To optimize AI resource usage during the lab, additional Microsoft Foundry resources cannot be created. This is a **read-only** task provided for demonstration purposes and does not require any action. For the remainder of the lab, please use the pre-configured Microsoft Foundry resource and project that have been provisioned for your environment.
+</span>
+
+In this task, you'll learn how to create a Microsoft Foundry project by configuring the required Azure settings, including the Foundry resource, region, subscription, and resource group. This is a demonstration only and does not require any action during the lab.
+
+1. On the **All resources** page, click on **Create Project**.
+
+   ![](./media/ai901-new-l5t1p5.png)
+
+1. In the **Create a project** pane, enter a unique project name like **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)** Verify that the **Foundry resource (2)** is automatically populated, set the **Region** to **<inject key="Location" enableCopy="false" /> (3)**, confirm that the default **Subscription (4)** is selected, and choose the appropriate **Resource group (5)**. Ensure that the **Set up recommended resources so I can explore everything Foundry has to offer** option is **disabled (6)**, and then select **Create (7)**.
+
+   ![](./media/ai901-new-l6t1p3.png)
+
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
+
+   ![](./media/mod7-t1p3.png)
+
+1. After creating a project in the new **Foundry** portal, it should open in a page similar to the following image:
+
+   ![](./media/mod7-t1p4.png)
+
+### Task 1.2: Open the Pre-configured Microsoft Foundry Project
+
+In this task, you'll access the pre-configured Microsoft Foundry project, dismiss the welcome prompt, and explore the project workspace that will be used for the remainder of the lab.
+
+1. From the **All resources** page select the project named **myproject<inject key="DeploymentID"></inject>** that has been already been created for you to open it. You will use this project throughout the remainder of the lab.
+
+   ![](./media/ai901-new-l6t1p1.png)
+
+1. In the **Your project is set up. What would you like to do next ?** pop-up, click **X** button to dismiss the window.
+
+   ![](./media/mod7-t1p3.png)
+
+1. After selecting the project in the **Foundry** portal, it should open in a page similar to the following image:
+
+   ![](./media/mod7-t1p4.png)
 
 
-## Create an AI agent
+## Task 2: Create an AI agent
 
 Now you're ready to create an agent that can help employees with expense claims.
 
-1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named `expenses-agent`.
+1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab).
 
-     When ready, your agent opens in the agent playground.
+    ![](./media/mod7-img1.png)
 
-    ![Screenshot of the agent playground.](./media/expenses-agent.png)
+1. Create a new agent named `expenses-agent` **(1)**, then select **Create(2)**.
+
+    ![](./media/mod7-img2.png)
+
+1. When ready, your agent opens in the agent playground.
 
 1. In the model drop-down list, ensure that a model has been deployed and selected for your agent.
+
 1. Assign your agent the following **Instructions**:
 
     ```
    You are an AI agent that advises employees on expenses policies and expense claim processes.
     ```
 
+    ![](./media/mod7-img3.png)
+
 1. Use the **Save** button to save the changes.
+
+    ![](./media/mod7-img4.png)
+
 1. Test the agent by entering the following prompt in the **Chat** pane:
 
     ```
    What can you help me with?
     ```
-
+    ![](./media/mod7-img5.png)
     The agent should respond with an appropriate answer based on its instructions.
 
-1. Now try this:
+1. Enter the following prompt:
 
     ```
    How much can I claim for a taxi?
     ```
-
+    ![](./media/mod7-img6.png)
     The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of your company's expense policies and procedures; so the answer isn't grounded in accurate information.
 
     Let's fix that!
 
-## Add a Foundry IQ knowledge base
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
+   <validation step="c1f23550-2cfc-49e1-a1a3-62185bdc8693" />   
+
+## Task 3: Add a Foundry IQ knowledge base
 
 Foundry IQ is a central connection point for data sources that agents can use as knowledge bases. It enables you to create and manage a collection of knowledge that multiple agents can use, without the need to code data access and query logic in each agent.
 
-### Download expenses policy documentation
-
-1. Open a new browser tab, and navigate to the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
-
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: This is a very small document for the purposes of this lab. In reality, an enterprise knowedge base would likely consist of a large volume of data - often in one or more databases or other enterprise systems.
-
-1. Download **expenses_policy.docx** to your local computer (it doesn't matter where).
-
-### Configure Foundry IQ
+### Task 3.1: Configure Foundry IQ
 
 1. Return to the browser tab containing the Foundry portal agent playground, and in the main navigation pane on the left, select **Knowledge** to open the Foundry IQ page.
 
-    ![Screenshot of the Foundry IQ page.](./media/foundry_iq.png)
+    ![](./media/mod7-img8.png)
 
 1. At the bottom of the page, select the **Create a new resource** link to create a new Foundry IQ (Azure AI Search) resource in your Azure subscription.
 
-    ![Screenshot of the Foundry IQ Resource dialog.](./media/foundry_iq_resource.png)
+    ![](./media/mod7-img9.png)
 
-    Enter the following values, accept the cost aknowledgement, and create your resource:
+1. Enter the following values, accept the cost acknowledgement, and create your resource:
 
-    - **Resource name**: *A unique name for your Foundry IQ resource.*
-    - **Subscription**: *Your Azure subscription.*
-    - **Resource group**: *The resource group containing your Microsoft Foundry resource.*
-    - **Region**: Any available region.
-    - **Pricing tier**: Basic
+    - **Resource name**: **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)**
+    - **Subscription**: Leave the Subscription default **(2)**
+    - **Resource group**: labvm-rg **(3)**
+    - **Region**: West US **(4)**
+    - **Pricing tier**: Basic **(5)**
+    - **Create (6)**
+
+        ![](./media/mod7-img10.png)
 
 1. Wait for the Foundry IQ resource to be created and configured for secure access.
 
     When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
 
-    ![Screenshot of the Foundry IQ knowledge bases page.](./media/foundry_iq_knowledge_bases.png)
+    ![Screenshot of the Foundry IQ knowledge bases page.](./media/mod7-img11.png)
+    
 
-### Create a knowledge base
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-1. Select **Create a knowledge base**, and complete the basic configuration of the knowledge base by assigning the following values:
-    - **Name**: `expenses-documentation`
-    - **Description**: `Expense guidelines for employees`
-    - **Chat completions model**: *Select the existing model deployment*
-    - **Retrieval reasoning effort**: Low
-    - **Output mode**: Answer synthesis
-    - **Answer instructions**: `Answer concisely, based on the available context`
-    - **Retrieval instructions**: `Use the expenses-documentation source for all questions related to expense claim policies and procedures`
+   <validation step="98e19d99-067d-4d49-b90f-c6d0c5c2e5ff" />   
 
-    > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
+### Task 3.2: Create a knowledge base
 
-1. In the **Add knowledge sources** pane, select **Upload files** and upload the **expenses_policy.docx** file you previously downloaded to your computer; assigning the name `expenses-policy` and using he default embedding model.
+1. On the Knowledge (Foundry IQ) page, select **Create a knowledge base**.
 
-    ![Screenshot of the Create a knowledge source dialog.](./media/foundry_iq_file.png)
+    ![](./media/mod7-img12.png)
 
-1. Wait for the file to be uploaded and processed, and then save the knowledge base.
+1. Complete the basic configuration of the knowledge base by assigning the following values:
+    - **Name**: `expenses-documentation` **(1)**
+    - **Description**: `Expense guidelines for employees` **(2)**
+    - **Chat completions model**: *Select the existing model deployment* **(3)**
+    - **Retrieval reasoning effort**: Low **(4)**
+    - **Output mode**: Answer synthesis **(5)**
+    - **Answer instructions**: `Answer concisely, based on the available context` **(6)**
+    - **Retrieval instructions**: `Use the expenses-documentation source for all questions related to expense claim policies and procedures` **(7)**
+    - **Add resources** **(8)**
 
-### Configure access permissions
+        ![](./media/mod7-img13.png)
 
-1. Open a new browser tab and navigate to the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com`; signing in with your Azure credentials.
-1. Browse to the resource group where you created your Foundry IQ resource, and verify that it is listed along with your Microsoft Foundry resource and project.
+        > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
 
-    ![Screenshot of resources in the Foundry portal.](./media/azure_resource_group_with_search.png)
+1. In the **Knowledge sources** pane, select **Azure Blob Storage**.
 
-1. Select the Foundry IQ search service resource to open it, and view its **Access control (IAM)** page.
+    ![](./media/mod7-img14.png)
 
-    ![Screenshot of the AI Search access control page.](./media/ai_search_iam.png)
+1. On the Create knowledge source pane, fill the details:
 
-1. In the **Add** drop-down list, select **Add role assignment**. Then, on the **Role** tab, search for and select the `Search Data Index Reader` role, and then select **Next**.
+    - Name: **myknowledge-<inject key="DeploymentID" enableCopy="false" /> (1)**
 
-    ![Screenshot of the Add role assignment (role) page.](./media/add_role_assignment_role.png)
+    - Storage account: **mystorage<inject key="DeploymentID" enableCopy="false" /> (2)**
 
-1. On the **Members** tab, select **Managed identity**, and then use the **+Select members** link to search for and select your **Foundry project** identity.
+    - Container name: Select **Sample (3)**
 
-    ![Screenshot of the Add role assignment (member) page.](./media/add_role_assignment_member.png)
+    - Select **Create (4)**
 
-1. Complete the process to **Review and assign** the role membership to add you Foundry project's managed identity to the *Search Data Index Reader* role. your Foundry IQ search resource.
-1. Close the tab containing the Azure portal and return to the Foundry portal; where your knowledge store page should still be open.
+        ![](./media/mod7-img15.png)
 
-## Use the knowledge store in the expenses agent
+1. Wait for the file to be uploaded and processed, and then **Save knowledge base**.
+
+    ![](./media/mod7-img16.png)
+
+### Task 3.3: Configure access permissions
+
+1. Open a new browser tab and navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`
+
+1. If prompted to sign in, enter your credentials:
+   - **Email/Username:** **<inject key="AzureAdUserEmail"></inject>**
+
+   - **Password:** **<inject key="AzureAdUserPassword"></inject>**
+
+1. If prompted to **Stay signed in?**, you can click **No**.
+
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups (1)**, and then select **Resource groups (2)** under services.
+
+    ![](./media/mod7-img24.png)
+
+1. Select the **labvm-rg** from the listed resource groups.    
+
+1. Select the Foundry IQ search service resource to open it.
+
+    ![](./media/mod7-img25.png)
+
+1. On Foundry IQ page, select **Access control (IAM) (1)** page. In the **+ Add (2)** drop-down list, select **Add role assignment (3)**. 
+
+    ![](./media/mod7-img17.png)
+
+1. On the **Role** tab, search for `Search Data Index Reader` **(1)** and select the `Search Data Index Reader` **(2)** role, and then select **Next (3)**.
+
+    ![](./media/mod7-img18.png)
+
+1. On the **Members** tab, select **Managed identity (1)**, and then use the **+ Select members (2)** link to search for and select your **Foundry project (3)** identity, then click on **Select (4)**. 
+
+    ![](./media/mod7-img19.png)
+
+1. Complete the process to **Review and assign** twice the role membership to add you Foundry project's managed identity to the *Search Data Index Reader* role. your Foundry IQ search resource.
+
+    ![](./media/mod7-img20.png)
+
+1. Close the tab containing the Azure portal and return to the Foundry portal, where your knowledge store page should still be open.
+
+## Task 4: Use the knowledge store in the expenses agent
 
 Now you're ready to use the new knowledge store in the expenses agent.
 
-1. In the page for your saved knowledge store, in the **Use in an agent** drop-down list, select your expenses agent.
+1. In the page for your saved knowledge store, in the **Use in an agent (1)** drop-down list, select your **expenses agent (2)**.
+
+    ![](./media/mod7-img21.png)
 
     The agent is opened in the agent playground, with the knowledge store attached.
 
@@ -177,10 +264,11 @@ Now you're ready to use the new knowledge store in the expenses agent.
     ```
    How much can I claim for a taxi?
     ```
+    ![](./media/mod7-img22.png)
 
 1. Review the response from the agent, and note that at the bottom of the response, a citation for the expenses documentation is listed.
 
-    ![Screenshot of the agent response.](./media/expenses_agent_with_knowledge.png)
+    ![](./media/mod7-img23.png)
 
     The expenses agent is now using Foundry IQ to access the expenses documentation knowledge store when needed to answer a user's question.
 
@@ -190,12 +278,4 @@ In this exercise, you explored how to use Foundry IQ to connect an agent to a kn
 
 Using Foundry IQ offers many advantages over a custom implementation of the retrieval augmented generation (RAG) pattern that's prevalent in generative AI solutions. By centralizing access to knowledge in a single tool, you can offload the data source selection and retrieval logic to Foundry IQ, and reuse knowledge sources across multiple agents without the need to duplicate code or data access logic.
 
-## Clean Up
-
-If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercise to avoid unnecessary utilization charges.
-
-1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
-1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
-
-> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!
+### You've successfully completed the hands-on lab!
