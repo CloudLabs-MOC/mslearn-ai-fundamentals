@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this lab, you will explore the Microsoft Foundry development experience by using a pre-configured Microsoft Foundry resource and project. You will familiarize yourself with the Microsoft Foundry portal, examine the relationship between a Foundry parent resource and its child projects, and explore the Azure resources associated with your project. You will use the built-in AI assistant to learn about Microsoft Foundry capabilities, deploy a generative AI model from the model catalog, and connect a client application using your project endpoint and API key. Finally, you will interact with the deployed model to explore conversational AI, text analysis, speech, computer vision, information extraction, and built-in AI safety guardrails.
+In this lab, you will build and enhance an AI agent within Microsoft Foundry that can assist employees with expense claim policies and procedures. You will start by accessing a pre-configured Microsoft Foundry project and creating an AI agent named **expenses-agent** with specific instructions. Then, you will create a Foundry IQ knowledge base to store and manage expense policy documentation. Finally, you will integrate the knowledge base with your agent to enable it to provide accurate, context-grounded responses to employee queries about expense claims. This hands-on experience demonstrates how to use Foundry IQ as a central knowledge management system that improves agent accuracy and reliability through retrieval-augmented generation (RAG).
 
 ## Lab Objectives
 
@@ -80,7 +80,7 @@ In this task, you'll access the pre-configured Microsoft Foundry project, dismis
 
 ## Task 2: Create an AI agent
 
-Now you're ready to create an agent that can help employees with expense claims.
+In this task, you will create a new AI agent called **expenses-agent** and configure it with system instructions that define its role as an advisor on expense policies and procedures. You will access the Foundry agent builder, create the agent, configure its model settings, and test its initial responses to validate that it operates correctly.
 
 1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab).
 
@@ -112,6 +112,7 @@ Now you're ready to create an agent that can help employees with expense claims.
    What can you help me with?
     ```
     ![](./media/mod7-img5.png)
+
     The agent should respond with an appropriate answer based on its instructions.
 
 1. Enter the following prompt:
@@ -120,6 +121,7 @@ Now you're ready to create an agent that can help employees with expense claims.
    How much can I claim for a taxi?
     ```
     ![](./media/mod7-img6.png)
+    
     The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of your company's expense policies and procedures; so the answer isn't grounded in accurate information.
 
     Let's fix that!
@@ -133,34 +135,34 @@ Now you're ready to create an agent that can help employees with expense claims.
 
 ## Task 3: Add a Foundry IQ knowledge base
 
-Foundry IQ is a central connection point for data sources that agents can use as knowledge bases. It enables you to create and manage a collection of knowledge that multiple agents can use, without the need to code data access and query logic in each agent.
+In this task, you will set up and configure a Foundry IQ knowledge base to store your organization's expense policy documentation. Foundry IQ is a central connection point for data sources that agents can use as knowledge bases. It enables you to create and manage a collection of knowledge that multiple agents can use, without the need to code data access and query logic in each agent. You will create a Foundry IQ resource, establish a knowledge base for expense documentation, connect it to an Azure Blob Storage data source, and configure the necessary Azure access permissions to enable secure communication between your Foundry project and the knowledge source.
 
 ### Task 3.1: Configure Foundry IQ
 
 1. Return to the browser tab containing the Foundry portal agent playground, and in the main navigation pane on the left, select **Knowledge** to open the Foundry IQ page.
 
-    ![](./media/mod7-img8.png)
+      ![](./media/mod7-img8.png)
 
 1. At the bottom of the page, select the **Create a new resource** link to create a new Foundry IQ (Azure AI Search) resource in your Azure subscription.
 
-    ![](./media/mod7-img9.png)
+      ![](./media/mod7-img9.png)
 
 1. Enter the following values, accept the cost acknowledgement, and create your resource:
 
-    - **Resource name**: **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)**
-    - **Subscription**: Leave the Subscription default **(2)**
-    - **Resource group**: labvm-rg **(3)**
-    - **Region**: West US **(4)**
-    - **Pricing tier**: Basic **(5)**
-    - **Create (6)**
+      - **Resource name**: **myproject-<inject key="DeploymentID" enableCopy="false" /> (1)**
+      - **Subscription**: Leave the Subscription default **(2)**
+      - **Resource group**: labvm-rg **(3)**
+      - **Region**: West US **(4)**
+      - **Pricing tier**: Basic **(5)**
+      - **Create (6)**
 
-        ![](./media/mod7-img10.png)
+          ![](./media/mod7-img10.png)
 
 1. Wait for the Foundry IQ resource to be created and configured for secure access.
 
-    When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
+      When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
 
-    ![Screenshot of the Foundry IQ knowledge bases page.](./media/mod7-img11.png)
+      ![Screenshot of the Foundry IQ knowledge bases page.](./media/mod7-img11.png)
     
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -174,107 +176,107 @@ Foundry IQ is a central connection point for data sources that agents can use as
 
 1. On the Knowledge (Foundry IQ) page, select **Create a knowledge base**.
 
-    ![](./media/mod7-img12.png)
+      ![](./media/mod7-img12.png)
 
 1. Complete the basic configuration of the knowledge base by assigning the following values:
-    - **Name**: `expenses-documentation` **(1)**
-    - **Description**: `Expense guidelines for employees` **(2)**
-    - **Chat completions model**: *Select the existing model deployment* **(3)**
-    - **Retrieval reasoning effort**: Low **(4)**
-    - **Output mode**: Answer synthesis **(5)**
-    - **Answer instructions**: `Answer concisely, based on the available context` **(6)**
-    - **Retrieval instructions**: `Use the expenses-documentation source for all questions related to expense claim policies and procedures` **(7)**
-    - **Add resources** **(8)**
+      - **Name**: `expenses-documentation` **(1)**
+      - **Description**: `Expense guidelines for employees` **(2)**
+      - **Chat completions model**: *Select the existing model deployment* **(3)**
+      - **Retrieval reasoning effort**: Low **(4)**
+      - **Output mode**: Answer synthesis **(5)**
+      - **Answer instructions**: `Answer concisely, based on the available context` **(6)**
+      - **Retrieval instructions**: `Use the expenses-documentation source for all questions related to expense claim policies and procedures` **(7)**
+      - **Add resources** **(8)**
 
-        ![](./media/mod7-img13.png)
+          ![](./media/mod7-img13.png)
 
-        > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
+         > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
 
 1. In the **Knowledge sources** pane, select **Azure Blob Storage**.
 
-    ![](./media/mod7-img14.png)
+      ![](./media/mod7-img14.png)
 
 1. On the Create knowledge source pane, fill the details:
 
-    - Name: **myknowledge-<inject key="DeploymentID" enableCopy="false" /> (1)**
+      - Name: **myknowledge-<inject key="DeploymentID" enableCopy="false" /> (1)**
 
-    - Storage account: **mystorage<inject key="DeploymentID" enableCopy="false" /> (2)**
+      - Storage account: **mystorage<inject key="DeploymentID" enableCopy="false" /> (2)**
 
-    - Container name: Select **Sample (3)**
+      - Container name: Select **Sample (3)**
 
-    - Select **Create (4)**
+      - Select **Create (4)**
 
-        ![](./media/mod7-img15.png)
+          ![](./media/mod7-img15.png)
 
 1. Wait for the file to be uploaded and processed, and then **Save knowledge base**.
 
-    ![](./media/mod7-img16.png)
+      ![](./media/mod7-img16.png)
 
 ### Task 3.3: Configure access permissions
 
 1. Open a new browser tab and navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`
 
 1. If prompted to sign in, enter your credentials:
-   - **Email/Username:** **<inject key="AzureAdUserEmail"></inject>**
+     - **Email/Username:** **<inject key="AzureAdUserEmail"></inject>**
 
-   - **Password:** **<inject key="AzureAdUserPassword"></inject>**
+     - **Password:** **<inject key="AzureAdUserPassword"></inject>**
 
 1. If prompted to **Stay signed in?**, you can click **No**.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups (1)**, and then select **Resource groups (2)** under services.
 
-    ![](./media/mod7-img24.png)
+      ![](./media/mod7-img24.png)
 
 1. Select the **labvm-rg** from the listed resource groups.    
 
 1. Select the Foundry IQ search service resource to open it.
 
-    ![](./media/mod7-img25.png)
+      ![](./media/mod7-img25.png)
 
 1. On Foundry IQ page, select **Access control (IAM) (1)** page. In the **+ Add (2)** drop-down list, select **Add role assignment (3)**. 
 
-    ![](./media/mod7-img17.png)
+      ![](./media/mod7-img17.png)
 
 1. On the **Role** tab, search for `Search Data Index Reader` **(1)** and select the `Search Data Index Reader` **(2)** role, and then select **Next (3)**.
 
-    ![](./media/mod7-img18.png)
+      ![](./media/mod7-img18.png)
 
 1. On the **Members** tab, select **Managed identity (1)**, and then use the **+ Select members (2)** link to search for and select your **Foundry project (3)** identity, then click on **Select (4)**. 
 
-    ![](./media/mod7-img19.png)
+      ![](./media/mod7-img19.png)
 
 1. Complete the process to **Review and assign** twice the role membership to add you Foundry project's managed identity to the *Search Data Index Reader* role. your Foundry IQ search resource.
 
-    ![](./media/mod7-img20.png)
+      ![](./media/mod7-img20.png)
 
 1. Close the tab containing the Azure portal and return to the Foundry portal, where your knowledge store page should still be open.
 
 ## Task 4: Use the knowledge store in the expenses agent
 
-Now you're ready to use the new knowledge store in the expenses agent.
+In this task, you will connect the Foundry IQ knowledge base to your expenses agent and test its improved capabilities. You will link the knowledge store to the agent and then send queries to verify that the agent now uses the expense documentation to provide accurate, context-grounded responses. You will observe how the agent includes citations from the knowledge base in its responses, demonstrating that it has access to reliable company-specific information for answering employee questions about expense policies.
 
 1. In the page for your saved knowledge store, in the **Use in an agent (1)** drop-down list, select your **expenses agent (2)**.
 
-    ![](./media/mod7-img21.png)
+      ![](./media/mod7-img21.png)
 
-    The agent is opened in the agent playground, with the knowledge store attached.
+      The agent is opened in the agent playground, with the knowledge store attached.
 
 1. In the chat pane, enter the following query:
 
     ```
    How much can I claim for a taxi?
     ```
-    ![](./media/mod7-img22.png)
+      ![](./media/mod7-img22.png)
 
 1. Review the response from the agent, and note that at the bottom of the response, a citation for the expenses documentation is listed.
 
-    ![](./media/mod7-img23.png)
+      ![](./media/mod7-img23.png)
 
-    The expenses agent is now using Foundry IQ to access the expenses documentation knowledge store when needed to answer a user's question.
+      The expenses agent is now using Foundry IQ to access the expenses documentation knowledge store when needed to answer a user's question.
 
 ## Summary
 
-In this exercise, you explored how to use Foundry IQ to connect an agent to a knowledge source. While the example in this exercise is simple, it demonstrates the ability to ground agents in contextual knowledge to improve the accuracy and relevance of responses.
+In this lab, you explored how to use Foundry IQ to connect an agent to a knowledge source. While the example in this lab is simple, it demonstrates the ability to ground agents in contextual knowledge to improve the accuracy and relevance of responses.
 
 Using Foundry IQ offers many advantages over a custom implementation of the retrieval augmented generation (RAG) pattern that's prevalent in generative AI solutions. By centralizing access to knowledge in a single tool, you can offload the data source selection and retrieval logic to Foundry IQ, and reuse knowledge sources across multiple agents without the need to duplicate code or data access logic.
 
