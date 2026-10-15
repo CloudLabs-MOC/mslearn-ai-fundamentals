@@ -1,0 +1,12 @@
+[
+    {
+      "Name": "SREB-YEAR3",
+      "Language": "English",
+      "Files": [
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-ai-fundamentals/refs/heads/Nancy/Instructions/Labs/SREB-Year3/Gettingstarted-sandbox.md",
+          "Order": 1
+        }
+      ]
+    }
+]
