@@ -6,7 +6,7 @@ Using this environment, you’ll be able to explore complete features and offeri
 
 | Resources | Value | Remarks |
 |  -- | -- | -- |
-| Enabled Services | `Visual Studio, Ssms, Azure Data Studio, DAX Studio, Power BI Desktop, Power BI Report` | You can explore these services |
+| Enabled Services | `Visual Studio, SSMS, Azure Data Studio, DAX Studio, Power BI Desktop, Power BI Report` | You can explore these services |
 | Azure Entra ID User | Pre-created Entra ID user account  | You will get one Entra ID User Account. |
 | Azure Subscription Permissions | Contributor role privilege over Subscription |You will get Contributor role access on a Subscription.  |
 | Azure Credit | $100 USD | The consumption limit is set on Azure spend to $100 USD.|
