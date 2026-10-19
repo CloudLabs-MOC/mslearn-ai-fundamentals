@@ -8,10 +8,10 @@ Using this environment, you’ll be able to explore complete features and offeri
 |  -- | -- | -- |
 | Enabled Services | `Visual Studio, SSMS, Azure Data Studio, DAX Studio, Power BI Desktop, Power BI Report` | You can explore these services |
 | Azure Entra ID User | Pre-created Entra ID user account  | You will get one Entra ID User Account. |
-| Azure Subscription Permissions | Contributor role privilege over Subscription |You will get Contributor role access on a Subscription.  |
+| Azure Subscription Permissions | Custom role over Subscription |You will get Custom role access on subscription which have permissions on SQL, Azure Machine Learning, Storage account and Cost Management.   |
 | Azure Credit | $100 USD | The consumption limit is set on Azure spend to $100 USD.|
 | Credit Alerts	 | Credit Alerts are set on consumption of 25%, 50%, 75%, 90%, and 100% of total Azure credits. | Make sure to check your registered email's inbox for any alert-related mails. Alerts give you a head start to keep your Azure spending in control and to plan out the remaining credits in the best way possible. |
-| Environment Duration | For a duration of four months or until the Azure Consumption Credits are fully utilized, whichever occurs first. | Once the Azure consumption credits are exhausted, resources will be deallocated. Please inform our team if you need additional credits. |
+| Environment Duration | For a duration of four months or until the Azure Consumption Credits are fully utilized, whichever occurs first. | Once the Azure consumption credits are exhausted, resources will be deallocated and permissions will be removed. Please reach out to our team if you need additional credits. |
 | Resource deallocation | You can stop the VM when not in use | To reduce unnecessary costs, you can stop the VM from the Lab Guide's Resource tab by selecting the Stop button when it is not in use |
 
 ## Steps to Deallocate/Stop VM
