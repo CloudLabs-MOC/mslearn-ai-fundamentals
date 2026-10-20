@@ -4,7 +4,7 @@
 
 ## Lab overview
 
-In this lab, you will use a pre-configured Microsoft Foundry resource and project to explore vision-enabled generative AI models. You will deploy a multimodal model to analyze images, use an image generation model to create images from text prompts, and deploy a video generation model to create short videos from natural language descriptions. You will also review sample code that demonstrates how to integrate image analysis, image generation, and video generation capabilities into your own applications. Through these hands-on activities, you will gain practical experience building AI solutions that understand and generate visual content using Microsoft Foundry.
+In this lab, you will use a pre-configured Microsoft Foundry resource and project to explore vision-enabled generative AI models. You will deploy a multimodal model to analyze images and use an image generation model to create images from text prompts. You will also review sample code that demonstrates how to integrate image analysis and image generation capabilities into your own applications. Through these hands-on activities, you will gain practical experience building AI solutions that understand and generate visual content using Microsoft Foundry.
 
 ## Lab objectives
 
@@ -13,7 +13,6 @@ In this lab, you will perform the following tasks:
 - Task 1: Get started with Microsoft Foundry
 - Task 2: Use a generative AI model to analyze images
 - Task 3: Use a generative AI model to create new images
-- Task 4: Use a generative AI model to create video
 
 ## Task 1: Get started with Microsoft Foundry
 
@@ -309,6 +308,7 @@ If you want to develop a client app or agent that generates images using your mo
 
       ![](./media/july26-lab5t1p12.png)
 
+<!---
 ## Task 4: Use a generative AI model to create video
 
 In this task, you'll deploy a video-generation model and use text prompts to generate short videos based on your descriptions.
@@ -386,9 +386,10 @@ If you want to develop a client app or agent that generates videos using your mo
       ```
 
       ![](./media/newlab5a-e1t2p21.png)
+--->
 
 ## Summary
 
-In this lab, you used a pre-configured Microsoft Foundry resource and project to explore vision-enabled generative AI models. You deployed a multimodal model to analyze images, generated images from text prompts using an image generation model, and created videos using a video generation model. You also reviewed sample code demonstrating how to integrate image analysis, image generation, and video generation capabilities into applications. Through these exercises, you gained hands-on experience building AI solutions that understand and generate visual content using Microsoft Foundry.
+In this lab, you used a pre-configured Microsoft Foundry resource and project to explore vision-enabled generative AI models. You deployed a multimodal model to analyze images and generated images from text prompts using an image generation model. You also reviewed sample code demonstrating how to integrate image analysis and image generation capabilities into applications. Through these exercises, you gained hands-on experience building AI solutions that understand and generate visual content using Microsoft Foundry.
 
 ### Congratulations, you’ve successfully completed the hands-on lab!

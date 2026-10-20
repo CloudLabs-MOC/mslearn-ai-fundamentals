@@ -90,6 +90,8 @@ In this task, you will create a new AI agent called **expenses-agent** and confi
 
     ![](./media/mod7-img2.png)
 
+1. If prompted, set the **Interaction mode** to **Text**.
+
 1. When ready, your agent opens in the agent playground.
 
 1. In the model drop-down list, ensure that a model has been deployed and selected for your agent.

@@ -94,6 +94,8 @@ In this task, you’ll create an agent, select a generative AI model, and define
 
    ![](./media/ai901-l4-5.png)
 
+1. If prompted, set the **Interaction mode** to **Text**.
+
 1. When ready, your agent opens in the agent playground.
 
    ![](./media/june26-lab4a-p2t1p1.png)
