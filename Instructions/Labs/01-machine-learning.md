@@ -152,6 +152,8 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
           ![](media/lab1-e1t2p4.png)
 
+        - Once the file is uploaded, verify it and click **Next**.
+
           ![](media/lab1-e1t2p4(1).png)
 
     - On the **Create data asset - Settings** page, leave everything default click **Next**:
@@ -269,6 +271,13 @@ When the automated machine learning job has completed, you can review the best m
 
    >**Note**: Check the **Notifications** bar to verify the status of the operation.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="aa2662f4-59fd-4d38-9d2f-201214b4f21b" />
+
 ### Task 4: Test the deployed service
 
 Now you can test your deployed service.
@@ -313,13 +322,6 @@ Now you can test your deployed service.
     The test pane took the input data and used the model you trained to return the predicted number of ice creams sold.
 
 Let’s review what you have done - you used a dataset of historical ice cream sales data to train a model. The model predicts the number of ice creams expected to be sold on a given day, based on seasonal and meteorological features.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="aa2662f4-59fd-4d38-9d2f-201214b4f21b" />
 
 ## Summary
 

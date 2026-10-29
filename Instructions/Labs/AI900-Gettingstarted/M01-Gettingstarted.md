@@ -106,9 +106,9 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Next, provide your Temporary Access Pass:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](../media/pass-0707.png)
  
