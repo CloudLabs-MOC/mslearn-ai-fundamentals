@@ -1,6 +1,6 @@
-# AI-900: Microsoft Azure AI Fundamentals Workshop
+# Guided Lab: Automated Machine Learning using AML
 
-Welcome to your AI-900: Microsoft Azure AI Fundamentals workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
+Welcome to your Guided Lab: Automated Machine Learning using AML! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
 ## Module 01: Explore Automated Machine Learning in Azure Machine Learning
 
